@@ -4,7 +4,11 @@ This repository contains the specification requirements and validators for the D
 
 ## SHACL shapes
 
-SHACL shapes reside in the `shapes/` directory. The `shapes/` directory contains subdirectories to each of the protocol modules. Each protocol module contains Turtle files where each file defines shape constraints to validate based on the protocol's observable property.
+SHACL shapes reside in the `shapes/` directory. The `shapes/` directory contains subdirectories to each of the protocol modules. Each protocol module contains a directory named after an observable property. This observable property directory contains 3 RDF Turtle files:
+
+- `shapes.ttl` - the shapes for the observable property
+- `valid.ttl` - valid examples
+- `invalid.ttl` - invalid examples
 
 ## Contact
 
