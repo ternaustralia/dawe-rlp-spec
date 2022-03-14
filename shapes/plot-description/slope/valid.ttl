@@ -10,6 +10,7 @@ PREFIX void: <http://rdfs.org/ns/void#>
 <urn:test:plot-description:valid:slope:1>
     a tern:Observation ;
     rdfs:comment "Valid result for slope" ;
+    sosa:hasSimpleResult 50.65 ;
     sosa:hasResult [
             a tern:Float ;
             rdf:value 50.65 ;

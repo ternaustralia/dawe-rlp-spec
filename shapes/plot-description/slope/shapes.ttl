@@ -97,3 +97,28 @@ PREFIX void: <http://rdfs.org/ns/void#>
     """
         ] ;
 .
+
+<urn:shapes:plot-description:slope:simple-result>
+    a sh:NodeShape ;
+    sh:description "Simple result value must be the same as the value in the result node." ;
+    sh:message "Simple result value must be the same as the value in the result node." ;
+    sh:name "Same value check" ;
+    sh:targetClass tern:Observation ;
+    sh:sparql [
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX unit: <http://qudt.org/vocab/unit/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+        select $this {
+            $this a tern:Observation ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+                sosa:hasSimpleResult ?simple ;
+                sosa:hasResult ?result .
+            ?result rdf:value ?value .
+            filter (?simple != ?value)
+        }
+    """
+        ] ;
+.

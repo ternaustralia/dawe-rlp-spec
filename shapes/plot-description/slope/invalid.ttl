@@ -10,6 +10,7 @@ PREFIX void: <http://rdfs.org/ns/void#>
 <urn:test:plot-description:invalid:slope:1>
     a tern:Observation ;
     rdfs:comment "Invalid result unit of measure" ;
+    sosa:hasSimpleResult 50.65 ;
     sosa:hasResult [
             a tern:Float ;
             rdf:value 50.65 ;
@@ -27,6 +28,7 @@ PREFIX void: <http://rdfs.org/ns/void#>
 <urn:test:plot-description:invalid:slope:2>
     a tern:Observation ;
     rdfs:comment "Invalid result - value out of range" ;
+    sosa:hasSimpleResult 100.5 ;
     sosa:hasResult [
             a tern:Float ;
             rdf:value 100.5 ;
@@ -44,6 +46,7 @@ PREFIX void: <http://rdfs.org/ns/void#>
 <urn:test:plot-description:invalid:slope:3>
     a tern:Observation ;
     rdfs:comment "Invalid result - incorrect used procedure" ;
+    sosa:hasSimpleResult 60.66 ;
     sosa:hasResult [
             a tern:Float ;
             rdf:value 60.66 ;
@@ -61,6 +64,7 @@ PREFIX void: <http://rdfs.org/ns/void#>
 <urn:test:plot-description:invalid:slope:4>
     a tern:Observation ;
     rdfs:comment "Invalid result - incorrect feature type" ;
+    sosa:hasSimpleResult 60.66 ;
     sosa:hasResult [
             a tern:Float ;
             rdf:value 60.66 ;
@@ -70,6 +74,24 @@ PREFIX void: <http://rdfs.org/ns/void#>
             a tern:FeatureOfInterest ;
             void:inDataset <urn:test:dataset> ;
             tern:featureType <urn:fake:featureType> ;
+        ] ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+.
+
+<urn:test:plot-description:invalid:slope:5>
+    a tern:Observation ;
+    rdfs:comment "Invalid result - simple result is not the same as the value in the result node." ;
+    sosa:hasSimpleResult 88.2 ;
+    sosa:hasResult [
+            a tern:Float ;
+            rdf:value 88.1 ;
+            tern:unit unit:DEG
+        ] ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <urn:test:dataset> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd> ;
         ] ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
