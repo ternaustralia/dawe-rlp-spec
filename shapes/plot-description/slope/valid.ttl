@@ -11,6 +11,7 @@ PREFIX void: <http://rdfs.org/ns/void#>
     a tern:Observation ;
     rdfs:comment "Valid result for slope" ;
     sosa:hasSimpleResult 50.65 ;
+    tern:hasSiteVisit <urn:test:site> ;
     sosa:hasResult [
             a tern:Float ;
             rdf:value 50.65 ;

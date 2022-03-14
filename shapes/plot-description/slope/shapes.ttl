@@ -122,3 +122,27 @@ PREFIX void: <http://rdfs.org/ns/void#>
     """
         ] ;
 .
+
+<urn:shapes:plot-description:slope:site-visit>
+    a sh:PropertyShape ;
+    sh:description "Each slope should have a site visit." ;
+    sh:message "Each slope should have a site visit." ;
+    sh:name "tern:SiteVisit" ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX unit: <http://qudt.org/vocab/unit/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+        select ?this {
+            ?this a tern:Observation ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> .
+        }
+    """
+        ] ;
+.
