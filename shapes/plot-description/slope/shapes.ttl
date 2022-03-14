@@ -1,4 +1,76 @@
-@prefix sh: <http://www.w3.org/ns/shacl#> .
 
-<urn:shapes:plot-description:slope> a sh:NodeShape ;
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:plot-description:slope:unit-of-measure>
+    a sh:PropertyShape ;
+    sh:description "The slope's unit of measure must be QUDT's degree." ;
+    sh:hasValue <http://qudt.org/vocab/unit/DEG> ;
+    sh:message "The slope's unit of measure must be QUDT's degree." ;
+    sh:name "tern:unit" ;
+    sh:path tern:unit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX unit: <http://qudt.org/vocab/unit/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+        select ?result {
+            ?this a tern:Observation ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+                sosa:hasResult ?result .
+        }
+    """
+        ] ;
 .
+
+<urn:shapes:plot-description:slope:used-procedure>
+    a sh:PropertyShape ;
+    sh:description "The slope's used procedure must be Plot Description." ;
+    sh:hasValue <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+    sh:message "The slope's used procedure must be Plot Description." ;
+    sh:name "sosa:usedProcedure" ;
+    sh:path sosa:usedProcedure ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX unit: <http://qudt.org/vocab/unit/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+        select ?this {
+            ?this a tern:Observation ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> .
+        }
+    """
+        ] ;
+.
+
+<urn:shapes:plot-description:slope:value-range>
+    a sh:PropertyShape ;
+    sh:description "Each slope should have exactly one float value for degree, between 0 and 90." ;
+    sh:maxInclusive 90 ;
+    sh:message "Each slope should have exactly one float value for degree, between 0 and 90." ;
+    sh:minInclusive 0 ;
+    sh:name "rdf:value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX unit: <http://qudt.org/vocab/unit/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+        select ?result {
+            ?this a tern:Observation ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+                sosa:hasResult ?result .
+        }
+    """
+        ] ;
+.
+

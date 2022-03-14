@@ -1,0 +1,44 @@
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:plot-description:invalid:slope:1>
+    a tern:Observation ;
+    rdfs:comment "Invalid result unit of measure" ;
+    sosa:hasResult [
+            a tern:Float ;
+            rdf:value 50.65 ;
+            tern:unit <urn:fake:unit>
+        ] ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+.
+
+<urn:test:plot-description:invalid:slope:2>
+    a tern:Observation ;
+    rdfs:comment "Invalid result - value out of range" ;
+    sosa:hasResult [
+            a tern:Float ;
+            rdf:value 100.5 ;
+            tern:unit unit:DEG
+        ] ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+.
+
+<urn:test:plot-description:invalid:slope:3>
+    a tern:Observation ;
+    rdfs:comment "Invalid result - incorrect used procedure" ;
+    sosa:hasResult [
+            a tern:Float ;
+            rdf:value 60.66 ;
+            tern:unit unit:DEG
+        ] ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+.
+
