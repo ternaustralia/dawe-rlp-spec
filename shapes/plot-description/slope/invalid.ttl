@@ -1,0 +1,141 @@
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:plot-description:invalid:slope:1>
+    a tern:Observation ;
+    rdfs:comment "Invalid result unit of measure" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <urn:test:dataset> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
+        ] ;
+    sosa:hasResult [
+            a tern:Float ;
+            rdf:value 50.65 ;
+            tern:unit <urn:fake:unit>
+        ] ;
+    sosa:hasSimpleResult 50.65 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:plot-description:invalid:slope:2>
+    a tern:Observation ;
+    rdfs:comment "Invalid result - value out of range" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <urn:test:dataset> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
+        ] ;
+    sosa:hasResult [
+            a tern:Float ;
+            rdf:value 100.5 ;
+            tern:unit unit:DEG
+        ] ;
+    sosa:hasSimpleResult 100.5 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:plot-description:invalid:slope:3>
+    a tern:Observation ;
+    rdfs:comment "Invalid result - incorrect used procedure" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <urn:test:dataset> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
+        ] ;
+    sosa:hasResult [
+            a tern:Float ;
+            rdf:value 60.66 ;
+            tern:unit unit:DEG
+        ] ;
+    sosa:hasSimpleResult 60.66 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:plot-description:invalid:slope:4>
+    a tern:Observation ;
+    rdfs:comment "Invalid result - incorrect feature type" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <urn:test:dataset> ;
+            tern:featureType <urn:fake:featureType>
+        ] ;
+    sosa:hasResult [
+            a tern:Float ;
+            rdf:value 60.66 ;
+            tern:unit unit:DEG
+        ] ;
+    sosa:hasSimpleResult 60.66 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:plot-description:invalid:slope:5>
+    a tern:Observation ;
+    rdfs:comment "Invalid result - simple result is not the same as the value in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <urn:test:dataset> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
+        ] ;
+    sosa:hasResult [
+            a tern:Float ;
+            rdf:value 88.1 ;
+            tern:unit unit:DEG
+        ] ;
+    sosa:hasSimpleResult 88.2 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:plot-description:invalid:slope:6>
+    a tern:Observation ;
+    rdfs:comment "Invalid result - each slope must have a site visit" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <urn:test:dataset> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
+        ] ;
+    sosa:hasResult [
+            a tern:Float ;
+            rdf:value 88.1 ;
+            tern:unit unit:DEG
+        ] ;
+    sosa:hasSimpleResult 88.1 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+.
+
+<urn:test:plot-description:invalid:slope:7>
+    a tern:Observation ;
+    rdfs:comment "Invalid result - the result value of each slope should be tern:Float." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <urn:test:dataset> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
+        ] ;
+    sosa:hasResult [
+            a tern:Integer ;
+            rdf:value 88.1 ;
+            tern:unit unit:DEG
+        ] ;
+    sosa:hasSimpleResult 88.1 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

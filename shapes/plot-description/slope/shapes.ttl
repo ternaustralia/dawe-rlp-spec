@@ -1,4 +1,170 @@
-@prefix sh: <http://www.w3.org/ns/shacl#> .
 
-<urn:shapes:plot-description:slope> a sh:NodeShape ;
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:plot-description:slope:feature-type>
+    a sh:PropertyShape ;
+    sh:description "Each slope must have feature type as landform." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd> ;
+    sh:message "Each slope must have feature type as landform." ;
+    sh:name "tern:featureType" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX unit: <http://qudt.org/vocab/unit/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+        select ?feature {
+            ?this a tern:Observation ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+                sosa:hasFeatureOfInterest ?feature .
+        }
+    """
+        ] ;
 .
+
+<urn:shapes:plot-description:slope:simple-result>
+    a sh:NodeShape ;
+    sh:description "Simple result value must be the same as the value in the result node." ;
+    sh:message "Simple result value must be the same as the value in the result node." ;
+    sh:name "Same value check" ;
+    sh:sparql [
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX unit: <http://qudt.org/vocab/unit/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+        select $this {
+            $this a tern:Observation ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+                sosa:hasSimpleResult ?simple ;
+                sosa:hasResult ?result .
+            ?result rdf:value ?value .
+            filter (?simple != ?value)
+        }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+.
+
+<urn:shapes:plot-description:slope:site-visit>
+    a sh:PropertyShape ;
+    sh:description "Each slope must have a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Each slope must have a site visit." ;
+    sh:minCount 1 ;
+    sh:name "tern:SiteVisit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX unit: <http://qudt.org/vocab/unit/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+        select ?this {
+            ?this a tern:Observation ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> .
+        }
+    """
+        ] ;
+.
+
+<urn:shapes:plot-description:slope:unit-of-measure>
+    a sh:PropertyShape ;
+    sh:description "The slope's unit of measure must be QUDT's degree." ;
+    sh:hasValue <http://qudt.org/vocab/unit/DEG> ;
+    sh:message "The slope's unit of measure must be QUDT's degree." ;
+    sh:name "tern:unit" ;
+    sh:path tern:unit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX unit: <http://qudt.org/vocab/unit/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+        select ?result {
+            ?this a tern:Observation ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+                sosa:hasResult ?result .
+        }
+    """
+        ] ;
+.
+
+<urn:shapes:plot-description:slope:used-procedure>
+    a sh:PropertyShape ;
+    sh:description "The slope's used procedure must be Plot Description." ;
+    sh:hasValue <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+    sh:message "The slope's used procedure must be Plot Description." ;
+    sh:name "sosa:usedProcedure" ;
+    sh:path sosa:usedProcedure ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX unit: <http://qudt.org/vocab/unit/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+        select ?this {
+            ?this a tern:Observation ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> .
+        }
+    """
+        ] ;
+.
+
+<urn:shapes:plot-description:slope:value-range>
+    a sh:PropertyShape ;
+    sh:description "Each slope should have exactly one float value for degree, between 0 and 90." ;
+    sh:maxInclusive 90 ;
+    sh:message "Each slope should have exactly one float value for degree, between 0 and 90." ;
+    sh:minInclusive 0 ;
+    sh:name "rdf:value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX unit: <http://qudt.org/vocab/unit/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+        select ?result {
+            ?this a tern:Observation ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+                sosa:hasResult ?result .
+        }
+    """
+        ] ;
+.
+
+<urn:shapes:plot-description:slope:value-type>
+    a sh:PropertyShape ;
+    sh:class tern:Float ;
+    sh:description "Each slope should have the result value as tern:Float." ;
+    sh:message "Each slope should have the result value as tern:Float." ;
+    sh:name "sosa:hasResult" ;
+    sh:path sosa:hasResult ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX unit: <http://qudt.org/vocab/unit/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+        select ?this {
+            ?this a tern:Observation ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> .
+        }
+    """
+        ] ;
+.
+
