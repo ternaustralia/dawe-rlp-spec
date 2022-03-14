@@ -120,3 +120,22 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
 .
 
+<urn:test:plot-description:invalid:slope:7>
+    a tern:Observation ;
+    rdfs:comment "Invalid result - the result value of each slope should be tern:Float." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <urn:test:dataset> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
+        ] ;
+    sosa:hasResult [
+            a tern:Integer ;
+            rdf:value 88.1 ;
+            tern:unit unit:DEG
+        ] ;
+    sosa:hasSimpleResult 88.1 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

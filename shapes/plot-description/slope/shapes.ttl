@@ -146,3 +146,25 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
 .
 
+<urn:shapes:plot-description:slope:value-type>
+    a sh:PropertyShape ;
+    sh:class tern:Float ;
+    sh:description "Each slope should have the result value as tern:Float." ;
+    sh:message "Each slope should have the result value as tern:Float." ;
+    sh:name "sosa:hasResult" ;
+    sh:path sosa:hasResult ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX unit: <http://qudt.org/vocab/unit/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+        select ?this {
+            ?this a tern:Observation ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> .
+        }
+    """
+        ] ;
+.
+
