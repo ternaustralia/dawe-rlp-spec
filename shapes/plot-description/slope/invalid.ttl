@@ -104,7 +104,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:test:plot-description:invalid:slope:6>
     a tern:Observation ;
-    rdfs:comment "Invalid result - each slope should have a site visit" ;
+    rdfs:comment "Invalid result - each slope must have a site visit" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <urn:test:dataset> ;
