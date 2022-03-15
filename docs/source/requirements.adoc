@@ -14,43 +14,11 @@ A _status_ is assigned to each requirement. The _status_ code list used in this 
 
 ===== Slope Observation
 
-====== Feature type
+include::requirements-by-module/plot-description/slope_feature-type.adoc[]
 
-[width=75%, frame=none, cols="1,5"]
-|===
-|Property | Value
+include::requirements-by-module/plot-description/slope_simple-result.adoc[]
 
-|Identifier | `urn:shapes:plot-description:slope:feature-type`
-|Label | Feature type
-|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value of `TBA` _MUST_ have a `tern:featureType` with the value link:http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd[`landform`].
-|Comment | TERN's ecologists have determined the feature type is "landform", defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook].
-|Status | `submitted`
-|Conformance Classes | `TBA`
-|Source | TERN Ecosystem Surveillance Ecological Monitoring Protocols
-|Validators | link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl[`/shapes/plot-description/slope/shapes.ttl`]
-|Examples | Valid: link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl[`/shapes/plot-description/slope/valid.ttl`]
-
-Invalid: link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl[`/shapes/plot-description/slope/invalid.ttl`]
-|===
-
-====== Site visit
-
-[width=75%, frame=none, cols="1,5"]
-|===
-|Property | Value
-
-|Identifier | `urn:shapes:plot-description:slope:site-visit`
-|Label | Site visit
-|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value of `TBA` _MUST_ have a `tern:hasSiteVisit` relationship.
-|Comment | Observations following the Plot Description protocol are made in the context of a site visit.
-|Status | `submitted`
-|Conformance Classes | `TBA`
-|Source | TERN Ecosystem Surveillance Ecological Monitoring Protocols
-|Validators | link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl[`/shapes/plot-description/slope/shapes.ttl`]
-|Examples | Valid: link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl[`/shapes/plot-description/slope/valid.ttl`]
-
-Invalid: link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl[`/shapes/plot-description/slope/invalid.ttl`]
-|===
+include::requirements-by-module/plot-description/slope_site-visit.adoc[]
 
 ====== Slope type Observation
 
