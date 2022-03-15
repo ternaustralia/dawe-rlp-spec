@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install asciidoctor
-        run: apt-get install -y asciidoctor
+        run: sudo apt-get update && apt-get install -y asciidoctor
 
       - uses: afc163/surge-preview@v1
         with:
