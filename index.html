@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.17">
+<title>Ecological Data Exchange Specification (working title)</title>
+<style>
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";
+@import "https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor@2.0/data/stylesheets/asciidoctor-default.css";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+#toctitle,
+.sidebarblock > .content > .title,
+#header > h1:first-child {
+  color: #0f3540;
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: "Uni Neue", Sans-serif;
+} */
+
+a,
+a > code {
+  transition: 0.3s;
+  color: #ed694b;
+  text-decoration: none;
+  text-underline-position: under;
+}
+
+#content h2 > a.link,
+#content h3 > a.link,
+#content h4 > a.link,
+#content h5 > a.link,
+#content h6 > a.link {
+  color: #ed694b;
+  text-decoration: underline;
+  text-decoration-color: #fde1db;
+}
+
+a:hover,
+#toc a:hover,
+h2 > a.link:hover,
+h3 > a.link:hover,
+h4 > a.link:hover,
+h5 > a.link:hover,
+h6 > a.link:hover,
+#content h2 > a.link:hover,
+#content h3 > a.link:hover,
+#content h4 > a.link:hover,
+#content h5 > a.link:hover,
+#content h6 > a.link:hover {
+  color: #0f3540;
+  text-decoration: underline;
+}
+
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>Ecological Data Exchange Specification (working title)</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_metadata">1. Metadata</a></li>
+<li><a href="#_preamble">2. Preamble</a>
+<ul class="sectlevel2">
+<li><a href="#_abstract">2.1. Abstract</a></li>
+<li><a href="#_normative_status">2.2. Normative Status</a></li>
+</ul>
+</li>
+<li><a href="#_requirements">3. Requirements</a>
+<ul class="sectlevel2">
+<li><a href="#_domain_model_conformance">3.1. Domain Model Conformance</a></li>
+<li><a href="#_tern_ontology_conformance">3.2. TERN Ontology Conformance</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<strong>Status: Draft</strong> - while the document is in draft, sections of the document may contain placheholders such as <code>TBA</code> and <code>TBD</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_metadata"><a class="link" href="#_metadata">1. Metadata</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-none grid-none stripes-even" style="width: 75%;">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>IRI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TBA</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Title</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ecological Data Exchange Specification (working title)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Definition</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This document lists the normative requirements for data aiming to conform to the TERN Ecosystem Surveillance Ecological Monitoring Protocols. It is to be used as the authoritative, human-readable list of individual requirements from which profile artefacts such as validators are derived from.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Created</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2022-03-14</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Modified</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2022-03-14</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Creator</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://linked.data.gov.au/org/tern">TERN</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Publisher</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://linked.data.gov.au/org/tern">TERN</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>License</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International (CC BY 4.0)</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Further information</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This document is part of the Services Agreement for the provision of standardised ecological monitoring protocols and systems for data collection, storage and management.</p>
+<p class="tableblock">Procurement Number (PRN): 360 000 5101</p>
+<p class="tableblock">Commonwealth of Australia as represented by the Department of Agriculture, Water and the Environment
+ABN 34 190 894 983 (<strong>Department</strong>)</p>
+<p class="tableblock">The University of Queensland as represented by TERN
+ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_preamble"><a class="link" href="#_preamble">2. Preamble</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_abstract"><a class="link" href="#_abstract">2.1. Abstract</a></h3>
+<div class="paragraph">
+<p>TERN Ecosystem Surveillance have developed 19 modules to standardise ecological monitoring protocols for data collection. The working title for the monitoring protocols is <em>TERN Ecosystem Surveillance Ecological Monitoring Protocols</em>.</p>
+</div>
+<div class="paragraph">
+<p>TERN Data Services and Analytics is developing a standardised data exchange specification to support the exchange of data collected using TERN Ecosystem Surveillance Ecological Monitoring Protocols. The working title for the data exchange specification is <em>Ecological Data Exchange Specification</em>.</p>
+</div>
+<div class="paragraph">
+<p>The Ecological Data Exchange Specification is a profile of the ecological data model <a href="https://linkeddata.tern.org.au/information-models/tern-ontology">TERN Ontology</a>. Data that is conformant to the Ecological Data Exchange Specification is also conformant to the TERN Ontology.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_normative_status"><a class="link" href="#_normative_status">2.2. Normative Status</a></h3>
+<div class="paragraph">
+<p>This specification is normative for the exchange of data collected using TERN Ecosystem Surveillance Ecological Monitoring Protocols.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_requirements"><a class="link" href="#_requirements">3. Requirements</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_domain_model_conformance"><a class="link" href="#_domain_model_conformance">3.1. Domain Model Conformance</a></h3>
+<div class="paragraph">
+<p>Requirements define the rules and constraints which data must conform to in order to be valid.</p>
+</div>
+<div class="paragraph">
+<p>A <em>status</em> is assigned to each requirement. The <em>status</em> code list used in this document is defined by the <a href="http://purl.org/linked-data/registry">Registry ontology</a> and a subset of the status codes are redefined here:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><strong>submitted</strong></code> - A proposed entry which is not yet approved for use for use. Corresponds to ISO 19135:(redraft) 'submitted'.</p>
+</li>
+<li>
+<p><code><strong>invalid</strong></code> - An entry which has been invalidated due to serious flaws, distinct from retrirement. Corresponds to ISO 19135(redraft) 'invalid'.</p>
+</li>
+<li>
+<p><code><strong>stable</strong></code> - An entry that is seen as having a reasonable measure of stability, may be used to mark the full adoption of a previously 'experimental' entry.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="_plot_description_module_conformance_class_requirements"><a class="link" href="#_plot_description_module_conformance_class_requirements">3.1.1. Plot Description Module Conformance Class Requirements</a></h4>
+<div class="sect4">
+<h5 id="_slope_observation"><a class="link" href="#_slope_observation">3.1.1.1. Slope Observation</a></h5>
+<div class="sect5">
+<h6 id="_feature_type"><a class="link" href="#_feature_type">3.1.1.1.1. Feature type</a></h6>
+<table class="tableblock frame-none grid-all stripes-even" style="width: 75%;">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:shapes:plot-description:slope:feature-type</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Feature type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instances of <code>tern:Observation</code> with <code>sosa:observedProperty</code> value of <code>TBA</code> <em>MUST</em> have a <code>tern:featureType</code> with the value <a href="http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd"><code>landform</code></a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TERN&#8217;s ecologists have determined the feature type is "landform", defined by the <a href="https://www.publish.csiro.au/book/5230/">Australian Soil and Land Survey Field Handbook</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conformance Classes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TBA</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TERN Ecosystem Surveillance Ecological Monitoring Protocols</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"><code>/shapes/plot-description/slope/shapes.ttl</code></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Examples</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"><code>/shapes/plot-description/slope/valid.ttl</code></a></p>
+<p class="tableblock">Invalid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"><code>/shapes/plot-description/slope/invalid.ttl</code></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_simple_result"><a class="link" href="#_simple_result">3.1.1.1.2. Simple result</a></h6>
+<table class="tableblock frame-none grid-all stripes-even" style="width: 75%;">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:shapes:plot-description:slope:simple-result</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simple result</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instances of <code>tern:Observation</code> with <code>sosa:observedProperty</code> value of <code>TBA</code> <em>MUST</em> have a <code>tern:hasSiteVisit</code> relationship.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Observations following the Plot Description protocol are made in the context of a site visit.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conformance Classes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TBA</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TERN Ecosystem Surveillance Ecological Monitoring Protocols</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"><code>/shapes/plot-description/slope/shapes.ttl</code></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Examples</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"><code>/shapes/plot-description/slope/valid.ttl</code></a></p>
+<p class="tableblock">Invalid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"><code>/shapes/plot-description/slope/invalid.ttl</code></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_site_visit"><a class="link" href="#_site_visit">3.1.1.1.3. Site visit</a></h6>
+<table class="tableblock frame-none grid-all stripes-even" style="width: 75%;">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:shapes:plot-description:slope:site-visit</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Site visit</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instances of <code>tern:Observation</code> with <code>sosa:observedProperty</code> value of <code>TBA</code> <em>MUST</em> have a <code>tern:hasSiteVisit</code> relationship.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Observations following the Plot Description protocol are made in the context of a site visit.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conformance Classes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TBA</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TERN Ecosystem Surveillance Ecological Monitoring Protocols</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"><code>/shapes/plot-description/slope/shapes.ttl</code></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Examples</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"><code>/shapes/plot-description/slope/valid.ttl</code></a></p>
+<p class="tableblock">Invalid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"><code>/shapes/plot-description/slope/invalid.ttl</code></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_slope_type_observation"><a class="link" href="#_slope_type_observation">3.1.1.1.4. Slope type Observation</a></h6>
+<div class="paragraph">
+<p><code>TBD</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tern_ontology_conformance"><a class="link" href="#_tern_ontology_conformance">3.2. TERN Ontology Conformance</a></h3>
+<div class="paragraph">
+<p><code>TBD</code>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2022-03-15 10:40:42 UTC
+</div>
+</div>
+</body>
+</html>
