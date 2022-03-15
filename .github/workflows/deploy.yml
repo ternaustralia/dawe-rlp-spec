@@ -12,11 +12,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install asciidoctor
-        run: sudo apt-get update && sudo apt-get install -y asciidoctor
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1.1"
 
-      - name: Build asciidoc files
+      - name: Install asciidoctor and asciidoctor-pdf
+        run: gem install asciidoctor asciidoctor-pdf
+
+      - name: Build asciidoc files - HTML
         run: asciidoctor --trace -a stylesheet=./styles.css -o ./build/index.html ./docs/source/index.adoc
+
+      - name: Build asciidoc files - PDF
+        run: asciidoctor --trace -a stylesheet=./styles.css -r asciidoctor-pdf -b pdf -o ../build/index.pdf ./source/index.adoc
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
