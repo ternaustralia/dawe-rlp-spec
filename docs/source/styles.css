@@ -29,6 +29,7 @@ a > code {
   transition: 0.3s;
   color: #ed694b;
   text-decoration: none;
+  text-underline-position: under;
 }
 
 #content h2 > a.link,
@@ -37,6 +38,8 @@ a > code {
 #content h5 > a.link,
 #content h6 > a.link {
   color: #ed694b;
+  text-decoration: underline;
+  text-decoration-color: #fde1db;
 }
 
 a:hover,
