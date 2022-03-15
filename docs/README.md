@@ -1,6 +1,8 @@
 # Specification
 
-Use Visual Studio Code to edit the specification files in the `source` directory.
+Use Visual Studio Code to edit the specification files in the `source` directory. 
+
+Note that you need to have `asciidoctor` installed on your system. Installation instructions can be found at https://docs.asciidoctor.org/asciidoctor/latest/install/ruby-packaging/.
 
 For auto-reload and live-preview functionality, do the following:
 
