@@ -5,6 +5,9 @@ on:
     branches:
       - main
 
+env:
+  PDF_FILENAME: spec.pdf
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -24,7 +27,7 @@ jobs:
         run: asciidoctor --trace -a stylesheet=./styles.css -o ./build/index.html ./docs/source/index.adoc
 
       - name: Build asciidoc files - PDF
-        run: asciidoctor --trace -a stylesheet=./styles.css -r asciidoctor-pdf -b pdf -o ../build/index.pdf ./docs/source/index.adoc
+        run: asciidoctor --trace -a stylesheet=./styles.css -r asciidoctor-pdf -b pdf -o ./build/${{ env.PDF_FILENAME }} ./docs/source/index.adoc
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
