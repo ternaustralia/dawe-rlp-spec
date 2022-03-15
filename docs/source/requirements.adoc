@@ -1,0 +1,61 @@
+== Requirements
+
+=== Domain Model Conformance
+
+Requirements define the rules and constraints which data must conform to in order to be valid.
+
+A _status_ is assigned to each requirement. The _status_ code list used in this document is defined by the link:http://purl.org/linked-data/registry[Registry ontology] and a subset of the status codes are redefined here:
+
+* `*submitted*` - A proposed entry which is not yet approved for use for use. Corresponds to ISO 19135:(redraft) 'submitted'.
+* `*invalid*` - An entry which has been invalidated due to serious flaws, distinct from retrirement. Corresponds to ISO 19135(redraft) 'invalid'.
+* `*stable*` - An entry that is seen as having a reasonable measure of stability, may be used to mark the full adoption of a previously 'experimental' entry.
+
+==== Plot Description Module Conformance Class Requirements
+
+===== Slope Observation
+
+====== Feature type
+
+[width=75%, frame=none, cols="1,5"]
+|===
+|Property | Value
+
+|Identifier | `urn:shapes:plot-description:slope:feature-type`
+|Label | Feature type
+|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value of `TBA` _MUST_ have a `tern:featureType` with the value link:http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd[`landform`].
+|Comment | TERN's ecologists have determined the feature type is "landform", defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook].
+|Status | `submitted`
+|Conformance Classes | `TBA`
+|Source | TERN Ecosystem Surveillance Ecological Monitoring Protocols
+|Validators | link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl[`/shapes/plot-description/slope/shapes.ttl`]
+|Examples | Valid: link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl[`/shapes/plot-description/slope/valid.ttl`]
+
+Invalid: link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl[`/shapes/plot-description/slope/invalid.ttl`]
+|===
+
+====== Site visit
+
+[width=75%, frame=none, cols="1,5"]
+|===
+|Property | Value
+
+|Identifier | `urn:shapes:plot-description:slope:site-visit`
+|Label | Site visit
+|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value of `TBA` _MUST_ have a `tern:hasSiteVisit` relationship.
+|Comment | Observations following the Plot Description protocol are made in the context of a site visit.
+|Status | `submitted`
+|Conformance Classes | `TBA`
+|Source | TERN Ecosystem Surveillance Ecological Monitoring Protocols
+|Validators | link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl[`/shapes/plot-description/slope/shapes.ttl`]
+|Examples | Valid: link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl[`/shapes/plot-description/slope/valid.ttl`]
+
+Invalid: link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl[`/shapes/plot-description/slope/invalid.ttl`]
+|===
+
+====== Slope type Observation
+
+`TBD`.
+
+=== TERN Ontology Conformance
+
+`TBD`.
