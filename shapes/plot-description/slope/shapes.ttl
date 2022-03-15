@@ -18,11 +18,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
         PREFIX unit: <http://qudt.org/vocab/unit/>
         PREFIX sosa: <http://www.w3.org/ns/sosa/>
-
-        select ?feature {
-            ?this a tern:Observation ;
+        select ?this  {
+            ?observation a tern:Observation ;
                 sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
-                sosa:hasFeatureOfInterest ?feature .
+                sosa:hasFeatureOfInterest ?this .
         }
     """
         ] ;
@@ -39,7 +38,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         PREFIX unit: <http://qudt.org/vocab/unit/>
         PREFIX sosa: <http://www.w3.org/ns/sosa/>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-
         select $this {
             $this a tern:Observation ;
                 sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
@@ -68,7 +66,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         PREFIX unit: <http://qudt.org/vocab/unit/>
         PREFIX sosa: <http://www.w3.org/ns/sosa/>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-
         select ?this {
             ?this a tern:Observation ;
                 sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> .
@@ -90,11 +87,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
         PREFIX unit: <http://qudt.org/vocab/unit/>
         PREFIX sosa: <http://www.w3.org/ns/sosa/>
-
-        select ?result {
-            ?this a tern:Observation ;
+        select ?this {
+            ?observation a tern:Observation ;
                 sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
-                sosa:hasResult ?result .
+                sosa:hasResult ?this .
         }
     """
         ] ;
@@ -113,7 +109,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
         PREFIX unit: <http://qudt.org/vocab/unit/>
         PREFIX sosa: <http://www.w3.org/ns/sosa/>
-
         select ?this {
             ?this a tern:Observation ;
                 sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> .
@@ -136,11 +131,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
         PREFIX unit: <http://qudt.org/vocab/unit/>
         PREFIX sosa: <http://www.w3.org/ns/sosa/>
-
-        select ?result {
-            ?this a tern:Observation ;
+        select ?this  {
+            ?observation a tern:Observation ;
                 sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
-                sosa:hasResult ?result .
+                sosa:hasResult ?this .
         }
     """
         ] ;
@@ -159,7 +153,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
         PREFIX unit: <http://qudt.org/vocab/unit/>
         PREFIX sosa: <http://www.w3.org/ns/sosa/>
-
         select ?this {
             ?this a tern:Observation ;
                 sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> .
