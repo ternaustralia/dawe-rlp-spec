@@ -1,0 +1,18 @@
+====== Site visit
+
+[width=75%, frame=none, cols="1,5"]
+|===
+|Property | Value
+
+|Identifier | `urn:shapes:plot-description:slope:site-visit`
+|Label | Site visit
+|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value of `TBA` _MUST_ have a `tern:hasSiteVisit` relationship.
+|Comment | Observations following the Plot Description protocol are made in the context of a site visit.
+|Status | `submitted`
+|Conformance Classes | `TBA`
+|Source | TERN Ecosystem Surveillance Ecological Monitoring Protocols
+|Validators | link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl[`/shapes/plot-description/slope/shapes.ttl`]
+|Examples | Valid: link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl[`/shapes/plot-description/slope/valid.ttl`]
+
+Invalid: link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl[`/shapes/plot-description/slope/invalid.ttl`]
+|===
