@@ -24,7 +24,7 @@ jobs:
         run: asciidoctor --trace -a stylesheet=./styles.css -o ./build/index.html ./docs/source/index.adoc
 
       - name: Build asciidoc files - PDF
-        run: asciidoctor --trace -a stylesheet=./styles.css -r asciidoctor-pdf -b pdf -o ../build/index.pdf ./source/index.adoc
+        run: asciidoctor --trace -a stylesheet=./styles.css -r asciidoctor-pdf -b pdf -o ../build/index.pdf ./docs/source/index.adoc
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
