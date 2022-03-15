@@ -16,7 +16,7 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y asciidoctor
 
       - name: Build asciidoc files
-        run: asciidoctor --trace -a stylesheet=docs/source/styles.css -o build/index.html docs/source/index.adoc
+        run: asciidoctor --trace -a stylesheet=./styles.css -o ./build/index.html ./docs/source/index.adoc
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
