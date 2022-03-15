@@ -1,3 +1,5 @@
+port=3000
+
 watch:
 	watchmedo shell-command \
 		--patterns="*.adoc;*.css" \
@@ -13,4 +15,4 @@ build-pdf:
 	asciidoctor --trace -a stylesheet=./styles.css -r asciidoctor-pdf -b pdf -o ../build/index.pdf ./source/index.adoc
 
 run:
-	python3 -m http.server -d ../build
+	python3 -m http.server ${port} -d ../build
