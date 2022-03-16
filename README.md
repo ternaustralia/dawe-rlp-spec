@@ -40,6 +40,16 @@ pip install -r requirements.txt
 ontotools file normalize <file-path>
 ```
 
+## Run tests
+
+These tests test to ensure the shapes do what they are supposed to do by testing against valid and invalid data.
+
+To run the tests, run the following command:
+
+```
+pytest
+```
+
 ## Run validator
 
 Build the docker container
