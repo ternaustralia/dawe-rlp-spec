@@ -1,0 +1,19 @@
+[#slope_value-type]
+====== Value type
+
+[frame=none, cols="1,5"]
+|===
+|Property | Value
+
+|Identifier | `urn:shapes:plot-description:slope:value-type`
+|Label | Value type
+|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:hasResult` where the value node must be a `tern:Float`.
+|Comment | Value must be a `tern:Float`.
+include::../../statuses/submitted.adoc[]
+|Conformance Classes | `TBA`
+|Source | TERN Ecosystem Surveillance Ecological Monitoring Protocols
+|Validators | link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl[`/shapes/plot-description/slope/shapes.ttl`]
+|Examples | Valid: link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl[`/shapes/plot-description/slope/valid.ttl`]
+
+Invalid: link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl[`/shapes/plot-description/slope/invalid.ttl`]
+|===

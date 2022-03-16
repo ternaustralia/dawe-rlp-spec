@@ -1,0 +1,19 @@
+[#slope_value-range]
+====== Value range
+
+[frame=none, cols="1,5"]
+|===
+|Property | Value
+
+|Identifier | `urn:shapes:plot-description:slope:value-range`
+|Label | Value range
+|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:hasResult` where the value is between 0 and 90 inclusive.
+|Comment | Value must be between 0 and 90 inclusive.
+include::../../statuses/submitted.adoc[]
+|Conformance Classes | `TBA`
+|Source | TERN Ecosystem Surveillance Ecological Monitoring Protocols
+|Validators | link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl[`/shapes/plot-description/slope/shapes.ttl`]
+|Examples | Valid: link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl[`/shapes/plot-description/slope/valid.ttl`]
+
+Invalid: link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl[`/shapes/plot-description/slope/invalid.ttl`]
+|===
