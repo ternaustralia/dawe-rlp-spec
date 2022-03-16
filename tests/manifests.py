@@ -1,4 +1,4 @@
-properties = [
+test_cases = [
     [
         "plot-description-slope",
         "shapes/plot-description/slope/shapes.ttl",

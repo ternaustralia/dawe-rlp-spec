@@ -1,17 +1,16 @@
-import json
-from pyshacl import validate
-import re
 import pytest
-from data import properties
 import rdflib
+from pyshacl import validate
 
-@pytest.mark.parametrize("name, shapes, valid, invalid, expected", properties)
+from manifests import test_cases
+
+@pytest.mark.parametrize("name, shapes, valid, invalid, expected", test_cases)
 def test_valid(name, invalid, shapes, valid, expected):
     r = validate(valid, shacl_graph=shapes, advanced=True)
     conforms, results_graph, results_text = r
     assert conforms == True
 
-@pytest.mark.parametrize("name, shapes, valid, invalid, expected", properties)
+@pytest.mark.parametrize("name, shapes, valid, invalid, expected", test_cases)
 def test_invalid(name, invalid, shapes, valid, expected):
     r = validate(invalid, shacl_graph=shapes, advanced=True)
     conforms, results_graph, results_text = r
