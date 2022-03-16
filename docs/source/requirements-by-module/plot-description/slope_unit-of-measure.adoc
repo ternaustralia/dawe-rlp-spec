@@ -1,14 +1,14 @@
-[#slope_simple-result]
-====== Simple result
+[#slope_unit-of-measure]
+====== Unit of measure
 
 [frame=none, cols="1,5"]
 |===
 |Property | Value
 
-|Identifier | `urn:shapes:plot-description:slope:simple-result`
-|Label | Simple result
-|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `tern:hasSiteVisit` relationship.
-|Comment | Observations following the Plot Description protocol are made in the context of a site visit.
+|Identifier | `urn:shapes:plot-description:slope:unit-of-measure`
+|Label | Unit of measure
+|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:hasResult` where the value node has the property `tern:unit` with the value `unit:DEG`.
+|Comment | Result value's unit of measure must have the value `unit:DEG`.
 include::../../statuses/submitted.adoc[]
 |Conformance Classes | `TBA`
 |Source | TERN Ecosystem Surveillance Ecological Monitoring Protocols

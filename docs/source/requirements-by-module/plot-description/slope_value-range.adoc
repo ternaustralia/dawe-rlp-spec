@@ -1,14 +1,14 @@
-[#slope_simple-result]
-====== Simple result
+[#slope_value-range]
+====== Value range
 
 [frame=none, cols="1,5"]
 |===
 |Property | Value
 
-|Identifier | `urn:shapes:plot-description:slope:simple-result`
-|Label | Simple result
-|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `tern:hasSiteVisit` relationship.
-|Comment | Observations following the Plot Description protocol are made in the context of a site visit.
+|Identifier | `urn:shapes:plot-description:slope:value-range`
+|Label | Value range
+|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:hasResult` where the value is between 0 and 90 inclusive.
+|Comment | Value must be between 0 and 90 inclusive.
 include::../../statuses/submitted.adoc[]
 |Conformance Classes | `TBA`
 |Source | TERN Ecosystem Surveillance Ecological Monitoring Protocols

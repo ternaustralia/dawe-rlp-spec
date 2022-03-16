@@ -1,14 +1,14 @@
-[#slope_simple-result]
-====== Simple result
+[#slope_value-type]
+====== Value type
 
 [frame=none, cols="1,5"]
 |===
 |Property | Value
 
-|Identifier | `urn:shapes:plot-description:slope:simple-result`
-|Label | Simple result
-|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `tern:hasSiteVisit` relationship.
-|Comment | Observations following the Plot Description protocol are made in the context of a site visit.
+|Identifier | `urn:shapes:plot-description:slope:value-type`
+|Label | Value type
+|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:hasResult` where the value node must be a `tern:Float`.
+|Comment | Value must be a `tern:Float`.
 include::../../statuses/submitted.adoc[]
 |Conformance Classes | `TBA`
 |Source | TERN Ecosystem Surveillance Ecological Monitoring Protocols

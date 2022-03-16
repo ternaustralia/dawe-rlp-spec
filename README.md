@@ -2,6 +2,11 @@
 
 This repository contains the specification requirements and validators for the DAWE RLP field survey protocols developed by TERN.
 
+View the specification:
+- Web document: https://ternaustralia.github.io/dawe-rlp-spec
+
+- PDF document: https://ternaustralia.github.io/dawe-rlp-spec/spec.pdf
+
 ## SHACL shapes
 
 SHACL shapes reside in the `shapes/` directory. The `shapes/` directory contains subdirectories to each of the protocol modules. Each protocol module contains a directory named after an observable property. This observable property directory contains 3 RDF Turtle files:
@@ -53,10 +58,13 @@ pytest
 ## Run validator
 
 Build the docker container
+
 ```
 make build
 ```
+
 Validate the invalid and valid examples with `shapes.ttl`
+
 ```
 make validate shape=shape_path data=data_file_path
 ```
