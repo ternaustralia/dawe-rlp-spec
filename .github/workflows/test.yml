@@ -1,0 +1,42 @@
+name: Run python tests
+
+on:
+  # Make workflow callable.
+  workflow_call:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.10"]
+        test-case:
+          - name: Check Turtle syntax - shapes/plot-description/slope/shapes.ttl
+            command: ontotools file validate shapes/plot-description/slope/shapes.ttl
+          - name: Check Turtle syntax - shapes/plot-description/slope/invalid.ttl
+            command: ontotools file validate shapes/plot-description/slope/invalid.ttl
+          - name: Check Turtle syntax - shapes/plot-description/slope/valid.ttl
+            command: ontotools file validate shapes/plot-description/slope/valid.ttl
+
+          - name: Run python tests to check the functionality of shapes.ttl
+            command: pytest tests/test.py
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+
+      - name: Use Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: ${{ matrix.test-case.name }}
+        run: |
+          ${{ matrix.test-case.command }}
