@@ -22,7 +22,7 @@ jobs:
             command: ontotools file validate shapes/plot-description/slope/valid.ttl
 
           - name: Run python tests to check the functionality of shapes.ttl
-            command: pytest tests/test.py
+            command: pytest
 
     steps:
       - name: Checkout the repo
