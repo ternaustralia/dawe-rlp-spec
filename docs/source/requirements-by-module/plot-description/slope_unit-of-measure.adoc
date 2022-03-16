@@ -1,0 +1,19 @@
+[#slope_unit-of-measure]
+====== Unit of measure
+
+[frame=none, cols="1,5"]
+|===
+|Property | Value
+
+|Identifier | `urn:shapes:plot-description:slope:unit-of-measure`
+|Label | Unit of measure
+|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:hasResult` where the value node has the property `tern:unit` with the value `unit:DEG`.
+|Comment | Result value must have the unit of measure as `unit:DEG`.
+include::../../statuses/submitted.adoc[]
+|Conformance Classes | `TBA`
+|Source | TERN Ecosystem Surveillance Ecological Monitoring Protocols
+|Validators | link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl[`/shapes/plot-description/slope/shapes.ttl`]
+|Examples | Valid: link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl[`/shapes/plot-description/slope/valid.ttl`]
+
+Invalid: link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl[`/shapes/plot-description/slope/invalid.ttl`]
+|===
