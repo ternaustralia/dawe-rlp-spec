@@ -14,13 +14,6 @@ jobs:
       matrix:
         python-version: ["3.10"]
         test-case:
-          - name: Check Turtle syntax - shapes/plot-description/slope/shapes.ttl
-            command: ontotools file validate shapes/plot-description/slope/shapes.ttl
-          - name: Check Turtle syntax - shapes/plot-description/slope/invalid.ttl
-            command: ontotools file validate shapes/plot-description/slope/invalid.ttl
-          - name: Check Turtle syntax - shapes/plot-description/slope/valid.ttl
-            command: ontotools file validate shapes/plot-description/slope/valid.ttl
-
           - name: Run python tests
             command: pytest
 
