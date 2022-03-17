@@ -1,14 +1,15 @@
-====== Site visit
+[#slope_unit-of-measure]
+====== Unit of measure
 
-[width=75%, frame=none, cols="1,5"]
+[frame=none, cols="1,5"]
 |===
 |Property | Value
 
-|Identifier | `urn:shapes:plot-description:slope:site-visit`
-|Label | Site visit
-|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value of `TBA` _MUST_ have a `tern:hasSiteVisit` relationship.
-|Comment | Observations following the Plot Description protocol are made in the context of a site visit.
-|Status | `submitted`
+|Identifier | `urn:shapes:plot-description:slope:unit-of-measure`
+|Label | Unit of measure
+|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:hasResult` where the value node has the property `tern:unit` with the value `unit:DEG`.
+|Comment | Result value's unit of measure must have the value `unit:DEG`.
+include::../../../statuses/submitted.adoc[]
 |Conformance Classes | `TBA`
 |Source | TERN Ecosystem Surveillance Ecological Monitoring Protocols
 |Validators | link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl[`/shapes/plot-description/slope/shapes.ttl`]

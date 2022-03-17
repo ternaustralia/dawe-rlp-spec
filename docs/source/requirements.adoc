@@ -12,17 +12,20 @@ A _status_ is assigned to each requirement. The _status_ code list used in this 
 
 ==== Plot Description Module Conformance Class Requirements
 
-===== Slope Observation
+Requirements that have been accepted and are *stable* are marked with a green check mark.
 
-include::requirements-by-module/plot-description/slope_feature-type.adoc[]
+For example:
 
-include::requirements-by-module/plot-description/slope_simple-result.adoc[]
+[frame=none, cols="1,5"]
+|===
+|Property | Value
 
-include::requirements-by-module/plot-description/slope_site-visit.adoc[]
+include::statuses/stable.adoc[]
+|===
 
-====== Slope type Observation
+include::requirements-by-module/plot-description/slope/index.adoc[]
 
-`TBD`.
+include::requirements-by-module/plot-description/slope-class/index.adoc[]
 
 === TERN Ontology Conformance
 
