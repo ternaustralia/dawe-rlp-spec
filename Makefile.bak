@@ -10,7 +10,10 @@ pyshacl:
 	pyshacl -s ${shape} ${data}
 
 validate:
-	shaclvalidate.sh -datafile ${data} -shapesfile ${shape}
+	docker run --rm -it -v $(PWD):/mnt/data shacl -datafile ${data} -shapesfile ${shape}
 
 validate-meta:
-	shaclvalidate.sh -datafile ${data} -shapesfile ${shape} -validateShapes
+	docker run --rm -it -v $(PWD):/mnt/data shacl -datafile ${data} -shapesfile ${shape} -validateShapes
+
+build:
+	docker build -t shacl .
