@@ -13,9 +13,6 @@ jobs:
     strategy:
       matrix:
         python-version: ["3.10"]
-        test-case:
-          - name: Run python tests
-            command: pytest
 
     steps:
       - name: Checkout the repo
@@ -30,6 +27,6 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: ${{ matrix.test-case.name }}
+      - name: Run python tests
         run: |
-          ${{ matrix.test-case.command }}
+          pytest
