@@ -7,7 +7,16 @@ View the specification:
 
 - PDF document: https://ternaustralia.github.io/dawe-rlp-spec/spec.pdf
 
-## SHACL shapes
+## Repository structure
+
+- Specification source files (asciidoc) are located within the `docs/` directory.
+- SHACL shapes are defined in the `shapes/` directory.
+
+## Specification document
+
+Please see [docs/README.md](docs/README.md) for more information.
+
+## SHACL shapes directory structure
 
 SHACL shapes reside in the `shapes/` directory. The `shapes/` directory contains subdirectories to each of the protocol modules. Each protocol module contains a directory named after an observable property. This observable property directory contains 3 RDF Turtle files:
 
@@ -15,39 +24,31 @@ SHACL shapes reside in the `shapes/` directory. The `shapes/` directory contains
 - `valid.ttl` - valid examples
 - `invalid.ttl` - invalid examples
 
-## Editing
+## Development
 
-We use ontotools, a Python command line application to normalize the source files.
+This project is developed within Visual Studio Code devcontainers. 
 
-Ensure the following instructions are performed whenever edits are made to files before committing to git.
+To ensure all the tools required for this project are available and installed correctly, please use VS Code and Docker, and open the project inside a container using the extension `ms-vscode-remote.remote-containers`.
 
-### Create a Python 3 virtual environment
+### SHACL shapes
 
-```bash
-python3 -m venv venv
+Any additions or modifications to RDF Turtle files must use the supplied `Makefile` to normalize the content for better version control diffing. 
+
+Run the command:
+
+```
+make normalize
 ```
 
-### Activate the virtual environment
+This will find all files that end in `.ttl` in the `shapes/` directory and apply [RDFLib's](https://github.com/RDFLib/rdflib) `longturtle` serialization method.
 
-```bash
-source venv/bin/activate
-```
+### Run tests
 
-### Install the required packages
+These tests ensure the shapes do what they are supposed to do by testing against valid and invalid data.
 
-```bash
-pip install -r requirements.txt
-```
+Tests use [pySHACL](https://github.com/RDFLib/pySHACL) to ensure the shapes defined with SHACL do what they are supposed to do by testing against valid and invalid data.
 
-### Run ontotools to normalize Turtle files
-
-```bash
-ontotools file normalize <file-path>
-```
-
-## Run tests
-
-These tests test to ensure the shapes do what they are supposed to do by testing against valid and invalid data.
+Tests also check to ensure shapes are in the RDF Turtle syntax and there is no syntax issues.
 
 To run the tests, run the following command:
 
@@ -55,18 +56,33 @@ To run the tests, run the following command:
 pytest
 ```
 
-## Run validator
+### Run validator
 
-Build the docker container
+The VS Code devcontainer provides SHACL processors, pySHACL and [TopQuadrant/shacl](https://github.com/TopQuadrant/shacl).
+
+Makefile targets have been provided for your convenience.
+
+| Target          | Description                                                               |
+|-----------------|---------------------------------------------------------------------------|
+| `pyshacl-af`    | pySHACL with SHACL Advanced Features                                      |
+| `pyshacl`       | pySHACL basic                                                             |
+| `validate`      | Validate with `TopQuadrant/shacl`                                         |
+| `validate-meta` | Validate with `TopQuadrant/shacl` with the meta shapes validation enabled |
+
+Example:
 
 ```
-make build
+make validate shape=path/to/shape.ttl data=path/to/data.ttl
 ```
 
-Validate the invalid and valid examples with `shapes.ttl`
+Alternatively, you can run the SHACL processors directly.
 
 ```
-make validate shape=shape_path data=data_file_path
+pyshacl --help
+```
+
+```
+shaclvalidate.sh --help
 ```
 
 ## Contact
