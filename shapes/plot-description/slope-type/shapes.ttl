@@ -78,7 +78,7 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
             select ?values {
                 service <https://graphdb.tern.org.au/repositories/dawe_vocabs_core> {
                     ?s skos:member ?values .
-                    filter (regex(str(?s), "d893e669-c530-4bc3-a057-a5799ffcb5db"))
+                    filter (STRENDS(str(?s), "d893e669-c530-4bc3-a057-a5799ffcb5db"))
                 }
             }
 
