@@ -1,12 +1,12 @@
 
+PREFIX ns1: <urn:property:>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 
 <urn:shapes:plot-description:slope-type:result-category>
-    a sh:NodeShape, <urn:class:Controlled> ;
-    <urn:property:query> """
-    
-    """ ;
+    a
+        sh:NodeShape ,
+        <urn:class:Controlled> ;
     sh:description "The value of result must be from the slope type codes." ;
     sh:message "The value of result must be from the slope type codes." ;
     sh:name "Check slope type category" ;
@@ -73,5 +73,15 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
                     ]
             ]
         ) ;
+    ns1:query """
+            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+            select ?values {
+                service <https://graphdb.tern.org.au/repositories/dawe_vocabs_core> {
+                    ?s skos:member ?values .
+                    filter (regex(str(?s), "d893e669-c530-4bc3-a057-a5799ffcb5db"))
+                }
+            }
+
+    """ ;
 .
 

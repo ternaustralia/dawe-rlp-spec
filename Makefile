@@ -3,6 +3,7 @@
 shape=shapes/plot-description/slope-type/shapes.ttl
 data=shapes/plot-description/slope-type/invalid.ttl
 SOURCES := $(shell find shapes -name "*.ttl")
+SHAPES := $(shell find shapes -name "shapes.ttl")
 
 pyshacl-af:
 	pyshacl -s ${shape} ${data} -a
@@ -20,3 +21,8 @@ normalize:
 	for file in $(SOURCES) ; do \
 		ontotools file normalize $$file ; \
 	done
+
+fetch:
+	for file in $(SHAPES) ; do \
+    	python fetch.py $$file ; \
+    done
