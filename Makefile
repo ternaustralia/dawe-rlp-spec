@@ -24,5 +24,5 @@ normalize:
 
 update-controlled-shapes:
 	for file in $(SHAPES) ; do \
-		python fetch.py $$file ; \
+		python update-controlled-shapes.py $$file ; \
 	done
