@@ -15,7 +15,7 @@ def fetch(filename: str):
 
     g.parse(filename)
 
-    q_delete_bnodes = """
+    q_delete = """
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         PREFIX sh: <http://www.w3.org/ns/shacl#>
         delete {
@@ -23,32 +23,22 @@ def fetch(filename: str):
             ?node rdf:rest ?item .
             ?item rdf:first ?head ;
                 rdf:rest ?tail .
+            ?head sh:property ?property .
+            ?property sh:path rdf:value ;
+            sh:hasValue ?value .
         }
         where {
             ?s sh:xone ?node .
             ?node rdf:rest* ?item .
             ?item rdf:first ?head ;
                 rdf:rest ?tail .
+            ?head sh:property ?property .
+            ?property sh:path rdf:value ;
+            sh:hasValue ?value .
         }
     """
 
-    q_delete_values = """
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    PREFIX sh: <http://www.w3.org/ns/shacl#>
-    delete {
-        ?s sh:property ?property .
-        ?property sh:path rdf:value ;
-        sh:hasValue ?value .
-    }
-    where {
-        ?s sh:property ?property .
-        ?property sh:path rdf:value ;
-        sh:hasValue ?value .
-    }
-    """
-
-    g.update(q_delete_bnodes)
-    g.update(q_delete_values)
+    g.update(q_delete)
 
     q = """
         select ?uri ?query {
