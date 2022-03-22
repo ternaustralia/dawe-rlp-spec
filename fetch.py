@@ -1,8 +1,12 @@
+import logging
 import typer
 from rdflib.namespace import RDF, RDFS, VOID, XSD, SOSA, DCTERMS, PROV, TIME
 from rdflib import Graph, Namespace, URIRef, Literal, BNode
 
 app = typer.Typer()
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 @app.command()
@@ -38,6 +42,7 @@ def fetch(filename: str):
         }
     """
 
+    logger.info(f"Delete sh:xone in file '{filename}'")
     g.update(q_delete)
 
     q = """
@@ -50,6 +55,7 @@ def fetch(filename: str):
     for query in g.query(q).bindings:
         start_from_the_last_blank_node = True
         uri = query["uri"]
+        logger.info(f"Updating sh:xone of shape '{uri}' in '{filename}'")
         for r in g.query(query["query"]):
             node_value = BNode()
             g.add((node_value, SHACL.path, RDF.value))
@@ -75,6 +81,8 @@ def fetch(filename: str):
                 last_node,
             )
         )
+
+        logger.info(f"Updated sh:xone of shape '{uri}' in '{filename}'")
 
     g.serialize(filename)
 

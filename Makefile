@@ -18,11 +18,11 @@ validate-meta:
 	shaclvalidate.sh -datafile ${data} -shapesfile ${shape} -validateShapes
 
 normalize:
-    for file in $(SOURCES) ; do \
-        ontotools file normalize $$file ; \
-    done
+	for file in $(SOURCES) ; do \
+		ontotools file normalize $$file ; \
+	done
 
 update-controlled-shapes:
-    for file in $(SHAPES) ; do \
-        python fetch.py $$file ; \
-    done
+	for file in $(SHAPES) ; do \
+		python fetch.py $$file ; \
+	done
