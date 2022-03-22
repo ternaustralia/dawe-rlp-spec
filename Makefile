@@ -22,7 +22,7 @@ normalize:
 		ontotools file normalize $$file ; \
 	done
 
-fetch:
+update-controlled-shapes:
 	for file in $(SHAPES) ; do \
     	python fetch.py $$file ; \
     done
