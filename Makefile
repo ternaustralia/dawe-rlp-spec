@@ -3,6 +3,7 @@
 shape=shapes/plot-description/slope/shapes.ttl
 data=shapes/plot-description/slope/invalid.ttl
 SOURCES := $(shell find shapes -name "*.ttl")
+SHAPES := $(shell find shapes -name "shapes.ttl")
 
 pyshacl-af:
 	pyshacl -s ${shape} ${data} -a
@@ -19,4 +20,9 @@ validate-meta:
 normalize:
 	for file in $(SOURCES) ; do \
 		ontotools file normalize $$file ; \
+	done
+
+validate-shapes:
+	for file in $(SHAPES) ; do \
+		pyshacl -s shapes/_meta/meta.shapes.ttl -a $$file ; \
 	done
