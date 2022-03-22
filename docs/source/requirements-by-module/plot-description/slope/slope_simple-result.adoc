@@ -7,8 +7,8 @@
 
 |Identifier | `urn:shapes:plot-description:slope:simple-result`
 |Label | Simple result
-|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `tern:hasSiteVisit` relationship.
-|Comment | Observations following the Plot Description protocol are made in the context of a site visit.
+|Definition | Instances of `tern:Observation` _MUST_ have a `sosa:hasSimpleResult` where the value is the same as the `rdf:value` on the value node of `sosa:hasResult`.
+|Comment | Value of `sosa:hasSimpleResult` must be the same as the value in `sosa:hasResult`.
 include::../../../statuses/submitted.adoc[]
 |Conformance Classes | `TBA`
 |Source | TERN Ecosystem Surveillance Ecological Monitoring Protocols
