@@ -68,6 +68,8 @@ Makefile targets have been provided for your convenience.
 | `pyshacl`       | pySHACL basic                                                             |
 | `validate`      | Validate with `TopQuadrant/shacl`                                         |
 | `validate-meta` | Validate with `TopQuadrant/shacl` with the meta shapes validation enabled |
+| `normalize`     | Normalize all Turtle files under `shapes` with Ontotools                  |
+| `update-controlled-shapes`| Update controlled shapes for categorical properties             |
 
 Example:
 
