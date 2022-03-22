@@ -1,6 +1,6 @@
 import logging
 import typer
-from rdflib.namespace import RDF, RDFS, VOID, XSD, SOSA, DCTERMS, PROV, TIME
+from rdflib.namespace import RDF, RDFS, VOID, XSD, SOSA, DCTERMS, PROV, TIME, SH
 from rdflib import Graph, Namespace, URIRef, Literal, BNode
 
 app = typer.Typer()
@@ -14,35 +14,30 @@ def fetch(filename: str):
 
     g = Graph()
 
-    SHACL = Namespace("http://www.w3.org/ns/shacl#")
-    g.bind("sh", SHACL)
-
     g.parse(filename)
 
     q_delete = """
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         PREFIX sh: <http://www.w3.org/ns/shacl#>
         delete {
-            ?s sh:xone ?node .
+            ?uri sh:property ?property .
+            ?property sh:in ?node .
             ?node rdf:rest ?item .
             ?item rdf:first ?head ;
                 rdf:rest ?tail .
-            ?head sh:property ?property .
-            ?property sh:path rdf:value ;
-            sh:hasValue ?value .
+            ?property sh:path ?path .
         }
         where {
-            ?s sh:xone ?node .
+            ?uri sh:property ?property .
+            ?property sh:in ?node .
             ?node rdf:rest* ?item .
             ?item rdf:first ?head ;
                 rdf:rest ?tail .
-            ?head sh:property ?property .
-            ?property sh:path rdf:value ;
-            sh:hasValue ?value .
+            ?property sh:path ?path .
         }
     """
 
-    logger.info(f"Delete sh:xone in file '{filename}'")
+    logger.info(f"Delete sh:in in file '{filename}'")
     g.update(q_delete)
 
     q = """
@@ -55,34 +50,32 @@ def fetch(filename: str):
     for query in g.query(q).bindings:
         start_from_the_last_blank_node = True
         uri = query["uri"]
-        logger.info(f"Updating sh:xone of shape '{uri}' in '{filename}'")
+        logger.info(f"Updating sh:in of shape '{uri}' in '{filename}'")
+        node_property = BNode()
         for r in g.query(query["query"]):
-            node_value = BNode()
-            g.add((node_value, SHACL.path, RDF.value))
-            g.add((node_value, SHACL.hasValue, r["values"]))
-            node_property = BNode()
-            g.add((node_property, SHACL.property, node_value))
-
             if start_from_the_last_blank_node:
                 last_node = BNode()
-                g.add((last_node, RDF.first, node_property))
+                g.add((last_node, RDF.first, r["values"]))
                 g.add((last_node, RDF.rest, RDF.nil))
                 start_from_the_last_blank_node = False
             else:
                 next_node = BNode()
-                g.add((next_node, RDF.first, node_property))
+                g.add((next_node, RDF.first, r["values"]))
                 g.add((next_node, RDF.rest, last_node))
                 last_node = next_node
+
+        g.add((node_property, SH.path, RDF.value))
+        g.add((node_property, SH["in"], last_node))
 
         g.add(
             (
                 uri,
-                SHACL.xone,
-                last_node,
+                SH.property,
+                node_property,
             )
         )
 
-        logger.info(f"Updated sh:xone of shape '{uri}' in '{filename}'")
+        logger.info(f"Updated sh:in of shape '{uri}' in '{filename}'")
 
     g.serialize(filename)
 
