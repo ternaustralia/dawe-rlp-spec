@@ -58,21 +58,21 @@ def fetch(filename: str):
             g.add((node_property, SHACL.property, node_value))
 
             if start_from_the_last_blank_node:
-                lastNode = BNode()
-                g.add((lastNode, RDF.first, node_property))
-                g.add((lastNode, RDF.rest, RDF.nil))
+                last_node = BNode()
+                g.add((last_node, RDF.first, node_property))
+                g.add((last_node, RDF.rest, RDF.nil))
                 start_from_the_last_blank_node = False
             else:
-                nextNode = BNode()
-                g.add((nextNode, RDF.first, node_property))
-                g.add((nextNode, RDF.rest, lastNode))
-                lastNode = nextNode
+                next_node = BNode()
+                g.add((next_node, RDF.first, node_property))
+                g.add((next_node, RDF.rest, last_node))
+                last_node = next_node
 
         g.add(
             (
                 uri,
                 SHACL.xone,
-                lastNode,
+                last_node,
             )
         )
 
