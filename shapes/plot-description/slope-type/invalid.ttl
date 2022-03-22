@@ -8,8 +8,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:test:plot-description:invalid:slope-type:1>
     a tern:Observation ;
-    rdfs:comment "Invalid result - incorrect vocabulary" ;
     void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect vocabulary" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -32,8 +32,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:test:plot-description:invalid:slope-type:2>
     a tern:Observation ;
-    rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
     void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
