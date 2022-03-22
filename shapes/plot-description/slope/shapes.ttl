@@ -4,13 +4,23 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 
 <urn:shapes:plot-description:slope:feature-type>
     a sh:PropertyShape ;
-    sh:description "Each slope must have feature type as landform." ;
+    a <urn:class:Requirement> ;
+    reg:status reg:statusSubmitted ;
+    <urn:property:validators> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
+    <urn:property:examples> [
+        <urn:property:validExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI ;
+        <urn:property:invalidExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI 
+    ] ;
+    sh:description "TERN's ecologists have determined the feature type is _landform_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd> ;
-    sh:message "Each slope must have feature type as landform." ;
-    sh:name "tern:featureType" ;
+    sh:message "Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `tern:featureType` with the value link:http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd[`landform`]." ;
+    sh:name "Feature type" ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     sh:path tern:featureType ;
     sh:target [
             a sh:SPARQLTarget ;
@@ -29,9 +39,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:shapes:plot-description:slope:simple-result>
     a sh:NodeShape ;
-    sh:description "Simple result value must be the same as the value in the result node." ;
-    sh:message "Simple result value must be the same as the value in the result node." ;
-    sh:name "Same value check" ;
+    a <urn:class:Requirement> ;
+    reg:status reg:statusSubmitted ;
+    <urn:property:validators> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
+    <urn:property:examples> [
+        <urn:property:validExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI ;
+        <urn:property:invalidExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI 
+    ] ;
+    sh:description "Value of `sosa:hasSimpleResult` must be the same as the value in `sosa:hasResult`." ;
+    sh:message "Instances of `tern:Observation` _MUST_ have a `sosa:hasSimpleResult` where the value is the same as the `rdf:value` on the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     sh:sparql [
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -53,11 +71,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:shapes:plot-description:slope:site-visit>
     a sh:PropertyShape ;
-    sh:description "Each slope must have a site visit." ;
+    a <urn:class:Requirement> ;
+    reg:status reg:statusSubmitted ;
+    <urn:property:validators> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
+    <urn:property:examples> [
+        <urn:property:validExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI ;
+        <urn:property:invalidExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI 
+    ] ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    sh:description "Observations following the Plot Description protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
-    sh:message "Each slope must have a site visit." ;
+    sh:message "Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a value for `tern:hasSiteVisit`." ;
     sh:minCount 1 ;
-    sh:name "tern:SiteVisit" ;
+    sh:name "Site visit" ;
     sh:path tern:hasSiteVisit ;
     sh:target [
             a sh:SPARQLTarget ;
@@ -76,10 +102,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:shapes:plot-description:slope:unit-of-measure>
     a sh:PropertyShape ;
-    sh:description "The slope's unit of measure must be QUDT's degree." ;
+    a <urn:class:Requirement> ;
+    reg:status reg:statusSubmitted ;
+    <urn:property:validators> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
+    <urn:property:examples> [
+        <urn:property:validExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI ;
+        <urn:property:invalidExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI 
+    ] ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    sh:description "Result value's unit of measure must have the value `unit:DEG`." ;
     sh:hasValue <http://qudt.org/vocab/unit/DEG> ;
-    sh:message "The slope's unit of measure must be QUDT's degree." ;
-    sh:name "tern:unit" ;
+    sh:message "Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:hasResult` where the value node has `unit:DEG` as the value for `tern:unit`." ;
+    sh:name "Unit of measure" ;
     sh:path tern:unit ;
     sh:target [
             a sh:SPARQLTarget ;
@@ -98,10 +132,20 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:shapes:plot-description:slope:used-procedure>
     a sh:PropertyShape ;
-    sh:description "The slope's used procedure must be Plot Description." ;
+    a <urn:class:Requirement> ;
+    reg:status reg:statusSubmitted ;
+    <urn:property:validators> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
+    <urn:property:examples> [
+        <urn:property:validExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI ;
+        <urn:property:invalidExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI 
+    ] ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    sh:description """IRI of procedure must have the value `https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32`.
+
+`https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32` is the IRI for "Plot Description".""" ;
     sh:hasValue <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
-    sh:message "The slope's used procedure must be Plot Description." ;
-    sh:name "sosa:usedProcedure" ;
+    sh:message "Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:usedProcedure` where the value is `https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32`." ;
+    sh:name "Used procedure" ;
     sh:path sosa:usedProcedure ;
     sh:target [
             a sh:SPARQLTarget ;
@@ -119,11 +163,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:shapes:plot-description:slope:value-range>
     a sh:PropertyShape ;
-    sh:description "Each slope should have exactly one float value for degree, between 0 and 90." ;
+    a <urn:class:Requirement> ;
+    reg:status reg:statusSubmitted ;
+    <urn:property:validators> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
+    <urn:property:examples> [
+        <urn:property:validExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI ;
+        <urn:property:invalidExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI 
+    ] ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    sh:description "Value must be between 0 and 90 inclusive." ;
     sh:maxInclusive 90 ;
-    sh:message "Each slope should have exactly one float value for degree, between 0 and 90." ;
+    sh:message "Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:hasResult` where the value is between 0 and 90 inclusive." ;
     sh:minInclusive 0 ;
-    sh:name "rdf:value" ;
+    sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
             a sh:SPARQLTarget ;
@@ -142,10 +194,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:shapes:plot-description:slope:value-type>
     a sh:PropertyShape ;
+    a <urn:class:Requirement> ;
+    reg:status reg:statusSubmitted ;
+    <urn:property:validators> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
+    <urn:property:examples> [
+        <urn:property:validExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI ;
+        <urn:property:invalidExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI 
+    ] ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     sh:class tern:Float ;
-    sh:description "Each slope should have the result value as tern:Float." ;
-    sh:message "Each slope should have the result value as tern:Float." ;
-    sh:name "sosa:hasResult" ;
+    sh:description "Value must be a `tern:Float`." ;
+    sh:message "Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:hasResult` where the value node is an instance of `tern:Float`." ;
+    sh:name "Value type" ;
     sh:path sosa:hasResult ;
     sh:target [
             a sh:SPARQLTarget ;
