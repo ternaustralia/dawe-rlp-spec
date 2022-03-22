@@ -18,4 +18,4 @@ run:
 	python3 -m http.server ${port} -d ../build
 
 requirements:
-	python ../main.py
+	python ../generate_requirements.py
