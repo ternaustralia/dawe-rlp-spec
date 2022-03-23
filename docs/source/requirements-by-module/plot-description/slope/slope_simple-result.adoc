@@ -8,8 +8,8 @@
 
 |Identifier | `urn:shapes:plot-description:slope:simple-result`
 |Label | Simple result
-|Definition | Instances of `tern:Observation` _MUST_ have a `sosa:hasSimpleResult` where the value is the same as the `rdf:value` on the value node of `sosa:hasResult`.
-|Comment | Value of `sosa:hasSimpleResult` must be the same as the value in `sosa:hasResult`.
+|Definition | The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`.
+|Comment | The simple result value must be the same as the value in the result.
 include::../../../statuses/submitted.adoc[]
 |Conformance Classes | `TBA`
 |Source | TERN Ecosystem Surveillance Ecological Monitoring Protocols

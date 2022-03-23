@@ -8,8 +8,8 @@
 
 |Identifier | `urn:shapes:plot-description:slope:value-type`
 |Label | Value type
-|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:hasResult` where the value node is an instance of `tern:Float`.
-|Comment | Value must be a `tern:Float`.
+|Definition | The result _MUST_ be an instance of `tern:Float`.
+|Comment | Value must be a float.
 include::../../../statuses/submitted.adoc[]
 |Conformance Classes | `TBA`
 |Source | TERN Ecosystem Surveillance Ecological Monitoring Protocols
