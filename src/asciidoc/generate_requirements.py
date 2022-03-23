@@ -6,7 +6,11 @@ import logging
 from urlpath import URL
 from rdflib import DCTERMS, Graph, URIRef, SH, Namespace
 
-from src.asciidoc.templates import index_requirement_template, requirement_template
+from src.asciidoc.templates import (
+    index_requirement_template,
+    requirement_template,
+    requirements_sections_template,
+)
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -15,6 +19,9 @@ WORKSPACE = "dawe-rlp-spec"
 shapes_root_path = Path("/workspaces") / WORKSPACE / "shapes"
 target_requirements_path = (
     Path("/workspaces") / WORKSPACE / "docs/source/requirements-by-module"
+)
+requirements_sections_file = (
+    Path("/workspaces") / WORKSPACE / "docs/source/requirements-sections.adoc"
 )
 github_shapes_path = URL("https://github.com/ternaustralia/dawe-rlp-spec/blob/main")
 
@@ -112,6 +119,9 @@ def get_requirement(iri: URIRef, g: Graph) -> Requirement:
 def generate_requirements():
     source_shapes_paths = get_source_shapes_paths()
 
+    # We use this later to build the requirements-sections.adoc file.
+    requirements_sections = []
+
     # For each protocol module wth shapes, loop through each observable property directory.
     # Each directory has a `shapes.ttl`, `valid.ttl` and `invalid.ttl` file.
     # Save the path of these files and
@@ -174,8 +184,16 @@ def generate_requirements():
             # Capitalise the first letter in <name>.
             # If the file exists, insert an include directive
             # `include::<name>_<local-name-of-uri>.adoc[]`.
+            target_requirement_set.mkdir(exist_ok=True)
             asciidoc_index_file = target_requirement_set / "index.adoc"
             asciidoc_content = index_requirement_template.render(
-                title=f"{module_name.capitalize()} Observation", files=asciidoc_files
+                title=f"{module_name.capitalize().replace('-', ' ')} Observation",
+                files=asciidoc_files,
             )
             asciidoc_index_file.write_text(asciidoc_content)
+            requirements_sections.append(asciidoc_index_file)
+
+    # Write to requirements-sections.adoc
+    sections = [str(s) for s in requirements_sections]
+    sections_ascii = requirements_sections_template.render(sections=sections)
+    requirements_sections_file.write_text(sections_ascii)
