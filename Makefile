@@ -24,6 +24,7 @@ normalize:
 
 validate-shapes:
 	for file in $(SHAPES) ; do \
+		echo "Validating shapes in file $$file" ; \
 		pyshacl -s shapes/_meta/meta.shapes.ttl -a $$file ; \
 	done
 
