@@ -22,6 +22,12 @@ normalize:
 		ontotools file normalize $$file ; \
 	done
 
+validate-shapes:
+	for file in $(SHAPES) ; do \
+		echo "Validating shapes in file $$file" ; \
+		pyshacl -s shapes/_meta/meta.shapes.ttl -a $$file ; \
+	done
+
 update-controlled-shapes:
 	for file in $(SHAPES) ; do \
 		python update-controlled-shapes.py $$file ; \

@@ -16,3 +16,6 @@ build-pdf:
 
 run:
 	python3 -m http.server ${port} -d ../build
+
+requirements:
+	python generate_requirements.py

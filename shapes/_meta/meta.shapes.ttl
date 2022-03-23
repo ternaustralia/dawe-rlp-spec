@@ -1,0 +1,124 @@
+
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:meta:controlled:query>
+    a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:message "An instance of urn:class:Controlled must have a value for urn:property:query." ;
+    sh:minCount 1 ;
+    sh:path <urn:property:query> ;
+    sh:targetClass <urn:class:Controlled> ;
+.
+
+<urn:shapes:meta:requirement:description>
+    a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:message "An instance of urn:class:Requirement must have a value for sh:description." ;
+    sh:minCount 1 ;
+    sh:path sh:description ;
+    sh:targetClass <urn:class:Requirement> ;
+.
+
+<urn:shapes:meta:requirement:examples>
+    a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:message "An instance of urn:class:Requirement must have a value for urn:property:examples" ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path <urn:property:examples> ;
+    sh:targetClass <urn:class:Requirement> ;
+.
+
+<urn:shapes:meta:requirement:invalidExample>
+    a sh:PropertyShape ;
+    sh:datatype xsd:anyURI ;
+    sh:maxCount 1 ;
+    sh:message "The value node of urn:property:examples must have a value for urn:property:invalidExample." ;
+    sh:minCount 1 ;
+    sh:path <urn:property:invalidExample> ;
+    sh:targetObjectsOf <urn:property:examples> ;
+.
+
+<urn:shapes:meta:requirement:message>
+    a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:message "An instance of urn:class:Requirement must have a value for sh:message." ;
+    sh:minCount 1 ;
+    sh:path sh:message ;
+    sh:targetClass <urn:class:Requirement> ;
+.
+
+<urn:shapes:meta:requirement:name>
+    a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:message "An instance of urn:class:Requirement must have a value for sh:name." ;
+    sh:minCount 1 ;
+    sh:path sh:name ;
+    sh:targetClass <urn:class:Requirement> ;
+.
+
+<urn:shapes:meta:requirement:rdf-type>
+    a sh:PropertyShape ;
+    sh:in (
+            sh:PropertyShape
+            sh:NodeShape
+            <urn:class:Requirement>
+            <urn:class:Controlled>
+        ) ;
+    sh:message "An instance of urn:class:Requirement must only be instances of other classes specified in the controlled list." ;
+    sh:path rdf:type ;
+    sh:targetClass <urn:class:Requirement> ;
+.
+
+<urn:shapes:meta:requirement:source>
+    a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:message "An instance of urn:class:Requirement must have a value for dcterms:source." ;
+    sh:minCount 1 ;
+    sh:path dcterms:source ;
+    sh:targetClass <urn:class:Requirement> ;
+.
+
+<urn:shapes:meta:requirement:status>
+    a sh:PropertyShape ;
+    sh:in (
+            reg:statusSubmitted
+            reg:statusStable
+            reg:statusInvalid
+        ) ;
+    sh:maxCount 1 ;
+    sh:message "An instance of urn:class:Requirement must have a value for reg:status." ;
+    sh:minCount 1 ;
+    sh:path reg:status ;
+    sh:targetClass <urn:class:Requirement> ;
+.
+
+<urn:shapes:meta:requirement:validExample>
+    a sh:PropertyShape ;
+    sh:datatype xsd:anyURI ;
+    sh:maxCount 1 ;
+    sh:message "The value node of urn:property:examples must have a value for urn:property:validExample." ;
+    sh:minCount 1 ;
+    sh:path <urn:property:validExample> ;
+    sh:targetObjectsOf <urn:property:examples> ;
+.
+
+<urn:shapes:meta:requirement:validator>
+    a sh:PropertyShape ;
+    sh:datatype xsd:anyURI ;
+    sh:message "An instance of urn:class:Requirement must have exactly 1 xsd:anyURI value for urn:property:validator." ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:path <urn:property:validator> ;
+    sh:targetClass <urn:class:Requirement> ;
+.
+
