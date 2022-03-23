@@ -1,13 +1,20 @@
 
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX ns1: <urn:property:>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:shapes:plot-description:slope-type:result-value>
     a
         sh:PropertyShape ,
-        <urn:class:Controlled> ;
+        <urn:class:Controlled>,
+        <urn:class:Requirement> ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
     sh:description "The result of the observation must be a value from the Plot slope codes controlled vocabulary." ;
     sh:in (
             <https://linked.data.gov.au/def/test/dawe-cv/1db5ed2c-8be6-5bc7-a74d-7e8e8404d702>
@@ -44,10 +51,18 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 
     """ ;
     ns1:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    ns1:examples [
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/valid.ttl"^^xsd:anyURI
+        ] ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/shapes.ttl"^^xsd:anyURI ;
 .
 
 <urn:shapes:plot-description:slope-type:vocabulary>
-    a sh:PropertyShape ;
+    a sh:PropertyShape,
+    <urn:class:Requirement> ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
     sh:description "The result of the observation must have the Plot slope codes as the controlled vocabulary." ;
     sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `d893e669-c530-4bc3-a057-a5799ffcb5db$`." ;
     sh:name "Vocabulary" ;
@@ -66,5 +81,10 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
             }
     """
         ] ;
+    ns1:examples [
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/valid.ttl"^^xsd:anyURI
+        ] ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/shapes.ttl"^^xsd:anyURI ;
 .
 
