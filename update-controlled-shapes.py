@@ -51,7 +51,6 @@ def fetch(filename: str):
 
     for shape in g.query(q).bindings:
 
-        start_from_the_last_blank_node = True
         uri = shape["uri"]
         query = shape["query"]
         endpoint = shape["endpoint"]
@@ -60,23 +59,11 @@ def fetch(filename: str):
             data = sparql_query(endpoint, query)
 
             sh_in_value = g.value(uri, SH["in"])
-            old_list = Collection(g, sh_in_value)
-            old_list.clear()
-            g.remove((uri, SH["in"], None))
+            list = Collection(g, sh_in_value)
+            list.clear()
 
             for r in data["results"]["bindings"]:
-                if start_from_the_last_blank_node:
-                    last_node = BNode()
-                    g.add((last_node, RDF.first, URIRef(r["values"]["value"])))
-                    g.add((last_node, RDF.rest, RDF.nil))
-                    start_from_the_last_blank_node = False
-                else:
-                    next_node = BNode()
-                    g.add((next_node, RDF.first, URIRef(r["values"]["value"])))
-                    g.add((next_node, RDF.rest, last_node))
-                    last_node = next_node
-
-            g.add((uri, SH["in"], last_node))
+                list.append(URIRef(r["values"]["value"]))
 
         except SPARQLQueryError as err:
             logger.error(str(err))
