@@ -44,7 +44,7 @@ class Requirement:
     status: str
     conformance_classes: str
     source: str
-    validators: List[Validator]
+    validator: Validator
     examples: Example
 
 
@@ -75,7 +75,7 @@ def get_requirement(iri: URIRef, g: Graph) -> Requirement:
     status = str(g.value(iri, REG.status))
     conformance_classes = "`TBA`"  # TODO: Determine how to query this.
     source = g.value(iri, DCTERMS.source)
-    validators = list(g.objects(iri, URIRef("urn:property:validators")))
+    validator = g.value(iri, URIRef("urn:property:validator"))
     example_valid_url = None
     example_valid_label = None
     example_invalid_url = None
@@ -95,10 +95,9 @@ def get_requirement(iri: URIRef, g: Graph) -> Requirement:
         status=status,
         conformance_classes=conformance_classes,
         source=source,
-        validators=[
-            Validator(url=v, label=v.split(str(github_shapes_path))[-1])
-            for v in validators
-        ],
+        validator=Validator(
+            url=validator, label=validator.split(str(github_shapes_path))[-1]
+        ),
         examples=Example(
             valid_url=example_valid_url,
             valid_label=example_valid_label,
