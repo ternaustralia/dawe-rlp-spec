@@ -39,11 +39,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:slope-type:result-category>
+<urn:shapes:plot-description:slope-type:result-value>
     a
         sh:PropertyShape ,
-        <urn:class:Controlled> ;
-    sh:description "The value of result must be from the slope type codes." ;
+        <urn:class:Controlled>,
+        <urn:class:Requirement> ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The result of the observation must be a value from the Plot slope codes controlled vocabulary." ;
     sh:in (
             <https://linked.data.gov.au/def/test/dawe-cv/1db5ed2c-8be6-5bc7-a74d-7e8e8404d702>
             <https://linked.data.gov.au/def/test/dawe-cv/244ca9f4-9ac1-5b5e-913a-e4f45be6e93e>
@@ -54,8 +57,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             <https://linked.data.gov.au/def/test/dawe-cv/eb2cd300-a034-5d20-9504-22c19687ca57>
             <https://linked.data.gov.au/def/test/dawe-cv/f7c9def6-1ce4-5b40-9031-ecc2b1034987>
         ) ;
-    sh:message "The value of result must be from the slope type codes." ;
-    sh:name "Check slope type category" ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Plot slope codes controlled vocabulary." ;
+    sh:name "Result value" ;
     sh:path rdf:value ;
     sh:target [
             a sh:SPARQLTarget ;
@@ -79,6 +82,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
     """ ;
     ns1:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    ns1:examples [
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/valid.ttl"^^xsd:anyURI
+        ] ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/shapes.ttl"^^xsd:anyURI ;
 .
 
 <urn:shapes:plot-description:slope-type:simple-result>
@@ -209,10 +217,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <urn:shapes:plot-description:slope-type:vocabulary>
-    a sh:PropertyShape ;
-    sh:description "The observation must be from the 'slope type codes' vocabulary." ;
-    sh:message "The observation must be from the 'slope type codes' vocabulary." ;
-    sh:name "Check vocabulary" ;
+    a sh:PropertyShape,
+    <urn:class:Requirement> ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The result of the observation must have the Plot slope codes as the controlled vocabulary." ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `d893e669-c530-4bc3-a057-a5799ffcb5db$`." ;
+    sh:name "Vocabulary" ;
     sh:path tern:vocabulary ;
     sh:pattern "d893e669-c530-4bc3-a057-a5799ffcb5db$" ;
     sh:target [
@@ -228,5 +239,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             }
     """
         ] ;
+    ns1:examples [
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/valid.ttl"^^xsd:anyURI
+        ] ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/shapes.ttl"^^xsd:anyURI ;
 .
 
