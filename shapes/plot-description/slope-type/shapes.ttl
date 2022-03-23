@@ -46,7 +46,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <urn:class:Requirement> ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "The result of the observation must be a value from the Plot slope codes controlled vocabulary." ;
+    sh:description "The value in `sosa:hasResult` must be a value in `sh:in`, which is the Plot slope codes controlled vocabulary." ;
     sh:in (
             <https://linked.data.gov.au/def/test/dawe-cv/1db5ed2c-8be6-5bc7-a74d-7e8e8404d702>
             <https://linked.data.gov.au/def/test/dawe-cv/244ca9f4-9ac1-5b5e-913a-e4f45be6e93e>
@@ -193,7 +193,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:class tern:IRI ;
-    sh:description "Value must be a `tern:IRI`." ;
+    sh:description "The value in `sosa:hasResult` must be a `tern:IRI`." ;
     sh:message "Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:hasResult` where the value node is an instance of `tern:IRI`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
@@ -222,7 +222,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <urn:class:Requirement> ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "The result of the observation must have the Plot slope codes as the controlled vocabulary." ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` must have the value `https://linked.data.gov.au/def/test/dawe-cv/d893e669-c530-4bc3-a057-a5799ffcb5db`.
+
+`https://linked.data.gov.au/def/test/dawe-cv/d893e669-c530-4bc3-a057-a5799ffcb5db` is the IRI for "Plot slope codes".""" ;
     sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `d893e669-c530-4bc3-a057-a5799ffcb5db$`." ;
     sh:name "Vocabulary" ;
     sh:path tern:vocabulary ;
