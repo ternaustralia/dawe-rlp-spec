@@ -14,9 +14,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
         ] ;
     sosa:hasResult [
-            a
-                tern:Concept ,
-                tern:Value ;
+            a tern:IRI ;
             rdf:value <https://linked.data.gov.au/def/test/dawe-cv/eb2cd300-a034-5d20-9504-22c19687ca57> ;
             sosa:isResultOf <https://example.com/observation/slope-type/b91c54f2-9354-43ee-8412-09974fd2c23c> ;
             tern:vocabulary <https://linked.data.gov.au/def/test/dawe-cv/d893e669-c530-4bc3-a057-a5799ffcb5db>
@@ -26,5 +24,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/slope-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-03-14T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+    tern:hasSiteVisit <urn:test:site> ;
 .
 

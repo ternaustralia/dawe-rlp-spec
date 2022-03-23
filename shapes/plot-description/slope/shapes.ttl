@@ -1,26 +1,23 @@
 
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ns1: <urn:property:>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX reg: <http://purl.org/linked-data/registry#>
-PREFIX dcterms: <http://purl.org/dc/terms/>
 
 <urn:shapes:plot-description:slope:feature-type>
-    a sh:PropertyShape ;
-    a <urn:class:Requirement> ;
+    a
+        sh:PropertyShape ,
+        <urn:class:Requirement> ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    <urn:property:validator> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
-    <urn:property:examples> [
-        <urn:property:validExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI ;
-        <urn:property:invalidExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI 
-    ] ;
     sh:description "TERN's ecologists have determined the feature type is _landform_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd> ;
     sh:message "Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `tern:featureType` with the value link:http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd[`landform`]." ;
     sh:name "Feature type" ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     sh:path tern:featureType ;
     sh:target [
             a sh:SPARQLTarget ;
@@ -35,21 +32,22 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
         }
     """
         ] ;
+    ns1:examples [
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI
+        ] ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
 <urn:shapes:plot-description:slope:simple-result>
-    a sh:NodeShape ;
-    a <urn:class:Requirement> ;
+    a
+        sh:NodeShape ,
+        <urn:class:Requirement> ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    <urn:property:validator> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
-    <urn:property:examples> [
-        <urn:property:validExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI ;
-        <urn:property:invalidExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI 
-    ] ;
     sh:description "Value of `sosa:hasSimpleResult` must be the same as the value in `sosa:hasResult`." ;
     sh:message "Instances of `tern:Observation` _MUST_ have a `sosa:hasSimpleResult` where the value is the same as the `rdf:value` on the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     sh:sparql [
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -67,18 +65,19 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
     """
         ] ;
     sh:targetClass tern:Observation ;
+    ns1:examples [
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI
+        ] ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
 <urn:shapes:plot-description:slope:site-visit>
-    a sh:PropertyShape ;
-    a <urn:class:Requirement> ;
-    reg:status reg:statusSubmitted ;
-    <urn:property:validator> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
-    <urn:property:examples> [
-        <urn:property:validExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI ;
-        <urn:property:invalidExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI 
-    ] ;
+    a
+        sh:PropertyShape ,
+        <urn:class:Requirement> ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
     sh:description "Observations following the Plot Description protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -98,18 +97,19 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
         }
     """
         ] ;
+    ns1:examples [
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI
+        ] ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
 <urn:shapes:plot-description:slope:unit-of-measure>
-    a sh:PropertyShape ;
-    a <urn:class:Requirement> ;
-    reg:status reg:statusSubmitted ;
-    <urn:property:validator> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
-    <urn:property:examples> [
-        <urn:property:validExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI ;
-        <urn:property:invalidExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI 
-    ] ;
+    a
+        sh:PropertyShape ,
+        <urn:class:Requirement> ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
     sh:description "Result value's unit of measure must have the value `unit:DEG`." ;
     sh:hasValue <http://qudt.org/vocab/unit/DEG> ;
     sh:message "Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:hasResult` where the value node has `unit:DEG` as the value for `tern:unit`." ;
@@ -128,18 +128,19 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
         }
     """
         ] ;
+    ns1:examples [
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI
+        ] ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
 <urn:shapes:plot-description:slope:used-procedure>
-    a sh:PropertyShape ;
-    a <urn:class:Requirement> ;
-    reg:status reg:statusSubmitted ;
-    <urn:property:validator> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
-    <urn:property:examples> [
-        <urn:property:validExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI ;
-        <urn:property:invalidExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI 
-    ] ;
+    a
+        sh:PropertyShape ,
+        <urn:class:Requirement> ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
     sh:description """IRI of procedure must have the value `https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32`.
 
 `https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32` is the IRI for "Plot Description".""" ;
@@ -159,18 +160,19 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
         }
     """
         ] ;
+    ns1:examples [
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI
+        ] ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
 <urn:shapes:plot-description:slope:value-range>
-    a sh:PropertyShape ;
-    a <urn:class:Requirement> ;
-    reg:status reg:statusSubmitted ;
-    <urn:property:validator> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
-    <urn:property:examples> [
-        <urn:property:validExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI ;
-        <urn:property:invalidExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI 
-    ] ;
+    a
+        sh:PropertyShape ,
+        <urn:class:Requirement> ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
     sh:description "Value must be between 0 and 90 inclusive." ;
     sh:maxInclusive 90 ;
     sh:message "Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:hasResult` where the value is between 0 and 90 inclusive." ;
@@ -190,18 +192,19 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
         }
     """
         ] ;
+    ns1:examples [
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI
+        ] ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
 <urn:shapes:plot-description:slope:value-type>
-    a sh:PropertyShape ;
-    a <urn:class:Requirement> ;
-    reg:status reg:statusSubmitted ;
-    <urn:property:validator> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
-    <urn:property:examples> [
-        <urn:property:validExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI ;
-        <urn:property:invalidExample> "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI 
-    ] ;
+    a
+        sh:PropertyShape ,
+        <urn:class:Requirement> ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
     sh:class tern:Float ;
     sh:description "Value must be a `tern:Float`." ;
     sh:message "Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:hasResult` where the value node is an instance of `tern:Float`." ;
@@ -219,5 +222,10 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
         }
     """
         ] ;
+    ns1:examples [
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI
+        ] ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
