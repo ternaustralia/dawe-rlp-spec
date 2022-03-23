@@ -42,7 +42,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <urn:shapes:plot-description:slope-type:result-value>
     a
         sh:PropertyShape ,
-        <urn:class:Controlled>,
+        <urn:class:Controlled> ,
         <urn:class:Requirement> ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
@@ -73,6 +73,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             }
     """
         ] ;
+    ns1:examples [
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/valid.ttl"^^xsd:anyURI
+        ] ;
     ns1:query """
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
             select ?values {
@@ -82,10 +86,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
     """ ;
     ns1:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
-    ns1:examples [
-            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/invalid.ttl"^^xsd:anyURI ;
-            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/valid.ttl"^^xsd:anyURI
-        ] ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -217,8 +217,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <urn:shapes:plot-description:slope-type:vocabulary>
-    a sh:PropertyShape,
-    <urn:class:Requirement> ;
+    a
+        sh:PropertyShape ,
+        <urn:class:Requirement> ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description "The result of the observation must have the Plot slope codes as the controlled vocabulary." ;
