@@ -194,6 +194,9 @@ def generate_requirements():
             requirements_sections.append(asciidoc_index_file)
 
     # Write to requirements-sections.adoc
-    sections = [str(s) for s in requirements_sections]
+    sections = [
+        str(s).rsplit("/workspaces/dawe-rlp-spec/docs/source/", maxsplit=1)[-1]
+        for s in requirements_sections
+    ]
     sections_ascii = requirements_sections_template.render(sections=sections)
     requirements_sections_file.write_text(sections_ascii)
