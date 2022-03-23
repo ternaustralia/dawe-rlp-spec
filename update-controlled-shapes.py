@@ -1,7 +1,11 @@
 import logging
 import typer
+import requests
+from requests.exceptions import HTTPError
+import json
 from rdflib.namespace import RDF, RDFS, VOID, XSD, SOSA, DCTERMS, PROV, TIME, SH
 from rdflib import Graph, Namespace, URIRef, Literal, BNode
+from rdflib.collection import Collection
 
 app = typer.Typer()
 
@@ -9,75 +13,84 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
+class SPARQLQueryError(Exception):
+    pass
+
+
+def sparql_query(url: str, query: str):
+    headers = {
+        "Content-type": "application/sparql-query",
+        "Accept": "application/sparql-results+json",
+    }
+    r = requests.post(url, headers=headers, data=query)
+    try:
+        r.raise_for_status()
+    except HTTPError as err:
+        raise SPARQLQueryError(
+            f"Failed fetching data from {url} SPARQL endpoint. Code: {r.status_code} Message: {r.text}."
+        ) from err
+    return r.json()
+
+
 @app.command()
 def fetch(filename: str):
+    errors = 0
 
     g = Graph()
 
     g.parse(filename)
 
-    q_delete = """
-        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        PREFIX sh: <http://www.w3.org/ns/shacl#>
-        delete {
-            ?uri sh:property ?property .
-            ?property sh:in ?node .
-            ?node rdf:rest ?item .
-            ?item rdf:first ?head ;
-                rdf:rest ?tail .
-            ?property sh:path ?path .
-        }
-        where {
-            ?uri sh:property ?property .
-            ?property sh:in ?node .
-            ?node rdf:rest* ?item .
-            ?item rdf:first ?head ;
-                rdf:rest ?tail .
-            ?property sh:path ?path .
-        }
-    """
-
-    logger.info(f"Delete sh:in in file '{filename}'")
-    g.update(q_delete)
-
     q = """
-        select ?uri ?query {
+        select ?uri ?query ?endpoint {
             ?uri a <urn:class:Controlled> ;
-            <urn:property:query> ?query .
+            <urn:property:query> ?query ;
+            <urn:property:sparqlEndpoint> ?endpoint .
+
         }
     """
 
-    for query in g.query(q).bindings:
+    for shape in g.query(q).bindings:
+
         start_from_the_last_blank_node = True
-        uri = query["uri"]
-        logger.info(f"Updating sh:in of shape '{uri}' in '{filename}'")
-        node_property = BNode()
-        for r in g.query(query["query"]):
-            if start_from_the_last_blank_node:
-                last_node = BNode()
-                g.add((last_node, RDF.first, r["values"]))
-                g.add((last_node, RDF.rest, RDF.nil))
-                start_from_the_last_blank_node = False
-            else:
-                next_node = BNode()
-                g.add((next_node, RDF.first, r["values"]))
-                g.add((next_node, RDF.rest, last_node))
-                last_node = next_node
+        uri = shape["uri"]
+        query = shape["query"]
+        endpoint = shape["endpoint"]
 
-        g.add((node_property, SH.path, RDF.value))
-        g.add((node_property, SH["in"], last_node))
+        try:
+            data = sparql_query(endpoint, query)
 
-        g.add(
-            (
-                uri,
-                SH.property,
-                node_property,
-            )
-        )
+            sh_in_value = g.value(uri, SH["in"])
+            old_list = Collection(g, sh_in_value)
+            old_list.clear()
+            g.remove((uri, SH["in"], None))
 
-        logger.info(f"Updated sh:in of shape '{uri}' in '{filename}'")
+            for r in data["results"]["bindings"]:
+                if start_from_the_last_blank_node:
+                    last_node = BNode()
+                    g.add((last_node, RDF.first, URIRef(r["values"]["value"])))
+                    g.add((last_node, RDF.rest, RDF.nil))
+                    start_from_the_last_blank_node = False
+                else:
+                    next_node = BNode()
+                    g.add((next_node, RDF.first, URIRef(r["values"]["value"])))
+                    g.add((next_node, RDF.rest, last_node))
+                    last_node = next_node
+
+            g.add((uri, SH["in"], last_node))
+
+        except SPARQLQueryError as err:
+            logger.error(str(err))
+            logger.error("Skipping shape %s", str(shape["uri"]))
+            errors += 1
+
+            # We stop processing the current shape,
+            # Go to the next item in the iterator.
+            continue
 
     g.serialize(filename)
+
+    if errors:
+        logger.info(f"{errors} error occurred.")
 
 
 if __name__ == "__main__":
