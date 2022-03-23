@@ -95,7 +95,6 @@ def get_requirement(iri: URIRef, g: Graph) -> Requirement:
         status=status,
         conformance_classes=conformance_classes,
         source=source,
-        # v.split(str(github_shapes_path)[-1])
         validators=[
             Validator(url=v, label=v.split(str(github_shapes_path))[-1])
             for v in validators
@@ -118,9 +117,8 @@ def generate_requirements():
     # Each directory has a `shapes.ttl`, `valid.ttl` and `invalid.ttl` file.
     # Save the path of these files and
 
-    print(source_shapes_paths)
-
     for source_protocol_module in source_shapes_paths:
+        logger.info("Processing shapes in %s", source_protocol_module)
         source_requirements_sets = get_source_requirements_sets(source_protocol_module)
 
         # Now that we have the requirement set's paths, we can loop through each one and
