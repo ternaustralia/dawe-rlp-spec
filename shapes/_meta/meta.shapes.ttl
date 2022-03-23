@@ -112,12 +112,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetObjectsOf <urn:property:examples> ;
 .
 
-<urn:shapes:meta:requirement:validators>
+<urn:shapes:meta:requirement:validator>
     a sh:PropertyShape ;
     sh:datatype xsd:anyURI ;
-    sh:message "An instance of urn:class:Requirement must have at least 1 xsd:anyURI value for urn:property:validators." ;
+    sh:message "An instance of urn:class:Requirement must have exactly 1 xsd:anyURI value for urn:property:validator." ;
     sh:minCount 1 ;
-    sh:path <urn:property:validators> ;
+    sh:maxCount 1 ;
+    sh:path <urn:property:validator> ;
     sh:targetClass <urn:class:Requirement> ;
 .
 
