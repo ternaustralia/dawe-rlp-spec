@@ -59,11 +59,11 @@ def fetch(filename: str):
             data = sparql_query(endpoint, query)
 
             sh_in_value = g.value(uri, SH["in"])
-            list = Collection(g, sh_in_value)
-            list.clear()
+            controlled_shapes = Collection(g, sh_in_value)
+            controlled_shapes.clear()
 
             for r in data["results"]["bindings"]:
-                list.append(URIRef(r["values"]["value"]))
+                controlled_shapes.append(URIRef(r["values"]["value"]))
 
         except SPARQLQueryError as err:
             logger.error(str(err))
