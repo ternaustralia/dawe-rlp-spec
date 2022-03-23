@@ -1,0 +1,70 @@
+
+PREFIX ns1: <urn:property:>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+
+<urn:shapes:plot-description:slope-type:result-category>
+    a
+        sh:PropertyShape ,
+        <urn:class:Controlled> ;
+    sh:description "The value of result must be from the slope type codes." ;
+    sh:in (
+            <https://linked.data.gov.au/def/test/dawe-cv/1db5ed2c-8be6-5bc7-a74d-7e8e8404d702>
+            <https://linked.data.gov.au/def/test/dawe-cv/244ca9f4-9ac1-5b5e-913a-e4f45be6e93e>
+            <https://linked.data.gov.au/def/test/dawe-cv/73ca5e1f-b917-591a-966b-e813518eb704>
+            <https://linked.data.gov.au/def/test/dawe-cv/c1e14b31-6f39-5203-b7c9-ecee4ccc0a56>
+            <https://linked.data.gov.au/def/test/dawe-cv/c7a54110-88db-5334-8ff4-cd3ef319ba79>
+            <https://linked.data.gov.au/def/test/dawe-cv/e6b4e665-7593-5ae3-9384-6a3fa7201801>
+            <https://linked.data.gov.au/def/test/dawe-cv/eb2cd300-a034-5d20-9504-22c19687ca57>
+            <https://linked.data.gov.au/def/test/dawe-cv/f7c9def6-1ce4-5b40-9031-ecc2b1034987>
+        ) ;
+    sh:message "The value of result must be from the slope type codes." ;
+    sh:name "Check slope type category" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+            PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+            PREFIX sosa: <http://www.w3.org/ns/sosa/>
+            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            select ?this  {
+                ?observation a tern:Observation ;
+                    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/132a1452-4fd7-473c-956b-3183dd315b67> ;
+                    sosa:hasResult ?this .
+            }
+    """
+        ] ;
+    ns1:query """
+            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+            select ?values {
+                    ?s skos:member ?values .
+                    filter (STRENDS(str(?s), "d893e669-c530-4bc3-a057-a5799ffcb5db"))
+            }
+
+    """ ;
+    ns1:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+.
+
+<urn:shapes:plot-description:slope-type:vocabulary>
+    a sh:PropertyShape ;
+    sh:description "The observation must be from the 'slope type codes' vocabulary." ;
+    sh:message "The observation must be from the 'slope type codes' vocabulary." ;
+    sh:name "Check vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "d893e669-c530-4bc3-a057-a5799ffcb5db$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+            PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+            PREFIX sosa: <http://www.w3.org/ns/sosa/>
+            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            select ?this  {
+                ?observation a tern:Observation ;
+                    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/132a1452-4fd7-473c-956b-3183dd315b67> ;
+                    sosa:hasResult ?this .
+            }
+    """
+        ] ;
+.
+
