@@ -9,7 +9,7 @@
 |Identifier | `urn:shapes:plot-description:slope-type:value-type`
 |Label | Value type
 |Definition | Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:hasResult` where the value node is an instance of `tern:IRI`.
-|Comment | The value in `sosa:hasResult` must be a `tern:IRI`.
+|Comment | The value in `sosa:hasResult` _MUST_ be a `tern:IRI`.
 include::../../../statuses/submitted.adoc[]
 |Conformance Classes | `TBA`
 |Source | TERN Ecosystem Surveillance Ecological Monitoring Protocols
