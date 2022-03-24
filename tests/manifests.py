@@ -27,6 +27,6 @@ test_cases: List[TestCaseItem] = [
         "shapes/plot-description/slope-type/shapes.ttl",
         "shapes/plot-description/slope-type/valid.ttl",
         "shapes/plot-description/slope-type/invalid.ttl",
-        2,
+        7,
     ).astuple(),
 ]
