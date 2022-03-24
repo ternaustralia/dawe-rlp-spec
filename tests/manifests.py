@@ -29,4 +29,11 @@ test_cases: List[TestCaseItem] = [
         "shapes/plot-description/slope-type/invalid.ttl",
         7,
     ).astuple(),
+    TestCaseItem(
+        "plot-description-aspect",
+        "shapes/plot-description/aspect/shapes.ttl",
+        "shapes/plot-description/aspect/valid.ttl",
+        "shapes/plot-description/aspect/invalid.ttl",
+        7,
+    ).astuple(),
 ]

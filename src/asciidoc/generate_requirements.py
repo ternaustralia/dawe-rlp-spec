@@ -177,6 +177,7 @@ def generate_requirements():
                 )
 
                 logger.info("Writing ascii to %s", asciidoc_file.absolute())
+                target_requirement_set.mkdir(exist_ok=True)
                 asciidoc_file.write_text(requirement_ascii)
 
             # Check if an index.adoc file exists, if not, create it and add an ascii
