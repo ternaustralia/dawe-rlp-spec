@@ -43,4 +43,11 @@ test_cases: List[TestCaseItem] = [
         "shapes/plot-description/landform-pattern/invalid.ttl",
         7,
     ).astuple(),
+    TestCaseItem(
+        "plot-description-landform-element",
+        "shapes/plot-description/landform-element/shapes.ttl",
+        "shapes/plot-description/landform-element/valid.ttl",
+        "shapes/plot-description/landform-element/invalid.ttl",
+        7,
+    ).astuple(),
 ]
