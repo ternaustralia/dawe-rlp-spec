@@ -416,7 +416,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The simple result value must be the same as the value in the result.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value of <code>sosa:hasSimpleResult</code> must be the same as the value in <code>sosa:hasResult</code>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
@@ -470,7 +470,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Observations following the Plot Description protocol must have a link to a site visit.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Observations following the Plot Description protocol are made in the context of a site visit.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
@@ -578,7 +578,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The used procedure must be the IRI of Plot Description.</p>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IRI of procedure must have the value <code><a href="https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32" class="bare">https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32</a></code>.</p>
 <p class="tableblock"><code><a href="https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32" class="bare">https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32</a></code> is the IRI for "Plot Description".</p></td>
 </tr>
 <tr>
@@ -687,7 +687,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Value must be a float.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>sosa:hasResult</code> must be a <code>tern:Float</code>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
@@ -717,7 +717,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 <div class="sect4">
 <h5 id="slope_type_observation"><a class="link" href="#slope_type_observation">3.1.1.2. Slope type Observation</a></h5>
 <div class="sect5">
-<h6 id="slope-type_result-value"><a class="link" href="#slope-type_result-value">3.1.1.2.1. Result value</a></h6>
+<h6 id="slope-type_feature-type"><a class="link" href="#slope-type_feature-type">3.1.1.2.1. Feature type</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -732,19 +732,19 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:shapes:plot-description:slope-type:result-value</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:shapes:plot-description:slope-type:feature-type</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Label</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Result value</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Feature type</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Definition</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>rdf:value</code> <em>MUST</em> exist in the Plot slope codes controlled vocabulary.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instances of <code>tern:Observation</code> with <code>sosa:observedProperty</code> value <code>TBA</code> <em>MUST</em> have a <code>tern:featureType</code> with the value <a href="http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd"><code>landform</code></a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The result of the observation must be a value from the Plot slope codes controlled vocabulary.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TERN&#8217;s ecologists have determined the feature type is <em>landform</em>, defined by the <a href="https://www.publish.csiro.au/book/5230/">Australian Soil and Land Survey Field Handbook</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
@@ -771,7 +771,278 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="slope-type_vocabulary"><a class="link" href="#slope-type_vocabulary">3.1.1.2.2. Vocabulary</a></h6>
+<h6 id="slope-type_result-value"><a class="link" href="#slope-type_result-value">3.1.1.2.2. Result value</a></h6>
+<table class="tableblock frame-none grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:shapes:plot-description:slope-type:result-value</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Result value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>rdf:value</code> <em>MUST</em> exist in the Plot slope codes controlled vocabulary.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The value in <code>sosa:hasResult</code> must be a value in <code>sh:in</code>, which is the Plot slope codes controlled vocabulary.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted</code> <span class="icon"><i class="fa fa-circle-o"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conformance Classes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TBA</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TERN Ecosystem Surveillance Ecological Monitoring Protocols</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/shapes.ttl"><code>/shapes/plot-description/slope-type/shapes.ttl</code></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Examples</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/valid.ttl"><code>/shapes/plot-description/slope-type/valid.ttl</code></a></p>
+<p class="tableblock">Invalid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/invalid.ttl"><code>/shapes/plot-description/slope-type/invalid.ttl</code></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="slope-type_simple-result"><a class="link" href="#slope-type_simple-result">3.1.1.2.3. Simple result</a></h6>
+<table class="tableblock frame-none grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:shapes:plot-description:slope-type:simple-result</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simple result</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instances of <code>tern:Observation</code> <em>MUST</em> have a <code>sosa:hasSimpleResult</code> where the value is the same as the <code>rdf:value</code> on the value node of <code>sosa:hasResult</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value of <code>sosa:hasSimpleResult</code> must be the same as the value in <code>sosa:hasResult</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted</code> <span class="icon"><i class="fa fa-circle-o"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conformance Classes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TBA</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TERN Ecosystem Surveillance Ecological Monitoring Protocols</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/shapes.ttl"><code>/shapes/plot-description/slope-type/shapes.ttl</code></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Examples</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/valid.ttl"><code>/shapes/plot-description/slope-type/valid.ttl</code></a></p>
+<p class="tableblock">Invalid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/invalid.ttl"><code>/shapes/plot-description/slope-type/invalid.ttl</code></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="slope-type_site-visit"><a class="link" href="#slope-type_site-visit">3.1.1.2.4. Site visit</a></h6>
+<table class="tableblock frame-none grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:shapes:plot-description:slope-type:site-visit</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Site visit</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instances of <code>tern:Observation</code> with <code>sosa:observedProperty</code> value <code>TBA</code> <em>MUST</em> have a value for <code>tern:hasSiteVisit</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Observations following the Plot Description protocol are made in the context of a site visit.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted</code> <span class="icon"><i class="fa fa-circle-o"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conformance Classes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TBA</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TERN Ecosystem Surveillance Ecological Monitoring Protocols</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/shapes.ttl"><code>/shapes/plot-description/slope-type/shapes.ttl</code></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Examples</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/valid.ttl"><code>/shapes/plot-description/slope-type/valid.ttl</code></a></p>
+<p class="tableblock">Invalid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/invalid.ttl"><code>/shapes/plot-description/slope-type/invalid.ttl</code></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="slope-type_used-procedure"><a class="link" href="#slope-type_used-procedure">3.1.1.2.5. Used procedure</a></h6>
+<table class="tableblock frame-none grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:shapes:plot-description:slope-type:used-procedure</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used procedure</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instances of <code>tern:Observation</code> with <code>sosa:observedProperty</code> value <code>TBA</code> <em>MUST</em> have a <code>sosa:usedProcedure</code> where the value is <code><a href="https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32" class="bare">https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32</a></code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IRI of procedure must have the value <code><a href="https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32" class="bare">https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32</a></code>.</p>
+<p class="tableblock"><code><a href="https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32" class="bare">https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32</a></code> is the IRI for "Plot Description".</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted</code> <span class="icon"><i class="fa fa-circle-o"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conformance Classes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TBA</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TERN Ecosystem Surveillance Ecological Monitoring Protocols</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/shapes.ttl"><code>/shapes/plot-description/slope-type/shapes.ttl</code></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Examples</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/valid.ttl"><code>/shapes/plot-description/slope-type/valid.ttl</code></a></p>
+<p class="tableblock">Invalid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/invalid.ttl"><code>/shapes/plot-description/slope-type/invalid.ttl</code></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="slope-type_value-type"><a class="link" href="#slope-type_value-type">3.1.1.2.6. Value type</a></h6>
+<table class="tableblock frame-none grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:shapes:plot-description:slope-type:value-type</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instances of <code>tern:Observation</code> with <code>sosa:observedProperty</code> value <code>TBA</code> <em>MUST</em> have a <code>sosa:hasResult</code> where the value node is an instance of <code>tern:IRI</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The value in <code>sosa:hasResult</code> must be a <code>tern:IRI</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted</code> <span class="icon"><i class="fa fa-circle-o"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conformance Classes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TBA</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TERN Ecosystem Surveillance Ecological Monitoring Protocols</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/shapes.ttl"><code>/shapes/plot-description/slope-type/shapes.ttl</code></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Examples</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/valid.ttl"><code>/shapes/plot-description/slope-type/valid.ttl</code></a></p>
+<p class="tableblock">Invalid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/invalid.ttl"><code>/shapes/plot-description/slope-type/invalid.ttl</code></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="slope-type_vocabulary"><a class="link" href="#slope-type_vocabulary">3.1.1.2.7. Vocabulary</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -798,7 +1069,8 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The result of the observation must have the Plot slope codes as the controlled vocabulary.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IRI of <code>tern:vocabulary</code> in <code>sosa:hasResult</code> must have the value <code><a href="https://linked.data.gov.au/def/test/dawe-cv/d893e669-c530-4bc3-a057-a5799ffcb5db" class="bare">https://linked.data.gov.au/def/test/dawe-cv/d893e669-c530-4bc3-a057-a5799ffcb5db</a></code>.</p>
+<p class="tableblock"><code><a href="https://linked.data.gov.au/def/test/dawe-cv/d893e669-c530-4bc3-a057-a5799ffcb5db" class="bare">https://linked.data.gov.au/def/test/dawe-cv/d893e669-c530-4bc3-a057-a5799ffcb5db</a></code> is the IRI for "Plot slope codes".</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
@@ -874,7 +1146,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-03-23 05:37:52 UTC
+Last updated 2022-03-24 01:16:01 UTC
 </div>
 </div>
 </body>
