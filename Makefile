@@ -1,7 +1,7 @@
 # shape=shapes.ttl
 # data=data.ttl
-shape=shapes/plot-description/surface-strew-lithology/shapes.ttl
-data=shapes/plot-description/surface-strew-lithology/invalid.ttl
+shape=shapes/plot-description/surface-strew-size/shapes.ttl
+data=shapes/plot-description/surface-strew-size/invalid.ttl
 SOURCES := $(shell find shapes -name "*.ttl")
 SHAPES := $(shell find shapes -name "shapes.ttl")
 
