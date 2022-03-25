@@ -64,4 +64,11 @@ test_cases: List[TestCaseItem] = [
         "shapes/plot-description/surface-strew-lithology/invalid.ttl",
         7,
     ).astuple(),
+    TestCaseItem(
+        "plot-description-surface-strew-size",
+        "shapes/plot-description/surface-strew-size/shapes.ttl",
+        "shapes/plot-description/surface-strew-size/valid.ttl",
+        "shapes/plot-description/surface-strew-size/invalid.ttl",
+        7,
+    ).astuple(),
 ]
