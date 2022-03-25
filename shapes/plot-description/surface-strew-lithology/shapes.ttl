@@ -8,7 +8,7 @@ PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:plot-description:outcrop-lithology:feature-type>
+<urn:shapes:plot-description:surface-strew-lithology:feature-type>
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
@@ -27,19 +27,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         PREFIX sosa: <http://www.w3.org/ns/sosa/>
         select ?this  {
             ?observation a tern:Observation ;
-                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/5af5cef1-179c-4bae-9037-42196668deff> ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/6ee380ca-e9dc-4a9b-91c3-758b54e751eb> ;
                 sosa:hasFeatureOfInterest ?this .
         }
     """
         ] ;
     ns1:examples [
-            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/invalid.ttl"^^xsd:anyURI ;
-            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/valid.ttl"^^xsd:anyURI
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/valid.ttl"^^xsd:anyURI
         ] ;
-    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:outcrop-lithology:result-value>
+<urn:shapes:plot-description:surface-strew-lithology:result-value>
     a
         sh:PropertyShape ,
         <urn:class:Controlled> ,
@@ -151,14 +151,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
             select ?this  {
                 ?observation a tern:Observation ;
-                    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/5af5cef1-179c-4bae-9037-42196668deff> ;
+                    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/6ee380ca-e9dc-4a9b-91c3-758b54e751eb> ;
                     sosa:hasResult ?this .
             }
     """
         ] ;
     ns1:examples [
-            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/invalid.ttl"^^xsd:anyURI ;
-            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/valid.ttl"^^xsd:anyURI
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/valid.ttl"^^xsd:anyURI
         ] ;
     ns1:query """
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -169,10 +169,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
     """ ;
     ns1:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
-    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:outcrop-lithology:simple-result>
+<urn:shapes:plot-description:surface-strew-lithology:simple-result>
     a
         sh:NodeShape ,
         <urn:class:Requirement> ;
@@ -189,7 +189,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         select $this {
             $this a tern:Observation ;
-                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/5af5cef1-179c-4bae-9037-42196668deff> ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/6ee380ca-e9dc-4a9b-91c3-758b54e751eb> ;
                 sosa:hasSimpleResult ?simple ;
                 sosa:hasResult ?result .
             ?result rdf:value ?value .
@@ -199,13 +199,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sh:targetClass tern:Observation ;
     ns1:examples [
-            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/invalid.ttl"^^xsd:anyURI ;
-            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/valid.ttl"^^xsd:anyURI
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/valid.ttl"^^xsd:anyURI
         ] ;
-    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:outcrop-lithology:site-visit>
+<urn:shapes:plot-description:surface-strew-lithology:site-visit>
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
@@ -226,18 +226,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         select ?this {
             ?this a tern:Observation ;
-                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/5af5cef1-179c-4bae-9037-42196668deff> .
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/6ee380ca-e9dc-4a9b-91c3-758b54e751eb> .
         }
     """
         ] ;
     ns1:examples [
-            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/invalid.ttl"^^xsd:anyURI ;
-            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/valid.ttl"^^xsd:anyURI
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/valid.ttl"^^xsd:anyURI
         ] ;
-    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:outcrop-lithology:used-procedure>
+<urn:shapes:plot-description:surface-strew-lithology:used-procedure>
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
@@ -258,18 +258,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         PREFIX sosa: <http://www.w3.org/ns/sosa/>
         select ?this {
             ?this a tern:Observation ;
-                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/5af5cef1-179c-4bae-9037-42196668deff> .
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/6ee380ca-e9dc-4a9b-91c3-758b54e751eb> .
         }
     """
         ] ;
     ns1:examples [
-            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/invalid.ttl"^^xsd:anyURI ;
-            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/valid.ttl"^^xsd:anyURI
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/valid.ttl"^^xsd:anyURI
         ] ;
-    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:outcrop-lithology:value-type>
+<urn:shapes:plot-description:surface-strew-lithology:value-type>
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
@@ -288,18 +288,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         PREFIX sosa: <http://www.w3.org/ns/sosa/>
         select ?this {
             ?this a tern:Observation ;
-                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/5af5cef1-179c-4bae-9037-42196668deff> .
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/6ee380ca-e9dc-4a9b-91c3-758b54e751eb> .
         }
     """
         ] ;
     ns1:examples [
-            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/invalid.ttl"^^xsd:anyURI ;
-            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/valid.ttl"^^xsd:anyURI
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/valid.ttl"^^xsd:anyURI
         ] ;
-    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:outcrop-lithology:vocabulary>
+<urn:shapes:plot-description:surface-strew-lithology:vocabulary>
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
@@ -320,15 +320,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
             select ?this  {
                 ?observation a tern:Observation ;
-                    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/5af5cef1-179c-4bae-9037-42196668deff> ;
+                    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/6ee380ca-e9dc-4a9b-91c3-758b54e751eb> ;
                     sosa:hasResult ?this .
             }
     """
         ] ;
     ns1:examples [
-            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/invalid.ttl"^^xsd:anyURI ;
-            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/valid.ttl"^^xsd:anyURI
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/valid.ttl"^^xsd:anyURI
         ] ;
-    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
