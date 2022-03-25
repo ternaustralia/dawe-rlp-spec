@@ -1,0 +1,31 @@
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:plot-description:valid:outcrop-lithology:1>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/test/dawe-cv/027e370b-cd03-5ed3-ab3e-dff1638582ad> ;
+            sosa:isResultOf <urn:test:plot-description:valid:outcrop-lithology:1> ;
+            tern:vocabulary <https://linked.data.gov.au/def/test/dawe-cv/1d50eb79-685f-45ea-84b4-627154eddede>
+        ] ;
+    sosa:hasSimpleResult "https://linked.data.gov.au/def/test/dawe-cv/027e370b-cd03-5ed3-ab3e-dff1638582ad"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/5af5cef1-179c-4bae-9037-42196668deff> ;
+    sosa:phenomenonTime <https://example.com/observation/landform-pattern/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-03-14T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
