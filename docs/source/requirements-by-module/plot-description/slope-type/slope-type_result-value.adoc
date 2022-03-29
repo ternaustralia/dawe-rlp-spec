@@ -12,6 +12,27 @@
 |Comment | The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Plot slope codes controlled vocabulary.
 include::../../../statuses/submitted.adoc[]
 |Conformance Classes | `TBA`
+
+|Property | Value
+|Controlled list items | The result value MUST be from the following list: 
+
+link:https://linked.data.gov.au/def/test/dawe-cv/eb2cd300-a034-5d20-9504-22c19687ca57[`Cliffed`] 
+
+link:https://linked.data.gov.au/def/test/dawe-cv/f7c9def6-1ce4-5b40-9031-ecc2b1034987[`Gently inclined`] 
+
+link:https://linked.data.gov.au/def/test/dawe-cv/e6b4e665-7593-5ae3-9384-6a3fa7201801[`Level`] 
+
+link:https://linked.data.gov.au/def/test/dawe-cv/1db5ed2c-8be6-5bc7-a74d-7e8e8404d702[`Moderately inclined`] 
+
+link:https://linked.data.gov.au/def/test/dawe-cv/73ca5e1f-b917-591a-966b-e813518eb704[`Precipitous `] 
+
+link:https://linked.data.gov.au/def/test/dawe-cv/c7a54110-88db-5334-8ff4-cd3ef319ba79[`Steep`] 
+
+link:https://linked.data.gov.au/def/test/dawe-cv/c1e14b31-6f39-5203-b7c9-ecee4ccc0a56[`Very gently inclined`] 
+
+link:https://linked.data.gov.au/def/test/dawe-cv/244ca9f4-9ac1-5b5e-913a-e4f45be6e93e[`Very steep`] 
+
+
 |Source | TERN Ecosystem Surveillance Ecological Monitoring Protocols
 |Validators | link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/shapes.ttl[`/shapes/plot-description/slope-type/shapes.ttl`]
 |Examples | Valid: link:https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-type/valid.ttl[`/shapes/plot-description/slope-type/valid.ttl`]

@@ -16,6 +16,13 @@ requirement_template = Template(
 |Comment | {{ req.comment }}
 {% if req.status == "http://purl.org/linked-data/registry#statusSubmitted" %}include::../../../statuses/submitted.adoc[]{% elif req.status == "http://purl.org/linked-data/registry#statusStable" %}include::../../../statuses/stable.adoc[]{% else %}include::../../../statuses/invalid.adoc[]{% endif %}
 |Conformance Classes | {{ req.conformance_classes }}
+{% if controlled_list %}
+|Property | Value
+|Controlled list items | The result value MUST be from the following list: 
+{% for item in controlled_list %}
+link:{{ item[0] }}[`{{ item[1] }}`] 
+{% endfor %}
+{% endif %}
 |Source | {{ req.source }}
 |Validators | link:{{ req.validator.url }}[`{{ req.validator.label }}`]
 |Examples | Valid: link:{{ req.examples.valid_url }}[`{{ req.examples.valid_label }}`]
