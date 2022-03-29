@@ -152,7 +152,9 @@ def is_controlled(iri: URIRef, g: Graph) -> bool:
     return False
 
 
-def get_controlled_iris_and_labels(collection: Collection, sparql_endpoint: str, g: Graph):
+def get_controlled_iris_and_labels(
+    collection: Collection, sparql_endpoint: str, g: Graph
+):
     lst = list(collection.__iter__())
     errors = 0
     results = query.render(items=lst)
@@ -161,7 +163,9 @@ def get_controlled_iris_and_labels(collection: Collection, sparql_endpoint: str,
     try:
         data = sparql_query(sparql_endpoint, results)
         for iri in data["results"]["bindings"]:
-            iris_and_labels.append([str(iri["iri"]["value"]), str(iri["label"]["value"])])
+            iris_and_labels.append(
+                [str(iri["iri"]["value"]), str(iri["label"]["value"])]
+            )
 
     except SPARQLQueryError as err:
         logger.error(str(err))
@@ -229,23 +233,19 @@ def generate_requirements():
 
                 requirement = get_requirement(req, g)
 
+                iris_and_labels_list = None
                 if is_controlled(req, g):
                     controlled_iris = get_controlled_iris(req, g)
                     endpoint = g.value(req, URIRef("urn:property:sparqlEndpoint"))
-                    iris_and_labels_list = get_controlled_iris_and_labels(controlled_iris, endpoint, g)
-                    
-                    requirement_ascii = requirement_template.render(
-                        local_name=f"{requirement_set_name}_{local_name}",
-                        req=requirement,
-                        add_controlled=is_controlled(req, g),
-                        table_values=iris_and_labels_list,
+                    iris_and_labels_list = get_controlled_iris_and_labels(
+                        controlled_iris, endpoint, g
                     )
-                    
-                else:
-                    requirement_ascii = requirement_template.render(
-                        local_name=f"{requirement_set_name}_{local_name}",
-                        req=requirement,
-                    )
+
+                requirement_ascii = requirement_template.render(
+                    local_name=f"{requirement_set_name}_{local_name}",
+                    req=requirement,
+                    controlled_list=iris_and_labels_list,
+                )
 
                 logger.info("Writing ascii to %s", asciidoc_file.absolute())
                 target_requirement_set.mkdir(exist_ok=True)

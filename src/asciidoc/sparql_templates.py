@@ -8,4 +8,5 @@ select ?iri ?label {
     }
     ?iri skos:prefLabel ?label .
 }
+ORDER BY ?label
 """)
