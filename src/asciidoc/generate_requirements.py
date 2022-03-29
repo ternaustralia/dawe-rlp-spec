@@ -2,15 +2,19 @@ from pathlib import Path
 from dataclasses import dataclass
 from typing import List
 import logging
+import requests
+from requests.exceptions import HTTPError
 
 from urlpath import URL
-from rdflib import DCTERMS, Graph, URIRef, SH, Namespace
+from rdflib import DCTERMS, Graph, URIRef, SH, Namespace, RDF
+from rdflib.collection import Collection
 
 from src.asciidoc.templates import (
     index_requirement_template,
     requirement_template,
     requirements_sections_template,
 )
+from src.asciidoc.sparql_templates import query
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -53,6 +57,10 @@ class Requirement:
     source: str
     validator: Validator
     examples: Example
+
+
+class SPARQLQueryError(Exception):
+    pass
 
 
 def get_source_shapes_paths():
@@ -116,6 +124,55 @@ def get_requirement(iri: URIRef, g: Graph) -> Requirement:
     return requirement
 
 
+def sparql_query(url: str, query: str):
+    headers = {
+        "Content-type": "application/sparql-query",
+        "Accept": "application/sparql-results+json",
+    }
+    r = requests.post(url, headers=headers, data=query)
+    try:
+        r.raise_for_status()
+    except HTTPError as err:
+        raise SPARQLQueryError(
+            f"Failed fetching data from {url} SPARQL endpoint. Code: {r.status_code} Message: {r.text}."
+        ) from err
+    return r.json()
+
+
+def get_controlled_iris(iri, g):
+    values = g.value(iri, SH["in"])
+    collection = Collection(g, values)
+
+    return collection
+
+
+def is_controlled(iri: URIRef, g: Graph) -> bool:
+    for _, _, _ in g.triples((iri, RDF.type, URIRef("urn:class:Controlled"))):
+        return True
+    return False
+
+
+def get_controlled_iris_and_labels(collection: Collection, sparql_endpoint: str, g: Graph):
+    lst = list(collection.__iter__())
+    errors = 0
+    results = query.render(items=lst)
+    iris_and_labels = []
+
+    try:
+        data = sparql_query(sparql_endpoint, results)
+        for iri in data["results"]["bindings"]:
+            iris_and_labels.append([str(iri["iri"]["value"]), str(iri["label"]["value"])])
+
+    except SPARQLQueryError as err:
+        logger.error(str(err))
+        errors += 1
+
+    if errors:
+        logger.info(f"{errors} error occurred.")
+
+    return iris_and_labels
+
+
 def generate_requirements():
     source_shapes_paths = get_source_shapes_paths()
 
@@ -171,10 +228,24 @@ def generate_requirements():
                 asciidoc_files.append(asciidoc_file.name)
 
                 requirement = get_requirement(req, g)
-                requirement_ascii = requirement_template.render(
-                    local_name=f"{requirement_set_name}_{local_name}",
-                    req=requirement,
-                )
+
+                if is_controlled(req, g):
+                    controlled_iris = get_controlled_iris(req, g)
+                    endpoint = g.value(req, URIRef("urn:property:sparqlEndpoint"))
+                    iris_and_labels_list = get_controlled_iris_and_labels(controlled_iris, endpoint, g)
+                    
+                    requirement_ascii = requirement_template.render(
+                        local_name=f"{requirement_set_name}_{local_name}",
+                        req=requirement,
+                        add_controlled=is_controlled(req, g),
+                        table_values=iris_and_labels_list,
+                    )
+                    
+                else:
+                    requirement_ascii = requirement_template.render(
+                        local_name=f"{requirement_set_name}_{local_name}",
+                        req=requirement,
+                    )
 
                 logger.info("Writing ascii to %s", asciidoc_file.absolute())
                 target_requirement_set.mkdir(exist_ok=True)
