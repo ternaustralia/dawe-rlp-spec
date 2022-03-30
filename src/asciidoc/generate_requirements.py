@@ -1,7 +1,8 @@
+import logging
 from pathlib import Path
 from dataclasses import dataclass
 from typing import List
-import logging
+from collections import defaultdict
 
 from urlpath import URL
 from rdflib import DCTERMS, Graph, URIRef, SH, Namespace
@@ -120,7 +121,7 @@ def generate_requirements():
     source_shapes_paths = get_source_shapes_paths()
 
     # We use this later to build the requirements-sections.adoc file.
-    requirements_sections = []
+    requirements_sections = defaultdict(list)
 
     # For each protocol module wth shapes, loop through each observable property directory.
     # Each directory has a `shapes.ttl`, `valid.ttl` and `invalid.ttl` file.
@@ -192,12 +193,9 @@ def generate_requirements():
                 files=asciidoc_files,
             )
             asciidoc_index_file.write_text(asciidoc_content)
-            requirements_sections.append(asciidoc_index_file)
+            section = str(asciidoc_index_file).rsplit("/workspaces/dawe-rlp-spec/docs/source/", maxsplit=1)[-1]
+            requirements_sections[source_protocol_module.name.replace("-", " ").title()].append(section)
 
     # Write to requirements-sections.adoc
-    sections = [
-        str(s).rsplit("/workspaces/dawe-rlp-spec/docs/source/", maxsplit=1)[-1]
-        for s in requirements_sections
-    ]
-    sections_ascii = requirements_sections_template.render(sections=sections)
+    sections_ascii = requirements_sections_template.render(sections=requirements_sections)
     requirements_sections_file.write_text(sections_ascii)
