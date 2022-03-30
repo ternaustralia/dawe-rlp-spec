@@ -71,4 +71,11 @@ test_cases: List[TestCaseItem] = [
         "shapes/plot-description/surface-strew-size/invalid.ttl",
         7,
     ).astuple(),
+    TestCaseItem(
+        "plot-description-climatic-condition",
+        "shapes/plot-description/climatic-condition/shapes.ttl",
+        "shapes/plot-description/climatic-condition/valid.ttl",
+        "shapes/plot-description/climatic-condition/invalid.ttl",
+        7,
+    ).astuple(),
 ]
