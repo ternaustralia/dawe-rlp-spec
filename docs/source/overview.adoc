@@ -1,0 +1,10 @@
+=== Overview
+
+The Ecological Data Exchange Specification is a Resource Description Framework (RDF) specification based on existing Semantic Web standards. It uses RDF as the data interchange format and defines constraints based on the observations and samplings made in the field surveys. By definition, the Ecological Data Exchange Specification is a profile of the TERN Ontology and uses all of the core concepts as its data model and only defines data constraints to comply with the data collection requirements of the Ecosystem Surveillance Ecological Monitoring Protocols.
+
+The Ecological Data Exchange Specification's profile and its validators are formally expressed in RDF using vocabularies from SHACL and PROF. Data conforming to this specification is also expressed in RDF using the vocabularies from the TERN Ontology. 
+
+The Ecosystem Surveillance Ecological Monitoring Protocols contains 19 data collection protocols divided by their field of study. Each protocol, also known as a module, has instructions and procedures for performing observations and samplings. 
+
+This specification outlines each module's validators under Requirements. 
+Each module identifies the observable property from the Ecosystem Surveillance Ecological Monitoring Protocols and lists the observation's requirements as a set of SHACL shapes in human-readable form. 
