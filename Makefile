@@ -1,7 +1,7 @@
 # shape=shapes.ttl
 # data=data.ttl
-shape=shapes/plot-description/climatic-condition/shapes.ttl
-data=shapes/plot-description/climatic-condition/invalid.ttl
+shape=shapes/plot-description/cover-class/shapes.ttl
+data=shapes/plot-description/cover-class/invalid.ttl
 SOURCES := $(shell find shapes -name "*.ttl")
 SHAPES := $(shell find shapes -name "shapes.ttl")
 
