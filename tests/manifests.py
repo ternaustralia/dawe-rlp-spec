@@ -79,6 +79,13 @@ test_cases: List[TestCaseItem] = [
         7,
     ).astuple(),
     TestCaseItem(
+        "plot-description-cover-class",
+        "shapes/plot-description/cover-class/shapes.ttl",
+        "shapes/plot-description/cover-class/valid.ttl",
+        "shapes/plot-description/cover-class/invalid.ttl",
+        7,
+    ).astuple(),
+    TestCaseItem(
         "plot-description-disturbance",
         "shapes/plot-description/disturbance/shapes.ttl",
         "shapes/plot-description/disturbance/valid.ttl",
