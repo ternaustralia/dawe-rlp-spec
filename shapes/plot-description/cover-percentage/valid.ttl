@@ -1,0 +1,28 @@
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:plot-description:valid:cover:1>
+    a tern:Observation ;
+    rdfs:comment "Valid result for cover" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <urn:test:dataset> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+        ] ;
+    sosa:hasResult [
+            a tern:Float ;
+            rdf:value 50.65 ;
+            tern:unit unit:PERCENT
+        ] ;
+    sosa:hasSimpleResult 50.65 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
