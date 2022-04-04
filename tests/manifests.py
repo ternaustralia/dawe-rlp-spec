@@ -134,4 +134,11 @@ test_cases: List[TestCaseItem] = [
         "shapes/plot-description/second-most-dominant-species/invalid.ttl",
         7,
     ).astuple(),
+    TestCaseItem(
+        "plot-description-second-structural-formation",
+        "shapes/plot-description/structural-formation/shapes.ttl",
+        "shapes/plot-description/structural-formation/valid.ttl",
+        "shapes/plot-description/structural-formation/invalid.ttl",
+        7,
+    ).astuple(),
 ]
