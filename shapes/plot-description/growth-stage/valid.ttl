@@ -1,0 +1,31 @@
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:plot-description:valid:growth-stage:1>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/test/dawe-cv/29a1494c-8baf-5865-b3e9-d8f4897307bf> ;
+            sosa:isResultOf <urn:test:plot-description:valid:growth-stage:1> ;
+            tern:vocabulary <https://linked.data.gov.au/def/test/dawe-cv/89c02383-fb5e-4acd-b248-902a2d579170>
+        ] ;
+    sosa:hasSimpleResult "https://linked.data.gov.au/def/test/dawe-cv/29a1494c-8baf-5865-b3e9-d8f4897307bf"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/fcfda2f7-84f0-4c26-9f80-c051d129a094> ;
+    sosa:phenomenonTime <https://example.com/observation/growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-03-14T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
