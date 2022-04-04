@@ -111,10 +111,11 @@ h6 > a.link:hover,
 <li><a href="#landform_element_observation">3.1.1.5. Landform element Observation</a></li>
 <li><a href="#climatic_condition_observation">3.1.1.6. Climatic condition Observation</a></li>
 <li><a href="#outcrop_lithology_observation">3.1.1.7. Outcrop lithology Observation</a></li>
-<li><a href="#aspect_observation">3.1.1.8. Aspect Observation</a></li>
-<li><a href="#slope_type_observation">3.1.1.9. Slope type Observation</a></li>
-<li><a href="#surface_strew_lithology_observation">3.1.1.10. Surface strew lithology Observation</a></li>
-<li><a href="#slope_observation">3.1.1.11. Slope Observation</a></li>
+<li><a href="#fire_history_observation">3.1.1.8. Fire history Observation</a></li>
+<li><a href="#aspect_observation">3.1.1.9. Aspect Observation</a></li>
+<li><a href="#slope_type_observation">3.1.1.10. Slope type Observation</a></li>
+<li><a href="#surface_strew_lithology_observation">3.1.1.11. Surface strew lithology Observation</a></li>
+<li><a href="#slope_observation">3.1.1.12. Slope Observation</a></li>
 </ul>
 </li>
 </ul>
@@ -3332,9 +3333,403 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </div>
 </div>
 <div class="sect4">
-<h5 id="aspect_observation"><a class="link" href="#aspect_observation">3.1.1.8. Aspect Observation</a></h5>
+<h5 id="fire_history_observation"><a class="link" href="#fire_history_observation">3.1.1.8. Fire history Observation</a></h5>
 <div class="sect5">
-<h6 id="aspect_feature-type"><a class="link" href="#aspect_feature-type">3.1.1.8.1. Feature type</a></h6>
+<h6 id="fire-history_feature-type"><a class="link" href="#fire-history_feature-type">3.1.1.8.1. Feature type</a></h6>
+<table class="tableblock frame-none grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:shapes:plot-description:fire-history:feature-type</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Feature type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instances of <code>tern:Observation</code> with <code>sosa:observedProperty</code> value <code>TBA</code> <em>MUST</em> have a <code>tern:featureType</code> with the value <a href="http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45"><code>vegetation disturbance</code></a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TERN&#8217;s ecologists have determined the feature type is <em>vegetation disturbance</em>, defined by the <a href="https://www.publish.csiro.au/book/5230/">Australian Soil and Land Survey Field Handbook</a>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted</code> <span class="icon"><i class="fa fa-circle-o"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conformance Classes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TBA</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TERN Ecosystem Surveillance Ecological Monitoring Protocols</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/shapes.ttl"><code>/shapes/plot-description/fire-history/shapes.ttl</code></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Examples</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/valid.ttl"><code>/shapes/plot-description/fire-history/valid.ttl</code></a></p>
+<p class="tableblock">Invalid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/invalid.ttl"><code>/shapes/plot-description/fire-history/invalid.ttl</code></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="fire-history_result-value"><a class="link" href="#fire-history_result-value">3.1.1.8.2. Result value</a></h6>
+<table class="tableblock frame-none grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:shapes:plot-description:fire-history:result-value</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Result value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>rdf:value</code> <em>MUST</em> exist in the Fire history codes controlled vocabulary.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The value in <code>sosa:hasResult</code> <em>MUST</em> be a value in <code>sh:in</code>, which is the Fire history codes controlled vocabulary.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted</code> <span class="icon"><i class="fa fa-circle-o"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conformance Classes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TBA</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Property</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Controlled list items</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The result value MUST be from the following list:</p>
+<p class="tableblock"><a href="https://linked.data.gov.au/def/test/dawe-cv/53d1ea55-2ba7-59f6-8efb-a6927f5e6275"><code>Past burn</code></a></p>
+<p class="tableblock"><a href="https://linked.data.gov.au/def/test/dawe-cv/a6a86887-ab7a-50d5-9e0f-2142734f8d33"><code>Recently burnt</code></a></p>
+<p class="tableblock"><a href="https://linked.data.gov.au/def/test/dawe-cv/f757667d-3e74-53f6-8b35-08d286d1ed26"><code>Unburnt</code></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TERN Ecosystem Surveillance Ecological Monitoring Protocols</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/shapes.ttl"><code>/shapes/plot-description/fire-history/shapes.ttl</code></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Examples</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/valid.ttl"><code>/shapes/plot-description/fire-history/valid.ttl</code></a></p>
+<p class="tableblock">Invalid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/invalid.ttl"><code>/shapes/plot-description/fire-history/invalid.ttl</code></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="fire-history_simple-result"><a class="link" href="#fire-history_simple-result">3.1.1.8.3. Simple result</a></h6>
+<table class="tableblock frame-none grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:shapes:plot-description:fire-history:simple-result</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Simple result</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instances of <code>tern:Observation</code> <em>MUST</em> have a <code>sosa:hasSimpleResult</code> where the value is the same as the <code>rdf:value</code> on the value node of <code>sosa:hasResult</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value of <code>sosa:hasSimpleResult</code> <em>MUST</em> be the same as the value in <code>sosa:hasResult</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted</code> <span class="icon"><i class="fa fa-circle-o"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conformance Classes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TBA</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TERN Ecosystem Surveillance Ecological Monitoring Protocols</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/shapes.ttl"><code>/shapes/plot-description/fire-history/shapes.ttl</code></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Examples</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/valid.ttl"><code>/shapes/plot-description/fire-history/valid.ttl</code></a></p>
+<p class="tableblock">Invalid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/invalid.ttl"><code>/shapes/plot-description/fire-history/invalid.ttl</code></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="fire-history_site-visit"><a class="link" href="#fire-history_site-visit">3.1.1.8.4. Site visit</a></h6>
+<table class="tableblock frame-none grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:shapes:plot-description:fire-history:site-visit</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Site visit</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instances of <code>tern:Observation</code> with <code>sosa:observedProperty</code> value <code>TBA</code> <em>MUST</em> have a value for <code>tern:hasSiteVisit</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Observations following the Plot Description protocol are made in the context of a site visit.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted</code> <span class="icon"><i class="fa fa-circle-o"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conformance Classes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TBA</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TERN Ecosystem Surveillance Ecological Monitoring Protocols</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/shapes.ttl"><code>/shapes/plot-description/fire-history/shapes.ttl</code></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Examples</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/valid.ttl"><code>/shapes/plot-description/fire-history/valid.ttl</code></a></p>
+<p class="tableblock">Invalid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/invalid.ttl"><code>/shapes/plot-description/fire-history/invalid.ttl</code></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="fire-history_used-procedure"><a class="link" href="#fire-history_used-procedure">3.1.1.8.5. Used procedure</a></h6>
+<table class="tableblock frame-none grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:shapes:plot-description:fire-history:used-procedure</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Used procedure</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instances of <code>tern:Observation</code> with <code>sosa:observedProperty</code> value <code>TBA</code> <em>MUST</em> have a <code>sosa:usedProcedure</code> where the value is <code><a href="https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32" class="bare">https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32</a></code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IRI of procedure <em>MUST</em> have the value <code><a href="https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32" class="bare">https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32</a></code>.</p>
+<p class="tableblock"><code><a href="https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32" class="bare">https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32</a></code> is the IRI for "Plot Description".</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted</code> <span class="icon"><i class="fa fa-circle-o"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conformance Classes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TBA</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TERN Ecosystem Surveillance Ecological Monitoring Protocols</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/shapes.ttl"><code>/shapes/plot-description/fire-history/shapes.ttl</code></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Examples</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/valid.ttl"><code>/shapes/plot-description/fire-history/valid.ttl</code></a></p>
+<p class="tableblock">Invalid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/invalid.ttl"><code>/shapes/plot-description/fire-history/invalid.ttl</code></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="fire-history_value-type"><a class="link" href="#fire-history_value-type">3.1.1.8.6. Value type</a></h6>
+<table class="tableblock frame-none grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:shapes:plot-description:fire-history:value-type</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Value type</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Instances of <code>tern:Observation</code> with <code>sosa:observedProperty</code> value <code>TBA</code> <em>MUST</em> have a <code>sosa:hasResult</code> where the value node is an instance of <code>tern:IRI</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The value in <code>sosa:hasResult</code> <em>MUST</em> be a <code>tern:IRI</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted</code> <span class="icon"><i class="fa fa-circle-o"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conformance Classes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TBA</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TERN Ecosystem Surveillance Ecological Monitoring Protocols</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/shapes.ttl"><code>/shapes/plot-description/fire-history/shapes.ttl</code></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Examples</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/valid.ttl"><code>/shapes/plot-description/fire-history/valid.ttl</code></a></p>
+<p class="tableblock">Invalid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/invalid.ttl"><code>/shapes/plot-description/fire-history/invalid.ttl</code></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="fire-history_vocabulary"><a class="link" href="#fire-history_vocabulary">3.1.1.8.7. Vocabulary</a></h6>
+<table class="tableblock frame-none grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 83.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Property</th>
+<th class="tableblock halign-left valign-top">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Identifier</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>urn:shapes:plot-description:fire-history:vocabulary</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Label</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Vocabulary</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Definition</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The value of <code>tern:vocabulary</code> <em>MUST</em> match the pattern <code>6e9d2f51-ce64-4c67-8391-d14a8bf96b6b$</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">IRI of <code>tern:vocabulary</code> in <code>sosa:hasResult</code> <em>MUST</em> have the value <code><a href="https://linked.data.gov.au/def/test/dawe-cv/6e9d2f51-ce64-4c67-8391-d14a8bf96b6b" class="bare">https://linked.data.gov.au/def/test/dawe-cv/6e9d2f51-ce64-4c67-8391-d14a8bf96b6b</a></code>.</p>
+<p class="tableblock"><code><a href="https://linked.data.gov.au/def/test/dawe-cv/6e9d2f51-ce64-4c67-8391-d14a8bf96b6b" class="bare">https://linked.data.gov.au/def/test/dawe-cv/6e9d2f51-ce64-4c67-8391-d14a8bf96b6b</a></code> is the IRI for "Fire history codes".</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Status</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>submitted</code> <span class="icon"><i class="fa fa-circle-o"></i></span></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conformance Classes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>TBA</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Source</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TERN Ecosystem Surveillance Ecological Monitoring Protocols</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Validators</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/shapes.ttl"><code>/shapes/plot-description/fire-history/shapes.ttl</code></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Examples</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/valid.ttl"><code>/shapes/plot-description/fire-history/valid.ttl</code></a></p>
+<p class="tableblock">Invalid: <a href="https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/fire-history/invalid.ttl"><code>/shapes/plot-description/fire-history/invalid.ttl</code></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect4">
+<h5 id="aspect_observation"><a class="link" href="#aspect_observation">3.1.1.9. Aspect Observation</a></h5>
+<div class="sect5">
+<h6 id="aspect_feature-type"><a class="link" href="#aspect_feature-type">3.1.1.9.1. Feature type</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -3388,7 +3783,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="aspect_simple-result"><a class="link" href="#aspect_simple-result">3.1.1.8.2. Simple result</a></h6>
+<h6 id="aspect_simple-result"><a class="link" href="#aspect_simple-result">3.1.1.9.2. Simple result</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -3442,7 +3837,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="aspect_site-visit"><a class="link" href="#aspect_site-visit">3.1.1.8.3. Site visit</a></h6>
+<h6 id="aspect_site-visit"><a class="link" href="#aspect_site-visit">3.1.1.9.3. Site visit</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -3496,7 +3891,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="aspect_unit-of-measure"><a class="link" href="#aspect_unit-of-measure">3.1.1.8.4. Unit of measure</a></h6>
+<h6 id="aspect_unit-of-measure"><a class="link" href="#aspect_unit-of-measure">3.1.1.9.4. Unit of measure</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -3550,7 +3945,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="aspect_used-procedure"><a class="link" href="#aspect_used-procedure">3.1.1.8.5. Used procedure</a></h6>
+<h6 id="aspect_used-procedure"><a class="link" href="#aspect_used-procedure">3.1.1.9.5. Used procedure</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -3605,7 +4000,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="aspect_value-range"><a class="link" href="#aspect_value-range">3.1.1.8.6. Value range</a></h6>
+<h6 id="aspect_value-range"><a class="link" href="#aspect_value-range">3.1.1.9.6. Value range</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -3659,7 +4054,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="aspect_value-type"><a class="link" href="#aspect_value-type">3.1.1.8.7. Value type</a></h6>
+<h6 id="aspect_value-type"><a class="link" href="#aspect_value-type">3.1.1.9.7. Value type</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -3714,9 +4109,9 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </div>
 </div>
 <div class="sect4">
-<h5 id="slope_type_observation"><a class="link" href="#slope_type_observation">3.1.1.9. Slope type Observation</a></h5>
+<h5 id="slope_type_observation"><a class="link" href="#slope_type_observation">3.1.1.10. Slope type Observation</a></h5>
 <div class="sect5">
-<h6 id="slope-type_feature-type"><a class="link" href="#slope-type_feature-type">3.1.1.9.1. Feature type</a></h6>
+<h6 id="slope-type_feature-type"><a class="link" href="#slope-type_feature-type">3.1.1.10.1. Feature type</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -3770,7 +4165,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="slope-type_result-value"><a class="link" href="#slope-type_result-value">3.1.1.9.2. Result value</a></h6>
+<h6 id="slope-type_result-value"><a class="link" href="#slope-type_result-value">3.1.1.10.2. Result value</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -3840,7 +4235,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="slope-type_simple-result"><a class="link" href="#slope-type_simple-result">3.1.1.9.3. Simple result</a></h6>
+<h6 id="slope-type_simple-result"><a class="link" href="#slope-type_simple-result">3.1.1.10.3. Simple result</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -3894,7 +4289,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="slope-type_site-visit"><a class="link" href="#slope-type_site-visit">3.1.1.9.4. Site visit</a></h6>
+<h6 id="slope-type_site-visit"><a class="link" href="#slope-type_site-visit">3.1.1.10.4. Site visit</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -3948,7 +4343,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="slope-type_used-procedure"><a class="link" href="#slope-type_used-procedure">3.1.1.9.5. Used procedure</a></h6>
+<h6 id="slope-type_used-procedure"><a class="link" href="#slope-type_used-procedure">3.1.1.10.5. Used procedure</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -4003,7 +4398,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="slope-type_value-type"><a class="link" href="#slope-type_value-type">3.1.1.9.6. Value type</a></h6>
+<h6 id="slope-type_value-type"><a class="link" href="#slope-type_value-type">3.1.1.10.6. Value type</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -4057,7 +4452,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="slope-type_vocabulary"><a class="link" href="#slope-type_vocabulary">3.1.1.9.7. Vocabulary</a></h6>
+<h6 id="slope-type_vocabulary"><a class="link" href="#slope-type_vocabulary">3.1.1.10.7. Vocabulary</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -4113,9 +4508,9 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </div>
 </div>
 <div class="sect4">
-<h5 id="surface_strew_lithology_observation"><a class="link" href="#surface_strew_lithology_observation">3.1.1.10. Surface strew lithology Observation</a></h5>
+<h5 id="surface_strew_lithology_observation"><a class="link" href="#surface_strew_lithology_observation">3.1.1.11. Surface strew lithology Observation</a></h5>
 <div class="sect5">
-<h6 id="surface-strew-lithology_feature-type"><a class="link" href="#surface-strew-lithology_feature-type">3.1.1.10.1. Feature type</a></h6>
+<h6 id="surface-strew-lithology_feature-type"><a class="link" href="#surface-strew-lithology_feature-type">3.1.1.11.1. Feature type</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -4169,7 +4564,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="surface-strew-lithology_result-value"><a class="link" href="#surface-strew-lithology_result-value">3.1.1.10.2. Result value</a></h6>
+<h6 id="surface-strew-lithology_result-value"><a class="link" href="#surface-strew-lithology_result-value">3.1.1.11.2. Result value</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -4322,7 +4717,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="surface-strew-lithology_simple-result"><a class="link" href="#surface-strew-lithology_simple-result">3.1.1.10.3. Simple result</a></h6>
+<h6 id="surface-strew-lithology_simple-result"><a class="link" href="#surface-strew-lithology_simple-result">3.1.1.11.3. Simple result</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -4376,7 +4771,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="surface-strew-lithology_site-visit"><a class="link" href="#surface-strew-lithology_site-visit">3.1.1.10.4. Site visit</a></h6>
+<h6 id="surface-strew-lithology_site-visit"><a class="link" href="#surface-strew-lithology_site-visit">3.1.1.11.4. Site visit</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -4430,7 +4825,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="surface-strew-lithology_used-procedure"><a class="link" href="#surface-strew-lithology_used-procedure">3.1.1.10.5. Used procedure</a></h6>
+<h6 id="surface-strew-lithology_used-procedure"><a class="link" href="#surface-strew-lithology_used-procedure">3.1.1.11.5. Used procedure</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -4485,7 +4880,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="surface-strew-lithology_value-type"><a class="link" href="#surface-strew-lithology_value-type">3.1.1.10.6. Value type</a></h6>
+<h6 id="surface-strew-lithology_value-type"><a class="link" href="#surface-strew-lithology_value-type">3.1.1.11.6. Value type</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -4539,7 +4934,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="surface-strew-lithology_vocabulary"><a class="link" href="#surface-strew-lithology_vocabulary">3.1.1.10.7. Vocabulary</a></h6>
+<h6 id="surface-strew-lithology_vocabulary"><a class="link" href="#surface-strew-lithology_vocabulary">3.1.1.11.7. Vocabulary</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -4595,9 +4990,9 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </div>
 </div>
 <div class="sect4">
-<h5 id="slope_observation"><a class="link" href="#slope_observation">3.1.1.11. Slope Observation</a></h5>
+<h5 id="slope_observation"><a class="link" href="#slope_observation">3.1.1.12. Slope Observation</a></h5>
 <div class="sect5">
-<h6 id="slope_feature-type"><a class="link" href="#slope_feature-type">3.1.1.11.1. Feature type</a></h6>
+<h6 id="slope_feature-type"><a class="link" href="#slope_feature-type">3.1.1.12.1. Feature type</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -4651,7 +5046,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="slope_simple-result"><a class="link" href="#slope_simple-result">3.1.1.11.2. Simple result</a></h6>
+<h6 id="slope_simple-result"><a class="link" href="#slope_simple-result">3.1.1.12.2. Simple result</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -4705,7 +5100,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="slope_site-visit"><a class="link" href="#slope_site-visit">3.1.1.11.3. Site visit</a></h6>
+<h6 id="slope_site-visit"><a class="link" href="#slope_site-visit">3.1.1.12.3. Site visit</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -4759,7 +5154,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="slope_unit-of-measure"><a class="link" href="#slope_unit-of-measure">3.1.1.11.4. Unit of measure</a></h6>
+<h6 id="slope_unit-of-measure"><a class="link" href="#slope_unit-of-measure">3.1.1.12.4. Unit of measure</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -4813,7 +5208,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="slope_used-procedure"><a class="link" href="#slope_used-procedure">3.1.1.11.5. Used procedure</a></h6>
+<h6 id="slope_used-procedure"><a class="link" href="#slope_used-procedure">3.1.1.12.5. Used procedure</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -4868,7 +5263,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="slope_value-range"><a class="link" href="#slope_value-range">3.1.1.11.6. Value range</a></h6>
+<h6 id="slope_value-range"><a class="link" href="#slope_value-range">3.1.1.12.6. Value range</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -4922,7 +5317,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </table>
 </div>
 <div class="sect5">
-<h6 id="slope_value-type"><a class="link" href="#slope_value-type">3.1.1.11.7. Value type</a></h6>
+<h6 id="slope_value-type"><a class="link" href="#slope_value-type">3.1.1.12.7. Value type</a></h6>
 <table class="tableblock frame-none grid-all stripes-even stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -5025,7 +5420,7 @@ ABN 63 942 912 684 (<strong>Service Provider</strong>)</p></td>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2022-04-03 23:39:01 UTC
+Last updated 2022-04-04 00:03:23 UTC
 </div>
 </div>
 </body>
