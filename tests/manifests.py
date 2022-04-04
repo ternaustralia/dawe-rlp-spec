@@ -148,4 +148,11 @@ test_cases: List[TestCaseItem] = [
         "shapes/plot-description/cover-percentage/invalid.ttl",
         7,
     ).astuple(),
+    TestCaseItem(
+        "plot-description-homogeneity-measure",
+        "shapes/plot-description/homogeneity-measure/shapes.ttl",
+        "shapes/plot-description/homogeneity-measure/valid.ttl",
+        "shapes/plot-description/homogeneity-measure/invalid.ttl",
+        7,
+    ).astuple(),
 ]
