@@ -1,0 +1,251 @@
+
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ns1: <urn:property:>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:plot-description:height-class:feature-type>
+    a
+        sh:PropertyShape ,
+        <urn:class:Requirement> ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _vegetation_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95> ;
+    sh:message "Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `tern:featureType` with the value link:http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95[`vegetation`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX unit: <http://qudt.org/vocab/unit/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/242d081b-b3f4-4206-bc39-7aa42e9972ee> ;
+                sosa:hasFeatureOfInterest ?this .
+        }
+    """
+        ] ;
+    ns1:examples [
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/valid.ttl"^^xsd:anyURI
+        ] ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:plot-description:height-class:result-value>
+    a
+        sh:PropertyShape ,
+        <urn:class:Controlled> ,
+        <urn:class:Requirement> ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Vegetation height class codes controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/test/dawe-cv/1e5241d5-b717-5908-a26d-297ef3c636d8>
+            <https://linked.data.gov.au/def/test/dawe-cv/42722db4-e29d-592f-8ec8-94ba4bc0a3ea>
+            <https://linked.data.gov.au/def/test/dawe-cv/5bc8fbdb-585b-515a-9e86-b29906cc3fa6>
+            <https://linked.data.gov.au/def/test/dawe-cv/5ed168a6-823b-5e8c-989f-eb845d2bb6b1>
+            <https://linked.data.gov.au/def/test/dawe-cv/815a1859-207c-5df6-907a-73a1ff37cf22>
+            <https://linked.data.gov.au/def/test/dawe-cv/86550193-634b-53e2-92e2-1c222bdc91da>
+            <https://linked.data.gov.au/def/test/dawe-cv/e46cf789-7432-594f-91e4-63f7574e47ae>
+            <https://linked.data.gov.au/def/test/dawe-cv/e583eb64-4b81-52f0-923f-77ab96b7cd8d>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Vegetation height class codes controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+            PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+            PREFIX sosa: <http://www.w3.org/ns/sosa/>
+            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            select ?this  {
+                ?observation a tern:Observation ;
+                    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/242d081b-b3f4-4206-bc39-7aa42e9972ee> ;
+                    sosa:hasResult ?this .
+            }
+    """
+        ] ;
+    ns1:examples [
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/valid.ttl"^^xsd:anyURI
+        ] ;
+    ns1:query """
+            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+            select ?values {
+                    ?s skos:member ?values .
+                    filter (STRENDS(str(?s), "b1b05cd1-3b85-4639-a6af-799a34d88d43"))
+            }
+
+    """ ;
+    ns1:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:plot-description:height-class:simple-result>
+    a
+        sh:NodeShape ,
+        <urn:class:Requirement> ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "Instances of `tern:Observation` _MUST_ have a `sosa:hasSimpleResult` where the value is the same as the `rdf:value` on the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX unit: <http://qudt.org/vocab/unit/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select $this {
+            $this a tern:Observation ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/242d081b-b3f4-4206-bc39-7aa42e9972ee> ;
+                sosa:hasSimpleResult ?simple ;
+                sosa:hasResult ?result .
+            ?result rdf:value ?value .
+            filter (?simple != str(?value))
+        }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    ns1:examples [
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/valid.ttl"^^xsd:anyURI
+        ] ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:plot-description:height-class:site-visit>
+    a
+        sh:PropertyShape ,
+        <urn:class:Requirement> ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Plot Description protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX unit: <http://qudt.org/vocab/unit/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this {
+            ?this a tern:Observation ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/242d081b-b3f4-4206-bc39-7aa42e9972ee> .
+        }
+    """
+        ] ;
+    ns1:examples [
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/valid.ttl"^^xsd:anyURI
+        ] ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:plot-description:height-class:used-procedure>
+    a
+        sh:PropertyShape ,
+        <urn:class:Requirement> ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of procedure _MUST_ have the value `https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32`.
+
+`https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32` is the IRI for "Plot Description".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+    sh:message "Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:usedProcedure` where the value is `https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32`." ;
+    sh:name "Used procedure" ;
+    sh:path sosa:usedProcedure ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX unit: <http://qudt.org/vocab/unit/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        select ?this {
+            ?this a tern:Observation ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/242d081b-b3f4-4206-bc39-7aa42e9972ee> .
+        }
+    """
+        ] ;
+    ns1:examples [
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/valid.ttl"^^xsd:anyURI
+        ] ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:plot-description:height-class:value-type>
+    a
+        sh:PropertyShape ,
+        <urn:class:Requirement> ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:hasResult` where the value node is an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX unit: <http://qudt.org/vocab/unit/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        select ?this {
+            ?this a tern:Observation ;
+                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/242d081b-b3f4-4206-bc39-7aa42e9972ee> .
+        }
+    """
+        ] ;
+    ns1:examples [
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/valid.ttl"^^xsd:anyURI
+        ] ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:plot-description:height-class:vocabulary>
+    a
+        sh:PropertyShape ,
+        <urn:class:Requirement> ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `https://linked.data.gov.au/def/test/dawe-cv/b1b05cd1-3b85-4639-a6af-799a34d88d43`.
+
+`https://linked.data.gov.au/def/test/dawe-cv/b1b05cd1-3b85-4639-a6af-799a34d88d43` is the IRI for "Vegetation height class codes".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `b1b05cd1-3b85-4639-a6af-799a34d88d43$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "b1b05cd1-3b85-4639-a6af-799a34d88d43$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+            PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+            PREFIX sosa: <http://www.w3.org/ns/sosa/>
+            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            select ?this  {
+                ?observation a tern:Observation ;
+                    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/242d081b-b3f4-4206-bc39-7aa42e9972ee> ;
+                    sosa:hasResult ?this .
+            }
+    """
+        ] ;
+    ns1:examples [
+            ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/invalid.ttl"^^xsd:anyURI ;
+            ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/valid.ttl"^^xsd:anyURI
+        ] ;
+    ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
+.
+
