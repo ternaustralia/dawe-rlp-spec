@@ -135,10 +135,17 @@ test_cases: List[TestCaseItem] = [
         7,
     ).astuple(),
     TestCaseItem(
-        "plot-description-second-structural-formation",
+        "plot-description-structural-formation",
         "shapes/plot-description/structural-formation/shapes.ttl",
         "shapes/plot-description/structural-formation/valid.ttl",
         "shapes/plot-description/structural-formation/invalid.ttl",
+        7,
+    ).astuple(),
+    TestCaseItem(
+        "plot-description-cover",
+        "shapes/plot-description/cover-percentage/shapes.ttl",
+        "shapes/plot-description/cover-percentage/valid.ttl",
+        "shapes/plot-description/cover-percentage/invalid.ttl",
         7,
     ).astuple(),
 ]
