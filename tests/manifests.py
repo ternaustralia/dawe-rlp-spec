@@ -99,4 +99,11 @@ test_cases: List[TestCaseItem] = [
         "shapes/plot-description/fire-history/invalid.ttl",
         7,
     ).astuple(),
+    TestCaseItem(
+        "plot-description-growth-form",
+        "shapes/plot-description/growth-form/shapes.ttl",
+        "shapes/plot-description/growth-form/valid.ttl",
+        "shapes/plot-description/growth-form/invalid.ttl",
+        7,
+    ).astuple(),
 ]
