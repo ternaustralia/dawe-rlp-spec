@@ -1,8 +1,9 @@
-
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:shapes:meta:controlled:query>
@@ -11,8 +12,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:maxCount 1 ;
     sh:message "An instance of urn:class:Controlled must have a value for urn:property:query." ;
     sh:minCount 1 ;
-    sh:path <urn:property:query> ;
-    sh:targetClass <urn:class:Controlled> ;
+    sh:path urnp:query ;
+    sh:targetClass urnc:Controlled ;
 .
 
 <urn:shapes:meta:requirement:description>
@@ -22,7 +23,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "An instance of urn:class:Requirement must have a value for sh:description." ;
     sh:minCount 1 ;
     sh:path sh:description ;
-    sh:targetClass <urn:class:Requirement> ;
+    sh:targetClass urnc:Requirement ;
 .
 
 <urn:shapes:meta:requirement:examples>
@@ -31,8 +32,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "An instance of urn:class:Requirement must have a value for urn:property:examples" ;
     sh:minCount 1 ;
     sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path <urn:property:examples> ;
-    sh:targetClass <urn:class:Requirement> ;
+    sh:path urnp:examples ;
+    sh:targetClass urnc:Requirement ;
 .
 
 <urn:shapes:meta:requirement:invalidExample>
@@ -41,8 +42,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:maxCount 1 ;
     sh:message "The value node of urn:property:examples must have a value for urn:property:invalidExample." ;
     sh:minCount 1 ;
-    sh:path <urn:property:invalidExample> ;
-    sh:targetObjectsOf <urn:property:examples> ;
+    sh:path urnp:invalidExample ;
+    sh:targetObjectsOf urnp:examples ;
 .
 
 <urn:shapes:meta:requirement:message>
@@ -52,7 +53,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "An instance of urn:class:Requirement must have a value for sh:message." ;
     sh:minCount 1 ;
     sh:path sh:message ;
-    sh:targetClass <urn:class:Requirement> ;
+    sh:targetClass urnc:Requirement ;
 .
 
 <urn:shapes:meta:requirement:name>
@@ -62,7 +63,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "An instance of urn:class:Requirement must have a value for sh:name." ;
     sh:minCount 1 ;
     sh:path sh:name ;
-    sh:targetClass <urn:class:Requirement> ;
+    sh:targetClass urnc:Requirement ;
 .
 
 <urn:shapes:meta:requirement:rdf-type>
@@ -70,12 +71,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:in (
             sh:PropertyShape
             sh:NodeShape
-            <urn:class:Requirement>
-            <urn:class:Controlled>
+            urnc:Requirement
+            urnc:Controlled
         ) ;
     sh:message "An instance of urn:class:Requirement must only be instances of other classes specified in the controlled list." ;
     sh:path rdf:type ;
-    sh:targetClass <urn:class:Requirement> ;
+    sh:targetClass urnc:Requirement ;
 .
 
 <urn:shapes:meta:requirement:source>
@@ -85,7 +86,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "An instance of urn:class:Requirement must have a value for dcterms:source." ;
     sh:minCount 1 ;
     sh:path dcterms:source ;
-    sh:targetClass <urn:class:Requirement> ;
+    sh:targetClass urnc:Requirement ;
 .
 
 <urn:shapes:meta:requirement:status>
@@ -99,7 +100,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "An instance of urn:class:Requirement must have a value for reg:status." ;
     sh:minCount 1 ;
     sh:path reg:status ;
-    sh:targetClass <urn:class:Requirement> ;
+    sh:targetClass urnc:Requirement ;
 .
 
 <urn:shapes:meta:requirement:validExample>
@@ -108,8 +109,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:maxCount 1 ;
     sh:message "The value node of urn:property:examples must have a value for urn:property:validExample." ;
     sh:minCount 1 ;
-    sh:path <urn:property:validExample> ;
-    sh:targetObjectsOf <urn:property:examples> ;
+    sh:path urnp:validExample ;
+    sh:targetObjectsOf urnp:examples ;
 .
 
 <urn:shapes:meta:requirement:validator>
@@ -118,7 +119,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:maxCount 1 ;
     sh:message "An instance of urn:class:Requirement must have exactly 1 xsd:anyURI value for urn:property:validator." ;
     sh:minCount 1 ;
-    sh:path <urn:property:validator> ;
-    sh:targetClass <urn:class:Requirement> ;
+    sh:path urnp:validator ;
+    sh:targetClass urnc:Requirement ;
 .
 
