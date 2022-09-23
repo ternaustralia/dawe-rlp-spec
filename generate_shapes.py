@@ -101,6 +101,10 @@ properties_collection_members = [
     ]["bindings"]
 ]
 
+module_folder_file_path = Path("shapes/" + properties_collection_file_path)
+
+module_folder_file_path.mkdir(exist_ok=True)
+
 for property_uri in properties_collection_members:
 
     # TODO: method_uri should be replaced
@@ -513,13 +517,15 @@ for property_uri in properties_collection_members:
     shapes_graph.add((shapes_value_type_uri, URNP.validator, shapes_link))
 
     shapes_file_path = Path(
+        "shapes/" + properties_collection_file_path + "/" + property_label_file_path
+    )
+
+    shapes_file_path.mkdir(exist_ok=True)
+
+    shapes_graph.serialize(
         "shapes/"
         + properties_collection_file_path
         + "/"
         + property_label_file_path
         + "/shapes.ttl"
     )
-
-    shapes_file_path.mkdir(exist_ok=True)
-
-    shapes_graph.serialize(shapes_file_path)
