@@ -361,6 +361,10 @@ for property_uri in properties_collection_members:
     # print(value_type_sh_message)
 
     shapes_graph = Graph()
+    shapes_graph.bind("sh", SH)
+    shapes_graph.bind("dcterms", DCTERMS)
+    shapes_graph.bind("reg", REG)
+
     invalid_graph = Graph()
     valid_graph = Graph()
 
