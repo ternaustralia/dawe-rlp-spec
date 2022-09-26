@@ -1,7 +1,7 @@
 import pathlib
 from pathlib import Path
 import uuid
-from typing import Literal
+from typing import Collection, Literal
 
 import rdflib
 from rdflib import DCTERMS, SKOS, Graph, Literal, Namespace, URIRef, SH, BNode, SOSA
@@ -519,6 +519,126 @@ for property_uri in properties_collection_members:
 
     shapes_graph.add((shapes_value_type_uri, URNP.examples, example_files_bnode))
     shapes_graph.add((shapes_value_type_uri, URNP.validator, shapes_link))
+
+    q_shapes_get_result = (
+        """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        """
+        + f"<{property_uri}>"
+        + """ ;
+                sosa:hasResult ?this .
+        }"""
+    )
+
+    # Add specific patterns for each value type
+    # for categorical properties
+    if URIRef(property_value_type) == TERN.IRI:
+
+        q_get_categorical_collection_uri_label = """
+        PREFIX urnp: <urn:property:>
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?categoricalCollectionURI ?categoricalCollectionLabel {
+            values ?property_uri {$property_uri}
+            ?s urnp:categoricalValuesCollection ?categoricalCollectionURI ;
+            urnp:observableProperty ?property_uri ;
+            urnp:protocolModule <https://linked.data.gov.au/def/test/dawe-cv/576f634e-2706-4f18-b561-0636d4c007d0> .
+            ?categoricalCollectionURI skos:prefLabel ?categoricalCollectionLabel .
+        }
+        """
+
+        q_get_categorical_collection_uri_label = string.Template(
+            q_get_categorical_collection_uri_label
+        ).substitute(property_uri=f"<{property_uri}>")
+
+        property_categorical_collection_uri_label_json = sparql_query(
+            dawe_endpoint, q_get_categorical_collection_uri_label
+        )
+
+        property_categorical_collection_uri = (
+            property_categorical_collection_uri_label_json["results"]["bindings"][0][
+                "categoricalCollectionURI"
+            ]["value"]
+        )
+
+        property_categorical_collection_label = (
+            property_categorical_collection_uri_label_json["results"]["bindings"][0][
+                "categoricalCollectionLabel"
+            ]["value"]
+        )
+
+        result_value_sh_description = Literal(
+            "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the "
+            + property_categorical_collection_label
+            + " controlled vocabulary."
+        )
+
+        result_value_sh_message = Literal(
+            "The value of `rdf:value` _MUST_ exist in the "
+            + property_categorical_collection_label
+            + " controlled vocabulary."
+        )
+
+        categorical_collection_uuid = property_categorical_collection_uri.split("/")[-1]
+
+        q_shapes_get_categorical_values = """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {$categorical_collection_uuid}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """
+
+        q_shapes_get_categorical_values = string.Template(
+            q_shapes_get_categorical_values
+        ).substitute(categorical_collection_uuid=f"'{categorical_collection_uuid}'")
+
+        shapes_result_value_uri = URIRef(
+            "urn:shapes:"
+            + properties_collection_file_path
+            + ":"
+            + property_label_file_path
+            + ":result-value"
+        )
+        shapes_graph.add((shapes_result_value_uri, RDF.type, SH.PropertyShape))
+        shapes_graph.add((shapes_result_value_uri, RDF.type, URNC.Controlled))
+        shapes_graph.add((shapes_result_value_uri, RDF.type, URNC.Requirement))
+        shapes_graph.add((shapes_result_value_uri, DCTERMS.source, source))
+        shapes_graph.add((shapes_result_value_uri, REG.status, REG.statusSubmitted))
+        shapes_graph.add(
+            (shapes_result_value_uri, SH.description, result_value_sh_description)
+        )
+        shapes_graph.add((shapes_result_value_uri, SH["in"], BNode()))
+        shapes_graph.add((shapes_result_value_uri, SH.message, result_value_sh_message))
+        shapes_graph.add((shapes_result_value_uri, SH.name, Literal("Result value")))
+        shapes_graph.add((shapes_result_value_uri, SH.path, RDF.value))
+
+        result_value_target_bnode = BNode()
+        shapes_graph.add(
+            (shapes_result_value_uri, SH.target, result_value_target_bnode)
+        )
+        shapes_graph.add((result_value_target_bnode, RDF.type, SH.SPARQLTarget))
+        shapes_graph.add(
+            (result_value_target_bnode, SH.select, Literal(q_shapes_get_result))
+        )
+
+        shapes_graph.add((shapes_result_value_uri, URNP.examples, example_files_bnode))
+        shapes_graph.add(
+            (
+                shapes_result_value_uri,
+                URNP.query,
+                Literal(q_shapes_get_categorical_values),
+            )
+        )
+        shapes_graph.add(
+            (shapes_result_value_uri, URNP.sparqlEndpoint, Literal(dawe_endpoint))
+        )
+        shapes_graph.add((shapes_result_value_uri, URNP.validator, shapes_link))
 
     shapes_file_path = Path(
         "shapes/" + properties_collection_file_path + "/" + property_label_file_path
