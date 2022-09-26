@@ -504,7 +504,7 @@ for property_uri in properties_collection_members:
     shapes_graph.add((shapes_value_type_uri, RDF.type, URNC.Requirement))
     shapes_graph.add((shapes_value_type_uri, DCTERMS.source, source))
     shapes_graph.add((shapes_value_type_uri, REG.status, REG.statusSubmitted))
-    # shapes_graph.add((shapes_value_type_uri, SH.class, URIRef(property_value_type)))
+    shapes_graph.add((shapes_value_type_uri, SH["class"], URIRef(property_value_type)))
     shapes_graph.add((shapes_value_type_uri, SH.description, value_type_sh_description))
     shapes_graph.add((shapes_value_type_uri, SH.message, value_type_sh_message))
     shapes_graph.add((shapes_value_type_uri, SH.name, Literal("Value type")))
