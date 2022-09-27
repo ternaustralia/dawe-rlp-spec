@@ -952,7 +952,7 @@ for property_uri in properties_collection_members:
         (invalid_used_procedure_uri, SOSA.resultTime, invalid_result_time)
     )
     invalid_graph.add(
-        (invalid_used_procedure_uri, SOSA.usedProcedure, URIRef(protocol_module_uri))
+        (invalid_used_procedure_uri, SOSA.usedProcedure, URIRef("urn:fake:procedure"))
     )
     invalid_graph.add(
         (invalid_used_procedure_uri, TERN.hasSiteVisit, URIRef("urn:test:site"))
