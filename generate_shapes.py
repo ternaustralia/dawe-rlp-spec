@@ -766,17 +766,43 @@ for property_uri in properties_collection_members:
             "The result _MUST_ have `" + values_tbd + "` as the value for `tern:unit`."
         )
 
-        shapes_graph.add((shapes_unit_of_measure_uri, ))
-        shapes_graph.add((shapes_unit_of_measure_uri, ))
-        shapes_graph.add((shapes_unit_of_measure_uri, ))
-        shapes_graph.add((shapes_unit_of_measure_uri, ))
-        shapes_graph.add((shapes_unit_of_measure_uri, ))
-        shapes_graph.add((shapes_unit_of_measure_uri, ))
-        shapes_graph.add((shapes_unit_of_measure_uri, ))
-        shapes_graph.add((shapes_unit_of_measure_uri, ))
-        shapes_graph.add((shapes_unit_of_measure_uri, ))
-        shapes_graph.add((shapes_unit_of_measure_uri, ))
-        shapes_graph.add((shapes_unit_of_measure_uri, ))
+        shapes_graph.add((shapes_unit_of_measure_uri, RDF.type, SH.PropertyShape))
+        shapes_graph.add((shapes_unit_of_measure_uri, RDF.type, URNC.Requirement))
+        shapes_graph.add((shapes_unit_of_measure_uri, DCTERMS.source, source))
+        shapes_graph.add((shapes_unit_of_measure_uri, REG.status, REG.statusSubmitted))
+        shapes_graph.add(
+            (
+                shapes_unit_of_measure_uri,
+                SH.description,
+                Literal(unit_of_measure_sh_description),
+            )
+        )
+        shapes_graph.add((shapes_unit_of_measure_uri, SH.hasValue, URIRef(values_tbd)))
+        shapes_graph.add(
+            (
+                shapes_unit_of_measure_uri,
+                SH.message,
+                Literal(unit_of_measure_sh_message),
+            )
+        )
+        shapes_graph.add(
+            (shapes_unit_of_measure_uri, SH.name, Literal("Unit of measure"))
+        )
+        shapes_graph.add((shapes_unit_of_measure_uri, SH.path, TERN.unit))
+
+        unit_of_measure_target_bnode = BNode()
+        shapes_graph.add(
+            (shapes_unit_of_measure_uri, SH.target, unit_of_measure_target_bnode)
+        )
+        shapes_graph.add((unit_of_measure_target_bnode, RDF.type, SH.SPARQLTarget))
+        shapes_graph.add(
+            (unit_of_measure_target_bnode, SH.select, Literal(q_shapes_get_result))
+        )
+
+        shapes_graph.add(
+            (shapes_unit_of_measure_uri, URNP.examples, example_files_bnode)
+        )
+        shapes_graph.add((shapes_unit_of_measure_uri, URNP.validator, shapes_link))
 
     shapes_file_path = Path(
         "shapes/" + properties_collection_file_path + "/" + property_label_file_path
