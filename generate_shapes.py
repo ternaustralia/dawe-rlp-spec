@@ -348,7 +348,7 @@ for property_uri in properties_collection_members:
         used_procedure_sh_description
     ).substitute(
         protocol_module_uri=f"<{protocol_module_uri}>",
-        protocol_module_label=f"<{protocol_module_label}>",
+        protocol_module_label=f"{protocol_module_label}",
     )
 
     # print(used_procedure_sh_description)
@@ -455,7 +455,9 @@ for property_uri in properties_collection_members:
             shapes_site_visit_uri,
             SH.description,
             Literal(
-                "Observations following the Plot Description protocol are made in the context of a site visit."
+                "Observations following the "
+                + protocol_module_label
+                + " are made in the context of a site visit."
             ),
         )
     )
