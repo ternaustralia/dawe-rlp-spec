@@ -551,7 +551,7 @@ for property_uri in properties_collection_members:
     )
 
     if URIRef(property_value_type) in [TERN.Integer, TERN.Float]:
-        # Add the general content of value range validation
+        # Add the general content of value range validation in shapes_graph
         shapes_value_range_uri = URIRef(
             "urn:shapes:"
             + properties_collection_file_path
@@ -611,7 +611,7 @@ for property_uri in properties_collection_members:
         TERN.Date,
         TERN.DateTime,
     ]:
-        # Add the general content of datatype validation
+        # Add the general content of datatype validation in shapes_graph
         shapes_datatype_uri = URIRef(
             "urn:shapes:"
             + properties_collection_file_path
@@ -726,7 +726,7 @@ for property_uri in properties_collection_members:
             + ":result-value"
         )
 
-        # Add result value validation
+        # Add result value validation in shapes_graph
         shapes_graph.add((shapes_result_value_uri, RDF.type, SH.PropertyShape))
         shapes_graph.add((shapes_result_value_uri, RDF.type, URNC.Controlled))
         shapes_graph.add((shapes_result_value_uri, RDF.type, URNC.Requirement))
@@ -762,7 +762,7 @@ for property_uri in properties_collection_members:
         )
         shapes_graph.add((shapes_result_value_uri, URNP.validator, shapes_link))
 
-        # Add vocabulary validation
+        # Add vocabulary validation in shapes_graph
         shapes_vocabulary_uri = URIRef(
             "urn:shapes:"
             + properties_collection_file_path
@@ -821,7 +821,7 @@ for property_uri in properties_collection_members:
     elif URIRef(property_value_type) == TERN.Float:
         shapes_graph.add((shapes_value_range_uri, SH.datatype, XSD.float))
 
-        # Add the unit of measure validation
+        # Add the unit of measure validation in shapes_graph
         shapes_unit_of_measure_uri = URIRef(
             "urn:shapes:"
             + properties_collection_file_path
@@ -891,6 +891,7 @@ for property_uri in properties_collection_members:
     elif URIRef(property_value_type) == TERN.DateTime:
         shapes_graph.add((shapes_datatype_uri, SH.datatype, XSD.dateTime))
 
+    # serialize shapes_graph into shapes.ttl
     shapes_file_path = Path(
         "shapes/" + properties_collection_file_path + "/" + property_label_file_path
     )
