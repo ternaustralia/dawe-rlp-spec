@@ -30,6 +30,8 @@ protocol_module_uri = (
     "https://linked.data.gov.au/def/test/dawe-cv/576f634e-2706-4f18-b561-0636d4c007d0"
 )
 
+values_tbd = "values_tbd"
+
 source = Literal("TERN Ecosystem Surveillance Ecological Monitoring Protocols")
 
 
@@ -535,6 +537,52 @@ for property_uri in properties_collection_members:
         }"""
     )
 
+    # Add the general content of value range validation
+    shapes_value_range_uri = URIRef(
+        "urn:shapes:"
+        + properties_collection_file_path
+        + ":"
+        + property_label_file_path
+        + ":value-range"
+    )
+
+    value_range_sh_description = (
+        "Value _MUST_ be between " + values_tbd + " and " + values_tbd + " inclusive."
+    )
+
+    value_range_sh_message = (
+        "The result _MUST_ have a value between "
+        + values_tbd
+        + " and "
+        + values_tbd
+        + " inclusively."
+    )
+
+    shapes_graph.add((shapes_value_range_uri, RDF.type, SH.PropertyShape))
+    shapes_graph.add((shapes_value_range_uri, RDF.type, URNC.Requirement))
+    shapes_graph.add((shapes_value_range_uri, DCTERMS.source, source))
+    shapes_graph.add((shapes_value_range_uri, REG.status, REG.statusSubmitted))
+    shapes_graph.add(
+        (shapes_value_range_uri, SH.description, Literal(value_range_sh_description))
+    )
+    shapes_graph.add((shapes_value_range_uri, SH.maxInclusive, URIRef(values_tbd)))
+    shapes_graph.add(
+        (shapes_value_range_uri, SH.message, Literal(value_range_sh_message))
+    )
+    shapes_graph.add((shapes_value_range_uri, SH.minInclusive, URIRef(values_tbd)))
+    shapes_graph.add((shapes_value_range_uri, SH.name, Literal("Value range")))
+    shapes_graph.add((shapes_value_range_uri, SH.path, RDF.value))
+
+    value_range_target_bnode = BNode()
+    shapes_graph.add((shapes_value_range_uri, SH.target, value_range_target_bnode))
+    shapes_graph.add((value_range_target_bnode, RDF.type, SH.SPARQLTarget))
+    shapes_graph.add(
+        (value_range_target_bnode, SH.select, Literal(q_shapes_get_result))
+    )
+
+    shapes_graph.add((shapes_value_range_uri, URNP.examples, example_files_bnode))
+    shapes_graph.add((shapes_value_range_uri, URNP.validator, shapes_link))
+
     # Add specific patterns for each value type
     # for categorical properties
     if URIRef(property_value_type) == TERN.IRI:
@@ -697,6 +745,38 @@ for property_uri in properties_collection_members:
 
         shapes_graph.add((shapes_vocabulary_uri, URNP.examples, example_files_bnode))
         shapes_graph.add((shapes_vocabulary_uri, URNP.validator, shapes_link))
+
+    elif URIRef(property_value_type) == TERN.Float:
+        shapes_graph.add((shapes_value_range_uri, SH.datatype, XSD.float))
+
+        # Add the unit of measure validation
+        shapes_unit_of_measure_uri = URIRef(
+            "urn:shapes:"
+            + properties_collection_file_path
+            + ":"
+            + property_label_file_path
+            + ":unit-of-measure"
+        )
+
+        unit_of_measure_sh_description = (
+            "Result value's unit of measure _MUST_ have the value `" + values_tbd + "`."
+        )
+
+        unit_of_measure_sh_message = (
+            "The result _MUST_ have `" + values_tbd + "` as the value for `tern:unit`."
+        )
+
+        shapes_graph.add((shapes_unit_of_measure_uri, ))
+        shapes_graph.add((shapes_unit_of_measure_uri, ))
+        shapes_graph.add((shapes_unit_of_measure_uri, ))
+        shapes_graph.add((shapes_unit_of_measure_uri, ))
+        shapes_graph.add((shapes_unit_of_measure_uri, ))
+        shapes_graph.add((shapes_unit_of_measure_uri, ))
+        shapes_graph.add((shapes_unit_of_measure_uri, ))
+        shapes_graph.add((shapes_unit_of_measure_uri, ))
+        shapes_graph.add((shapes_unit_of_measure_uri, ))
+        shapes_graph.add((shapes_unit_of_measure_uri, ))
+        shapes_graph.add((shapes_unit_of_measure_uri, ))
 
     shapes_file_path = Path(
         "shapes/" + properties_collection_file_path + "/" + property_label_file_path
