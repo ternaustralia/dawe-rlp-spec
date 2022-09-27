@@ -39,6 +39,17 @@ class SPARQLQueryError(Exception):
     pass
 
 
+def get_xsd_datatype(value_type):
+    if value_type == "tern:Text":
+        return "string"
+    elif value_type == "tern:Boolean":
+        return "boolean"
+    elif value_type == "tern:Date":
+        return "date"
+    elif value_type == "tern:DateTime":
+        return "dateTime"
+
+
 def sparql_query(url: str, query: str):
     headers = {
         "Content-type": "application/sparql-query",
@@ -537,51 +548,110 @@ for property_uri in properties_collection_members:
         }"""
     )
 
-    # Add the general content of value range validation
-    shapes_value_range_uri = URIRef(
-        "urn:shapes:"
-        + properties_collection_file_path
-        + ":"
-        + property_label_file_path
-        + ":value-range"
-    )
+    if URIRef(property_value_type) in [TERN.Integer, TERN.Float]:
+        # Add the general content of value range validation
+        shapes_value_range_uri = URIRef(
+            "urn:shapes:"
+            + properties_collection_file_path
+            + ":"
+            + property_label_file_path
+            + ":value-range"
+        )
 
-    value_range_sh_description = (
-        "Value _MUST_ be between " + values_tbd + " and " + values_tbd + " inclusive."
-    )
+        value_range_sh_description = (
+            "Value _MUST_ be between "
+            + values_tbd
+            + " and "
+            + values_tbd
+            + " inclusive."
+        )
 
-    value_range_sh_message = (
-        "The result _MUST_ have a value between "
-        + values_tbd
-        + " and "
-        + values_tbd
-        + " inclusively."
-    )
+        value_range_sh_message = (
+            "The result _MUST_ have a value between "
+            + values_tbd
+            + " and "
+            + values_tbd
+            + " inclusively."
+        )
 
-    shapes_graph.add((shapes_value_range_uri, RDF.type, SH.PropertyShape))
-    shapes_graph.add((shapes_value_range_uri, RDF.type, URNC.Requirement))
-    shapes_graph.add((shapes_value_range_uri, DCTERMS.source, source))
-    shapes_graph.add((shapes_value_range_uri, REG.status, REG.statusSubmitted))
-    shapes_graph.add(
-        (shapes_value_range_uri, SH.description, Literal(value_range_sh_description))
-    )
-    shapes_graph.add((shapes_value_range_uri, SH.maxInclusive, URIRef(values_tbd)))
-    shapes_graph.add(
-        (shapes_value_range_uri, SH.message, Literal(value_range_sh_message))
-    )
-    shapes_graph.add((shapes_value_range_uri, SH.minInclusive, URIRef(values_tbd)))
-    shapes_graph.add((shapes_value_range_uri, SH.name, Literal("Value range")))
-    shapes_graph.add((shapes_value_range_uri, SH.path, RDF.value))
+        shapes_graph.add((shapes_value_range_uri, RDF.type, SH.PropertyShape))
+        shapes_graph.add((shapes_value_range_uri, RDF.type, URNC.Requirement))
+        shapes_graph.add((shapes_value_range_uri, DCTERMS.source, source))
+        shapes_graph.add((shapes_value_range_uri, REG.status, REG.statusSubmitted))
+        shapes_graph.add(
+            (
+                shapes_value_range_uri,
+                SH.description,
+                Literal(value_range_sh_description),
+            )
+        )
+        shapes_graph.add((shapes_value_range_uri, SH.maxInclusive, URIRef(values_tbd)))
+        shapes_graph.add(
+            (shapes_value_range_uri, SH.message, Literal(value_range_sh_message))
+        )
+        shapes_graph.add((shapes_value_range_uri, SH.minInclusive, URIRef(values_tbd)))
+        shapes_graph.add((shapes_value_range_uri, SH.name, Literal("Value range")))
+        shapes_graph.add((shapes_value_range_uri, SH.path, RDF.value))
 
-    value_range_target_bnode = BNode()
-    shapes_graph.add((shapes_value_range_uri, SH.target, value_range_target_bnode))
-    shapes_graph.add((value_range_target_bnode, RDF.type, SH.SPARQLTarget))
-    shapes_graph.add(
-        (value_range_target_bnode, SH.select, Literal(q_shapes_get_result))
-    )
+        value_range_target_bnode = BNode()
+        shapes_graph.add((shapes_value_range_uri, SH.target, value_range_target_bnode))
+        shapes_graph.add((value_range_target_bnode, RDF.type, SH.SPARQLTarget))
+        shapes_graph.add(
+            (value_range_target_bnode, SH.select, Literal(q_shapes_get_result))
+        )
 
-    shapes_graph.add((shapes_value_range_uri, URNP.examples, example_files_bnode))
-    shapes_graph.add((shapes_value_range_uri, URNP.validator, shapes_link))
+        shapes_graph.add((shapes_value_range_uri, URNP.examples, example_files_bnode))
+        shapes_graph.add((shapes_value_range_uri, URNP.validator, shapes_link))
+
+    elif URIRef(property_value_type) in [
+        TERN.Text,
+        TERN.Boolean,
+        TERN.Date,
+        TERN.DateTime,
+    ]:
+        # Add the general content of datatype validation
+        shapes_datatype_uri = URIRef(
+            "urn:shapes:"
+            + properties_collection_file_path
+            + ":"
+            + property_label_file_path
+            + ":datatype"
+        )
+
+        datatype_sh_description = (
+            "The value in `sosa:hasResult` _MUST_ be xsd:"
+            + get_xsd_datatype(value_type_label)
+            + "."
+        )
+
+        datatype_sh_message = (
+            "The value of `rdf:value` _MUST_ have the datatype xsd:"
+            + get_xsd_datatype(value_type_label)
+            + "."
+        )
+
+        shapes_graph.add((shapes_datatype_uri, RDF.type, SH.PropertyShape))
+        shapes_graph.add((shapes_datatype_uri, RDF.type, URNC.Requirement))
+        shapes_graph.add((shapes_datatype_uri, DCTERMS.source, source))
+        shapes_graph.add((shapes_datatype_uri, REG.status, REG.statusSubmitted))
+        shapes_graph.add(
+            (shapes_datatype_uri, SH.description, Literal(datatype_sh_description))
+        )
+        shapes_graph.add(
+            (shapes_datatype_uri, SH.message, Literal(datatype_sh_message))
+        )
+        shapes_graph.add((shapes_datatype_uri, SH.name, Literal("Datatype")))
+        shapes_graph.add((shapes_datatype_uri, SH.path, RDF.value))
+
+        datatype_target_bnode = BNode()
+        shapes_graph.add((shapes_datatype_uri, SH.target, datatype_target_bnode))
+        shapes_graph.add((datatype_target_bnode, RDF.type, SH.SPARQLTarget))
+        shapes_graph.add(
+            (datatype_target_bnode, SH.select, Literal(q_shapes_get_result))
+        )
+
+        shapes_graph.add((shapes_datatype_uri, URNP.examples, example_files_bnode))
+        shapes_graph.add((shapes_datatype_uri, URNP.validator, shapes_link))
 
     # Add specific patterns for each value type
     # for categorical properties
@@ -803,6 +873,21 @@ for property_uri in properties_collection_members:
             (shapes_unit_of_measure_uri, URNP.examples, example_files_bnode)
         )
         shapes_graph.add((shapes_unit_of_measure_uri, URNP.validator, shapes_link))
+
+    elif URIRef(property_value_type) == TERN.Integer:
+        shapes_graph.add((shapes_value_range_uri, SH.datatype, XSD.integer))
+
+    elif URIRef(property_value_type) == TERN.Text:
+        shapes_graph.add((shapes_datatype_uri, SH.datatype, XSD.string))
+
+    elif URIRef(property_value_type) == TERN.Boolean:
+        shapes_graph.add((shapes_datatype_uri, SH.datatype, XSD.boolean))
+
+    elif URIRef(property_value_type) == TERN.Date:
+        shapes_graph.add((shapes_datatype_uri, SH.datatype, XSD.date))
+
+    elif URIRef(property_value_type) == TERN.DateTime:
+        shapes_graph.add((shapes_datatype_uri, SH.datatype, XSD.dateTime))
 
     shapes_file_path = Path(
         "shapes/" + properties_collection_file_path + "/" + property_label_file_path
