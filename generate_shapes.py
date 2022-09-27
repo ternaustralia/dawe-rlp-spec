@@ -4,7 +4,18 @@ import uuid
 from typing import Collection, Literal
 
 import rdflib
-from rdflib import DCTERMS, SKOS, Graph, Literal, Namespace, URIRef, SH, BNode, SOSA
+from rdflib import (
+    DCTERMS,
+    SKOS,
+    Graph,
+    Literal,
+    Namespace,
+    URIRef,
+    SH,
+    BNode,
+    SOSA,
+    VOID,
+)
 from rdflib.namespace import RDF, RDFS, SDO, SKOS, XSD
 
 import requests
@@ -33,6 +44,10 @@ protocol_module_uri = (
 values_tbd = "values_tbd"
 
 source = Literal("TERN Ecosystem Surveillance Ecological Monitoring Protocols")
+
+serialize_shapes = False
+serialize_invalid = True
+serialize_valid = False
 
 
 class SPARQLQueryError(Exception):
@@ -379,6 +394,9 @@ for property_uri in properties_collection_members:
     shapes_graph.bind("reg", REG)
 
     invalid_graph = Graph()
+    invalid_graph.bind("sosa", SOSA)
+    invalid_graph.bind("void", VOID)
+
     valid_graph = Graph()
 
     # Add feature type validatio in shapes.ttl
@@ -548,6 +566,91 @@ for property_uri in properties_collection_members:
         + """ ;
                 sosa:hasResult ?this .
         }"""
+    )
+
+    # Add invalid examples in invalid_graph
+    invalid_phenomenon_time = URIRef(
+        "https://example.com/observation/"
+        + property_label_file_path
+        + "/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime"
+    )
+
+    invalid_result_time = Literal(
+        "2022-09-27T05:38:47.117000+00:00", datatype=XSD.dateTime
+    )
+
+    invalid_in_dataset = URIRef("https://example.com/dataset/1")
+
+    # Add the general content of feature type invalid examples in invalid_graph
+    invalid_feature_type_uri = URIRef(
+        "urn:test:"
+        + properties_collection_file_path
+        + ":invalid:"
+        + property_label_file_path
+        + ":feature-type"
+    )
+
+    invalid_graph.add((invalid_feature_type_uri, RDF.type, TERN.Observation))
+    invalid_graph.add((invalid_feature_type_uri, VOID.inDataset, invalid_in_dataset))
+    invalid_graph.add(
+        (
+            invalid_feature_type_uri,
+            RDFS.comment,
+            Literal("Invalid result - incorrect feature type."),
+        )
+    )
+
+    invalid_feature_type_feature_of_interest_bnode = BNode()
+    invalid_graph.add(
+        (
+            invalid_feature_type_uri,
+            SOSA.hasFeatureOfInterest,
+            invalid_feature_type_feature_of_interest_bnode,
+        )
+    )
+    invalid_graph.add(
+        (
+            invalid_feature_type_feature_of_interest_bnode,
+            RDF.type,
+            TERN.FeatureOfInterest,
+        )
+    )
+    invalid_graph.add(
+        (
+            invalid_feature_type_feature_of_interest_bnode,
+            VOID.inDataset,
+            invalid_in_dataset,
+        )
+    )
+    invalid_graph.add(
+        (
+            invalid_feature_type_feature_of_interest_bnode,
+            TERN.featureType,
+            URIRef("urn:fake:feature-type"),
+        )
+    )
+
+    invalid_feature_type_result_bnode = BNode()
+    invalid_graph.add(
+        (invalid_feature_type_uri, SOSA.hasResult, invalid_feature_type_result_bnode)
+    )
+    invalid_graph.add((invalid_feature_type_result_bnode, RDF.type, TERN.Value))
+    invalid_graph.add(
+        (invalid_feature_type_result_bnode, SOSA.isResultOf, invalid_feature_type_uri)
+    )
+
+    invalid_graph.add(
+        (invalid_feature_type_uri, SOSA.ObservableProperty, URIRef(property_uri))
+    )
+    invalid_graph.add(
+        (invalid_feature_type_uri, SOSA.phenomenonTime, invalid_phenomenon_time)
+    )
+    invalid_graph.add((invalid_feature_type_uri, SOSA.resultTime, invalid_result_time))
+    invalid_graph.add(
+        (invalid_feature_type_uri, SOSA.usedProcedure, URIRef(protocol_module_uri))
+    )
+    invalid_graph.add(
+        (invalid_feature_type_uri, TERN.hasSiteVisit, URIRef("urn:test:site"))
     )
 
     if URIRef(property_value_type) in [TERN.Integer, TERN.Float]:
@@ -892,16 +995,32 @@ for property_uri in properties_collection_members:
         shapes_graph.add((shapes_datatype_uri, SH.datatype, XSD.dateTime))
 
     # serialize shapes_graph into shapes.ttl
-    shapes_file_path = Path(
-        "shapes/" + properties_collection_file_path + "/" + property_label_file_path
-    )
+    if serialize_shapes:
+        shapes_file_path = Path(
+            "shapes/" + properties_collection_file_path + "/" + property_label_file_path
+        )
 
-    shapes_file_path.mkdir(exist_ok=True)
+        shapes_file_path.mkdir(exist_ok=True)
 
-    shapes_graph.serialize(
-        "shapes/"
-        + properties_collection_file_path
-        + "/"
-        + property_label_file_path
-        + "/shapes.ttl"
-    )
+        shapes_graph.serialize(
+            "shapes/"
+            + properties_collection_file_path
+            + "/"
+            + property_label_file_path
+            + "/shapes.ttl"
+        )
+
+    if serialize_invalid:
+        invalid_file_path = Path(
+            "shapes/" + properties_collection_file_path + "/" + property_label_file_path
+        )
+
+        invalid_file_path.mkdir(exist_ok=True)
+
+        invalid_graph.serialize(
+            "shapes/"
+            + properties_collection_file_path
+            + "/"
+            + property_label_file_path
+            + "/invalid.ttl"
+        )
