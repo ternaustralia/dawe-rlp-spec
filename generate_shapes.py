@@ -605,6 +605,8 @@ for property_uri in properties_collection_members:
             + property_label_file_path
             + ":result-value"
         )
+
+        # Add result value validation
         shapes_graph.add((shapes_result_value_uri, RDF.type, SH.PropertyShape))
         shapes_graph.add((shapes_result_value_uri, RDF.type, URNC.Controlled))
         shapes_graph.add((shapes_result_value_uri, RDF.type, URNC.Requirement))
@@ -639,6 +641,62 @@ for property_uri in properties_collection_members:
             (shapes_result_value_uri, URNP.sparqlEndpoint, Literal(dawe_endpoint))
         )
         shapes_graph.add((shapes_result_value_uri, URNP.validator, shapes_link))
+
+        # Add vocabulary validation
+        shapes_vocabulary_uri = URIRef(
+            "urn:shapes:"
+            + properties_collection_file_path
+            + ":"
+            + property_label_file_path
+            + ":vocabulary"
+        )
+
+        vocabulary_sh_description = """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `$property_categorical_collection_uri`.
+
+        `$property_categorical_collection_uri` is the IRI for "$property_categorical_collection_label"."""
+
+        vocabulary_sh_description = string.Template(
+            vocabulary_sh_description
+        ).substitute(
+            property_categorical_collection_uri=f"<{property_categorical_collection_uri}>",
+            property_categorical_collection_label=f"{property_categorical_collection_label}",
+        )
+
+        vocabulary_sh_message = (
+            "The value of `tern:vocabulary` _MUST_ match the pattern `"
+            + str(categorical_collection_uuid)
+            + "$`."
+        )
+
+        shapes_graph.add((shapes_vocabulary_uri, RDF.type, SH.PropertyShape))
+        shapes_graph.add((shapes_vocabulary_uri, RDF.type, URNC.Requirement))
+        shapes_graph.add((shapes_vocabulary_uri, DCTERMS.source, source))
+        shapes_graph.add((shapes_vocabulary_uri, REG.status, REG.statusSubmitted))
+        shapes_graph.add(
+            (shapes_vocabulary_uri, SH.description, Literal(vocabulary_sh_description))
+        )
+        shapes_graph.add(
+            (shapes_vocabulary_uri, SH.message, Literal(vocabulary_sh_message))
+        )
+        shapes_graph.add((shapes_vocabulary_uri, SH.name, Literal("Vocabulary")))
+        shapes_graph.add((shapes_vocabulary_uri, SH.path, TERN.vocabulary))
+        shapes_graph.add(
+            (
+                shapes_vocabulary_uri,
+                SH.pattern,
+                Literal(str(categorical_collection_uuid) + "$"),
+            )
+        )
+
+        vocabulary_target_bnode = BNode()
+        shapes_graph.add((shapes_vocabulary_uri, SH.target, vocabulary_target_bnode))
+        shapes_graph.add((vocabulary_target_bnode, RDF.type, SH.SPARQLTarget))
+        shapes_graph.add(
+            (vocabulary_target_bnode, SH.select, Literal(q_shapes_get_result))
+        )
+
+        shapes_graph.add((shapes_vocabulary_uri, URNP.examples, example_files_bnode))
+        shapes_graph.add((shapes_vocabulary_uri, URNP.validator, shapes_link))
 
     shapes_file_path = Path(
         "shapes/" + properties_collection_file_path + "/" + property_label_file_path
