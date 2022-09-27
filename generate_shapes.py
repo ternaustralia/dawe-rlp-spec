@@ -1827,6 +1827,117 @@ for property_uri in properties_collection_members:
         # Add the specific value type to value range invalid examples
         invalid_graph.add((invalid_value_range_result_bnode, RDF.type, TERN.Float))
 
+        # Add unit of measure invalid examples in invalid_graph
+        invalid_unit_of_measure_uri = URIRef(
+            "urn:test:"
+            + properties_collection_file_path
+            + ":invalid:"
+            + property_label_file_path
+            + ":unit-of-measure"
+        )
+
+        invalid_graph.add((invalid_unit_of_measure_uri, RDF.type, TERN.Observation))
+        invalid_graph.add(
+            (invalid_unit_of_measure_uri, VOID.inDataset, invalid_in_dataset)
+        )
+        invalid_graph.add(
+            (
+                invalid_unit_of_measure_uri,
+                RDFS.comment,
+                Literal("Invalid result unit of measure"),
+            )
+        )
+
+        invalid_unit_of_measure_feature_of_interest_bnode = BNode()
+        invalid_graph.add(
+            (
+                invalid_unit_of_measure_uri,
+                SOSA.hasFeatureOfInterest,
+                invalid_unit_of_measure_feature_of_interest_bnode,
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_unit_of_measure_feature_of_interest_bnode,
+                RDF.type,
+                TERN.FeatureOfInterest,
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_unit_of_measure_feature_of_interest_bnode,
+                VOID.inDataset,
+                invalid_in_dataset,
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_unit_of_measure_feature_of_interest_bnode,
+                TERN.featureType,
+                URIRef(property_feature_type),
+            )
+        )
+
+        invalid_unit_of_measure_result_bnode = BNode()
+        invalid_graph.add(
+            (
+                invalid_unit_of_measure_uri,
+                SOSA.hasResult,
+                invalid_unit_of_measure_result_bnode,
+            )
+        )
+        invalid_graph.add((invalid_unit_of_measure_result_bnode, RDF.type, TERN.Value))
+        invalid_graph.add((invalid_unit_of_measure_result_bnode, RDF.type, TERN.Float))
+        invalid_graph.add(
+            (
+                invalid_unit_of_measure_result_bnode,
+                RDF.value,
+                URIRef(values_tbd),
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_unit_of_measure_result_bnode,
+                SOSA.isResultOf,
+                invalid_unit_of_measure_uri,
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_unit_of_measure_result_bnode,
+                TERN.unit,
+                URIRef("urn:fake:unit"),
+            )
+        )
+
+        invalid_graph.add(
+            (
+                invalid_unit_of_measure_uri,
+                SOSA.hasSimpleResult,
+                URIRef(values_tbd),
+            )
+        )
+
+        invalid_graph.add(
+            (invalid_unit_of_measure_uri, SOSA.ObservableProperty, URIRef(property_uri))
+        )
+        invalid_graph.add(
+            (invalid_unit_of_measure_uri, SOSA.phenomenonTime, invalid_phenomenon_time)
+        )
+        invalid_graph.add(
+            (invalid_unit_of_measure_uri, SOSA.resultTime, invalid_result_time)
+        )
+        invalid_graph.add(
+            (
+                invalid_unit_of_measure_uri,
+                SOSA.usedProcedure,
+                URIRef(protocol_module_uri),
+            )
+        )
+        invalid_graph.add(
+            (invalid_unit_of_measure_uri, TERN.hasSiteVisit, URIRef("urn:test:site"))
+        )
+
     elif URIRef(property_value_type) == TERN.Integer:
         shapes_graph.add((shapes_value_range_uri, SH.datatype, XSD.integer))
 
