@@ -1315,6 +1315,138 @@ for property_uri in properties_collection_members:
         shapes_graph.add((shapes_vocabulary_uri, URNP.examples, example_files_bnode))
         shapes_graph.add((shapes_vocabulary_uri, URNP.validator, shapes_link))
 
+        # Add invalid examples in invalid_graph
+
+        q_get_vocabulary_instance = """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?instance {
+            values ?s {$vocabulary_uri}
+            ?s skos:member ?instance .
+        } limit 1
+        """
+        q_get_vocabulary_instance = string.Template(
+            q_get_vocabulary_instance
+        ).substitute(vocabulary_uri=f"<{property_categorical_collection_uri}>")
+
+        vocabulary_instance = sparql_query(dawe_endpoint, q_get_vocabulary_instance)[
+            "results"
+        ]["bindings"][0]["instance"]["value"]
+
+        # print(vocabulary_instance)
+
+        # Add result value invalid examples in invalid_graph
+        invalid_result_value_uri = URIRef(
+            "urn:test:"
+            + properties_collection_file_path
+            + ":invalid:"
+            + property_label_file_path
+            + ":result-value"
+        )
+
+        invalid_graph.add((invalid_result_value_uri, RDF.type, TERN.Observation))
+        invalid_graph.add(
+            (invalid_result_value_uri, VOID.inDataset, invalid_in_dataset)
+        )
+        invalid_graph.add(
+            (
+                invalid_result_value_uri,
+                RDFS.comment,
+                Literal(
+                    "Invalid result - value not from the controlled vocabulary list"
+                ),
+            )
+        )
+
+        invalid_result_value_feature_of_interest_bnode = BNode()
+        invalid_graph.add(
+            (
+                invalid_result_value_uri,
+                SOSA.hasFeatureOfInterest,
+                invalid_result_value_feature_of_interest_bnode,
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_result_value_feature_of_interest_bnode,
+                RDF.type,
+                TERN.FeatureOfInterest,
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_result_value_feature_of_interest_bnode,
+                VOID.inDataset,
+                invalid_in_dataset,
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_result_value_feature_of_interest_bnode,
+                TERN.featureType,
+                URIRef(property_feature_type),
+            )
+        )
+
+        invalid_result_value_result_bnode = BNode()
+        invalid_graph.add(
+            (
+                invalid_result_value_uri,
+                SOSA.hasResult,
+                invalid_result_value_result_bnode,
+            )
+        )
+        invalid_graph.add((invalid_result_value_result_bnode, RDF.type, TERN.Value))
+        invalid_graph.add((invalid_result_value_result_bnode, RDF.type, TERN.IRI))
+        invalid_graph.add(
+            (
+                invalid_result_value_result_bnode,
+                RDF.value,
+                URIRef("urn:fake:categorical:value"),
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_result_value_result_bnode,
+                SOSA.isResultOf,
+                invalid_result_value_uri,
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_result_value_result_bnode,
+                TERN.vocabulary,
+                URIRef(property_categorical_collection_uri),
+            )
+        )
+
+        invalid_graph.add(
+            (
+                invalid_result_value_uri,
+                SOSA.hasSimpleResult,
+                URIRef("urn:fake:categorical:value"),
+            )
+        )
+
+        invalid_graph.add(
+            (invalid_result_value_uri, SOSA.ObservableProperty, URIRef(property_uri))
+        )
+        invalid_graph.add(
+            (invalid_result_value_uri, SOSA.phenomenonTime, invalid_phenomenon_time)
+        )
+        invalid_graph.add(
+            (invalid_result_value_uri, SOSA.resultTime, invalid_result_time)
+        )
+        invalid_graph.add(
+            (
+                invalid_result_value_uri,
+                SOSA.usedProcedure,
+                URIRef(protocol_module_uri),
+            )
+        )
+        invalid_graph.add(
+            (invalid_result_value_uri, TERN.hasSiteVisit, URIRef("urn:test:site"))
+        )
+
     elif URIRef(property_value_type) == TERN.Float:
         shapes_graph.add((shapes_value_range_uri, SH.datatype, XSD.float))
 
