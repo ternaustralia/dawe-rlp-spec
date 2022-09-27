@@ -1715,6 +1715,116 @@ for property_uri in properties_collection_members:
         )
         shapes_graph.add((shapes_unit_of_measure_uri, URNP.validator, shapes_link))
 
+        # Add value range invalid examples in invalid_graph
+        invalid_value_range_uri = URIRef(
+            "urn:test:"
+            + properties_collection_file_path
+            + ":invalid:"
+            + property_label_file_path
+            + ":value-range"
+        )
+
+        invalid_graph.add((invalid_value_range_uri, RDF.type, TERN.Observation))
+        invalid_graph.add((invalid_value_range_uri, VOID.inDataset, invalid_in_dataset))
+        invalid_graph.add(
+            (
+                invalid_value_range_uri,
+                RDFS.comment,
+                Literal("Invalid result - value out of range"),
+            )
+        )
+
+        invalid_value_range_feature_of_interest_bnode = BNode()
+        invalid_graph.add(
+            (
+                invalid_value_range_uri,
+                SOSA.hasFeatureOfInterest,
+                invalid_value_range_feature_of_interest_bnode,
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_value_range_feature_of_interest_bnode,
+                RDF.type,
+                TERN.FeatureOfInterest,
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_value_range_feature_of_interest_bnode,
+                VOID.inDataset,
+                invalid_in_dataset,
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_value_range_feature_of_interest_bnode,
+                TERN.featureType,
+                URIRef(property_feature_type),
+            )
+        )
+
+        invalid_value_range_result_bnode = BNode()
+        invalid_graph.add(
+            (
+                invalid_value_range_uri,
+                SOSA.hasResult,
+                invalid_value_range_result_bnode,
+            )
+        )
+        invalid_graph.add((invalid_value_range_result_bnode, RDF.type, TERN.Value))
+        invalid_graph.add((invalid_value_range_result_bnode, RDF.type, TERN.Float))
+        invalid_graph.add(
+            (
+                invalid_value_range_result_bnode,
+                RDF.value,
+                URIRef(values_tbd),
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_value_range_result_bnode,
+                SOSA.isResultOf,
+                invalid_value_range_uri,
+            )
+        )
+
+        invalid_graph.add(
+            (
+                invalid_value_range_result_bnode,
+                TERN.unit,
+                URIRef(values_tbd),
+            )
+        )
+
+        invalid_graph.add(
+            (
+                invalid_value_range_uri,
+                SOSA.hasSimpleResult,
+                URIRef(values_tbd),
+            )
+        )
+
+        invalid_graph.add(
+            (invalid_value_range_uri, SOSA.ObservableProperty, URIRef(property_uri))
+        )
+        invalid_graph.add(
+            (invalid_value_range_uri, SOSA.phenomenonTime, invalid_phenomenon_time)
+        )
+        invalid_graph.add(
+            (invalid_value_range_uri, SOSA.resultTime, invalid_result_time)
+        )
+        invalid_graph.add(
+            (
+                invalid_value_range_uri,
+                SOSA.usedProcedure,
+                URIRef(protocol_module_uri),
+            )
+        )
+        invalid_graph.add(
+            (invalid_value_range_uri, TERN.hasSiteVisit, URIRef("urn:test:site"))
+        )
+
     elif URIRef(property_value_type) == TERN.Integer:
         shapes_graph.add((shapes_value_range_uri, SH.datatype, XSD.integer))
 
