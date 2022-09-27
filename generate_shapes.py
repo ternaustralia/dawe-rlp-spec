@@ -63,6 +63,10 @@ def get_xsd_datatype(value_type):
         return "date"
     elif value_type == "tern:DateTime":
         return "dateTime"
+    elif value_type == "tern:Float":
+        return "float"
+    elif value_type == "tern:Integer":
+        return "integer"
 
 
 def sparql_query(url: str, query: str):
@@ -957,6 +961,91 @@ for property_uri in properties_collection_members:
     invalid_graph.add(
         (invalid_used_procedure_uri, TERN.hasSiteVisit, URIRef("urn:test:site"))
     )
+
+    # Add the general content of datatype invalid examples in invalid_graph
+    if URIRef(property_value_type) != TERN.IRI:
+        invalid_datatype_uri = URIRef(
+            "urn:test:"
+            + properties_collection_file_path
+            + ":invalid:"
+            + property_label_file_path
+            + ":datatype"
+        )
+
+        invalid_graph.add((invalid_datatype_uri, RDF.type, TERN.Observation))
+        invalid_graph.add((invalid_datatype_uri, VOID.inDataset, invalid_in_dataset))
+        invalid_graph.add(
+            (
+                invalid_datatype_uri,
+                RDFS.comment,
+                Literal(
+                    "Invalid result - the datatype of the value of the result node must be `xsd:"
+                    + get_xsd_datatype(value_type_label)
+                    + "`."
+                ),
+            )
+        )
+
+        invalid_datatype_feature_of_interest_bnode = BNode()
+        invalid_graph.add(
+            (
+                invalid_datatype_uri,
+                SOSA.hasFeatureOfInterest,
+                invalid_datatype_feature_of_interest_bnode,
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_datatype_feature_of_interest_bnode,
+                RDF.type,
+                TERN.FeatureOfInterest,
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_datatype_feature_of_interest_bnode,
+                VOID.inDataset,
+                invalid_in_dataset,
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_datatype_feature_of_interest_bnode,
+                TERN.featureType,
+                URIRef(property_feature_type),
+            )
+        )
+
+        invalid_datatype_result_bnode = BNode()
+        invalid_graph.add(
+            (
+                invalid_datatype_uri,
+                SOSA.hasResult,
+                invalid_datatype_result_bnode,
+            )
+        )
+        invalid_graph.add((invalid_datatype_result_bnode, RDF.type, TERN.Value))
+        invalid_graph.add(
+            (
+                invalid_datatype_result_bnode,
+                SOSA.isResultOf,
+                invalid_datatype_uri,
+            )
+        )
+
+        invalid_graph.add(
+            (invalid_datatype_uri, SOSA.ObservableProperty, URIRef(property_uri))
+        )
+        invalid_graph.add(
+            (invalid_datatype_uri, SOSA.phenomenonTime, invalid_phenomenon_time)
+        )
+        invalid_graph.add((invalid_datatype_uri, SOSA.resultTime, invalid_result_time))
+        invalid_graph.add(
+            (invalid_datatype_uri, SOSA.usedProcedure, URIRef(protocol_module_uri))
+        )
+        invalid_graph.add(
+            (invalid_datatype_uri, TERN.hasSiteVisit, URIRef("urn:test:site"))
+        )
 
     if URIRef(property_value_type) in [TERN.Integer, TERN.Float]:
         # Add the general content of value range validation in shapes_graph
