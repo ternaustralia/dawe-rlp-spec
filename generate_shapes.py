@@ -21,6 +21,8 @@ from rdflib.namespace import RDF, RDFS, SDO, SKOS, XSD
 import requests
 from requests.exceptions import HTTPError
 
+from tests.manifests import TestCaseItem, test_cases
+
 import json
 
 import string
@@ -45,8 +47,8 @@ values_tbd = "values_tbd"
 
 source = Literal("TERN Ecosystem Surveillance Ecological Monitoring Protocols")
 
-serialize_shapes = False
-serialize_invalid = False
+serialize_shapes = True
+serialize_invalid = True
 serialize_valid = True
 
 
@@ -646,7 +648,7 @@ for property_uri in properties_collection_members:
     )
 
     invalid_graph.add(
-        (invalid_feature_type_uri, SOSA.ObservableProperty, URIRef(property_uri))
+        (invalid_feature_type_uri, SOSA.observedProperty, URIRef(property_uri))
     )
     invalid_graph.add(
         (invalid_feature_type_uri, SOSA.phenomenonTime, invalid_phenomenon_time)
@@ -722,7 +724,7 @@ for property_uri in properties_collection_members:
     )
 
     invalid_graph.add(
-        (invalid_value_type_uri, SOSA.ObservableProperty, URIRef(property_uri))
+        (invalid_value_type_uri, SOSA.observedProperty, URIRef(property_uri))
     )
     invalid_graph.add(
         (invalid_value_type_uri, SOSA.phenomenonTime, invalid_phenomenon_time)
@@ -794,7 +796,7 @@ for property_uri in properties_collection_members:
     )
 
     invalid_graph.add(
-        (invalid_site_visit_uri, SOSA.ObservableProperty, URIRef(property_uri))
+        (invalid_site_visit_uri, SOSA.observedProperty, URIRef(property_uri))
     )
     invalid_graph.add(
         (invalid_site_visit_uri, SOSA.phenomenonTime, invalid_phenomenon_time)
@@ -865,7 +867,7 @@ for property_uri in properties_collection_members:
     )
 
     invalid_graph.add(
-        (invalid_simple_result_uri, SOSA.ObservableProperty, URIRef(property_uri))
+        (invalid_simple_result_uri, SOSA.observedProperty, URIRef(property_uri))
     )
     invalid_graph.add(
         (invalid_simple_result_uri, SOSA.phenomenonTime, invalid_phenomenon_time)
@@ -949,7 +951,7 @@ for property_uri in properties_collection_members:
     )
 
     invalid_graph.add(
-        (invalid_used_procedure_uri, SOSA.ObservableProperty, URIRef(property_uri))
+        (invalid_used_procedure_uri, SOSA.observedProperty, URIRef(property_uri))
     )
     invalid_graph.add(
         (invalid_used_procedure_uri, SOSA.phenomenonTime, invalid_phenomenon_time)
@@ -1030,7 +1032,7 @@ for property_uri in properties_collection_members:
         )
     )
 
-    valid_graph.add((valid_example_uri, SOSA.ObservableProperty, URIRef(property_uri)))
+    valid_graph.add((valid_example_uri, SOSA.observedProperty, URIRef(property_uri)))
     valid_graph.add((valid_example_uri, SOSA.phenomenonTime, invalid_phenomenon_time))
     valid_graph.add((valid_example_uri, SOSA.resultTime, invalid_result_time))
     valid_graph.add(
@@ -1110,7 +1112,7 @@ for property_uri in properties_collection_members:
         )
 
         invalid_graph.add(
-            (invalid_datatype_uri, SOSA.ObservableProperty, URIRef(property_uri))
+            (invalid_datatype_uri, SOSA.observedProperty, URIRef(property_uri))
         )
         invalid_graph.add(
             (invalid_datatype_uri, SOSA.phenomenonTime, invalid_phenomenon_time)
@@ -1253,7 +1255,7 @@ for property_uri in properties_collection_members:
         )
 
         invalid_graph.add(
-            (invalid_value_range_uri, SOSA.ObservableProperty, URIRef(property_uri))
+            (invalid_value_range_uri, SOSA.observedProperty, URIRef(property_uri))
         )
         invalid_graph.add(
             (invalid_value_range_uri, SOSA.phenomenonTime, invalid_phenomenon_time)
@@ -1598,7 +1600,7 @@ for property_uri in properties_collection_members:
         )
 
         invalid_graph.add(
-            (invalid_result_value_uri, SOSA.ObservableProperty, URIRef(property_uri))
+            (invalid_result_value_uri, SOSA.observedProperty, URIRef(property_uri))
         )
         invalid_graph.add(
             (invalid_result_value_uri, SOSA.phenomenonTime, invalid_phenomenon_time)
@@ -1707,7 +1709,7 @@ for property_uri in properties_collection_members:
         )
 
         invalid_graph.add(
-            (invalid_vocabulary_uri, SOSA.ObservableProperty, URIRef(property_uri))
+            (invalid_vocabulary_uri, SOSA.observedProperty, URIRef(property_uri))
         )
         invalid_graph.add(
             (invalid_vocabulary_uri, SOSA.phenomenonTime, invalid_phenomenon_time)
@@ -2008,7 +2010,7 @@ for property_uri in properties_collection_members:
         )
 
         invalid_graph.add(
-            (invalid_unit_of_measure_uri, SOSA.ObservableProperty, URIRef(property_uri))
+            (invalid_unit_of_measure_uri, SOSA.observedProperty, URIRef(property_uri))
         )
         invalid_graph.add(
             (invalid_unit_of_measure_uri, SOSA.phenomenonTime, invalid_phenomenon_time)
@@ -2845,3 +2847,12 @@ for property_uri in properties_collection_members:
             + property_label_file_path
             + "/valid.ttl"
         )
+    # property_test_case_item = TestCaseItem(
+    #     properties_collection_file_path + "-" + property_label_file_path,
+    #     shapes_file_path,
+    #     valid_file_path,
+    #     invalid_file_path,
+    #     8,
+    # ).astuple()
+
+    # print(property_test_case_item)
