@@ -406,10 +406,12 @@ for property_uri in properties_collection_members:
     invalid_graph = Graph()
     invalid_graph.bind("sosa", SOSA)
     invalid_graph.bind("void", VOID)
+    invalid_graph.bind("sh", SH)
 
     valid_graph = Graph()
     valid_graph.bind("sosa", SOSA)
     valid_graph.bind("void", VOID)
+    valid_graph.bind("sh", SH)
 
     # Add feature type validatio in shapes.ttl
     shapes_graph.add((shapes_feature_type_uri, RDF.type, SH.PropertyShape))
