@@ -46,8 +46,8 @@ values_tbd = "values_tbd"
 source = Literal("TERN Ecosystem Surveillance Ecological Monitoring Protocols")
 
 serialize_shapes = False
-serialize_invalid = True
-serialize_valid = False
+serialize_invalid = False
+serialize_valid = True
 
 
 class SPARQLQueryError(Exception):
@@ -402,6 +402,8 @@ for property_uri in properties_collection_members:
     invalid_graph.bind("void", VOID)
 
     valid_graph = Graph()
+    valid_graph.bind("sosa", SOSA)
+    valid_graph.bind("void", VOID)
 
     # Add feature type validatio in shapes.ttl
     shapes_graph.add((shapes_feature_type_uri, RDF.type, SH.PropertyShape))
@@ -961,6 +963,80 @@ for property_uri in properties_collection_members:
     invalid_graph.add(
         (invalid_used_procedure_uri, TERN.hasSiteVisit, URIRef("urn:test:site"))
     )
+
+    # Add the general content for valid examples
+
+    valid_example_uri = URIRef(
+        "urn:test:"
+        + properties_collection_file_path
+        + ":valid:"
+        + property_label_file_path
+    )
+
+    valid_graph.add((valid_example_uri, RDF.type, TERN.Observation))
+    valid_graph.add((valid_example_uri, VOID.inDataset, invalid_in_dataset))
+    valid_graph.add(
+        (
+            valid_example_uri,
+            RDFS.comment,
+            Literal("Valid result for observable property - " + str(property_label)),
+        )
+    )
+
+    valid_feature_of_interest_bnode = BNode()
+    valid_graph.add(
+        (
+            valid_example_uri,
+            SOSA.hasFeatureOfInterest,
+            valid_feature_of_interest_bnode,
+        )
+    )
+    valid_graph.add(
+        (
+            valid_feature_of_interest_bnode,
+            RDF.type,
+            TERN.FeatureOfInterest,
+        )
+    )
+    valid_graph.add(
+        (
+            valid_feature_of_interest_bnode,
+            VOID.inDataset,
+            invalid_in_dataset,
+        )
+    )
+    valid_graph.add(
+        (
+            valid_feature_of_interest_bnode,
+            TERN.featureType,
+            URIRef(property_feature_type),
+        )
+    )
+
+    valid_result_bnode = BNode()
+    valid_graph.add(
+        (
+            valid_example_uri,
+            SOSA.hasResult,
+            valid_result_bnode,
+        )
+    )
+    valid_graph.add((valid_result_bnode, RDF.type, TERN.Value))
+    valid_graph.add(
+        (
+            valid_result_bnode,
+            SOSA.isResultOf,
+            valid_example_uri,
+        )
+    )
+
+    valid_graph.add((valid_example_uri, SOSA.ObservableProperty, URIRef(property_uri)))
+    valid_graph.add((valid_example_uri, SOSA.phenomenonTime, invalid_phenomenon_time))
+    valid_graph.add((valid_example_uri, SOSA.resultTime, invalid_result_time))
+    valid_graph.add(
+        (valid_example_uri, SOSA.usedProcedure, URIRef(protocol_module_uri))
+    )
+    valid_graph.add((valid_example_uri, TERN.hasSiteVisit, URIRef("urn:test:site")))
 
     # Add the general content of datatype invalid examples in invalid_graph
     if URIRef(property_value_type) != TERN.IRI:
@@ -1751,6 +1827,20 @@ for property_uri in properties_collection_members:
             )
         )
 
+        # Add valid examples
+        valid_graph.add(
+            (valid_example_uri, SOSA.hasSimpleResult, URIRef(vocabulary_instance))
+        )
+        valid_graph.add((valid_result_bnode, RDF.type, TERN.IRI))
+        valid_graph.add((valid_result_bnode, RDF.value, URIRef(vocabulary_instance)))
+        valid_graph.add(
+            (
+                valid_result_bnode,
+                TERN.vocabulary,
+                URIRef(property_categorical_collection_uri),
+            )
+        )
+
     elif URIRef(property_value_type) == TERN.Float:
         shapes_graph.add((shapes_value_range_uri, SH.datatype, XSD.float))
 
@@ -2078,6 +2168,20 @@ for property_uri in properties_collection_members:
             )
         )
 
+        # Add valid examples
+        valid_graph.add(
+            (
+                valid_example_uri,
+                SOSA.hasSimpleResult,
+                Literal("33.81", datatype=XSD.float),
+            )
+        )
+        valid_graph.add((valid_result_bnode, RDF.type, TERN.Float))
+        valid_graph.add(
+            (valid_result_bnode, RDF.value, Literal("33.81", datatype=XSD.float))
+        )
+        valid_graph.add((valid_result_bnode, TERN.unit, URIRef(values_tbd)))
+
     elif URIRef(property_value_type) == TERN.Integer:
         shapes_graph.add((shapes_value_range_uri, SH.datatype, XSD.integer))
 
@@ -2201,6 +2305,19 @@ for property_uri in properties_collection_members:
             )
         )
 
+        # Add valid examples
+        valid_graph.add(
+            (
+                valid_example_uri,
+                SOSA.hasSimpleResult,
+                Literal("3", datatype=XSD.integer),
+            )
+        )
+        valid_graph.add((valid_result_bnode, RDF.type, TERN.Integer))
+        valid_graph.add(
+            (valid_result_bnode, RDF.value, Literal("3", datatype=XSD.integer))
+        )
+
     elif URIRef(property_value_type) == TERN.Text:
         shapes_graph.add((shapes_datatype_uri, SH.datatype, XSD.string))
 
@@ -2305,6 +2422,19 @@ for property_uri in properties_collection_members:
                 SOSA.hasSimpleResult,
                 Literal("1", datatype=XSD.integer),
             )
+        )
+
+        # Add valid examples
+        valid_graph.add(
+            (
+                valid_example_uri,
+                SOSA.hasSimpleResult,
+                Literal(values_tbd, datatype=XSD.string),
+            )
+        )
+        valid_graph.add((valid_result_bnode, RDF.type, TERN.Text))
+        valid_graph.add(
+            (valid_result_bnode, RDF.value, Literal(values_tbd, datatype=XSD.string))
         )
 
     elif URIRef(property_value_type) == TERN.Boolean:
@@ -2413,6 +2543,19 @@ for property_uri in properties_collection_members:
             )
         )
 
+        # Add valid examples
+        valid_graph.add(
+            (
+                valid_example_uri,
+                SOSA.hasSimpleResult,
+                Literal(True, datatype=XSD.boolean),
+            )
+        )
+        valid_graph.add((valid_result_bnode, RDF.type, TERN.Boolean))
+        valid_graph.add(
+            (valid_result_bnode, RDF.value, Literal(True, datatype=XSD.boolean))
+        )
+
     elif URIRef(property_value_type) == TERN.Date:
         shapes_graph.add((shapes_datatype_uri, SH.datatype, XSD.date))
 
@@ -2517,6 +2660,19 @@ for property_uri in properties_collection_members:
                 SOSA.hasSimpleResult,
                 Literal("2022-09-28", datatype=XSD.string),
             )
+        )
+
+        # Add valid examples
+        valid_graph.add(
+            (
+                valid_example_uri,
+                SOSA.hasSimpleResult,
+                Literal("2022-09-28", datatype=XSD.date),
+            )
+        )
+        valid_graph.add((valid_result_bnode, RDF.type, TERN.Date))
+        valid_graph.add(
+            (valid_result_bnode, RDF.value, Literal("2022-09-28", datatype=XSD.date))
         )
 
     elif URIRef(property_value_type) == TERN.DateTime:
@@ -2627,6 +2783,23 @@ for property_uri in properties_collection_members:
             )
         )
 
+        # Add valid examples
+        valid_graph.add(
+            (
+                valid_example_uri,
+                SOSA.hasSimpleResult,
+                Literal("2022-09-13T11:09:56", datatype=XSD.dateTime),
+            )
+        )
+        valid_graph.add((valid_result_bnode, RDF.type, TERN.DateTime))
+        valid_graph.add(
+            (
+                valid_result_bnode,
+                RDF.value,
+                Literal("2022-09-13T11:09:56", datatype=XSD.dateTime),
+            )
+        )
+
     # serialize shapes_graph into shapes.ttl
     if serialize_shapes:
         shapes_file_path = Path(
@@ -2656,4 +2829,19 @@ for property_uri in properties_collection_members:
             + "/"
             + property_label_file_path
             + "/invalid.ttl"
+        )
+
+    if serialize_valid:
+        valid_file_path = Path(
+            "shapes/" + properties_collection_file_path + "/" + property_label_file_path
+        )
+
+        valid_file_path.mkdir(exist_ok=True)
+
+        valid_graph.serialize(
+            "shapes/"
+            + properties_collection_file_path
+            + "/"
+            + property_label_file_path
+            + "/valid.ttl"
         )
