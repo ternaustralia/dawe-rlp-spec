@@ -2310,6 +2310,109 @@ for property_uri in properties_collection_members:
     elif URIRef(property_value_type) == TERN.Boolean:
         shapes_graph.add((shapes_datatype_uri, SH.datatype, XSD.boolean))
 
+        # Append values to other invalid examples
+
+        # in feature type
+        invalid_graph.add(
+            (
+                invalid_feature_type_result_bnode,
+                RDF.value,
+                Literal(True, datatype=XSD.boolean),
+            )
+        )
+        invalid_graph.add((invalid_feature_type_result_bnode, RDF.type, TERN.Boolean))
+        invalid_graph.add(
+            (
+                invalid_feature_type_uri,
+                SOSA.hasSimpleResult,
+                Literal(True, datatype=XSD.boolean),
+            )
+        )
+
+        # in value type
+        invalid_graph.add(
+            (
+                invalid_value_type_result_bnode,
+                RDF.value,
+                Literal(True, datatype=XSD.boolean),
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_value_type_uri,
+                SOSA.hasSimpleResult,
+                Literal(True, datatype=XSD.boolean),
+            )
+        )
+
+        # in site visit
+        invalid_graph.add(
+            (
+                invalid_site_visit_result_bnode,
+                RDF.value,
+                Literal(True, datatype=XSD.boolean),
+            )
+        )
+        invalid_graph.add((invalid_site_visit_result_bnode, RDF.type, TERN.Boolean))
+        invalid_graph.add(
+            (
+                invalid_site_visit_uri,
+                SOSA.hasSimpleResult,
+                Literal(True, datatype=XSD.boolean),
+            )
+        )
+
+        # in simple result
+        invalid_graph.add(
+            (
+                invalid_simple_result_result_bnode,
+                RDF.value,
+                Literal(True, datatype=XSD.boolean),
+            )
+        )
+        invalid_graph.add((invalid_simple_result_result_bnode, RDF.type, TERN.Boolean))
+        invalid_graph.add(
+            (
+                invalid_simple_result_uri,
+                SOSA.hasSimpleResult,
+                Literal(False, datatype=XSD.boolean),
+            )
+        )
+
+        # in used procedure
+        invalid_graph.add(
+            (
+                invalid_used_procedure_result_bnode,
+                RDF.value,
+                Literal(True, datatype=XSD.boolean),
+            )
+        )
+        invalid_graph.add((invalid_used_procedure_result_bnode, RDF.type, TERN.Boolean))
+        invalid_graph.add(
+            (
+                invalid_used_procedure_uri,
+                SOSA.hasSimpleResult,
+                Literal(True, datatype=XSD.boolean),
+            )
+        )
+
+        # in datatype
+        invalid_graph.add(
+            (
+                invalid_datatype_result_bnode,
+                RDF.value,
+                Literal(True, datatype=XSD.string),
+            )
+        )
+        invalid_graph.add((invalid_datatype_result_bnode, RDF.type, TERN.Boolean))
+        invalid_graph.add(
+            (
+                invalid_datatype_uri,
+                SOSA.hasSimpleResult,
+                Literal(True, datatype=XSD.string),
+            )
+        )
+
     elif URIRef(property_value_type) == TERN.Date:
         shapes_graph.add((shapes_datatype_uri, SH.datatype, XSD.date))
 
