@@ -45,6 +45,10 @@ protocol_module_uri = (
 
 values_tbd = "values_tbd"
 
+new_test_cases = []
+
+expected_number_of_failures = 1
+
 source = Literal("TERN Ecosystem Surveillance Ecological Monitoring Protocols")
 
 serialize_shapes = True
@@ -1280,6 +1284,7 @@ for property_uri in properties_collection_members:
         TERN.Date,
         TERN.DateTime,
     ]:
+        expected_number_of_failures = 6
         # Add the general content of datatype validation in shapes_graph
         shapes_datatype_uri = URIRef(
             "urn:shapes:"
@@ -1327,6 +1332,8 @@ for property_uri in properties_collection_members:
     # Add specific patterns for each value type
     # for categorical properties
     if URIRef(property_value_type) == TERN.IRI:
+
+        expected_number_of_failures = 7
 
         q_get_categorical_collection_uri_label = """
         PREFIX urnp: <urn:property:>
@@ -1844,6 +1851,9 @@ for property_uri in properties_collection_members:
         )
 
     elif URIRef(property_value_type) == TERN.Float:
+
+        expected_number_of_failures = 8
+
         shapes_graph.add((shapes_value_range_uri, SH.datatype, XSD.float))
 
         # Add the unit of measure validation in shapes_graph
@@ -1983,7 +1993,7 @@ for property_uri in properties_collection_members:
             (
                 invalid_unit_of_measure_result_bnode,
                 RDF.value,
-                Literal("33.81", datatype=XSD.float),
+                Literal(33.81, datatype=XSD.float),
             )
         )
         invalid_graph.add(
@@ -2005,7 +2015,7 @@ for property_uri in properties_collection_members:
             (
                 invalid_unit_of_measure_uri,
                 SOSA.hasSimpleResult,
-                Literal("33.81", datatype=XSD.float),
+                Literal(33.81, datatype=XSD.float),
             )
         )
 
@@ -2036,7 +2046,7 @@ for property_uri in properties_collection_members:
             (
                 invalid_feature_type_result_bnode,
                 RDF.value,
-                Literal("33.81", datatype=XSD.float),
+                Literal(33.81, datatype=XSD.float),
             )
         )
         invalid_graph.add((invalid_feature_type_result_bnode, RDF.type, TERN.Float))
@@ -2051,7 +2061,7 @@ for property_uri in properties_collection_members:
             (
                 invalid_feature_type_uri,
                 SOSA.hasSimpleResult,
-                Literal("33.81", datatype=XSD.float),
+                Literal(33.81, datatype=XSD.float),
             )
         )
 
@@ -2060,7 +2070,7 @@ for property_uri in properties_collection_members:
             (
                 invalid_value_type_result_bnode,
                 RDF.value,
-                Literal("33.81", datatype=XSD.float),
+                Literal(33.81, datatype=XSD.float),
             )
         )
         invalid_graph.add(
@@ -2074,7 +2084,7 @@ for property_uri in properties_collection_members:
             (
                 invalid_value_type_uri,
                 SOSA.hasSimpleResult,
-                Literal("33.81", datatype=XSD.float),
+                Literal(33.81, datatype=XSD.float),
             )
         )
 
@@ -2083,7 +2093,7 @@ for property_uri in properties_collection_members:
             (
                 invalid_site_visit_result_bnode,
                 RDF.value,
-                Literal("33.81", datatype=XSD.float),
+                Literal(33.81, datatype=XSD.float),
             )
         )
         invalid_graph.add((invalid_site_visit_result_bnode, RDF.type, TERN.Float))
@@ -2098,7 +2108,7 @@ for property_uri in properties_collection_members:
             (
                 invalid_site_visit_uri,
                 SOSA.hasSimpleResult,
-                Literal("33.81", datatype=XSD.float),
+                Literal(33.81, datatype=XSD.float),
             )
         )
 
@@ -2107,7 +2117,7 @@ for property_uri in properties_collection_members:
             (
                 invalid_simple_result_result_bnode,
                 RDF.value,
-                Literal("33.81", datatype=XSD.float),
+                Literal(33.81, datatype=XSD.float),
             )
         )
         invalid_graph.add((invalid_simple_result_result_bnode, RDF.type, TERN.Float))
@@ -2131,7 +2141,7 @@ for property_uri in properties_collection_members:
             (
                 invalid_used_procedure_result_bnode,
                 RDF.value,
-                Literal("33.81", datatype=XSD.float),
+                Literal(33.81, datatype=XSD.float),
             )
         )
         invalid_graph.add((invalid_used_procedure_result_bnode, RDF.type, TERN.Float))
@@ -2146,7 +2156,7 @@ for property_uri in properties_collection_members:
             (
                 invalid_used_procedure_uri,
                 SOSA.hasSimpleResult,
-                Literal("33.81", datatype=XSD.float),
+                Literal(33.81, datatype=XSD.float),
             )
         )
 
@@ -2175,16 +2185,19 @@ for property_uri in properties_collection_members:
             (
                 valid_example_uri,
                 SOSA.hasSimpleResult,
-                Literal("33.81", datatype=XSD.float),
+                Literal(33.81, datatype=XSD.float),
             )
         )
         valid_graph.add((valid_result_bnode, RDF.type, TERN.Float))
         valid_graph.add(
-            (valid_result_bnode, RDF.value, Literal("33.81", datatype=XSD.float))
+            (valid_result_bnode, RDF.value, Literal(33.81, datatype=XSD.float))
         )
         valid_graph.add((valid_result_bnode, TERN.unit, URIRef(values_tbd)))
 
     elif URIRef(property_value_type) == TERN.Integer:
+
+        expected_number_of_failures = 7
+
         shapes_graph.add((shapes_value_range_uri, SH.datatype, XSD.integer))
 
         # Add the specific value type to value range invalid examples
@@ -2295,7 +2308,7 @@ for property_uri in properties_collection_members:
             (
                 invalid_datatype_result_bnode,
                 RDF.value,
-                Literal("33.81", datatype=XSD.float),
+                Literal(33.81, datatype=XSD.float),
             )
         )
         invalid_graph.add((invalid_datatype_result_bnode, RDF.type, TERN.Integer))
@@ -2303,7 +2316,7 @@ for property_uri in properties_collection_members:
             (
                 invalid_datatype_uri,
                 SOSA.hasSimpleResult,
-                Literal("33.81", datatype=XSD.float),
+                Literal(33.81, datatype=XSD.float),
             )
         )
 
@@ -2847,12 +2860,14 @@ for property_uri in properties_collection_members:
             + property_label_file_path
             + "/valid.ttl"
         )
-    # property_test_case_item = TestCaseItem(
-    #     properties_collection_file_path + "-" + property_label_file_path,
-    #     shapes_file_path,
-    #     valid_file_path,
-    #     invalid_file_path,
-    #     8,
-    # ).astuple()
+    property_test_case_item = TestCaseItem(
+        str(properties_collection_file_path + "-" + property_label_file_path),
+        str(shapes_file_path) + "/shapes.ttl",
+        str(valid_file_path) + "/valid.ttl",
+        str(invalid_file_path) + "/invalid.ttl",
+        expected_number_of_failures,
+    )
 
-    # print(property_test_case_item)
+    new_test_cases.append(property_test_case_item)
+
+print(new_test_cases)
