@@ -2416,8 +2416,216 @@ for property_uri in properties_collection_members:
     elif URIRef(property_value_type) == TERN.Date:
         shapes_graph.add((shapes_datatype_uri, SH.datatype, XSD.date))
 
+        # Append values to other invalid examples
+
+        # in feature type
+        invalid_graph.add(
+            (
+                invalid_feature_type_result_bnode,
+                RDF.value,
+                Literal("2022-09-28", datatype=XSD.date),
+            )
+        )
+        invalid_graph.add((invalid_feature_type_result_bnode, RDF.type, TERN.Date))
+        invalid_graph.add(
+            (
+                invalid_feature_type_uri,
+                SOSA.hasSimpleResult,
+                Literal("2022-09-28", datatype=XSD.date),
+            )
+        )
+
+        # in value type
+        invalid_graph.add(
+            (
+                invalid_value_type_result_bnode,
+                RDF.value,
+                Literal("2022-09-28", datatype=XSD.date),
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_value_type_uri,
+                SOSA.hasSimpleResult,
+                Literal("2022-09-28", datatype=XSD.date),
+            )
+        )
+
+        # in site visit
+        invalid_graph.add(
+            (
+                invalid_site_visit_result_bnode,
+                RDF.value,
+                Literal("2022-09-28", datatype=XSD.date),
+            )
+        )
+        invalid_graph.add((invalid_site_visit_result_bnode, RDF.type, TERN.Date))
+        invalid_graph.add(
+            (
+                invalid_site_visit_uri,
+                SOSA.hasSimpleResult,
+                Literal("2022-09-28", datatype=XSD.date),
+            )
+        )
+
+        # in simple result
+        invalid_graph.add(
+            (
+                invalid_simple_result_result_bnode,
+                RDF.value,
+                Literal("2022-09-28", datatype=XSD.date),
+            )
+        )
+        invalid_graph.add((invalid_simple_result_result_bnode, RDF.type, TERN.Date))
+        invalid_graph.add(
+            (
+                invalid_simple_result_uri,
+                SOSA.hasSimpleResult,
+                Literal("2022-09-27", datatype=XSD.date),
+            )
+        )
+
+        # in used procedure
+        invalid_graph.add(
+            (
+                invalid_used_procedure_result_bnode,
+                RDF.value,
+                Literal("2022-09-28", datatype=XSD.date),
+            )
+        )
+        invalid_graph.add((invalid_used_procedure_result_bnode, RDF.type, TERN.Date))
+        invalid_graph.add(
+            (
+                invalid_used_procedure_uri,
+                SOSA.hasSimpleResult,
+                Literal("2022-09-28", datatype=XSD.date),
+            )
+        )
+
+        # in datatype
+        invalid_graph.add(
+            (
+                invalid_datatype_result_bnode,
+                RDF.value,
+                Literal("2022-09-28", datatype=XSD.string),
+            )
+        )
+        invalid_graph.add((invalid_datatype_result_bnode, RDF.type, TERN.Date))
+        invalid_graph.add(
+            (
+                invalid_datatype_uri,
+                SOSA.hasSimpleResult,
+                Literal("2022-09-28", datatype=XSD.string),
+            )
+        )
+
     elif URIRef(property_value_type) == TERN.DateTime:
         shapes_graph.add((shapes_datatype_uri, SH.datatype, XSD.dateTime))
+
+        # Append values to other invalid examples
+
+        # in feature type
+        invalid_graph.add(
+            (
+                invalid_feature_type_result_bnode,
+                RDF.value,
+                Literal("2022-09-13T11:09:56", datatype=XSD.dateTime),
+            )
+        )
+        invalid_graph.add((invalid_feature_type_result_bnode, RDF.type, TERN.DateTime))
+        invalid_graph.add(
+            (
+                invalid_feature_type_uri,
+                SOSA.hasSimpleResult,
+                Literal("2022-09-13T11:09:56", datatype=XSD.dateTime),
+            )
+        )
+
+        # in value type
+        invalid_graph.add(
+            (
+                invalid_value_type_result_bnode,
+                RDF.value,
+                Literal("2022-09-13T11:09:56", datatype=XSD.dateTime),
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_value_type_uri,
+                SOSA.hasSimpleResult,
+                Literal("2022-09-13T11:09:56", datatype=XSD.dateTime),
+            )
+        )
+
+        # in site visit
+        invalid_graph.add(
+            (
+                invalid_site_visit_result_bnode,
+                RDF.value,
+                Literal("2022-09-13T11:09:56", datatype=XSD.dateTime),
+            )
+        )
+        invalid_graph.add((invalid_site_visit_result_bnode, RDF.type, TERN.DateTime))
+        invalid_graph.add(
+            (
+                invalid_site_visit_uri,
+                SOSA.hasSimpleResult,
+                Literal("2022-09-13T11:09:56", datatype=XSD.dateTime),
+            )
+        )
+
+        # in simple result
+        invalid_graph.add(
+            (
+                invalid_simple_result_result_bnode,
+                RDF.value,
+                Literal("2022-09-13T11:09:56", datatype=XSD.dateTime),
+            )
+        )
+        invalid_graph.add((invalid_simple_result_result_bnode, RDF.type, TERN.DateTime))
+        invalid_graph.add(
+            (
+                invalid_simple_result_uri,
+                SOSA.hasSimpleResult,
+                Literal("2022-09-13T12:26:56", datatype=XSD.dateTime),
+            )
+        )
+
+        # in used procedure
+        invalid_graph.add(
+            (
+                invalid_used_procedure_result_bnode,
+                RDF.value,
+                Literal("2022-09-13T11:09:56", datatype=XSD.dateTime),
+            )
+        )
+        invalid_graph.add(
+            (invalid_used_procedure_result_bnode, RDF.type, TERN.DateTime)
+        )
+        invalid_graph.add(
+            (
+                invalid_used_procedure_uri,
+                SOSA.hasSimpleResult,
+                Literal("2022-09-13T11:09:56", datatype=XSD.dateTime),
+            )
+        )
+
+        # in datatype
+        invalid_graph.add(
+            (
+                invalid_datatype_result_bnode,
+                RDF.value,
+                Literal("2022-09-13T11:09:56", datatype=XSD.string),
+            )
+        )
+        invalid_graph.add((invalid_datatype_result_bnode, RDF.type, TERN.DateTime))
+        invalid_graph.add(
+            (
+                invalid_datatype_uri,
+                SOSA.hasSimpleResult,
+                Literal("2022-09-13T11:09:56", datatype=XSD.string),
+            )
+        )
 
     # serialize shapes_graph into shapes.ttl
     if serialize_shapes:
