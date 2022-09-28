@@ -2098,6 +2098,109 @@ for property_uri in properties_collection_members:
             )
         )
 
+        # Append values to other invalid examples
+
+        # in feature type
+        invalid_graph.add(
+            (
+                invalid_feature_type_result_bnode,
+                RDF.value,
+                Literal("3", datatype=XSD.integer),
+            )
+        )
+        invalid_graph.add((invalid_feature_type_result_bnode, RDF.type, TERN.Integer))
+        invalid_graph.add(
+            (
+                invalid_feature_type_uri,
+                SOSA.hasSimpleResult,
+                Literal("3", datatype=XSD.integer),
+            )
+        )
+
+        # in value type
+        invalid_graph.add(
+            (
+                invalid_value_type_result_bnode,
+                RDF.value,
+                Literal("3", datatype=XSD.integer),
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_value_type_uri,
+                SOSA.hasSimpleResult,
+                Literal("3", datatype=XSD.integer),
+            )
+        )
+
+        # in site visit
+        invalid_graph.add(
+            (
+                invalid_site_visit_result_bnode,
+                RDF.value,
+                Literal("3", datatype=XSD.integer),
+            )
+        )
+        invalid_graph.add((invalid_site_visit_result_bnode, RDF.type, TERN.Integer))
+        invalid_graph.add(
+            (
+                invalid_site_visit_uri,
+                SOSA.hasSimpleResult,
+                Literal("3", datatype=XSD.integer),
+            )
+        )
+
+        # in simple result
+        invalid_graph.add(
+            (
+                invalid_simple_result_result_bnode,
+                RDF.value,
+                Literal("3", datatype=XSD.integer),
+            )
+        )
+        invalid_graph.add((invalid_simple_result_result_bnode, RDF.type, TERN.Integer))
+        invalid_graph.add(
+            (
+                invalid_simple_result_uri,
+                SOSA.hasSimpleResult,
+                Literal("2", datatype=XSD.integer),
+            )
+        )
+
+        # in used procedure
+        invalid_graph.add(
+            (
+                invalid_used_procedure_result_bnode,
+                RDF.value,
+                Literal("3", datatype=XSD.integer),
+            )
+        )
+        invalid_graph.add((invalid_used_procedure_result_bnode, RDF.type, TERN.Integer))
+        invalid_graph.add(
+            (
+                invalid_used_procedure_uri,
+                SOSA.hasSimpleResult,
+                Literal("3", datatype=XSD.integer),
+            )
+        )
+
+        # in datatype
+        invalid_graph.add(
+            (
+                invalid_datatype_result_bnode,
+                RDF.value,
+                Literal("33.81", datatype=XSD.float),
+            )
+        )
+        invalid_graph.add((invalid_datatype_result_bnode, RDF.type, TERN.Integer))
+        invalid_graph.add(
+            (
+                invalid_datatype_result_bnode,
+                SOSA.hasSimpleResult,
+                Literal("33.81", datatype=XSD.float),
+            )
+        )
+
     elif URIRef(property_value_type) == TERN.Text:
         shapes_graph.add((shapes_datatype_uri, SH.datatype, XSD.string))
 
