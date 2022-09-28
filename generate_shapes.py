@@ -1163,13 +1163,6 @@ for property_uri in properties_collection_members:
         invalid_graph.add(
             (
                 invalid_value_range_result_bnode,
-                RDF.value,
-                URIRef(values_tbd),
-            )
-        )
-        invalid_graph.add(
-            (
-                invalid_value_range_result_bnode,
                 SOSA.isResultOf,
                 invalid_value_range_uri,
             )
@@ -1179,14 +1172,6 @@ for property_uri in properties_collection_members:
             (
                 invalid_value_range_result_bnode,
                 TERN.unit,
-                URIRef(values_tbd),
-            )
-        )
-
-        invalid_graph.add(
-            (
-                invalid_value_range_uri,
-                SOSA.hasSimpleResult,
                 URIRef(values_tbd),
             )
         )
@@ -1826,6 +1811,20 @@ for property_uri in properties_collection_members:
 
         # Add the specific value type to value range invalid examples
         invalid_graph.add((invalid_value_range_result_bnode, RDF.type, TERN.Float))
+        invalid_graph.add(
+            (
+                invalid_value_range_result_bnode,
+                RDF.value,
+                Literal("-1.11", datatype=XSD.float),
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_value_range_uri,
+                SOSA.hasSimpleResult,
+                Literal("-1.11", datatype=XSD.float),
+            )
+        )
 
         # Add unit of measure invalid examples in invalid_graph
         invalid_unit_of_measure_uri = URIRef(
@@ -1892,7 +1891,7 @@ for property_uri in properties_collection_members:
             (
                 invalid_unit_of_measure_result_bnode,
                 RDF.value,
-                URIRef(values_tbd),
+                Literal("33.81", datatype=XSD.float),
             )
         )
         invalid_graph.add(
@@ -1914,7 +1913,7 @@ for property_uri in properties_collection_members:
             (
                 invalid_unit_of_measure_uri,
                 SOSA.hasSimpleResult,
-                URIRef(values_tbd),
+                Literal("33.81", datatype=XSD.float),
             )
         )
 
@@ -1938,11 +1937,166 @@ for property_uri in properties_collection_members:
             (invalid_unit_of_measure_uri, TERN.hasSiteVisit, URIRef("urn:test:site"))
         )
 
+        # Append values to other invalid examples
+
+        # in feature type
+        invalid_graph.add(
+            (
+                invalid_feature_type_result_bnode,
+                RDF.value,
+                Literal("33.81", datatype=XSD.float),
+            )
+        )
+        invalid_graph.add((invalid_feature_type_result_bnode, RDF.type, TERN.Float))
+        invalid_graph.add(
+            (
+                invalid_feature_type_result_bnode,
+                TERN.unit,
+                URIRef(values_tbd),
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_feature_type_uri,
+                SOSA.hasSimpleResult,
+                Literal("33.81", datatype=XSD.float),
+            )
+        )
+
+        # in value type
+        invalid_graph.add(
+            (
+                invalid_value_type_result_bnode,
+                RDF.value,
+                Literal("33.81", datatype=XSD.float),
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_value_type_result_bnode,
+                TERN.unit,
+                URIRef(values_tbd),
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_value_type_uri,
+                SOSA.hasSimpleResult,
+                Literal("33.81", datatype=XSD.float),
+            )
+        )
+
+        # in site visit
+        invalid_graph.add(
+            (
+                invalid_site_visit_result_bnode,
+                RDF.value,
+                Literal("33.81", datatype=XSD.float),
+            )
+        )
+        invalid_graph.add((invalid_site_visit_result_bnode, RDF.type, TERN.Float))
+        invalid_graph.add(
+            (
+                invalid_site_visit_result_bnode,
+                TERN.unit,
+                URIRef(values_tbd),
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_site_visit_uri,
+                SOSA.hasSimpleResult,
+                Literal("33.81", datatype=XSD.float),
+            )
+        )
+
+        # in simple result
+        invalid_graph.add(
+            (
+                invalid_simple_result_result_bnode,
+                RDF.value,
+                Literal("33.81", datatype=XSD.float),
+            )
+        )
+        invalid_graph.add((invalid_simple_result_result_bnode, RDF.type, TERN.Float))
+        invalid_graph.add(
+            (
+                invalid_simple_result_result_bnode,
+                TERN.unit,
+                URIRef(values_tbd),
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_simple_result_uri,
+                SOSA.hasSimpleResult,
+                Literal("13.56", datatype=XSD.float),
+            )
+        )
+
+        # in used procedure
+        invalid_graph.add(
+            (
+                invalid_used_procedure_result_bnode,
+                RDF.value,
+                Literal("33.81", datatype=XSD.float),
+            )
+        )
+        invalid_graph.add((invalid_used_procedure_result_bnode, RDF.type, TERN.Float))
+        invalid_graph.add(
+            (
+                invalid_used_procedure_result_bnode,
+                TERN.unit,
+                URIRef(values_tbd),
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_used_procedure_uri,
+                SOSA.hasSimpleResult,
+                Literal("33.81", datatype=XSD.float),
+            )
+        )
+
+        # in datatype
+        invalid_graph.add(
+            (
+                invalid_datatype_result_bnode,
+                RDF.value,
+                Literal("3", datatype=XSD.integer),
+            )
+        )
+        invalid_graph.add((invalid_datatype_result_bnode, RDF.type, TERN.Float))
+        invalid_graph.add(
+            (invalid_datatype_result_bnode, TERN.unit, URIRef(values_tbd))
+        )
+        invalid_graph.add(
+            (
+                invalid_datatype_result_bnode,
+                SOSA.hasSimpleResult,
+                Literal("3", datatype=XSD.integer),
+            )
+        )
+
     elif URIRef(property_value_type) == TERN.Integer:
         shapes_graph.add((shapes_value_range_uri, SH.datatype, XSD.integer))
 
         # Add the specific value type to value range invalid examples
         invalid_graph.add((invalid_value_range_result_bnode, RDF.type, TERN.Integer))
+        invalid_graph.add(
+            (
+                invalid_value_range_result_bnode,
+                RDF.value,
+                Literal("-1", datatype=XSD.integer),
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_value_range_uri,
+                SOSA.hasSimpleResult,
+                Literal("-1", datatype=XSD.integer),
+            )
+        )
 
     elif URIRef(property_value_type) == TERN.Text:
         shapes_graph.add((shapes_datatype_uri, SH.datatype, XSD.string))
