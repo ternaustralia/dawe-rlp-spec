@@ -2072,7 +2072,7 @@ for property_uri in properties_collection_members:
         )
         invalid_graph.add(
             (
-                invalid_datatype_result_bnode,
+                invalid_datatype_uri,
                 SOSA.hasSimpleResult,
                 Literal("3", datatype=XSD.integer),
             )
@@ -2195,7 +2195,7 @@ for property_uri in properties_collection_members:
         invalid_graph.add((invalid_datatype_result_bnode, RDF.type, TERN.Integer))
         invalid_graph.add(
             (
-                invalid_datatype_result_bnode,
+                invalid_datatype_uri,
                 SOSA.hasSimpleResult,
                 Literal("33.81", datatype=XSD.float),
             )
@@ -2203,6 +2203,109 @@ for property_uri in properties_collection_members:
 
     elif URIRef(property_value_type) == TERN.Text:
         shapes_graph.add((shapes_datatype_uri, SH.datatype, XSD.string))
+
+        # Append values to other invalid examples
+
+        # in feature type
+        invalid_graph.add(
+            (
+                invalid_feature_type_result_bnode,
+                RDF.value,
+                Literal(values_tbd, datatype=XSD.string),
+            )
+        )
+        invalid_graph.add((invalid_feature_type_result_bnode, RDF.type, TERN.Text))
+        invalid_graph.add(
+            (
+                invalid_feature_type_uri,
+                SOSA.hasSimpleResult,
+                Literal(values_tbd, datatype=XSD.string),
+            )
+        )
+
+        # in value type
+        invalid_graph.add(
+            (
+                invalid_value_type_result_bnode,
+                RDF.value,
+                Literal(values_tbd, datatype=XSD.string),
+            )
+        )
+        invalid_graph.add(
+            (
+                invalid_value_type_uri,
+                SOSA.hasSimpleResult,
+                Literal(values_tbd, datatype=XSD.string),
+            )
+        )
+
+        # in site visit
+        invalid_graph.add(
+            (
+                invalid_site_visit_result_bnode,
+                RDF.value,
+                Literal(values_tbd, datatype=XSD.string),
+            )
+        )
+        invalid_graph.add((invalid_site_visit_result_bnode, RDF.type, TERN.Text))
+        invalid_graph.add(
+            (
+                invalid_site_visit_uri,
+                SOSA.hasSimpleResult,
+                Literal(values_tbd, datatype=XSD.string),
+            )
+        )
+
+        # in simple result
+        invalid_graph.add(
+            (
+                invalid_simple_result_result_bnode,
+                RDF.value,
+                Literal(values_tbd, datatype=XSD.string),
+            )
+        )
+        invalid_graph.add((invalid_simple_result_result_bnode, RDF.type, TERN.Text))
+        invalid_graph.add(
+            (
+                invalid_simple_result_uri,
+                SOSA.hasSimpleResult,
+                Literal(values_tbd + " different", datatype=XSD.string),
+            )
+        )
+
+        # in used procedure
+        invalid_graph.add(
+            (
+                invalid_used_procedure_result_bnode,
+                RDF.value,
+                Literal(values_tbd, datatype=XSD.string),
+            )
+        )
+        invalid_graph.add((invalid_used_procedure_result_bnode, RDF.type, TERN.Text))
+        invalid_graph.add(
+            (
+                invalid_used_procedure_uri,
+                SOSA.hasSimpleResult,
+                Literal(values_tbd, datatype=XSD.string),
+            )
+        )
+
+        # in datatype
+        invalid_graph.add(
+            (
+                invalid_datatype_result_bnode,
+                RDF.value,
+                Literal("1", datatype=XSD.integer),
+            )
+        )
+        invalid_graph.add((invalid_datatype_result_bnode, RDF.type, TERN.Text))
+        invalid_graph.add(
+            (
+                invalid_datatype_uri,
+                SOSA.hasSimpleResult,
+                Literal("1", datatype=XSD.integer),
+            )
+        )
 
     elif URIRef(property_value_type) == TERN.Boolean:
         shapes_graph.add((shapes_datatype_uri, SH.datatype, XSD.boolean))
