@@ -3,10 +3,10 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX unit: <http://qudt.org/vocab/unit/>
 
 <urn:shapes:plot-description:slope:feature-type>
     a
@@ -33,7 +33,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
     }
     """
         ] ;
-    urnp:examples _:n36ecaca5ef3d4ecba242d1c64914e947b2 ;
+    urnp:examples _:nf0d9d51a985f459ca9e089f05d0a9504b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -65,7 +65,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n36ecaca5ef3d4ecba242d1c64914e947b2 ;
+    urnp:examples _:nf0d9d51a985f459ca9e089f05d0a9504b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -95,7 +95,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
     }
     """
         ] ;
-    urnp:examples _:n36ecaca5ef3d4ecba242d1c64914e947b2 ;
+    urnp:examples _:nf0d9d51a985f459ca9e089f05d0a9504b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -106,7 +106,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:DEG`." ;
-    sh:hasValue <http://qudt.org/vocab/unit/DEG> ;
+    sh:hasValue unit:DEG ;
     sh:message "The result _MUST_ have `unit:DEG` as the value for `tern:unit`." ;
     sh:name "Unit of measure" ;
     sh:path tern:unit ;
@@ -123,7 +123,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n36ecaca5ef3d4ecba242d1c64914e947b2 ;
+    urnp:examples _:nf0d9d51a985f459ca9e089f05d0a9504b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -154,7 +154,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
     }
     """
         ] ;
-    urnp:examples _:n36ecaca5ef3d4ecba242d1c64914e947b2 ;
+    urnp:examples _:nf0d9d51a985f459ca9e089f05d0a9504b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -184,7 +184,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n36ecaca5ef3d4ecba242d1c64914e947b2 ;
+    urnp:examples _:nf0d9d51a985f459ca9e089f05d0a9504b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -213,11 +213,11 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
     }
     """
         ] ;
-    urnp:examples _:n36ecaca5ef3d4ecba242d1c64914e947b2 ;
+    urnp:examples _:nf0d9d51a985f459ca9e089f05d0a9504b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n36ecaca5ef3d4ecba242d1c64914e947b2
+_:nf0d9d51a985f459ca9e089f05d0a9504b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI ;
 .

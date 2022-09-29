@@ -3,10 +3,10 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX unit: <http://qudt.org/vocab/unit/>
 
 <urn:shapes:plot-description:homogeneity-measure:feature-type>
     a
@@ -33,7 +33,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
     }
     """
         ] ;
-    urnp:examples _:n3197986432f04716bc82b66c16b6c3ccb2 ;
+    urnp:examples _:nf160de66cd124a8597f6fc5c7c126f2eb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -65,7 +65,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n3197986432f04716bc82b66c16b6c3ccb2 ;
+    urnp:examples _:nf160de66cd124a8597f6fc5c7c126f2eb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -95,7 +95,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
     }
     """
         ] ;
-    urnp:examples _:n3197986432f04716bc82b66c16b6c3ccb2 ;
+    urnp:examples _:nf160de66cd124a8597f6fc5c7c126f2eb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -106,7 +106,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:M`." ;
-    sh:hasValue <http://qudt.org/vocab/unit/M> ;
+    sh:hasValue unit:M ;
     sh:message "The result _MUST_ have `unit:M` as the value for `tern:unit`." ;
     sh:name "Unit of measure" ;
     sh:path tern:unit ;
@@ -123,7 +123,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3197986432f04716bc82b66c16b6c3ccb2 ;
+    urnp:examples _:nf160de66cd124a8597f6fc5c7c126f2eb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -154,7 +154,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
     }
     """
         ] ;
-    urnp:examples _:n3197986432f04716bc82b66c16b6c3ccb2 ;
+    urnp:examples _:nf160de66cd124a8597f6fc5c7c126f2eb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -183,7 +183,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3197986432f04716bc82b66c16b6c3ccb2 ;
+    urnp:examples _:nf160de66cd124a8597f6fc5c7c126f2eb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -212,11 +212,11 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
     }
     """
         ] ;
-    urnp:examples _:n3197986432f04716bc82b66c16b6c3ccb2 ;
+    urnp:examples _:nf160de66cd124a8597f6fc5c7c126f2eb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n3197986432f04716bc82b66c16b6c3ccb2
+_:nf160de66cd124a8597f6fc5c7c126f2eb2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/homogeneity-measure/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/homogeneity-measure/valid.ttl"^^xsd:anyURI ;
 .
