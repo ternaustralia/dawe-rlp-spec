@@ -4,6 +4,7 @@ PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX unit: <http://qudt.org/vocab/unit/>
 
 <urn:test:plot-description:invalid:homogeneity-measure:datatype>
     a tern:Observation ;
@@ -20,7 +21,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value 3 ;
             sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:datatype> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:M
         ] ;
     sosa:hasSimpleResult 3 ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
@@ -45,7 +46,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:feature-type> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
@@ -70,7 +71,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:simple-result> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "13.56"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
@@ -95,7 +96,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:site-visit> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
@@ -144,7 +145,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:used-procedure> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
@@ -169,7 +170,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "-1.11"^^xsd:float ;
             sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:value-range> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "-1.11"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
@@ -192,7 +193,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:value-type> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/325d5ff2-8c81-484a-a422-c13ff29666a9> ;

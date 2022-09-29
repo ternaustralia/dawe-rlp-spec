@@ -6,6 +6,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX unit: <http://qudt.org/vocab/unit/>
 
 <urn:shapes:plot-description:homogeneity-measure:feature-type>
     a
@@ -104,9 +105,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "Result value's unit of measure _MUST_ have the value `values_tbd`." ;
-    sh:hasValue <file:///workspaces/dawe-rlp-spec/shapes/plot-description/homogeneity-measure/values_tbd> ;
-    sh:message "The result _MUST_ have `values_tbd` as the value for `tern:unit`." ;
+    sh:description "Result value's unit of measure _MUST_ have the value `unit:M`." ;
+    sh:hasValue <http://qudt.org/vocab/unit/M> ;
+    sh:message "The result _MUST_ have `unit:M` as the value for `tern:unit`." ;
     sh:name "Unit of measure" ;
     sh:path tern:unit ;
     sh:target [
@@ -164,10 +165,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:float ;
-    sh:description "Value _MUST_ be between values_tbd and values_tbd inclusive." ;
-    sh:maxInclusive <file:///workspaces/dawe-rlp-spec/shapes/plot-description/homogeneity-measure/values_tbd> ;
-    sh:message "The result _MUST_ have a value between values_tbd and values_tbd inclusively." ;
-    sh:minInclusive <file:///workspaces/dawe-rlp-spec/shapes/plot-description/homogeneity-measure/values_tbd> ;
+    sh:description "Value _MUST_ not be negative." ;
+    sh:message "The result _MUST_ not be negative." ;
+    sh:minInclusive 0 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
