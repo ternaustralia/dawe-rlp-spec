@@ -168,11 +168,11 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
             a
                 tern:Float ,
                 tern:Value ;
-            rdf:value "-1.11"^^xsd:float ;
+            rdf:value "101.1"^^xsd:float ;
             sosa:isResultOf <urn:test:plot-description:invalid:cover:value-range> ;
             tern:unit unit:PERCENT
         ] ;
-    sosa:hasSimpleResult "-1.11"^^xsd:float ;
+    sosa:hasSimpleResult "101.1"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
     sosa:phenomenonTime <https://example.com/observation/cover/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
