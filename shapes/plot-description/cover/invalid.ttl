@@ -4,6 +4,7 @@ PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX unit: <http://qudt.org/vocab/unit/>
 
 <urn:test:plot-description:invalid:cover:datatype>
     a tern:Observation ;
@@ -20,7 +21,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value 3 ;
             sosa:isResultOf <urn:test:plot-description:invalid:cover:datatype> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult 3 ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
@@ -45,7 +46,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:plot-description:invalid:cover:feature-type> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
@@ -70,7 +71,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:plot-description:invalid:cover:simple-result> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult "13.56"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
@@ -95,7 +96,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:plot-description:invalid:cover:site-visit> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
@@ -144,7 +145,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:plot-description:invalid:cover:used-procedure> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
@@ -169,7 +170,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "-1.11"^^xsd:float ;
             sosa:isResultOf <urn:test:plot-description:invalid:cover:value-range> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult "-1.11"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
@@ -192,7 +193,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:plot-description:invalid:cover:value-type> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
