@@ -7,15 +7,15 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:plot-description:slope:feature-type>
+<urn:shapes:plot-description:cover:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _landform_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd[`landform`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _vegetation_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95[`vegetation`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
@@ -25,18 +25,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX unit: <http://qudt.org/vocab/unit/>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     select ?this  {
-        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c>}
+        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e>}
         ?observation a tern:Observation ;
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
     }
     """
         ] ;
-    urnp:examples _:n36ecaca5ef3d4ecba242d1c64914e947b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n938b6f0eaca948d1bba649b0538e4bacb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:slope:simple-result>
+<urn:shapes:plot-description:cover:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -54,7 +54,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     select $this {
         $this a tern:Observation ;
             sosa:observedProperty 
-    <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c>
+    <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e>
      ;
             sosa:hasSimpleResult ?simple ;
             sosa:hasResult ?result .
@@ -64,11 +64,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n36ecaca5ef3d4ecba242d1c64914e947b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n938b6f0eaca948d1bba649b0538e4bacb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:slope:site-visit>
+<urn:shapes:plot-description:cover:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -88,24 +88,24 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c>}
+        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
-    urnp:examples _:n36ecaca5ef3d4ecba242d1c64914e947b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n938b6f0eaca948d1bba649b0538e4bacb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:slope:unit-of-measure>
+<urn:shapes:plot-description:cover:unit-of-measure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description "Result value's unit of measure _MUST_ have the value `values_tbd`." ;
-    sh:hasValue <file:///workspaces/dawe-rlp-spec/shapes/plot-description/slope/values_tbd> ;
+    sh:hasValue <file:///workspaces/dawe-rlp-spec/shapes/plot-description/cover/values_tbd> ;
     sh:message "The result _MUST_ have `values_tbd` as the value for `tern:unit`." ;
     sh:name "Unit of measure" ;
     sh:path tern:unit ;
@@ -118,15 +118,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         select ?this  {
             ?observation a tern:Observation ;
                 sosa:observedProperty 
-        <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+        <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n36ecaca5ef3d4ecba242d1c64914e947b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n938b6f0eaca948d1bba649b0538e4bacb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:slope:used-procedure>
+<urn:shapes:plot-description:cover:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -147,17 +147,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c>}
+        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
-    urnp:examples _:n36ecaca5ef3d4ecba242d1c64914e947b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n938b6f0eaca948d1bba649b0538e4bacb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:slope:value-range>
+<urn:shapes:plot-description:cover:value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -165,9 +165,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between values_tbd and values_tbd inclusive." ;
-    sh:maxInclusive <file:///workspaces/dawe-rlp-spec/shapes/plot-description/slope/values_tbd> ;
+    sh:maxInclusive <file:///workspaces/dawe-rlp-spec/shapes/plot-description/cover/values_tbd> ;
     sh:message "The result _MUST_ have a value between values_tbd and values_tbd inclusively." ;
-    sh:minInclusive <file:///workspaces/dawe-rlp-spec/shapes/plot-description/slope/values_tbd> ;
+    sh:minInclusive <file:///workspaces/dawe-rlp-spec/shapes/plot-description/cover/values_tbd> ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
@@ -179,15 +179,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         select ?this  {
             ?observation a tern:Observation ;
                 sosa:observedProperty 
-        <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+        <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n36ecaca5ef3d4ecba242d1c64914e947b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n938b6f0eaca948d1bba649b0538e4bacb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:slope:value-type>
+<urn:shapes:plot-description:cover:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -206,18 +206,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c>}
+        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
-    urnp:examples _:n36ecaca5ef3d4ecba242d1c64914e947b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n938b6f0eaca948d1bba649b0538e4bacb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n36ecaca5ef3d4ecba242d1c64914e947b2
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope/valid.ttl"^^xsd:anyURI ;
+_:n938b6f0eaca948d1bba649b0538e4bacb2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/cover/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/cover/valid.ttl"^^xsd:anyURI ;
 .
 

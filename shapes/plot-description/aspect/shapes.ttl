@@ -2,7 +2,6 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
-PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
@@ -16,26 +15,24 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     reg:status reg:statusSubmitted ;
     sh:description "TERN's ecologists have determined the feature type is _landform_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link:http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd[`landform`]." ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd[`landform`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
-        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-        PREFIX unit: <http://qudt.org/vocab/unit/>
-        PREFIX sosa: <http://www.w3.org/ns/sosa/>
-        select ?this  {
-            ?observation a tern:Observation ;
-                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> ;
-                sosa:hasFeatureOfInterest ?this .
-        }
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
     """
         ] ;
-    urnp:examples [
-            urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/invalid.ttl"^^xsd:anyURI ;
-            urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/valid.ttl"^^xsd:anyURI
-        ] ;
+    urnp:examples _:n5ec6fc2c73d948c5bca1dad7dfa38749b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -50,25 +47,24 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:name "Simple result" ;
     sh:sparql [
             sh:select """
-        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-        PREFIX unit: <http://qudt.org/vocab/unit/>
-        PREFIX sosa: <http://www.w3.org/ns/sosa/>
-        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        select $this {
-            $this a tern:Observation ;
-                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> ;
-                sosa:hasSimpleResult ?simple ;
-                sosa:hasResult ?result .
-            ?result rdf:value ?value .
-            filter (?simple != ?value)
-        }
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples [
-            urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/invalid.ttl"^^xsd:anyURI ;
-            urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/valid.ttl"^^xsd:anyURI
-        ] ;
+    urnp:examples _:n5ec6fc2c73d948c5bca1dad7dfa38749b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -78,7 +74,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Plot Description protocol are made in the context of a site visit." ;
+    sh:description "Observations following the Plot Description are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
     sh:minCount 1 ;
@@ -87,20 +83,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
-        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-        PREFIX unit: <http://qudt.org/vocab/unit/>
-        PREFIX sosa: <http://www.w3.org/ns/sosa/>
-        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        select ?this {
-            ?this a tern:Observation ;
-                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> .
-        }
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
     """
         ] ;
-    urnp:examples [
-            urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/invalid.ttl"^^xsd:anyURI ;
-            urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/valid.ttl"^^xsd:anyURI
-        ] ;
+    urnp:examples _:n5ec6fc2c73d948c5bca1dad7dfa38749b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -110,28 +104,25 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "Result value's unit of measure _MUST_ have the value `unit:DEG`." ;
-    sh:hasValue <http://qudt.org/vocab/unit/DEG> ;
-    sh:message "The result _MUST_ have `unit:DEG` as the value for `tern:unit`." ;
+    sh:description "Result value's unit of measure _MUST_ have the value `values_tbd`." ;
+    sh:hasValue <file:///workspaces/dawe-rlp-spec/shapes/plot-description/aspect/values_tbd> ;
+    sh:message "The result _MUST_ have `values_tbd` as the value for `tern:unit`." ;
     sh:name "Unit of measure" ;
     sh:path tern:unit ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-        PREFIX unit: <http://qudt.org/vocab/unit/>
         PREFIX sosa: <http://www.w3.org/ns/sosa/>
-        select ?this {
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
             ?observation a tern:Observation ;
-                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> ;
                 sosa:hasResult ?this .
-        }
-    """
+        }"""
         ] ;
-    urnp:examples [
-            urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/invalid.ttl"^^xsd:anyURI ;
-            urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/valid.ttl"^^xsd:anyURI
-        ] ;
+    urnp:examples _:n5ec6fc2c73d948c5bca1dad7dfa38749b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -141,29 +132,28 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of procedure _MUST_ have the value `https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32`.
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32>`.
 
-`https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32` is the IRI for "Plot Description".""" ;
+    `<https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32>` is the IRI for "Plot Description".""" ;
     sh:hasValue <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
     sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32`." ;
     sh:name "Used procedure" ;
-    sh:path sosa:usedProcedure ;
+    sh:path <http://www.w3.org/ns/sosa/usedProcedure> ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
-        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-        PREFIX unit: <http://qudt.org/vocab/unit/>
-        PREFIX sosa: <http://www.w3.org/ns/sosa/>
-        select ?this {
-            ?this a tern:Observation ;
-                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> .
-        }
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
     """
         ] ;
-    urnp:examples [
-            urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/invalid.ttl"^^xsd:anyURI ;
-            urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/valid.ttl"^^xsd:anyURI
-        ] ;
+    urnp:examples _:n5ec6fc2c73d948c5bca1dad7dfa38749b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -173,29 +163,27 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "Value _MUST_ be between 0 exclusive and 360 inclusive." ;
-    sh:maxInclusive 360 ;
-    sh:message "The result _MUST_ have a value between 0 exclusive and 360 inclusive." ;
-    sh:minExclusive 0 ;
+    sh:datatype xsd:float ;
+    sh:description "Value _MUST_ be between values_tbd and values_tbd inclusive." ;
+    sh:maxInclusive <file:///workspaces/dawe-rlp-spec/shapes/plot-description/aspect/values_tbd> ;
+    sh:message "The result _MUST_ have a value between values_tbd and values_tbd inclusively." ;
+    sh:minInclusive <file:///workspaces/dawe-rlp-spec/shapes/plot-description/aspect/values_tbd> ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-        PREFIX unit: <http://qudt.org/vocab/unit/>
         PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         select ?this  {
             ?observation a tern:Observation ;
-                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> ;
                 sosa:hasResult ?this .
-        }
-    """
+        }"""
         ] ;
-    urnp:examples [
-            urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/invalid.ttl"^^xsd:anyURI ;
-            urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/valid.ttl"^^xsd:anyURI
-        ] ;
+    urnp:examples _:n5ec6fc2c73d948c5bca1dad7dfa38749b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -209,23 +197,27 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
     sh:name "Value type" ;
-    sh:path sosa:hasResult ;
+    sh:path <http://www.w3.org/ns/sosa/hasResult> ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
-        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-        PREFIX unit: <http://qudt.org/vocab/unit/>
-        PREFIX sosa: <http://www.w3.org/ns/sosa/>
-        select ?this {
-            ?this a tern:Observation ;
-                sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> .
-        }
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
     """
         ] ;
-    urnp:examples [
-            urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/invalid.ttl"^^xsd:anyURI ;
-            urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/valid.ttl"^^xsd:anyURI
-        ] ;
+    urnp:examples _:n5ec6fc2c73d948c5bca1dad7dfa38749b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/shapes.ttl"^^xsd:anyURI ;
+.
+
+_:n5ec6fc2c73d948c5bca1dad7dfa38749b2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/aspect/valid.ttl"^^xsd:anyURI ;
 .
 

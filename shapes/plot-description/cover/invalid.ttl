@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:invalid:homogeneity-measure:datatype>
+<urn:test:plot-description:invalid:cover:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:float`." ;
@@ -19,18 +19,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value 3 ;
-            sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:datatype> ;
+            sosa:isResultOf <urn:test:plot-description:invalid:cover:datatype> ;
             tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
         ] ;
     sosa:hasSimpleResult 3 ;
-    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
-    sosa:phenomenonTime <https://example.com/observation/homogeneity-measure/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
+    sosa:phenomenonTime <https://example.com/observation/cover/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:homogeneity-measure:feature-type>
+<urn:test:plot-description:invalid:cover:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -44,18 +44,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:feature-type> ;
+            sosa:isResultOf <urn:test:plot-description:invalid:cover:feature-type> ;
             tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
-    sosa:phenomenonTime <https://example.com/observation/homogeneity-measure/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
+    sosa:phenomenonTime <https://example.com/observation/cover/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:homogeneity-measure:simple-result>
+<urn:test:plot-description:invalid:cover:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -69,18 +69,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:simple-result> ;
+            sosa:isResultOf <urn:test:plot-description:invalid:cover:simple-result> ;
             tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
         ] ;
     sosa:hasSimpleResult "13.56"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
-    sosa:phenomenonTime <https://example.com/observation/homogeneity-measure/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
+    sosa:phenomenonTime <https://example.com/observation/cover/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:homogeneity-measure:site-visit>
+<urn:test:plot-description:invalid:cover:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -94,17 +94,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:site-visit> ;
+            sosa:isResultOf <urn:test:plot-description:invalid:cover:site-visit> ;
             tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
-    sosa:phenomenonTime <https://example.com/observation/homogeneity-measure/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
+    sosa:phenomenonTime <https://example.com/observation/cover/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
 .
 
-<urn:test:plot-description:invalid:homogeneity-measure:unit-of-measure>
+<urn:test:plot-description:invalid:cover:unit-of-measure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result unit of measure" ;
@@ -118,18 +118,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:unit-of-measure> ;
+            sosa:isResultOf <urn:test:plot-description:invalid:cover:unit-of-measure> ;
             tern:unit <urn:fake:unit>
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
-    sosa:phenomenonTime <https://example.com/observation/homogeneity-measure/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
+    sosa:phenomenonTime <https://example.com/observation/cover/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:homogeneity-measure:used-procedure>
+<urn:test:plot-description:invalid:cover:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Plot Description'." ;
@@ -143,18 +143,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:used-procedure> ;
+            sosa:isResultOf <urn:test:plot-description:invalid:cover:used-procedure> ;
             tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
-    sosa:phenomenonTime <https://example.com/observation/homogeneity-measure/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
+    sosa:phenomenonTime <https://example.com/observation/cover/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:homogeneity-measure:value-range>
+<urn:test:plot-description:invalid:cover:value-range>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value out of range" ;
@@ -168,18 +168,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "-1.11"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:value-range> ;
+            sosa:isResultOf <urn:test:plot-description:invalid:cover:value-range> ;
             tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
         ] ;
     sosa:hasSimpleResult "-1.11"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
-    sosa:phenomenonTime <https://example.com/observation/homogeneity-measure/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
+    sosa:phenomenonTime <https://example.com/observation/cover/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:homogeneity-measure:value-type>
+<urn:test:plot-description:invalid:cover:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:Float`." ;
@@ -191,12 +191,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasResult [
             a tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:value-type> ;
+            sosa:isResultOf <urn:test:plot-description:invalid:cover:value-type> ;
             tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
-    sosa:phenomenonTime <https://example.com/observation/homogeneity-measure/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
+    sosa:phenomenonTime <https://example.com/observation/cover/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
     tern:hasSiteVisit <urn:test:site> ;

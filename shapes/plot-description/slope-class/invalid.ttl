@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:invalid:landform-pattern:feature-type>
+<urn:test:plot-description:invalid:slope-class:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -18,19 +18,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/test/dawe-cv/0161440f-529b-50fe-9505-f3acd77381df> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:landform-pattern:feature-type> ;
-            tern:vocabulary <https://linked.data.gov.au/def/test/dawe-cv/19d91a7a-2733-4b84-9d2b-4bda4808c003>
+            rdf:value <https://linked.data.gov.au/def/test/dawe-cv/1db5ed2c-8be6-5bc7-a74d-7e8e8404d702> ;
+            sosa:isResultOf <urn:test:plot-description:invalid:slope-class:feature-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/test/dawe-cv/d893e669-c530-4bc3-a057-a5799ffcb5db>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/test/dawe-cv/0161440f-529b-50fe-9505-f3acd77381df> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/58e4aba5-78c3-4361-b08a-ae39a93c8cb0> ;
-    sosa:phenomenonTime <https://example.com/observation/landform-pattern/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/test/dawe-cv/1db5ed2c-8be6-5bc7-a74d-7e8e8404d702> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/132a1452-4fd7-473c-956b-3183dd315b67> ;
+    sosa:phenomenonTime <https://example.com/observation/slope-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:landform-pattern:result-value>
+<urn:test:plot-description:invalid:slope-class:result-value>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
@@ -44,18 +44,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <urn:fake:categorical:value> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:landform-pattern:result-value> ;
-            tern:vocabulary <https://linked.data.gov.au/def/test/dawe-cv/19d91a7a-2733-4b84-9d2b-4bda4808c003>
+            sosa:isResultOf <urn:test:plot-description:invalid:slope-class:result-value> ;
+            tern:vocabulary <https://linked.data.gov.au/def/test/dawe-cv/d893e669-c530-4bc3-a057-a5799ffcb5db>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/58e4aba5-78c3-4361-b08a-ae39a93c8cb0> ;
-    sosa:phenomenonTime <https://example.com/observation/landform-pattern/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/132a1452-4fd7-473c-956b-3183dd315b67> ;
+    sosa:phenomenonTime <https://example.com/observation/slope-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:landform-pattern:simple-result>
+<urn:test:plot-description:invalid:slope-class:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -68,19 +68,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/test/dawe-cv/0161440f-529b-50fe-9505-f3acd77381df> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:landform-pattern:simple-result> ;
-            tern:vocabulary <https://linked.data.gov.au/def/test/dawe-cv/19d91a7a-2733-4b84-9d2b-4bda4808c003>
+            rdf:value <https://linked.data.gov.au/def/test/dawe-cv/1db5ed2c-8be6-5bc7-a74d-7e8e8404d702> ;
+            sosa:isResultOf <urn:test:plot-description:invalid:slope-class:simple-result> ;
+            tern:vocabulary <https://linked.data.gov.au/def/test/dawe-cv/d893e669-c530-4bc3-a057-a5799ffcb5db>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/58e4aba5-78c3-4361-b08a-ae39a93c8cb0> ;
-    sosa:phenomenonTime <https://example.com/observation/landform-pattern/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/132a1452-4fd7-473c-956b-3183dd315b67> ;
+    sosa:phenomenonTime <https://example.com/observation/slope-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:landform-pattern:site-visit>
+<urn:test:plot-description:invalid:slope-class:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -93,18 +93,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/test/dawe-cv/0161440f-529b-50fe-9505-f3acd77381df> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:landform-pattern:site-visit> ;
-            tern:vocabulary <https://linked.data.gov.au/def/test/dawe-cv/19d91a7a-2733-4b84-9d2b-4bda4808c003>
+            rdf:value <https://linked.data.gov.au/def/test/dawe-cv/1db5ed2c-8be6-5bc7-a74d-7e8e8404d702> ;
+            sosa:isResultOf <urn:test:plot-description:invalid:slope-class:site-visit> ;
+            tern:vocabulary <https://linked.data.gov.au/def/test/dawe-cv/d893e669-c530-4bc3-a057-a5799ffcb5db>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/test/dawe-cv/0161440f-529b-50fe-9505-f3acd77381df> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/58e4aba5-78c3-4361-b08a-ae39a93c8cb0> ;
-    sosa:phenomenonTime <https://example.com/observation/landform-pattern/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/test/dawe-cv/1db5ed2c-8be6-5bc7-a74d-7e8e8404d702> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/132a1452-4fd7-473c-956b-3183dd315b67> ;
+    sosa:phenomenonTime <https://example.com/observation/slope-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
 .
 
-<urn:test:plot-description:invalid:landform-pattern:used-procedure>
+<urn:test:plot-description:invalid:slope-class:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Plot Description'." ;
@@ -117,19 +117,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/test/dawe-cv/0161440f-529b-50fe-9505-f3acd77381df> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:landform-pattern:used-procedure> ;
-            tern:vocabulary <https://linked.data.gov.au/def/test/dawe-cv/19d91a7a-2733-4b84-9d2b-4bda4808c003>
+            rdf:value <https://linked.data.gov.au/def/test/dawe-cv/1db5ed2c-8be6-5bc7-a74d-7e8e8404d702> ;
+            sosa:isResultOf <urn:test:plot-description:invalid:slope-class:used-procedure> ;
+            tern:vocabulary <https://linked.data.gov.au/def/test/dawe-cv/d893e669-c530-4bc3-a057-a5799ffcb5db>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/test/dawe-cv/0161440f-529b-50fe-9505-f3acd77381df> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/58e4aba5-78c3-4361-b08a-ae39a93c8cb0> ;
-    sosa:phenomenonTime <https://example.com/observation/landform-pattern/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/test/dawe-cv/1db5ed2c-8be6-5bc7-a74d-7e8e8404d702> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/132a1452-4fd7-473c-956b-3183dd315b67> ;
+    sosa:phenomenonTime <https://example.com/observation/slope-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:landform-pattern:value-type>
+<urn:test:plot-description:invalid:slope-class:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
@@ -140,19 +140,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/test/dawe-cv/0161440f-529b-50fe-9505-f3acd77381df> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:landform-pattern:value-type> ;
-            tern:vocabulary <https://linked.data.gov.au/def/test/dawe-cv/19d91a7a-2733-4b84-9d2b-4bda4808c003>
+            rdf:value <https://linked.data.gov.au/def/test/dawe-cv/1db5ed2c-8be6-5bc7-a74d-7e8e8404d702> ;
+            sosa:isResultOf <urn:test:plot-description:invalid:slope-class:value-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/test/dawe-cv/d893e669-c530-4bc3-a057-a5799ffcb5db>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/test/dawe-cv/0161440f-529b-50fe-9505-f3acd77381df> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/58e4aba5-78c3-4361-b08a-ae39a93c8cb0> ;
-    sosa:phenomenonTime <https://example.com/observation/landform-pattern/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/test/dawe-cv/1db5ed2c-8be6-5bc7-a74d-7e8e8404d702> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/132a1452-4fd7-473c-956b-3183dd315b67> ;
+    sosa:phenomenonTime <https://example.com/observation/slope-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:landform-pattern:vocabulary>
+<urn:test:plot-description:invalid:slope-class:vocabulary>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect vocabulary" ;
@@ -165,13 +165,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/test/dawe-cv/0161440f-529b-50fe-9505-f3acd77381df> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:landform-pattern:vocabulary> ;
+            rdf:value <https://linked.data.gov.au/def/test/dawe-cv/1db5ed2c-8be6-5bc7-a74d-7e8e8404d702> ;
+            sosa:isResultOf <urn:test:plot-description:invalid:slope-class:vocabulary> ;
             tern:vocabulary <urn:fake:vocabulary>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/test/dawe-cv/0161440f-529b-50fe-9505-f3acd77381df> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/58e4aba5-78c3-4361-b08a-ae39a93c8cb0> ;
-    sosa:phenomenonTime <https://example.com/observation/landform-pattern/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/test/dawe-cv/1db5ed2c-8be6-5bc7-a74d-7e8e8404d702> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/132a1452-4fd7-473c-956b-3183dd315b67> ;
+    sosa:phenomenonTime <https://example.com/observation/slope-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
     tern:hasSiteVisit <urn:test:site> ;
