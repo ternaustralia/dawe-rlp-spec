@@ -8,7 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:cover-full:uppermost-height:feature-type>
+<urn:shapes:cover-lite:uppermost-height:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -33,11 +33,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n142bceca780847b48cfa1aaa6ea27b2fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-full/uppermost-height/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:nad4f3f68fa214bd68f5d101b9b708201b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite/uppermost-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-full:uppermost-height:simple-result>
+<urn:shapes:cover-lite:uppermost-height:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -65,17 +65,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n142bceca780847b48cfa1aaa6ea27b2fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-full/uppermost-height/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:nad4f3f68fa214bd68f5d101b9b708201b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite/uppermost-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-full:uppermost-height:site-visit>
+<urn:shapes:cover-lite:uppermost-height:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Cover - Full protocol are made in the context of a site visit." ;
+    sh:description "Observations following the Cover - Lite protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
     sh:minCount 1 ;
@@ -95,11 +95,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n142bceca780847b48cfa1aaa6ea27b2fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-full/uppermost-height/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:nad4f3f68fa214bd68f5d101b9b708201b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite/uppermost-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-full:uppermost-height:unit-of-measure>
+<urn:shapes:cover-lite:uppermost-height:unit-of-measure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -123,21 +123,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n142bceca780847b48cfa1aaa6ea27b2fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-full/uppermost-height/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:nad4f3f68fa214bd68f5d101b9b708201b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite/uppermost-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-full:uppermost-height:used-procedure>
+<urn:shapes:cover-lite:uppermost-height:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/test/dawe-cv/576f634e-2706-4f18-b561-0636d4c007d0>`.
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/test/dawe-cv/aa1525f9-c3f2-4f7d-98cc-6a7d3aec9d8a>`.
 
-    `<https://linked.data.gov.au/def/test/dawe-cv/576f634e-2706-4f18-b561-0636d4c007d0>` is the IRI for "Cover - Full protocol".""" ;
-    sh:hasValue <https://linked.data.gov.au/def/test/dawe-cv/576f634e-2706-4f18-b561-0636d4c007d0> ;
-    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/test/dawe-cv/576f634e-2706-4f18-b561-0636d4c007d0`." ;
+    `<https://linked.data.gov.au/def/test/dawe-cv/aa1525f9-c3f2-4f7d-98cc-6a7d3aec9d8a>` is the IRI for "Cover - Lite protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/test/dawe-cv/aa1525f9-c3f2-4f7d-98cc-6a7d3aec9d8a> ;
+    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/test/dawe-cv/aa1525f9-c3f2-4f7d-98cc-6a7d3aec9d8a`." ;
     sh:name "Used procedure" ;
     sh:path <http://www.w3.org/ns/sosa/usedProcedure> ;
     sh:target [
@@ -154,11 +154,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n142bceca780847b48cfa1aaa6ea27b2fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-full/uppermost-height/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:nad4f3f68fa214bd68f5d101b9b708201b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite/uppermost-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-full:uppermost-height:value-range>
+<urn:shapes:cover-lite:uppermost-height:value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -166,7 +166,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be at least 1.5 m." ;
-    sh:message "The result _MUST_ at least be 1.5 m." ;
+    sh:message "The result _MUST_ have a value be at least 1.5 m." ;
     sh:minInclusive 1.5 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
@@ -183,11 +183,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n142bceca780847b48cfa1aaa6ea27b2fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-full/uppermost-height/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:nad4f3f68fa214bd68f5d101b9b708201b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite/uppermost-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-full:uppermost-height:value-type>
+<urn:shapes:cover-lite:uppermost-height:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -212,12 +212,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n142bceca780847b48cfa1aaa6ea27b2fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-full/uppermost-height/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:nad4f3f68fa214bd68f5d101b9b708201b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite/uppermost-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n142bceca780847b48cfa1aaa6ea27b2fb2
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-full/uppermost-height/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-full/uppermost-height/valid.ttl"^^xsd:anyURI ;
+_:nad4f3f68fa214bd68f5d101b9b708201b2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite/uppermost-height/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite/uppermost-height/valid.ttl"^^xsd:anyURI ;
 .
 
