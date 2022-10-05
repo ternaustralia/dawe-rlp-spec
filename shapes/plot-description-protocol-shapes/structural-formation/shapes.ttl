@@ -25,7 +25,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX unit: <http://qudt.org/vocab/unit/>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     select ?this  {
-        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/103f26cb-0194-45d2-8b1a-e18e1da6df2b>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/103f26cb-0194-45d2-8b1a-e18e1da6df2b>}
         ?observation a tern:Observation ;
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
@@ -45,111 +45,111 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     reg:status reg:statusSubmitted ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Vegetation structural formation codes controlled vocabulary." ;
     sh:in (
-            <https://linked.data.gov.au/def/test/dawe-cv/0209a621-6613-53bb-bfa8-f083d6f9dd20>
-            <https://linked.data.gov.au/def/test/dawe-cv/037fe2e1-018f-5b40-8554-87badaa719ed>
-            <https://linked.data.gov.au/def/test/dawe-cv/044605cd-0c8a-5ef0-8826-078cd6a22079>
-            <https://linked.data.gov.au/def/test/dawe-cv/0ab34054-b896-5657-80a9-e74c03132087>
-            <https://linked.data.gov.au/def/test/dawe-cv/0b523033-6fb2-5b31-b5d7-2366615c0e85>
-            <https://linked.data.gov.au/def/test/dawe-cv/0ccf4b4d-4030-5bab-9136-47bfe7a72592>
-            <https://linked.data.gov.au/def/test/dawe-cv/1649df85-9105-5e7c-b647-9f355aff878c>
-            <https://linked.data.gov.au/def/test/dawe-cv/18a56a22-385d-5fd8-88f2-74e9dfabba8c>
-            <https://linked.data.gov.au/def/test/dawe-cv/1bff977f-d7b7-5490-8e99-c02fa28ae1e5>
-            <https://linked.data.gov.au/def/test/dawe-cv/1f86551d-2ef2-5d0b-b9be-0ee86db857d5>
-            <https://linked.data.gov.au/def/test/dawe-cv/2504eaba-1a9a-5849-b59f-7c518ed187c1>
-            <https://linked.data.gov.au/def/test/dawe-cv/2d513c0f-26c1-5cdf-aedb-1b165208ea35>
-            <https://linked.data.gov.au/def/test/dawe-cv/357aaf19-3dd5-5b0e-9b58-254cbde7b160>
-            <https://linked.data.gov.au/def/test/dawe-cv/395c92cb-6e3b-5ac3-866a-2e22ec65b65b>
-            <https://linked.data.gov.au/def/test/dawe-cv/3b54140c-5ac1-549f-ac2e-69a28798121b>
-            <https://linked.data.gov.au/def/test/dawe-cv/3e2ddff8-5029-5712-a14b-932689475c41>
-            <https://linked.data.gov.au/def/test/dawe-cv/3e3b0cac-aa89-56d6-b462-b9c48846bc90>
-            <https://linked.data.gov.au/def/test/dawe-cv/3e95caa2-c911-57f6-8452-7e27d2d5ee72>
-            <https://linked.data.gov.au/def/test/dawe-cv/4099e8f2-b028-54f4-8b3d-d249f46d6ad2>
-            <https://linked.data.gov.au/def/test/dawe-cv/40e82fce-a34f-5d7b-bcb8-e5c1508e8a4d>
-            <https://linked.data.gov.au/def/test/dawe-cv/416a02a5-ada3-5d5a-bea3-7a4eb6a7099a>
-            <https://linked.data.gov.au/def/test/dawe-cv/42cd129f-5e8f-5f84-a3b6-b7b075ae2f22>
-            <https://linked.data.gov.au/def/test/dawe-cv/44f61f24-fb1d-581f-af4c-aed29b4f3c88>
-            <https://linked.data.gov.au/def/test/dawe-cv/46393ba4-269a-5482-98e7-c427906e817f>
-            <https://linked.data.gov.au/def/test/dawe-cv/46d2e089-5672-5fbb-ba98-bf997181e6e3>
-            <https://linked.data.gov.au/def/test/dawe-cv/4704bfdf-91c7-5936-9587-ddc9a72b4d55>
-            <https://linked.data.gov.au/def/test/dawe-cv/487bee6a-0193-5f13-b85c-93b46fb430aa>
-            <https://linked.data.gov.au/def/test/dawe-cv/4a7c3a4d-83b0-5e3b-bc88-b35d82f25ee7>
-            <https://linked.data.gov.au/def/test/dawe-cv/4b51c095-8e69-58f1-a63e-cc8149b01da6>
-            <https://linked.data.gov.au/def/test/dawe-cv/4be0c21b-cccf-5b5c-9bdc-34b501a8e2e7>
-            <https://linked.data.gov.au/def/test/dawe-cv/4c1d87a2-336e-585a-bd27-16e7eb3cf8d6>
-            <https://linked.data.gov.au/def/test/dawe-cv/4e7912a2-516c-5b99-82cd-5543a3a242aa>
-            <https://linked.data.gov.au/def/test/dawe-cv/4ec3cb34-8e6c-5341-b26e-ab044d6b8c29>
-            <https://linked.data.gov.au/def/test/dawe-cv/4ed5f4a1-da63-542b-a5f2-742527b8dc52>
-            <https://linked.data.gov.au/def/test/dawe-cv/519a25a4-ff4b-5808-ac08-fa62ebc15c1c>
-            <https://linked.data.gov.au/def/test/dawe-cv/564602d6-21a7-5437-a8cf-e5e9d17745b5>
-            <https://linked.data.gov.au/def/test/dawe-cv/588ad6ed-08db-5109-9106-8508f1800916>
-            <https://linked.data.gov.au/def/test/dawe-cv/596e4789-abbe-5a1c-b37f-27692d8255cd>
-            <https://linked.data.gov.au/def/test/dawe-cv/5a9fcd70-2d61-5fd2-a3ad-2cfb3965b2cb>
-            <https://linked.data.gov.au/def/test/dawe-cv/5c788ce7-eaf4-5821-84c3-6768b9214411>
-            <https://linked.data.gov.au/def/test/dawe-cv/5d9a009b-1dd5-5889-8af3-431fa8d9081e>
-            <https://linked.data.gov.au/def/test/dawe-cv/5ef42ce6-511d-51fd-9a76-5080d69af652>
-            <https://linked.data.gov.au/def/test/dawe-cv/661047a0-a7b1-5574-b0ab-0f0964742c10>
-            <https://linked.data.gov.au/def/test/dawe-cv/682ba192-151e-5b20-aa98-a67b1d321933>
-            <https://linked.data.gov.au/def/test/dawe-cv/6abb43f4-e280-5370-b533-fa2a65d3af03>
-            <https://linked.data.gov.au/def/test/dawe-cv/6f88920e-e762-53e0-b263-44e7f0faf71e>
-            <https://linked.data.gov.au/def/test/dawe-cv/735869c9-7870-5204-9a61-b86bdce55587>
-            <https://linked.data.gov.au/def/test/dawe-cv/76a57474-b82a-56e4-a20e-55438f851097>
-            <https://linked.data.gov.au/def/test/dawe-cv/770f6180-84a2-5c95-9972-c26bb974e8ea>
-            <https://linked.data.gov.au/def/test/dawe-cv/7a0c3749-4bc9-5a64-8962-dbcb17ea71f2>
-            <https://linked.data.gov.au/def/test/dawe-cv/7e9ae873-b828-56cf-8ad3-472c4229fafc>
-            <https://linked.data.gov.au/def/test/dawe-cv/8094597d-c5c4-5b0b-b9a7-c41d04fb7286>
-            <https://linked.data.gov.au/def/test/dawe-cv/862b965c-e022-59f0-bdf2-240ede926bfa>
-            <https://linked.data.gov.au/def/test/dawe-cv/86b5b700-fe6d-5dfe-ba86-b265bd42887b>
-            <https://linked.data.gov.au/def/test/dawe-cv/87bab79b-c818-5a97-a30a-cf72b184204e>
-            <https://linked.data.gov.au/def/test/dawe-cv/8afb423d-be0c-5713-985b-aa511d128b5a>
-            <https://linked.data.gov.au/def/test/dawe-cv/8c2b6b03-8123-5165-b29b-37262a777d83>
-            <https://linked.data.gov.au/def/test/dawe-cv/8dbe490b-17c6-52e1-8256-a8754c7c7547>
-            <https://linked.data.gov.au/def/test/dawe-cv/96327994-6aaa-5630-ae6c-93a23e9ca90d>
-            <https://linked.data.gov.au/def/test/dawe-cv/9a4767bb-710a-57b1-bf3e-dd9984ffbb6e>
-            <https://linked.data.gov.au/def/test/dawe-cv/a045f7a5-9e13-5881-a426-4e44c7785fd4>
-            <https://linked.data.gov.au/def/test/dawe-cv/a0e3667a-b332-5d63-b304-64d4c797ed2f>
-            <https://linked.data.gov.au/def/test/dawe-cv/a13bf8c5-30bb-5705-90fc-d73f1a72635c>
-            <https://linked.data.gov.au/def/test/dawe-cv/a5f8ddf2-9322-5696-848b-f929b9e85f0e>
-            <https://linked.data.gov.au/def/test/dawe-cv/a6bb39c1-cf74-5547-9092-cc7b4f2d7a13>
-            <https://linked.data.gov.au/def/test/dawe-cv/acdb4cf6-5977-5263-bea6-7502fda9f9fd>
-            <https://linked.data.gov.au/def/test/dawe-cv/afd6cf33-9ffb-500f-bf0e-8d5763935a8f>
-            <https://linked.data.gov.au/def/test/dawe-cv/b0032e6a-99f9-5863-9971-85fec93f24e8>
-            <https://linked.data.gov.au/def/test/dawe-cv/b2f1019e-955c-5141-a4a9-d0262b9c9982>
-            <https://linked.data.gov.au/def/test/dawe-cv/b782a3bb-04e0-52d6-aa3f-d85101dbdc7e>
-            <https://linked.data.gov.au/def/test/dawe-cv/bfdbef8f-e8f8-5299-9fd0-9807444fce6a>
-            <https://linked.data.gov.au/def/test/dawe-cv/c267162e-6485-51e1-b0c0-73163e078010>
-            <https://linked.data.gov.au/def/test/dawe-cv/c427da66-ec25-5c1c-9c0b-bc1a61a42a30>
-            <https://linked.data.gov.au/def/test/dawe-cv/c5c1d2ba-ccdb-5665-bf4b-f13ef33e9e05>
-            <https://linked.data.gov.au/def/test/dawe-cv/c8f0df84-c4c0-5e65-a18f-6f31133cf6bc>
-            <https://linked.data.gov.au/def/test/dawe-cv/cca69a68-3c56-5e3e-97e3-c2d0d1350e53>
-            <https://linked.data.gov.au/def/test/dawe-cv/ccc38e07-a6a8-56e6-bb13-cfe2beb8ecbd>
-            <https://linked.data.gov.au/def/test/dawe-cv/cf822c16-eaeb-55e3-a213-d423a8933cd6>
-            <https://linked.data.gov.au/def/test/dawe-cv/d68e0a05-d018-5859-a547-d6bcbe6ab103>
-            <https://linked.data.gov.au/def/test/dawe-cv/e659cbda-2b61-5435-8792-38829688cd19>
-            <https://linked.data.gov.au/def/test/dawe-cv/e67975e1-c852-59fb-8e42-a9a849d9a496>
-            <https://linked.data.gov.au/def/test/dawe-cv/efda328c-883f-55ed-ae6b-c6828be6c7b9>
-            <https://linked.data.gov.au/def/test/dawe-cv/f01330c2-e5f0-5364-a436-f9a8d717235b>
-            <https://linked.data.gov.au/def/test/dawe-cv/f28a9b5a-bb85-56b7-b2d6-b0b920555825>
-            <https://linked.data.gov.au/def/test/dawe-cv/f35d8761-42c1-5a70-93a5-1e41436e54c2>
-            <https://linked.data.gov.au/def/test/dawe-cv/fa632119-28dd-5bf7-b97a-8f17c96b6319>
-            <https://linked.data.gov.au/def/test/dawe-cv/fca43c4c-a3cc-5730-acaa-c21e8cc9a577>
-            <https://linked.data.gov.au/def/test/dawe-cv/fd0c3961-9ab6-5464-a5f4-1a513626a400>
-            <https://linked.data.gov.au/def/test/dawe-cv/fd45ad42-bf69-50f1-bdda-7fc0d53c47ba>
-            <https://linked.data.gov.au/def/test/dawe-cv/ffeebb2f-589e-5916-bc8f-ba1cef48286e>
-            <https://linked.data.gov.au/def/test/dawe-cv/1865742e-2bdf-570b-bf69-735eec9bc565>
-            <https://linked.data.gov.au/def/test/dawe-cv/32140524-eec7-5eb6-b458-43cbdebf3994>
-            <https://linked.data.gov.au/def/test/dawe-cv/4189268b-d394-5ec5-9178-78971d58cc04>
-            <https://linked.data.gov.au/def/test/dawe-cv/59602444-93c9-59ec-8667-50f5166d2960>
-            <https://linked.data.gov.au/def/test/dawe-cv/6c52e5c5-040b-59cf-94a5-5cf901831869>
-            <https://linked.data.gov.au/def/test/dawe-cv/77732130-2460-5829-b51f-3d777c3ca3a8>
-            <https://linked.data.gov.au/def/test/dawe-cv/7e552e5b-38c6-55be-badd-383255502144>
-            <https://linked.data.gov.au/def/test/dawe-cv/81578f18-8724-578c-bb05-f156c17d65be>
-            <https://linked.data.gov.au/def/test/dawe-cv/95399ded-4dde-5ddd-ae9e-8e7fb113f1c9>
-            <https://linked.data.gov.au/def/test/dawe-cv/9539b7a8-6820-5d68-a7ea-b8d9cd097964>
-            <https://linked.data.gov.au/def/test/dawe-cv/b7a9ff8f-a7db-55eb-a287-d5e0209e256a>
-            <https://linked.data.gov.au/def/test/dawe-cv/b8691caf-ee73-58c7-8068-ee84c70d8b38>
-            <https://linked.data.gov.au/def/test/dawe-cv/c3203e3e-7fdb-51d2-9a2c-ff5805d181b2>
-            <https://linked.data.gov.au/def/test/dawe-cv/c480c386-6884-5f98-a868-7baa8f739f15>
-            <https://linked.data.gov.au/def/test/dawe-cv/d844b23f-3d82-53b0-8d1f-128fc729d3bb>
+            <https://linked.data.gov.au/def/nrm/0209a621-6613-53bb-bfa8-f083d6f9dd20>
+            <https://linked.data.gov.au/def/nrm/037fe2e1-018f-5b40-8554-87badaa719ed>
+            <https://linked.data.gov.au/def/nrm/044605cd-0c8a-5ef0-8826-078cd6a22079>
+            <https://linked.data.gov.au/def/nrm/0ab34054-b896-5657-80a9-e74c03132087>
+            <https://linked.data.gov.au/def/nrm/0b523033-6fb2-5b31-b5d7-2366615c0e85>
+            <https://linked.data.gov.au/def/nrm/0ccf4b4d-4030-5bab-9136-47bfe7a72592>
+            <https://linked.data.gov.au/def/nrm/1649df85-9105-5e7c-b647-9f355aff878c>
+            <https://linked.data.gov.au/def/nrm/18a56a22-385d-5fd8-88f2-74e9dfabba8c>
+            <https://linked.data.gov.au/def/nrm/1bff977f-d7b7-5490-8e99-c02fa28ae1e5>
+            <https://linked.data.gov.au/def/nrm/1f86551d-2ef2-5d0b-b9be-0ee86db857d5>
+            <https://linked.data.gov.au/def/nrm/2504eaba-1a9a-5849-b59f-7c518ed187c1>
+            <https://linked.data.gov.au/def/nrm/2d513c0f-26c1-5cdf-aedb-1b165208ea35>
+            <https://linked.data.gov.au/def/nrm/357aaf19-3dd5-5b0e-9b58-254cbde7b160>
+            <https://linked.data.gov.au/def/nrm/395c92cb-6e3b-5ac3-866a-2e22ec65b65b>
+            <https://linked.data.gov.au/def/nrm/3b54140c-5ac1-549f-ac2e-69a28798121b>
+            <https://linked.data.gov.au/def/nrm/3e2ddff8-5029-5712-a14b-932689475c41>
+            <https://linked.data.gov.au/def/nrm/3e3b0cac-aa89-56d6-b462-b9c48846bc90>
+            <https://linked.data.gov.au/def/nrm/3e95caa2-c911-57f6-8452-7e27d2d5ee72>
+            <https://linked.data.gov.au/def/nrm/4099e8f2-b028-54f4-8b3d-d249f46d6ad2>
+            <https://linked.data.gov.au/def/nrm/40e82fce-a34f-5d7b-bcb8-e5c1508e8a4d>
+            <https://linked.data.gov.au/def/nrm/416a02a5-ada3-5d5a-bea3-7a4eb6a7099a>
+            <https://linked.data.gov.au/def/nrm/42cd129f-5e8f-5f84-a3b6-b7b075ae2f22>
+            <https://linked.data.gov.au/def/nrm/44f61f24-fb1d-581f-af4c-aed29b4f3c88>
+            <https://linked.data.gov.au/def/nrm/46393ba4-269a-5482-98e7-c427906e817f>
+            <https://linked.data.gov.au/def/nrm/46d2e089-5672-5fbb-ba98-bf997181e6e3>
+            <https://linked.data.gov.au/def/nrm/4704bfdf-91c7-5936-9587-ddc9a72b4d55>
+            <https://linked.data.gov.au/def/nrm/487bee6a-0193-5f13-b85c-93b46fb430aa>
+            <https://linked.data.gov.au/def/nrm/4a7c3a4d-83b0-5e3b-bc88-b35d82f25ee7>
+            <https://linked.data.gov.au/def/nrm/4b51c095-8e69-58f1-a63e-cc8149b01da6>
+            <https://linked.data.gov.au/def/nrm/4be0c21b-cccf-5b5c-9bdc-34b501a8e2e7>
+            <https://linked.data.gov.au/def/nrm/4c1d87a2-336e-585a-bd27-16e7eb3cf8d6>
+            <https://linked.data.gov.au/def/nrm/4e7912a2-516c-5b99-82cd-5543a3a242aa>
+            <https://linked.data.gov.au/def/nrm/4ec3cb34-8e6c-5341-b26e-ab044d6b8c29>
+            <https://linked.data.gov.au/def/nrm/4ed5f4a1-da63-542b-a5f2-742527b8dc52>
+            <https://linked.data.gov.au/def/nrm/519a25a4-ff4b-5808-ac08-fa62ebc15c1c>
+            <https://linked.data.gov.au/def/nrm/564602d6-21a7-5437-a8cf-e5e9d17745b5>
+            <https://linked.data.gov.au/def/nrm/588ad6ed-08db-5109-9106-8508f1800916>
+            <https://linked.data.gov.au/def/nrm/596e4789-abbe-5a1c-b37f-27692d8255cd>
+            <https://linked.data.gov.au/def/nrm/5a9fcd70-2d61-5fd2-a3ad-2cfb3965b2cb>
+            <https://linked.data.gov.au/def/nrm/5c788ce7-eaf4-5821-84c3-6768b9214411>
+            <https://linked.data.gov.au/def/nrm/5d9a009b-1dd5-5889-8af3-431fa8d9081e>
+            <https://linked.data.gov.au/def/nrm/5ef42ce6-511d-51fd-9a76-5080d69af652>
+            <https://linked.data.gov.au/def/nrm/661047a0-a7b1-5574-b0ab-0f0964742c10>
+            <https://linked.data.gov.au/def/nrm/682ba192-151e-5b20-aa98-a67b1d321933>
+            <https://linked.data.gov.au/def/nrm/6abb43f4-e280-5370-b533-fa2a65d3af03>
+            <https://linked.data.gov.au/def/nrm/6f88920e-e762-53e0-b263-44e7f0faf71e>
+            <https://linked.data.gov.au/def/nrm/735869c9-7870-5204-9a61-b86bdce55587>
+            <https://linked.data.gov.au/def/nrm/76a57474-b82a-56e4-a20e-55438f851097>
+            <https://linked.data.gov.au/def/nrm/770f6180-84a2-5c95-9972-c26bb974e8ea>
+            <https://linked.data.gov.au/def/nrm/7a0c3749-4bc9-5a64-8962-dbcb17ea71f2>
+            <https://linked.data.gov.au/def/nrm/7e9ae873-b828-56cf-8ad3-472c4229fafc>
+            <https://linked.data.gov.au/def/nrm/8094597d-c5c4-5b0b-b9a7-c41d04fb7286>
+            <https://linked.data.gov.au/def/nrm/862b965c-e022-59f0-bdf2-240ede926bfa>
+            <https://linked.data.gov.au/def/nrm/86b5b700-fe6d-5dfe-ba86-b265bd42887b>
+            <https://linked.data.gov.au/def/nrm/87bab79b-c818-5a97-a30a-cf72b184204e>
+            <https://linked.data.gov.au/def/nrm/8afb423d-be0c-5713-985b-aa511d128b5a>
+            <https://linked.data.gov.au/def/nrm/8c2b6b03-8123-5165-b29b-37262a777d83>
+            <https://linked.data.gov.au/def/nrm/8dbe490b-17c6-52e1-8256-a8754c7c7547>
+            <https://linked.data.gov.au/def/nrm/96327994-6aaa-5630-ae6c-93a23e9ca90d>
+            <https://linked.data.gov.au/def/nrm/9a4767bb-710a-57b1-bf3e-dd9984ffbb6e>
+            <https://linked.data.gov.au/def/nrm/a045f7a5-9e13-5881-a426-4e44c7785fd4>
+            <https://linked.data.gov.au/def/nrm/a0e3667a-b332-5d63-b304-64d4c797ed2f>
+            <https://linked.data.gov.au/def/nrm/a13bf8c5-30bb-5705-90fc-d73f1a72635c>
+            <https://linked.data.gov.au/def/nrm/a5f8ddf2-9322-5696-848b-f929b9e85f0e>
+            <https://linked.data.gov.au/def/nrm/a6bb39c1-cf74-5547-9092-cc7b4f2d7a13>
+            <https://linked.data.gov.au/def/nrm/acdb4cf6-5977-5263-bea6-7502fda9f9fd>
+            <https://linked.data.gov.au/def/nrm/afd6cf33-9ffb-500f-bf0e-8d5763935a8f>
+            <https://linked.data.gov.au/def/nrm/b0032e6a-99f9-5863-9971-85fec93f24e8>
+            <https://linked.data.gov.au/def/nrm/b2f1019e-955c-5141-a4a9-d0262b9c9982>
+            <https://linked.data.gov.au/def/nrm/b782a3bb-04e0-52d6-aa3f-d85101dbdc7e>
+            <https://linked.data.gov.au/def/nrm/bfdbef8f-e8f8-5299-9fd0-9807444fce6a>
+            <https://linked.data.gov.au/def/nrm/c267162e-6485-51e1-b0c0-73163e078010>
+            <https://linked.data.gov.au/def/nrm/c427da66-ec25-5c1c-9c0b-bc1a61a42a30>
+            <https://linked.data.gov.au/def/nrm/c5c1d2ba-ccdb-5665-bf4b-f13ef33e9e05>
+            <https://linked.data.gov.au/def/nrm/c8f0df84-c4c0-5e65-a18f-6f31133cf6bc>
+            <https://linked.data.gov.au/def/nrm/cca69a68-3c56-5e3e-97e3-c2d0d1350e53>
+            <https://linked.data.gov.au/def/nrm/ccc38e07-a6a8-56e6-bb13-cfe2beb8ecbd>
+            <https://linked.data.gov.au/def/nrm/cf822c16-eaeb-55e3-a213-d423a8933cd6>
+            <https://linked.data.gov.au/def/nrm/d68e0a05-d018-5859-a547-d6bcbe6ab103>
+            <https://linked.data.gov.au/def/nrm/e659cbda-2b61-5435-8792-38829688cd19>
+            <https://linked.data.gov.au/def/nrm/e67975e1-c852-59fb-8e42-a9a849d9a496>
+            <https://linked.data.gov.au/def/nrm/efda328c-883f-55ed-ae6b-c6828be6c7b9>
+            <https://linked.data.gov.au/def/nrm/f01330c2-e5f0-5364-a436-f9a8d717235b>
+            <https://linked.data.gov.au/def/nrm/f28a9b5a-bb85-56b7-b2d6-b0b920555825>
+            <https://linked.data.gov.au/def/nrm/f35d8761-42c1-5a70-93a5-1e41436e54c2>
+            <https://linked.data.gov.au/def/nrm/fa632119-28dd-5bf7-b97a-8f17c96b6319>
+            <https://linked.data.gov.au/def/nrm/fca43c4c-a3cc-5730-acaa-c21e8cc9a577>
+            <https://linked.data.gov.au/def/nrm/fd0c3961-9ab6-5464-a5f4-1a513626a400>
+            <https://linked.data.gov.au/def/nrm/fd45ad42-bf69-50f1-bdda-7fc0d53c47ba>
+            <https://linked.data.gov.au/def/nrm/ffeebb2f-589e-5916-bc8f-ba1cef48286e>
+            <https://linked.data.gov.au/def/nrm/1865742e-2bdf-570b-bf69-735eec9bc565>
+            <https://linked.data.gov.au/def/nrm/32140524-eec7-5eb6-b458-43cbdebf3994>
+            <https://linked.data.gov.au/def/nrm/4189268b-d394-5ec5-9178-78971d58cc04>
+            <https://linked.data.gov.au/def/nrm/59602444-93c9-59ec-8667-50f5166d2960>
+            <https://linked.data.gov.au/def/nrm/6c52e5c5-040b-59cf-94a5-5cf901831869>
+            <https://linked.data.gov.au/def/nrm/77732130-2460-5829-b51f-3d777c3ca3a8>
+            <https://linked.data.gov.au/def/nrm/7e552e5b-38c6-55be-badd-383255502144>
+            <https://linked.data.gov.au/def/nrm/81578f18-8724-578c-bb05-f156c17d65be>
+            <https://linked.data.gov.au/def/nrm/95399ded-4dde-5ddd-ae9e-8e7fb113f1c9>
+            <https://linked.data.gov.au/def/nrm/9539b7a8-6820-5d68-a7ea-b8d9cd097964>
+            <https://linked.data.gov.au/def/nrm/b7a9ff8f-a7db-55eb-a287-d5e0209e256a>
+            <https://linked.data.gov.au/def/nrm/b8691caf-ee73-58c7-8068-ee84c70d8b38>
+            <https://linked.data.gov.au/def/nrm/c3203e3e-7fdb-51d2-9a2c-ff5805d181b2>
+            <https://linked.data.gov.au/def/nrm/c480c386-6884-5f98-a868-7baa8f739f15>
+            <https://linked.data.gov.au/def/nrm/d844b23f-3d82-53b0-8d1f-128fc729d3bb>
         ) ;
     sh:message "The value of `rdf:value` _MUST_ exist in the Vegetation structural formation codes controlled vocabulary." ;
     sh:name "Result value" ;
@@ -163,7 +163,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         select ?this  {
             ?observation a tern:Observation ;
                 sosa:observedProperty 
-        <https://linked.data.gov.au/def/test/dawe-cv/103f26cb-0194-45d2-8b1a-e18e1da6df2b> ;
+        <https://linked.data.gov.au/def/nrm/103f26cb-0194-45d2-8b1a-e18e1da6df2b> ;
                 sosa:hasResult ?this .
         }"""
         ] ;
@@ -198,7 +198,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     select $this {
         $this a tern:Observation ;
             sosa:observedProperty 
-    <https://linked.data.gov.au/def/test/dawe-cv/103f26cb-0194-45d2-8b1a-e18e1da6df2b>
+    <https://linked.data.gov.au/def/nrm/103f26cb-0194-45d2-8b1a-e18e1da6df2b>
      ;
             sosa:hasSimpleResult ?simple ;
             sosa:hasResult ?result .
@@ -232,7 +232,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/103f26cb-0194-45d2-8b1a-e18e1da6df2b>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/103f26cb-0194-45d2-8b1a-e18e1da6df2b>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
@@ -248,11 +248,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32>`.
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32>`.
 
-    `<https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32>` is the IRI for "Plot Description".""" ;
-    sh:hasValue <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
-    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32`." ;
+    `<https://linked.data.gov.au/def/nrm/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32>` is the IRI for "Plot Description".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32`." ;
     sh:name "Used procedure" ;
     sh:path <http://www.w3.org/ns/sosa/usedProcedure> ;
     sh:target [
@@ -263,7 +263,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/103f26cb-0194-45d2-8b1a-e18e1da6df2b>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/103f26cb-0194-45d2-8b1a-e18e1da6df2b>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
@@ -292,7 +292,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/103f26cb-0194-45d2-8b1a-e18e1da6df2b>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/103f26cb-0194-45d2-8b1a-e18e1da6df2b>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
@@ -308,9 +308,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/test/dawe-cv/6e9baf51-566e-4a5d-93c4-a6e097dc364d>`.
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/6e9baf51-566e-4a5d-93c4-a6e097dc364d>`.
 
-        `<https://linked.data.gov.au/def/test/dawe-cv/6e9baf51-566e-4a5d-93c4-a6e097dc364d>` is the IRI for "Vegetation structural formation codes".""" ;
+        `<https://linked.data.gov.au/def/nrm/6e9baf51-566e-4a5d-93c4-a6e097dc364d>` is the IRI for "Vegetation structural formation codes".""" ;
     sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `6e9baf51-566e-4a5d-93c4-a6e097dc364d$`." ;
     sh:name "Vocabulary" ;
     sh:path tern:vocabulary ;
@@ -324,7 +324,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         select ?this  {
             ?observation a tern:Observation ;
                 sosa:observedProperty 
-        <https://linked.data.gov.au/def/test/dawe-cv/103f26cb-0194-45d2-8b1a-e18e1da6df2b> ;
+        <https://linked.data.gov.au/def/nrm/103f26cb-0194-45d2-8b1a-e18e1da6df2b> ;
                 sosa:hasResult ?this .
         }"""
         ] ;
