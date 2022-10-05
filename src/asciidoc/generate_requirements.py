@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from typing import List
 import logging
 import requests
+import os
 from requests.exceptions import HTTPError
 
 from urlpath import URL
@@ -24,8 +25,8 @@ shapes_root_path = Path("/workspaces") / WORKSPACE / "shapes"
 target_requirements_path = (
     Path("/workspaces") / WORKSPACE / "docs/source/requirements-by-module"
 )
-requirements_sections_file = (
-    Path("/workspaces") / WORKSPACE / "docs/source/requirements-sections.adoc"
+requirements_sections_by_protocols_folder = (
+    Path("/workspaces") / WORKSPACE / "docs/source/requirements-sections-by-protocols"
 )
 github_shapes_path = URL("https://github.com/ternaustralia/dawe-rlp-spec/blob/main")
 
@@ -69,7 +70,9 @@ def get_source_shapes_paths():
     Only gets directories and ignores directories prefixed with underscore.
     """
     protocol_modules_shapes_paths = [
-        m for m in shapes_root_path.iterdir() if m.is_dir() and m.name[0] != "_"
+        x[0]
+        for x in os.walk(shapes_root_path)
+        if "protocol-shapes" in x[0].split("/")[-1]
     ]
     return protocol_modules_shapes_paths
 
@@ -77,7 +80,7 @@ def get_source_shapes_paths():
 def get_source_requirements_sets(protocol_module_path: Path):
     return [
         requirement_set_path
-        for requirement_set_path in protocol_module_path.iterdir()
+        for requirement_set_path in Path(protocol_module_path).iterdir()
         if requirement_set_path.is_dir()
     ]
 
@@ -180,9 +183,6 @@ def get_controlled_iris_and_labels(
 def generate_requirements():
     source_shapes_paths = get_source_shapes_paths()
 
-    # We use this later to build the requirements-sections.adoc file.
-    requirements_sections = []
-
     # For each protocol module wth shapes, loop through each observable property directory.
     # Each directory has a `shapes.ttl`, `valid.ttl` and `invalid.ttl` file.
     # Save the path of these files and
@@ -191,6 +191,9 @@ def generate_requirements():
         logger.info("Processing shapes in %s", source_protocol_module)
         source_requirements_sets = get_source_requirements_sets(source_protocol_module)
 
+        # We use this later to build the requirements-sections.adoc file.
+        requirements_sections = []
+
         # Now that we have the requirement set's paths, we can loop through each one and
         # read the shape files.
         # For each requirement we find, we need to create a corresponding file in
@@ -198,8 +201,20 @@ def generate_requirements():
         for source_requirement_set in source_requirements_sets:
             module_name = source_requirement_set.name
             target_requirement_set = target_requirements_path / "/".join(
-                source_requirement_set.parts[-2:]
+                source_requirement_set.parts[4:]
+            ).replace("-protocol-shapes", "")
+
+            # Update the '../../..' content in jiaja2 templates
+
+            number_of_split_elements_in_target_requirement = len(
+                str(target_requirement_set).split("/")
             )
+
+            parent_dir_in_templates = {
+                8: "../../..",
+                9: "../../../..",
+                10: "../../../../..",
+            }
 
             # Get a list of requirements.
             # Loop through them.
@@ -245,6 +260,9 @@ def generate_requirements():
                     local_name=f"{requirement_set_name}_{local_name}",
                     req=requirement,
                     controlled_list=iris_and_labels_list,
+                    parents_dir=parent_dir_in_templates[
+                        number_of_split_elements_in_target_requirement
+                    ],
                 )
 
                 logger.info("Writing ascii to %s", asciidoc_file.absolute())
@@ -265,10 +283,20 @@ def generate_requirements():
             asciidoc_index_file.write_text(asciidoc_content)
             requirements_sections.append(asciidoc_index_file)
 
-    # Write to requirements-sections.adoc
-    sections = [
-        str(s).rsplit("/workspaces/dawe-rlp-spec/docs/source/", maxsplit=1)[-1]
-        for s in requirements_sections
-    ]
-    sections_ascii = requirements_sections_template.render(sections=sections)
-    requirements_sections_file.write_text(sections_ascii)
+        # Write to requirements sections for each module
+        sections = [
+            str(s).rsplit("/workspaces/dawe-rlp-spec/docs/source/", maxsplit=1)[-1]
+            for s in requirements_sections
+        ]
+        requirements_sections_file_name = (
+            "requirements-sections-"
+            + str(source_requirements_sets[0])
+            .split("/")[-2]
+            .replace("-protocol-shapes", "")
+            + ".adoc"
+        )
+        requirements_sections_file = requirements_sections_by_protocols_folder / Path(
+            requirements_sections_file_name
+        )
+        sections_ascii = requirements_sections_template.render(sections=sections)
+        requirements_sections_file.write_text(sections_ascii)
