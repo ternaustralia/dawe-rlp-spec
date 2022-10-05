@@ -8,8 +8,8 @@
 
 |Identifier | `urn:shapes:plot-description:height-class:value-type`
 |Label | Value type
-|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:hasResult` where the value node is an instance of `tern:IRI`.
-|Comment | The value in `sosa:hasResult` _MUST_ be a `tern:IRI`.
+|Definition | The result _MUST_ be an instance of `tern:IRI`.
+|Comment | The value of `sosa:hasResult` _MUST_ be a `tern:IRI`.
 include::../../../statuses/submitted.adoc[]
 |Conformance Classes | `TBA`
 

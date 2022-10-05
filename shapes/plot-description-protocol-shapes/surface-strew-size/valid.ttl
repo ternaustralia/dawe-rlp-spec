@@ -1,12 +1,14 @@
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:valid:surface-strew-size:1>
+<urn:test:plot-description:valid:surface-strew-size>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - surface strew size" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -17,13 +19,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/test/dawe-cv/320d51bb-d184-5341-bc47-be8eb4824595> ;
-            sosa:isResultOf <urn:test:plot-description:valid:surface-strew-size:1> ;
+            sosa:isResultOf <urn:test:plot-description:valid:surface-strew-size> ;
             tern:vocabulary <https://linked.data.gov.au/def/test/dawe-cv/3b25ce0f-9eb7-4d2d-97ce-143858cfd4d4>
         ] ;
-    sosa:hasSimpleResult "https://linked.data.gov.au/def/test/dawe-cv/320d51bb-d184-5341-bc47-be8eb4824595"^^xsd:string ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/test/dawe-cv/320d51bb-d184-5341-bc47-be8eb4824595> ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/3eeef779-d4d9-4019-9543-be0abe54cc5c> ;
     sosa:phenomenonTime <https://example.com/observation/surface-strew-size/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-03-14T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
     tern:hasSiteVisit <urn:test:site> ;
 .

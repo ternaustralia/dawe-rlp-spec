@@ -6,134 +6,199 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:invalid:aspect:1>
+<urn:test:plot-description:invalid:aspect:datatype>
     a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:float`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:plot-description:invalid:aspect:datatype> ;
+            tern:unit unit:DEG
+        ] ;
+    sosa:hasSimpleResult 3 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> ;
+    sosa:phenomenonTime <https://example.com/observation/aspect/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:plot-description:invalid:aspect:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:plot-description:invalid:aspect:feature-type> ;
+            tern:unit unit:DEG
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> ;
+    sosa:phenomenonTime <https://example.com/observation/aspect/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:plot-description:invalid:aspect:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:plot-description:invalid:aspect:simple-result> ;
+            tern:unit unit:DEG
+        ] ;
+    sosa:hasSimpleResult "13.56"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> ;
+    sosa:phenomenonTime <https://example.com/observation/aspect/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:plot-description:invalid:aspect:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:plot-description:invalid:aspect:site-visit> ;
+            tern:unit unit:DEG
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> ;
+    sosa:phenomenonTime <https://example.com/observation/aspect/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
+.
+
+<urn:test:plot-description:invalid:aspect:unit-of-measure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result unit of measure" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
-            void:inDataset <urn:test:dataset> ;
+            void:inDataset <https://example.com/dataset/1> ;
             tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
         ] ;
     sosa:hasResult [
-            a tern:Float ;
-            rdf:value 50.65 ;
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:plot-description:invalid:aspect:unit-of-measure> ;
             tern:unit <urn:fake:unit>
         ] ;
-    sosa:hasSimpleResult 50.65 ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> ;
+    sosa:phenomenonTime <https://example.com/observation/aspect/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:aspect:2>
+<urn:test:plot-description:invalid:aspect:used-procedure>
     a tern:Observation ;
-    rdfs:comment "Invalid result - value out of range" ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Plot Description'." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
-            void:inDataset <urn:test:dataset> ;
+            void:inDataset <https://example.com/dataset/1> ;
             tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
         ] ;
     sosa:hasResult [
-            a tern:Float ;
-            rdf:value 360.1 ;
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:plot-description:invalid:aspect:used-procedure> ;
             tern:unit unit:DEG
         ] ;
-    sosa:hasSimpleResult 360.1 ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
-<urn:test:plot-description:invalid:aspect:3>
-    a tern:Observation ;
-    rdfs:comment "Invalid result - incorrect used procedure" ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <urn:test:dataset> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
-        ] ;
-    sosa:hasResult [
-            a tern:Float ;
-            rdf:value 60.66 ;
-            tern:unit unit:DEG
-        ] ;
-    sosa:hasSimpleResult 60.66 ;
-    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> ;
+    sosa:phenomenonTime <https://example.com/observation/aspect/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:aspect:4>
+<urn:test:plot-description:invalid:aspect:value-range>
     a tern:Observation ;
-    rdfs:comment "Invalid result - incorrect feature type" ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value out of range" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
-            void:inDataset <urn:test:dataset> ;
-            tern:featureType <urn:fake:featureType>
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
         ] ;
     sosa:hasResult [
-            a tern:Float ;
-            rdf:value 60.66 ;
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "361.1"^^xsd:float ;
+            sosa:isResultOf <urn:test:plot-description:invalid:aspect:value-range> ;
             tern:unit unit:DEG
         ] ;
-    sosa:hasSimpleResult 60.66 ;
+    sosa:hasSimpleResult "361.1"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> ;
+    sosa:phenomenonTime <https://example.com/observation/aspect/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:aspect:5>
+<urn:test:plot-description:invalid:aspect:value-type>
     a tern:Observation ;
-    rdfs:comment "Invalid result - simple result is not the same as the value in the result node." ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:Float`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
-            void:inDataset <urn:test:dataset> ;
+            void:inDataset <https://example.com/dataset/1> ;
             tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
         ] ;
     sosa:hasResult [
-            a tern:Float ;
-            rdf:value 88.1 ;
+            a tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:plot-description:invalid:aspect:value-type> ;
             tern:unit unit:DEG
         ] ;
-    sosa:hasSimpleResult 88.2 ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
-<urn:test:plot-description:invalid:aspect:6>
-    a tern:Observation ;
-    rdfs:comment "Invalid result - each aspect must have a site visit" ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <urn:test:dataset> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
-        ] ;
-    sosa:hasResult [
-            a tern:Float ;
-            rdf:value 88.1 ;
-            tern:unit unit:DEG
-        ] ;
-    sosa:hasSimpleResult 88.1 ;
-    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
-.
-
-<urn:test:plot-description:invalid:aspect:7>
-    a tern:Observation ;
-    rdfs:comment "Invalid result - the result value of each aspect should be tern:Float." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <urn:test:dataset> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
-        ] ;
-    sosa:hasResult [
-            a tern:Integer ;
-            rdf:value 88.1 ;
-            tern:unit unit:DEG
-        ] ;
-    sosa:hasSimpleResult 88.1 ;
-    sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/0e0423c6-0dc3-40aa-9776-410a94299256> ;
+    sosa:phenomenonTime <https://example.com/observation/aspect/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
     tern:hasSiteVisit <urn:test:site> ;
 .

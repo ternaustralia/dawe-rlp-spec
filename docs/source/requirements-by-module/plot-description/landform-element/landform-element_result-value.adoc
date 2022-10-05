@@ -8,8 +8,8 @@
 
 |Identifier | `urn:shapes:plot-description:landform-element:result-value`
 |Label | Result value
-|Definition | The value of `rdf:value` _MUST_ exist in the landform element codes controlled vocabulary.
-|Comment | The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the landform element codes controlled vocabulary.
+|Definition | The value of `rdf:value` _MUST_ exist in the Landform element codes controlled vocabulary.
+|Comment | The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Landform element codes controlled vocabulary.
 include::../../../statuses/submitted.adoc[]
 |Conformance Classes | `TBA`
 
@@ -42,13 +42,9 @@ link:https://linked.data.gov.au/def/test/dawe-cv/d7481c8e-dcec-5415-b212-df2326a
 
 link:https://linked.data.gov.au/def/test/dawe-cv/196cc8f4-ca9d-5013-b2d0-60d73ea9cb5a[`Cirque`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/be9158a1-5d0c-5558-ab3f-6c7c1e79fb9e[`Clay plain`] 
-
 link:https://linked.data.gov.au/def/test/dawe-cv/51183458-2bce-5047-a2a6-17cdea865fc9[`Cliff`] 
 
 link:https://linked.data.gov.au/def/test/dawe-cv/93ec996a-efcc-55eb-9326-df8acb2bc927[`Cliff-footslope`] 
-
-link:https://linked.data.gov.au/def/test/dawe-cv/6945adab-6973-559f-90ce-04f454dcf18b[`Closed depression`] 
 
 link:https://linked.data.gov.au/def/test/dawe-cv/584cf753-d739-5040-851d-872add4a2e52[`Collapse doline`] 
 
@@ -60,155 +56,125 @@ link:https://linked.data.gov.au/def/test/dawe-cv/d1732611-cc2f-5e6f-846a-da0adc4
 
 link:https://linked.data.gov.au/def/test/dawe-cv/4fd6db54-73f3-5ece-b8a7-a7e56c1afdcc[`Cut-over surface`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/602d9ed2-71be-56b3-9c68-04a92162a5c0[`Dam`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/be9158a1-5d0c-5558-ab3f-6c7c1e79fb9e[`Dam`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/f8726949-6dff-53cd-8b52-996a50eac071[`Deflation basin`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/6945adab-6973-559f-90ce-04f454dcf18b[`Deflation basin`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/d8c0b7fa-90ad-583d-b0d3-61046094cbb6[`Drainage depression`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/602d9ed2-71be-56b3-9c68-04a92162a5c0[`Drainage depression`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/82b726cd-c6b3-5653-8e29-522959cb701e[`Dune`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/f8726949-6dff-53cd-8b52-996a50eac071[`Dune`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/f6f2e07c-dda2-5abd-8a22-2a2ff2e8521a[`Dune crest`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/d8c0b7fa-90ad-583d-b0d3-61046094cbb6[`Dune crest`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/9da6a4ed-27a1-5c30-87b6-84e4a56dba99[`Dune footslope`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/82b726cd-c6b3-5653-8e29-522959cb701e[`Dune slope`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/a7b6a6b8-0b0b-5f51-8706-1ad35851a117[`Dune slope`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/f6f2e07c-dda2-5abd-8a22-2a2ff2e8521a[`Embankment`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/9e22fdaf-48e4-5172-bb86-95545f600e7d[`Embankment`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/a7b6a6b8-0b0b-5f51-8706-1ad35851a117[`Estuary`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/8a947829-cd2f-51b7-9165-4d0daf9ce69a[`Estuary`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/9da6a4ed-27a1-5c30-87b6-84e4a56dba99[`Fan`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/7a751103-0da3-517a-b8fd-6f1d23a11fac[`Fan`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/9e22fdaf-48e4-5172-bb86-95545f600e7d[`Fil-top`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/bbefbe1f-e0b3-5c10-a425-a179638c5d63[`Fil-top`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/8a947829-cd2f-51b7-9165-4d0daf9ce69a[`Floodout`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/d7b593d8-badc-562c-940b-352881cbb942[`Flat`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/d7b593d8-badc-562c-940b-352881cbb942[`Footslope`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/b459407f-82fe-5212-80c0-dfd4e3d49531[`Floodout`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/7a751103-0da3-517a-b8fd-6f1d23a11fac[`Foredune`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/ef20c946-0016-56a6-b198-50d7fc809686[`Footslope`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/bbefbe1f-e0b3-5c10-a425-a179638c5d63[`Gully`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/40a5364e-049d-5e96-a5fb-a281372f0d81[`Foredune`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/b459407f-82fe-5212-80c0-dfd4e3d49531[`Hillcrest`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/bee94ec9-b2b2-5d62-91c3-eb362fcc79e3[`Gorge`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/ef20c946-0016-56a6-b198-50d7fc809686[`Hillslope`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/f29fe987-89e1-597f-881d-1b89ff446c18[`Gully`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/40a5364e-049d-5e96-a5fb-a281372f0d81[`Hummocky (weakly oriented dune)`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/6dc7e12f-cb45-5602-9ac8-83f9e9fbbab7[`Hill footslope`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/bee94ec9-b2b2-5d62-91c3-eb362fcc79e3[`Intertidal flat`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/dc1f22f5-76c7-512d-86a2-095d911d3829[`Hillcrest`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/f29fe987-89e1-597f-881d-1b89ff446c18[`Lagoon`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/c1931b42-0124-51c1-9798-fb1488c9d84e[`Hillslope`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/dc1f22f5-76c7-512d-86a2-095d911d3829[`Lake`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/435c0396-dbb2-5f3f-8b1a-01b8262901c6[`Hummocky (weakly oriented dune)`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/c1931b42-0124-51c1-9798-fb1488c9d84e[`Landslide`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/98cf6325-95bf-575d-bf79-e4536646e7ff[`Inselberg`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/6dc7e12f-cb45-5602-9ac8-83f9e9fbbab7[`Levee`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/a4338ea4-ce49-56df-b773-8c33a9b528b2[`Interdune corridor`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/435c0396-dbb2-5f3f-8b1a-01b8262901c6[`Linear or longitudinal (seif) dune`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/7317acd5-1490-5367-a6df-05e606050ab2[`Intertidal flat`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/7317acd5-1490-5367-a6df-05e606050ab2[`Lunette`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/2c3b9fdc-5843-509d-9c5d-fe5c6f0329cb[`Lagoon`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/a4338ea4-ce49-56df-b773-8c33a9b528b2[`Maar`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/2321310c-114e-5491-90c2-d0cfff822553[`Lake`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/98cf6325-95bf-575d-bf79-e4536646e7ff[`Mound`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/e614b305-192b-5122-8702-bd3b0583f644[`Landslide`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/2c3b9fdc-5843-509d-9c5d-fe5c6f0329cb[`Ox-bow`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/2c37886e-0e46-55b2-9049-9678e2195766[`Levee`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/2321310c-114e-5491-90c2-d0cfff822553[`Parabolic dune`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/986f781e-5da7-55bc-ae10-8c97d9d54910[`Limestone plain`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/e614b305-192b-5122-8702-bd3b0583f644[`Pediment`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/2283665d-fda9-5f41-932c-a9ecfbcefa9c[`Linear or longitudinal (seif) dune`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/2c37886e-0e46-55b2-9049-9678e2195766[`Pit`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/090ab00d-476e-5b85-afb6-7cca342b3ebc[`Lunette`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/986f781e-5da7-55bc-ae10-8c97d9d54910[`Plain`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/0a8fd92c-b8d0-5fba-a4d4-0d4c5d540f34[`Maar`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/2283665d-fda9-5f41-932c-a9ecfbcefa9c[`Playa/pan`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/5083d690-4761-555e-a1c0-d6a1cb08ae97[`Mound`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/090ab00d-476e-5b85-afb6-7cca342b3ebc[`Prior stream`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/115e3dd8-6033-5e37-bb82-ab57c76a1a01[`Not Collected`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/0a8fd92c-b8d0-5fba-a4d4-0d4c5d540f34[`Reef flat`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/f3d339b1-2f43-5186-b70d-001bd0685dfa[`Open depression`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/5083d690-4761-555e-a1c0-d6a1cb08ae97[`Residual rise`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/9a9295db-de60-5066-ad35-917678cae36d[`Ox-bow`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/9a9295db-de60-5066-ad35-917678cae36d[`Risecrest`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/25c322d8-61d4-5127-bb2f-0156a5e5607f[`Parabolic dune`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/25c322d8-61d4-5127-bb2f-0156a5e5607f[`Riseslope`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/df10c1e5-8fa4-5e36-8357-6fb9d2bd5c75[`Pediment`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/df10c1e5-8fa4-5e36-8357-6fb9d2bd5c75[`Rock flat`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/091d7ea0-3ff7-5bc4-a2ad-c899d79f1997[`Pit`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/091d7ea0-3ff7-5bc4-a2ad-c899d79f1997[`Rock platform`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/d632f875-823d-5fd3-bc6e-9741e735fe4a[`Plain`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/d632f875-823d-5fd3-bc6e-9741e735fe4a[`Scald`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/b2139c18-0220-5fce-98d0-4847e17919cc[`Playa/pan`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/b2139c18-0220-5fce-98d0-4847e17919cc[`Scarp`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/869ecf37-5e73-5692-951d-a474f612f466[`Prior stream`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/ede972cc-963e-57f3-b594-ed4a137ed9dc[`Scarp-footslope`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/0d181003-328e-5ef8-bcdc-707a72b36149[`Reef flat`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/869ecf37-5e73-5692-951d-a474f612f466[`Scroll`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/74034049-2f3d-5285-b5de-7b3721d01f3d[`Residual rise`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/0d181003-328e-5ef8-bcdc-707a72b36149[`Scroll plain`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/ede972cc-963e-57f3-b594-ed4a137ed9dc[`Ridge`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/74034049-2f3d-5285-b5de-7b3721d01f3d[`Solution doline`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/bf8d1824-2df8-59c8-b2e8-eadecb0ef4d2[`Risecrest`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/bf8d1824-2df8-59c8-b2e8-eadecb0ef4d2[`Stream bed`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/39716724-eb65-5c47-9562-1007d34c4c5b[`Riseslope`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/39716724-eb65-5c47-9562-1007d34c4c5b[`Stream channel`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/5316c0f4-4c8c-583a-bc88-db10c3ca9987[`Rock flat`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/5316c0f4-4c8c-583a-bc88-db10c3ca9987[`Summit surface`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/4e7b818a-a4b7-5f47-b638-67ae01575c90[`Rock outcrop (on hill)`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/0984ff0a-ae49-5a2a-907d-431be99f9f2a[`Supratidal flat`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/b1887a7f-1df3-5b72-8494-a12009faf955[`Rock outcrop (on plain)`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/4e7b818a-a4b7-5f47-b638-67ae01575c90[`Swale`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/0984ff0a-ae49-5a2a-907d-431be99f9f2a[`Rock platform`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/b1887a7f-1df3-5b72-8494-a12009faf955[`Swamp`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/b87ac878-c02d-50ee-b04c-a82bcb3e02d6[`Saltlake`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/b87ac878-c02d-50ee-b04c-a82bcb3e02d6[`Talus`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/5f8d5903-968d-5e8a-bc39-c7fb5d82ee1c[`Sandy plain`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/6cd065ab-bc16-5f20-817d-ba9deff03e0d[`Terrace Flat`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/6cd065ab-bc16-5f20-817d-ba9deff03e0d[`Scald`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/5f8d5903-968d-5e8a-bc39-c7fb5d82ee1c[`Terrace plain`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/0c5ea218-0495-5aaf-bc9b-ea7316799ac8[`Scarp`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/0c5ea218-0495-5aaf-bc9b-ea7316799ac8[`Tidal creek`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/3b240bbb-ecac-533e-b103-92707b6b155a[`Scarp-footslope`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/3b240bbb-ecac-533e-b103-92707b6b155a[`Tidal flat`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/7a751c07-1647-5385-9d99-4d4a2ccfee99[`Scroll`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/7a751c07-1647-5385-9d99-4d4a2ccfee99[`Tor`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/76e33646-90e7-5181-8f19-971161b50bc4[`Scroll plain`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/76e33646-90e7-5181-8f19-971161b50bc4[`Trench`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/d024e54c-13e3-5a3c-8617-daa69b0274c7[`Solution doline`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/d024e54c-13e3-5a3c-8617-daa69b0274c7[`Tumulus`] 
 
-link:https://linked.data.gov.au/def/test/dawe-cv/d43be131-7d56-5d4a-94be-aea829e7132f[`Stony plain`] 
-
-link:https://linked.data.gov.au/def/test/dawe-cv/6e63d4d1-e472-5c46-b6c8-a8275a01f845[`Stream bed`] 
-
-link:https://linked.data.gov.au/def/test/dawe-cv/06a9948b-098d-5e0a-92fc-dcac0e45c128[`Stream channel`] 
-
-link:https://linked.data.gov.au/def/test/dawe-cv/a481a7c6-dcc2-5c42-94dd-5c01e08b3a60[`Summit surface`] 
-
-link:https://linked.data.gov.au/def/test/dawe-cv/28804535-d02f-52fd-8d60-a28627f72529[`Supratidal flat`] 
-
-link:https://linked.data.gov.au/def/test/dawe-cv/5d1af7b1-1d29-5a08-aa0d-2c19335db146[`Swale`] 
-
-link:https://linked.data.gov.au/def/test/dawe-cv/d0638a62-0e52-5b37-b3dc-ef152eed46dd[`Swamp`] 
-
-link:https://linked.data.gov.au/def/test/dawe-cv/714af9c4-490e-53ff-a776-e615a824c294[`Talus`] 
-
-link:https://linked.data.gov.au/def/test/dawe-cv/334d7b21-fbe2-5419-bfc6-59989fa39bb9[`Terrace Flat`] 
-
-link:https://linked.data.gov.au/def/test/dawe-cv/dbf63590-eff2-57a1-9600-aaad62e16e54[`Terrace plain`] 
-
-link:https://linked.data.gov.au/def/test/dawe-cv/f8abed01-3e9b-5396-8dcd-d0c629b14754[`Tidal creek`] 
-
-link:https://linked.data.gov.au/def/test/dawe-cv/78f5cc83-657e-572b-bd76-89b2038b732d[`Tidal flat`] 
-
-link:https://linked.data.gov.au/def/test/dawe-cv/4c6422d6-9a7c-5e7b-8aee-4554e5d6d46c[`Tor`] 
-
-link:https://linked.data.gov.au/def/test/dawe-cv/7141c8d9-639c-5385-adf4-c9f8cd546a59[`Trench`] 
-
-link:https://linked.data.gov.au/def/test/dawe-cv/0eaeb8ee-1ab8-5c22-867b-87f5bbc111e1[`Tumulus`] 
-
-link:https://linked.data.gov.au/def/test/dawe-cv/f1b71d32-6707-51fd-8b05-6d127e5009b1[`Valley flat`] 
+link:https://linked.data.gov.au/def/test/dawe-cv/6e63d4d1-e472-5c46-b6c8-a8275a01f845[`Valley flat`] 
 
 
 |Source | TERN Ecosystem Surveillance Ecological Monitoring Protocols

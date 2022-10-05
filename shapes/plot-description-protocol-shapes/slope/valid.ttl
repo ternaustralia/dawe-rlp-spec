@@ -6,21 +6,27 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:valid:slope:1>
+<urn:test:plot-description:valid:slope>
     a tern:Observation ;
-    rdfs:comment "Valid result for slope" ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - slope" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
-            void:inDataset <urn:test:dataset> ;
+            void:inDataset <https://example.com/dataset/1> ;
             tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
         ] ;
     sosa:hasResult [
-            a tern:Float ;
-            rdf:value 50.65 ;
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:plot-description:valid:slope> ;
             tern:unit unit:DEG
         ] ;
-    sosa:hasSimpleResult 50.65 ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/test/dawe-cv/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+    sosa:phenomenonTime <https://example.com/observation/slope/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
