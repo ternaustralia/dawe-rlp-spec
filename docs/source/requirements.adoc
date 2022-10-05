@@ -10,8 +10,6 @@ A _status_ is assigned to each requirement. The _status_ code list used in this 
 * `*invalid*` - An entry which has been invalidated due to serious flaws, distinct from retrirement. Corresponds to ISO 19135(redraft) 'invalid'.
 * `*stable*` - An entry that is seen as having a reasonable measure of stability, may be used to mark the full adoption of a previously 'experimental' entry.
 
-==== Plot Description Module Conformance Class Requirements
-
 Requirements that have been accepted and are *stable* are marked with a green check mark.
 
 For example:
@@ -23,7 +21,21 @@ For example:
 include::statuses/stable.adoc[]
 |===
 
-include::requirements-sections.adoc[]
+==== Plot Description Module Conformance Class Requirements
+
+include::requirements-sections-by-protocols/requirements-sections-plot-description.adoc[]
+
+==== Cover Module
+
+This module has two sub protocols - Full protocol and Lite protocol.
+
+==== Cover - Full protocol Conformance Class Requirements
+
+include::requirements-sections-by-protocols/requirements-sections-cover-full.adoc[]
+
+==== Cover - Lite protocol Conformance Class Requirements
+
+include::requirements-sections-by-protocols/requirements-sections-cover-lite.adoc[]
 
 === TERN Ontology Conformance
 
