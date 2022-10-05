@@ -8,10 +8,10 @@
 
 |Identifier | `urn:shapes:plot-description:landform-pattern:used-procedure`
 |Label | Used procedure
-|Definition | Instances of `tern:Observation` with `sosa:observedProperty` value `TBA` _MUST_ have a `sosa:usedProcedure` where the value is `https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32`.
-|Comment | IRI of procedure _MUST_ have the value `https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32`.
+|Definition | The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32`.
+|Comment | IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32>`.
 
-`https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32` is the IRI for "Plot Description".
+    `<https://linked.data.gov.au/def/test/dawe-cv/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32>` is the IRI for "Plot Description".
 include::../../../statuses/submitted.adoc[]
 |Conformance Classes | `TBA`
 
