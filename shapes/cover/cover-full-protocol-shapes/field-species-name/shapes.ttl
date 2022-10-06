@@ -27,7 +27,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         select ?this  {
             ?observation a tern:Observation ;
                 sosa:observedProperty 
-        <https://linked.data.gov.au/def/test/dawe-cv/26f843a5-e1ed-46da-b22b-053e567e3227> ;
+        <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
                 sosa:hasResult ?this .
         }"""
         ] ;
@@ -53,7 +53,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX unit: <http://qudt.org/vocab/unit/>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     select ?this  {
-        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/26f843a5-e1ed-46da-b22b-053e567e3227>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>}
         ?observation a tern:Observation ;
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
@@ -82,7 +82,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     select $this {
         $this a tern:Observation ;
             sosa:observedProperty 
-    <https://linked.data.gov.au/def/test/dawe-cv/26f843a5-e1ed-46da-b22b-053e567e3227>
+    <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>
      ;
             sosa:hasSimpleResult ?simple ;
             sosa:hasResult ?result .
@@ -116,7 +116,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/26f843a5-e1ed-46da-b22b-053e567e3227>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
@@ -132,11 +132,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/test/dawe-cv/576f634e-2706-4f18-b561-0636d4c007d0>`.
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/576f634e-2706-4f18-b561-0636d4c007d0>`.
 
-    `<https://linked.data.gov.au/def/test/dawe-cv/576f634e-2706-4f18-b561-0636d4c007d0>` is the IRI for "Cover - Full protocol".""" ;
-    sh:hasValue <https://linked.data.gov.au/def/test/dawe-cv/576f634e-2706-4f18-b561-0636d4c007d0> ;
-    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/test/dawe-cv/576f634e-2706-4f18-b561-0636d4c007d0`." ;
+    `<https://linked.data.gov.au/def/nrm/576f634e-2706-4f18-b561-0636d4c007d0>` is the IRI for "Cover - Full protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/576f634e-2706-4f18-b561-0636d4c007d0> ;
+    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/576f634e-2706-4f18-b561-0636d4c007d0`." ;
     sh:name "Used procedure" ;
     sh:path <http://www.w3.org/ns/sosa/usedProcedure> ;
     sh:target [
@@ -147,7 +147,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/26f843a5-e1ed-46da-b22b-053e567e3227>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
@@ -176,7 +176,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/test/dawe-cv/26f843a5-e1ed-46da-b22b-053e567e3227>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
