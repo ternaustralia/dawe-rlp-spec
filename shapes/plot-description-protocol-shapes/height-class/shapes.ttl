@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9222b9e121ae469a9a53d06120bace60b2 ;
+    urnp:examples _:n5b19797713af43a6b6ed27b8b66ec1b0b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -45,17 +45,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     reg:status reg:statusSubmitted ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Vegetation height class codes controlled vocabulary." ;
     sh:in (
+            <https://linked.data.gov.au/def/nrm/07c7e4c8-dc1e-5f96-9a26-f58bae2646b6>
             <https://linked.data.gov.au/def/nrm/1e5241d5-b717-5908-a26d-297ef3c636d8>
             <https://linked.data.gov.au/def/nrm/42722db4-e29d-592f-8ec8-94ba4bc0a3ea>
             <https://linked.data.gov.au/def/nrm/5bc8fbdb-585b-515a-9e86-b29906cc3fa6>
+            <https://linked.data.gov.au/def/nrm/5c4c8ba5-7f7a-5aa1-a4bd-94e2eeb3b871>
             <https://linked.data.gov.au/def/nrm/5ed168a6-823b-5e8c-989f-eb845d2bb6b1>
             <https://linked.data.gov.au/def/nrm/815a1859-207c-5df6-907a-73a1ff37cf22>
+            <https://linked.data.gov.au/def/nrm/83f17205-893d-5b54-9f38-9610030af616>
             <https://linked.data.gov.au/def/nrm/86550193-634b-53e2-92e2-1c222bdc91da>
             <https://linked.data.gov.au/def/nrm/e46cf789-7432-594f-91e4-63f7574e47ae>
             <https://linked.data.gov.au/def/nrm/e583eb64-4b81-52f0-923f-77ab96b7cd8d>
-            <https://linked.data.gov.au/def/nrm/07c7e4c8-dc1e-5f96-9a26-f58bae2646b6>
-            <https://linked.data.gov.au/def/nrm/5c4c8ba5-7f7a-5aa1-a4bd-94e2eeb3b871>
-            <https://linked.data.gov.au/def/nrm/83f17205-893d-5b54-9f38-9610030af616>
         ) ;
     sh:message "The value of `rdf:value` _MUST_ exist in the Vegetation height class codes controlled vocabulary." ;
     sh:name "Result value" ;
@@ -73,7 +73,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9222b9e121ae469a9a53d06120bace60b2 ;
+    urnp:examples _:n5b19797713af43a6b6ed27b8b66ec1b0b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -114,7 +114,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9222b9e121ae469a9a53d06120bace60b2 ;
+    urnp:examples _:n5b19797713af43a6b6ed27b8b66ec1b0b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -144,7 +144,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9222b9e121ae469a9a53d06120bace60b2 ;
+    urnp:examples _:n5b19797713af43a6b6ed27b8b66ec1b0b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -175,7 +175,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9222b9e121ae469a9a53d06120bace60b2 ;
+    urnp:examples _:n5b19797713af43a6b6ed27b8b66ec1b0b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -204,7 +204,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9222b9e121ae469a9a53d06120bace60b2 ;
+    urnp:examples _:n5b19797713af43a6b6ed27b8b66ec1b0b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -234,11 +234,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9222b9e121ae469a9a53d06120bace60b2 ;
+    urnp:examples _:n5b19797713af43a6b6ed27b8b66ec1b0b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n9222b9e121ae469a9a53d06120bace60b2
+_:n5b19797713af43a6b6ed27b8b66ec1b0b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/valid.ttl"^^xsd:anyURI ;
 .

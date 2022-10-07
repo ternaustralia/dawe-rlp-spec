@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6d0d9d7241254f7b9485bbe2ba4da5bfb2 ;
+    urnp:examples _:nde352d145b264830b3d92b09e0d8395ab2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-1/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -44,9 +44,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Microhabitat tier 1 codes controlled vocabulary." ;
-    sh:in [
-
-        ] ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/0696f893-e874-5bc7-8109-55dfd753aef5>
+            <https://linked.data.gov.au/def/nrm/2ef4d8b7-cca3-5767-b655-61024e6824c5>
+            <https://linked.data.gov.au/def/nrm/37253936-4f88-5289-8f31-0fcb8b3add75>
+            <https://linked.data.gov.au/def/nrm/5509d232-b851-54b9-9fda-0afe11816076>
+            <https://linked.data.gov.au/def/nrm/6c876147-0622-59be-82d6-a5b1a9c5d093>
+            <https://linked.data.gov.au/def/nrm/b960f401-abf3-5c17-a5e6-8a5d30928e7f>
+            <https://linked.data.gov.au/def/nrm/bbe79d6a-9b00-5788-806c-35d7871cb756>
+            <https://linked.data.gov.au/def/nrm/d5e4b996-cb2e-50fb-a03e-094c7d752eda>
+            <https://linked.data.gov.au/def/nrm/dcc4ea60-00cf-5c51-8030-d155246bdead>
+            <https://linked.data.gov.au/def/nrm/f58ff7fb-1965-5c74-a9f1-1a94ca96eeae>
+            <https://linked.data.gov.au/def/nrm/f9056b58-c962-58ab-80d3-21a7c2ff8b0b>
+        ) ;
     sh:message "The value of `rdf:value` _MUST_ exist in the Microhabitat tier 1 codes controlled vocabulary." ;
     sh:name "Result value" ;
     sh:path rdf:value ;
@@ -63,7 +73,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n6d0d9d7241254f7b9485bbe2ba4da5bfb2 ;
+    urnp:examples _:nde352d145b264830b3d92b09e0d8395ab2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -104,7 +114,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n6d0d9d7241254f7b9485bbe2ba4da5bfb2 ;
+    urnp:examples _:nde352d145b264830b3d92b09e0d8395ab2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-1/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -134,7 +144,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6d0d9d7241254f7b9485bbe2ba4da5bfb2 ;
+    urnp:examples _:nde352d145b264830b3d92b09e0d8395ab2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-1/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -165,7 +175,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6d0d9d7241254f7b9485bbe2ba4da5bfb2 ;
+    urnp:examples _:nde352d145b264830b3d92b09e0d8395ab2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-1/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -194,7 +204,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6d0d9d7241254f7b9485bbe2ba4da5bfb2 ;
+    urnp:examples _:nde352d145b264830b3d92b09e0d8395ab2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-1/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -224,11 +234,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n6d0d9d7241254f7b9485bbe2ba4da5bfb2 ;
+    urnp:examples _:nde352d145b264830b3d92b09e0d8395ab2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-1/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n6d0d9d7241254f7b9485bbe2ba4da5bfb2
+_:nde352d145b264830b3d92b09e0d8395ab2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-1/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-1/valid.ttl"^^xsd:anyURI ;
 .

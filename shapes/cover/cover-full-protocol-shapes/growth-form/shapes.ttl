@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6f500e1a986944d3af4d5f336efdc27cb2 ;
+    urnp:examples _:n58ba53a9e5c741768cf0cb5ef483f8bfb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-full/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -47,6 +47,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:in (
             <https://linked.data.gov.au/def/nrm/062132e9-426e-56c8-9c92-2781692bdd0c>
             <https://linked.data.gov.au/def/nrm/0c0c23e2-47c1-56c7-8fa0-3ac241caf196>
+            <https://linked.data.gov.au/def/nrm/0f6de186-e8a9-5445-87f2-5aaf927a0f6d>
+            <https://linked.data.gov.au/def/nrm/1b532a75-319d-5a3c-af12-76348fa0cec4>
             <https://linked.data.gov.au/def/nrm/1e3ff92d-f2dc-5b87-827e-d9603c29e537>
             <https://linked.data.gov.au/def/nrm/2de905be-b280-54ba-b9a7-7c6f088f301c>
             <https://linked.data.gov.au/def/nrm/37512bb9-f5a9-5cc5-9f66-3c9c94d98958>
@@ -56,22 +58,20 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             <https://linked.data.gov.au/def/nrm/8a2f124b-4c90-5b35-b421-aa7447fb2f30>
             <https://linked.data.gov.au/def/nrm/8f4fd07c-a8a8-5e6f-81b3-4506a6a2d629>
             <https://linked.data.gov.au/def/nrm/922ed906-5ab9-5f14-b6ae-d7b24deccdeb>
+            <https://linked.data.gov.au/def/nrm/9882cf8c-6c69-5991-b505-6e34ae02563d>
             <https://linked.data.gov.au/def/nrm/9dd59dcd-7311-50fc-a657-603703fbf023>
+            <https://linked.data.gov.au/def/nrm/a7e63c10-9eae-5187-af68-f1ddd8e9ea27>
             <https://linked.data.gov.au/def/nrm/b5a5217d-6d51-5c8a-9728-e4fb5ca8afaf>
             <https://linked.data.gov.au/def/nrm/b95c55f0-ea57-5a77-a416-2fd6cf378014>
             <https://linked.data.gov.au/def/nrm/bc5db7f8-3b75-58d3-ab8f-2c0076807221>
             <https://linked.data.gov.au/def/nrm/c2eae401-0ac0-507e-bbfe-fe0bf9545f66>
+            <https://linked.data.gov.au/def/nrm/cce3d3df-85ee-5609-9e0d-3d7383843b3a>
+            <https://linked.data.gov.au/def/nrm/d647f263-dd3f-5626-bd6e-0e86131e6106>
             <https://linked.data.gov.au/def/nrm/dfdbbd27-e0d9-52c6-96a0-d88ff882aab7>
             <https://linked.data.gov.au/def/nrm/e20d86ce-6cd9-5a88-9b4d-ccafbb8e3a51>
             <https://linked.data.gov.au/def/nrm/ea88802e-3465-51c8-b437-8da61208a395>
             <https://linked.data.gov.au/def/nrm/eb5f51a6-0a5c-5e67-883d-35883fcf3ba3>
             <https://linked.data.gov.au/def/nrm/ef6a07fa-47ce-5cf4-ad06-218556c0dde4>
-            <https://linked.data.gov.au/def/nrm/0f6de186-e8a9-5445-87f2-5aaf927a0f6d>
-            <https://linked.data.gov.au/def/nrm/9882cf8c-6c69-5991-b505-6e34ae02563d>
-            <https://linked.data.gov.au/def/nrm/1b532a75-319d-5a3c-af12-76348fa0cec4>
-            <https://linked.data.gov.au/def/nrm/a7e63c10-9eae-5187-af68-f1ddd8e9ea27>
-            <https://linked.data.gov.au/def/nrm/cce3d3df-85ee-5609-9e0d-3d7383843b3a>
-            <https://linked.data.gov.au/def/nrm/d647f263-dd3f-5626-bd6e-0e86131e6106>
         ) ;
     sh:message "The value of `rdf:value` _MUST_ exist in the Growth form codes controlled vocabulary." ;
     sh:name "Result value" ;
@@ -89,7 +89,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n6f500e1a986944d3af4d5f336efdc27cb2 ;
+    urnp:examples _:n58ba53a9e5c741768cf0cb5ef483f8bfb2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -130,7 +130,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n6f500e1a986944d3af4d5f336efdc27cb2 ;
+    urnp:examples _:n58ba53a9e5c741768cf0cb5ef483f8bfb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-full/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -160,7 +160,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6f500e1a986944d3af4d5f336efdc27cb2 ;
+    urnp:examples _:n58ba53a9e5c741768cf0cb5ef483f8bfb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-full/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -191,7 +191,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6f500e1a986944d3af4d5f336efdc27cb2 ;
+    urnp:examples _:n58ba53a9e5c741768cf0cb5ef483f8bfb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-full/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -220,7 +220,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6f500e1a986944d3af4d5f336efdc27cb2 ;
+    urnp:examples _:n58ba53a9e5c741768cf0cb5ef483f8bfb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-full/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -250,11 +250,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n6f500e1a986944d3af4d5f336efdc27cb2 ;
+    urnp:examples _:n58ba53a9e5c741768cf0cb5ef483f8bfb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-full/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n6f500e1a986944d3af4d5f336efdc27cb2
+_:n58ba53a9e5c741768cf0cb5ef483f8bfb2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-full/growth-form/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-full/growth-form/valid.ttl"^^xsd:anyURI ;
 .

@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n737afb28d4ff4f75a0a3e82ed4f92814b2 ;
+    urnp:examples _:n44190c9994aa491aa37790a45bdfb2f7b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/teat-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -44,9 +44,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Animal teats condition codes controlled vocabulary." ;
-    sh:in [
-
-        ] ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/0a36dfcf-fd79-572f-8dae-3b212b15f87d>
+            <https://linked.data.gov.au/def/nrm/1785e4d9-ef24-594a-9103-f5b709980d0a>
+            <https://linked.data.gov.au/def/nrm/2bc118cd-6305-50da-8fb3-0fe1f33dfd46>
+        ) ;
     sh:message "The value of `rdf:value` _MUST_ exist in the Animal teats condition codes controlled vocabulary." ;
     sh:name "Result value" ;
     sh:path rdf:value ;
@@ -63,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n737afb28d4ff4f75a0a3e82ed4f92814b2 ;
+    urnp:examples _:n44190c9994aa491aa37790a45bdfb2f7b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -104,7 +106,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n737afb28d4ff4f75a0a3e82ed4f92814b2 ;
+    urnp:examples _:n44190c9994aa491aa37790a45bdfb2f7b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/teat-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -134,7 +136,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n737afb28d4ff4f75a0a3e82ed4f92814b2 ;
+    urnp:examples _:n44190c9994aa491aa37790a45bdfb2f7b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/teat-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -165,7 +167,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n737afb28d4ff4f75a0a3e82ed4f92814b2 ;
+    urnp:examples _:n44190c9994aa491aa37790a45bdfb2f7b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/teat-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -194,7 +196,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n737afb28d4ff4f75a0a3e82ed4f92814b2 ;
+    urnp:examples _:n44190c9994aa491aa37790a45bdfb2f7b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/teat-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -224,11 +226,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n737afb28d4ff4f75a0a3e82ed4f92814b2 ;
+    urnp:examples _:n44190c9994aa491aa37790a45bdfb2f7b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/teat-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n737afb28d4ff4f75a0a3e82ed4f92814b2
+_:n44190c9994aa491aa37790a45bdfb2f7b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/teat-status/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/teat-status/valid.ttl"^^xsd:anyURI ;
 .

@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd6c364760aba45e0889fb960eb29562eb2 ;
+    urnp:examples _:n07be29ca8bb8422d95ef24e38108e5d9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/plant-phenology/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -44,9 +44,20 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Phenology type codes controlled vocabulary." ;
-    sh:in [
-
-        ] ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/0641f54c-1a32-5972-acfd-74c39874d245>
+            <https://linked.data.gov.au/def/nrm/1fa8cd86-7d12-5381-a7f4-ad75eb932d96>
+            <https://linked.data.gov.au/def/nrm/6c1a9f27-080a-5d19-bff0-8469c072aa90>
+            <https://linked.data.gov.au/def/nrm/89ef338f-7206-515e-8cd7-0d5fd2b78db2>
+            <https://linked.data.gov.au/def/nrm/ae37ad84-6257-53d5-a2b5-8c6475602a0a>
+            <https://linked.data.gov.au/def/nrm/c75663ec-e777-5971-9912-a1f1c7c1b39b>
+            <https://linked.data.gov.au/def/nrm/ca02522c-b042-51c4-a763-1395b50bcc3f>
+            <https://linked.data.gov.au/def/nrm/ca64fc64-995d-5afd-b51d-add0153713eb>
+            <https://linked.data.gov.au/def/nrm/d59a256e-17d6-5ec6-9ef0-5f70b5711211>
+            <https://linked.data.gov.au/def/nrm/e27e4d77-484c-589a-880d-136e0dee71e2>
+            <https://linked.data.gov.au/def/nrm/f5ef8b02-f156-5e72-9207-737f1aad3b87>
+            <https://linked.data.gov.au/def/nrm/f94e79e7-2910-58ce-924c-ea44562405fe>
+        ) ;
     sh:message "The value of `rdf:value` _MUST_ exist in the Phenology type codes controlled vocabulary." ;
     sh:name "Result value" ;
     sh:path rdf:value ;
@@ -63,7 +74,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd6c364760aba45e0889fb960eb29562eb2 ;
+    urnp:examples _:n07be29ca8bb8422d95ef24e38108e5d9b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -104,7 +115,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nd6c364760aba45e0889fb960eb29562eb2 ;
+    urnp:examples _:n07be29ca8bb8422d95ef24e38108e5d9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/plant-phenology/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -134,7 +145,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd6c364760aba45e0889fb960eb29562eb2 ;
+    urnp:examples _:n07be29ca8bb8422d95ef24e38108e5d9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/plant-phenology/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -165,7 +176,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd6c364760aba45e0889fb960eb29562eb2 ;
+    urnp:examples _:n07be29ca8bb8422d95ef24e38108e5d9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/plant-phenology/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -194,7 +205,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd6c364760aba45e0889fb960eb29562eb2 ;
+    urnp:examples _:n07be29ca8bb8422d95ef24e38108e5d9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/plant-phenology/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -224,11 +235,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd6c364760aba45e0889fb960eb29562eb2 ;
+    urnp:examples _:n07be29ca8bb8422d95ef24e38108e5d9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/plant-phenology/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nd6c364760aba45e0889fb960eb29562eb2
+_:n07be29ca8bb8422d95ef24e38108e5d9b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/plant-phenology/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/plant-phenology/valid.ttl"^^xsd:anyURI ;
 .

@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na50f8a3d72834dedacd3cde8caee5164b2 ;
+    urnp:examples _:n9c7ea29d4ef74d5d90cc494e56a37120b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-size/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -48,8 +48,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             <https://linked.data.gov.au/def/nrm/320d51bb-d184-5341-bc47-be8eb4824595>
             <https://linked.data.gov.au/def/nrm/62f24913-4b82-53c5-9e26-b8c4eae5fd91>
             <https://linked.data.gov.au/def/nrm/977f7fbf-02c4-5cba-8b6d-f10bf7cf79eb>
-            <https://linked.data.gov.au/def/nrm/abea0b0e-333b-574c-87db-cbf59ae11a20>
             <https://linked.data.gov.au/def/nrm/99a4e369-2ae1-55cf-bac7-0a1fcd78fd1a>
+            <https://linked.data.gov.au/def/nrm/abea0b0e-333b-574c-87db-cbf59ae11a20>
         ) ;
     sh:message "The value of `rdf:value` _MUST_ exist in the Soil surface strew size codes controlled vocabulary." ;
     sh:name "Result value" ;
@@ -67,7 +67,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:na50f8a3d72834dedacd3cde8caee5164b2 ;
+    urnp:examples _:n9c7ea29d4ef74d5d90cc494e56a37120b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -108,7 +108,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na50f8a3d72834dedacd3cde8caee5164b2 ;
+    urnp:examples _:n9c7ea29d4ef74d5d90cc494e56a37120b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-size/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -138,7 +138,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na50f8a3d72834dedacd3cde8caee5164b2 ;
+    urnp:examples _:n9c7ea29d4ef74d5d90cc494e56a37120b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-size/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -169,7 +169,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na50f8a3d72834dedacd3cde8caee5164b2 ;
+    urnp:examples _:n9c7ea29d4ef74d5d90cc494e56a37120b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-size/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -198,7 +198,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na50f8a3d72834dedacd3cde8caee5164b2 ;
+    urnp:examples _:n9c7ea29d4ef74d5d90cc494e56a37120b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-size/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -228,11 +228,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:na50f8a3d72834dedacd3cde8caee5164b2 ;
+    urnp:examples _:n9c7ea29d4ef74d5d90cc494e56a37120b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-size/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:na50f8a3d72834dedacd3cde8caee5164b2
+_:n9c7ea29d4ef74d5d90cc494e56a37120b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-size/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/surface-strew-size/valid.ttl"^^xsd:anyURI ;
 .
