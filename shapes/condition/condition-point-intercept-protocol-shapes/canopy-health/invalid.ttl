@@ -168,11 +168,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:Float ,
                 tern:Value ;
-            rdf:value "-1.11"^^xsd:float ;
+            rdf:value "100.11"^^xsd:float ;
             sosa:isResultOf <urn:test:condition-point-intercept-protocol-shapes:invalid:canopy-health:value-range> ;
             tern:unit unit:PERCENT
         ] ;
-    sosa:hasSimpleResult "-1.11"^^xsd:float ;
+    sosa:hasSimpleResult "100.11"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/d0a31d21-b475-490e-a8d6-fbe374fc7391> ;
     sosa:phenomenonTime <https://example.com/observation/canopy-health/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
