@@ -1,0 +1,179 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:condition-vertebrate-pest-presence-plot-protocol-shapes:invalid:vegetation-diameter-class:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/0b57191d-6069-51a5-abe2-40c75128ef0b> ;
+            sosa:isResultOf <urn:test:condition-vertebrate-pest-presence-plot-protocol-shapes:invalid:vegetation-diameter-class:feature-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/fe0b8990-dc4c-4fc7-85e8-be08da5721a0>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/0b57191d-6069-51a5-abe2-40c75128ef0b> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/84369f9d-bcf3-4054-b200-797c8ae3064f> ;
+    sosa:phenomenonTime <https://example.com/observation/vegetation-diameter-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/1471b076-9b9e-4b69-ace5-5985a5af8e78> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:condition-vertebrate-pest-presence-plot-protocol-shapes:invalid:vegetation-diameter-class:result-value>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <urn:fake:categorical:value> ;
+            sosa:isResultOf <urn:test:condition-vertebrate-pest-presence-plot-protocol-shapes:invalid:vegetation-diameter-class:result-value> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/fe0b8990-dc4c-4fc7-85e8-be08da5721a0>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/84369f9d-bcf3-4054-b200-797c8ae3064f> ;
+    sosa:phenomenonTime <https://example.com/observation/vegetation-diameter-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/1471b076-9b9e-4b69-ace5-5985a5af8e78> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:condition-vertebrate-pest-presence-plot-protocol-shapes:invalid:vegetation-diameter-class:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/0b57191d-6069-51a5-abe2-40c75128ef0b> ;
+            sosa:isResultOf <urn:test:condition-vertebrate-pest-presence-plot-protocol-shapes:invalid:vegetation-diameter-class:simple-result> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/fe0b8990-dc4c-4fc7-85e8-be08da5721a0>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/84369f9d-bcf3-4054-b200-797c8ae3064f> ;
+    sosa:phenomenonTime <https://example.com/observation/vegetation-diameter-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/1471b076-9b9e-4b69-ace5-5985a5af8e78> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:condition-vertebrate-pest-presence-plot-protocol-shapes:invalid:vegetation-diameter-class:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/0b57191d-6069-51a5-abe2-40c75128ef0b> ;
+            sosa:isResultOf <urn:test:condition-vertebrate-pest-presence-plot-protocol-shapes:invalid:vegetation-diameter-class:site-visit> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/fe0b8990-dc4c-4fc7-85e8-be08da5721a0>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/0b57191d-6069-51a5-abe2-40c75128ef0b> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/84369f9d-bcf3-4054-b200-797c8ae3064f> ;
+    sosa:phenomenonTime <https://example.com/observation/vegetation-diameter-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/1471b076-9b9e-4b69-ace5-5985a5af8e78> ;
+.
+
+<urn:test:condition-vertebrate-pest-presence-plot-protocol-shapes:invalid:vegetation-diameter-class:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Vertebrate pest presence (plot) protocol'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/0b57191d-6069-51a5-abe2-40c75128ef0b> ;
+            sosa:isResultOf <urn:test:condition-vertebrate-pest-presence-plot-protocol-shapes:invalid:vegetation-diameter-class:used-procedure> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/fe0b8990-dc4c-4fc7-85e8-be08da5721a0>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/0b57191d-6069-51a5-abe2-40c75128ef0b> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/84369f9d-bcf3-4054-b200-797c8ae3064f> ;
+    sosa:phenomenonTime <https://example.com/observation/vegetation-diameter-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:condition-vertebrate-pest-presence-plot-protocol-shapes:invalid:vegetation-diameter-class:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/0b57191d-6069-51a5-abe2-40c75128ef0b> ;
+            sosa:isResultOf <urn:test:condition-vertebrate-pest-presence-plot-protocol-shapes:invalid:vegetation-diameter-class:value-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/fe0b8990-dc4c-4fc7-85e8-be08da5721a0>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/0b57191d-6069-51a5-abe2-40c75128ef0b> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/84369f9d-bcf3-4054-b200-797c8ae3064f> ;
+    sosa:phenomenonTime <https://example.com/observation/vegetation-diameter-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/1471b076-9b9e-4b69-ace5-5985a5af8e78> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:condition-vertebrate-pest-presence-plot-protocol-shapes:invalid:vegetation-diameter-class:vocabulary>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect vocabulary" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/0b57191d-6069-51a5-abe2-40c75128ef0b> ;
+            sosa:isResultOf <urn:test:condition-vertebrate-pest-presence-plot-protocol-shapes:invalid:vegetation-diameter-class:vocabulary> ;
+            tern:vocabulary <urn:fake:vocabulary>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/0b57191d-6069-51a5-abe2-40c75128ef0b> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/84369f9d-bcf3-4054-b200-797c8ae3064f> ;
+    sosa:phenomenonTime <https://example.com/observation/vegetation-diameter-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/1471b076-9b9e-4b69-ace5-5985a5af8e78> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
