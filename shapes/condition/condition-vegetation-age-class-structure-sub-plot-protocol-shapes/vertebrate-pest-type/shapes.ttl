@@ -1,0 +1,242 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:condition-vegetation-age-class-structure-sub-plot-protocol-shapes:vertebrate-pest-type:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _spatial point_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/13dec53e-1062-4060-9281-f133c8269afb> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/13dec53e-1062-4060-9281-f133c8269afb[`spatial point`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/85d5f75c-776f-44a3-abe6-e71c695f1754>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n023a58e94cd4442195899727ff000415b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vegetation-age-class-structure-sub-plot-protocol-shapes/vertebrate-pest-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:condition-vegetation-age-class-structure-sub-plot-protocol-shapes:vertebrate-pest-type:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Condition vertebrate pest types codes controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/2aa355f4-f7cc-5555-9c15-94c0579fa50f>
+            <https://linked.data.gov.au/def/nrm/8be85a4c-70c5-5ccd-a9e3-3dae472ef2bc>
+            <https://linked.data.gov.au/def/nrm/92267609-2271-5f50-be12-096a61916c96>
+            <https://linked.data.gov.au/def/nrm/c6ea7bdf-aa5c-5b94-9db1-1f3eaf14560d>
+            <https://linked.data.gov.au/def/nrm/cb5ad05a-e1b1-55bd-aa99-41ee4d0c1dea>
+            <https://linked.data.gov.au/def/nrm/d45a9860-c920-5e9b-ae3a-41140a086c42>
+            <https://linked.data.gov.au/def/nrm/e5407dff-766c-5b3f-827a-3b1a4e54f624>
+            <https://linked.data.gov.au/def/nrm/e94d8409-d368-53b6-90f7-104a22644881>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Condition vertebrate pest types codes controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/85d5f75c-776f-44a3-abe6-e71c695f1754> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n023a58e94cd4442195899727ff000415b2 ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'579449ad-4cea-4272-afa3-67f207941fb1'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vegetation-age-class-structure-sub-plot-protocol-shapes/vertebrate-pest-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:condition-vegetation-age-class-structure-sub-plot-protocol-shapes:vertebrate-pest-type:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/85d5f75c-776f-44a3-abe6-e71c695f1754>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:n023a58e94cd4442195899727ff000415b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vegetation-age-class-structure-sub-plot-protocol-shapes/vertebrate-pest-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:condition-vegetation-age-class-structure-sub-plot-protocol-shapes:vertebrate-pest-type:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Vegetation age class structure (sub-plot) protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/85d5f75c-776f-44a3-abe6-e71c695f1754>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n023a58e94cd4442195899727ff000415b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vegetation-age-class-structure-sub-plot-protocol-shapes/vertebrate-pest-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:condition-vegetation-age-class-structure-sub-plot-protocol-shapes:vertebrate-pest-type:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/51ba4b25-5508-46a8-9d7c-028012082d88>`.
+
+    `<https://linked.data.gov.au/def/nrm/51ba4b25-5508-46a8-9d7c-028012082d88>` is the IRI for "Vegetation age class structure (sub-plot) protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/51ba4b25-5508-46a8-9d7c-028012082d88> ;
+    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/51ba4b25-5508-46a8-9d7c-028012082d88`." ;
+    sh:name "Used procedure" ;
+    sh:path <http://www.w3.org/ns/sosa/usedProcedure> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/85d5f75c-776f-44a3-abe6-e71c695f1754>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n023a58e94cd4442195899727ff000415b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vegetation-age-class-structure-sub-plot-protocol-shapes/vertebrate-pest-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:condition-vegetation-age-class-structure-sub-plot-protocol-shapes:vertebrate-pest-type:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path <http://www.w3.org/ns/sosa/hasResult> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/85d5f75c-776f-44a3-abe6-e71c695f1754>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n023a58e94cd4442195899727ff000415b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vegetation-age-class-structure-sub-plot-protocol-shapes/vertebrate-pest-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:condition-vegetation-age-class-structure-sub-plot-protocol-shapes:vertebrate-pest-type:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/579449ad-4cea-4272-afa3-67f207941fb1>`.
+
+        `<https://linked.data.gov.au/def/nrm/579449ad-4cea-4272-afa3-67f207941fb1>` is the IRI for "Condition vertebrate pest types codes".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `579449ad-4cea-4272-afa3-67f207941fb1$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "579449ad-4cea-4272-afa3-67f207941fb1$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/85d5f75c-776f-44a3-abe6-e71c695f1754> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n023a58e94cd4442195899727ff000415b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vegetation-age-class-structure-sub-plot-protocol-shapes/vertebrate-pest-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+_:n023a58e94cd4442195899727ff000415b2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vegetation-age-class-structure-sub-plot-protocol-shapes/vertebrate-pest-type/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vegetation-age-class-structure-sub-plot-protocol-shapes/vertebrate-pest-type/valid.ttl"^^xsd:anyURI ;
+.
+
