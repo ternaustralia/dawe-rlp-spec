@@ -136,10 +136,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:integer ;
-    sh:description "Value _MUST_ be between values_tbd and values_tbd inclusive." ;
-    sh:maxInclusive <file:///workspaces/dawe-rlp-spec/shapes/condition/condition-vertebrate-pest-presence-plot-protocol-shapes/mistletoe-count/values_tbd> ;
-    sh:message "The result _MUST_ have a value between values_tbd and values_tbd inclusively." ;
-    sh:minInclusive <file:///workspaces/dawe-rlp-spec/shapes/condition/condition-vertebrate-pest-presence-plot-protocol-shapes/mistletoe-count/values_tbd> ;
+    sh:description "Value _MUST_ be non-negative." ;
+    sh:message "The result _MUST_ have a non-negative value." ;
+    sh:minInclusive 0 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
