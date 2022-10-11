@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:opportunistic-observations:invalid:habitat-description:feature-type>
+<urn:test:opportunistic-observations:invalid:habitat-description:feature-type:categorical>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/01a85e08-b223-50e9-92d2-98d8b71d6092> ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:habitat-description:feature-type> ;
+            sosa:isResultOf <urn:test:opportunistic-observations:invalid:habitat-description:feature-type:categorical> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/c19a0098-1f3f-4bc2-b84d-fdb6d4e24d6f>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/01a85e08-b223-50e9-92d2-98d8b71d6092> ;
@@ -30,7 +30,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:opportunistic-observations:invalid:habitat-description:result-value>
+<urn:test:opportunistic-observations:invalid:habitat-description:result-value:categorical>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
@@ -44,7 +44,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <urn:fake:categorical:value> ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:habitat-description:result-value> ;
+            sosa:isResultOf <urn:test:opportunistic-observations:invalid:habitat-description:result-value:categorical> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/c19a0098-1f3f-4bc2-b84d-fdb6d4e24d6f>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
@@ -55,7 +55,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:opportunistic-observations:invalid:habitat-description:simple-result>
+<urn:test:opportunistic-observations:invalid:habitat-description:simple-result:categorical>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -69,7 +69,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/01a85e08-b223-50e9-92d2-98d8b71d6092> ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:habitat-description:simple-result> ;
+            sosa:isResultOf <urn:test:opportunistic-observations:invalid:habitat-description:simple-result:categorical> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/c19a0098-1f3f-4bc2-b84d-fdb6d4e24d6f>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
@@ -80,7 +80,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:opportunistic-observations:invalid:habitat-description:site-visit>
+<urn:test:opportunistic-observations:invalid:habitat-description:site-visit:categorical>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -94,7 +94,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/01a85e08-b223-50e9-92d2-98d8b71d6092> ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:habitat-description:site-visit> ;
+            sosa:isResultOf <urn:test:opportunistic-observations:invalid:habitat-description:site-visit:categorical> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/c19a0098-1f3f-4bc2-b84d-fdb6d4e24d6f>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/01a85e08-b223-50e9-92d2-98d8b71d6092> ;
@@ -104,7 +104,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
 .
 
-<urn:test:opportunistic-observations:invalid:habitat-description:used-procedure>
+<urn:test:opportunistic-observations:invalid:habitat-description:used-procedure:categorical>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Opportunistic observations'." ;
@@ -118,7 +118,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/01a85e08-b223-50e9-92d2-98d8b71d6092> ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:habitat-description:used-procedure> ;
+            sosa:isResultOf <urn:test:opportunistic-observations:invalid:habitat-description:used-procedure:categorical> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/c19a0098-1f3f-4bc2-b84d-fdb6d4e24d6f>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/01a85e08-b223-50e9-92d2-98d8b71d6092> ;
@@ -129,7 +129,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:opportunistic-observations:invalid:habitat-description:value-type>
+<urn:test:opportunistic-observations:invalid:habitat-description:value-type:categorical>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
@@ -141,7 +141,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasResult [
             a tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/01a85e08-b223-50e9-92d2-98d8b71d6092> ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:habitat-description:value-type> ;
+            sosa:isResultOf <urn:test:opportunistic-observations:invalid:habitat-description:value-type:categorical> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/c19a0098-1f3f-4bc2-b84d-fdb6d4e24d6f>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/01a85e08-b223-50e9-92d2-98d8b71d6092> ;
@@ -152,7 +152,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:opportunistic-observations:invalid:habitat-description:vocabulary>
+<urn:test:opportunistic-observations:invalid:habitat-description:vocabulary:categorical>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect vocabulary" ;
@@ -166,7 +166,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/01a85e08-b223-50e9-92d2-98d8b71d6092> ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:habitat-description:vocabulary> ;
+            sosa:isResultOf <urn:test:opportunistic-observations:invalid:habitat-description:vocabulary:categorical> ;
             tern:vocabulary <urn:fake:vocabulary>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/01a85e08-b223-50e9-92d2-98d8b71d6092> ;
