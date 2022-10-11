@@ -244,7 +244,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/opportunistic-observations-protocol-shapes/habitat-description/shapes.ttl",
         valid_data_path="shapes/opportunistic-observations-protocol-shapes/habitat-description/valid.ttl",
         invalid_data_path="shapes/opportunistic-observations-protocol-shapes/habitat-description/invalid.ttl",
-        expected_failures=7,
+        expected_failures=13,
     ).astuple(),
     TestCaseItem(
         name="opportunistic-observations-protocol-shapes-number-of-individuals",
