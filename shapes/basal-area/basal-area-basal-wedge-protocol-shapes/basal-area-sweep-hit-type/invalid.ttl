@@ -1,0 +1,179 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:basal-area-basal-wedge-protocol-shapes:invalid:basal-area-sweep-hit-type:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/3e0a5d97-c623-477e-98fe-8fe120907530> ;
+            sosa:isResultOf <urn:test:basal-area-basal-wedge-protocol-shapes:invalid:basal-area-sweep-hit-type:feature-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/0ba17555-8c8f-435a-b16f-62773561207b>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/3e0a5d97-c623-477e-98fe-8fe120907530> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/43178892-92a6-434f-9895-340700e299e6> ;
+    sosa:phenomenonTime <https://example.com/observation/basal-area-sweep-hit-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:basal-area-basal-wedge-protocol-shapes:invalid:basal-area-sweep-hit-type:result-value>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <urn:fake:categorical:value> ;
+            sosa:isResultOf <urn:test:basal-area-basal-wedge-protocol-shapes:invalid:basal-area-sweep-hit-type:result-value> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/0ba17555-8c8f-435a-b16f-62773561207b>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/43178892-92a6-434f-9895-340700e299e6> ;
+    sosa:phenomenonTime <https://example.com/observation/basal-area-sweep-hit-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:basal-area-basal-wedge-protocol-shapes:invalid:basal-area-sweep-hit-type:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/3e0a5d97-c623-477e-98fe-8fe120907530> ;
+            sosa:isResultOf <urn:test:basal-area-basal-wedge-protocol-shapes:invalid:basal-area-sweep-hit-type:simple-result> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/0ba17555-8c8f-435a-b16f-62773561207b>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/43178892-92a6-434f-9895-340700e299e6> ;
+    sosa:phenomenonTime <https://example.com/observation/basal-area-sweep-hit-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:basal-area-basal-wedge-protocol-shapes:invalid:basal-area-sweep-hit-type:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/3e0a5d97-c623-477e-98fe-8fe120907530> ;
+            sosa:isResultOf <urn:test:basal-area-basal-wedge-protocol-shapes:invalid:basal-area-sweep-hit-type:site-visit> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/0ba17555-8c8f-435a-b16f-62773561207b>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/3e0a5d97-c623-477e-98fe-8fe120907530> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/43178892-92a6-434f-9895-340700e299e6> ;
+    sosa:phenomenonTime <https://example.com/observation/basal-area-sweep-hit-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f> ;
+.
+
+<urn:test:basal-area-basal-wedge-protocol-shapes:invalid:basal-area-sweep-hit-type:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Basal wedge protocol'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/3e0a5d97-c623-477e-98fe-8fe120907530> ;
+            sosa:isResultOf <urn:test:basal-area-basal-wedge-protocol-shapes:invalid:basal-area-sweep-hit-type:used-procedure> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/0ba17555-8c8f-435a-b16f-62773561207b>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/3e0a5d97-c623-477e-98fe-8fe120907530> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/43178892-92a6-434f-9895-340700e299e6> ;
+    sosa:phenomenonTime <https://example.com/observation/basal-area-sweep-hit-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:basal-area-basal-wedge-protocol-shapes:invalid:basal-area-sweep-hit-type:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/3e0a5d97-c623-477e-98fe-8fe120907530> ;
+            sosa:isResultOf <urn:test:basal-area-basal-wedge-protocol-shapes:invalid:basal-area-sweep-hit-type:value-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/0ba17555-8c8f-435a-b16f-62773561207b>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/3e0a5d97-c623-477e-98fe-8fe120907530> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/43178892-92a6-434f-9895-340700e299e6> ;
+    sosa:phenomenonTime <https://example.com/observation/basal-area-sweep-hit-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:basal-area-basal-wedge-protocol-shapes:invalid:basal-area-sweep-hit-type:vocabulary>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect vocabulary" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/3e0a5d97-c623-477e-98fe-8fe120907530> ;
+            sosa:isResultOf <urn:test:basal-area-basal-wedge-protocol-shapes:invalid:basal-area-sweep-hit-type:vocabulary> ;
+            tern:vocabulary <urn:fake:vocabulary>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/3e0a5d97-c623-477e-98fe-8fe120907530> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/43178892-92a6-434f-9895-340700e299e6> ;
+    sosa:phenomenonTime <https://example.com/observation/basal-area-sweep-hit-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
