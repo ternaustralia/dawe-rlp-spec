@@ -806,4 +806,18 @@ test_cases: List[TestCaseItem] = [
         invalid_data_path="shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/invalid.ttl",
         expected_failures=7,
     ).astuple(),
+    TestCaseItem(
+        name="basal-area-basal-wedge-protocol-shapes-basal-area-count",
+        shapes_path="shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area-count/shapes.ttl",
+        valid_data_path="shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area-count/valid.ttl",
+        invalid_data_path="shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area-count/invalid.ttl",
+        expected_failures=7,
+    ).astuple(),
+    TestCaseItem(
+        name="basal-area-basal-wedge-protocol-shapes-basal-area-sweep-hit-type",
+        shapes_path="shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area-sweep-hit-type/shapes.ttl",
+        valid_data_path="shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area-sweep-hit-type/valid.ttl",
+        invalid_data_path="shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area-sweep-hit-type/invalid.ttl",
+        expected_failures=7,
+    ).astuple(),
 ]
