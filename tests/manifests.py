@@ -1,3 +1,4 @@
+from os import name
 from typing import List, Tuple
 from dataclasses import dataclass, astuple
 
@@ -903,5 +904,26 @@ test_cases: List[TestCaseItem] = [
         valid_data_path="shapes/basal-area/basal-area-lite-dbh-measures-protocol-shapes/circumference-at-breast-height/valid.ttl",
         invalid_data_path="shapes/basal-area/basal-area-lite-dbh-measures-protocol-shapes/circumference-at-breast-height/invalid.ttl",
         expected_failures=8,
+    ).astuple(),
+    TestCaseItem(
+        name="camera-traps-array-protocol-shapes-habitat-description",
+        shapes_path="shapes/camera-traps/camera-traps-array-protocol-shapes/habitat-description/shapes.ttl",
+        valid_data_path="shapes/camera-traps/camera-traps-array-protocol-shapes/habitat-description/valid.ttl",
+        invalid_data_path="shapes/camera-traps/camera-traps-array-protocol-shapes/habitat-description/invalid.ttl",
+        expected_failures=13,
+    ).astuple(),
+    TestCaseItem(
+        name="camera-traps-fauna-protocol-shapes-habitat-description",
+        shapes_path="shapes/camera-traps/camera-traps-fauna-protocol-shapes/habitat-description/shapes.ttl",
+        valid_data_path="shapes/camera-traps/camera-traps-fauna-protocol-shapes/habitat-description/valid.ttl",
+        invalid_data_path="shapes/camera-traps/camera-traps-fauna-protocol-shapes/habitat-description/invalid.ttl",
+        expected_failures=13,
+    ).astuple(),
+    TestCaseItem(
+        name="camera-traps-targeted-protocol-shapes-habitat-description",
+        shapes_path="shapes/camera-traps/camera-traps-targeted-protocol-shapes/habitat-description/shapes.ttl",
+        valid_data_path="shapes/camera-traps/camera-traps-targeted-protocol-shapes/habitat-description/valid.ttl",
+        invalid_data_path="shapes/camera-traps/camera-traps-targeted-protocol-shapes/habitat-description/invalid.ttl",
+        expected_failures=13,
     ).astuple(),
 ]
