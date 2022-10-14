@@ -165,9 +165,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:float ;
-    sh:description "Value _MUST_ be positive." ;
-    sh:message "The result _MUST_ have a positive value." ;
-    sh:minExclusive 0 ;
+    sh:description "Value _MUST_ be at least 0.1." ;
+    sh:message "The result _MUST_ have a value greater then or equal to 0.1." ;
+    sh:minInclusive 0.1 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
