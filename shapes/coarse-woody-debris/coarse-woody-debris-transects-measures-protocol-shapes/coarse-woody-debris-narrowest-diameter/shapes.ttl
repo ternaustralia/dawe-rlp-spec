@@ -1,0 +1,223 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-narrowest-diameter:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _plant individual_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270[`plant individual`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/e73af424-f20d-49b8-81e3-cd30afb5b267>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n5bf5412c315a47afb055da17287bfaefb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-narrowest-diameter/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-narrowest-diameter:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/e73af424-f20d-49b8-81e3-cd30afb5b267>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:n5bf5412c315a47afb055da17287bfaefb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-narrowest-diameter/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-narrowest-diameter:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Transects measures protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/e73af424-f20d-49b8-81e3-cd30afb5b267>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n5bf5412c315a47afb055da17287bfaefb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-narrowest-diameter/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-narrowest-diameter:unit-of-measure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Result value's unit of measure _MUST_ have the value `values_tbd`." ;
+    sh:hasValue <file:///workspaces/dawe-rlp-spec/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-narrowest-diameter/values_tbd> ;
+    sh:message "The result _MUST_ have `values_tbd` as the value for `tern:unit`." ;
+    sh:name "Unit of measure" ;
+    sh:path tern:unit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/e73af424-f20d-49b8-81e3-cd30afb5b267> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n5bf5412c315a47afb055da17287bfaefb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-narrowest-diameter/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-narrowest-diameter:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/fc74b2cb-f3ab-4101-9e3f-43f016db3db6>`.
+
+    `<https://linked.data.gov.au/def/nrm/fc74b2cb-f3ab-4101-9e3f-43f016db3db6>` is the IRI for "Transects measures protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/fc74b2cb-f3ab-4101-9e3f-43f016db3db6> ;
+    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/fc74b2cb-f3ab-4101-9e3f-43f016db3db6`." ;
+    sh:name "Used procedure" ;
+    sh:path <http://www.w3.org/ns/sosa/usedProcedure> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/e73af424-f20d-49b8-81e3-cd30afb5b267>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n5bf5412c315a47afb055da17287bfaefb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-narrowest-diameter/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-narrowest-diameter:value-range>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:datatype xsd:float ;
+    sh:description "Value _MUST_ be between values_tbd and values_tbd inclusive." ;
+    sh:maxInclusive <file:///workspaces/dawe-rlp-spec/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-narrowest-diameter/values_tbd> ;
+    sh:message "The result _MUST_ have a value between values_tbd and values_tbd inclusively." ;
+    sh:minInclusive <file:///workspaces/dawe-rlp-spec/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-narrowest-diameter/values_tbd> ;
+    sh:name "Value range" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/e73af424-f20d-49b8-81e3-cd30afb5b267> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n5bf5412c315a47afb055da17287bfaefb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-narrowest-diameter/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-narrowest-diameter:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:Float ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Float`." ;
+    sh:name "Value type" ;
+    sh:path <http://www.w3.org/ns/sosa/hasResult> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/e73af424-f20d-49b8-81e3-cd30afb5b267>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n5bf5412c315a47afb055da17287bfaefb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-narrowest-diameter/shapes.ttl"^^xsd:anyURI ;
+.
+
+_:n5bf5412c315a47afb055da17287bfaefb2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-narrowest-diameter/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-narrowest-diameter/valid.ttl"^^xsd:anyURI ;
+.
+
