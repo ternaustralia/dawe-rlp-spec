@@ -7,7 +7,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-percent-cover-cwd-percent-cover:feature-type>
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-percent-cover:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -33,10 +33,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:n5b875ac9d34d4608a12001e9d1940a89b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover-cwd-percent-cover/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-percent-cover-cwd-percent-cover:simple-result>
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-percent-cover:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -65,10 +65,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sh:targetClass tern:Observation ;
     urnp:examples _:n5b875ac9d34d4608a12001e9d1940a89b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover-cwd-percent-cover/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-percent-cover-cwd-percent-cover:site-visit>
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-percent-cover:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -95,17 +95,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:n5b875ac9d34d4608a12001e9d1940a89b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover-cwd-percent-cover/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-percent-cover-cwd-percent-cover:unit-of-measure>
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-percent-cover:unit-of-measure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description "Result value's unit of measure _MUST_ have the value `values_tbd`." ;
-    sh:hasValue <file:///workspaces/dawe-rlp-spec/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover-cwd-percent-cover/values_tbd> ;
+    sh:hasValue <file:///workspaces/dawe-rlp-spec/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover/values_tbd> ;
     sh:message "The result _MUST_ have `values_tbd` as the value for `tern:unit`." ;
     sh:name "Unit of measure" ;
     sh:path tern:unit ;
@@ -123,10 +123,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }"""
         ] ;
     urnp:examples _:n5b875ac9d34d4608a12001e9d1940a89b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover-cwd-percent-cover/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-percent-cover-cwd-percent-cover:used-procedure>
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-percent-cover:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -154,10 +154,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:n5b875ac9d34d4608a12001e9d1940a89b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover-cwd-percent-cover/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-percent-cover-cwd-percent-cover:value-range>
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-percent-cover:value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -165,9 +165,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between values_tbd and values_tbd inclusive." ;
-    sh:maxInclusive <file:///workspaces/dawe-rlp-spec/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover-cwd-percent-cover/values_tbd> ;
+    sh:maxInclusive <file:///workspaces/dawe-rlp-spec/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover/values_tbd> ;
     sh:message "The result _MUST_ have a value between values_tbd and values_tbd inclusively." ;
-    sh:minInclusive <file:///workspaces/dawe-rlp-spec/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover-cwd-percent-cover/values_tbd> ;
+    sh:minInclusive <file:///workspaces/dawe-rlp-spec/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover/values_tbd> ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
@@ -184,10 +184,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }"""
         ] ;
     urnp:examples _:n5b875ac9d34d4608a12001e9d1940a89b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover-cwd-percent-cover/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-percent-cover-cwd-percent-cover:value-type>
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-percent-cover:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -213,11 +213,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:n5b875ac9d34d4608a12001e9d1940a89b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover-cwd-percent-cover/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
 _:n5b875ac9d34d4608a12001e9d1940a89b2
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover-cwd-percent-cover/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover-cwd-percent-cover/valid.ttl"^^xsd:anyURI ;
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-percent-cover/valid.ttl"^^xsd:anyURI ;
 .
 
