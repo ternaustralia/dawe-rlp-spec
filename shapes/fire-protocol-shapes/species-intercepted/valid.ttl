@@ -1,0 +1,31 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:fire-protocol-shapes:valid:species-intercepted>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - species intercepted" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "values_tbd"^^xsd:string ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:valid:species-intercepted>
+        ] ;
+    sosa:hasSimpleResult "values_tbd"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/20c219f2-1526-4365-8f77-569cec5f1731> ;
+    sosa:phenomenonTime <https://example.com/observation/species-intercepted/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
