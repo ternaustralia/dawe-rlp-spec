@@ -6,7 +6,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual-cwd-volume:datatype>
+<urn:test:coarse-woody-debris-transects-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:float`." ;
@@ -20,18 +20,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value 3 ;
-            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual-cwd-volume:datatype> ;
+            sosa:isResultOf <urn:test:coarse-woody-debris-transects-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual:datatype> ;
             tern:unit unit:M3
         ] ;
     sosa:hasSimpleResult 3 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/9ce420b8-8070-498c-974f-0eee82f23fd2> ;
-    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-volume-individual-cwd-volume/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-volume-individual/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/fc74b2cb-f3ab-4101-9e3f-43f016db3db6> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual-cwd-volume:feature-type>
+<urn:test:coarse-woody-debris-transects-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -45,18 +45,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual-cwd-volume:feature-type> ;
+            sosa:isResultOf <urn:test:coarse-woody-debris-transects-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual:feature-type> ;
             tern:unit unit:M3
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/9ce420b8-8070-498c-974f-0eee82f23fd2> ;
-    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-volume-individual-cwd-volume/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-volume-individual/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/fc74b2cb-f3ab-4101-9e3f-43f016db3db6> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual-cwd-volume:simple-result>
+<urn:test:coarse-woody-debris-transects-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -70,18 +70,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual-cwd-volume:simple-result> ;
+            sosa:isResultOf <urn:test:coarse-woody-debris-transects-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual:simple-result> ;
             tern:unit unit:M3
         ] ;
     sosa:hasSimpleResult "13.56"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/9ce420b8-8070-498c-974f-0eee82f23fd2> ;
-    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-volume-individual-cwd-volume/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-volume-individual/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/fc74b2cb-f3ab-4101-9e3f-43f016db3db6> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual-cwd-volume:site-visit>
+<urn:test:coarse-woody-debris-transects-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -95,17 +95,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual-cwd-volume:site-visit> ;
+            sosa:isResultOf <urn:test:coarse-woody-debris-transects-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual:site-visit> ;
             tern:unit unit:M3
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/9ce420b8-8070-498c-974f-0eee82f23fd2> ;
-    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-volume-individual-cwd-volume/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-volume-individual/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/fc74b2cb-f3ab-4101-9e3f-43f016db3db6> ;
 .
 
-<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual-cwd-volume:unit-of-measure>
+<urn:test:coarse-woody-debris-transects-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual:unit-of-measure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result unit of measure" ;
@@ -119,21 +119,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual-cwd-volume:unit-of-measure> ;
+            sosa:isResultOf <urn:test:coarse-woody-debris-transects-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual:unit-of-measure> ;
             tern:unit <urn:fake:unit>
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/9ce420b8-8070-498c-974f-0eee82f23fd2> ;
-    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-volume-individual-cwd-volume/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-volume-individual/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/fc74b2cb-f3ab-4101-9e3f-43f016db3db6> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual-cwd-volume:used-procedure>
+<urn:test:coarse-woody-debris-transects-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the used procedure should be 'Plots measures protocol'." ;
+    rdfs:comment "Invalid result - the used procedure should be 'Transects measures protocol'." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -144,18 +144,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual-cwd-volume:used-procedure> ;
+            sosa:isResultOf <urn:test:coarse-woody-debris-transects-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual:used-procedure> ;
             tern:unit unit:M3
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/9ce420b8-8070-498c-974f-0eee82f23fd2> ;
-    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-volume-individual-cwd-volume/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-volume-individual/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual-cwd-volume:value-range>
+<urn:test:coarse-woody-debris-transects-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual:value-range>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value out of range" ;
@@ -169,18 +169,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "0.0"^^xsd:float ;
-            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual-cwd-volume:value-range> ;
+            sosa:isResultOf <urn:test:coarse-woody-debris-transects-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual:value-range> ;
             tern:unit unit:M3
         ] ;
     sosa:hasSimpleResult "0.0"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/9ce420b8-8070-498c-974f-0eee82f23fd2> ;
-    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-volume-individual-cwd-volume/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-volume-individual/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/fc74b2cb-f3ab-4101-9e3f-43f016db3db6> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual-cwd-volume:value-type>
+<urn:test:coarse-woody-debris-transects-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:Float`." ;
@@ -192,14 +192,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasResult [
             a tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual-cwd-volume:value-type> ;
+            sosa:isResultOf <urn:test:coarse-woody-debris-transects-measures-protocol-shapes:invalid:coarse-woody-debris-volume-individual:value-type> ;
             tern:unit unit:M3
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/9ce420b8-8070-498c-974f-0eee82f23fd2> ;
-    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-volume-individual-cwd-volume/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-volume-individual/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/fc74b2cb-f3ab-4101-9e3f-43f016db3db6> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 

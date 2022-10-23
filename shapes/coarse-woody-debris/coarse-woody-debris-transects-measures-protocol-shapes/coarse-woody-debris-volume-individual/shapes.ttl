@@ -8,7 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-volume-individual-cwd-volume:feature-type>
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-volume-individual:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -34,10 +34,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:n81ac49fb9f0a4c5694c5e7e1aced49adb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-volume-individual-cwd-volume/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-volume-individual/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-volume-individual-cwd-volume:simple-result>
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-volume-individual:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -66,10 +66,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sh:targetClass tern:Observation ;
     urnp:examples _:n81ac49fb9f0a4c5694c5e7e1aced49adb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-volume-individual-cwd-volume/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-volume-individual/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-volume-individual-cwd-volume:site-visit>
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-volume-individual:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -96,10 +96,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:n81ac49fb9f0a4c5694c5e7e1aced49adb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-volume-individual-cwd-volume/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-volume-individual/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-volume-individual-cwd-volume:unit-of-measure>
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-volume-individual:unit-of-measure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -124,10 +124,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }"""
         ] ;
     urnp:examples _:n81ac49fb9f0a4c5694c5e7e1aced49adb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-volume-individual-cwd-volume/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-volume-individual/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-volume-individual-cwd-volume:used-procedure>
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-volume-individual:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -155,10 +155,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:n81ac49fb9f0a4c5694c5e7e1aced49adb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-volume-individual-cwd-volume/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-volume-individual/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-volume-individual-cwd-volume:value-range>
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-volume-individual:value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -184,10 +184,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }"""
         ] ;
     urnp:examples _:n81ac49fb9f0a4c5694c5e7e1aced49adb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-volume-individual-cwd-volume/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-volume-individual/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-volume-individual-cwd-volume:value-type>
+<urn:shapes:coarse-woody-debris-transects-measures-protocol-shapes:coarse-woody-debris-volume-individual:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -213,11 +213,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:n81ac49fb9f0a4c5694c5e7e1aced49adb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-volume-individual-cwd-volume/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-volume-individual/shapes.ttl"^^xsd:anyURI ;
 .
 
 _:n81ac49fb9f0a4c5694c5e7e1aced49adb2
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-volume-individual-cwd-volume/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-volume-individual-cwd-volume/valid.ttl"^^xsd:anyURI ;
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-volume-individual/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-volume-individual/valid.ttl"^^xsd:anyURI ;
 .
 
