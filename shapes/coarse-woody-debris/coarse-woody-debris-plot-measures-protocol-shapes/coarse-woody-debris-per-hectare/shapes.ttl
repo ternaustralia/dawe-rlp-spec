@@ -8,7 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:coarse-woody-debris-plot-measures-protocol-shapes:coarse-woody-debris-per-hectare-cwd-volume-per-hectare:feature-type>
+<urn:shapes:coarse-woody-debris-plot-measures-protocol-shapes:coarse-woody-debris-per-hectare:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -34,10 +34,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:nfc6a049f61624b69b13f6d5fc5263f0fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare-cwd-volume-per-hectare/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-plot-measures-protocol-shapes:coarse-woody-debris-per-hectare-cwd-volume-per-hectare:simple-result>
+<urn:shapes:coarse-woody-debris-plot-measures-protocol-shapes:coarse-woody-debris-per-hectare:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -66,10 +66,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sh:targetClass tern:Observation ;
     urnp:examples _:nfc6a049f61624b69b13f6d5fc5263f0fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare-cwd-volume-per-hectare/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-plot-measures-protocol-shapes:coarse-woody-debris-per-hectare-cwd-volume-per-hectare:site-visit>
+<urn:shapes:coarse-woody-debris-plot-measures-protocol-shapes:coarse-woody-debris-per-hectare:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -96,10 +96,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:nfc6a049f61624b69b13f6d5fc5263f0fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare-cwd-volume-per-hectare/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-plot-measures-protocol-shapes:coarse-woody-debris-per-hectare-cwd-volume-per-hectare:unit-of-measure>
+<urn:shapes:coarse-woody-debris-plot-measures-protocol-shapes:coarse-woody-debris-per-hectare:unit-of-measure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -124,10 +124,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }"""
         ] ;
     urnp:examples _:nfc6a049f61624b69b13f6d5fc5263f0fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare-cwd-volume-per-hectare/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-plot-measures-protocol-shapes:coarse-woody-debris-per-hectare-cwd-volume-per-hectare:used-procedure>
+<urn:shapes:coarse-woody-debris-plot-measures-protocol-shapes:coarse-woody-debris-per-hectare:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -155,10 +155,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:nfc6a049f61624b69b13f6d5fc5263f0fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare-cwd-volume-per-hectare/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-plot-measures-protocol-shapes:coarse-woody-debris-per-hectare-cwd-volume-per-hectare:value-range>
+<urn:shapes:coarse-woody-debris-plot-measures-protocol-shapes:coarse-woody-debris-per-hectare:value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -184,10 +184,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }"""
         ] ;
     urnp:examples _:nfc6a049f61624b69b13f6d5fc5263f0fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare-cwd-volume-per-hectare/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-plot-measures-protocol-shapes:coarse-woody-debris-per-hectare-cwd-volume-per-hectare:value-type>
+<urn:shapes:coarse-woody-debris-plot-measures-protocol-shapes:coarse-woody-debris-per-hectare:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -213,11 +213,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:nfc6a049f61624b69b13f6d5fc5263f0fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare-cwd-volume-per-hectare/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare/shapes.ttl"^^xsd:anyURI ;
 .
 
 _:nfc6a049f61624b69b13f6d5fc5263f0fb2
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare-cwd-volume-per-hectare/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare-cwd-volume-per-hectare/valid.ttl"^^xsd:anyURI ;
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare/valid.ttl"^^xsd:anyURI ;
 .
 
