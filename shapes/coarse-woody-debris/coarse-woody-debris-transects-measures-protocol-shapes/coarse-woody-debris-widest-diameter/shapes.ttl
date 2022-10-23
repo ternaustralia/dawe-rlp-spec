@@ -3,6 +3,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -32,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n59309cc4187545fa99d8cb2d909deedeb2 ;
+    urnp:examples _:n44d46f3ef61b4fb5a626753ca0defa6ab2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-widest-diameter/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -64,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n59309cc4187545fa99d8cb2d909deedeb2 ;
+    urnp:examples _:n44d46f3ef61b4fb5a626753ca0defa6ab2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-widest-diameter/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -94,7 +95,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n59309cc4187545fa99d8cb2d909deedeb2 ;
+    urnp:examples _:n44d46f3ef61b4fb5a626753ca0defa6ab2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-widest-diameter/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -104,9 +105,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "Result value's unit of measure _MUST_ have the value `values_tbd`." ;
-    sh:hasValue <file:///workspaces/dawe-rlp-spec/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-widest-diameter/values_tbd> ;
-    sh:message "The result _MUST_ have `values_tbd` as the value for `tern:unit`." ;
+    sh:description "Result value's unit of measure _MUST_ have the value `unit:CentiM`." ;
+    sh:hasValue unit:CentiM ;
+    sh:message "The result _MUST_ have `unit:CentiM` as the value for `tern:unit`." ;
     sh:name "Unit of measure" ;
     sh:path tern:unit ;
     sh:target [
@@ -122,7 +123,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n59309cc4187545fa99d8cb2d909deedeb2 ;
+    urnp:examples _:n44d46f3ef61b4fb5a626753ca0defa6ab2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-widest-diameter/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -153,7 +154,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n59309cc4187545fa99d8cb2d909deedeb2 ;
+    urnp:examples _:n44d46f3ef61b4fb5a626753ca0defa6ab2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-widest-diameter/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -164,10 +165,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:float ;
-    sh:description "Value _MUST_ be between values_tbd and values_tbd inclusive." ;
-    sh:maxInclusive <file:///workspaces/dawe-rlp-spec/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-widest-diameter/values_tbd> ;
-    sh:message "The result _MUST_ have a value between values_tbd and values_tbd inclusively." ;
-    sh:minInclusive <file:///workspaces/dawe-rlp-spec/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-widest-diameter/values_tbd> ;
+    sh:description "Value _MUST_ be at least 10." ;
+    sh:message "The result _MUST_ have a value greater than or equal to 10." ;
+    sh:minInclusive 10 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
@@ -183,7 +183,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n59309cc4187545fa99d8cb2d909deedeb2 ;
+    urnp:examples _:n44d46f3ef61b4fb5a626753ca0defa6ab2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-widest-diameter/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -212,11 +212,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n59309cc4187545fa99d8cb2d909deedeb2 ;
+    urnp:examples _:n44d46f3ef61b4fb5a626753ca0defa6ab2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-widest-diameter/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n59309cc4187545fa99d8cb2d909deedeb2
+_:n44d46f3ef61b4fb5a626753ca0defa6ab2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-widest-diameter/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris/coarse-woody-debris-transects-measures-protocol-shapes/coarse-woody-debris-widest-diameter/valid.ttl"^^xsd:anyURI ;
 .
