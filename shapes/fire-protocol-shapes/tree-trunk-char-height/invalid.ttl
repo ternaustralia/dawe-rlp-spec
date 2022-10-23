@@ -2,6 +2,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -20,7 +21,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value 3 ;
             sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:tree-trunk-char-height:datatype> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:M
         ] ;
     sosa:hasSimpleResult 3 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3a2b344c-07b5-4536-8db3-06b73bc0e263> ;
@@ -45,7 +46,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:tree-trunk-char-height:feature-type> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3a2b344c-07b5-4536-8db3-06b73bc0e263> ;
@@ -70,7 +71,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:tree-trunk-char-height:simple-result> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "13.56"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3a2b344c-07b5-4536-8db3-06b73bc0e263> ;
@@ -95,7 +96,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:tree-trunk-char-height:site-visit> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3a2b344c-07b5-4536-8db3-06b73bc0e263> ;
@@ -144,7 +145,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:tree-trunk-char-height:used-procedure> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3a2b344c-07b5-4536-8db3-06b73bc0e263> ;
@@ -167,11 +168,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:Float ,
                 tern:Value ;
-            rdf:value "-1.11"^^xsd:float ;
+            rdf:value "0.0"^^xsd:float ;
             sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:tree-trunk-char-height:value-range> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:M
         ] ;
-    sosa:hasSimpleResult "-1.11"^^xsd:float ;
+    sosa:hasSimpleResult "0.0"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3a2b344c-07b5-4536-8db3-06b73bc0e263> ;
     sosa:phenomenonTime <https://example.com/observation/tree-trunk-char-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -192,7 +193,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:tree-trunk-char-height:value-type> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3a2b344c-07b5-4536-8db3-06b73bc0e263> ;
