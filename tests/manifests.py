@@ -1297,4 +1297,18 @@ test_cases: List[TestCaseItem] = [
         invalid_data_path="shapes/invertebrate-fauna/invertebrate-fauna-light-trapping-lepiled-protocol-shapes/weather-site-temperature/invalid.ttl",
         expected_failures=7,
     ).astuple(),
+    TestCaseItem(
+        name="invertebrate-fauna-pan-trapping-protocol-shapes-pan-trap-count-estimate",
+        shapes_path="shapes/invertebrate-fauna/invertebrate-fauna-pan-trapping-protocol-shapes/pan-trap-count-estimate/shapes.ttl",
+        valid_data_path="shapes/invertebrate-fauna/invertebrate-fauna-pan-trapping-protocol-shapes/pan-trap-count-estimate/valid.ttl",
+        invalid_data_path="shapes/invertebrate-fauna/invertebrate-fauna-pan-trapping-protocol-shapes/pan-trap-count-estimate/invalid.ttl",
+        expected_failures=7,
+    ).astuple(),
+    TestCaseItem(
+        name="invertebrate-fauna-pan-trapping-protocol-shapes-plant-species-in-flower",
+        shapes_path="shapes/invertebrate-fauna/invertebrate-fauna-pan-trapping-protocol-shapes/plant-species-in-flower/shapes.ttl",
+        valid_data_path="shapes/invertebrate-fauna/invertebrate-fauna-pan-trapping-protocol-shapes/plant-species-in-flower/valid.ttl",
+        invalid_data_path="shapes/invertebrate-fauna/invertebrate-fauna-pan-trapping-protocol-shapes/plant-species-in-flower/invalid.ttl",
+        expected_failures=6,
+    ).astuple(),
 ]
