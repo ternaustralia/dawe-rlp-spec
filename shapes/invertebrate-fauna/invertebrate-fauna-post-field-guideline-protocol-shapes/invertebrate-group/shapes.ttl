@@ -1,0 +1,281 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:invertebrate-fauna-post-field-guideline-protocol-shapes:invertebrate-group:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _animal individual_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7[`animal individual`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/31347751-82bd-4be8-bbae-ff0d80e319b5>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:nfefb1263063f4327afd21cc1d400f04bb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/invertebrate-group/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:invertebrate-fauna-post-field-guideline-protocol-shapes:invertebrate-group:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Invertebrate post field guideline groups codes controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/05165e20-e55d-5f01-8424-06e7687e5c42>
+            <https://linked.data.gov.au/def/nrm/0c4a59e2-e64e-5e46-97e6-fcf0e5aa55da>
+            <https://linked.data.gov.au/def/nrm/0c50f748-3723-50bd-a159-96e5f1137407>
+            <https://linked.data.gov.au/def/nrm/0edcd8e4-7862-5370-b54c-864c459f9b01>
+            <https://linked.data.gov.au/def/nrm/0fdee0ab-3cd5-5734-88f3-0634c3216aed>
+            <https://linked.data.gov.au/def/nrm/175829c1-edb5-57d8-a4b1-b43bccb665de>
+            <https://linked.data.gov.au/def/nrm/18e27bde-3795-59bb-9345-030f1984718b>
+            <https://linked.data.gov.au/def/nrm/193ffc66-9f59-5e83-9f48-e63c25deccd6>
+            <https://linked.data.gov.au/def/nrm/2a916630-34ad-52e3-a44b-2baaa1f1c7ad>
+            <https://linked.data.gov.au/def/nrm/2d8c8012-d991-5097-8063-2e22783ad477>
+            <https://linked.data.gov.au/def/nrm/2effe4fd-f37f-599d-a697-54f561c09dac>
+            <https://linked.data.gov.au/def/nrm/32ddd782-a237-5727-82ba-ea4e1c1df3d3>
+            <https://linked.data.gov.au/def/nrm/3460cb32-754b-5fc0-97f8-168e7362639d>
+            <https://linked.data.gov.au/def/nrm/3c3b8033-b09d-5041-b587-62ad40848907>
+            <https://linked.data.gov.au/def/nrm/4422d44d-12e7-5a61-a530-cc25e7682050>
+            <https://linked.data.gov.au/def/nrm/44c2d788-d15f-55fd-9d17-58e74acbf23b>
+            <https://linked.data.gov.au/def/nrm/4b53f973-68d9-58f1-b2a8-812a154e0113>
+            <https://linked.data.gov.au/def/nrm/54f0214e-aee8-578b-8783-fe46898e09db>
+            <https://linked.data.gov.au/def/nrm/57b91f00-0f71-5714-a75c-aef7b9259152>
+            <https://linked.data.gov.au/def/nrm/5b19cf32-6248-5406-bfa7-d40945b68d15>
+            <https://linked.data.gov.au/def/nrm/61a22354-16ff-5fe7-9b88-72375e4fda8d>
+            <https://linked.data.gov.au/def/nrm/63dad5cb-35d3-5345-aba0-218f3bb5ed75>
+            <https://linked.data.gov.au/def/nrm/6ae69767-fc09-5790-98d6-f2eca983530f>
+            <https://linked.data.gov.au/def/nrm/70defbae-a5ed-547f-8156-82b7ebd5ae86>
+            <https://linked.data.gov.au/def/nrm/7b3abd21-8857-59b3-84f1-87fd680de815>
+            <https://linked.data.gov.au/def/nrm/8401d0c0-8c2f-5817-bf47-17b159103a36>
+            <https://linked.data.gov.au/def/nrm/875577c5-d664-5108-bb92-3d55d8b7b4c5>
+            <https://linked.data.gov.au/def/nrm/89285d90-a3c0-5ae5-885c-8d73c6538a92>
+            <https://linked.data.gov.au/def/nrm/8c885a30-1a03-5242-8b8e-e4cda2223d3a>
+            <https://linked.data.gov.au/def/nrm/9d3f0841-2518-59e8-a62a-a9c58903546a>
+            <https://linked.data.gov.au/def/nrm/a27fd1b8-1262-51b4-8853-7efbf780fe14>
+            <https://linked.data.gov.au/def/nrm/a6912462-7a31-5f60-b1d2-60ca87cf1e14>
+            <https://linked.data.gov.au/def/nrm/a7601e71-0b4e-5966-9b2a-2169f0cc157b>
+            <https://linked.data.gov.au/def/nrm/a7666bea-87ab-5750-90b5-a3173296d855>
+            <https://linked.data.gov.au/def/nrm/b08e39d2-2f95-53d9-a122-fdf357437f2f>
+            <https://linked.data.gov.au/def/nrm/c9c79155-f557-54aa-b03a-089503899a1e>
+            <https://linked.data.gov.au/def/nrm/c9fa131a-08f9-5b5f-b623-31fcf093db75>
+            <https://linked.data.gov.au/def/nrm/cc39329e-fb34-5a39-bfed-0fafcb3fa3b8>
+            <https://linked.data.gov.au/def/nrm/e0e71ed5-ea1e-514d-99ac-2a4b83347bb8>
+            <https://linked.data.gov.au/def/nrm/e30679c2-f437-5ce0-b2d1-166843e29acb>
+            <https://linked.data.gov.au/def/nrm/e3686f9b-6e3a-562d-b0df-ba4b4226c195>
+            <https://linked.data.gov.au/def/nrm/e550b5f2-61af-523c-bcc9-4de46e8bc00a>
+            <https://linked.data.gov.au/def/nrm/ed86a6cf-396b-59e9-a2da-416bc2076e5d>
+            <https://linked.data.gov.au/def/nrm/f757c44c-1f5f-5d74-aaa8-deec48b56523>
+            <https://linked.data.gov.au/def/nrm/fa1030ec-8fc2-5f8a-b956-8e032ec5295b>
+            <https://linked.data.gov.au/def/nrm/fbd1f8dc-944b-5ead-a662-e0f6b2516840>
+            <https://linked.data.gov.au/def/nrm/fd22e63e-2116-56ff-9f24-062e3a2dd73f>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Invertebrate post field guideline groups codes controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/31347751-82bd-4be8-bbae-ff0d80e319b5> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:nfefb1263063f4327afd21cc1d400f04bb2 ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'5174e669-328b-4df8-879e-95b13738f475'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/invertebrate-group/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:invertebrate-fauna-post-field-guideline-protocol-shapes:invertebrate-group:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/31347751-82bd-4be8-bbae-ff0d80e319b5>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:nfefb1263063f4327afd21cc1d400f04bb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/invertebrate-group/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:invertebrate-fauna-post-field-guideline-protocol-shapes:invertebrate-group:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Post-field guidelines protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/31347751-82bd-4be8-bbae-ff0d80e319b5>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nfefb1263063f4327afd21cc1d400f04bb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/invertebrate-group/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:invertebrate-fauna-post-field-guideline-protocol-shapes:invertebrate-group:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/79296cab-a02f-420d-b260-17c0e8691499>`.
+
+    `<https://linked.data.gov.au/def/nrm/79296cab-a02f-420d-b260-17c0e8691499>` is the IRI for "Post-field guidelines protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/79296cab-a02f-420d-b260-17c0e8691499> ;
+    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/79296cab-a02f-420d-b260-17c0e8691499`." ;
+    sh:name "Used procedure" ;
+    sh:path <http://www.w3.org/ns/sosa/usedProcedure> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/31347751-82bd-4be8-bbae-ff0d80e319b5>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nfefb1263063f4327afd21cc1d400f04bb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/invertebrate-group/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:invertebrate-fauna-post-field-guideline-protocol-shapes:invertebrate-group:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path <http://www.w3.org/ns/sosa/hasResult> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/31347751-82bd-4be8-bbae-ff0d80e319b5>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nfefb1263063f4327afd21cc1d400f04bb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/invertebrate-group/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:invertebrate-fauna-post-field-guideline-protocol-shapes:invertebrate-group:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/5174e669-328b-4df8-879e-95b13738f475>`.
+
+        `<https://linked.data.gov.au/def/nrm/5174e669-328b-4df8-879e-95b13738f475>` is the IRI for "Invertebrate post field guideline groups codes".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `5174e669-328b-4df8-879e-95b13738f475$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "5174e669-328b-4df8-879e-95b13738f475$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/31347751-82bd-4be8-bbae-ff0d80e319b5> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:nfefb1263063f4327afd21cc1d400f04bb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/invertebrate-group/shapes.ttl"^^xsd:anyURI ;
+.
+
+_:nfefb1263063f4327afd21cc1d400f04bb2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/invertebrate-group/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/invertebrate-group/valid.ttl"^^xsd:anyURI ;
+.
+

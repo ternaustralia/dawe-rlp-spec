@@ -1,0 +1,179 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:invertebrate-fauna-post-field-guideline-protocol-shapes:invalid:invertebrate-life-stage:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/140b32fb-df93-552b-ad1f-ce682349c55b> ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-post-field-guideline-protocol-shapes:invalid:invertebrate-life-stage:feature-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/e8659ef7-fe60-4484-be17-0ed9c1495b97>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/140b32fb-df93-552b-ad1f-ce682349c55b> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/1f3ac845-902a-435d-a404-4b6b3ed02764> ;
+    sosa:phenomenonTime <https://example.com/observation/invertebrate-life-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/79296cab-a02f-420d-b260-17c0e8691499> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:invertebrate-fauna-post-field-guideline-protocol-shapes:invalid:invertebrate-life-stage:result-value>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <urn:fake:categorical:value> ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-post-field-guideline-protocol-shapes:invalid:invertebrate-life-stage:result-value> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/e8659ef7-fe60-4484-be17-0ed9c1495b97>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/1f3ac845-902a-435d-a404-4b6b3ed02764> ;
+    sosa:phenomenonTime <https://example.com/observation/invertebrate-life-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/79296cab-a02f-420d-b260-17c0e8691499> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:invertebrate-fauna-post-field-guideline-protocol-shapes:invalid:invertebrate-life-stage:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/140b32fb-df93-552b-ad1f-ce682349c55b> ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-post-field-guideline-protocol-shapes:invalid:invertebrate-life-stage:simple-result> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/e8659ef7-fe60-4484-be17-0ed9c1495b97>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/1f3ac845-902a-435d-a404-4b6b3ed02764> ;
+    sosa:phenomenonTime <https://example.com/observation/invertebrate-life-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/79296cab-a02f-420d-b260-17c0e8691499> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:invertebrate-fauna-post-field-guideline-protocol-shapes:invalid:invertebrate-life-stage:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/140b32fb-df93-552b-ad1f-ce682349c55b> ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-post-field-guideline-protocol-shapes:invalid:invertebrate-life-stage:site-visit> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/e8659ef7-fe60-4484-be17-0ed9c1495b97>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/140b32fb-df93-552b-ad1f-ce682349c55b> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/1f3ac845-902a-435d-a404-4b6b3ed02764> ;
+    sosa:phenomenonTime <https://example.com/observation/invertebrate-life-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/79296cab-a02f-420d-b260-17c0e8691499> ;
+.
+
+<urn:test:invertebrate-fauna-post-field-guideline-protocol-shapes:invalid:invertebrate-life-stage:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Post-field guidelines protocol'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/140b32fb-df93-552b-ad1f-ce682349c55b> ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-post-field-guideline-protocol-shapes:invalid:invertebrate-life-stage:used-procedure> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/e8659ef7-fe60-4484-be17-0ed9c1495b97>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/140b32fb-df93-552b-ad1f-ce682349c55b> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/1f3ac845-902a-435d-a404-4b6b3ed02764> ;
+    sosa:phenomenonTime <https://example.com/observation/invertebrate-life-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:invertebrate-fauna-post-field-guideline-protocol-shapes:invalid:invertebrate-life-stage:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/140b32fb-df93-552b-ad1f-ce682349c55b> ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-post-field-guideline-protocol-shapes:invalid:invertebrate-life-stage:value-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/e8659ef7-fe60-4484-be17-0ed9c1495b97>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/140b32fb-df93-552b-ad1f-ce682349c55b> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/1f3ac845-902a-435d-a404-4b6b3ed02764> ;
+    sosa:phenomenonTime <https://example.com/observation/invertebrate-life-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/79296cab-a02f-420d-b260-17c0e8691499> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:invertebrate-fauna-post-field-guideline-protocol-shapes:invalid:invertebrate-life-stage:vocabulary>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect vocabulary" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/140b32fb-df93-552b-ad1f-ce682349c55b> ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-post-field-guideline-protocol-shapes:invalid:invertebrate-life-stage:vocabulary> ;
+            tern:vocabulary <urn:fake:vocabulary>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/140b32fb-df93-552b-ad1f-ce682349c55b> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/1f3ac845-902a-435d-a404-4b6b3ed02764> ;
+    sosa:phenomenonTime <https://example.com/observation/invertebrate-life-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/79296cab-a02f-420d-b260-17c0e8691499> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

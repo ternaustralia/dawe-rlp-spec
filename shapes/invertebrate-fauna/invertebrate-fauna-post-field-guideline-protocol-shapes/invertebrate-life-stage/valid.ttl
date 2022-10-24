@@ -1,0 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:invertebrate-fauna-post-field-guideline-protocol-shapes:valid:invertebrate-life-stage>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - invertebrate life stage" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/140b32fb-df93-552b-ad1f-ce682349c55b> ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-post-field-guideline-protocol-shapes:valid:invertebrate-life-stage> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/e8659ef7-fe60-4484-be17-0ed9c1495b97>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/140b32fb-df93-552b-ad1f-ce682349c55b> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/1f3ac845-902a-435d-a404-4b6b3ed02764> ;
+    sosa:phenomenonTime <https://example.com/observation/invertebrate-life-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/79296cab-a02f-420d-b260-17c0e8691499> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
