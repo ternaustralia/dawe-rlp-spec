@@ -137,11 +137,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:Integer ,
                 tern:Value ;
-            rdf:value -1 ;
-            sosa:isResultOf <urn:test:invertebrate-fauna-post-field-guideline-protocol-shapes:invalid:specimen-count:value-range> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            rdf:value 0 ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-post-field-guideline-protocol-shapes:invalid:specimen-count:value-range>
         ] ;
-    sosa:hasSimpleResult -1 ;
+    sosa:hasSimpleResult 0 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/50da4103-111d-4876-800f-382d5033f1b4> ;
     sosa:phenomenonTime <https://example.com/observation/specimen-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;

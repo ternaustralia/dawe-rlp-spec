@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ne96677027ce248aebd7458c51852b402b2 ;
+    urnp:examples _:nc875ac73c4ed4e22bb61b7b60b8e655db2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/specimen-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -64,7 +64,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:ne96677027ce248aebd7458c51852b402b2 ;
+    urnp:examples _:nc875ac73c4ed4e22bb61b7b60b8e655db2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/specimen-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -94,7 +94,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ne96677027ce248aebd7458c51852b402b2 ;
+    urnp:examples _:nc875ac73c4ed4e22bb61b7b60b8e655db2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/specimen-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -125,7 +125,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ne96677027ce248aebd7458c51852b402b2 ;
+    urnp:examples _:nc875ac73c4ed4e22bb61b7b60b8e655db2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/specimen-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -136,10 +136,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:integer ;
-    sh:description "Value _MUST_ be between values_tbd and values_tbd inclusive." ;
-    sh:maxInclusive <file:///workspaces/dawe-rlp-spec/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/specimen-count/values_tbd> ;
-    sh:message "The result _MUST_ have a value between values_tbd and values_tbd inclusively." ;
-    sh:minInclusive <file:///workspaces/dawe-rlp-spec/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/specimen-count/values_tbd> ;
+    sh:description "Value _MUST_ be positive." ;
+    sh:message "The result _MUST_ have a positive value." ;
+    sh:minExclusive 0 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
@@ -155,7 +154,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:ne96677027ce248aebd7458c51852b402b2 ;
+    urnp:examples _:nc875ac73c4ed4e22bb61b7b60b8e655db2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/specimen-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -184,11 +183,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ne96677027ce248aebd7458c51852b402b2 ;
+    urnp:examples _:nc875ac73c4ed4e22bb61b7b60b8e655db2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/specimen-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:ne96677027ce248aebd7458c51852b402b2
+_:nc875ac73c4ed4e22bb61b7b60b8e655db2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/specimen-count/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/specimen-count/valid.ttl"^^xsd:anyURI ;
 .
