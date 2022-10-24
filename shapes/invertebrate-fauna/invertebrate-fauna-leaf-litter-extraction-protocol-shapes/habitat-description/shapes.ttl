@@ -1,0 +1,350 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:habitat-description:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _site_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/e1c7c434-1321-4601-9079-e837b7ffc293> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e1c7c434-1321-4601-9079-e837b7ffc293[`site`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/aa4c96f6-9ea8-4bd3-8800-0bfddcd8a37c>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:nbddbad58780b408fa65423dc4bb2e9abb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-leaf-litter-extraction-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:habitat-description:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Habitat description codes controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/01a85e08-b223-50e9-92d2-98d8b71d6092>
+            <https://linked.data.gov.au/def/nrm/01b1a700-651d-5721-bba1-61ed2e79747b>
+            <https://linked.data.gov.au/def/nrm/02dd4474-7743-527c-b0a7-fabab10f648a>
+            <https://linked.data.gov.au/def/nrm/0a5addc6-ebfc-51f8-8cf2-5150e699adb7>
+            <https://linked.data.gov.au/def/nrm/0e078b42-011a-5fd6-a820-0b96f5e91608>
+            <https://linked.data.gov.au/def/nrm/0fb6ed0a-f464-51a6-ab7d-a93a6bca83db>
+            <https://linked.data.gov.au/def/nrm/17c2aca3-9b5f-5d77-8070-30557f39534d>
+            <https://linked.data.gov.au/def/nrm/1cdbe507-085d-5a36-84f8-f82a32d5f926>
+            <https://linked.data.gov.au/def/nrm/1dd07147-0c40-58e4-b386-d0ea0510c09d>
+            <https://linked.data.gov.au/def/nrm/20fd3404-a398-5b61-8f12-f8c9b029a926>
+            <https://linked.data.gov.au/def/nrm/21c4f6a8-4679-5267-90b4-cd2244b576ac>
+            <https://linked.data.gov.au/def/nrm/2223100c-f635-57dc-bd08-c60a3fa2eef6>
+            <https://linked.data.gov.au/def/nrm/228e0930-9519-5a06-9dd3-8305f381b519>
+            <https://linked.data.gov.au/def/nrm/2372c94d-35c0-5125-81cf-96cbaa0526c0>
+            <https://linked.data.gov.au/def/nrm/24cfaea9-b293-51b0-8c4a-db0ac129ce00>
+            <https://linked.data.gov.au/def/nrm/253c93f0-98b7-5b16-9947-e7d07b3a3559>
+            <https://linked.data.gov.au/def/nrm/29f0d2fd-274c-5361-a757-40fafca586a5>
+            <https://linked.data.gov.au/def/nrm/2e0526dd-ba64-5fc5-92aa-8b102b1cd7d4>
+            <https://linked.data.gov.au/def/nrm/2f4413ab-6acb-5292-b8ff-b114b08fe7b3>
+            <https://linked.data.gov.au/def/nrm/34151282-15ca-581f-a1c6-795c4688bfd0>
+            <https://linked.data.gov.au/def/nrm/3b5ed0d0-1470-56a8-8ebb-9c2b572ce488>
+            <https://linked.data.gov.au/def/nrm/3efc6ee5-2c9b-5867-a7cd-a9f2e22fa327>
+            <https://linked.data.gov.au/def/nrm/40c31a09-6e67-51a5-955c-cd1762cbef8c>
+            <https://linked.data.gov.au/def/nrm/40fa99ce-793a-5a0c-9b98-071459a9c6de>
+            <https://linked.data.gov.au/def/nrm/4250b362-7e0e-5f57-b4c1-ee89cbdd343a>
+            <https://linked.data.gov.au/def/nrm/44d44af9-3a36-5625-a7c1-89f0d5e5e3d4>
+            <https://linked.data.gov.au/def/nrm/4bfc42ae-8143-5214-83cd-3b1a2c1c4efc>
+            <https://linked.data.gov.au/def/nrm/4ccc8ccc-6957-5df7-b737-ec88cb9c2df9>
+            <https://linked.data.gov.au/def/nrm/4d85e205-bdfb-5456-84e5-849cbe790eb2>
+            <https://linked.data.gov.au/def/nrm/507c7a49-37b9-52c8-933d-5db7f8fc20a3>
+            <https://linked.data.gov.au/def/nrm/50f4c3bc-2ba4-5553-b72b-fa75d5254ead>
+            <https://linked.data.gov.au/def/nrm/549f5fac-6ab8-568f-b539-667ef05f579b>
+            <https://linked.data.gov.au/def/nrm/55f4a3ae-3164-5644-a355-c268d7dd6620>
+            <https://linked.data.gov.au/def/nrm/57fbfa84-23e7-5f4d-95ef-e90f68d11680>
+            <https://linked.data.gov.au/def/nrm/5d35a4dc-5891-5d69-968a-a110ffb5105c>
+            <https://linked.data.gov.au/def/nrm/62897c85-7131-55a9-bf53-ae80abda1c29>
+            <https://linked.data.gov.au/def/nrm/633f2214-7922-5cc6-ad7f-f1d4b03e694c>
+            <https://linked.data.gov.au/def/nrm/67c2cb27-8e5f-5baf-ad8a-acc59a98e3bc>
+            <https://linked.data.gov.au/def/nrm/6996f823-38e8-5911-9f07-d0b3c25f5c64>
+            <https://linked.data.gov.au/def/nrm/6ba3787a-dd21-58c1-a0aa-1b771ae7df5d>
+            <https://linked.data.gov.au/def/nrm/6c039b7f-4a87-5486-a7c0-cee37d4dbfd0>
+            <https://linked.data.gov.au/def/nrm/735c8ac4-da75-5ebe-8df2-35c84b269434>
+            <https://linked.data.gov.au/def/nrm/76906822-a15c-5d74-baee-62628ba91edc>
+            <https://linked.data.gov.au/def/nrm/794ec739-c80d-577c-9882-5a3ef1a1ac08>
+            <https://linked.data.gov.au/def/nrm/799cb710-ca12-57b9-b225-a3b1637ea5ce>
+            <https://linked.data.gov.au/def/nrm/7b5477fb-33dc-551d-814f-7af9c78383f7>
+            <https://linked.data.gov.au/def/nrm/7ce628e2-9d3f-54f8-acb2-59ad0d651a55>
+            <https://linked.data.gov.au/def/nrm/7f166e65-7c48-5c26-930f-ca3ce2ab5e89>
+            <https://linked.data.gov.au/def/nrm/80051527-9aaa-525a-a94b-0008e232f743>
+            <https://linked.data.gov.au/def/nrm/804e438e-9871-596d-8a92-2c0580e900a7>
+            <https://linked.data.gov.au/def/nrm/80a14945-bf97-5d2e-b6f5-e8b7a730e614>
+            <https://linked.data.gov.au/def/nrm/8680d60e-c1f5-50b5-b969-9a250c66cfa6>
+            <https://linked.data.gov.au/def/nrm/87b7ec79-5615-5495-83ac-1fd854446dde>
+            <https://linked.data.gov.au/def/nrm/87eebf07-b2be-5b68-8d55-b356ee832be0>
+            <https://linked.data.gov.au/def/nrm/8941ac94-91ab-50c2-8df9-670349fd110a>
+            <https://linked.data.gov.au/def/nrm/8946d7d3-7b02-5459-840c-e0dc03a083c2>
+            <https://linked.data.gov.au/def/nrm/8b1ab4b2-b38f-5e8c-8737-b71e854663fd>
+            <https://linked.data.gov.au/def/nrm/8fe434ff-51e5-555b-b094-f20193655e6b>
+            <https://linked.data.gov.au/def/nrm/90c2b473-892a-5234-bcb8-26d13fd57533>
+            <https://linked.data.gov.au/def/nrm/92b474d0-bf6e-50df-89a1-ef48bcdc6725>
+            <https://linked.data.gov.au/def/nrm/930014ac-038d-5548-9b32-c8ed36322938>
+            <https://linked.data.gov.au/def/nrm/952ac987-b987-5786-941e-4a1fbb3c9e06>
+            <https://linked.data.gov.au/def/nrm/95ca0339-74f8-539e-8995-a7255682811c>
+            <https://linked.data.gov.au/def/nrm/965444b2-7971-52ae-8d35-cf96a7e07cdf>
+            <https://linked.data.gov.au/def/nrm/98f062fa-6b37-5987-a9cd-19952be7545a>
+            <https://linked.data.gov.au/def/nrm/9a074201-cd3e-5434-8170-e1fad7d60be5>
+            <https://linked.data.gov.au/def/nrm/9a9d7aea-a24e-55c1-96e6-bcffa444828b>
+            <https://linked.data.gov.au/def/nrm/9addc2ae-f6fc-5bbf-9cd6-5f9e45b80434>
+            <https://linked.data.gov.au/def/nrm/9b1ce9e5-561d-5606-9d3f-61e8920179c8>
+            <https://linked.data.gov.au/def/nrm/9b211b24-1595-56d2-b4ea-dbb29c75e256>
+            <https://linked.data.gov.au/def/nrm/a35fce80-9b5f-5343-abec-41b4ee9e1f5e>
+            <https://linked.data.gov.au/def/nrm/a3868c79-d2a7-57e5-9c00-de7d6b3c7c4a>
+            <https://linked.data.gov.au/def/nrm/a5477c1c-cd78-5d7c-8091-21e43615f663>
+            <https://linked.data.gov.au/def/nrm/a8fed423-8531-5c9f-9fda-5bca075b7f16>
+            <https://linked.data.gov.au/def/nrm/a9d0ef16-d102-578a-b8ca-d776a0481979>
+            <https://linked.data.gov.au/def/nrm/b002c08c-cd8a-55c6-bf73-375fd9827f28>
+            <https://linked.data.gov.au/def/nrm/b4741b4a-305a-5a90-a09d-01f2d8ee578b>
+            <https://linked.data.gov.au/def/nrm/b92e0306-4dbf-5e11-8b94-950e2a8b9197>
+            <https://linked.data.gov.au/def/nrm/b9a64463-7ef3-5163-9c19-eb2854639751>
+            <https://linked.data.gov.au/def/nrm/ba660381-966c-577f-8980-f81c26f8b569>
+            <https://linked.data.gov.au/def/nrm/bc3a8dd8-3a9c-5f8e-b50a-9a36a01c45aa>
+            <https://linked.data.gov.au/def/nrm/bc687f57-b215-5da6-bb7f-2c1fdcef2141>
+            <https://linked.data.gov.au/def/nrm/bea84fcb-e24b-5d98-a6cb-0c4f48d745a5>
+            <https://linked.data.gov.au/def/nrm/bf260828-8095-564d-97c0-2a6e090f1330>
+            <https://linked.data.gov.au/def/nrm/c0ca4257-439c-50db-aa5c-b10629690c80>
+            <https://linked.data.gov.au/def/nrm/c1e93e43-ba35-5662-888b-3925bfe02084>
+            <https://linked.data.gov.au/def/nrm/c286508d-8d39-56e1-a9ec-4ecdcd4169c9>
+            <https://linked.data.gov.au/def/nrm/c635ed5e-33db-52d6-b0d8-7cc18c0f5058>
+            <https://linked.data.gov.au/def/nrm/c6a04aab-d0da-53cd-a751-8c78233d34b8>
+            <https://linked.data.gov.au/def/nrm/c8182689-9344-5a0c-9674-f596ac6633d0>
+            <https://linked.data.gov.au/def/nrm/c932ee6a-3ca7-5012-af6e-3f621d3171ea>
+            <https://linked.data.gov.au/def/nrm/cab17e71-371c-5a44-a2e0-70b90eba3e8d>
+            <https://linked.data.gov.au/def/nrm/cb4bf6a3-396e-58e2-83dc-5734e73d9eb1>
+            <https://linked.data.gov.au/def/nrm/ce2272af-cac7-5a69-8ba1-8c1ca35c066f>
+            <https://linked.data.gov.au/def/nrm/d242c344-103a-5cf0-b98b-6744dae4184b>
+            <https://linked.data.gov.au/def/nrm/d2f0f9a4-0b21-5182-bf4a-614b7902ec04>
+            <https://linked.data.gov.au/def/nrm/d43adbcf-95c2-54d1-82e4-58600b8677b5>
+            <https://linked.data.gov.au/def/nrm/d43e08b3-702d-58ea-9560-3686938bfc12>
+            <https://linked.data.gov.au/def/nrm/d4c8903e-23e3-513f-9017-48b65f333b32>
+            <https://linked.data.gov.au/def/nrm/d7836ed7-57b9-5a72-91f0-2494c2860116>
+            <https://linked.data.gov.au/def/nrm/d88dfef4-93a1-5fb7-b0b8-fe619ddef1fb>
+            <https://linked.data.gov.au/def/nrm/dae1b648-5ade-5c09-92e2-110d6fea1058>
+            <https://linked.data.gov.au/def/nrm/dba05348-b75f-514c-814f-8787e4e49fd6>
+            <https://linked.data.gov.au/def/nrm/df47c3e6-7347-5480-b061-5af91e2309dd>
+            <https://linked.data.gov.au/def/nrm/e300be62-ed85-5dc2-bd62-6ce5112bc432>
+            <https://linked.data.gov.au/def/nrm/e308cb80-cf1c-5430-a463-4ca88c0ec8a0>
+            <https://linked.data.gov.au/def/nrm/e33d9a9b-1cd4-5ff8-ac58-0b2cd586057e>
+            <https://linked.data.gov.au/def/nrm/e6aba8b1-dc9f-50c0-b571-676bb7c07b17>
+            <https://linked.data.gov.au/def/nrm/e6c7eb4a-0ac0-5c0f-97f8-2007add814d4>
+            <https://linked.data.gov.au/def/nrm/e6f2f422-59af-54da-93c2-d748c5d1335e>
+            <https://linked.data.gov.au/def/nrm/e89dea3a-9f9f-5f57-9dc9-1ee26f0f87c1>
+            <https://linked.data.gov.au/def/nrm/e8b1de14-433a-5aad-b0fe-c91eb73da123>
+            <https://linked.data.gov.au/def/nrm/eecdfa1a-2f13-5203-81b1-abae32d9e162>
+            <https://linked.data.gov.au/def/nrm/f46e637f-1cbb-5dc4-9a10-828c15c9167a>
+            <https://linked.data.gov.au/def/nrm/f5912143-5c14-55fe-9817-f9d2f03e9902>
+            <https://linked.data.gov.au/def/nrm/f9e61f60-45bf-59fc-8cda-baf5f581b9a1>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Habitat description codes controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/aa4c96f6-9ea8-4bd3-8800-0bfddcd8a37c> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:nbddbad58780b408fa65423dc4bb2e9abb2 ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'c19a0098-1f3f-4bc2-b84d-fdb6d4e24d6f'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-leaf-litter-extraction-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:habitat-description:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/aa4c96f6-9ea8-4bd3-8800-0bfddcd8a37c>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:nbddbad58780b408fa65423dc4bb2e9abb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-leaf-litter-extraction-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:habitat-description:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Leaf-litter extraction protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/aa4c96f6-9ea8-4bd3-8800-0bfddcd8a37c>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nbddbad58780b408fa65423dc4bb2e9abb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-leaf-litter-extraction-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:habitat-description:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/e9a8e65a-59d3-49f0-831d-094c568c5284>`.
+
+    `<https://linked.data.gov.au/def/nrm/e9a8e65a-59d3-49f0-831d-094c568c5284>` is the IRI for "Leaf-litter extraction protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/e9a8e65a-59d3-49f0-831d-094c568c5284> ;
+    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/e9a8e65a-59d3-49f0-831d-094c568c5284`." ;
+    sh:name "Used procedure" ;
+    sh:path <http://www.w3.org/ns/sosa/usedProcedure> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/aa4c96f6-9ea8-4bd3-8800-0bfddcd8a37c>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nbddbad58780b408fa65423dc4bb2e9abb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-leaf-litter-extraction-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:habitat-description:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path <http://www.w3.org/ns/sosa/hasResult> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/aa4c96f6-9ea8-4bd3-8800-0bfddcd8a37c>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nbddbad58780b408fa65423dc4bb2e9abb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-leaf-litter-extraction-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:habitat-description:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/c19a0098-1f3f-4bc2-b84d-fdb6d4e24d6f>`.
+
+        `<https://linked.data.gov.au/def/nrm/c19a0098-1f3f-4bc2-b84d-fdb6d4e24d6f>` is the IRI for "Habitat description codes".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `c19a0098-1f3f-4bc2-b84d-fdb6d4e24d6f$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "c19a0098-1f3f-4bc2-b84d-fdb6d4e24d6f$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/aa4c96f6-9ea8-4bd3-8800-0bfddcd8a37c> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:nbddbad58780b408fa65423dc4bb2e9abb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-leaf-litter-extraction-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
+.
+
+_:nbddbad58780b408fa65423dc4bb2e9abb2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-leaf-litter-extraction-protocol-shapes/habitat-description/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-leaf-litter-extraction-protocol-shapes/habitat-description/valid.ttl"^^xsd:anyURI ;
+.
+

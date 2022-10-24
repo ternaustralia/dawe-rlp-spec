@@ -1,0 +1,251 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:soil-type:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _soil_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/98e8d72d-f361-41ed-af9d-6e7f90c1dfce> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/98e8d72d-f361-41ed-af9d-6e7f90c1dfce[`soil`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/1d5a5f27-0e18-4685-a686-1924684d0d59>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n3e1b198c1a894f7f877b17b3ee44e25cb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-leaf-litter-extraction-protocol-shapes/soil-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:soil-type:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Soils texture grades codes controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/12ca1c18-7f58-5a4e-a3ef-a6c767de7396>
+            <https://linked.data.gov.au/def/nrm/1322b4a9-e520-5f40-b563-07a9a7eb7a34>
+            <https://linked.data.gov.au/def/nrm/14d592ff-eb3b-584e-9382-ad2e12acf663>
+            <https://linked.data.gov.au/def/nrm/1666ca90-ed29-5238-8fbe-960769f7eaea>
+            <https://linked.data.gov.au/def/nrm/1af956c2-0bee-5f47-a13c-682ab34e6b70>
+            <https://linked.data.gov.au/def/nrm/2769f26f-8f77-54fd-9dc4-acf1a94f4da7>
+            <https://linked.data.gov.au/def/nrm/39952d67-cca5-57d0-87ce-93235e7143b4>
+            <https://linked.data.gov.au/def/nrm/3b82fa97-54a4-5a47-b084-bdc928b4d632>
+            <https://linked.data.gov.au/def/nrm/492e1076-dd8a-520f-a4ca-d608817b6673>
+            <https://linked.data.gov.au/def/nrm/6d7112f8-d5bb-5266-b511-1439bd40b2a3>
+            <https://linked.data.gov.au/def/nrm/8dad4228-5eca-50c7-889e-77e1af8472a4>
+            <https://linked.data.gov.au/def/nrm/8e1b9f94-1652-57e2-8aa0-cd612f351b6f>
+            <https://linked.data.gov.au/def/nrm/8edb35c1-0ede-5cba-bc45-61c7175faee1>
+            <https://linked.data.gov.au/def/nrm/940fabc9-c37a-5e6a-accf-6c209840a329>
+            <https://linked.data.gov.au/def/nrm/95edbfd3-d894-5e0e-9afc-4ab4265c278b>
+            <https://linked.data.gov.au/def/nrm/a1f4502b-0ac4-5ca0-871e-7f30216d2fa7>
+            <https://linked.data.gov.au/def/nrm/d09959fd-227e-500d-9fb1-4d6c3cc7c878>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Soils texture grades codes controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/1d5a5f27-0e18-4685-a686-1924684d0d59> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n3e1b198c1a894f7f877b17b3ee44e25cb2 ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'ecdcb81a-cbe9-4113-b9e9-422a0e6c751f'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-leaf-litter-extraction-protocol-shapes/soil-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:soil-type:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/1d5a5f27-0e18-4685-a686-1924684d0d59>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:n3e1b198c1a894f7f877b17b3ee44e25cb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-leaf-litter-extraction-protocol-shapes/soil-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:soil-type:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Leaf-litter extraction protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/1d5a5f27-0e18-4685-a686-1924684d0d59>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n3e1b198c1a894f7f877b17b3ee44e25cb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-leaf-litter-extraction-protocol-shapes/soil-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:soil-type:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/e9a8e65a-59d3-49f0-831d-094c568c5284>`.
+
+    `<https://linked.data.gov.au/def/nrm/e9a8e65a-59d3-49f0-831d-094c568c5284>` is the IRI for "Leaf-litter extraction protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/e9a8e65a-59d3-49f0-831d-094c568c5284> ;
+    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/e9a8e65a-59d3-49f0-831d-094c568c5284`." ;
+    sh:name "Used procedure" ;
+    sh:path <http://www.w3.org/ns/sosa/usedProcedure> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/1d5a5f27-0e18-4685-a686-1924684d0d59>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n3e1b198c1a894f7f877b17b3ee44e25cb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-leaf-litter-extraction-protocol-shapes/soil-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:soil-type:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path <http://www.w3.org/ns/sosa/hasResult> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/1d5a5f27-0e18-4685-a686-1924684d0d59>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n3e1b198c1a894f7f877b17b3ee44e25cb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-leaf-litter-extraction-protocol-shapes/soil-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:soil-type:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/ecdcb81a-cbe9-4113-b9e9-422a0e6c751f>`.
+
+        `<https://linked.data.gov.au/def/nrm/ecdcb81a-cbe9-4113-b9e9-422a0e6c751f>` is the IRI for "Soils texture grades codes".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `ecdcb81a-cbe9-4113-b9e9-422a0e6c751f$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "ecdcb81a-cbe9-4113-b9e9-422a0e6c751f$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/1d5a5f27-0e18-4685-a686-1924684d0d59> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n3e1b198c1a894f7f877b17b3ee44e25cb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-leaf-litter-extraction-protocol-shapes/soil-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+_:n3e1b198c1a894f7f877b17b3ee44e25cb2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-leaf-litter-extraction-protocol-shapes/soil-type/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-leaf-litter-extraction-protocol-shapes/soil-type/valid.ttl"^^xsd:anyURI ;
+.
+
