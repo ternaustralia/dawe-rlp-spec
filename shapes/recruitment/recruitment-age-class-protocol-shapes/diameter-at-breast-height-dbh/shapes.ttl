@@ -3,6 +3,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -32,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nf6a5e5cd3cb148d6bd2b177a8fbbe917b2 ;
+    urnp:examples _:n3e384f8509824ac2b6351ff143c63eb5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/diameter-at-breast-height-dbh/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -64,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nf6a5e5cd3cb148d6bd2b177a8fbbe917b2 ;
+    urnp:examples _:n3e384f8509824ac2b6351ff143c63eb5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/diameter-at-breast-height-dbh/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -94,7 +95,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nf6a5e5cd3cb148d6bd2b177a8fbbe917b2 ;
+    urnp:examples _:n3e384f8509824ac2b6351ff143c63eb5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/diameter-at-breast-height-dbh/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -104,9 +105,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "Result value's unit of measure _MUST_ have the value `values_tbd`." ;
-    sh:hasValue <file:///workspaces/dawe-rlp-spec/shapes/recruitment/recruitment-age-class-protocol-shapes/diameter-at-breast-height-dbh/values_tbd> ;
-    sh:message "The result _MUST_ have `values_tbd` as the value for `tern:unit`." ;
+    sh:description "Result value's unit of measure _MUST_ have the value `unit:CentiM`." ;
+    sh:hasValue unit:CentiM ;
+    sh:message "The result _MUST_ have `unit:CentiM` as the value for `tern:unit`." ;
     sh:name "Unit of measure" ;
     sh:path tern:unit ;
     sh:target [
@@ -122,7 +123,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nf6a5e5cd3cb148d6bd2b177a8fbbe917b2 ;
+    urnp:examples _:n3e384f8509824ac2b6351ff143c63eb5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/diameter-at-breast-height-dbh/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -153,7 +154,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nf6a5e5cd3cb148d6bd2b177a8fbbe917b2 ;
+    urnp:examples _:n3e384f8509824ac2b6351ff143c63eb5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/diameter-at-breast-height-dbh/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -164,10 +165,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:float ;
-    sh:description "Value _MUST_ be between values_tbd and values_tbd inclusive." ;
-    sh:maxInclusive <file:///workspaces/dawe-rlp-spec/shapes/recruitment/recruitment-age-class-protocol-shapes/diameter-at-breast-height-dbh/values_tbd> ;
-    sh:message "The result _MUST_ have a value between values_tbd and values_tbd inclusively." ;
-    sh:minInclusive <file:///workspaces/dawe-rlp-spec/shapes/recruitment/recruitment-age-class-protocol-shapes/diameter-at-breast-height-dbh/values_tbd> ;
+    sh:description "Value _MUST_ be positive." ;
+    sh:message "The result _MUST_ have a positive value." ;
+    sh:minExclusive 0 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
@@ -183,7 +183,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nf6a5e5cd3cb148d6bd2b177a8fbbe917b2 ;
+    urnp:examples _:n3e384f8509824ac2b6351ff143c63eb5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/diameter-at-breast-height-dbh/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -212,11 +212,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nf6a5e5cd3cb148d6bd2b177a8fbbe917b2 ;
+    urnp:examples _:n3e384f8509824ac2b6351ff143c63eb5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/diameter-at-breast-height-dbh/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nf6a5e5cd3cb148d6bd2b177a8fbbe917b2
+_:n3e384f8509824ac2b6351ff143c63eb5b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/diameter-at-breast-height-dbh/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/diameter-at-breast-height-dbh/valid.ttl"^^xsd:anyURI ;
 .
