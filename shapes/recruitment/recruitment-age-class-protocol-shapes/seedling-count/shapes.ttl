@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nf625d9dded524002901cd545184d3dd7b2 ;
+    urnp:examples _:n6b6cf60ca2a84c80999ba74ab45a1463b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -64,7 +64,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nf625d9dded524002901cd545184d3dd7b2 ;
+    urnp:examples _:n6b6cf60ca2a84c80999ba74ab45a1463b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -94,7 +94,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nf625d9dded524002901cd545184d3dd7b2 ;
+    urnp:examples _:n6b6cf60ca2a84c80999ba74ab45a1463b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -125,7 +125,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nf625d9dded524002901cd545184d3dd7b2 ;
+    urnp:examples _:n6b6cf60ca2a84c80999ba74ab45a1463b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -136,10 +136,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:integer ;
-    sh:description "Value _MUST_ be between values_tbd and values_tbd inclusive." ;
-    sh:maxInclusive <file:///workspaces/dawe-rlp-spec/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/values_tbd> ;
-    sh:message "The result _MUST_ have a value between values_tbd and values_tbd inclusively." ;
-    sh:minInclusive <file:///workspaces/dawe-rlp-spec/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/values_tbd> ;
+    sh:description "Value _MUST_ be non-negative." ;
+    sh:message "The result _MUST_ have a non-negative value." ;
+    sh:minInclusive 0 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
@@ -155,7 +154,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nf625d9dded524002901cd545184d3dd7b2 ;
+    urnp:examples _:n6b6cf60ca2a84c80999ba74ab45a1463b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -184,11 +183,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nf625d9dded524002901cd545184d3dd7b2 ;
+    urnp:examples _:n6b6cf60ca2a84c80999ba74ab45a1463b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nf625d9dded524002901cd545184d3dd7b2
+_:n6b6cf60ca2a84c80999ba74ab45a1463b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/valid.ttl"^^xsd:anyURI ;
 .
