@@ -2,6 +2,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -20,7 +21,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:soil-plot-soil-description-protocol-shapes:valid:slope-percent-tangent> ;
-            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/bc537f95-6721-4a87-bd30-62d6377424ef> ;
