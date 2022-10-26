@@ -1,0 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:valid:soil-mottle-size>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - soil mottle size" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/06461021-a6c2-4175-9651-23653c2b9116>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/1db4c94d-5db3-5835-9c6f-a1bd1bc52f09> ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:valid:soil-mottle-size> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/c8dd7af4-8e57-4f59-848a-66712349754a>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/1db4c94d-5db3-5835-9c6f-a1bd1bc52f09> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/dd220b97-75b8-4d73-af57-793e431459b6> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-mottle-size/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

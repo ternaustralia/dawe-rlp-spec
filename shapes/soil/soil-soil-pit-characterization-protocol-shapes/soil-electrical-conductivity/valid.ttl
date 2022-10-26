@@ -1,0 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:valid:soil-electrical-conductivity>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - soil electrical conductivity" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/06461021-a6c2-4175-9651-23653c2b9116>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:valid:soil-electrical-conductivity> ;
+            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/22815fee-434e-4e21-b85f-8005a669a865> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-electrical-conductivity/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

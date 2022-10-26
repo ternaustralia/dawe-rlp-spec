@@ -1,0 +1,204 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:soil-pit-depth:datatype>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:float`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/80c39b95-0912-4267-bb66-2fa081683723>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:soil-pit-depth:datatype> ;
+            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+        ] ;
+    sosa:hasSimpleResult 3 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/cc960a7d-33a1-446a-85dc-8d1f8fda9996> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-pit-depth/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:soil-pit-depth:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:soil-pit-depth:feature-type> ;
+            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/cc960a7d-33a1-446a-85dc-8d1f8fda9996> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-pit-depth/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:soil-pit-depth:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/80c39b95-0912-4267-bb66-2fa081683723>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:soil-pit-depth:simple-result> ;
+            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+        ] ;
+    sosa:hasSimpleResult "13.56"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/cc960a7d-33a1-446a-85dc-8d1f8fda9996> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-pit-depth/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:soil-pit-depth:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/80c39b95-0912-4267-bb66-2fa081683723>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:soil-pit-depth:site-visit> ;
+            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/cc960a7d-33a1-446a-85dc-8d1f8fda9996> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-pit-depth/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+.
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:soil-pit-depth:unit-of-measure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result unit of measure" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/80c39b95-0912-4267-bb66-2fa081683723>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:soil-pit-depth:unit-of-measure> ;
+            tern:unit <urn:fake:unit>
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/cc960a7d-33a1-446a-85dc-8d1f8fda9996> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-pit-depth/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:soil-pit-depth:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Soil pit characterization protocol'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/80c39b95-0912-4267-bb66-2fa081683723>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:soil-pit-depth:used-procedure> ;
+            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/cc960a7d-33a1-446a-85dc-8d1f8fda9996> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-pit-depth/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:soil-pit-depth:value-range>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value out of range" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/80c39b95-0912-4267-bb66-2fa081683723>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "-1.11"^^xsd:float ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:soil-pit-depth:value-range> ;
+            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+        ] ;
+    sosa:hasSimpleResult "-1.11"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/cc960a7d-33a1-446a-85dc-8d1f8fda9996> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-pit-depth/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:soil-pit-depth:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:Float`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/80c39b95-0912-4267-bb66-2fa081683723>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:soil-pit-depth:value-type> ;
+            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/cc960a7d-33a1-446a-85dc-8d1f8fda9996> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-pit-depth/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

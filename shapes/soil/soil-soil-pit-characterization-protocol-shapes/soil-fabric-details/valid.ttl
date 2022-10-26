@@ -1,0 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:valid:soil-fabric-details>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - soil fabric details" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/06461021-a6c2-4175-9651-23653c2b9116>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/324dcb74-6c36-5891-9fc3-ca99ecf4828e> ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:valid:soil-fabric-details> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/2d1d8394-6641-4d74-988a-8ec66425ffdd>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/324dcb74-6c36-5891-9fc3-ca99ecf4828e> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/4a2a4fda-e1b8-436b-bd10-b3616de53ea9> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-fabric-details/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

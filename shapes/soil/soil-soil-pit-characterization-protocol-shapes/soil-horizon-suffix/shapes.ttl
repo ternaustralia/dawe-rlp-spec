@@ -1,0 +1,254 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-horizon-suffix:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _soil profile_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/80c39b95-0912-4267-bb66-2fa081683723> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/80c39b95-0912-4267-bb66-2fa081683723[`soil profile`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/224075e9-0998-4cac-95c4-babe5b63e3bf>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:nb69e4b2c61cd46629cb5e717ccfc4e6db2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-horizon-suffix/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-horizon-suffix:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Soils horizon suffixes codes controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/2d113077-d092-5317-a4b4-bd7385411c7f>
+            <https://linked.data.gov.au/def/nrm/33b116b5-77fd-5e82-a22a-b500e47a0251>
+            <https://linked.data.gov.au/def/nrm/34d19de1-9209-59f2-908a-50d35b021ef8>
+            <https://linked.data.gov.au/def/nrm/35da0dbf-ada0-5a03-99da-00082dae37f4>
+            <https://linked.data.gov.au/def/nrm/39a38d90-d08e-515c-aedd-1fd44e291f60>
+            <https://linked.data.gov.au/def/nrm/3aadcf39-9397-5319-8b89-15b20ca0248d>
+            <https://linked.data.gov.au/def/nrm/3c1db619-d599-5784-a3b1-4239bfe1c90a>
+            <https://linked.data.gov.au/def/nrm/42d61f24-35d3-5122-af45-46a71dacaf62>
+            <https://linked.data.gov.au/def/nrm/5f2658d4-d489-5eb7-bd41-445c1059e164>
+            <https://linked.data.gov.au/def/nrm/654a1590-e380-5e52-92a0-50fec78d9954>
+            <https://linked.data.gov.au/def/nrm/72bad82d-2483-5a1d-8319-d21a310fbea8>
+            <https://linked.data.gov.au/def/nrm/8091fc1d-20a9-596b-bc62-51b8f6c59b49>
+            <https://linked.data.gov.au/def/nrm/9457eb01-739b-5d9e-af3f-4fa0ff3f292e>
+            <https://linked.data.gov.au/def/nrm/abe7bc35-3992-5c46-a804-dfbd36c95a61>
+            <https://linked.data.gov.au/def/nrm/b1ba3c92-b8f4-5d89-8b2f-c339427a9016>
+            <https://linked.data.gov.au/def/nrm/b337f4ff-0365-58cf-af73-a942e2832056>
+            <https://linked.data.gov.au/def/nrm/d4953627-581e-564b-a8d5-1277ca62e9fa>
+            <https://linked.data.gov.au/def/nrm/ddbd79fb-5e25-569d-bfe8-3096fdbd662a>
+            <https://linked.data.gov.au/def/nrm/dfc57f96-0f6a-5ae6-b257-930b1a137660>
+            <https://linked.data.gov.au/def/nrm/f164a23c-1cd5-542f-bb0c-90d7bb679bda>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Soils horizon suffixes codes controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/224075e9-0998-4cac-95c4-babe5b63e3bf> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:nb69e4b2c61cd46629cb5e717ccfc4e6db2 ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'31d3921f-1fcb-4ec2-99a6-749c7b9e4798'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-horizon-suffix/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-horizon-suffix:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/224075e9-0998-4cac-95c4-babe5b63e3bf>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:nb69e4b2c61cd46629cb5e717ccfc4e6db2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-horizon-suffix/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-horizon-suffix:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Soil pit characterization protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/224075e9-0998-4cac-95c4-babe5b63e3bf>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nb69e4b2c61cd46629cb5e717ccfc4e6db2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-horizon-suffix/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-horizon-suffix:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db>`.
+
+    `<https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db>` is the IRI for "Soil pit characterization protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db`." ;
+    sh:name "Used procedure" ;
+    sh:path <http://www.w3.org/ns/sosa/usedProcedure> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/224075e9-0998-4cac-95c4-babe5b63e3bf>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nb69e4b2c61cd46629cb5e717ccfc4e6db2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-horizon-suffix/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-horizon-suffix:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path <http://www.w3.org/ns/sosa/hasResult> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/224075e9-0998-4cac-95c4-babe5b63e3bf>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nb69e4b2c61cd46629cb5e717ccfc4e6db2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-horizon-suffix/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-horizon-suffix:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/31d3921f-1fcb-4ec2-99a6-749c7b9e4798>`.
+
+        `<https://linked.data.gov.au/def/nrm/31d3921f-1fcb-4ec2-99a6-749c7b9e4798>` is the IRI for "Soils horizon suffixes codes".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `31d3921f-1fcb-4ec2-99a6-749c7b9e4798$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "31d3921f-1fcb-4ec2-99a6-749c7b9e4798$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/224075e9-0998-4cac-95c4-babe5b63e3bf> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:nb69e4b2c61cd46629cb5e717ccfc4e6db2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-horizon-suffix/shapes.ttl"^^xsd:anyURI ;
+.
+
+_:nb69e4b2c61cd46629cb5e717ccfc4e6db2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-horizon-suffix/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-horizon-suffix/valid.ttl"^^xsd:anyURI ;
+.
+
