@@ -1829,4 +1829,25 @@ test_cases: List[TestCaseItem] = [
         invalid_data_path="shapes/soil/soil-plot-soil-description-protocol-shapes/microrelief-vertical-interval-distance/invalid.ttl",
         expected_failures=8,
     ).astuple(),
+    TestCaseItem(
+        name="soil-soil-bulk-density-protocol-shapes-gross-soil-bulk-density",
+        shapes_path="shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/shapes.ttl",
+        valid_data_path="shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/valid.ttl",
+        invalid_data_path="shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/invalid.ttl",
+        expected_failures=8,
+    ).astuple(),
+    TestCaseItem(
+        name="soil-soil-bulk-density-protocol-shapes-soil-bulk-density",
+        shapes_path="shapes/soil/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/shapes.ttl",
+        valid_data_path="shapes/soil/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/valid.ttl",
+        invalid_data_path="shapes/soil/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/invalid.ttl",
+        expected_failures=8,
+    ).astuple(),
+    TestCaseItem(
+        name="soil-soil-bulk-density-protocol-shapes-fine-earth-bulk-density",
+        shapes_path="shapes/soil/soil-soil-bulk-density-protocol-shapes/fine-earth-bulk-density/shapes.ttl",
+        valid_data_path="shapes/soil/soil-soil-bulk-density-protocol-shapes/fine-earth-bulk-density/valid.ttl",
+        invalid_data_path="shapes/soil/soil-soil-bulk-density-protocol-shapes/fine-earth-bulk-density/invalid.ttl",
+        expected_failures=8,
+    ).astuple(),
 ]
