@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6072c8128b224c998a2ea24a24b0f6d4b2 ;
+    urnp:examples _:n2dbf4de1d71c4b2aa703b5a1af6061c8b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -65,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n6072c8128b224c998a2ea24a24b0f6d4b2 ;
+    urnp:examples _:n2dbf4de1d71c4b2aa703b5a1af6061c8b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -95,7 +95,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6072c8128b224c998a2ea24a24b0f6d4b2 ;
+    urnp:examples _:n2dbf4de1d71c4b2aa703b5a1af6061c8b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -123,7 +123,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n6072c8128b224c998a2ea24a24b0f6d4b2 ;
+    urnp:examples _:n2dbf4de1d71c4b2aa703b5a1af6061c8b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -154,7 +154,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6072c8128b224c998a2ea24a24b0f6d4b2 ;
+    urnp:examples _:n2dbf4de1d71c4b2aa703b5a1af6061c8b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -165,10 +165,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:float ;
-    sh:description "Value _MUST_ be between values_tbd and values_tbd inclusive." ;
-    sh:maxInclusive <file:///workspaces/dawe-rlp-spec/values_tbd> ;
-    sh:message "The result _MUST_ have a value between values_tbd and values_tbd inclusively." ;
-    sh:minInclusive <file:///workspaces/dawe-rlp-spec/values_tbd> ;
+    sh:description "Value _MUST_ be between 1 and 2 inclusive." ;
+    sh:maxInclusive 2 ;
+    sh:message "The result _MUST_ have a value between 1 and 2 inclusively." ;
+    sh:minInclusive 1 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
@@ -184,7 +184,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n6072c8128b224c998a2ea24a24b0f6d4b2 ;
+    urnp:examples _:n2dbf4de1d71c4b2aa703b5a1af6061c8b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -213,11 +213,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6072c8128b224c998a2ea24a24b0f6d4b2 ;
+    urnp:examples _:n2dbf4de1d71c4b2aa703b5a1af6061c8b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n6072c8128b224c998a2ea24a24b0f6d4b2
+_:n2dbf4de1d71c4b2aa703b5a1af6061c8b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/valid.ttl"^^xsd:anyURI ;
 .

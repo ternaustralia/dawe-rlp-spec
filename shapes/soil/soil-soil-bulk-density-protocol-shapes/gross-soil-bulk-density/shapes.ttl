@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n7ef73f0b0e3b4be296539e611b9ff2e9b2 ;
+    urnp:examples _:nc9877a4055d341d8b6db8925fd071debb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -65,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n7ef73f0b0e3b4be296539e611b9ff2e9b2 ;
+    urnp:examples _:nc9877a4055d341d8b6db8925fd071debb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -95,7 +95,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n7ef73f0b0e3b4be296539e611b9ff2e9b2 ;
+    urnp:examples _:nc9877a4055d341d8b6db8925fd071debb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -123,7 +123,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n7ef73f0b0e3b4be296539e611b9ff2e9b2 ;
+    urnp:examples _:nc9877a4055d341d8b6db8925fd071debb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -154,7 +154,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n7ef73f0b0e3b4be296539e611b9ff2e9b2 ;
+    urnp:examples _:nc9877a4055d341d8b6db8925fd071debb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -165,10 +165,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:float ;
-    sh:description "Value _MUST_ be between values_tbd and values_tbd inclusive." ;
-    sh:maxInclusive <file:///workspaces/dawe-rlp-spec/values_tbd> ;
-    sh:message "The result _MUST_ have a value between values_tbd and values_tbd inclusively." ;
-    sh:minInclusive <file:///workspaces/dawe-rlp-spec/values_tbd> ;
+    sh:description "Value _MUST_ be between 1 and 2 inclusive." ;
+    sh:maxInclusive 2 ;
+    sh:message "The result _MUST_ have a value between 1 and 2 inclusively." ;
+    sh:minInclusive 1 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
@@ -184,7 +184,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n7ef73f0b0e3b4be296539e611b9ff2e9b2 ;
+    urnp:examples _:nc9877a4055d341d8b6db8925fd071debb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -213,11 +213,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n7ef73f0b0e3b4be296539e611b9ff2e9b2 ;
+    urnp:examples _:nc9877a4055d341d8b6db8925fd071debb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n7ef73f0b0e3b4be296539e611b9ff2e9b2
+_:nc9877a4055d341d8b6db8925fd071debb2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/valid.ttl"^^xsd:anyURI ;
 .
