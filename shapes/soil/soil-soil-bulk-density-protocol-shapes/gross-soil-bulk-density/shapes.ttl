@@ -3,6 +3,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -32,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n18910f7b542741149b8ceef9103b3846b2 ;
+    urnp:examples _:n7ef73f0b0e3b4be296539e611b9ff2e9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -64,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n18910f7b542741149b8ceef9103b3846b2 ;
+    urnp:examples _:n7ef73f0b0e3b4be296539e611b9ff2e9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -94,7 +95,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n18910f7b542741149b8ceef9103b3846b2 ;
+    urnp:examples _:n7ef73f0b0e3b4be296539e611b9ff2e9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -104,9 +105,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "Result value's unit of measure _MUST_ have the value `values_tbd`." ;
-    sh:hasValue <file:///workspaces/dawe-rlp-spec/values_tbd> ;
-    sh:message "The result _MUST_ have `values_tbd` as the value for `tern:unit`." ;
+    sh:description "Result value's unit of measure _MUST_ have the value `unit:GM-PER-CentiM3`." ;
+    sh:hasValue unit:GM-PER-CentiM3 ;
+    sh:message "The result _MUST_ have `unit:GM-PER-CentiM3` as the value for `tern:unit`." ;
     sh:name "Unit of measure" ;
     sh:path tern:unit ;
     sh:target [
@@ -122,7 +123,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n18910f7b542741149b8ceef9103b3846b2 ;
+    urnp:examples _:n7ef73f0b0e3b4be296539e611b9ff2e9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -153,7 +154,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n18910f7b542741149b8ceef9103b3846b2 ;
+    urnp:examples _:n7ef73f0b0e3b4be296539e611b9ff2e9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -183,7 +184,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n18910f7b542741149b8ceef9103b3846b2 ;
+    urnp:examples _:n7ef73f0b0e3b4be296539e611b9ff2e9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -212,11 +213,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n18910f7b542741149b8ceef9103b3846b2 ;
+    urnp:examples _:n7ef73f0b0e3b4be296539e611b9ff2e9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n18910f7b542741149b8ceef9103b3846b2
+_:n7ef73f0b0e3b4be296539e611b9ff2e9b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/valid.ttl"^^xsd:anyURI ;
 .
