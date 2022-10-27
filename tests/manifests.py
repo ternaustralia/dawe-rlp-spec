@@ -2634,4 +2634,32 @@ test_cases: List[TestCaseItem] = [
         invalid_data_path="shapes/targeted-survey/targeted-survey-general-field-protocol-shapes/weather-site-temperature/invalid.ttl",
         expected_failures=7,
     ).astuple(),
+    TestCaseItem(
+        name="targeted-survey-fauna-passive-protocol-shapes-fauna-length",
+        shapes_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/fauna-length/shapes.ttl",
+        valid_data_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/fauna-length/valid.ttl",
+        invalid_data_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/fauna-length/invalid.ttl",
+        expected_failures=8,
+    ).astuple(),
+    TestCaseItem(
+        name="targeted-survey-fauna-passive-protocol-shapes-sex",
+        shapes_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/sex/shapes.ttl",
+        valid_data_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/sex/valid.ttl",
+        invalid_data_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/sex/invalid.ttl",
+        expected_failures=7,
+    ).astuple(),
+    TestCaseItem(
+        name="targeted-survey-fauna-passive-protocol-shapes-age-class",
+        shapes_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/age-class/shapes.ttl",
+        valid_data_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/age-class/valid.ttl",
+        invalid_data_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/age-class/invalid.ttl",
+        expected_failures=7,
+    ).astuple(),
+    TestCaseItem(
+        name="targeted-survey-fauna-passive-protocol-shapes-fauna-weight",
+        shapes_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/fauna-weight/shapes.ttl",
+        valid_data_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/fauna-weight/valid.ttl",
+        invalid_data_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/fauna-weight/invalid.ttl",
+        expected_failures=8,
+    ).astuple(),
 ]
