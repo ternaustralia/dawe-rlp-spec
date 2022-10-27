@@ -1,0 +1,179 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:maturity:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/008ada05-a2d9-5472-93ec-fda0b3ca3bb2> ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:maturity:feature-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/a01656de-9627-4067-ad09-269242badbcb>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/008ada05-a2d9-5472-93ec-fda0b3ca3bb2> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0bc0fae9-6243-4d9f-a547-ef4c36244b5d> ;
+    sosa:phenomenonTime <https://example.com/observation/maturity/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/98db8232-2c51-4907-99a7-0ccb8b825382> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:maturity:result-value>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <urn:fake:categorical:value> ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:maturity:result-value> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/a01656de-9627-4067-ad09-269242badbcb>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0bc0fae9-6243-4d9f-a547-ef4c36244b5d> ;
+    sosa:phenomenonTime <https://example.com/observation/maturity/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/98db8232-2c51-4907-99a7-0ccb8b825382> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:maturity:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/008ada05-a2d9-5472-93ec-fda0b3ca3bb2> ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:maturity:simple-result> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/a01656de-9627-4067-ad09-269242badbcb>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0bc0fae9-6243-4d9f-a547-ef4c36244b5d> ;
+    sosa:phenomenonTime <https://example.com/observation/maturity/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/98db8232-2c51-4907-99a7-0ccb8b825382> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:maturity:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/008ada05-a2d9-5472-93ec-fda0b3ca3bb2> ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:maturity:site-visit> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/a01656de-9627-4067-ad09-269242badbcb>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/008ada05-a2d9-5472-93ec-fda0b3ca3bb2> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0bc0fae9-6243-4d9f-a547-ef4c36244b5d> ;
+    sosa:phenomenonTime <https://example.com/observation/maturity/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/98db8232-2c51-4907-99a7-0ccb8b825382> ;
+.
+
+<urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:maturity:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Bird survey protocol'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/008ada05-a2d9-5472-93ec-fda0b3ca3bb2> ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:maturity:used-procedure> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/a01656de-9627-4067-ad09-269242badbcb>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/008ada05-a2d9-5472-93ec-fda0b3ca3bb2> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0bc0fae9-6243-4d9f-a547-ef4c36244b5d> ;
+    sosa:phenomenonTime <https://example.com/observation/maturity/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:maturity:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/008ada05-a2d9-5472-93ec-fda0b3ca3bb2> ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:maturity:value-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/a01656de-9627-4067-ad09-269242badbcb>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/008ada05-a2d9-5472-93ec-fda0b3ca3bb2> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0bc0fae9-6243-4d9f-a547-ef4c36244b5d> ;
+    sosa:phenomenonTime <https://example.com/observation/maturity/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/98db8232-2c51-4907-99a7-0ccb8b825382> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:maturity:vocabulary>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect vocabulary" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/008ada05-a2d9-5472-93ec-fda0b3ca3bb2> ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:maturity:vocabulary> ;
+            tern:vocabulary <urn:fake:vocabulary>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/008ada05-a2d9-5472-93ec-fda0b3ca3bb2> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0bc0fae9-6243-4d9f-a547-ef4c36244b5d> ;
+    sosa:phenomenonTime <https://example.com/observation/maturity/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/98db8232-2c51-4907-99a7-0ccb8b825382> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
