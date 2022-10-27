@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nf4873f80d56a471ebf26b8a31a8667e1b2 ;
+    urnp:examples _:nfc0e01663cb04a7a873c064d4f150d06b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -64,7 +64,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nf4873f80d56a471ebf26b8a31a8667e1b2 ;
+    urnp:examples _:nfc0e01663cb04a7a873c064d4f150d06b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -94,7 +94,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nf4873f80d56a471ebf26b8a31a8667e1b2 ;
+    urnp:examples _:nfc0e01663cb04a7a873c064d4f150d06b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -125,7 +125,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nf4873f80d56a471ebf26b8a31a8667e1b2 ;
+    urnp:examples _:nfc0e01663cb04a7a873c064d4f150d06b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -136,10 +136,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:integer ;
-    sh:description "Value _MUST_ be between values_tbd and values_tbd inclusive." ;
-    sh:maxInclusive <file:///workspaces/dawe-rlp-spec/values_tbd> ;
-    sh:message "The result _MUST_ have a value between values_tbd and values_tbd inclusively." ;
-    sh:minInclusive <file:///workspaces/dawe-rlp-spec/values_tbd> ;
+    sh:description "Value _MUST_ be non-negative." ;
+    sh:message "The result _MUST_ have a non-negative value." ;
+    sh:minInclusive 0 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
@@ -155,7 +154,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nf4873f80d56a471ebf26b8a31a8667e1b2 ;
+    urnp:examples _:nfc0e01663cb04a7a873c064d4f150d06b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -184,11 +183,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nf4873f80d56a471ebf26b8a31a8667e1b2 ;
+    urnp:examples _:nfc0e01663cb04a7a873c064d4f150d06b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nf4873f80d56a471ebf26b8a31a8667e1b2
+_:nfc0e01663cb04a7a873c064d4f150d06b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/number-of-individuals/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/number-of-individuals/valid.ttl"^^xsd:anyURI ;
 .
