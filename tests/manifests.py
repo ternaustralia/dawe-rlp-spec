@@ -2662,4 +2662,18 @@ test_cases: List[TestCaseItem] = [
         invalid_data_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/fauna-weight/invalid.ttl",
         expected_failures=8,
     ).astuple(),
+    TestCaseItem(
+        name="targeted-survey-fauna-active-protocol-shapes-habitat-description",
+        shapes_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/habitat-description/shapes.ttl",
+        valid_data_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/habitat-description/valid.ttl",
+        invalid_data_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/habitat-description/invalid.ttl",
+        expected_failures=13,
+    ).astuple(),
+    TestCaseItem(
+        name="targeted-survey-fauna-active-protocol-shapes-number-of-individuals",
+        shapes_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/number-of-individuals/shapes.ttl",
+        valid_data_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/number-of-individuals/valid.ttl",
+        invalid_data_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/number-of-individuals/invalid.ttl",
+        expected_failures=7,
+    ).astuple(),
 ]
