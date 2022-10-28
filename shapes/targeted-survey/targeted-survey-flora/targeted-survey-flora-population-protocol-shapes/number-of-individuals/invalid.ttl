@@ -1,0 +1,173 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:targeted-survey-flora-population-protocol-shapes:invalid:number-of-individuals:datatype>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:integer`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Integer ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:targeted-survey-flora-population-protocol-shapes:invalid:number-of-individuals:datatype>
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/b2d28629-c986-4c05-9d4a-8b05e99a0a94> ;
+    sosa:phenomenonTime <https://example.com/observation/number-of-individuals/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/9f951d93-7b0a-4f63-9f8c-d63b89718faf> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:targeted-survey-flora-population-protocol-shapes:invalid:number-of-individuals:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Integer ,
+                tern:Value ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:targeted-survey-flora-population-protocol-shapes:invalid:number-of-individuals:feature-type>
+        ] ;
+    sosa:hasSimpleResult 3 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/b2d28629-c986-4c05-9d4a-8b05e99a0a94> ;
+    sosa:phenomenonTime <https://example.com/observation/number-of-individuals/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/9f951d93-7b0a-4f63-9f8c-d63b89718faf> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:targeted-survey-flora-population-protocol-shapes:invalid:number-of-individuals:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Integer ,
+                tern:Value ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:targeted-survey-flora-population-protocol-shapes:invalid:number-of-individuals:simple-result>
+        ] ;
+    sosa:hasSimpleResult 2 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/b2d28629-c986-4c05-9d4a-8b05e99a0a94> ;
+    sosa:phenomenonTime <https://example.com/observation/number-of-individuals/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/9f951d93-7b0a-4f63-9f8c-d63b89718faf> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:targeted-survey-flora-population-protocol-shapes:invalid:number-of-individuals:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Integer ,
+                tern:Value ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:targeted-survey-flora-population-protocol-shapes:invalid:number-of-individuals:site-visit>
+        ] ;
+    sosa:hasSimpleResult 3 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/b2d28629-c986-4c05-9d4a-8b05e99a0a94> ;
+    sosa:phenomenonTime <https://example.com/observation/number-of-individuals/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/9f951d93-7b0a-4f63-9f8c-d63b89718faf> ;
+.
+
+<urn:test:targeted-survey-flora-population-protocol-shapes:invalid:number-of-individuals:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Flora - population protocol'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Integer ,
+                tern:Value ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:targeted-survey-flora-population-protocol-shapes:invalid:number-of-individuals:used-procedure>
+        ] ;
+    sosa:hasSimpleResult 3 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/b2d28629-c986-4c05-9d4a-8b05e99a0a94> ;
+    sosa:phenomenonTime <https://example.com/observation/number-of-individuals/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:targeted-survey-flora-population-protocol-shapes:invalid:number-of-individuals:value-range>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value out of range" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Integer ,
+                tern:Value ;
+            rdf:value -1 ;
+            sosa:isResultOf <urn:test:targeted-survey-flora-population-protocol-shapes:invalid:number-of-individuals:value-range> ;
+            tern:unit <file:///workspaces/dawe-rlp-spec/values_tbd>
+        ] ;
+    sosa:hasSimpleResult -1 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/b2d28629-c986-4c05-9d4a-8b05e99a0a94> ;
+    sosa:phenomenonTime <https://example.com/observation/number-of-individuals/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/9f951d93-7b0a-4f63-9f8c-d63b89718faf> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:targeted-survey-flora-population-protocol-shapes:invalid:number-of-individuals:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:Integer`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:targeted-survey-flora-population-protocol-shapes:invalid:number-of-individuals:value-type>
+        ] ;
+    sosa:hasSimpleResult 3 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/b2d28629-c986-4c05-9d4a-8b05e99a0a94> ;
+    sosa:phenomenonTime <https://example.com/observation/number-of-individuals/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/9f951d93-7b0a-4f63-9f8c-d63b89718faf> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
