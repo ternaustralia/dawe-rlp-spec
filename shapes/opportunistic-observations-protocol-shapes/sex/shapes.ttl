@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ncf9dee23cf754a82b5a3e0e71ffc5b78b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:sex:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -68,7 +68,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:ncf9dee23cf754a82b5a3e0e71ffc5b78b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:sex:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -109,7 +109,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:ncf9dee23cf754a82b5a3e0e71ffc5b78b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:sex:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -140,7 +140,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ncf9dee23cf754a82b5a3e0e71ffc5b78b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:sex:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -169,7 +169,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ncf9dee23cf754a82b5a3e0e71ffc5b78b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:sex:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -199,11 +199,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:ncf9dee23cf754a82b5a3e0e71ffc5b78b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:sex:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:ncf9dee23cf754a82b5a3e0e71ffc5b78b2
+<urn:shapes:opportunistic-observations:sex:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/sex/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/sex/valid.ttl"^^xsd:anyURI ;
 .

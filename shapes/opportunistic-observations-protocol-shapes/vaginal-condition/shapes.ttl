@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3863accb4d0f4d35903ec7536d0351e3b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:vaginal-condition:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/vaginal-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -64,7 +64,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3863accb4d0f4d35903ec7536d0351e3b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:vaginal-condition:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -105,7 +105,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n3863accb4d0f4d35903ec7536d0351e3b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:vaginal-condition:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/vaginal-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -136,7 +136,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3863accb4d0f4d35903ec7536d0351e3b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:vaginal-condition:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/vaginal-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -165,7 +165,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3863accb4d0f4d35903ec7536d0351e3b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:vaginal-condition:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/vaginal-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -195,11 +195,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3863accb4d0f4d35903ec7536d0351e3b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:vaginal-condition:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/vaginal-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n3863accb4d0f4d35903ec7536d0351e3b2
+<urn:shapes:opportunistic-observations:vaginal-condition:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/vaginal-condition/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/vaginal-condition/valid.ttl"^^xsd:anyURI ;
 .

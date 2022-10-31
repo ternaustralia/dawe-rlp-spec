@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n85e3e09431f541aa92891ac7d9248b34b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:number-of-individuals:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -64,7 +64,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n85e3e09431f541aa92891ac7d9248b34b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:number-of-individuals:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -95,7 +95,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n85e3e09431f541aa92891ac7d9248b34b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:number-of-individuals:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -124,7 +124,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n85e3e09431f541aa92891ac7d9248b34b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:number-of-individuals:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -153,11 +153,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n85e3e09431f541aa92891ac7d9248b34b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:number-of-individuals:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n85e3e09431f541aa92891ac7d9248b34b2
+<urn:shapes:opportunistic-observations:number-of-individuals:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/number-of-individuals/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/number-of-individuals/valid.ttl"^^xsd:anyURI ;
 .

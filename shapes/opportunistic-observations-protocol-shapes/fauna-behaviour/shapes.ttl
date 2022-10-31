@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n5b640ee8f58041ef9ebe1a172bce5e04b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:fauna-behaviour:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/fauna-behaviour/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -67,7 +67,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n5b640ee8f58041ef9ebe1a172bce5e04b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:fauna-behaviour:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -108,7 +108,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n5b640ee8f58041ef9ebe1a172bce5e04b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:fauna-behaviour:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/fauna-behaviour/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -139,7 +139,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n5b640ee8f58041ef9ebe1a172bce5e04b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:fauna-behaviour:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/fauna-behaviour/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -168,7 +168,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n5b640ee8f58041ef9ebe1a172bce5e04b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:fauna-behaviour:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/fauna-behaviour/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -198,11 +198,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n5b640ee8f58041ef9ebe1a172bce5e04b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:fauna-behaviour:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/fauna-behaviour/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n5b640ee8f58041ef9ebe1a172bce5e04b2
+<urn:shapes:opportunistic-observations:fauna-behaviour:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/fauna-behaviour/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/fauna-behaviour/valid.ttl"^^xsd:anyURI ;
 .

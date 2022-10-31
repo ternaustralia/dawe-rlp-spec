@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ndd209fa531da4175a096c7de78bc7a94b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:age-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/age-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -72,7 +72,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:ndd209fa531da4175a096c7de78bc7a94b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:age-class:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -113,7 +113,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:ndd209fa531da4175a096c7de78bc7a94b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:age-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/age-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -144,7 +144,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ndd209fa531da4175a096c7de78bc7a94b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:age-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/age-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -173,7 +173,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ndd209fa531da4175a096c7de78bc7a94b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:age-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/age-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -203,11 +203,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:ndd209fa531da4175a096c7de78bc7a94b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:age-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/age-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:ndd209fa531da4175a096c7de78bc7a94b2
+<urn:shapes:opportunistic-observations:age-class:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/age-class/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/age-class/valid.ttl"^^xsd:anyURI ;
 .
