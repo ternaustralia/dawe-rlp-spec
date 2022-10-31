@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd823a3d4a06843d091759eaf3d1346f6b2 ;
+    urnp:examples _:na064535b8b09480eb7a00924680bd62bb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/physical-substrate-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -65,37 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nd823a3d4a06843d091759eaf3d1346f6b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/physical-substrate-cover/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:vegetation-mapping-protocol-shapes:physical-substrate-cover:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Vegetation mapping are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/cbea81bc-2447-4c78-bab8-54d6637e2178>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:nd823a3d4a06843d091759eaf3d1346f6b2 ;
+    urnp:examples _:na064535b8b09480eb7a00924680bd62bb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/physical-substrate-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -123,7 +93,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd823a3d4a06843d091759eaf3d1346f6b2 ;
+    urnp:examples _:na064535b8b09480eb7a00924680bd62bb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/physical-substrate-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -154,7 +124,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd823a3d4a06843d091759eaf3d1346f6b2 ;
+    urnp:examples _:na064535b8b09480eb7a00924680bd62bb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/physical-substrate-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -184,7 +154,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd823a3d4a06843d091759eaf3d1346f6b2 ;
+    urnp:examples _:na064535b8b09480eb7a00924680bd62bb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/physical-substrate-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -213,11 +183,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd823a3d4a06843d091759eaf3d1346f6b2 ;
+    urnp:examples _:na064535b8b09480eb7a00924680bd62bb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/physical-substrate-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nd823a3d4a06843d091759eaf3d1346f6b2
+_:na064535b8b09480eb7a00924680bd62bb2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/physical-substrate-cover/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/physical-substrate-cover/valid.ttl"^^xsd:anyURI ;
 .
