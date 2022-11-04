@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n57d2718fc64e428cb1ee2aec0a3422b9b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:habitat-description:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/habitat-description/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -185,7 +185,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n57d2718fc64e428cb1ee2aec0a3422b9b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:habitat-description:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -226,7 +226,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n57d2718fc64e428cb1ee2aec0a3422b9b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:habitat-description:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/habitat-description/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -256,7 +256,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n57d2718fc64e428cb1ee2aec0a3422b9b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:habitat-description:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/habitat-description/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -287,7 +287,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n57d2718fc64e428cb1ee2aec0a3422b9b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:habitat-description:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/habitat-description/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -323,7 +323,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n57d2718fc64e428cb1ee2aec0a3422b9b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:habitat-description:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/habitat-description/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -353,11 +353,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n57d2718fc64e428cb1ee2aec0a3422b9b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:habitat-description:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/habitat-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n57d2718fc64e428cb1ee2aec0a3422b9b2
+<urn:shapes:opportunistic-observations:habitat-description:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/habitat-description/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/habitat-description/valid.ttl"^^xsd:anyURI ;
 .

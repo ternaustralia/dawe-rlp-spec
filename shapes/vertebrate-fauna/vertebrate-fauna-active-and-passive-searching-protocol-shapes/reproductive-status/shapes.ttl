@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n0f22a993f92b4d27a907a6866f2f9ae0b2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:reproductive-status:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/reproductive-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -72,7 +72,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n0f22a993f92b4d27a907a6866f2f9ae0b2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:reproductive-status:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -113,7 +113,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n0f22a993f92b4d27a907a6866f2f9ae0b2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:reproductive-status:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/reproductive-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -143,7 +143,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n0f22a993f92b4d27a907a6866f2f9ae0b2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:reproductive-status:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/reproductive-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -174,7 +174,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n0f22a993f92b4d27a907a6866f2f9ae0b2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:reproductive-status:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/reproductive-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -203,7 +203,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n0f22a993f92b4d27a907a6866f2f9ae0b2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:reproductive-status:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/reproductive-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -233,11 +233,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n0f22a993f92b4d27a907a6866f2f9ae0b2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:reproductive-status:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/reproductive-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n0f22a993f92b4d27a907a6866f2f9ae0b2
+<urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:reproductive-status:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/reproductive-status/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/reproductive-status/valid.ttl"^^xsd:anyURI ;
 .

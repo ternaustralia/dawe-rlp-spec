@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd27745c3c0be4fd689247aed323834dfb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-identify-measure-and-release-protocol-shapes:teat-status:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-identify-measure-and-release-protocol-shapes/teat-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -65,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd27745c3c0be4fd689247aed323834dfb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-identify-measure-and-release-protocol-shapes:teat-status:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -106,7 +106,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nd27745c3c0be4fd689247aed323834dfb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-identify-measure-and-release-protocol-shapes:teat-status:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-identify-measure-and-release-protocol-shapes/teat-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -136,7 +136,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd27745c3c0be4fd689247aed323834dfb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-identify-measure-and-release-protocol-shapes:teat-status:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-identify-measure-and-release-protocol-shapes/teat-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -167,7 +167,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd27745c3c0be4fd689247aed323834dfb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-identify-measure-and-release-protocol-shapes:teat-status:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-identify-measure-and-release-protocol-shapes/teat-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -196,7 +196,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd27745c3c0be4fd689247aed323834dfb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-identify-measure-and-release-protocol-shapes:teat-status:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-identify-measure-and-release-protocol-shapes/teat-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -226,11 +226,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd27745c3c0be4fd689247aed323834dfb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-identify-measure-and-release-protocol-shapes:teat-status:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-identify-measure-and-release-protocol-shapes/teat-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nd27745c3c0be4fd689247aed323834dfb2
+<urn:shapes:vertebrate-fauna-identify-measure-and-release-protocol-shapes:teat-status:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-identify-measure-and-release-protocol-shapes/teat-status/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-identify-measure-and-release-protocol-shapes/teat-status/valid.ttl"^^xsd:anyURI ;
 .

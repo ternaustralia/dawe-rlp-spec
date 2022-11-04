@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n75f81d2c97eb46718cd71f0fadb23accb2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:vertebrate-pest-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/vertebrate-pest-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -70,7 +70,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n75f81d2c97eb46718cd71f0fadb23accb2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:vertebrate-pest-type:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -111,7 +111,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n75f81d2c97eb46718cd71f0fadb23accb2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:vertebrate-pest-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/vertebrate-pest-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -141,7 +141,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n75f81d2c97eb46718cd71f0fadb23accb2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:vertebrate-pest-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/vertebrate-pest-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -172,7 +172,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n75f81d2c97eb46718cd71f0fadb23accb2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:vertebrate-pest-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/vertebrate-pest-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -201,7 +201,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n75f81d2c97eb46718cd71f0fadb23accb2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:vertebrate-pest-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/vertebrate-pest-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -231,11 +231,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n75f81d2c97eb46718cd71f0fadb23accb2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:vertebrate-pest-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/vertebrate-pest-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n75f81d2c97eb46718cd71f0fadb23accb2
+<urn:shapes:condition-point-intercept-protocol-shapes:vertebrate-pest-type:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/vertebrate-pest-type/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/vertebrate-pest-type/valid.ttl"^^xsd:anyURI ;
 .

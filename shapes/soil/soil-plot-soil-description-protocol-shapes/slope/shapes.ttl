@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6a5de404e4d349bb8876bf8ab33e3b86b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:slope:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -65,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n6a5de404e4d349bb8876bf8ab33e3b86b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:slope:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -95,7 +95,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6a5de404e4d349bb8876bf8ab33e3b86b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:slope:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -123,7 +123,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n6a5de404e4d349bb8876bf8ab33e3b86b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:slope:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -154,7 +154,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6a5de404e4d349bb8876bf8ab33e3b86b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:slope:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -184,7 +184,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n6a5de404e4d349bb8876bf8ab33e3b86b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:slope:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -213,11 +213,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6a5de404e4d349bb8876bf8ab33e3b86b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:slope:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n6a5de404e4d349bb8876bf8ab33e3b86b2
+<urn:shapes:soil-plot-soil-description-protocol-shapes:slope:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/slope/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/slope/valid.ttl"^^xsd:anyURI ;
 .

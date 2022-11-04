@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n798dabaf244f42e099626655e74b3733b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:coarse-fragments-shape:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/coarse-fragments-shape/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -76,7 +76,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n798dabaf244f42e099626655e74b3733b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:coarse-fragments-shape:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -117,7 +117,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n798dabaf244f42e099626655e74b3733b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:coarse-fragments-shape:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/coarse-fragments-shape/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -147,7 +147,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n798dabaf244f42e099626655e74b3733b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:coarse-fragments-shape:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/coarse-fragments-shape/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -178,7 +178,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n798dabaf244f42e099626655e74b3733b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:coarse-fragments-shape:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/coarse-fragments-shape/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -207,7 +207,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n798dabaf244f42e099626655e74b3733b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:coarse-fragments-shape:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/coarse-fragments-shape/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -237,11 +237,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n798dabaf244f42e099626655e74b3733b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:coarse-fragments-shape:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/coarse-fragments-shape/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n798dabaf244f42e099626655e74b3733b2
+<urn:shapes:soil-soil-pit-characterization-protocol-shapes:coarse-fragments-shape:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/coarse-fragments-shape/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/coarse-fragments-shape/valid.ttl"^^xsd:anyURI ;
 .

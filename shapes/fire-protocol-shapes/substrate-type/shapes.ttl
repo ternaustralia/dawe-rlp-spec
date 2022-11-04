@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n5d3b047921d64c09b838bedf2e5694feb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:substrate-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -77,7 +77,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n5d3b047921d64c09b838bedf2e5694feb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:substrate-type:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -118,7 +118,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n5d3b047921d64c09b838bedf2e5694feb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:substrate-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -148,7 +148,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n5d3b047921d64c09b838bedf2e5694feb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:substrate-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -179,7 +179,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n5d3b047921d64c09b838bedf2e5694feb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:substrate-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -208,7 +208,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n5d3b047921d64c09b838bedf2e5694feb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:substrate-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -238,11 +238,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n5d3b047921d64c09b838bedf2e5694feb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:substrate-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n5d3b047921d64c09b838bedf2e5694feb2
+<urn:shapes:fire-protocol-shapes:substrate-type:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate-type/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate-type/valid.ttl"^^xsd:anyURI ;
 .

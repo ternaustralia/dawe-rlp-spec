@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9f5447f9e3ca432db75f67abc818a185b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:relative-inclination-of-slope-elements:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/relative-inclination-of-slope-elements/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -66,7 +66,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9f5447f9e3ca432db75f67abc818a185b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:relative-inclination-of-slope-elements:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -107,7 +107,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9f5447f9e3ca432db75f67abc818a185b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:relative-inclination-of-slope-elements:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/relative-inclination-of-slope-elements/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -137,7 +137,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9f5447f9e3ca432db75f67abc818a185b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:relative-inclination-of-slope-elements:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/relative-inclination-of-slope-elements/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -168,7 +168,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9f5447f9e3ca432db75f67abc818a185b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:relative-inclination-of-slope-elements:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/relative-inclination-of-slope-elements/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -197,7 +197,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9f5447f9e3ca432db75f67abc818a185b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:relative-inclination-of-slope-elements:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/relative-inclination-of-slope-elements/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -227,11 +227,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9f5447f9e3ca432db75f67abc818a185b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:relative-inclination-of-slope-elements:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/relative-inclination-of-slope-elements/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n9f5447f9e3ca432db75f67abc818a185b2
+<urn:shapes:soil-plot-soil-description-protocol-shapes:relative-inclination-of-slope-elements:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/relative-inclination-of-slope-elements/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/relative-inclination-of-slope-elements/valid.ttl"^^xsd:anyURI ;
 .

@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd51066f028204c1bba5f86e4ee297e25b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-abundance:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/rock-outcrop-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -68,7 +68,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd51066f028204c1bba5f86e4ee297e25b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-abundance:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -109,7 +109,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nd51066f028204c1bba5f86e4ee297e25b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-abundance:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/rock-outcrop-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -139,7 +139,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd51066f028204c1bba5f86e4ee297e25b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-abundance:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/rock-outcrop-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -170,7 +170,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd51066f028204c1bba5f86e4ee297e25b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-abundance:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/rock-outcrop-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -199,7 +199,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd51066f028204c1bba5f86e4ee297e25b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-abundance:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/rock-outcrop-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -229,11 +229,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd51066f028204c1bba5f86e4ee297e25b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-abundance:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/rock-outcrop-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nd51066f028204c1bba5f86e4ee297e25b2
+<urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-abundance:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/rock-outcrop-abundance/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/rock-outcrop-abundance/valid.ttl"^^xsd:anyURI ;
 .

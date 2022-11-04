@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6f89a45ec50a43149ae4b86f2e79c5ffb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:weather-site-precipitation:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/weather-site-precipitation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -70,7 +70,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n6f89a45ec50a43149ae4b86f2e79c5ffb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:weather-site-precipitation:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -111,7 +111,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n6f89a45ec50a43149ae4b86f2e79c5ffb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:weather-site-precipitation:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/weather-site-precipitation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -141,7 +141,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6f89a45ec50a43149ae4b86f2e79c5ffb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:weather-site-precipitation:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/weather-site-precipitation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -172,7 +172,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6f89a45ec50a43149ae4b86f2e79c5ffb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:weather-site-precipitation:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/weather-site-precipitation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -201,7 +201,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n6f89a45ec50a43149ae4b86f2e79c5ffb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:weather-site-precipitation:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/weather-site-precipitation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -231,11 +231,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n6f89a45ec50a43149ae4b86f2e79c5ffb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:weather-site-precipitation:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/weather-site-precipitation/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n6f89a45ec50a43149ae4b86f2e79c5ffb2
+<urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:weather-site-precipitation:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/weather-site-precipitation/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/weather-site-precipitation/valid.ttl"^^xsd:anyURI ;
 .

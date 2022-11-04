@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nf6a2df2ef82f464d94f78f5b75491840b2 ;
+    urnp:examples <urn:shapes:invertebrate-wet-pitfall-protocol-shapes:weather-site-cloud-cover:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/weather-site-cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -67,7 +67,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nf6a2df2ef82f464d94f78f5b75491840b2 ;
+    urnp:examples <urn:shapes:invertebrate-wet-pitfall-protocol-shapes:weather-site-cloud-cover:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -108,7 +108,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nf6a2df2ef82f464d94f78f5b75491840b2 ;
+    urnp:examples <urn:shapes:invertebrate-wet-pitfall-protocol-shapes:weather-site-cloud-cover:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/weather-site-cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -138,7 +138,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nf6a2df2ef82f464d94f78f5b75491840b2 ;
+    urnp:examples <urn:shapes:invertebrate-wet-pitfall-protocol-shapes:weather-site-cloud-cover:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/weather-site-cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -169,7 +169,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nf6a2df2ef82f464d94f78f5b75491840b2 ;
+    urnp:examples <urn:shapes:invertebrate-wet-pitfall-protocol-shapes:weather-site-cloud-cover:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/weather-site-cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -198,7 +198,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nf6a2df2ef82f464d94f78f5b75491840b2 ;
+    urnp:examples <urn:shapes:invertebrate-wet-pitfall-protocol-shapes:weather-site-cloud-cover:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/weather-site-cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -228,11 +228,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nf6a2df2ef82f464d94f78f5b75491840b2 ;
+    urnp:examples <urn:shapes:invertebrate-wet-pitfall-protocol-shapes:weather-site-cloud-cover:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/weather-site-cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nf6a2df2ef82f464d94f78f5b75491840b2
+<urn:shapes:invertebrate-wet-pitfall-protocol-shapes:weather-site-cloud-cover:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/weather-site-cloud-cover/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/weather-site-cloud-cover/valid.ttl"^^xsd:anyURI ;
 .
