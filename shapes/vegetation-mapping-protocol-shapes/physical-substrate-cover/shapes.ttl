@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na064535b8b09480eb7a00924680bd62bb2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:physical-substrate-cover:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/physical-substrate-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -65,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na064535b8b09480eb7a00924680bd62bb2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:physical-substrate-cover:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/physical-substrate-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -93,7 +93,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:na064535b8b09480eb7a00924680bd62bb2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:physical-substrate-cover:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/physical-substrate-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -124,7 +124,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na064535b8b09480eb7a00924680bd62bb2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:physical-substrate-cover:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/physical-substrate-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -154,7 +154,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:na064535b8b09480eb7a00924680bd62bb2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:physical-substrate-cover:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/physical-substrate-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -183,11 +183,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na064535b8b09480eb7a00924680bd62bb2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:physical-substrate-cover:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/physical-substrate-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:na064535b8b09480eb7a00924680bd62bb2
+<urn:shapes:vegetation-mapping-protocol-shapes:physical-substrate-cover:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/physical-substrate-cover/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/physical-substrate-cover/valid.ttl"^^xsd:anyURI ;
 .

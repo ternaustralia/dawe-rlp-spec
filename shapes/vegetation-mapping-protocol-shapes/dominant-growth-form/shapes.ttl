@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n150fe0f3f9ce41f38eedc22e84518105b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-form:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -167,7 +167,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n150fe0f3f9ce41f38eedc22e84518105b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-form:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -208,7 +208,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n150fe0f3f9ce41f38eedc22e84518105b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-form:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -239,7 +239,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n150fe0f3f9ce41f38eedc22e84518105b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-form:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -268,7 +268,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n150fe0f3f9ce41f38eedc22e84518105b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-form:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -298,11 +298,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n150fe0f3f9ce41f38eedc22e84518105b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-form:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n150fe0f3f9ce41f38eedc22e84518105b2
+<urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-form:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/valid.ttl"^^xsd:anyURI ;
 .

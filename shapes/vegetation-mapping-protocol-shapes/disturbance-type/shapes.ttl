@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na800f25bfe174fbcad0ecc16aa3f6495b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:disturbance-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/disturbance-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -74,7 +74,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:na800f25bfe174fbcad0ecc16aa3f6495b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:disturbance-type:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -115,7 +115,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na800f25bfe174fbcad0ecc16aa3f6495b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:disturbance-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/disturbance-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -146,7 +146,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na800f25bfe174fbcad0ecc16aa3f6495b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:disturbance-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/disturbance-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -175,7 +175,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na800f25bfe174fbcad0ecc16aa3f6495b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:disturbance-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/disturbance-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -205,11 +205,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:na800f25bfe174fbcad0ecc16aa3f6495b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:disturbance-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/disturbance-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:na800f25bfe174fbcad0ecc16aa3f6495b2
+<urn:shapes:vegetation-mapping-protocol-shapes:disturbance-type:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/disturbance-type/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/disturbance-type/valid.ttl"^^xsd:anyURI ;
 .

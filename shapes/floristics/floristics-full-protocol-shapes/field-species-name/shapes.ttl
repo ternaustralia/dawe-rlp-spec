@@ -31,7 +31,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbe339137ff1d48fdb48f9bfb6e5b7b72b2 ;
+    urnp:examples <urn:shapes:floristics-full-protocol-shapes:field-species-name:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-full-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -60,7 +60,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbe339137ff1d48fdb48f9bfb6e5b7b72b2 ;
+    urnp:examples <urn:shapes:floristics-full-protocol-shapes:field-species-name:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-full-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -92,7 +92,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nbe339137ff1d48fdb48f9bfb6e5b7b72b2 ;
+    urnp:examples <urn:shapes:floristics-full-protocol-shapes:field-species-name:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-full-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -122,7 +122,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbe339137ff1d48fdb48f9bfb6e5b7b72b2 ;
+    urnp:examples <urn:shapes:floristics-full-protocol-shapes:field-species-name:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-full-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -153,7 +153,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbe339137ff1d48fdb48f9bfb6e5b7b72b2 ;
+    urnp:examples <urn:shapes:floristics-full-protocol-shapes:field-species-name:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-full-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -182,11 +182,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbe339137ff1d48fdb48f9bfb6e5b7b72b2 ;
+    urnp:examples <urn:shapes:floristics-full-protocol-shapes:field-species-name:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-full-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nbe339137ff1d48fdb48f9bfb6e5b7b72b2
+<urn:shapes:floristics-full-protocol-shapes:field-species-name:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-full-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-full-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
 .

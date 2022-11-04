@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3ac7d4b71be348b69dc56c3805ed2ba0b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:growth-stage:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -67,7 +67,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3ac7d4b71be348b69dc56c3805ed2ba0b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:growth-stage:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -108,7 +108,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n3ac7d4b71be348b69dc56c3805ed2ba0b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:growth-stage:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -139,7 +139,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3ac7d4b71be348b69dc56c3805ed2ba0b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:growth-stage:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -168,7 +168,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3ac7d4b71be348b69dc56c3805ed2ba0b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:growth-stage:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -198,11 +198,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3ac7d4b71be348b69dc56c3805ed2ba0b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:growth-stage:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n3ac7d4b71be348b69dc56c3805ed2ba0b2
+<urn:shapes:vegetation-mapping-protocol-shapes:growth-stage:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/growth-stage/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/growth-stage/valid.ttl"^^xsd:anyURI ;
 .

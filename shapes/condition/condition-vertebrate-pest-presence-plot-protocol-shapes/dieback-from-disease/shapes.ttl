@@ -31,7 +31,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:ne6d9d642eb2741a18bec2f2ac2ef6628b2 ;
+    urnp:examples <urn:shapes:condition-vertebrate-pest-presence-plot-protocol-shapes:dieback-from-disease:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vertebrate-pest-presence-plot-protocol-shapes/dieback-from-disease/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -60,7 +60,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ne6d9d642eb2741a18bec2f2ac2ef6628b2 ;
+    urnp:examples <urn:shapes:condition-vertebrate-pest-presence-plot-protocol-shapes:dieback-from-disease:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vertebrate-pest-presence-plot-protocol-shapes/dieback-from-disease/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -92,7 +92,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:ne6d9d642eb2741a18bec2f2ac2ef6628b2 ;
+    urnp:examples <urn:shapes:condition-vertebrate-pest-presence-plot-protocol-shapes:dieback-from-disease:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vertebrate-pest-presence-plot-protocol-shapes/dieback-from-disease/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -122,7 +122,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ne6d9d642eb2741a18bec2f2ac2ef6628b2 ;
+    urnp:examples <urn:shapes:condition-vertebrate-pest-presence-plot-protocol-shapes:dieback-from-disease:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vertebrate-pest-presence-plot-protocol-shapes/dieback-from-disease/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -153,7 +153,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ne6d9d642eb2741a18bec2f2ac2ef6628b2 ;
+    urnp:examples <urn:shapes:condition-vertebrate-pest-presence-plot-protocol-shapes:dieback-from-disease:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vertebrate-pest-presence-plot-protocol-shapes/dieback-from-disease/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -182,11 +182,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ne6d9d642eb2741a18bec2f2ac2ef6628b2 ;
+    urnp:examples <urn:shapes:condition-vertebrate-pest-presence-plot-protocol-shapes:dieback-from-disease:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vertebrate-pest-presence-plot-protocol-shapes/dieback-from-disease/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:ne6d9d642eb2741a18bec2f2ac2ef6628b2
+<urn:shapes:condition-vertebrate-pest-presence-plot-protocol-shapes:dieback-from-disease:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vertebrate-pest-presence-plot-protocol-shapes/dieback-from-disease/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vertebrate-pest-presence-plot-protocol-shapes/dieback-from-disease/valid.ttl"^^xsd:anyURI ;
 .
