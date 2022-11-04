@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n2e403111985f4618a73e14ff1c2cf64fb2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:animal-pouch-condition:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/animal-pouch-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -65,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n2e403111985f4618a73e14ff1c2cf64fb2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:animal-pouch-condition:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -106,7 +106,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n2e403111985f4618a73e14ff1c2cf64fb2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:animal-pouch-condition:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/animal-pouch-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -136,7 +136,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n2e403111985f4618a73e14ff1c2cf64fb2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:animal-pouch-condition:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/animal-pouch-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -167,7 +167,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n2e403111985f4618a73e14ff1c2cf64fb2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:animal-pouch-condition:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/animal-pouch-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -196,7 +196,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n2e403111985f4618a73e14ff1c2cf64fb2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:animal-pouch-condition:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/animal-pouch-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -226,11 +226,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n2e403111985f4618a73e14ff1c2cf64fb2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:animal-pouch-condition:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/animal-pouch-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n2e403111985f4618a73e14ff1c2cf64fb2
+<urn:shapes:opportunistic-observations:animal-pouch-condition:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/animal-pouch-condition/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/animal-pouch-condition/valid.ttl"^^xsd:anyURI ;
 .

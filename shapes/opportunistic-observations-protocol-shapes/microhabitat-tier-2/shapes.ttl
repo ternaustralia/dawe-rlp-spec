@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n22cc1903baab4087bb20b10d412e9d37b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:microhabitat-tier-2:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-2/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -80,7 +80,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n22cc1903baab4087bb20b10d412e9d37b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:microhabitat-tier-2:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -121,7 +121,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n22cc1903baab4087bb20b10d412e9d37b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:microhabitat-tier-2:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-2/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -151,7 +151,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n22cc1903baab4087bb20b10d412e9d37b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:microhabitat-tier-2:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-2/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -182,7 +182,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n22cc1903baab4087bb20b10d412e9d37b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:microhabitat-tier-2:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-2/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -211,7 +211,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n22cc1903baab4087bb20b10d412e9d37b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:microhabitat-tier-2:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-2/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -241,11 +241,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n22cc1903baab4087bb20b10d412e9d37b2 ;
+    urnp:examples <urn:shapes:opportunistic-observations:microhabitat-tier-2:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-2/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n22cc1903baab4087bb20b10d412e9d37b2
+<urn:shapes:opportunistic-observations:microhabitat-tier-2:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-2/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-2/valid.ttl"^^xsd:anyURI ;
 .
