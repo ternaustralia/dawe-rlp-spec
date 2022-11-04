@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n18c1dc75b87b47d9ac0f9bcd131d4e88b2 ;
+    urnp:examples <urn:shapes:recruitment-age-class-protocol-shapes:plant-status:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/plant-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -65,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n18c1dc75b87b47d9ac0f9bcd131d4e88b2 ;
+    urnp:examples <urn:shapes:recruitment-age-class-protocol-shapes:plant-status:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -106,7 +106,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n18c1dc75b87b47d9ac0f9bcd131d4e88b2 ;
+    urnp:examples <urn:shapes:recruitment-age-class-protocol-shapes:plant-status:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/plant-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -136,7 +136,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n18c1dc75b87b47d9ac0f9bcd131d4e88b2 ;
+    urnp:examples <urn:shapes:recruitment-age-class-protocol-shapes:plant-status:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/plant-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -167,7 +167,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n18c1dc75b87b47d9ac0f9bcd131d4e88b2 ;
+    urnp:examples <urn:shapes:recruitment-age-class-protocol-shapes:plant-status:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/plant-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -196,7 +196,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n18c1dc75b87b47d9ac0f9bcd131d4e88b2 ;
+    urnp:examples <urn:shapes:recruitment-age-class-protocol-shapes:plant-status:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/plant-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -226,11 +226,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n18c1dc75b87b47d9ac0f9bcd131d4e88b2 ;
+    urnp:examples <urn:shapes:recruitment-age-class-protocol-shapes:plant-status:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/plant-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n18c1dc75b87b47d9ac0f9bcd131d4e88b2
+<urn:shapes:recruitment-age-class-protocol-shapes:plant-status:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/plant-status/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/plant-status/valid.ttl"^^xsd:anyURI ;
 .

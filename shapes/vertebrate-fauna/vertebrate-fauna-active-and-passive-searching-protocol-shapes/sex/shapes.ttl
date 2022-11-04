@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nee9fe80d2f664a8b9d3b01974bc8a2fcb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:sex:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -68,7 +68,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nee9fe80d2f664a8b9d3b01974bc8a2fcb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:sex:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -109,7 +109,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nee9fe80d2f664a8b9d3b01974bc8a2fcb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:sex:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -139,7 +139,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nee9fe80d2f664a8b9d3b01974bc8a2fcb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:sex:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -170,7 +170,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nee9fe80d2f664a8b9d3b01974bc8a2fcb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:sex:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -199,7 +199,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nee9fe80d2f664a8b9d3b01974bc8a2fcb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:sex:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -229,11 +229,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nee9fe80d2f664a8b9d3b01974bc8a2fcb2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:sex:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nee9fe80d2f664a8b9d3b01974bc8a2fcb2
+<urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes:sex:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/sex/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/sex/valid.ttl"^^xsd:anyURI ;
 .

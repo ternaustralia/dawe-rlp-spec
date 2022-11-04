@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9d6e09a449e549889fcde013017785bdb2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:component-of-microrelief:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/component-of-microrelief/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -69,7 +69,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9d6e09a449e549889fcde013017785bdb2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:component-of-microrelief:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -110,7 +110,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9d6e09a449e549889fcde013017785bdb2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:component-of-microrelief:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/component-of-microrelief/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -140,7 +140,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9d6e09a449e549889fcde013017785bdb2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:component-of-microrelief:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/component-of-microrelief/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -171,7 +171,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9d6e09a449e549889fcde013017785bdb2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:component-of-microrelief:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/component-of-microrelief/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -200,7 +200,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9d6e09a449e549889fcde013017785bdb2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:component-of-microrelief:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/component-of-microrelief/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -230,11 +230,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9d6e09a449e549889fcde013017785bdb2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:component-of-microrelief:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/component-of-microrelief/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n9d6e09a449e549889fcde013017785bdb2
+<urn:shapes:soil-plot-soil-description-protocol-shapes:component-of-microrelief:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/component-of-microrelief/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/component-of-microrelief/valid.ttl"^^xsd:anyURI ;
 .

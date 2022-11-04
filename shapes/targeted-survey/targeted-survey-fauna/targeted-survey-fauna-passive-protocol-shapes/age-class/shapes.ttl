@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nad1d3560602140d6b9fc7df4f9a6f5dab2 ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:age-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/age-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -72,7 +72,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nad1d3560602140d6b9fc7df4f9a6f5dab2 ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:age-class:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -113,7 +113,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nad1d3560602140d6b9fc7df4f9a6f5dab2 ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:age-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/age-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -143,7 +143,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nad1d3560602140d6b9fc7df4f9a6f5dab2 ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:age-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/age-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -174,7 +174,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nad1d3560602140d6b9fc7df4f9a6f5dab2 ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:age-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/age-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -203,7 +203,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nad1d3560602140d6b9fc7df4f9a6f5dab2 ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:age-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/age-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -233,11 +233,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nad1d3560602140d6b9fc7df4f9a6f5dab2 ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:age-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/age-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nad1d3560602140d6b9fc7df4f9a6f5dab2
+<urn:shapes:targeted-survey-fauna-passive-protocol-shapes:age-class:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/age-class/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/age-class/valid.ttl"^^xsd:anyURI ;
 .

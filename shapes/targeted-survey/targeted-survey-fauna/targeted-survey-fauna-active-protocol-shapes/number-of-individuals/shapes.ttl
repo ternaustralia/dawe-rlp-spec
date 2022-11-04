@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nfc0e01663cb04a7a873c064d4f150d06b2 ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-active-protocol-shapes:number-of-individuals:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -64,7 +64,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nfc0e01663cb04a7a873c064d4f150d06b2 ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-active-protocol-shapes:number-of-individuals:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -94,7 +94,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nfc0e01663cb04a7a873c064d4f150d06b2 ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-active-protocol-shapes:number-of-individuals:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -125,7 +125,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nfc0e01663cb04a7a873c064d4f150d06b2 ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-active-protocol-shapes:number-of-individuals:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -154,7 +154,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nfc0e01663cb04a7a873c064d4f150d06b2 ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-active-protocol-shapes:number-of-individuals:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -183,11 +183,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nfc0e01663cb04a7a873c064d4f150d06b2 ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-active-protocol-shapes:number-of-individuals:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nfc0e01663cb04a7a873c064d4f150d06b2
+<urn:shapes:targeted-survey-fauna-active-protocol-shapes:number-of-individuals:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/number-of-individuals/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-active-protocol-shapes/number-of-individuals/valid.ttl"^^xsd:anyURI ;
 .

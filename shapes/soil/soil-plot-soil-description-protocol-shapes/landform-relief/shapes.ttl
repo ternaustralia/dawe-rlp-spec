@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nef6bb945f2e446f5842631db0063f17db2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:landform-relief:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/landform-relief/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -67,7 +67,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nef6bb945f2e446f5842631db0063f17db2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:landform-relief:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -108,7 +108,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nef6bb945f2e446f5842631db0063f17db2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:landform-relief:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/landform-relief/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -138,7 +138,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nef6bb945f2e446f5842631db0063f17db2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:landform-relief:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/landform-relief/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -169,7 +169,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nef6bb945f2e446f5842631db0063f17db2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:landform-relief:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/landform-relief/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -198,7 +198,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nef6bb945f2e446f5842631db0063f17db2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:landform-relief:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/landform-relief/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -228,11 +228,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nef6bb945f2e446f5842631db0063f17db2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:landform-relief:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/landform-relief/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nef6bb945f2e446f5842631db0063f17db2
+<urn:shapes:soil-plot-soil-description-protocol-shapes:landform-relief:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/landform-relief/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/landform-relief/valid.ttl"^^xsd:anyURI ;
 .

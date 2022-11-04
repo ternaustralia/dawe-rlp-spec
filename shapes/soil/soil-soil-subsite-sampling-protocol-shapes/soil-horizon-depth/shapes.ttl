@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb4e5ac5430c845a788d6f8d9644b051db2 ;
+    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:soil-horizon-depth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/soil-horizon-depth/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -65,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nb4e5ac5430c845a788d6f8d9644b051db2 ;
+    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:soil-horizon-depth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/soil-horizon-depth/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -95,7 +95,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb4e5ac5430c845a788d6f8d9644b051db2 ;
+    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:soil-horizon-depth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/soil-horizon-depth/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -123,7 +123,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nb4e5ac5430c845a788d6f8d9644b051db2 ;
+    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:soil-horizon-depth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/soil-horizon-depth/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -154,7 +154,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb4e5ac5430c845a788d6f8d9644b051db2 ;
+    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:soil-horizon-depth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/soil-horizon-depth/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -183,7 +183,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nb4e5ac5430c845a788d6f8d9644b051db2 ;
+    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:soil-horizon-depth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/soil-horizon-depth/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -212,11 +212,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb4e5ac5430c845a788d6f8d9644b051db2 ;
+    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:soil-horizon-depth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/soil-horizon-depth/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nb4e5ac5430c845a788d6f8d9644b051db2
+<urn:shapes:soil-soil-subsite-sampling-protocol-shapes:soil-horizon-depth:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/soil-horizon-depth/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/soil-horizon-depth/valid.ttl"^^xsd:anyURI ;
 .

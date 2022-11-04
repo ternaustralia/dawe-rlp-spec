@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n77234ff898754be08335a830613f0907b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:size-of-coarse-fragments:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/size-of-coarse-fragments/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -71,7 +71,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n77234ff898754be08335a830613f0907b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:size-of-coarse-fragments:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -112,7 +112,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n77234ff898754be08335a830613f0907b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:size-of-coarse-fragments:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/size-of-coarse-fragments/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -142,7 +142,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n77234ff898754be08335a830613f0907b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:size-of-coarse-fragments:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/size-of-coarse-fragments/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -173,7 +173,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n77234ff898754be08335a830613f0907b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:size-of-coarse-fragments:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/size-of-coarse-fragments/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -202,7 +202,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n77234ff898754be08335a830613f0907b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:size-of-coarse-fragments:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/size-of-coarse-fragments/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -232,11 +232,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n77234ff898754be08335a830613f0907b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:size-of-coarse-fragments:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/size-of-coarse-fragments/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n77234ff898754be08335a830613f0907b2
+<urn:shapes:soil-plot-soil-description-protocol-shapes:size-of-coarse-fragments:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/size-of-coarse-fragments/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/size-of-coarse-fragments/valid.ttl"^^xsd:anyURI ;
 .

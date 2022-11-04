@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nc8eedda12eeb484dbe51d0070bea02dab2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:weather-site-wind:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/weather-site-wind/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -72,7 +72,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nc8eedda12eeb484dbe51d0070bea02dab2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:weather-site-wind:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -113,7 +113,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nc8eedda12eeb484dbe51d0070bea02dab2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:weather-site-wind:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/weather-site-wind/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -143,7 +143,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nc8eedda12eeb484dbe51d0070bea02dab2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:weather-site-wind:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/weather-site-wind/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -174,7 +174,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nc8eedda12eeb484dbe51d0070bea02dab2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:weather-site-wind:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/weather-site-wind/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -203,7 +203,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nc8eedda12eeb484dbe51d0070bea02dab2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:weather-site-wind:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/weather-site-wind/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -233,11 +233,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nc8eedda12eeb484dbe51d0070bea02dab2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:weather-site-wind:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/weather-site-wind/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nc8eedda12eeb484dbe51d0070bea02dab2
+<urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:weather-site-wind:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/weather-site-wind/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/weather-site-wind/valid.ttl"^^xsd:anyURI ;
 .

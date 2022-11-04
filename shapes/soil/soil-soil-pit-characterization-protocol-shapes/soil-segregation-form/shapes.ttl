@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n8cd03e241a0d41b0bd0005ae3a71f5f1b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-segregation-form:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-segregation-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -73,7 +73,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n8cd03e241a0d41b0bd0005ae3a71f5f1b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-segregation-form:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -114,7 +114,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n8cd03e241a0d41b0bd0005ae3a71f5f1b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-segregation-form:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-segregation-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -144,7 +144,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n8cd03e241a0d41b0bd0005ae3a71f5f1b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-segregation-form:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-segregation-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -175,7 +175,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n8cd03e241a0d41b0bd0005ae3a71f5f1b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-segregation-form:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-segregation-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -204,7 +204,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n8cd03e241a0d41b0bd0005ae3a71f5f1b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-segregation-form:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-segregation-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -234,11 +234,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n8cd03e241a0d41b0bd0005ae3a71f5f1b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-segregation-form:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-segregation-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n8cd03e241a0d41b0bd0005ae3a71f5f1b2
+<urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-segregation-form:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-segregation-form/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-segregation-form/valid.ttl"^^xsd:anyURI ;
 .

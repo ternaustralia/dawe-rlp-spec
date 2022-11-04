@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n562acf09c090453fa3719a6d0c9d3e85b2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:bird-breeding-activity:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/bird-breeding-activity/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -69,7 +69,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n562acf09c090453fa3719a6d0c9d3e85b2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:bird-breeding-activity:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -110,7 +110,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n562acf09c090453fa3719a6d0c9d3e85b2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:bird-breeding-activity:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/bird-breeding-activity/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -140,7 +140,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n562acf09c090453fa3719a6d0c9d3e85b2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:bird-breeding-activity:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/bird-breeding-activity/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -171,7 +171,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n562acf09c090453fa3719a6d0c9d3e85b2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:bird-breeding-activity:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/bird-breeding-activity/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -200,7 +200,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n562acf09c090453fa3719a6d0c9d3e85b2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:bird-breeding-activity:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/bird-breeding-activity/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -230,11 +230,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n562acf09c090453fa3719a6d0c9d3e85b2 ;
+    urnp:examples <urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:bird-breeding-activity:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/bird-breeding-activity/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n562acf09c090453fa3719a6d0c9d3e85b2
+<urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:bird-breeding-activity:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/bird-breeding-activity/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/bird-breeding-activity/valid.ttl"^^xsd:anyURI ;
 .

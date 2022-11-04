@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n438ea9a7f4284d33aeb7cf6dddf492afb2 ;
+    urnp:examples <urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-general-field-protocol-shapes/weather-duration-of-precipitation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -68,7 +68,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n438ea9a7f4284d33aeb7cf6dddf492afb2 ;
+    urnp:examples <urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -109,7 +109,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n438ea9a7f4284d33aeb7cf6dddf492afb2 ;
+    urnp:examples <urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-general-field-protocol-shapes/weather-duration-of-precipitation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -139,7 +139,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n438ea9a7f4284d33aeb7cf6dddf492afb2 ;
+    urnp:examples <urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-general-field-protocol-shapes/weather-duration-of-precipitation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -170,7 +170,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n438ea9a7f4284d33aeb7cf6dddf492afb2 ;
+    urnp:examples <urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-general-field-protocol-shapes/weather-duration-of-precipitation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -199,7 +199,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n438ea9a7f4284d33aeb7cf6dddf492afb2 ;
+    urnp:examples <urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-general-field-protocol-shapes/weather-duration-of-precipitation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -229,11 +229,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n438ea9a7f4284d33aeb7cf6dddf492afb2 ;
+    urnp:examples <urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-general-field-protocol-shapes/weather-duration-of-precipitation/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n438ea9a7f4284d33aeb7cf6dddf492afb2
+<urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-general-field-protocol-shapes/weather-duration-of-precipitation/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-general-field-protocol-shapes/weather-duration-of-precipitation/valid.ttl"^^xsd:anyURI ;
 .

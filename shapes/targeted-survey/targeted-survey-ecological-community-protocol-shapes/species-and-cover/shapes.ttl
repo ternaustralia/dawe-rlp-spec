@@ -31,7 +31,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:ne9c4e6a03bfa4eadb00fe62a60073d6bb2 ;
+    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/species-and-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -60,7 +60,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ne9c4e6a03bfa4eadb00fe62a60073d6bb2 ;
+    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/species-and-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -92,7 +92,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:ne9c4e6a03bfa4eadb00fe62a60073d6bb2 ;
+    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/species-and-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -122,7 +122,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ne9c4e6a03bfa4eadb00fe62a60073d6bb2 ;
+    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/species-and-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -153,7 +153,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ne9c4e6a03bfa4eadb00fe62a60073d6bb2 ;
+    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/species-and-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -182,11 +182,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ne9c4e6a03bfa4eadb00fe62a60073d6bb2 ;
+    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/species-and-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:ne9c4e6a03bfa4eadb00fe62a60073d6bb2
+<urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/species-and-cover/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/species-and-cover/valid.ttl"^^xsd:anyURI ;
 .

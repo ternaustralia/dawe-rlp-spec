@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n479fbc5d11d247a5a2dafd1df7935a17b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-cutan-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-cutan-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -68,7 +68,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n479fbc5d11d247a5a2dafd1df7935a17b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-cutan-type:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -109,7 +109,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n479fbc5d11d247a5a2dafd1df7935a17b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-cutan-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-cutan-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -139,7 +139,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n479fbc5d11d247a5a2dafd1df7935a17b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-cutan-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-cutan-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -170,7 +170,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n479fbc5d11d247a5a2dafd1df7935a17b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-cutan-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-cutan-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -199,7 +199,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n479fbc5d11d247a5a2dafd1df7935a17b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-cutan-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-cutan-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -229,11 +229,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n479fbc5d11d247a5a2dafd1df7935a17b2 ;
+    urnp:examples <urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-cutan-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-cutan-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n479fbc5d11d247a5a2dafd1df7935a17b2
+<urn:shapes:soil-soil-pit-characterization-protocol-shapes:soil-cutan-type:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-cutan-type/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-pit-characterization-protocol-shapes/soil-cutan-type/valid.ttl"^^xsd:anyURI ;
 .

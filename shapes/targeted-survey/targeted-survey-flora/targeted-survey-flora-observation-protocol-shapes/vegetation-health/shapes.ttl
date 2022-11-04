@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbb98ff3a852b4d4da2d18958b51dfc4db2 ;
+    urnp:examples <urn:shapes:targeted-survey-flora-observation-protocol-shapes:vegetation-health:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-flora/targeted-survey-flora-observation-protocol-shapes/vegetation-health/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -69,7 +69,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbb98ff3a852b4d4da2d18958b51dfc4db2 ;
+    urnp:examples <urn:shapes:targeted-survey-flora-observation-protocol-shapes:vegetation-health:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -110,7 +110,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nbb98ff3a852b4d4da2d18958b51dfc4db2 ;
+    urnp:examples <urn:shapes:targeted-survey-flora-observation-protocol-shapes:vegetation-health:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-flora/targeted-survey-flora-observation-protocol-shapes/vegetation-health/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -140,7 +140,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbb98ff3a852b4d4da2d18958b51dfc4db2 ;
+    urnp:examples <urn:shapes:targeted-survey-flora-observation-protocol-shapes:vegetation-health:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-flora/targeted-survey-flora-observation-protocol-shapes/vegetation-health/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -171,7 +171,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbb98ff3a852b4d4da2d18958b51dfc4db2 ;
+    urnp:examples <urn:shapes:targeted-survey-flora-observation-protocol-shapes:vegetation-health:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-flora/targeted-survey-flora-observation-protocol-shapes/vegetation-health/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -200,7 +200,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbb98ff3a852b4d4da2d18958b51dfc4db2 ;
+    urnp:examples <urn:shapes:targeted-survey-flora-observation-protocol-shapes:vegetation-health:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-flora/targeted-survey-flora-observation-protocol-shapes/vegetation-health/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -230,11 +230,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbb98ff3a852b4d4da2d18958b51dfc4db2 ;
+    urnp:examples <urn:shapes:targeted-survey-flora-observation-protocol-shapes:vegetation-health:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-flora/targeted-survey-flora-observation-protocol-shapes/vegetation-health/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nbb98ff3a852b4d4da2d18958b51dfc4db2
+<urn:shapes:targeted-survey-flora-observation-protocol-shapes:vegetation-health:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-flora/targeted-survey-flora-observation-protocol-shapes/vegetation-health/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-flora/targeted-survey-flora-observation-protocol-shapes/vegetation-health/valid.ttl"^^xsd:anyURI ;
 .
