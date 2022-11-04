@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n125ae287812f40a790017ac25f832f1bb2 ;
+    urnp:examples <urn:shapes:basal-area-basal-wedge-protocol-shapes:basal-area-sweep-hit-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area-sweep-hit-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -64,7 +64,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n125ae287812f40a790017ac25f832f1bb2 ;
+    urnp:examples <urn:shapes:basal-area-basal-wedge-protocol-shapes:basal-area-sweep-hit-type:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -105,7 +105,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n125ae287812f40a790017ac25f832f1bb2 ;
+    urnp:examples <urn:shapes:basal-area-basal-wedge-protocol-shapes:basal-area-sweep-hit-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area-sweep-hit-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -135,7 +135,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n125ae287812f40a790017ac25f832f1bb2 ;
+    urnp:examples <urn:shapes:basal-area-basal-wedge-protocol-shapes:basal-area-sweep-hit-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area-sweep-hit-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -166,7 +166,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n125ae287812f40a790017ac25f832f1bb2 ;
+    urnp:examples <urn:shapes:basal-area-basal-wedge-protocol-shapes:basal-area-sweep-hit-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area-sweep-hit-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -195,7 +195,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n125ae287812f40a790017ac25f832f1bb2 ;
+    urnp:examples <urn:shapes:basal-area-basal-wedge-protocol-shapes:basal-area-sweep-hit-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area-sweep-hit-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -225,11 +225,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n125ae287812f40a790017ac25f832f1bb2 ;
+    urnp:examples <urn:shapes:basal-area-basal-wedge-protocol-shapes:basal-area-sweep-hit-type:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area-sweep-hit-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n125ae287812f40a790017ac25f832f1bb2
+<urn:shapes:basal-area-basal-wedge-protocol-shapes:basal-area-sweep-hit-type:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area-sweep-hit-type/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area-sweep-hit-type/valid.ttl"^^xsd:anyURI ;
 .

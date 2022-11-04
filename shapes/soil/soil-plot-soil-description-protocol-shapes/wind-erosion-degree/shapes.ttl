@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na1cb57eaceeb41e986ab9e73c59ff5c3b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:wind-erosion-degree:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/wind-erosion-degree/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -68,7 +68,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:na1cb57eaceeb41e986ab9e73c59ff5c3b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:wind-erosion-degree:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -109,7 +109,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na1cb57eaceeb41e986ab9e73c59ff5c3b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:wind-erosion-degree:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/wind-erosion-degree/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -139,7 +139,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na1cb57eaceeb41e986ab9e73c59ff5c3b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:wind-erosion-degree:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/wind-erosion-degree/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -170,7 +170,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na1cb57eaceeb41e986ab9e73c59ff5c3b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:wind-erosion-degree:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/wind-erosion-degree/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -199,7 +199,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na1cb57eaceeb41e986ab9e73c59ff5c3b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:wind-erosion-degree:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/wind-erosion-degree/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -229,11 +229,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:na1cb57eaceeb41e986ab9e73c59ff5c3b2 ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:wind-erosion-degree:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/wind-erosion-degree/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:na1cb57eaceeb41e986ab9e73c59ff5c3b2
+<urn:shapes:soil-plot-soil-description-protocol-shapes:wind-erosion-degree:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/wind-erosion-degree/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/wind-erosion-degree/valid.ttl"^^xsd:anyURI ;
 .

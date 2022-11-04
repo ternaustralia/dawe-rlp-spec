@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n5b19797713af43a6b6ed27b8b66ec1b0b2 ;
+    urnp:examples <urn:shapes:plot-description:height-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -73,7 +73,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n5b19797713af43a6b6ed27b8b66ec1b0b2 ;
+    urnp:examples <urn:shapes:plot-description:height-class:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -114,7 +114,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n5b19797713af43a6b6ed27b8b66ec1b0b2 ;
+    urnp:examples <urn:shapes:plot-description:height-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -144,7 +144,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n5b19797713af43a6b6ed27b8b66ec1b0b2 ;
+    urnp:examples <urn:shapes:plot-description:height-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -175,7 +175,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n5b19797713af43a6b6ed27b8b66ec1b0b2 ;
+    urnp:examples <urn:shapes:plot-description:height-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -204,7 +204,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n5b19797713af43a6b6ed27b8b66ec1b0b2 ;
+    urnp:examples <urn:shapes:plot-description:height-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -234,11 +234,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n5b19797713af43a6b6ed27b8b66ec1b0b2 ;
+    urnp:examples <urn:shapes:plot-description:height-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n5b19797713af43a6b6ed27b8b66ec1b0b2
+<urn:shapes:plot-description:height-class:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/valid.ttl"^^xsd:anyURI ;
 .

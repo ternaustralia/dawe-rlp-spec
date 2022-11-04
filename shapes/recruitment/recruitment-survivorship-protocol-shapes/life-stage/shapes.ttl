@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n769e1012dd6249ffb43771bc46ba7628b2 ;
+    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:life-stage:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -70,7 +70,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n769e1012dd6249ffb43771bc46ba7628b2 ;
+    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:life-stage:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -111,7 +111,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n769e1012dd6249ffb43771bc46ba7628b2 ;
+    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:life-stage:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -141,7 +141,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n769e1012dd6249ffb43771bc46ba7628b2 ;
+    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:life-stage:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -172,7 +172,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n769e1012dd6249ffb43771bc46ba7628b2 ;
+    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:life-stage:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -201,7 +201,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n769e1012dd6249ffb43771bc46ba7628b2 ;
+    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:life-stage:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -231,11 +231,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n769e1012dd6249ffb43771bc46ba7628b2 ;
+    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:life-stage:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n769e1012dd6249ffb43771bc46ba7628b2
+<urn:shapes:recruitment-survivorship-protocol-shapes:life-stage:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/life-stage/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/life-stage/valid.ttl"^^xsd:anyURI ;
 .

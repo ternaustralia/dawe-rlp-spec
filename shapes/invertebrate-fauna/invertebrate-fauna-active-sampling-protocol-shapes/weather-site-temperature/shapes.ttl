@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9193ab3279a44891a72f487f77da6bb0b2 ;
+    urnp:examples <urn:shapes:invertebrate-fauna-active-sampling-protocol-shapes:weather-site-temperature:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-active-sampling-protocol-shapes/weather-site-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -68,7 +68,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9193ab3279a44891a72f487f77da6bb0b2 ;
+    urnp:examples <urn:shapes:invertebrate-fauna-active-sampling-protocol-shapes:weather-site-temperature:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -109,7 +109,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9193ab3279a44891a72f487f77da6bb0b2 ;
+    urnp:examples <urn:shapes:invertebrate-fauna-active-sampling-protocol-shapes:weather-site-temperature:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-active-sampling-protocol-shapes/weather-site-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -139,7 +139,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9193ab3279a44891a72f487f77da6bb0b2 ;
+    urnp:examples <urn:shapes:invertebrate-fauna-active-sampling-protocol-shapes:weather-site-temperature:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-active-sampling-protocol-shapes/weather-site-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -170,7 +170,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9193ab3279a44891a72f487f77da6bb0b2 ;
+    urnp:examples <urn:shapes:invertebrate-fauna-active-sampling-protocol-shapes:weather-site-temperature:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-active-sampling-protocol-shapes/weather-site-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -199,7 +199,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9193ab3279a44891a72f487f77da6bb0b2 ;
+    urnp:examples <urn:shapes:invertebrate-fauna-active-sampling-protocol-shapes:weather-site-temperature:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-active-sampling-protocol-shapes/weather-site-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -229,11 +229,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9193ab3279a44891a72f487f77da6bb0b2 ;
+    urnp:examples <urn:shapes:invertebrate-fauna-active-sampling-protocol-shapes:weather-site-temperature:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-active-sampling-protocol-shapes/weather-site-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n9193ab3279a44891a72f487f77da6bb0b2
+<urn:shapes:invertebrate-fauna-active-sampling-protocol-shapes:weather-site-temperature:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-active-sampling-protocol-shapes/weather-site-temperature/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-active-sampling-protocol-shapes/weather-site-temperature/valid.ttl"^^xsd:anyURI ;
 .

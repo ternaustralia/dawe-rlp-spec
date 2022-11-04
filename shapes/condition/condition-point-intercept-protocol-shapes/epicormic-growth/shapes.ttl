@@ -31,7 +31,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3e6af1c7efd74c78b719ace49f1d6d42b2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:epicormic-growth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/epicormic-growth/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -60,7 +60,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3e6af1c7efd74c78b719ace49f1d6d42b2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:epicormic-growth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/epicormic-growth/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -92,7 +92,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n3e6af1c7efd74c78b719ace49f1d6d42b2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:epicormic-growth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/epicormic-growth/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -122,7 +122,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3e6af1c7efd74c78b719ace49f1d6d42b2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:epicormic-growth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/epicormic-growth/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -153,7 +153,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3e6af1c7efd74c78b719ace49f1d6d42b2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:epicormic-growth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/epicormic-growth/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -182,11 +182,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3e6af1c7efd74c78b719ace49f1d6d42b2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:epicormic-growth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/epicormic-growth/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n3e6af1c7efd74c78b719ace49f1d6d42b2
+<urn:shapes:condition-point-intercept-protocol-shapes:epicormic-growth:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/epicormic-growth/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/epicormic-growth/valid.ttl"^^xsd:anyURI ;
 .
