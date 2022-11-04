@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n7353b0fbc2c54c2b9ce9a13cdee5a06eb2 ;
+    urnp:examples <urn:shapes:condition-vertebrate-pest-presence-plot-protocol-shapes:vegetation-diameter-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vertebrate-pest-presence-plot-protocol-shapes/vegetation-diameter-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -69,7 +69,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n7353b0fbc2c54c2b9ce9a13cdee5a06eb2 ;
+    urnp:examples <urn:shapes:condition-vertebrate-pest-presence-plot-protocol-shapes:vegetation-diameter-class:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -110,7 +110,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n7353b0fbc2c54c2b9ce9a13cdee5a06eb2 ;
+    urnp:examples <urn:shapes:condition-vertebrate-pest-presence-plot-protocol-shapes:vegetation-diameter-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vertebrate-pest-presence-plot-protocol-shapes/vegetation-diameter-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -140,7 +140,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n7353b0fbc2c54c2b9ce9a13cdee5a06eb2 ;
+    urnp:examples <urn:shapes:condition-vertebrate-pest-presence-plot-protocol-shapes:vegetation-diameter-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vertebrate-pest-presence-plot-protocol-shapes/vegetation-diameter-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -171,7 +171,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n7353b0fbc2c54c2b9ce9a13cdee5a06eb2 ;
+    urnp:examples <urn:shapes:condition-vertebrate-pest-presence-plot-protocol-shapes:vegetation-diameter-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vertebrate-pest-presence-plot-protocol-shapes/vegetation-diameter-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -200,7 +200,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n7353b0fbc2c54c2b9ce9a13cdee5a06eb2 ;
+    urnp:examples <urn:shapes:condition-vertebrate-pest-presence-plot-protocol-shapes:vegetation-diameter-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vertebrate-pest-presence-plot-protocol-shapes/vegetation-diameter-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -230,11 +230,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n7353b0fbc2c54c2b9ce9a13cdee5a06eb2 ;
+    urnp:examples <urn:shapes:condition-vertebrate-pest-presence-plot-protocol-shapes:vegetation-diameter-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vertebrate-pest-presence-plot-protocol-shapes/vegetation-diameter-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n7353b0fbc2c54c2b9ce9a13cdee5a06eb2
+<urn:shapes:condition-vertebrate-pest-presence-plot-protocol-shapes:vegetation-diameter-class:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vertebrate-pest-presence-plot-protocol-shapes/vegetation-diameter-class/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vertebrate-pest-presence-plot-protocol-shapes/vegetation-diameter-class/valid.ttl"^^xsd:anyURI ;
 .
