@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nc1c550a610e04ad6b78d0f7dc533809cb2 ;
+    urnp:examples <urn:shapes:plot-description:slope-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -70,7 +70,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nc1c550a610e04ad6b78d0f7dc533809cb2 ;
+    urnp:examples <urn:shapes:plot-description:slope-class:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -111,7 +111,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nc1c550a610e04ad6b78d0f7dc533809cb2 ;
+    urnp:examples <urn:shapes:plot-description:slope-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -141,7 +141,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nc1c550a610e04ad6b78d0f7dc533809cb2 ;
+    urnp:examples <urn:shapes:plot-description:slope-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -172,7 +172,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nc1c550a610e04ad6b78d0f7dc533809cb2 ;
+    urnp:examples <urn:shapes:plot-description:slope-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -201,7 +201,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nc1c550a610e04ad6b78d0f7dc533809cb2 ;
+    urnp:examples <urn:shapes:plot-description:slope-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -231,11 +231,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nc1c550a610e04ad6b78d0f7dc533809cb2 ;
+    urnp:examples <urn:shapes:plot-description:slope-class:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nc1c550a610e04ad6b78d0f7dc533809cb2
+<urn:shapes:plot-description:slope-class:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-class/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/slope-class/valid.ttl"^^xsd:anyURI ;
 .

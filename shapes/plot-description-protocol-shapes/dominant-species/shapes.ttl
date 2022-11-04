@@ -31,7 +31,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n8fcee7e348b445139618deb11a9ab077b2 ;
+    urnp:examples <urn:shapes:plot-description:dominant-species:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/dominant-species/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -60,7 +60,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n8fcee7e348b445139618deb11a9ab077b2 ;
+    urnp:examples <urn:shapes:plot-description:dominant-species:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/dominant-species/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -92,7 +92,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n8fcee7e348b445139618deb11a9ab077b2 ;
+    urnp:examples <urn:shapes:plot-description:dominant-species:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/dominant-species/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -122,7 +122,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n8fcee7e348b445139618deb11a9ab077b2 ;
+    urnp:examples <urn:shapes:plot-description:dominant-species:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/dominant-species/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -153,7 +153,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n8fcee7e348b445139618deb11a9ab077b2 ;
+    urnp:examples <urn:shapes:plot-description:dominant-species:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/dominant-species/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -182,11 +182,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n8fcee7e348b445139618deb11a9ab077b2 ;
+    urnp:examples <urn:shapes:plot-description:dominant-species:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/dominant-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n8fcee7e348b445139618deb11a9ab077b2
+<urn:shapes:plot-description:dominant-species:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/dominant-species/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/dominant-species/valid.ttl"^^xsd:anyURI ;
 .
