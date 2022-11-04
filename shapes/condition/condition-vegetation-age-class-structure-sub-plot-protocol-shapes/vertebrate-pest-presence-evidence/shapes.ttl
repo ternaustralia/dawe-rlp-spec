@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbe5515ebeca9492eb49c412d38aa853db2 ;
+    urnp:examples <urn:shapes:condition-vegetation-age-class-structure-sub-plot-protocol-shapes:vertebrate-pest-presence-evidence:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vegetation-age-class-structure-sub-plot-protocol-shapes/vertebrate-pest-presence-evidence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -69,7 +69,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbe5515ebeca9492eb49c412d38aa853db2 ;
+    urnp:examples <urn:shapes:condition-vegetation-age-class-structure-sub-plot-protocol-shapes:vertebrate-pest-presence-evidence:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -110,7 +110,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nbe5515ebeca9492eb49c412d38aa853db2 ;
+    urnp:examples <urn:shapes:condition-vegetation-age-class-structure-sub-plot-protocol-shapes:vertebrate-pest-presence-evidence:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vegetation-age-class-structure-sub-plot-protocol-shapes/vertebrate-pest-presence-evidence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -140,7 +140,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbe5515ebeca9492eb49c412d38aa853db2 ;
+    urnp:examples <urn:shapes:condition-vegetation-age-class-structure-sub-plot-protocol-shapes:vertebrate-pest-presence-evidence:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vegetation-age-class-structure-sub-plot-protocol-shapes/vertebrate-pest-presence-evidence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -171,7 +171,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbe5515ebeca9492eb49c412d38aa853db2 ;
+    urnp:examples <urn:shapes:condition-vegetation-age-class-structure-sub-plot-protocol-shapes:vertebrate-pest-presence-evidence:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vegetation-age-class-structure-sub-plot-protocol-shapes/vertebrate-pest-presence-evidence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -200,7 +200,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbe5515ebeca9492eb49c412d38aa853db2 ;
+    urnp:examples <urn:shapes:condition-vegetation-age-class-structure-sub-plot-protocol-shapes:vertebrate-pest-presence-evidence:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vegetation-age-class-structure-sub-plot-protocol-shapes/vertebrate-pest-presence-evidence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -230,11 +230,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbe5515ebeca9492eb49c412d38aa853db2 ;
+    urnp:examples <urn:shapes:condition-vegetation-age-class-structure-sub-plot-protocol-shapes:vertebrate-pest-presence-evidence:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vegetation-age-class-structure-sub-plot-protocol-shapes/vertebrate-pest-presence-evidence/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nbe5515ebeca9492eb49c412d38aa853db2
+<urn:shapes:condition-vegetation-age-class-structure-sub-plot-protocol-shapes:vertebrate-pest-presence-evidence:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vegetation-age-class-structure-sub-plot-protocol-shapes/vertebrate-pest-presence-evidence/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-vegetation-age-class-structure-sub-plot-protocol-shapes/vertebrate-pest-presence-evidence/valid.ttl"^^xsd:anyURI ;
 .

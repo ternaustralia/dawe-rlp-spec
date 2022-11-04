@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb041c202b1d44343aeb1fdb96a767a28b2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:vegetation-health:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/vegetation-health/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -69,7 +69,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nb041c202b1d44343aeb1fdb96a767a28b2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:vegetation-health:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -110,7 +110,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nb041c202b1d44343aeb1fdb96a767a28b2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:vegetation-health:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/vegetation-health/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -140,7 +140,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb041c202b1d44343aeb1fdb96a767a28b2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:vegetation-health:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/vegetation-health/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -171,7 +171,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb041c202b1d44343aeb1fdb96a767a28b2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:vegetation-health:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/vegetation-health/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -200,7 +200,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb041c202b1d44343aeb1fdb96a767a28b2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:vegetation-health:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/vegetation-health/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -230,11 +230,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nb041c202b1d44343aeb1fdb96a767a28b2 ;
+    urnp:examples <urn:shapes:condition-point-intercept-protocol-shapes:vegetation-health:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/vegetation-health/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nb041c202b1d44343aeb1fdb96a767a28b2
+<urn:shapes:condition-point-intercept-protocol-shapes:vegetation-health:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/vegetation-health/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition/condition-point-intercept-protocol-shapes/vegetation-health/valid.ttl"^^xsd:anyURI ;
 .

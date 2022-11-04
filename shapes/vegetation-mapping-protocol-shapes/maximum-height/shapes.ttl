@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb6f7eaa173d84cfc8e607f1beed46081b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:maximum-height:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/maximum-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -65,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nb6f7eaa173d84cfc8e607f1beed46081b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:maximum-height:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/maximum-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -95,7 +95,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb6f7eaa173d84cfc8e607f1beed46081b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:maximum-height:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/maximum-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -123,7 +123,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nb6f7eaa173d84cfc8e607f1beed46081b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:maximum-height:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/maximum-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -154,7 +154,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb6f7eaa173d84cfc8e607f1beed46081b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:maximum-height:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/maximum-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -183,7 +183,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nb6f7eaa173d84cfc8e607f1beed46081b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:maximum-height:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/maximum-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -212,11 +212,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb6f7eaa173d84cfc8e607f1beed46081b2 ;
+    urnp:examples <urn:shapes:vegetation-mapping-protocol-shapes:maximum-height:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/maximum-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nb6f7eaa173d84cfc8e607f1beed46081b2
+<urn:shapes:vegetation-mapping-protocol-shapes:maximum-height:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/maximum-height/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/maximum-height/valid.ttl"^^xsd:anyURI ;
 .

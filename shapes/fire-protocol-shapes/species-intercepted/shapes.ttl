@@ -31,7 +31,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n1bbed5c0a98e41ecbcc5890e5e44580fb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:species-intercepted:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/species-intercepted/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -60,7 +60,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n1bbed5c0a98e41ecbcc5890e5e44580fb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:species-intercepted:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/species-intercepted/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -92,7 +92,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n1bbed5c0a98e41ecbcc5890e5e44580fb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:species-intercepted:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/species-intercepted/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -122,7 +122,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n1bbed5c0a98e41ecbcc5890e5e44580fb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:species-intercepted:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/species-intercepted/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -153,7 +153,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n1bbed5c0a98e41ecbcc5890e5e44580fb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:species-intercepted:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/species-intercepted/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -182,11 +182,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n1bbed5c0a98e41ecbcc5890e5e44580fb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:species-intercepted:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/species-intercepted/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n1bbed5c0a98e41ecbcc5890e5e44580fb2
+<urn:shapes:fire-protocol-shapes:species-intercepted:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/species-intercepted/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/species-intercepted/valid.ttl"^^xsd:anyURI ;
 .
