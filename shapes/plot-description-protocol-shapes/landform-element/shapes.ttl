@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ned73c30ee8f24534a394e3cf9f4dcf8ab2 ;
+    urnp:examples <urn:shapes:plot-description:landform-element:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -142,7 +142,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:ned73c30ee8f24534a394e3cf9f4dcf8ab2 ;
+    urnp:examples <urn:shapes:plot-description:landform-element:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -183,7 +183,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:ned73c30ee8f24534a394e3cf9f4dcf8ab2 ;
+    urnp:examples <urn:shapes:plot-description:landform-element:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -213,7 +213,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ned73c30ee8f24534a394e3cf9f4dcf8ab2 ;
+    urnp:examples <urn:shapes:plot-description:landform-element:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -244,7 +244,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ned73c30ee8f24534a394e3cf9f4dcf8ab2 ;
+    urnp:examples <urn:shapes:plot-description:landform-element:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -273,7 +273,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:ned73c30ee8f24534a394e3cf9f4dcf8ab2 ;
+    urnp:examples <urn:shapes:plot-description:landform-element:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -303,11 +303,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:ned73c30ee8f24534a394e3cf9f4dcf8ab2 ;
+    urnp:examples <urn:shapes:plot-description:landform-element:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:ned73c30ee8f24534a394e3cf9f4dcf8ab2
+<urn:shapes:plot-description:landform-element:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/landform-element/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/landform-element/valid.ttl"^^xsd:anyURI ;
 .
