@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbdadff4f43514ccc8f6c6e965be8d288b2 ;
+    urnp:examples <urn:shapes:plot-description:structural-formation:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -167,7 +167,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbdadff4f43514ccc8f6c6e965be8d288b2 ;
+    urnp:examples <urn:shapes:plot-description:structural-formation:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -208,7 +208,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nbdadff4f43514ccc8f6c6e965be8d288b2 ;
+    urnp:examples <urn:shapes:plot-description:structural-formation:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -238,7 +238,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbdadff4f43514ccc8f6c6e965be8d288b2 ;
+    urnp:examples <urn:shapes:plot-description:structural-formation:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -269,7 +269,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbdadff4f43514ccc8f6c6e965be8d288b2 ;
+    urnp:examples <urn:shapes:plot-description:structural-formation:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -298,7 +298,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbdadff4f43514ccc8f6c6e965be8d288b2 ;
+    urnp:examples <urn:shapes:plot-description:structural-formation:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -328,11 +328,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbdadff4f43514ccc8f6c6e965be8d288b2 ;
+    urnp:examples <urn:shapes:plot-description:structural-formation:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nbdadff4f43514ccc8f6c6e965be8d288b2
+<urn:shapes:plot-description:structural-formation:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/structural-formation/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/structural-formation/valid.ttl"^^xsd:anyURI ;
 .

@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n261fc83f8e0c4e08b2d7b977917d0ffcb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:soil-char-depth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/soil-char-depth/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -65,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n261fc83f8e0c4e08b2d7b977917d0ffcb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:soil-char-depth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/soil-char-depth/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -95,7 +95,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n261fc83f8e0c4e08b2d7b977917d0ffcb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:soil-char-depth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/soil-char-depth/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -123,7 +123,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n261fc83f8e0c4e08b2d7b977917d0ffcb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:soil-char-depth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/soil-char-depth/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -154,7 +154,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n261fc83f8e0c4e08b2d7b977917d0ffcb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:soil-char-depth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/soil-char-depth/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -183,7 +183,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n261fc83f8e0c4e08b2d7b977917d0ffcb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:soil-char-depth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/soil-char-depth/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -212,11 +212,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n261fc83f8e0c4e08b2d7b977917d0ffcb2 ;
+    urnp:examples <urn:shapes:fire-protocol-shapes:soil-char-depth:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/soil-char-depth/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n261fc83f8e0c4e08b2d7b977917d0ffcb2
+<urn:shapes:fire-protocol-shapes:soil-char-depth:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/soil-char-depth/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/soil-char-depth/valid.ttl"^^xsd:anyURI ;
 .

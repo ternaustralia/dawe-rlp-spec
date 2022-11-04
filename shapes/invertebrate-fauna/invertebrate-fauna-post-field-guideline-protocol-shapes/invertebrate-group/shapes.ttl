@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nfefb1263063f4327afd21cc1d400f04bb2 ;
+    urnp:examples <urn:shapes:invertebrate-fauna-post-field-guideline-protocol-shapes:invertebrate-group:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/invertebrate-group/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -109,7 +109,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nfefb1263063f4327afd21cc1d400f04bb2 ;
+    urnp:examples <urn:shapes:invertebrate-fauna-post-field-guideline-protocol-shapes:invertebrate-group:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -150,7 +150,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nfefb1263063f4327afd21cc1d400f04bb2 ;
+    urnp:examples <urn:shapes:invertebrate-fauna-post-field-guideline-protocol-shapes:invertebrate-group:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/invertebrate-group/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -180,7 +180,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nfefb1263063f4327afd21cc1d400f04bb2 ;
+    urnp:examples <urn:shapes:invertebrate-fauna-post-field-guideline-protocol-shapes:invertebrate-group:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/invertebrate-group/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -211,7 +211,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nfefb1263063f4327afd21cc1d400f04bb2 ;
+    urnp:examples <urn:shapes:invertebrate-fauna-post-field-guideline-protocol-shapes:invertebrate-group:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/invertebrate-group/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -240,7 +240,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nfefb1263063f4327afd21cc1d400f04bb2 ;
+    urnp:examples <urn:shapes:invertebrate-fauna-post-field-guideline-protocol-shapes:invertebrate-group:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/invertebrate-group/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -270,11 +270,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nfefb1263063f4327afd21cc1d400f04bb2 ;
+    urnp:examples <urn:shapes:invertebrate-fauna-post-field-guideline-protocol-shapes:invertebrate-group:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/invertebrate-group/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nfefb1263063f4327afd21cc1d400f04bb2
+<urn:shapes:invertebrate-fauna-post-field-guideline-protocol-shapes:invertebrate-group:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/invertebrate-group/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/invertebrate-fauna/invertebrate-fauna-post-field-guideline-protocol-shapes/invertebrate-group/valid.ttl"^^xsd:anyURI ;
 .
