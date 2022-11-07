@@ -1,0 +1,222 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:opportunistic-observations:microhabitat-tier-2:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _habitat_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/2090cfd9-8b6b-497b-9512-497456a18b99> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2090cfd9-8b6b-497b-9512-497456a18b99[`habitat`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/664bd7cf-1cc4-4d19-8c33-8173471638c2>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples <urn:shapes:opportunistic-observations:microhabitat-tier-2:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-2/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:opportunistic-observations:microhabitat-tier-2:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Microhabitat tier 2 codes controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/00bea1d5-a034-57af-a9dc-ce82d676d5d2>
+            <https://linked.data.gov.au/def/nrm/04b7acae-b4cf-5b8c-9657-0f3e6a8d9d84>
+            <https://linked.data.gov.au/def/nrm/0d906fd2-5d8c-58ef-8e94-c4a2f737ecab>
+            <https://linked.data.gov.au/def/nrm/115d0bef-78e5-5b70-b55d-4f14661aa3f8>
+            <https://linked.data.gov.au/def/nrm/319bcbd0-5178-5dbf-8f0f-1ae206e73c0b>
+            <https://linked.data.gov.au/def/nrm/3e56a6cd-237c-5a17-8f4f-9430242cdc47>
+            <https://linked.data.gov.au/def/nrm/3fc5f925-acdb-5e8a-8809-10a3800bea0c>
+            <https://linked.data.gov.au/def/nrm/56fa15ed-bf30-58e8-bd3a-1c5ac7aaacec>
+            <https://linked.data.gov.au/def/nrm/683d4ff6-22cf-574b-9b60-d2c395b0c590>
+            <https://linked.data.gov.au/def/nrm/69449a36-0824-5641-8243-954ea4141151>
+            <https://linked.data.gov.au/def/nrm/85725152-9318-5eaf-b691-32ceb51c534e>
+            <https://linked.data.gov.au/def/nrm/8b50f6d3-2c5e-5819-b054-6fdf943a38ed>
+            <https://linked.data.gov.au/def/nrm/8f1666f3-b35f-5d1a-9502-ab3a62706599>
+            <https://linked.data.gov.au/def/nrm/d2910d09-d07b-50c2-90e3-83e2df026e7b>
+            <https://linked.data.gov.au/def/nrm/d72b6376-e37f-57de-aed7-f6455696e267>
+            <https://linked.data.gov.au/def/nrm/d9c0114b-f0a1-5342-89f7-2d863c6feab6>
+            <https://linked.data.gov.au/def/nrm/e4f63fe0-b2bd-5041-bd3d-013a8362323b>
+            <https://linked.data.gov.au/def/nrm/fff0b88f-0ea1-52c5-9b0c-a36e4da6b924>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Microhabitat tier 2 codes controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/664bd7cf-1cc4-4d19-8c33-8173471638c2> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples <urn:shapes:opportunistic-observations:microhabitat-tier-2:examples> ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'48f0bb5d-5451-42a1-ad60-7ddca485412d'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-2/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:opportunistic-observations:microhabitat-tier-2:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/664bd7cf-1cc4-4d19-8c33-8173471638c2>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples <urn:shapes:opportunistic-observations:microhabitat-tier-2:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-2/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:opportunistic-observations:microhabitat-tier-2:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6>`.
+
+    `<https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6>` is the IRI for "Opportunistic observations".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
+    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6`." ;
+    sh:name "Used procedure" ;
+    sh:path <http://www.w3.org/ns/sosa/usedProcedure> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/664bd7cf-1cc4-4d19-8c33-8173471638c2>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples <urn:shapes:opportunistic-observations:microhabitat-tier-2:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-2/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:opportunistic-observations:microhabitat-tier-2:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path <http://www.w3.org/ns/sosa/hasResult> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/664bd7cf-1cc4-4d19-8c33-8173471638c2>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples <urn:shapes:opportunistic-observations:microhabitat-tier-2:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-2/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:opportunistic-observations:microhabitat-tier-2:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/48f0bb5d-5451-42a1-ad60-7ddca485412d>`.
+
+        `<https://linked.data.gov.au/def/nrm/48f0bb5d-5451-42a1-ad60-7ddca485412d>` is the IRI for "Microhabitat tier 2 codes".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `48f0bb5d-5451-42a1-ad60-7ddca485412d$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "48f0bb5d-5451-42a1-ad60-7ddca485412d$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/664bd7cf-1cc4-4d19-8c33-8173471638c2> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples <urn:shapes:opportunistic-observations:microhabitat-tier-2:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-2/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:opportunistic-observations:microhabitat-tier-2:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-2/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/microhabitat-tier-2/valid.ttl"^^xsd:anyURI ;
+.
+
