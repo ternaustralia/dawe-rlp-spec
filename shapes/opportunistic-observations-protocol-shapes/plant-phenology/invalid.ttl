@@ -27,7 +27,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/plant-phenology/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:opportunistic-observations:invalid:plant-phenology:result-value>
@@ -52,7 +51,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/plant-phenology/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:opportunistic-observations:invalid:plant-phenology:simple-result>
@@ -73,31 +71,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             tern:vocabulary <https://linked.data.gov.au/def/nrm/110398ca-32fa-4f69-b7bb-5aa69d5a5004>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/33c1752f-b5f3-4ac9-9090-e9a4dd3096d1> ;
-    sosa:phenomenonTime <https://example.com/observation/plant-phenology/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
-<urn:test:opportunistic-observations:invalid:plant-phenology:site-visit>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - all observations must have a site vist." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:IRI ,
-                tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/0641f54c-1a32-5972-acfd-74c39874d245> ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:plant-phenology:site-visit> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/110398ca-32fa-4f69-b7bb-5aa69d5a5004>
-        ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/0641f54c-1a32-5972-acfd-74c39874d245> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/33c1752f-b5f3-4ac9-9090-e9a4dd3096d1> ;
     sosa:phenomenonTime <https://example.com/observation/plant-phenology/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -126,7 +99,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/plant-phenology/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:opportunistic-observations:invalid:plant-phenology:value-type>
@@ -149,7 +121,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/plant-phenology/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:opportunistic-observations:invalid:plant-phenology:vocabulary>
@@ -174,6 +145,5 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/plant-phenology/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 

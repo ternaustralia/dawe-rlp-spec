@@ -112,36 +112,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/fauna-behaviour/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations:fauna-behaviour:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Opportunistic observations are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/dfaf2438-6019-4632-85d8-0efc91930768>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples <urn:shapes:opportunistic-observations:fauna-behaviour:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/fauna-behaviour/shapes.ttl"^^xsd:anyURI ;
-.
-
 <urn:shapes:opportunistic-observations:fauna-behaviour:used-procedure>
     a
         sh:PropertyShape ,
