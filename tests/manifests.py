@@ -349,7 +349,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/opportunistic-observations-protocol-shapes/taxa-type/shapes.ttl",
         valid_data_path="shapes/opportunistic-observations-protocol-shapes/taxa-type/valid.ttl",
         invalid_data_path="shapes/opportunistic-observations-protocol-shapes/taxa-type/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="floristics-full-protocol-shapes-growth-form",
