@@ -5,21 +5,21 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:opportunistic-observations:valid:fauna-behaviour>
+<urn:test:opportunistic-observations-protocol-shapes:valid:fauna-behaviour>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Valid result for observable property - fauna behaviour" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
         ] ;
     sosa:hasResult [
             a
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/61094d53-8c8c-57d1-ab0a-ba2578a368c1> ;
-            sosa:isResultOf <urn:test:opportunistic-observations:valid:fauna-behaviour> ;
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:valid:fauna-behaviour> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/1301857c-4e02-4000-966b-a0d0ce60368f>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/61094d53-8c8c-57d1-ab0a-ba2578a368c1> ;

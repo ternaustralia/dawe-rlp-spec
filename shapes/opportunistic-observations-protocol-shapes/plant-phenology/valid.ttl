@@ -5,21 +5,21 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:opportunistic-observations:valid:plant-phenology>
+<urn:test:opportunistic-observations-protocol-shapes:valid:plant-phenology>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Valid result for observable property - plant phenology" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
         ] ;
     sosa:hasResult [
             a
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/0641f54c-1a32-5972-acfd-74c39874d245> ;
-            sosa:isResultOf <urn:test:opportunistic-observations:valid:plant-phenology> ;
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:valid:plant-phenology> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/110398ca-32fa-4f69-b7bb-5aa69d5a5004>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/0641f54c-1a32-5972-acfd-74c39874d245> ;

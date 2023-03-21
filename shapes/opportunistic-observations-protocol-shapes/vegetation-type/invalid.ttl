@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:opportunistic-observations:invalid:vegetation-type:feature-type>
+<urn:test:opportunistic-observations-protocol-shapes:invalid:vegetation-type:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/024c3897-e700-5411-bfac-c84b48bf85f8> ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:vegetation-type:feature-type> ;
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:vegetation-type:feature-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/2f585fb4-996c-483c-9f9f-65e5bbd171b3>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/024c3897-e700-5411-bfac-c84b48bf85f8> ;
@@ -29,21 +29,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
 .
 
-<urn:test:opportunistic-observations:invalid:vegetation-type:result-value>
+<urn:test:opportunistic-observations-protocol-shapes:invalid:vegetation-type:result-value>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
         ] ;
     sosa:hasResult [
             a
                 tern:IRI ,
                 tern:Value ;
             rdf:value <urn:fake:categorical:value> ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:vegetation-type:result-value> ;
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:vegetation-type:result-value> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/2f585fb4-996c-483c-9f9f-65e5bbd171b3>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
@@ -53,21 +53,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
 .
 
-<urn:test:opportunistic-observations:invalid:vegetation-type:simple-result>
+<urn:test:opportunistic-observations-protocol-shapes:invalid:vegetation-type:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
         ] ;
     sosa:hasResult [
             a
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/024c3897-e700-5411-bfac-c84b48bf85f8> ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:vegetation-type:simple-result> ;
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:vegetation-type:simple-result> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/2f585fb4-996c-483c-9f9f-65e5bbd171b3>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
@@ -77,21 +77,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
 .
 
-<urn:test:opportunistic-observations:invalid:vegetation-type:used-procedure>
+<urn:test:opportunistic-observations-protocol-shapes:invalid:vegetation-type:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Opportunistic observations'." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
         ] ;
     sosa:hasResult [
             a
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/024c3897-e700-5411-bfac-c84b48bf85f8> ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:vegetation-type:used-procedure> ;
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:vegetation-type:used-procedure> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/2f585fb4-996c-483c-9f9f-65e5bbd171b3>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/024c3897-e700-5411-bfac-c84b48bf85f8> ;
@@ -101,19 +101,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <urn:fake:procedure> ;
 .
 
-<urn:test:opportunistic-observations:invalid:vegetation-type:value-type>
+<urn:test:opportunistic-observations-protocol-shapes:invalid:vegetation-type:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
         ] ;
     sosa:hasResult [
             a tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/024c3897-e700-5411-bfac-c84b48bf85f8> ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:vegetation-type:value-type> ;
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:vegetation-type:value-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/2f585fb4-996c-483c-9f9f-65e5bbd171b3>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/024c3897-e700-5411-bfac-c84b48bf85f8> ;
@@ -123,21 +123,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
 .
 
-<urn:test:opportunistic-observations:invalid:vegetation-type:vocabulary>
+<urn:test:opportunistic-observations-protocol-shapes:invalid:vegetation-type:vocabulary>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect vocabulary" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
         ] ;
     sosa:hasResult [
             a
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/024c3897-e700-5411-bfac-c84b48bf85f8> ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:vegetation-type:vocabulary> ;
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:vegetation-type:vocabulary> ;
             tern:vocabulary <urn:fake:vocabulary>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/024c3897-e700-5411-bfac-c84b48bf85f8> ;

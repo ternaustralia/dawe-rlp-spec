@@ -7,7 +7,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:opportunistic-observations:number-of-individuals:feature-type>
+<urn:shapes:opportunistic-observations-protocol-shapes:number-of-individuals:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -32,11 +32,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations:number-of-individuals:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:number-of-individuals:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations:number-of-individuals:simple-result>
+<urn:shapes:opportunistic-observations-protocol-shapes:number-of-individuals:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -64,11 +64,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:opportunistic-observations:number-of-individuals:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:number-of-individuals:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations:number-of-individuals:used-procedure>
+<urn:shapes:opportunistic-observations-protocol-shapes:number-of-individuals:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -95,11 +95,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations:number-of-individuals:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:number-of-individuals:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations:number-of-individuals:value-range>
+<urn:shapes:opportunistic-observations-protocol-shapes:number-of-individuals:value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -124,11 +124,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations:number-of-individuals:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:number-of-individuals:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations:number-of-individuals:value-type>
+<urn:shapes:opportunistic-observations-protocol-shapes:number-of-individuals:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -153,12 +153,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations:number-of-individuals:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:number-of-individuals:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/number-of-individuals/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations:number-of-individuals:examples>
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/number-of-individuals/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/number-of-individuals/valid.ttl"^^xsd:anyURI ;
+<urn:shapes:opportunistic-observations-protocol-shapes:number-of-individuals:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/number-of-individuals/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/number-of-individuals/valid.ttl"^^xsd:anyURI ;
 .
 

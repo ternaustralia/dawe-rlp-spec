@@ -7,15 +7,15 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:feature-type>
+<urn:shapes:opportunistic-observations-protocol-shapes:taxa-type:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _animal population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/8a68b4a9-167b-40f0-9222-293a2d20ffee> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8a68b4a9-167b-40f0-9222-293a2d20ffee[`animal population`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
@@ -25,38 +25,35 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX unit: <http://qudt.org/vocab/unit/>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     select ?this  {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/d8ed3241-8d97-4a63-be3a-5f610a4b8739>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/1b3904f4-df8c-49ba-a234-3b406fe11fa9>}
         ?observation a tern:Observation ;
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/breeding-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:taxa-type:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/taxa-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:result-value>
+<urn:shapes:opportunistic-observations-protocol-shapes:taxa-type:result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Breeding status codes controlled vocabulary." ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Taxa type codes controlled vocabulary." ;
     sh:in (
-            <https://linked.data.gov.au/def/nrm/1cb9886b-fd8e-53ae-bab8-a219472a6850>
-            <https://linked.data.gov.au/def/nrm/2d579c4a-1861-528f-981b-5ea0aaca0682>
-            <https://linked.data.gov.au/def/nrm/305fde78-5b14-546b-84ca-fdf09f2492c0>
-            <https://linked.data.gov.au/def/nrm/5a67ce4a-ee06-5c3b-b571-6218ed4886c5>
-            <https://linked.data.gov.au/def/nrm/68377872-498e-5927-a6dc-545ac25f7726>
-            <https://linked.data.gov.au/def/nrm/8b752831-2d3e-58bd-a89f-93e5f3b46677>
-            <https://linked.data.gov.au/def/nrm/ad9d60c2-8e9f-57ae-8fa0-935daadf73e6>
-            <https://linked.data.gov.au/def/nrm/d63b9703-5926-53fe-aadf-4a5cc8753798>
-            <https://linked.data.gov.au/def/nrm/e80df9f5-bba6-56bf-9779-345821be4d57>
-            <https://linked.data.gov.au/def/nrm/ef798f2e-cb75-542f-85e4-1ca1aa99c6dd>
+            <https://linked.data.gov.au/def/nrm/0ac5b570-822b-5b0e-9746-a71faf85540d>
+            <https://linked.data.gov.au/def/nrm/0bd8eded-65b8-5433-9fc5-ee0db21cc439>
+            <https://linked.data.gov.au/def/nrm/562062b3-8ca1-5d75-b2ab-2ddcc06ed0c4>
+            <https://linked.data.gov.au/def/nrm/7b0b3837-0466-50bb-9958-cc06b2784d12>
+            <https://linked.data.gov.au/def/nrm/a5b47e2b-6fce-5af6-842e-118d3d4d442b>
+            <https://linked.data.gov.au/def/nrm/e69c436b-0196-5e11-8fc1-64503518a790>
+            <https://linked.data.gov.au/def/nrm/fa18eded-481d-54ee-84fa-93949ce9c4cd>
         ) ;
-    sh:message "The value of `rdf:value` _MUST_ exist in the Breeding status codes controlled vocabulary." ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Taxa type codes controlled vocabulary." ;
     sh:name "Result value" ;
     sh:path rdf:value ;
     sh:target [
@@ -68,24 +65,24 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         select ?this  {
             ?observation a tern:Observation ;
                 sosa:observedProperty 
-        <https://linked.data.gov.au/def/nrm/d8ed3241-8d97-4a63-be3a-5f610a4b8739> ;
+        <https://linked.data.gov.au/def/nrm/1b3904f4-df8c-49ba-a234-3b406fe11fa9> ;
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:examples> ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:taxa-type:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
-            values ?categoricalUUID {'b7dc10d2-c0aa-46b3-94da-685cd0a723e4'}
+            values ?categoricalUUID {'7ea12fed-6b87-4c20-9ab4-600b32ce15ec'}
             ?s skos:member ?values .
             filter (STRENDS(str(?s), ?categoricalUUID))
         }
         """ ;
     urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/breeding-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/taxa-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:simple-result>
+<urn:shapes:opportunistic-observations-protocol-shapes:taxa-type:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -103,7 +100,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     select $this {
         $this a tern:Observation ;
             sosa:observedProperty 
-    <https://linked.data.gov.au/def/nrm/d8ed3241-8d97-4a63-be3a-5f610a4b8739>
+    <https://linked.data.gov.au/def/nrm/1b3904f4-df8c-49ba-a234-3b406fe11fa9>
      ;
             sosa:hasSimpleResult ?simple ;
             sosa:hasResult ?result .
@@ -113,11 +110,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/breeding-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:taxa-type:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/taxa-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:used-procedure>
+<urn:shapes:opportunistic-observations-protocol-shapes:taxa-type:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -138,17 +135,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/d8ed3241-8d97-4a63-be3a-5f610a4b8739>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/1b3904f4-df8c-49ba-a234-3b406fe11fa9>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/breeding-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:taxa-type:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/taxa-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:value-type>
+<urn:shapes:opportunistic-observations-protocol-shapes:taxa-type:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -167,29 +164,29 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/d8ed3241-8d97-4a63-be3a-5f610a4b8739>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/1b3904f4-df8c-49ba-a234-3b406fe11fa9>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/breeding-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:taxa-type:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/taxa-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:vocabulary>
+<urn:shapes:opportunistic-observations-protocol-shapes:taxa-type:vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/b7dc10d2-c0aa-46b3-94da-685cd0a723e4>`.
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/7ea12fed-6b87-4c20-9ab4-600b32ce15ec>`.
 
-        `<https://linked.data.gov.au/def/nrm/b7dc10d2-c0aa-46b3-94da-685cd0a723e4>` is the IRI for "Breeding status codes".""" ;
-    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `b7dc10d2-c0aa-46b3-94da-685cd0a723e4$`." ;
+        `<https://linked.data.gov.au/def/nrm/7ea12fed-6b87-4c20-9ab4-600b32ce15ec>` is the IRI for "Taxa type codes".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `7ea12fed-6b87-4c20-9ab4-600b32ce15ec$`." ;
     sh:name "Vocabulary" ;
     sh:path tern:vocabulary ;
-    sh:pattern "b7dc10d2-c0aa-46b3-94da-685cd0a723e4$" ;
+    sh:pattern "7ea12fed-6b87-4c20-9ab4-600b32ce15ec$" ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -199,16 +196,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         select ?this  {
             ?observation a tern:Observation ;
                 sosa:observedProperty 
-        <https://linked.data.gov.au/def/nrm/d8ed3241-8d97-4a63-be3a-5f610a4b8739> ;
+        <https://linked.data.gov.au/def/nrm/1b3904f4-df8c-49ba-a234-3b406fe11fa9> ;
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/breeding-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:taxa-type:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/taxa-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:examples>
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/breeding-status/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/breeding-status/valid.ttl"^^xsd:anyURI ;
+<urn:shapes:opportunistic-observations-protocol-shapes:taxa-type:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/taxa-type/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/taxa-type/valid.ttl"^^xsd:anyURI ;
 .
 

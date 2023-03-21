@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:opportunistic-observations:invalid:number-of-individuals:datatype>
+<urn:test:opportunistic-observations-protocol-shapes:invalid:number-of-individuals:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:integer`." ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Integer ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:number-of-individuals:datatype>
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:number-of-individuals:datatype>
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/b2d28629-c986-4c05-9d4a-8b05e99a0a94> ;
@@ -28,7 +28,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
 .
 
-<urn:test:opportunistic-observations:invalid:number-of-individuals:feature-type>
+<urn:test:opportunistic-observations-protocol-shapes:invalid:number-of-individuals:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -42,7 +42,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Integer ,
                 tern:Value ;
             rdf:value 3 ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:number-of-individuals:feature-type>
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:number-of-individuals:feature-type>
         ] ;
     sosa:hasSimpleResult 3 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/b2d28629-c986-4c05-9d4a-8b05e99a0a94> ;
@@ -51,7 +51,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
 .
 
-<urn:test:opportunistic-observations:invalid:number-of-individuals:simple-result>
+<urn:test:opportunistic-observations-protocol-shapes:invalid:number-of-individuals:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -65,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Integer ,
                 tern:Value ;
             rdf:value 3 ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:number-of-individuals:simple-result>
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:number-of-individuals:simple-result>
         ] ;
     sosa:hasSimpleResult 2 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/b2d28629-c986-4c05-9d4a-8b05e99a0a94> ;
@@ -74,7 +74,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
 .
 
-<urn:test:opportunistic-observations:invalid:number-of-individuals:used-procedure>
+<urn:test:opportunistic-observations-protocol-shapes:invalid:number-of-individuals:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Opportunistic observations'." ;
@@ -88,7 +88,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Integer ,
                 tern:Value ;
             rdf:value 3 ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:number-of-individuals:used-procedure>
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:number-of-individuals:used-procedure>
         ] ;
     sosa:hasSimpleResult 3 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/b2d28629-c986-4c05-9d4a-8b05e99a0a94> ;
@@ -97,7 +97,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <urn:fake:procedure> ;
 .
 
-<urn:test:opportunistic-observations:invalid:number-of-individuals:value-range>
+<urn:test:opportunistic-observations-protocol-shapes:invalid:number-of-individuals:value-range>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value out of range" ;
@@ -111,7 +111,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Integer ,
                 tern:Value ;
             rdf:value -1 ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:number-of-individuals:value-range>
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:number-of-individuals:value-range>
         ] ;
     sosa:hasSimpleResult -1 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/b2d28629-c986-4c05-9d4a-8b05e99a0a94> ;
@@ -120,7 +120,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
 .
 
-<urn:test:opportunistic-observations:invalid:number-of-individuals:value-type>
+<urn:test:opportunistic-observations-protocol-shapes:invalid:number-of-individuals:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:Integer`." ;
@@ -132,7 +132,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasResult [
             a tern:Value ;
             rdf:value 3 ;
-            sosa:isResultOf <urn:test:opportunistic-observations:invalid:number-of-individuals:value-type>
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:number-of-individuals:value-type>
         ] ;
     sosa:hasSimpleResult 3 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/b2d28629-c986-4c05-9d4a-8b05e99a0a94> ;

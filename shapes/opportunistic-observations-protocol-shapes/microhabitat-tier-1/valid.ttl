@@ -5,21 +5,21 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:opportunistic-observations:valid:microhabitat-tier-1>
+<urn:test:opportunistic-observations-protocol-shapes:valid:microhabitat-tier-1>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Valid result for observable property - microhabitat tier 1" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2090cfd9-8b6b-497b-9512-497456a18b99>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
         ] ;
     sosa:hasResult [
             a
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/0696f893-e874-5bc7-8109-55dfd753aef5> ;
-            sosa:isResultOf <urn:test:opportunistic-observations:valid:microhabitat-tier-1> ;
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:valid:microhabitat-tier-1> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/66034d49-50d7-4042-a252-c2bd249d2a4b>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/0696f893-e874-5bc7-8109-55dfd753aef5> ;
