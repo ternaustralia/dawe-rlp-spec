@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:invalid:fire-history:feature-type>
+<urn:test:plot-description-protocol-shapes:invalid:fire-history:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/53d1ea55-2ba7-59f6-8efb-a6927f5e6275> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:fire-history:feature-type> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:fire-history:feature-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/6e9d2f51-ce64-4c67-8391-d14a8bf96b6b>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/53d1ea55-2ba7-59f6-8efb-a6927f5e6275> ;
@@ -30,21 +30,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:fire-history:result-value>
+<urn:test:plot-description-protocol-shapes:invalid:fire-history:result-value>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a
                 tern:IRI ,
                 tern:Value ;
             rdf:value <urn:fake:categorical:value> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:fire-history:result-value> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:fire-history:result-value> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/6e9d2f51-ce64-4c67-8391-d14a8bf96b6b>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
@@ -55,21 +55,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:fire-history:simple-result>
+<urn:test:plot-description-protocol-shapes:invalid:fire-history:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/53d1ea55-2ba7-59f6-8efb-a6927f5e6275> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:fire-history:simple-result> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:fire-history:simple-result> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/6e9d2f51-ce64-4c67-8391-d14a8bf96b6b>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
@@ -80,21 +80,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:fire-history:site-visit>
+<urn:test:plot-description-protocol-shapes:invalid:fire-history:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/53d1ea55-2ba7-59f6-8efb-a6927f5e6275> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:fire-history:site-visit> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:fire-history:site-visit> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/6e9d2f51-ce64-4c67-8391-d14a8bf96b6b>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/53d1ea55-2ba7-59f6-8efb-a6927f5e6275> ;
@@ -104,21 +104,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
 .
 
-<urn:test:plot-description:invalid:fire-history:used-procedure>
+<urn:test:plot-description-protocol-shapes:invalid:fire-history:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Plot Description'." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/53d1ea55-2ba7-59f6-8efb-a6927f5e6275> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:fire-history:used-procedure> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:fire-history:used-procedure> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/6e9d2f51-ce64-4c67-8391-d14a8bf96b6b>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/53d1ea55-2ba7-59f6-8efb-a6927f5e6275> ;
@@ -129,19 +129,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:fire-history:value-type>
+<urn:test:plot-description-protocol-shapes:invalid:fire-history:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/53d1ea55-2ba7-59f6-8efb-a6927f5e6275> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:fire-history:value-type> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:fire-history:value-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/6e9d2f51-ce64-4c67-8391-d14a8bf96b6b>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/53d1ea55-2ba7-59f6-8efb-a6927f5e6275> ;
@@ -152,21 +152,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:fire-history:vocabulary>
+<urn:test:plot-description-protocol-shapes:invalid:fire-history:vocabulary>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect vocabulary" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/53d1ea55-2ba7-59f6-8efb-a6927f5e6275> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:fire-history:vocabulary> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:fire-history:vocabulary> ;
             tern:vocabulary <urn:fake:vocabulary>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/53d1ea55-2ba7-59f6-8efb-a6927f5e6275> ;
