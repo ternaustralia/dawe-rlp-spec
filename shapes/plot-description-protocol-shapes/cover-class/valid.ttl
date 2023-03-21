@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:valid:cover-class>
+<urn:test:plot-description-protocol-shapes:valid:cover-class>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Valid result for observable property - cover class" ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/05d80e80-003c-5791-bf43-4b52086f990b> ;
-            sosa:isResultOf <urn:test:plot-description:valid:cover-class> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:valid:cover-class> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/6aaa330c-3d60-419b-a29b-a2dbc6d67928>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/05d80e80-003c-5791-bf43-4b52086f990b> ;

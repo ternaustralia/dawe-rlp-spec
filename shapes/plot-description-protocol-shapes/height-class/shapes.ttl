@@ -7,7 +7,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:plot-description:height-class:feature-type>
+<urn:shapes:plot-description-protocol-shapes:height-class:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -32,11 +32,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:plot-description:height-class:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:height-class:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/height-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:height-class:result-value>
+<urn:shapes:plot-description-protocol-shapes:height-class:result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -73,7 +73,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:plot-description:height-class:examples> ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:height-class:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -83,10 +83,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }
         """ ;
     urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/height-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:height-class:simple-result>
+<urn:shapes:plot-description-protocol-shapes:height-class:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -114,11 +114,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:plot-description:height-class:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:height-class:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/height-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:height-class:site-visit>
+<urn:shapes:plot-description-protocol-shapes:height-class:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -144,11 +144,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:plot-description:height-class:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:height-class:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/height-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:height-class:used-procedure>
+<urn:shapes:plot-description-protocol-shapes:height-class:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -175,11 +175,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:plot-description:height-class:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:height-class:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/height-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:height-class:value-type>
+<urn:shapes:plot-description-protocol-shapes:height-class:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -204,11 +204,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:plot-description:height-class:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:height-class:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/height-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:height-class:vocabulary>
+<urn:shapes:plot-description-protocol-shapes:height-class:vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -234,12 +234,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:plot-description:height-class:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:height-class:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/height-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:height-class:examples>
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/height-class/valid.ttl"^^xsd:anyURI ;
+<urn:shapes:plot-description-protocol-shapes:height-class:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/height-class/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/height-class/valid.ttl"^^xsd:anyURI ;
 .
 

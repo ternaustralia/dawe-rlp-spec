@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:valid:surface-strew-size>
+<urn:test:plot-description-protocol-shapes:valid:surface-strew-size>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Valid result for observable property - surface strew size" ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/320d51bb-d184-5341-bc47-be8eb4824595> ;
-            sosa:isResultOf <urn:test:plot-description:valid:surface-strew-size> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:valid:surface-strew-size> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/3b25ce0f-9eb7-4d2d-97ce-143858cfd4d4>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/320d51bb-d184-5341-bc47-be8eb4824595> ;

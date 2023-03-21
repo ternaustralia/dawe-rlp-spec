@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:invalid:disturbance-type:feature-type>
+<urn:test:plot-description-protocol-shapes:invalid:disturbance-type:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/059b347f-58c9-59a9-bd75-9305d7e1211d> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:disturbance-type:feature-type> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:disturbance-type:feature-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/f5a470e8-d29f-4ff6-b50d-529b0444dbe4>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/059b347f-58c9-59a9-bd75-9305d7e1211d> ;
@@ -30,7 +30,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:disturbance-type:result-value>
+<urn:test:plot-description-protocol-shapes:invalid:disturbance-type:result-value>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
@@ -44,7 +44,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <urn:fake:categorical:value> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:disturbance-type:result-value> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:disturbance-type:result-value> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/f5a470e8-d29f-4ff6-b50d-529b0444dbe4>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
@@ -55,7 +55,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:disturbance-type:simple-result>
+<urn:test:plot-description-protocol-shapes:invalid:disturbance-type:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -69,7 +69,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/059b347f-58c9-59a9-bd75-9305d7e1211d> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:disturbance-type:simple-result> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:disturbance-type:simple-result> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/f5a470e8-d29f-4ff6-b50d-529b0444dbe4>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
@@ -80,7 +80,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:disturbance-type:site-visit>
+<urn:test:plot-description-protocol-shapes:invalid:disturbance-type:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -94,7 +94,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/059b347f-58c9-59a9-bd75-9305d7e1211d> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:disturbance-type:site-visit> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:disturbance-type:site-visit> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/f5a470e8-d29f-4ff6-b50d-529b0444dbe4>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/059b347f-58c9-59a9-bd75-9305d7e1211d> ;
@@ -104,7 +104,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
 .
 
-<urn:test:plot-description:invalid:disturbance-type:used-procedure>
+<urn:test:plot-description-protocol-shapes:invalid:disturbance-type:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Plot Description'." ;
@@ -118,7 +118,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/059b347f-58c9-59a9-bd75-9305d7e1211d> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:disturbance-type:used-procedure> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:disturbance-type:used-procedure> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/f5a470e8-d29f-4ff6-b50d-529b0444dbe4>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/059b347f-58c9-59a9-bd75-9305d7e1211d> ;
@@ -129,7 +129,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:disturbance-type:value-type>
+<urn:test:plot-description-protocol-shapes:invalid:disturbance-type:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
@@ -141,7 +141,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasResult [
             a tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/059b347f-58c9-59a9-bd75-9305d7e1211d> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:disturbance-type:value-type> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:disturbance-type:value-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/f5a470e8-d29f-4ff6-b50d-529b0444dbe4>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/059b347f-58c9-59a9-bd75-9305d7e1211d> ;
@@ -152,7 +152,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:disturbance-type:vocabulary>
+<urn:test:plot-description-protocol-shapes:invalid:disturbance-type:vocabulary>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect vocabulary" ;
@@ -166,7 +166,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/059b347f-58c9-59a9-bd75-9305d7e1211d> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:disturbance-type:vocabulary> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:disturbance-type:vocabulary> ;
             tern:vocabulary <urn:fake:vocabulary>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/059b347f-58c9-59a9-bd75-9305d7e1211d> ;

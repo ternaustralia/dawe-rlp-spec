@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:valid:height-class>
+<urn:test:plot-description-protocol-shapes:valid:height-class>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Valid result for observable property - height class" ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/1e5241d5-b717-5908-a26d-297ef3c636d8> ;
-            sosa:isResultOf <urn:test:plot-description:valid:height-class> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:valid:height-class> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/b1b05cd1-3b85-4639-a6af-799a34d88d43>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/1e5241d5-b717-5908-a26d-297ef3c636d8> ;

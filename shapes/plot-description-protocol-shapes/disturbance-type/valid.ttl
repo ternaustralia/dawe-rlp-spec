@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:valid:disturbance-type>
+<urn:test:plot-description-protocol-shapes:valid:disturbance-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Valid result for observable property - disturbance type" ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/059b347f-58c9-59a9-bd75-9305d7e1211d> ;
-            sosa:isResultOf <urn:test:plot-description:valid:disturbance-type> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:valid:disturbance-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/f5a470e8-d29f-4ff6-b50d-529b0444dbe4>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/059b347f-58c9-59a9-bd75-9305d7e1211d> ;

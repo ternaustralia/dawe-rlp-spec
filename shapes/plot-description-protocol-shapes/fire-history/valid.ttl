@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:valid:fire-history>
+<urn:test:plot-description-protocol-shapes:valid:fire-history>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Valid result for observable property - fire history" ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/53d1ea55-2ba7-59f6-8efb-a6927f5e6275> ;
-            sosa:isResultOf <urn:test:plot-description:valid:fire-history> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:valid:fire-history> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/6e9d2f51-ce64-4c67-8391-d14a8bf96b6b>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/53d1ea55-2ba7-59f6-8efb-a6927f5e6275> ;

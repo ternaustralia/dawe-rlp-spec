@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:valid:landform-element>
+<urn:test:plot-description-protocol-shapes:valid:landform-element>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Valid result for observable property - landform element" ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/090ab00d-476e-5b85-afb6-7cca342b3ebc> ;
-            sosa:isResultOf <urn:test:plot-description:valid:landform-element> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:valid:landform-element> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/c1a58967-cb12-4c2c-a7ca-9cee2589919c>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/090ab00d-476e-5b85-afb6-7cca342b3ebc> ;
