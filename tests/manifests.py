@@ -345,6 +345,13 @@ test_cases: List[TestCaseItem] = [
         expected_failures=6,
     ).astuple(),
     TestCaseItem(
+        name="opportunistic-observations-protocol-shapes-taxa-type",
+        shapes_path="shapes/opportunistic-observations-protocol-shapes/taxa-type/shapes.ttl",
+        valid_data_path="shapes/opportunistic-observations-protocol-shapes/taxa-type/valid.ttl",
+        invalid_data_path="shapes/opportunistic-observations-protocol-shapes/taxa-type/invalid.ttl",
+        expected_failures=7,
+    ).astuple(),
+    TestCaseItem(
         name="floristics-full-protocol-shapes-growth-form",
         shapes_path="shapes/floristics/floristics-full-protocol-shapes/growth-form/shapes.ttl",
         valid_data_path="shapes/floristics/floristics-full-protocol-shapes/growth-form/valid.ttl",
