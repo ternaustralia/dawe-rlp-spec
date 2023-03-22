@@ -6,7 +6,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:valid:slope>
+<urn:test:plot-description-protocol-shapes:valid:slope>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Valid result for observable property - slope" ;
@@ -20,7 +20,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:valid:slope> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:valid:slope> ;
             tern:unit unit:DEG
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;

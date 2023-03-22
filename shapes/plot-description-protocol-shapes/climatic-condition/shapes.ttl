@@ -7,7 +7,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:plot-description:climatic-condition:feature-type>
+<urn:shapes:plot-description-protocol-shapes:climatic-condition:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -32,11 +32,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:plot-description:climatic-condition:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/climatic-condition/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:climatic-condition:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/climatic-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:climatic-condition:result-value>
+<urn:shapes:plot-description-protocol-shapes:climatic-condition:result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -64,7 +64,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:plot-description:climatic-condition:examples> ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:climatic-condition:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -74,10 +74,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }
         """ ;
     urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/climatic-condition/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/climatic-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:climatic-condition:simple-result>
+<urn:shapes:plot-description-protocol-shapes:climatic-condition:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -105,11 +105,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:plot-description:climatic-condition:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/climatic-condition/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:climatic-condition:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/climatic-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:climatic-condition:site-visit>
+<urn:shapes:plot-description-protocol-shapes:climatic-condition:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -135,11 +135,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:plot-description:climatic-condition:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/climatic-condition/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:climatic-condition:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/climatic-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:climatic-condition:used-procedure>
+<urn:shapes:plot-description-protocol-shapes:climatic-condition:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -166,11 +166,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:plot-description:climatic-condition:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/climatic-condition/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:climatic-condition:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/climatic-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:climatic-condition:value-type>
+<urn:shapes:plot-description-protocol-shapes:climatic-condition:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -195,11 +195,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:plot-description:climatic-condition:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/climatic-condition/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:climatic-condition:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/climatic-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:climatic-condition:vocabulary>
+<urn:shapes:plot-description-protocol-shapes:climatic-condition:vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -225,12 +225,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:plot-description:climatic-condition:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/climatic-condition/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:climatic-condition:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/climatic-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:climatic-condition:examples>
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/climatic-condition/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/climatic-condition/valid.ttl"^^xsd:anyURI ;
+<urn:shapes:plot-description-protocol-shapes:climatic-condition:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/climatic-condition/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/climatic-condition/valid.ttl"^^xsd:anyURI ;
 .
 

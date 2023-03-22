@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:valid:second-dominant-species>
+<urn:test:plot-description-protocol-shapes:valid:second-dominant-species>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Valid result for observable property - second dominant species" ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Text ,
                 tern:Value ;
             rdf:value "https://biodiversity.org.au/boa/name/apni/240693"^^xsd:string ;
-            sosa:isResultOf <urn:test:plot-description:valid:second-dominant-species>
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:valid:second-dominant-species>
         ] ;
     sosa:hasSimpleResult "https://biodiversity.org.au/boa/name/apni/240693"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/909557e9-782f-45ea-8e89-8cf17a2c6ca6> ;
