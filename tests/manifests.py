@@ -974,4 +974,25 @@ test_cases: List[TestCaseItem] = [
         invalid_data_path="shapes/vegetation-mapping-protocol-shapes/litter-cover-percent/invalid.ttl",
         expected_failures=7,
     ).astuple(),
+    TestCaseItem(
+        name="basal-area-basal-wedge-protocol-shapes-stand-basal-area",
+        shapes_path="shapes/basal-area/basal-area-basal-wedge-protocol-shapes/stand-basal-area/shapes.ttl",
+        valid_data_path="shapes/basal-area/basal-area-basal-wedge-protocol-shapes/stand-basal-area/valid.ttl",
+        invalid_data_path="shapes/basal-area/basal-area-basal-wedge-protocol-shapes/stand-basal-area/invalid.ttl",
+        expected_failures=8,
+    ).astuple(),
+    TestCaseItem(
+        name="basal-area-basal-wedge-protocol-shapes-field-species-name",
+        shapes_path="shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/shapes.ttl",
+        valid_data_path="shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/valid.ttl",
+        invalid_data_path="shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/invalid.ttl",
+        expected_failures=6,
+    ).astuple(),
+    TestCaseItem(
+        name="basal-area-basal-wedge-protocol-shapes-mean-basal-area",
+        shapes_path="shapes/basal-area/basal-area-basal-wedge-protocol-shapes/mean-basal-area/shapes.ttl",
+        valid_data_path="shapes/basal-area/basal-area-basal-wedge-protocol-shapes/mean-basal-area/valid.ttl",
+        invalid_data_path="shapes/basal-area/basal-area-basal-wedge-protocol-shapes/mean-basal-area/invalid.ttl",
+        expected_failures=8,
+    ).astuple(),
 ]
