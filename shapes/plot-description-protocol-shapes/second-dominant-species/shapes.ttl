@@ -7,7 +7,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:plot-description:second-dominant-species:datatype>
+<urn:shapes:plot-description-protocol-shapes:second-dominant-species:datatype>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -31,11 +31,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:plot-description:second-dominant-species:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/second-dominant-species/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:second-dominant-species:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/second-dominant-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:second-dominant-species:feature-type>
+<urn:shapes:plot-description-protocol-shapes:second-dominant-species:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -60,11 +60,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:plot-description:second-dominant-species:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/second-dominant-species/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:second-dominant-species:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/second-dominant-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:second-dominant-species:simple-result>
+<urn:shapes:plot-description-protocol-shapes:second-dominant-species:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -92,11 +92,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:plot-description:second-dominant-species:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/second-dominant-species/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:second-dominant-species:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/second-dominant-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:second-dominant-species:site-visit>
+<urn:shapes:plot-description-protocol-shapes:second-dominant-species:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -122,11 +122,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:plot-description:second-dominant-species:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/second-dominant-species/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:second-dominant-species:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/second-dominant-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:second-dominant-species:used-procedure>
+<urn:shapes:plot-description-protocol-shapes:second-dominant-species:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -153,11 +153,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:plot-description:second-dominant-species:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/second-dominant-species/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:second-dominant-species:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/second-dominant-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:second-dominant-species:value-type>
+<urn:shapes:plot-description-protocol-shapes:second-dominant-species:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -182,12 +182,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:plot-description:second-dominant-species:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/second-dominant-species/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:second-dominant-species:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/second-dominant-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:second-dominant-species:examples>
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/second-dominant-species/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/second-dominant-species/valid.ttl"^^xsd:anyURI ;
+<urn:shapes:plot-description-protocol-shapes:second-dominant-species:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/second-dominant-species/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/second-dominant-species/valid.ttl"^^xsd:anyURI ;
 .
 
