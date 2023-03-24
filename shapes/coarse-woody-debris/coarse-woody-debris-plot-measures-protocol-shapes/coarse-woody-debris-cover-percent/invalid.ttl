@@ -6,7 +6,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-per-hectare:datatype>
+<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-cover-percent:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:float`." ;
@@ -20,18 +20,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value 3 ;
-            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-per-hectare:datatype> ;
-            tern:unit unit:M3-PER-HA
+            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-cover-percent:datatype> ;
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult 3 ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/74b6493b-8dfe-42f6-acb2-0dda5652cf54> ;
-    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-per-hectare/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e73e3079-9858-42c6-b418-36326a6d0ddd> ;
+    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-cover-percent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-per-hectare:feature-type>
+<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-cover-percent:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -45,18 +45,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-per-hectare:feature-type> ;
-            tern:unit unit:M3-PER-HA
+            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-cover-percent:feature-type> ;
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/74b6493b-8dfe-42f6-acb2-0dda5652cf54> ;
-    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-per-hectare/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e73e3079-9858-42c6-b418-36326a6d0ddd> ;
+    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-cover-percent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-per-hectare:simple-result>
+<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-cover-percent:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -70,18 +70,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-per-hectare:simple-result> ;
-            tern:unit unit:M3-PER-HA
+            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-cover-percent:simple-result> ;
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult "13.56"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/74b6493b-8dfe-42f6-acb2-0dda5652cf54> ;
-    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-per-hectare/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e73e3079-9858-42c6-b418-36326a6d0ddd> ;
+    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-cover-percent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-per-hectare:site-visit>
+<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-cover-percent:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -95,17 +95,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-per-hectare:site-visit> ;
-            tern:unit unit:M3-PER-HA
+            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-cover-percent:site-visit> ;
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/74b6493b-8dfe-42f6-acb2-0dda5652cf54> ;
-    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-per-hectare/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e73e3079-9858-42c6-b418-36326a6d0ddd> ;
+    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-cover-percent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
 .
 
-<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-per-hectare:unit-of-measure>
+<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-cover-percent:unit-of-measure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result unit of measure" ;
@@ -119,18 +119,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-per-hectare:unit-of-measure> ;
+            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-cover-percent:unit-of-measure> ;
             tern:unit <urn:fake:unit>
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/74b6493b-8dfe-42f6-acb2-0dda5652cf54> ;
-    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-per-hectare/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e73e3079-9858-42c6-b418-36326a6d0ddd> ;
+    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-cover-percent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-per-hectare:used-procedure>
+<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-cover-percent:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Plots measures protocol'." ;
@@ -144,18 +144,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-per-hectare:used-procedure> ;
-            tern:unit unit:M3-PER-HA
+            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-cover-percent:used-procedure> ;
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/74b6493b-8dfe-42f6-acb2-0dda5652cf54> ;
-    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-per-hectare/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e73e3079-9858-42c6-b418-36326a6d0ddd> ;
+    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-cover-percent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-per-hectare:value-range>
+<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-cover-percent:value-range>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value out of range" ;
@@ -168,19 +168,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:Float ,
                 tern:Value ;
-            rdf:value "0.0"^^xsd:float ;
-            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-per-hectare:value-range> ;
-            tern:unit unit:M3-PER-HA
+            rdf:value "-1.11"^^xsd:float ;
+            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-cover-percent:value-range> ;
+            tern:unit unit:PERCENT
         ] ;
-    sosa:hasSimpleResult "0.0"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/74b6493b-8dfe-42f6-acb2-0dda5652cf54> ;
-    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-per-hectare/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult "-1.11"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e73e3079-9858-42c6-b418-36326a6d0ddd> ;
+    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-cover-percent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-per-hectare:value-type>
+<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-cover-percent:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:Float`." ;
@@ -192,12 +192,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasResult [
             a tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-per-hectare:value-type> ;
-            tern:unit unit:M3-PER-HA
+            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:coarse-woody-debris-cover-percent:value-type> ;
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/74b6493b-8dfe-42f6-acb2-0dda5652cf54> ;
-    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-per-hectare/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e73e3079-9858-42c6-b418-36326a6d0ddd> ;
+    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-cover-percent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
     tern:hasSiteVisit <urn:test:site> ;

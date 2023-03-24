@@ -6,10 +6,10 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:valid:coarse-woody-debris-narrowest-diameter>
+<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:valid:coarse-woody-debris-abundance-per-hectare>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Valid result for observable property - coarse woody debris narrowest diameter" ;
+    rdfs:comment "Valid result for observable property - coarse woody debris abundance per hectare" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -20,12 +20,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:valid:coarse-woody-debris-narrowest-diameter> ;
-            tern:unit unit:CentiM
+            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:valid:coarse-woody-debris-abundance-per-hectare> ;
+            tern:unit unit:M3-PER-HA
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e73af424-f20d-49b8-81e3-cd30afb5b267> ;
-    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-narrowest-diameter/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/6cabde11-a74f-408e-84fb-c320f6c72034> ;
+    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-abundance-per-hectare/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
     tern:hasSiteVisit <urn:test:site> ;
