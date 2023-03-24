@@ -948,10 +948,10 @@ test_cases: List[TestCaseItem] = [
         expected_failures=8,
     ).astuple(),
     TestCaseItem(
-        name="coarse-woody-debris-plot-measures-protocol-shapes-coarse-woody-debris-volume-individual",
-        shapes_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-volume-individual/shapes.ttl",
-        valid_data_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-volume-individual/valid.ttl",
-        invalid_data_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-volume-individual/invalid.ttl",
+        name="coarse-woody-debris-plot-measures-protocol-shapes-coarse-woody-debris-volume-individual-cwd-volume",
+        shapes_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-volume-individual-cwd-volume/shapes.ttl",
+        valid_data_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-volume-individual-cwd-volume/valid.ttl",
+        invalid_data_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-volume-individual-cwd-volume/invalid.ttl",
         expected_failures=8,
     ).astuple(),
     TestCaseItem(
@@ -962,10 +962,10 @@ test_cases: List[TestCaseItem] = [
         expected_failures=7,
     ).astuple(),
     TestCaseItem(
-        name="coarse-woody-debris-plot-measures-protocol-shapes-coarse-woody-debris-per-hectare",
-        shapes_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare/shapes.ttl",
-        valid_data_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare/valid.ttl",
-        invalid_data_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-per-hectare/invalid.ttl",
+        name="coarse-woody-debris-plot-measures-protocol-shapes-coarse-woody-debris-per-hectare-cwd-volume-per-hectare",
+        shapes_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/cwd-volume-per-hectare/shapes.ttl",
+        valid_data_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/cwd-volume-per-hectare/valid.ttl",
+        invalid_data_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/cwd-volume-per-hectare/invalid.ttl",
         expected_failures=8,
     ).astuple(),
     TestCaseItem(
@@ -983,10 +983,17 @@ test_cases: List[TestCaseItem] = [
         expected_failures=8,
     ).astuple(),
     TestCaseItem(
-        name="coarse-woody-debris-plot-measures-protocol-shapes-coarse-woody-debris-percent-cover",
-        shapes_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-percent-cover/shapes.ttl",
-        valid_data_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-percent-cover/valid.ttl",
-        invalid_data_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-percent-cover/invalid.ttl",
+        name="coarse-woody-debris-plot-measures-protocol-shapes-coarse-woody-debris-cover-percent",
+        shapes_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-cover-percent/shapes.ttl",
+        valid_data_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-cover-percent/valid.ttl",
+        invalid_data_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-cover-percent/invalid.ttl",
+        expected_failures=8,
+    ).astuple(),
+    TestCaseItem(
+        name="coarse-woody-debris-plot-measures-protocol-shapes-coarse-woody-debris-abundance-per-hectare",
+        shapes_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-abundance-per-hectare/shapes.ttl",
+        valid_data_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-abundance-per-hectare/valid.ttl",
+        invalid_data_path="shapes/coarse-woody-debris/coarse-woody-debris-plot-measures-protocol-shapes/coarse-woody-debris-abundance-per-hectare/invalid.ttl",
         expected_failures=8,
     ).astuple(),
     # TestCaseItem(
