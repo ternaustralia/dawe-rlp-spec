@@ -1122,4 +1122,25 @@ test_cases: List[TestCaseItem] = [
         invalid_data_path="shapes/basal-area/basal-area-basal-wedge-protocol-shapes/mean-basal-area/invalid.ttl",
         expected_failures=8,
     ).astuple(),
+    TestCaseItem(
+        name="camera-traps-fauna-protocol-shapes-redeployment-observations",
+        shapes_path="shapes/camera-traps/camera-traps-fauna-protocol-shapes/redeployment-observations/shapes.ttl",
+        valid_data_path="shapes/camera-traps/camera-traps-fauna-protocol-shapes/redeployment-observations/valid.ttl",
+        invalid_data_path="shapes/camera-traps/camera-traps-fauna-protocol-shapes/redeployment-observations/invalid.ttl",
+        expected_failures=6,
+    ).astuple(),
+    TestCaseItem(
+        name="camera-traps-array-protocol-shapes-redeployment-observations",
+        shapes_path="shapes/camera-traps/camera-traps-array-protocol-shapes/redeployment-observations/shapes.ttl",
+        valid_data_path="shapes/camera-traps/camera-traps-array-protocol-shapes/redeployment-observations/valid.ttl",
+        invalid_data_path="shapes/camera-traps/camera-traps-array-protocol-shapes/redeployment-observations/invalid.ttl",
+        expected_failures=6,
+    ).astuple(),
+    TestCaseItem(
+        name="camera-traps-targeted-protocol-shapes-redeployment-observations",
+        shapes_path="shapes/camera-traps/camera-traps-targeted-protocol-shapes/redeployment-observations/shapes.ttl",
+        valid_data_path="shapes/camera-traps/camera-traps-targeted-protocol-shapes/redeployment-observations/valid.ttl",
+        invalid_data_path="shapes/camera-traps/camera-traps-targeted-protocol-shapes/redeployment-observations/invalid.ttl",
+        expected_failures=6,
+    ).astuple(),
 ]
