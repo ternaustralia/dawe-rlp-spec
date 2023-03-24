@@ -7,7 +7,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:opportunistic-observations-protocol-shapes-protocol-shapes:habitat-description:feature-type>
+<urn:shapes:opportunistic-observations-protocol-shapes:habitat-description:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -32,11 +32,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes-protocol-shapes:habitat-description:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:habitat-description:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations-protocol-shapes-protocol-shapes:habitat-description:result-value>
+<urn:shapes:opportunistic-observations-protocol-shapes:habitat-description:result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -185,7 +185,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes-protocol-shapes:habitat-description:examples> ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:habitat-description:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -195,10 +195,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }
         """ ;
     urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations-protocol-shapes-protocol-shapes:habitat-description:simple-result>
+<urn:shapes:opportunistic-observations-protocol-shapes:habitat-description:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -226,11 +226,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes-protocol-shapes:habitat-description:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:habitat-description:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations-protocol-shapes-protocol-shapes:habitat-description:used-procedure>
+<urn:shapes:opportunistic-observations-protocol-shapes:habitat-description:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -257,11 +257,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes-protocol-shapes:habitat-description:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:habitat-description:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations-protocol-shapes-protocol-shapes:habitat-description:value-type>
+<urn:shapes:opportunistic-observations-protocol-shapes:habitat-description:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -293,11 +293,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes-protocol-shapes:habitat-description:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:habitat-description:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations-protocol-shapes-protocol-shapes:habitat-description:vocabulary>
+<urn:shapes:opportunistic-observations-protocol-shapes:habitat-description:vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -323,12 +323,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes-protocol-shapes:habitat-description:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:habitat-description:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations-protocol-shapes-protocol-shapes:habitat-description:examples>
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes-protocol-shapes/habitat-description/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes-protocol-shapes/habitat-description/valid.ttl"^^xsd:anyURI ;
+<urn:shapes:opportunistic-observations-protocol-shapes:habitat-description:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/habitat-description/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/habitat-description/valid.ttl"^^xsd:anyURI ;
 .
 
