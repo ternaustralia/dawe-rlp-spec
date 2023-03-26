@@ -1158,17 +1158,10 @@ test_cases: List[TestCaseItem] = [
         expected_failures=7,
     ).astuple(),
     TestCaseItem(
-        name="fire-protocol-shapes-tree-trunk-char-height",
-        shapes_path="shapes/fire-protocol-shapes/tree-trunk-char-height/shapes.ttl",
-        valid_data_path="shapes/fire-protocol-shapes/tree-trunk-char-height/valid.ttl",
-        invalid_data_path="shapes/fire-protocol-shapes/tree-trunk-char-height/invalid.ttl",
-        expected_failures=8,
-    ).astuple(),
-    TestCaseItem(
-        name="fire-protocol-shapes-soil-char-depth",
-        shapes_path="shapes/fire-protocol-shapes/soil-char-depth/shapes.ttl",
-        valid_data_path="shapes/fire-protocol-shapes/soil-char-depth/valid.ttl",
-        invalid_data_path="shapes/fire-protocol-shapes/soil-char-depth/invalid.ttl",
+        name="fire-protocol-shapes-maximum-trunk-char-height",
+        shapes_path="shapes/fire-protocol-shapes/maximum-trunk-char-height/shapes.ttl",
+        valid_data_path="shapes/fire-protocol-shapes/maximum-trunk-char-height/valid.ttl",
+        invalid_data_path="shapes/fire-protocol-shapes/maximum-trunk-char-height/invalid.ttl",
         expected_failures=8,
     ).astuple(),
     TestCaseItem(
@@ -1184,13 +1177,6 @@ test_cases: List[TestCaseItem] = [
         valid_data_path="shapes/fire-protocol-shapes/regeneration-status/valid.ttl",
         invalid_data_path="shapes/fire-protocol-shapes/regeneration-status/invalid.ttl",
         expected_failures=7,
-    ).astuple(),
-    TestCaseItem(
-        name="fire-protocol-shapes-species-intercepted",
-        shapes_path="shapes/fire-protocol-shapes/species-intercepted/shapes.ttl",
-        valid_data_path="shapes/fire-protocol-shapes/species-intercepted/valid.ttl",
-        invalid_data_path="shapes/fire-protocol-shapes/species-intercepted/invalid.ttl",
-        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="fire-protocol-shapes-plant-height",
