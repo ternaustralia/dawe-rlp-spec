@@ -6,32 +6,32 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:fire-protocol-shapes:invalid:plant-height:datatype>
+<urn:test:fire-protocol-shapes:invalid:maximum-trunk-char-height:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:float`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a
                 tern:Float ,
                 tern:Value ;
             rdf:value 3 ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-height:datatype> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:maximum-trunk-char-height:datatype> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult 3 ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e9da717-6c8e-4194-9385-c995d54702e4> ;
-    sosa:phenomenonTime <https://example.com/observation/plant-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/3a2b344c-07b5-4536-8db3-06b73bc0e263> ;
+    sosa:phenomenonTime <https://example.com/observation/maximum-trunk-char-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:plant-height:feature-type>
+<urn:test:fire-protocol-shapes:invalid:maximum-trunk-char-height:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -45,159 +45,159 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-height:feature-type> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:maximum-trunk-char-height:feature-type> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e9da717-6c8e-4194-9385-c995d54702e4> ;
-    sosa:phenomenonTime <https://example.com/observation/plant-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/3a2b344c-07b5-4536-8db3-06b73bc0e263> ;
+    sosa:phenomenonTime <https://example.com/observation/maximum-trunk-char-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:plant-height:simple-result>
+<urn:test:fire-protocol-shapes:invalid:maximum-trunk-char-height:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-height:simple-result> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:maximum-trunk-char-height:simple-result> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "13.56"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e9da717-6c8e-4194-9385-c995d54702e4> ;
-    sosa:phenomenonTime <https://example.com/observation/plant-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/3a2b344c-07b5-4536-8db3-06b73bc0e263> ;
+    sosa:phenomenonTime <https://example.com/observation/maximum-trunk-char-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:plant-height:site-visit>
+<urn:test:fire-protocol-shapes:invalid:maximum-trunk-char-height:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-height:site-visit> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:maximum-trunk-char-height:site-visit> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e9da717-6c8e-4194-9385-c995d54702e4> ;
-    sosa:phenomenonTime <https://example.com/observation/plant-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/3a2b344c-07b5-4536-8db3-06b73bc0e263> ;
+    sosa:phenomenonTime <https://example.com/observation/maximum-trunk-char-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:plant-height:unit-of-measure>
+<urn:test:fire-protocol-shapes:invalid:maximum-trunk-char-height:unit-of-measure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result unit of measure" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-height:unit-of-measure> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:maximum-trunk-char-height:unit-of-measure> ;
             tern:unit <urn:fake:unit>
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e9da717-6c8e-4194-9385-c995d54702e4> ;
-    sosa:phenomenonTime <https://example.com/observation/plant-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/3a2b344c-07b5-4536-8db3-06b73bc0e263> ;
+    sosa:phenomenonTime <https://example.com/observation/maximum-trunk-char-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:plant-height:used-procedure>
+<urn:test:fire-protocol-shapes:invalid:maximum-trunk-char-height:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Fire'." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-height:used-procedure> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:maximum-trunk-char-height:used-procedure> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e9da717-6c8e-4194-9385-c995d54702e4> ;
-    sosa:phenomenonTime <https://example.com/observation/plant-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/3a2b344c-07b5-4536-8db3-06b73bc0e263> ;
+    sosa:phenomenonTime <https://example.com/observation/maximum-trunk-char-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:plant-height:value-range>
+<urn:test:fire-protocol-shapes:invalid:maximum-trunk-char-height:value-range>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value out of range" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a
                 tern:Float ,
                 tern:Value ;
-            rdf:value "0.0"^^xsd:float ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-height:value-range> ;
+            rdf:value "-1.11"^^xsd:float ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:maximum-trunk-char-height:value-range> ;
             tern:unit unit:M
         ] ;
-    sosa:hasSimpleResult "0.0"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e9da717-6c8e-4194-9385-c995d54702e4> ;
-    sosa:phenomenonTime <https://example.com/observation/plant-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult "-1.11"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/3a2b344c-07b5-4536-8db3-06b73bc0e263> ;
+    sosa:phenomenonTime <https://example.com/observation/maximum-trunk-char-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:plant-height:value-type>
+<urn:test:fire-protocol-shapes:invalid:maximum-trunk-char-height:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:Float`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-height:value-type> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:maximum-trunk-char-height:value-type> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e9da717-6c8e-4194-9385-c995d54702e4> ;
-    sosa:phenomenonTime <https://example.com/observation/plant-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/3a2b344c-07b5-4536-8db3-06b73bc0e263> ;
+    sosa:phenomenonTime <https://example.com/observation/maximum-trunk-char-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
     tern:hasSiteVisit <urn:test:site> ;
