@@ -5,10 +5,10 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:soil-plot-soil-description-protocol-shapes:valid:soil-coarse-fragment-alteration>
+<urn:test:soil-plot-soil-description-protocol-shapes:valid:coarse-fragments-lithology>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Valid result for observable property - soil- coarse fragment alteration" ;
+    rdfs:comment "Valid result for observable property - coarse fragments lithology" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -18,13 +18,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/05bf64f4-0b39-5580-a3a4-9b5fedbf6c18> ;
-            sosa:isResultOf <urn:test:soil-plot-soil-description-protocol-shapes:valid:soil-coarse-fragment-alteration> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/87f4f5fc-d24d-4865-9b11-9ca9ac5e159f>
+            rdf:value <https://linked.data.gov.au/def/nrm/027e370b-cd03-5ed3-ab3e-dff1638582ad> ;
+            sosa:isResultOf <urn:test:soil-plot-soil-description-protocol-shapes:valid:coarse-fragments-lithology> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/1d50eb79-685f-45ea-84b4-627154eddede>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/05bf64f4-0b39-5580-a3a4-9b5fedbf6c18> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e38d6585-30f4-4a50-bb3f-f9481ce9c595> ;
-    sosa:phenomenonTime <https://example.com/observation/soil-coarse-fragment-alteration/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/027e370b-cd03-5ed3-ab3e-dff1638582ad> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/4062f093-424b-441e-86fc-648d820ae1fb> ;
+    sosa:phenomenonTime <https://example.com/observation/coarse-fragments-lithology/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7818e122-6354-42e0-aeff-32dbab7baae4> ;
     tern:hasSiteVisit <urn:test:site> ;
