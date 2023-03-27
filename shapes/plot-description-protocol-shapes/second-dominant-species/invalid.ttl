@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:invalid:second-dominant-species:datatype>
+<urn:test:plot-description-protocol-shapes:invalid:second-dominant-species:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:string`." ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Text ,
                 tern:Value ;
             rdf:value 1 ;
-            sosa:isResultOf <urn:test:plot-description:invalid:second-dominant-species:datatype>
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:second-dominant-species:datatype>
         ] ;
     sosa:hasSimpleResult 1 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/909557e9-782f-45ea-8e89-8cf17a2c6ca6> ;
@@ -29,7 +29,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:second-dominant-species:feature-type>
+<urn:test:plot-description-protocol-shapes:invalid:second-dominant-species:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -43,7 +43,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Text ,
                 tern:Value ;
             rdf:value "https://biodiversity.org.au/boa/name/apni/240693"^^xsd:string ;
-            sosa:isResultOf <urn:test:plot-description:invalid:second-dominant-species:feature-type>
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:second-dominant-species:feature-type>
         ] ;
     sosa:hasSimpleResult "https://biodiversity.org.au/boa/name/apni/240693"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/909557e9-782f-45ea-8e89-8cf17a2c6ca6> ;
@@ -53,7 +53,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:second-dominant-species:simple-result>
+<urn:test:plot-description-protocol-shapes:invalid:second-dominant-species:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -67,7 +67,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Text ,
                 tern:Value ;
             rdf:value "https://biodiversity.org.au/boa/name/apni/240693"^^xsd:string ;
-            sosa:isResultOf <urn:test:plot-description:invalid:second-dominant-species:simple-result>
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:second-dominant-species:simple-result>
         ] ;
     sosa:hasSimpleResult "https://biodiversity.org.au/boa/name/apni/240693 different"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/909557e9-782f-45ea-8e89-8cf17a2c6ca6> ;
@@ -77,7 +77,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:second-dominant-species:site-visit>
+<urn:test:plot-description-protocol-shapes:invalid:second-dominant-species:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -91,7 +91,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Text ,
                 tern:Value ;
             rdf:value "https://biodiversity.org.au/boa/name/apni/240693"^^xsd:string ;
-            sosa:isResultOf <urn:test:plot-description:invalid:second-dominant-species:site-visit>
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:second-dominant-species:site-visit>
         ] ;
     sosa:hasSimpleResult "https://biodiversity.org.au/boa/name/apni/240693"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/909557e9-782f-45ea-8e89-8cf17a2c6ca6> ;
@@ -100,7 +100,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
 .
 
-<urn:test:plot-description:invalid:second-dominant-species:used-procedure>
+<urn:test:plot-description-protocol-shapes:invalid:second-dominant-species:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Plot Description'." ;
@@ -114,7 +114,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Text ,
                 tern:Value ;
             rdf:value "https://biodiversity.org.au/boa/name/apni/240693"^^xsd:string ;
-            sosa:isResultOf <urn:test:plot-description:invalid:second-dominant-species:used-procedure>
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:second-dominant-species:used-procedure>
         ] ;
     sosa:hasSimpleResult "https://biodiversity.org.au/boa/name/apni/240693"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/909557e9-782f-45ea-8e89-8cf17a2c6ca6> ;
@@ -124,7 +124,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:second-dominant-species:value-type>
+<urn:test:plot-description-protocol-shapes:invalid:second-dominant-species:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:Text`." ;
@@ -136,7 +136,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasResult [
             a tern:Value ;
             rdf:value "https://biodiversity.org.au/boa/name/apni/240693"^^xsd:string ;
-            sosa:isResultOf <urn:test:plot-description:invalid:second-dominant-species:value-type>
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:second-dominant-species:value-type>
         ] ;
     sosa:hasSimpleResult "https://biodiversity.org.au/boa/name/apni/240693"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/909557e9-782f-45ea-8e89-8cf17a2c6ca6> ;
