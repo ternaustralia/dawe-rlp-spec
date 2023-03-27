@@ -7,7 +7,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:cover-lite:in-canopy-sky:datatype>
+<urn:shapes:cover-lite-protocol-shapes:in-canopy-sky:datatype>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -31,19 +31,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:cover-lite:in-canopy-sky:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:cover-lite-protocol-shapes:in-canopy-sky:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-lite:in-canopy-sky:feature-type>
+<urn:shapes:cover-lite-protocol-shapes:in-canopy-sky:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _plant individual_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270[`plant individual`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
@@ -60,11 +60,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:cover-lite:in-canopy-sky:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:cover-lite-protocol-shapes:in-canopy-sky:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-lite:in-canopy-sky:simple-result>
+<urn:shapes:cover-lite-protocol-shapes:in-canopy-sky:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -92,11 +92,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:cover-lite:in-canopy-sky:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:cover-lite-protocol-shapes:in-canopy-sky:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-lite:in-canopy-sky:site-visit>
+<urn:shapes:cover-lite-protocol-shapes:in-canopy-sky:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -122,11 +122,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:cover-lite:in-canopy-sky:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:cover-lite-protocol-shapes:in-canopy-sky:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-lite:in-canopy-sky:used-procedure>
+<urn:shapes:cover-lite-protocol-shapes:in-canopy-sky:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -153,11 +153,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:cover-lite:in-canopy-sky:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:cover-lite-protocol-shapes:in-canopy-sky:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-lite:in-canopy-sky:value-type>
+<urn:shapes:cover-lite-protocol-shapes:in-canopy-sky:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -182,12 +182,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:cover-lite:in-canopy-sky:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:cover-lite-protocol-shapes:in-canopy-sky:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-lite:in-canopy-sky:examples>
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite/in-canopy-sky/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite/in-canopy-sky/valid.ttl"^^xsd:anyURI ;
+<urn:shapes:cover-lite-protocol-shapes:in-canopy-sky:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite-protocol-shapes/in-canopy-sky/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-lite-protocol-shapes/in-canopy-sky/valid.ttl"^^xsd:anyURI ;
 .
 

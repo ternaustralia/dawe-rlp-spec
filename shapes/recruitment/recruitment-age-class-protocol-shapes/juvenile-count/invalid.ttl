@@ -1,0 +1,172 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:recruitment-age-class-protocol-shapes:invalid:juvenile-count:datatype>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:integer`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Integer ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:recruitment-age-class-protocol-shapes:invalid:juvenile-count:datatype>
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/a42dbbca-7dbe-469e-adfc-9012d01ff43d> ;
+    sosa:phenomenonTime <https://example.com/observation/juvenile-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:recruitment-age-class-protocol-shapes:invalid:juvenile-count:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Integer ,
+                tern:Value ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:recruitment-age-class-protocol-shapes:invalid:juvenile-count:feature-type>
+        ] ;
+    sosa:hasSimpleResult 3 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/a42dbbca-7dbe-469e-adfc-9012d01ff43d> ;
+    sosa:phenomenonTime <https://example.com/observation/juvenile-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:recruitment-age-class-protocol-shapes:invalid:juvenile-count:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Integer ,
+                tern:Value ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:recruitment-age-class-protocol-shapes:invalid:juvenile-count:simple-result>
+        ] ;
+    sosa:hasSimpleResult 2 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/a42dbbca-7dbe-469e-adfc-9012d01ff43d> ;
+    sosa:phenomenonTime <https://example.com/observation/juvenile-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:recruitment-age-class-protocol-shapes:invalid:juvenile-count:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Integer ,
+                tern:Value ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:recruitment-age-class-protocol-shapes:invalid:juvenile-count:site-visit>
+        ] ;
+    sosa:hasSimpleResult 3 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/a42dbbca-7dbe-469e-adfc-9012d01ff43d> ;
+    sosa:phenomenonTime <https://example.com/observation/juvenile-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f> ;
+.
+
+<urn:test:recruitment-age-class-protocol-shapes:invalid:juvenile-count:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Recruitment module - Age class protocol'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Integer ,
+                tern:Value ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:recruitment-age-class-protocol-shapes:invalid:juvenile-count:used-procedure>
+        ] ;
+    sosa:hasSimpleResult 3 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/a42dbbca-7dbe-469e-adfc-9012d01ff43d> ;
+    sosa:phenomenonTime <https://example.com/observation/juvenile-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:recruitment-age-class-protocol-shapes:invalid:juvenile-count:value-range>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value out of range" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Integer ,
+                tern:Value ;
+            rdf:value -1 ;
+            sosa:isResultOf <urn:test:recruitment-age-class-protocol-shapes:invalid:juvenile-count:value-range>
+        ] ;
+    sosa:hasSimpleResult -1 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/a42dbbca-7dbe-469e-adfc-9012d01ff43d> ;
+    sosa:phenomenonTime <https://example.com/observation/juvenile-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:recruitment-age-class-protocol-shapes:invalid:juvenile-count:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:Integer`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:recruitment-age-class-protocol-shapes:invalid:juvenile-count:value-type>
+        ] ;
+    sosa:hasSimpleResult 3 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/a42dbbca-7dbe-469e-adfc-9012d01ff43d> ;
+    sosa:phenomenonTime <https://example.com/observation/juvenile-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

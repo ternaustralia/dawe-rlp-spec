@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:valid:slope-class>
+<urn:test:plot-description-protocol-shapes:valid:slope-class>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Valid result for observable property - slope class" ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/1db5ed2c-8be6-5bc7-a74d-7e8e8404d702> ;
-            sosa:isResultOf <urn:test:plot-description:valid:slope-class> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:valid:slope-class> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/d893e669-c530-4bc3-a057-a5799ffcb5db>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/1db5ed2c-8be6-5bc7-a74d-7e8e8404d702> ;

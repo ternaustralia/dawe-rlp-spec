@@ -6,7 +6,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:cover-full:valid:uppermost-height>
+<urn:test:cover-full-protocol-shapes:valid:uppermost-height>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Valid result for observable property - uppermost height" ;
@@ -20,7 +20,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "2.13"^^xsd:float ;
-            sosa:isResultOf <urn:test:cover-full:valid:uppermost-height> ;
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:valid:uppermost-height> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "2.13"^^xsd:float ;

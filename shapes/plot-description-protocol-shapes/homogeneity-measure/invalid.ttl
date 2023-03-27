@@ -6,21 +6,21 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:invalid:homogeneity-measure:datatype>
+<urn:test:plot-description-protocol-shapes:invalid:homogeneity-measure:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:float`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a
                 tern:Float ,
                 tern:Value ;
             rdf:value 3 ;
-            sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:datatype> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:homogeneity-measure:datatype> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult 3 ;
@@ -31,7 +31,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:homogeneity-measure:feature-type>
+<urn:test:plot-description-protocol-shapes:invalid:homogeneity-measure:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -45,7 +45,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:feature-type> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:homogeneity-measure:feature-type> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
@@ -56,21 +56,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:homogeneity-measure:simple-result>
+<urn:test:plot-description-protocol-shapes:invalid:homogeneity-measure:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:simple-result> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:homogeneity-measure:simple-result> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "13.56"^^xsd:float ;
@@ -81,21 +81,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:homogeneity-measure:site-visit>
+<urn:test:plot-description-protocol-shapes:invalid:homogeneity-measure:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:site-visit> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:homogeneity-measure:site-visit> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
@@ -105,21 +105,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
 .
 
-<urn:test:plot-description:invalid:homogeneity-measure:unit-of-measure>
+<urn:test:plot-description-protocol-shapes:invalid:homogeneity-measure:unit-of-measure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result unit of measure" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:unit-of-measure> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:homogeneity-measure:unit-of-measure> ;
             tern:unit <urn:fake:unit>
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
@@ -130,21 +130,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:homogeneity-measure:used-procedure>
+<urn:test:plot-description-protocol-shapes:invalid:homogeneity-measure:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Plot Description'." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:used-procedure> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:homogeneity-measure:used-procedure> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
@@ -155,21 +155,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:homogeneity-measure:value-range>
+<urn:test:plot-description-protocol-shapes:invalid:homogeneity-measure:value-range>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value out of range" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a
                 tern:Float ,
                 tern:Value ;
             rdf:value "-1.11"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:value-range> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:homogeneity-measure:value-range> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "-1.11"^^xsd:float ;
@@ -180,19 +180,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:homogeneity-measure:value-type>
+<urn:test:plot-description-protocol-shapes:invalid:homogeneity-measure:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:Float`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:homogeneity-measure:value-type> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:homogeneity-measure:value-type> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;

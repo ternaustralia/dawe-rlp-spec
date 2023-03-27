@@ -5,21 +5,21 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:cover-full:invalid:in-canopy-sky:datatype>
+<urn:test:cover-full-protocol-shapes:invalid:in-canopy-sky:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:boolean`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
         ] ;
     sosa:hasResult [
             a
                 tern:Boolean ,
                 tern:Value ;
             rdf:value "true"^^xsd:string ;
-            sosa:isResultOf <urn:test:cover-full:invalid:in-canopy-sky:datatype>
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:in-canopy-sky:datatype>
         ] ;
     sosa:hasSimpleResult "true"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/85bdd25a-fa08-49de-9f0b-98895cb79aa6> ;
@@ -29,7 +29,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-full:invalid:in-canopy-sky:feature-type>
+<urn:test:cover-full-protocol-shapes:invalid:in-canopy-sky:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -43,7 +43,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Boolean ,
                 tern:Value ;
             rdf:value true ;
-            sosa:isResultOf <urn:test:cover-full:invalid:in-canopy-sky:feature-type>
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:in-canopy-sky:feature-type>
         ] ;
     sosa:hasSimpleResult true ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/85bdd25a-fa08-49de-9f0b-98895cb79aa6> ;
@@ -53,21 +53,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-full:invalid:in-canopy-sky:simple-result>
+<urn:test:cover-full-protocol-shapes:invalid:in-canopy-sky:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
         ] ;
     sosa:hasResult [
             a
                 tern:Boolean ,
                 tern:Value ;
             rdf:value true ;
-            sosa:isResultOf <urn:test:cover-full:invalid:in-canopy-sky:simple-result>
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:in-canopy-sky:simple-result>
         ] ;
     sosa:hasSimpleResult false ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/85bdd25a-fa08-49de-9f0b-98895cb79aa6> ;
@@ -77,21 +77,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-full:invalid:in-canopy-sky:site-visit>
+<urn:test:cover-full-protocol-shapes:invalid:in-canopy-sky:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
         ] ;
     sosa:hasResult [
             a
                 tern:Boolean ,
                 tern:Value ;
             rdf:value true ;
-            sosa:isResultOf <urn:test:cover-full:invalid:in-canopy-sky:site-visit>
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:in-canopy-sky:site-visit>
         ] ;
     sosa:hasSimpleResult true ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/85bdd25a-fa08-49de-9f0b-98895cb79aa6> ;
@@ -100,21 +100,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/576f634e-2706-4f18-b561-0636d4c007d0> ;
 .
 
-<urn:test:cover-full:invalid:in-canopy-sky:used-procedure>
+<urn:test:cover-full-protocol-shapes:invalid:in-canopy-sky:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Cover - Full protocol'." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
         ] ;
     sosa:hasResult [
             a
                 tern:Boolean ,
                 tern:Value ;
             rdf:value true ;
-            sosa:isResultOf <urn:test:cover-full:invalid:in-canopy-sky:used-procedure>
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:in-canopy-sky:used-procedure>
         ] ;
     sosa:hasSimpleResult true ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/85bdd25a-fa08-49de-9f0b-98895cb79aa6> ;
@@ -124,19 +124,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-full:invalid:in-canopy-sky:value-type>
+<urn:test:cover-full-protocol-shapes:invalid:in-canopy-sky:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:Boolean`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
         ] ;
     sosa:hasResult [
             a tern:Value ;
             rdf:value true ;
-            sosa:isResultOf <urn:test:cover-full:invalid:in-canopy-sky:value-type>
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:in-canopy-sky:value-type>
         ] ;
     sosa:hasSimpleResult true ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/85bdd25a-fa08-49de-9f0b-98895cb79aa6> ;
