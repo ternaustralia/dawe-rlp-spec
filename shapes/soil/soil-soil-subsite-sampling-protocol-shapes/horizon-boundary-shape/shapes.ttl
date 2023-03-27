@@ -7,15 +7,15 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundry-shape:feature-type>
+<urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundary-shape:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _soil profile_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/80c39b95-0912-4267-bb66-2fa081683723> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/80c39b95-0912-4267-bb66-2fa081683723[`soil profile`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _soil horizon_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/de1e18e4-6cfd-4c78-b389-a5b1dd04b899> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/de1e18e4-6cfd-4c78-b389-a5b1dd04b899[`soil horizon`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
@@ -32,11 +32,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundry-shape:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/horizon-boundry-shape/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundary-shape:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/horizon-boundary-shape/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundry-shape:result-value>
+<urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundary-shape:result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -67,7 +67,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundry-shape:examples> ;
+    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundary-shape:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -77,10 +77,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }
         """ ;
     urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/horizon-boundry-shape/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/horizon-boundary-shape/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundry-shape:simple-result>
+<urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundary-shape:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -108,11 +108,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundry-shape:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/horizon-boundry-shape/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundary-shape:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/horizon-boundary-shape/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundry-shape:site-visit>
+<urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundary-shape:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -138,11 +138,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundry-shape:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/horizon-boundry-shape/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundary-shape:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/horizon-boundary-shape/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundry-shape:used-procedure>
+<urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundary-shape:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -169,11 +169,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundry-shape:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/horizon-boundry-shape/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundary-shape:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/horizon-boundary-shape/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundry-shape:value-type>
+<urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundary-shape:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -198,11 +198,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundry-shape:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/horizon-boundry-shape/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundary-shape:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/horizon-boundary-shape/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundry-shape:vocabulary>
+<urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundary-shape:vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -228,12 +228,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundry-shape:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/horizon-boundry-shape/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundary-shape:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/horizon-boundary-shape/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundry-shape:examples>
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/horizon-boundry-shape/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/horizon-boundry-shape/valid.ttl"^^xsd:anyURI ;
+<urn:shapes:soil-soil-subsite-sampling-protocol-shapes:horizon-boundary-shape:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/horizon-boundary-shape/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-soil-subsite-sampling-protocol-shapes/horizon-boundary-shape/valid.ttl"^^xsd:anyURI ;
 .
 
