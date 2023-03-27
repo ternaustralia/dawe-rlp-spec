@@ -1956,10 +1956,10 @@ test_cases: List[TestCaseItem] = [
         expected_failures=8,
     ).astuple(),
     TestCaseItem(
-        name="soil-soil-bulk-density-protocol-shapes-gross-soil-bulk-density",
-        shapes_path="shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/shapes.ttl",
-        valid_data_path="shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/valid.ttl",
-        invalid_data_path="shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-soil-bulk-density/invalid.ttl",
+        name="soil-soil-bulk-density-protocol-shapes-gross-bulk-density",
+        shapes_path="shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-bulk-density/shapes.ttl",
+        valid_data_path="shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-bulk-density/valid.ttl",
+        invalid_data_path="shapes/soil/soil-soil-bulk-density-protocol-shapes/gross-bulk-density/invalid.ttl",
         expected_failures=8,
     ).astuple(),
     TestCaseItem(
