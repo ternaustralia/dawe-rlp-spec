@@ -7,15 +7,15 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:datatype>
+<urn:shapes:recruitment-survivorship-protocol-shapes:plant-missing-status:datatype>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:datatype xsd:string ;
-    sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
-    sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
+    sh:datatype xsd:boolean ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be xsd:boolean." ;
+    sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:boolean." ;
     sh:name "Datatype" ;
     sh:path rdf:value ;
     sh:target [
@@ -27,15 +27,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         select ?this  {
             ?observation a tern:Observation ;
                 sosa:observedProperty 
-        <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
+        <https://linked.data.gov.au/def/nrm/e7af31c1-6131-4053-87d4-306275175988> ;
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:plant-missing-status:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-missing-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:feature-type>
+<urn:shapes:recruitment-survivorship-protocol-shapes:plant-missing-status:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -53,18 +53,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX unit: <http://qudt.org/vocab/unit/>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     select ?this  {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/e7af31c1-6131-4053-87d4-306275175988>}
         ?observation a tern:Observation ;
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:plant-missing-status:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-missing-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:simple-result>
+<urn:shapes:recruitment-survivorship-protocol-shapes:plant-missing-status:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -82,7 +82,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     select $this {
         $this a tern:Observation ;
             sosa:observedProperty 
-    <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>
+    <https://linked.data.gov.au/def/nrm/e7af31c1-6131-4053-87d4-306275175988>
      ;
             sosa:hasSimpleResult ?simple ;
             sosa:hasResult ?result .
@@ -92,11 +92,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:plant-missing-status:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-missing-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:site-visit>
+<urn:shapes:recruitment-survivorship-protocol-shapes:plant-missing-status:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -116,17 +116,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/e7af31c1-6131-4053-87d4-306275175988>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:plant-missing-status:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-missing-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:used-procedure>
+<urn:shapes:recruitment-survivorship-protocol-shapes:plant-missing-status:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -147,25 +147,25 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/e7af31c1-6131-4053-87d4-306275175988>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:plant-missing-status:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-missing-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:value-type>
+<urn:shapes:recruitment-survivorship-protocol-shapes:plant-missing-status:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:class tern:Text ;
-    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
-    sh:message "The result _MUST_ be an instance of `tern:Text`." ;
+    sh:class tern:Boolean ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Boolean`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Boolean`." ;
     sh:name "Value type" ;
     sh:path <http://www.w3.org/ns/sosa/hasResult> ;
     sh:target [
@@ -176,18 +176,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/e7af31c1-6131-4053-87d4-306275175988>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:plant-missing-status:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-missing-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:examples>
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
+<urn:shapes:recruitment-survivorship-protocol-shapes:plant-missing-status:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-missing-status/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-missing-status/valid.ttl"^^xsd:anyURI ;
 .
 

@@ -5,10 +5,10 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:recruitment-survivorship-protocol-shapes:invalid:field-species-name:datatype>
+<urn:test:recruitment-survivorship-protocol-shapes:invalid:plant-missing-status:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:string`." ;
+    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:boolean`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -16,20 +16,20 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Text ,
+                tern:Boolean ,
                 tern:Value ;
-            rdf:value 1 ;
-            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:field-species-name:datatype>
+            rdf:value "true"^^xsd:string ;
+            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:plant-missing-status:datatype>
         ] ;
-    sosa:hasSimpleResult 1 ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
-    sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult "true"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e7af31c1-6131-4053-87d4-306275175988> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-missing-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/f470e27d-20ed-46dc-b64a-d67b39a9dffc> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:recruitment-survivorship-protocol-shapes:invalid:field-species-name:feature-type>
+<urn:test:recruitment-survivorship-protocol-shapes:invalid:plant-missing-status:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -40,20 +40,20 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Text ,
+                tern:Boolean ,
                 tern:Value ;
-            rdf:value "Bee"^^xsd:string ;
-            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:field-species-name:feature-type>
+            rdf:value true ;
+            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:plant-missing-status:feature-type>
         ] ;
-    sosa:hasSimpleResult "Bee"^^xsd:string ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
-    sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult true ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e7af31c1-6131-4053-87d4-306275175988> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-missing-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/f470e27d-20ed-46dc-b64a-d67b39a9dffc> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:recruitment-survivorship-protocol-shapes:invalid:field-species-name:simple-result>
+<urn:test:recruitment-survivorship-protocol-shapes:invalid:plant-missing-status:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -64,20 +64,20 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Text ,
+                tern:Boolean ,
                 tern:Value ;
-            rdf:value "Bee"^^xsd:string ;
-            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:field-species-name:simple-result>
+            rdf:value true ;
+            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:plant-missing-status:simple-result>
         ] ;
-    sosa:hasSimpleResult "Bee different"^^xsd:string ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
-    sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult false ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e7af31c1-6131-4053-87d4-306275175988> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-missing-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/f470e27d-20ed-46dc-b64a-d67b39a9dffc> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:recruitment-survivorship-protocol-shapes:invalid:field-species-name:site-visit>
+<urn:test:recruitment-survivorship-protocol-shapes:invalid:plant-missing-status:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -88,19 +88,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Text ,
+                tern:Boolean ,
                 tern:Value ;
-            rdf:value "Bee"^^xsd:string ;
-            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:field-species-name:site-visit>
+            rdf:value true ;
+            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:plant-missing-status:site-visit>
         ] ;
-    sosa:hasSimpleResult "Bee"^^xsd:string ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
-    sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult true ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e7af31c1-6131-4053-87d4-306275175988> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-missing-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/f470e27d-20ed-46dc-b64a-d67b39a9dffc> ;
 .
 
-<urn:test:recruitment-survivorship-protocol-shapes:invalid:field-species-name:used-procedure>
+<urn:test:recruitment-survivorship-protocol-shapes:invalid:plant-missing-status:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Recruitment module -Survivorship protocol'." ;
@@ -111,23 +111,23 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Text ,
+                tern:Boolean ,
                 tern:Value ;
-            rdf:value "Bee"^^xsd:string ;
-            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:field-species-name:used-procedure>
+            rdf:value true ;
+            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:plant-missing-status:used-procedure>
         ] ;
-    sosa:hasSimpleResult "Bee"^^xsd:string ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
-    sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult true ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e7af31c1-6131-4053-87d4-306275175988> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-missing-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:recruitment-survivorship-protocol-shapes:invalid:field-species-name:value-type>
+<urn:test:recruitment-survivorship-protocol-shapes:invalid:plant-missing-status:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the value of the result node must be `tern:Text`." ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:Boolean`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -135,12 +135,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a tern:Value ;
-            rdf:value "Bee"^^xsd:string ;
-            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:field-species-name:value-type>
+            rdf:value true ;
+            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:plant-missing-status:value-type>
         ] ;
-    sosa:hasSimpleResult "Bee"^^xsd:string ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
-    sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult true ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e7af31c1-6131-4053-87d4-306275175988> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-missing-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/f470e27d-20ed-46dc-b64a-d67b39a9dffc> ;
     tern:hasSiteVisit <urn:test:site> ;
