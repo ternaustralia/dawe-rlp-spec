@@ -1592,6 +1592,13 @@ test_cases: List[TestCaseItem] = [
         expected_failures=7,
     ).astuple(),
     TestCaseItem(
+        name="recruitment-age-class-protocol-shapes-juvenile-count",
+        shapes_path="shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/shapes.ttl",
+        valid_data_path="shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/valid.ttl",
+        invalid_data_path="shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/invalid.ttl",
+        expected_failures=7,
+    ).astuple(),
+    TestCaseItem(
         name="recruitment-survivorship-protocol-shapes-life-stage",
         shapes_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/life-stage/shapes.ttl",
         valid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/life-stage/valid.ttl",
