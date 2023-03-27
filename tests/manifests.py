@@ -1480,10 +1480,10 @@ test_cases: List[TestCaseItem] = [
         expected_failures=8,
     ).astuple(),
     TestCaseItem(
-        name="invertebrate-wet-pitfall-protocol-shapes-bare-ground-percentage",
-        shapes_path="shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/bare-ground-percentage/shapes.ttl",
-        valid_data_path="shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/bare-ground-percentage/valid.ttl",
-        invalid_data_path="shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/bare-ground-percentage/invalid.ttl",
+        name="invertebrate-wet-pitfall-protocol-shapes-bare-cover-percent",
+        shapes_path="shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/bare-cover-percent/shapes.ttl",
+        valid_data_path="shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/bare-cover-percent/valid.ttl",
+        invalid_data_path="shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/bare-cover-percent/invalid.ttl",
         expected_failures=8,
     ).astuple(),
     TestCaseItem(
@@ -1522,10 +1522,10 @@ test_cases: List[TestCaseItem] = [
         expected_failures=8,
     ).astuple(),
     TestCaseItem(
-        name="invertebrate-wet-pitfall-protocol-shapes-litter-cover-percentage",
-        shapes_path="shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/litter-cover-percentage/shapes.ttl",
-        valid_data_path="shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/litter-cover-percentage/valid.ttl",
-        invalid_data_path="shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/litter-cover-percentage/invalid.ttl",
+        name="invertebrate-wet-pitfall-protocol-shapes-litter-cover-percent",
+        shapes_path="shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/litter-cover-percent/shapes.ttl",
+        valid_data_path="shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/litter-cover-percent/valid.ttl",
+        invalid_data_path="shapes/invertebrate-fauna/invertebrate-wet-pitfall-protocol-shapes/litter-cover-percent/invalid.ttl",
         expected_failures=8,
     ).astuple(),
 ]
