@@ -1647,4 +1647,11 @@ test_cases: List[TestCaseItem] = [
         invalid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-status/invalid.ttl",
         expected_failures=7,
     ).astuple(),
+    TestCaseItem(
+        name="recruitment-survivorship-protocol-shapes-plant-missing-status",
+        shapes_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-missing-status/shapes.ttl",
+        valid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-missing-status/valid.ttl",
+        invalid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-missing-status/invalid.ttl",
+        expected_failures=6,
+    ).astuple(),
 ]
