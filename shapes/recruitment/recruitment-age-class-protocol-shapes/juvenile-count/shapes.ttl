@@ -7,7 +7,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:recruitment-age-class-protocol-shapes:seedling-count:feature-type>
+<urn:shapes:recruitment-age-class-protocol-shapes:juvenile-count:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -25,18 +25,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX unit: <http://qudt.org/vocab/unit/>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     select ?this  {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/b6a5d847-0698-4cce-8a5e-f2719e142208>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/a42dbbca-7dbe-469e-adfc-9012d01ff43d>}
         ?observation a tern:Observation ;
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:recruitment-age-class-protocol-shapes:seedling-count:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:recruitment-age-class-protocol-shapes:juvenile-count:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:recruitment-age-class-protocol-shapes:seedling-count:simple-result>
+<urn:shapes:recruitment-age-class-protocol-shapes:juvenile-count:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -54,7 +54,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     select $this {
         $this a tern:Observation ;
             sosa:observedProperty 
-    <https://linked.data.gov.au/def/nrm/b6a5d847-0698-4cce-8a5e-f2719e142208>
+    <https://linked.data.gov.au/def/nrm/a42dbbca-7dbe-469e-adfc-9012d01ff43d>
      ;
             sosa:hasSimpleResult ?simple ;
             sosa:hasResult ?result .
@@ -64,11 +64,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:recruitment-age-class-protocol-shapes:seedling-count:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:recruitment-age-class-protocol-shapes:juvenile-count:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:recruitment-age-class-protocol-shapes:seedling-count:site-visit>
+<urn:shapes:recruitment-age-class-protocol-shapes:juvenile-count:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -88,17 +88,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/b6a5d847-0698-4cce-8a5e-f2719e142208>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/a42dbbca-7dbe-469e-adfc-9012d01ff43d>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:recruitment-age-class-protocol-shapes:seedling-count:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:recruitment-age-class-protocol-shapes:juvenile-count:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:recruitment-age-class-protocol-shapes:seedling-count:used-procedure>
+<urn:shapes:recruitment-age-class-protocol-shapes:juvenile-count:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -119,17 +119,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/b6a5d847-0698-4cce-8a5e-f2719e142208>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/a42dbbca-7dbe-469e-adfc-9012d01ff43d>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:recruitment-age-class-protocol-shapes:seedling-count:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:recruitment-age-class-protocol-shapes:juvenile-count:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:recruitment-age-class-protocol-shapes:seedling-count:value-range>
+<urn:shapes:recruitment-age-class-protocol-shapes:juvenile-count:value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -150,15 +150,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         select ?this  {
             ?observation a tern:Observation ;
                 sosa:observedProperty 
-        <https://linked.data.gov.au/def/nrm/b6a5d847-0698-4cce-8a5e-f2719e142208> ;
+        <https://linked.data.gov.au/def/nrm/a42dbbca-7dbe-469e-adfc-9012d01ff43d> ;
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:recruitment-age-class-protocol-shapes:seedling-count:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:recruitment-age-class-protocol-shapes:juvenile-count:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:recruitment-age-class-protocol-shapes:seedling-count:value-type>
+<urn:shapes:recruitment-age-class-protocol-shapes:juvenile-count:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -177,18 +177,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/b6a5d847-0698-4cce-8a5e-f2719e142208>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/a42dbbca-7dbe-469e-adfc-9012d01ff43d>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:recruitment-age-class-protocol-shapes:seedling-count:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:recruitment-age-class-protocol-shapes:juvenile-count:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:recruitment-age-class-protocol-shapes:seedling-count:examples>
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/valid.ttl"^^xsd:anyURI ;
+<urn:shapes:recruitment-age-class-protocol-shapes:juvenile-count:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/valid.ttl"^^xsd:anyURI ;
 .
 
