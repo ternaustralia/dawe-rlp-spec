@@ -6,21 +6,21 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:invalid:cover:datatype>
+<urn:test:plot-description-protocol-shapes:invalid:cover:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:float`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/32834f36-a478-45be-97f4-ff2ff51e9f5c>
         ] ;
     sosa:hasResult [
             a
                 tern:Float ,
                 tern:Value ;
             rdf:value 3 ;
-            sosa:isResultOf <urn:test:plot-description:invalid:cover:datatype> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:cover:datatype> ;
             tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult 3 ;
@@ -31,7 +31,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:cover:feature-type>
+<urn:test:plot-description-protocol-shapes:invalid:cover:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -45,7 +45,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:cover:feature-type> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:cover:feature-type> ;
             tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
@@ -56,21 +56,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:cover:simple-result>
+<urn:test:plot-description-protocol-shapes:invalid:cover:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/32834f36-a478-45be-97f4-ff2ff51e9f5c>
         ] ;
     sosa:hasResult [
             a
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:cover:simple-result> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:cover:simple-result> ;
             tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult "13.56"^^xsd:float ;
@@ -81,21 +81,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:cover:site-visit>
+<urn:test:plot-description-protocol-shapes:invalid:cover:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/32834f36-a478-45be-97f4-ff2ff51e9f5c>
         ] ;
     sosa:hasResult [
             a
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:cover:site-visit> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:cover:site-visit> ;
             tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
@@ -105,21 +105,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
 .
 
-<urn:test:plot-description:invalid:cover:unit-of-measure>
+<urn:test:plot-description-protocol-shapes:invalid:cover:unit-of-measure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result unit of measure" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/32834f36-a478-45be-97f4-ff2ff51e9f5c>
         ] ;
     sosa:hasResult [
             a
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:cover:unit-of-measure> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:cover:unit-of-measure> ;
             tern:unit <urn:fake:unit>
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
@@ -130,21 +130,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:cover:used-procedure>
+<urn:test:plot-description-protocol-shapes:invalid:cover:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Plot Description'." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/32834f36-a478-45be-97f4-ff2ff51e9f5c>
         ] ;
     sosa:hasResult [
             a
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:cover:used-procedure> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:cover:used-procedure> ;
             tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
@@ -155,21 +155,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:cover:value-range>
+<urn:test:plot-description-protocol-shapes:invalid:cover:value-range>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value out of range" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/32834f36-a478-45be-97f4-ff2ff51e9f5c>
         ] ;
     sosa:hasResult [
             a
                 tern:Float ,
                 tern:Value ;
             rdf:value "101.1"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:cover:value-range> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:cover:value-range> ;
             tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult "101.1"^^xsd:float ;
@@ -180,19 +180,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:cover:value-type>
+<urn:test:plot-description-protocol-shapes:invalid:cover:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:Float`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2be2d5ce-ca9d-4dff-8e79-948983944f95>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/32834f36-a478-45be-97f4-ff2ff51e9f5c>
         ] ;
     sosa:hasResult [
             a tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:cover:value-type> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:cover:value-type> ;
             tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;

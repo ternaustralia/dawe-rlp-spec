@@ -7,7 +7,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:plot-description:landform-element:feature-type>
+<urn:shapes:plot-description-protocol-shapes:landform-element:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -32,11 +32,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:plot-description:landform-element:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/landform-element/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:landform-element:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:landform-element:result-value>
+<urn:shapes:plot-description-protocol-shapes:landform-element:result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -142,7 +142,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:plot-description:landform-element:examples> ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:landform-element:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -152,10 +152,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }
         """ ;
     urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/landform-element/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:landform-element:simple-result>
+<urn:shapes:plot-description-protocol-shapes:landform-element:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -183,11 +183,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:plot-description:landform-element:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/landform-element/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:landform-element:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:landform-element:site-visit>
+<urn:shapes:plot-description-protocol-shapes:landform-element:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -213,11 +213,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:plot-description:landform-element:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/landform-element/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:landform-element:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:landform-element:used-procedure>
+<urn:shapes:plot-description-protocol-shapes:landform-element:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -244,11 +244,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:plot-description:landform-element:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/landform-element/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:landform-element:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:landform-element:value-type>
+<urn:shapes:plot-description-protocol-shapes:landform-element:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -273,11 +273,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:plot-description:landform-element:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/landform-element/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:landform-element:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:landform-element:vocabulary>
+<urn:shapes:plot-description-protocol-shapes:landform-element:vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -303,12 +303,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:plot-description:landform-element:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/landform-element/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:plot-description-protocol-shapes:landform-element:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description:landform-element:examples>
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/landform-element/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/landform-element/valid.ttl"^^xsd:anyURI ;
+<urn:shapes:plot-description-protocol-shapes:landform-element:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/landform-element/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description-protocol-shapes/landform-element/valid.ttl"^^xsd:anyURI ;
 .
 
