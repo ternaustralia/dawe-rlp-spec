@@ -13,9 +13,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _animal individual_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7[`animal individual`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _bird population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/62a51999-f3ca-41d2-8576-3a053dd116a6> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/62a51999-f3ca-41d2-8576-3a053dd116a6[`bird population`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
