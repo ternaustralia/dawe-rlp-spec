@@ -8,7 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:targeted-survey-fauna-passive-protocol-shapes:fauna-weight:feature-type>
+<urn:shapes:targeted-survey-fauna-passive-protocol-shapes:animal-weight:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -26,18 +26,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX unit: <http://qudt.org/vocab/unit/>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     select ?this  {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/375a2c90-71d6-4ff4-99e4-bc033f2bb03c>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/d78e0ad6-9ac8-4adc-a796-61ad458726b3>}
         ?observation a tern:Observation ;
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:fauna-weight:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/fauna-weight/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:animal-weight:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/animal-weight/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:targeted-survey-fauna-passive-protocol-shapes:fauna-weight:simple-result>
+<urn:shapes:targeted-survey-fauna-passive-protocol-shapes:animal-weight:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -55,7 +55,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     select $this {
         $this a tern:Observation ;
             sosa:observedProperty 
-    <https://linked.data.gov.au/def/nrm/375a2c90-71d6-4ff4-99e4-bc033f2bb03c>
+    <https://linked.data.gov.au/def/nrm/d78e0ad6-9ac8-4adc-a796-61ad458726b3>
      ;
             sosa:hasSimpleResult ?simple ;
             sosa:hasResult ?result .
@@ -65,11 +65,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:fauna-weight:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/fauna-weight/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:animal-weight:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/animal-weight/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:targeted-survey-fauna-passive-protocol-shapes:fauna-weight:site-visit>
+<urn:shapes:targeted-survey-fauna-passive-protocol-shapes:animal-weight:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -89,17 +89,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/375a2c90-71d6-4ff4-99e4-bc033f2bb03c>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/d78e0ad6-9ac8-4adc-a796-61ad458726b3>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:fauna-weight:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/fauna-weight/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:animal-weight:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/animal-weight/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:targeted-survey-fauna-passive-protocol-shapes:fauna-weight:unit-of-measure>
+<urn:shapes:targeted-survey-fauna-passive-protocol-shapes:animal-weight:unit-of-measure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -119,15 +119,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         select ?this  {
             ?observation a tern:Observation ;
                 sosa:observedProperty 
-        <https://linked.data.gov.au/def/nrm/375a2c90-71d6-4ff4-99e4-bc033f2bb03c> ;
+        <https://linked.data.gov.au/def/nrm/d78e0ad6-9ac8-4adc-a796-61ad458726b3> ;
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:fauna-weight:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/fauna-weight/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:animal-weight:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/animal-weight/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:targeted-survey-fauna-passive-protocol-shapes:fauna-weight:used-procedure>
+<urn:shapes:targeted-survey-fauna-passive-protocol-shapes:animal-weight:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -148,17 +148,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/375a2c90-71d6-4ff4-99e4-bc033f2bb03c>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/d78e0ad6-9ac8-4adc-a796-61ad458726b3>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:fauna-weight:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/fauna-weight/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:animal-weight:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/animal-weight/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:targeted-survey-fauna-passive-protocol-shapes:fauna-weight:value-range>
+<urn:shapes:targeted-survey-fauna-passive-protocol-shapes:animal-weight:value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -179,15 +179,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         select ?this  {
             ?observation a tern:Observation ;
                 sosa:observedProperty 
-        <https://linked.data.gov.au/def/nrm/375a2c90-71d6-4ff4-99e4-bc033f2bb03c> ;
+        <https://linked.data.gov.au/def/nrm/d78e0ad6-9ac8-4adc-a796-61ad458726b3> ;
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:fauna-weight:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/fauna-weight/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:animal-weight:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/animal-weight/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:targeted-survey-fauna-passive-protocol-shapes:fauna-weight:value-type>
+<urn:shapes:targeted-survey-fauna-passive-protocol-shapes:animal-weight:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -206,18 +206,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/375a2c90-71d6-4ff4-99e4-bc033f2bb03c>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/d78e0ad6-9ac8-4adc-a796-61ad458726b3>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:fauna-weight:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/fauna-weight/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:targeted-survey-fauna-passive-protocol-shapes:animal-weight:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/animal-weight/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:targeted-survey-fauna-passive-protocol-shapes:fauna-weight:examples>
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/fauna-weight/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/fauna-weight/valid.ttl"^^xsd:anyURI ;
+<urn:shapes:targeted-survey-fauna-passive-protocol-shapes:animal-weight:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/animal-weight/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/animal-weight/valid.ttl"^^xsd:anyURI ;
 .
 
