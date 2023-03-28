@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:species-and-cover:datatype>
+<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:diagnostic-characteristics:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:string`." ;
@@ -19,17 +19,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Text ,
                 tern:Value ;
             rdf:value 1 ;
-            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:species-and-cover:datatype>
+            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:diagnostic-characteristics:datatype>
         ] ;
     sosa:hasSimpleResult 1 ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e706382f-3cf5-48ff-bc86-6e8902dc2aaf> ;
-    sosa:phenomenonTime <https://example.com/observation/species-and-cover/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/f6990e14-842c-4eee-bd3d-77dfe8cfede4> ;
+    sosa:phenomenonTime <https://example.com/observation/diagnostic-characteristics/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/4da8c123-b886-4881-91b3-1ff6a9b30e3c> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:species-and-cover:feature-type>
+<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:diagnostic-characteristics:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -42,18 +42,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:Text ,
                 tern:Value ;
-            rdf:value "Bee"^^xsd:string ;
-            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:species-and-cover:feature-type>
+            rdf:value "Species richness is high."^^xsd:string ;
+            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:diagnostic-characteristics:feature-type>
         ] ;
-    sosa:hasSimpleResult "Bee"^^xsd:string ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e706382f-3cf5-48ff-bc86-6e8902dc2aaf> ;
-    sosa:phenomenonTime <https://example.com/observation/species-and-cover/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult "Species richness is high."^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/f6990e14-842c-4eee-bd3d-77dfe8cfede4> ;
+    sosa:phenomenonTime <https://example.com/observation/diagnostic-characteristics/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/4da8c123-b886-4881-91b3-1ff6a9b30e3c> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:species-and-cover:simple-result>
+<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:diagnostic-characteristics:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -66,18 +66,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:Text ,
                 tern:Value ;
-            rdf:value "Bee"^^xsd:string ;
-            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:species-and-cover:simple-result>
+            rdf:value "Species richness is high."^^xsd:string ;
+            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:diagnostic-characteristics:simple-result>
         ] ;
-    sosa:hasSimpleResult "Bee different"^^xsd:string ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e706382f-3cf5-48ff-bc86-6e8902dc2aaf> ;
-    sosa:phenomenonTime <https://example.com/observation/species-and-cover/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult "Species richness is high. different"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/f6990e14-842c-4eee-bd3d-77dfe8cfede4> ;
+    sosa:phenomenonTime <https://example.com/observation/diagnostic-characteristics/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/4da8c123-b886-4881-91b3-1ff6a9b30e3c> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:species-and-cover:site-visit>
+<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:diagnostic-characteristics:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -90,17 +90,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:Text ,
                 tern:Value ;
-            rdf:value "Bee"^^xsd:string ;
-            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:species-and-cover:site-visit>
+            rdf:value "Species richness is high."^^xsd:string ;
+            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:diagnostic-characteristics:site-visit>
         ] ;
-    sosa:hasSimpleResult "Bee"^^xsd:string ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e706382f-3cf5-48ff-bc86-6e8902dc2aaf> ;
-    sosa:phenomenonTime <https://example.com/observation/species-and-cover/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult "Species richness is high."^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/f6990e14-842c-4eee-bd3d-77dfe8cfede4> ;
+    sosa:phenomenonTime <https://example.com/observation/diagnostic-characteristics/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/4da8c123-b886-4881-91b3-1ff6a9b30e3c> ;
 .
 
-<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:species-and-cover:used-procedure>
+<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:diagnostic-characteristics:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Ecological community protocol'." ;
@@ -113,18 +113,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:Text ,
                 tern:Value ;
-            rdf:value "Bee"^^xsd:string ;
-            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:species-and-cover:used-procedure>
+            rdf:value "Species richness is high."^^xsd:string ;
+            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:diagnostic-characteristics:used-procedure>
         ] ;
-    sosa:hasSimpleResult "Bee"^^xsd:string ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e706382f-3cf5-48ff-bc86-6e8902dc2aaf> ;
-    sosa:phenomenonTime <https://example.com/observation/species-and-cover/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult "Species richness is high."^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/f6990e14-842c-4eee-bd3d-77dfe8cfede4> ;
+    sosa:phenomenonTime <https://example.com/observation/diagnostic-characteristics/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:species-and-cover:value-type>
+<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:diagnostic-characteristics:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:Text`." ;
@@ -135,12 +135,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a tern:Value ;
-            rdf:value "Bee"^^xsd:string ;
-            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:species-and-cover:value-type>
+            rdf:value "Species richness is high."^^xsd:string ;
+            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:diagnostic-characteristics:value-type>
         ] ;
-    sosa:hasSimpleResult "Bee"^^xsd:string ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e706382f-3cf5-48ff-bc86-6e8902dc2aaf> ;
-    sosa:phenomenonTime <https://example.com/observation/species-and-cover/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult "Species richness is high."^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/f6990e14-842c-4eee-bd3d-77dfe8cfede4> ;
+    sosa:phenomenonTime <https://example.com/observation/diagnostic-characteristics/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/4da8c123-b886-4881-91b3-1ff6a9b30e3c> ;
     tern:hasSiteVisit <urn:test:site> ;

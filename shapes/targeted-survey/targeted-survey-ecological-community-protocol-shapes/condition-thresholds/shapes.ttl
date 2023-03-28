@@ -7,7 +7,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-threshholds:datatype>
+<urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-thresholds:datatype>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -31,11 +31,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-threshholds:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-threshholds/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-thresholds:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-thresholds/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-threshholds:feature-type>
+<urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-thresholds:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -60,11 +60,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-threshholds:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-threshholds/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-thresholds:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-thresholds/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-threshholds:simple-result>
+<urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-thresholds:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -92,11 +92,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-threshholds:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-threshholds/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-thresholds:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-thresholds/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-threshholds:site-visit>
+<urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-thresholds:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -122,11 +122,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-threshholds:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-threshholds/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-thresholds:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-thresholds/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-threshholds:used-procedure>
+<urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-thresholds:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -153,11 +153,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-threshholds:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-threshholds/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-thresholds:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-thresholds/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-threshholds:value-type>
+<urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-thresholds:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -182,12 +182,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-threshholds:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-threshholds/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-thresholds:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-thresholds/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-threshholds:examples>
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-threshholds/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-threshholds/valid.ttl"^^xsd:anyURI ;
+<urn:shapes:targeted-survey-ecological-community-protocol-shapes:condition-thresholds:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-thresholds/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-thresholds/valid.ttl"^^xsd:anyURI ;
 .
 

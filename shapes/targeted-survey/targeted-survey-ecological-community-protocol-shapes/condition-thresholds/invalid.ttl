@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-threshholds:datatype>
+<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-thresholds:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:string`." ;
@@ -19,17 +19,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Text ,
                 tern:Value ;
             rdf:value 1 ;
-            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-threshholds:datatype>
+            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-thresholds:datatype>
         ] ;
     sosa:hasSimpleResult 1 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/92d0eaf3-0352-45ba-b173-f82923cdd795> ;
-    sosa:phenomenonTime <https://example.com/observation/condition-threshholds/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/condition-thresholds/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/4da8c123-b886-4881-91b3-1ff6a9b30e3c> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-threshholds:feature-type>
+<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-thresholds:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -43,17 +43,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Text ,
                 tern:Value ;
             rdf:value "The patch is characterised by at least 50 % foliage cover of the ground of Themeda triandra."^^xsd:string ;
-            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-threshholds:feature-type>
+            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-thresholds:feature-type>
         ] ;
     sosa:hasSimpleResult "The patch is characterised by at least 50 % foliage cover of the ground of Themeda triandra."^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/92d0eaf3-0352-45ba-b173-f82923cdd795> ;
-    sosa:phenomenonTime <https://example.com/observation/condition-threshholds/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/condition-thresholds/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/4da8c123-b886-4881-91b3-1ff6a9b30e3c> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-threshholds:simple-result>
+<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-thresholds:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -67,17 +67,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Text ,
                 tern:Value ;
             rdf:value "The patch is characterised by at least 50 % foliage cover of the ground of Themeda triandra."^^xsd:string ;
-            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-threshholds:simple-result>
+            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-thresholds:simple-result>
         ] ;
     sosa:hasSimpleResult "The patch is characterised by at least 50 % foliage cover of the ground of Themeda triandra. different"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/92d0eaf3-0352-45ba-b173-f82923cdd795> ;
-    sosa:phenomenonTime <https://example.com/observation/condition-threshholds/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/condition-thresholds/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/4da8c123-b886-4881-91b3-1ff6a9b30e3c> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-threshholds:site-visit>
+<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-thresholds:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -91,16 +91,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Text ,
                 tern:Value ;
             rdf:value "The patch is characterised by at least 50 % foliage cover of the ground of Themeda triandra."^^xsd:string ;
-            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-threshholds:site-visit>
+            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-thresholds:site-visit>
         ] ;
     sosa:hasSimpleResult "The patch is characterised by at least 50 % foliage cover of the ground of Themeda triandra."^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/92d0eaf3-0352-45ba-b173-f82923cdd795> ;
-    sosa:phenomenonTime <https://example.com/observation/condition-threshholds/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/condition-thresholds/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/4da8c123-b886-4881-91b3-1ff6a9b30e3c> ;
 .
 
-<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-threshholds:used-procedure>
+<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-thresholds:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Ecological community protocol'." ;
@@ -114,17 +114,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Text ,
                 tern:Value ;
             rdf:value "The patch is characterised by at least 50 % foliage cover of the ground of Themeda triandra."^^xsd:string ;
-            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-threshholds:used-procedure>
+            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-thresholds:used-procedure>
         ] ;
     sosa:hasSimpleResult "The patch is characterised by at least 50 % foliage cover of the ground of Themeda triandra."^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/92d0eaf3-0352-45ba-b173-f82923cdd795> ;
-    sosa:phenomenonTime <https://example.com/observation/condition-threshholds/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/condition-thresholds/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-threshholds:value-type>
+<urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-thresholds:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:Text`." ;
@@ -136,11 +136,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasResult [
             a tern:Value ;
             rdf:value "The patch is characterised by at least 50 % foliage cover of the ground of Themeda triandra."^^xsd:string ;
-            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-threshholds:value-type>
+            sosa:isResultOf <urn:test:targeted-survey-ecological-community-protocol-shapes:invalid:condition-thresholds:value-type>
         ] ;
     sosa:hasSimpleResult "The patch is characterised by at least 50 % foliage cover of the ground of Themeda triandra."^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/92d0eaf3-0352-45ba-b173-f82923cdd795> ;
-    sosa:phenomenonTime <https://example.com/observation/condition-threshholds/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/condition-thresholds/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/4da8c123-b886-4881-91b3-1ff6a9b30e3c> ;
     tern:hasSiteVisit <urn:test:site> ;

@@ -7,7 +7,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:datatype>
+<urn:shapes:targeted-survey-ecological-community-protocol-shapes:diagnostic-characteristics:datatype>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -27,15 +27,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         select ?this  {
             ?observation a tern:Observation ;
                 sosa:observedProperty 
-        <https://linked.data.gov.au/def/nrm/e706382f-3cf5-48ff-bc86-6e8902dc2aaf> ;
+        <https://linked.data.gov.au/def/nrm/f6990e14-842c-4eee-bd3d-77dfe8cfede4> ;
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/species-and-cover/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:diagnostic-characteristics:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/diagnostic-characteristics/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:feature-type>
+<urn:shapes:targeted-survey-ecological-community-protocol-shapes:diagnostic-characteristics:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -53,18 +53,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX unit: <http://qudt.org/vocab/unit/>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     select ?this  {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/e706382f-3cf5-48ff-bc86-6e8902dc2aaf>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/f6990e14-842c-4eee-bd3d-77dfe8cfede4>}
         ?observation a tern:Observation ;
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/species-and-cover/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:diagnostic-characteristics:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/diagnostic-characteristics/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:simple-result>
+<urn:shapes:targeted-survey-ecological-community-protocol-shapes:diagnostic-characteristics:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -82,7 +82,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     select $this {
         $this a tern:Observation ;
             sosa:observedProperty 
-    <https://linked.data.gov.au/def/nrm/e706382f-3cf5-48ff-bc86-6e8902dc2aaf>
+    <https://linked.data.gov.au/def/nrm/f6990e14-842c-4eee-bd3d-77dfe8cfede4>
      ;
             sosa:hasSimpleResult ?simple ;
             sosa:hasResult ?result .
@@ -92,11 +92,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/species-and-cover/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:diagnostic-characteristics:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/diagnostic-characteristics/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:site-visit>
+<urn:shapes:targeted-survey-ecological-community-protocol-shapes:diagnostic-characteristics:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -116,17 +116,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/e706382f-3cf5-48ff-bc86-6e8902dc2aaf>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/f6990e14-842c-4eee-bd3d-77dfe8cfede4>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/species-and-cover/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:diagnostic-characteristics:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/diagnostic-characteristics/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:used-procedure>
+<urn:shapes:targeted-survey-ecological-community-protocol-shapes:diagnostic-characteristics:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -147,17 +147,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/e706382f-3cf5-48ff-bc86-6e8902dc2aaf>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/f6990e14-842c-4eee-bd3d-77dfe8cfede4>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/species-and-cover/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:diagnostic-characteristics:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/diagnostic-characteristics/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:value-type>
+<urn:shapes:targeted-survey-ecological-community-protocol-shapes:diagnostic-characteristics:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -176,18 +176,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/e706382f-3cf5-48ff-bc86-6e8902dc2aaf>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/f6990e14-842c-4eee-bd3d-77dfe8cfede4>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/species-and-cover/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:targeted-survey-ecological-community-protocol-shapes:diagnostic-characteristics:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/diagnostic-characteristics/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:targeted-survey-ecological-community-protocol-shapes:species-and-cover:examples>
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/species-and-cover/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/species-and-cover/valid.ttl"^^xsd:anyURI ;
+<urn:shapes:targeted-survey-ecological-community-protocol-shapes:diagnostic-characteristics:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/diagnostic-characteristics/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/diagnostic-characteristics/valid.ttl"^^xsd:anyURI ;
 .
 
