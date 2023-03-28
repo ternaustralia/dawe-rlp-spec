@@ -6,7 +6,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:cover-full:invalid:uppermost-height:datatype>
+<urn:test:cover-full-protocol-shapes:invalid:uppermost-height:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:float`." ;
@@ -20,7 +20,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value 3 ;
-            sosa:isResultOf <urn:test:cover-full:invalid:uppermost-height:datatype> ;
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:uppermost-height:datatype> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult 3 ;
@@ -31,7 +31,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-full:invalid:uppermost-height:feature-type>
+<urn:test:cover-full-protocol-shapes:invalid:uppermost-height:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -45,7 +45,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "2.13"^^xsd:float ;
-            sosa:isResultOf <urn:test:cover-full:invalid:uppermost-height:feature-type> ;
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:uppermost-height:feature-type> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "2.13"^^xsd:float ;
@@ -56,7 +56,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-full:invalid:uppermost-height:simple-result>
+<urn:test:cover-full-protocol-shapes:invalid:uppermost-height:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -70,7 +70,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "2.13"^^xsd:float ;
-            sosa:isResultOf <urn:test:cover-full:invalid:uppermost-height:simple-result> ;
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:uppermost-height:simple-result> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "1.56"^^xsd:float ;
@@ -81,7 +81,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-full:invalid:uppermost-height:site-visit>
+<urn:test:cover-full-protocol-shapes:invalid:uppermost-height:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -95,7 +95,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "2.13"^^xsd:float ;
-            sosa:isResultOf <urn:test:cover-full:invalid:uppermost-height:site-visit> ;
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:uppermost-height:site-visit> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "2.13"^^xsd:float ;
@@ -105,7 +105,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/576f634e-2706-4f18-b561-0636d4c007d0> ;
 .
 
-<urn:test:cover-full:invalid:uppermost-height:unit-of-measure>
+<urn:test:cover-full-protocol-shapes:invalid:uppermost-height:unit-of-measure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result unit of measure" ;
@@ -119,7 +119,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "2.13"^^xsd:float ;
-            sosa:isResultOf <urn:test:cover-full:invalid:uppermost-height:unit-of-measure> ;
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:uppermost-height:unit-of-measure> ;
             tern:unit <urn:fake:unit>
         ] ;
     sosa:hasSimpleResult "2.13"^^xsd:float ;
@@ -130,7 +130,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-full:invalid:uppermost-height:used-procedure>
+<urn:test:cover-full-protocol-shapes:invalid:uppermost-height:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Cover - Full protocol'." ;
@@ -144,7 +144,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "2.13"^^xsd:float ;
-            sosa:isResultOf <urn:test:cover-full:invalid:uppermost-height:used-procedure> ;
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:uppermost-height:used-procedure> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "2.13"^^xsd:float ;
@@ -155,7 +155,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-full:invalid:uppermost-height:value-range>
+<urn:test:cover-full-protocol-shapes:invalid:uppermost-height:value-range>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value out of range" ;
@@ -169,7 +169,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "1.44"^^xsd:float ;
-            sosa:isResultOf <urn:test:cover-full:invalid:uppermost-height:value-range> ;
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:uppermost-height:value-range> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "1.44"^^xsd:float ;
@@ -180,7 +180,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-full:invalid:uppermost-height:value-type>
+<urn:test:cover-full-protocol-shapes:invalid:uppermost-height:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:Float`." ;
@@ -192,7 +192,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasResult [
             a tern:Value ;
             rdf:value "2.13"^^xsd:float ;
-            sosa:isResultOf <urn:test:cover-full:invalid:uppermost-height:value-type> ;
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:uppermost-height:value-type> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "2.13"^^xsd:float ;

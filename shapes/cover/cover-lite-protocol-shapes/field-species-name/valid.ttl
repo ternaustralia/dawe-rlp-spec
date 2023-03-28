@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:cover-lite:valid:field-species-name>
+<urn:test:cover-lite-protocol-shapes:valid:field-species-name>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Valid result for observable property - field species name" ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Text ,
                 tern:Value ;
             rdf:value "Bee"^^xsd:string ;
-            sosa:isResultOf <urn:test:cover-lite:valid:field-species-name>
+            sosa:isResultOf <urn:test:cover-lite-protocol-shapes:valid:field-species-name>
         ] ;
     sosa:hasSimpleResult "Bee"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
