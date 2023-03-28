@@ -2712,6 +2712,13 @@ test_cases: List[TestCaseItem] = [
         expected_failures=7,
     ).astuple(),
     TestCaseItem(
+        name="vertebrate-fauna-active-and-passive-searching-protocol-shapes-habitat-description",
+        shapes_path="shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/habitat-description/shapes.ttl",
+        valid_data_path="shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/habitat-description/valid.ttl",
+        invalid_data_path="shapes/vertebrate-fauna/vertebrate-fauna-active-and-passive-searching-protocol-shapes/habitat-description/invalid.ttl",
+        expected_failures=13,
+    ).astuple(),
+    TestCaseItem(
         name="vertebrate-fauna-bird-survey-protocol-shapes-weather-site-temperature",
         shapes_path="shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/weather-site-temperature/shapes.ttl",
         valid_data_path="shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/weather-site-temperature/valid.ttl",
