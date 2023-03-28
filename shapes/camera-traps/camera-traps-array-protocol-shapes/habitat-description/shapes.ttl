@@ -7,15 +7,15 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:camera-traps-array:habitat-description:feature-type>
+<urn:shapes:camera-traps-array-protocol-shapes:habitat-description:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _site_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/e1c7c434-1321-4601-9079-e837b7ffc293> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e1c7c434-1321-4601-9079-e837b7ffc293[`site`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _habitat_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/2090cfd9-8b6b-497b-9512-497456a18b99> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2090cfd9-8b6b-497b-9512-497456a18b99[`habitat`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
@@ -32,11 +32,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:camera-traps-array:habitat-description:examples> ;
+    urnp:examples <urn:shapes:camera-traps-array-protocol-shapes:habitat-description:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-traps/camera-traps-array-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-array:habitat-description:result-value>
+<urn:shapes:camera-traps-array-protocol-shapes:habitat-description:result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -185,7 +185,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:camera-traps-array:habitat-description:examples> ;
+    urnp:examples <urn:shapes:camera-traps-array-protocol-shapes:habitat-description:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -198,7 +198,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-traps/camera-traps-array-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-array:habitat-description:simple-result>
+<urn:shapes:camera-traps-array-protocol-shapes:habitat-description:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -226,11 +226,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:camera-traps-array:habitat-description:examples> ;
+    urnp:examples <urn:shapes:camera-traps-array-protocol-shapes:habitat-description:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-traps/camera-traps-array-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-array:habitat-description:site-visit>
+<urn:shapes:camera-traps-array-protocol-shapes:habitat-description:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -256,11 +256,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:camera-traps-array:habitat-description:examples> ;
+    urnp:examples <urn:shapes:camera-traps-array-protocol-shapes:habitat-description:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-traps/camera-traps-array-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-array:habitat-description:used-procedure>
+<urn:shapes:camera-traps-array-protocol-shapes:habitat-description:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -287,11 +287,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:camera-traps-array:habitat-description:examples> ;
+    urnp:examples <urn:shapes:camera-traps-array-protocol-shapes:habitat-description:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-traps/camera-traps-array-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-array:habitat-description:value-type>
+<urn:shapes:camera-traps-array-protocol-shapes:habitat-description:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -323,11 +323,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:camera-traps-array:habitat-description:examples> ;
+    urnp:examples <urn:shapes:camera-traps-array-protocol-shapes:habitat-description:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-traps/camera-traps-array-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-array:habitat-description:vocabulary>
+<urn:shapes:camera-traps-array-protocol-shapes:habitat-description:vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -353,11 +353,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:camera-traps-array:habitat-description:examples> ;
+    urnp:examples <urn:shapes:camera-traps-array-protocol-shapes:habitat-description:examples> ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-traps/camera-traps-array-protocol-shapes/habitat-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-array:habitat-description:examples>
+<urn:shapes:camera-traps-array-protocol-shapes:habitat-description:examples>
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-traps/camera-traps-array-protocol-shapes/habitat-description/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-traps/camera-traps-array-protocol-shapes/habitat-description/valid.ttl"^^xsd:anyURI ;
 .

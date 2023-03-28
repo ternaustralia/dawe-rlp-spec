@@ -1,0 +1,148 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:soil-soil-subsite-sampling-protocol-shapes:invalid:soil-sub-site-microhabitat:datatype>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:string`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b9a72809-6d53-4dad-bac6-bfe4dc76be31>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value 1 ;
+            sosa:isResultOf <urn:test:soil-soil-subsite-sampling-protocol-shapes:invalid:soil-sub-site-microhabitat:datatype>
+        ] ;
+    sosa:hasSimpleResult 1 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/eb69a524-0aa1-4166-a596-d43dbe5ae08f> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-sub-site-microhabitat/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/e3ad3e5b-7c1c-4b59-bdb1-297f707d2ca3> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-subsite-sampling-protocol-shapes:invalid:soil-sub-site-microhabitat:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "There are 2."^^xsd:string ;
+            sosa:isResultOf <urn:test:soil-soil-subsite-sampling-protocol-shapes:invalid:soil-sub-site-microhabitat:feature-type>
+        ] ;
+    sosa:hasSimpleResult "There are 2."^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/eb69a524-0aa1-4166-a596-d43dbe5ae08f> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-sub-site-microhabitat/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/e3ad3e5b-7c1c-4b59-bdb1-297f707d2ca3> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-subsite-sampling-protocol-shapes:invalid:soil-sub-site-microhabitat:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b9a72809-6d53-4dad-bac6-bfe4dc76be31>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "There are 2."^^xsd:string ;
+            sosa:isResultOf <urn:test:soil-soil-subsite-sampling-protocol-shapes:invalid:soil-sub-site-microhabitat:simple-result>
+        ] ;
+    sosa:hasSimpleResult "There are 2. different"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/eb69a524-0aa1-4166-a596-d43dbe5ae08f> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-sub-site-microhabitat/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/e3ad3e5b-7c1c-4b59-bdb1-297f707d2ca3> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-subsite-sampling-protocol-shapes:invalid:soil-sub-site-microhabitat:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b9a72809-6d53-4dad-bac6-bfe4dc76be31>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "There are 2."^^xsd:string ;
+            sosa:isResultOf <urn:test:soil-soil-subsite-sampling-protocol-shapes:invalid:soil-sub-site-microhabitat:site-visit>
+        ] ;
+    sosa:hasSimpleResult "There are 2."^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/eb69a524-0aa1-4166-a596-d43dbe5ae08f> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-sub-site-microhabitat/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/e3ad3e5b-7c1c-4b59-bdb1-297f707d2ca3> ;
+.
+
+<urn:test:soil-soil-subsite-sampling-protocol-shapes:invalid:soil-sub-site-microhabitat:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Soil sub-site samples protocol'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b9a72809-6d53-4dad-bac6-bfe4dc76be31>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "There are 2."^^xsd:string ;
+            sosa:isResultOf <urn:test:soil-soil-subsite-sampling-protocol-shapes:invalid:soil-sub-site-microhabitat:used-procedure>
+        ] ;
+    sosa:hasSimpleResult "There are 2."^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/eb69a524-0aa1-4166-a596-d43dbe5ae08f> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-sub-site-microhabitat/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-subsite-sampling-protocol-shapes:invalid:soil-sub-site-microhabitat:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:Text`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b9a72809-6d53-4dad-bac6-bfe4dc76be31>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value "There are 2."^^xsd:string ;
+            sosa:isResultOf <urn:test:soil-soil-subsite-sampling-protocol-shapes:invalid:soil-sub-site-microhabitat:value-type>
+        ] ;
+    sosa:hasSimpleResult "There are 2."^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/eb69a524-0aa1-4166-a596-d43dbe5ae08f> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-sub-site-microhabitat/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/e3ad3e5b-7c1c-4b59-bdb1-297f707d2ca3> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

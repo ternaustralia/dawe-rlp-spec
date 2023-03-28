@@ -7,15 +7,15 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:opportunistic-observations:growth-form:feature-type>
+<urn:shapes:opportunistic-observations-protocol-shapes:growth-form:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _plant individual_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270[`plant individual`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
@@ -32,11 +32,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations:growth-form:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/growth-form/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:growth-form:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations:growth-form:result-value>
+<urn:shapes:opportunistic-observations-protocol-shapes:growth-form:result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -89,7 +89,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations:growth-form:examples> ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:growth-form:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -99,10 +99,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }
         """ ;
     urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/growth-form/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations:growth-form:simple-result>
+<urn:shapes:opportunistic-observations-protocol-shapes:growth-form:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -130,41 +130,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:opportunistic-observations:growth-form:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/growth-form/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:growth-form:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations:growth-form:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Opportunistic observations are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples <urn:shapes:opportunistic-observations:growth-form:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/growth-form/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:opportunistic-observations:growth-form:used-procedure>
+<urn:shapes:opportunistic-observations-protocol-shapes:growth-form:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -191,11 +161,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations:growth-form:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/growth-form/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:growth-form:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations:growth-form:value-type>
+<urn:shapes:opportunistic-observations-protocol-shapes:growth-form:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -220,11 +190,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations:growth-form:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/growth-form/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:growth-form:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations:growth-form:vocabulary>
+<urn:shapes:opportunistic-observations-protocol-shapes:growth-form:vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -250,12 +220,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations:growth-form:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/growth-form/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:growth-form:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations:growth-form:examples>
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/growth-form/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/growth-form/valid.ttl"^^xsd:anyURI ;
+<urn:shapes:opportunistic-observations-protocol-shapes:growth-form:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/valid.ttl"^^xsd:anyURI ;
 .
 

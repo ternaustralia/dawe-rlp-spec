@@ -1,0 +1,31 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:camera-traps-array-protocol-shapes:valid:redeployment-observations>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - redeployment observations" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/5bf7ae21-a454-440b-bdd7-f2fe982d8de4>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "There are some leaves."^^xsd:string ;
+            sosa:isResultOf <urn:test:camera-traps-array-protocol-shapes:valid:redeployment-observations>
+        ] ;
+    sosa:hasSimpleResult "There are some leaves."^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0adc5740-7e20-4509-949c-12ae72500951> ;
+    sosa:phenomenonTime <https://example.com/observation/redeployment-observations/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/1a6953e4-a830-41f8-9cfd-11ead4dd6bc2> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

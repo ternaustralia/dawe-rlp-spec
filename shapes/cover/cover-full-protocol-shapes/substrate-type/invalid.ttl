@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:cover-full:invalid:substrate-type:feature-type>
+<urn:test:cover-full-protocol-shapes:invalid:substrate-type:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/31d47552-fd76-53d3-b4d7-a20fa603b11f> ;
-            sosa:isResultOf <urn:test:cover-full:invalid:substrate-type:feature-type> ;
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:substrate-type:feature-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/b061d7db-a608-4062-96d4-b367d6d9a792>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/31d47552-fd76-53d3-b4d7-a20fa603b11f> ;
@@ -30,7 +30,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-full:invalid:substrate-type:result-value>
+<urn:test:cover-full-protocol-shapes:invalid:substrate-type:result-value>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
@@ -44,7 +44,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <urn:fake:categorical:value> ;
-            sosa:isResultOf <urn:test:cover-full:invalid:substrate-type:result-value> ;
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:substrate-type:result-value> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/b061d7db-a608-4062-96d4-b367d6d9a792>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
@@ -55,7 +55,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-full:invalid:substrate-type:simple-result>
+<urn:test:cover-full-protocol-shapes:invalid:substrate-type:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -69,7 +69,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/31d47552-fd76-53d3-b4d7-a20fa603b11f> ;
-            sosa:isResultOf <urn:test:cover-full:invalid:substrate-type:simple-result> ;
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:substrate-type:simple-result> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/b061d7db-a608-4062-96d4-b367d6d9a792>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
@@ -80,7 +80,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-full:invalid:substrate-type:site-visit>
+<urn:test:cover-full-protocol-shapes:invalid:substrate-type:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -94,7 +94,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/31d47552-fd76-53d3-b4d7-a20fa603b11f> ;
-            sosa:isResultOf <urn:test:cover-full:invalid:substrate-type:site-visit> ;
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:substrate-type:site-visit> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/b061d7db-a608-4062-96d4-b367d6d9a792>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/31d47552-fd76-53d3-b4d7-a20fa603b11f> ;
@@ -104,7 +104,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/576f634e-2706-4f18-b561-0636d4c007d0> ;
 .
 
-<urn:test:cover-full:invalid:substrate-type:used-procedure>
+<urn:test:cover-full-protocol-shapes:invalid:substrate-type:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Cover - Full protocol'." ;
@@ -118,7 +118,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/31d47552-fd76-53d3-b4d7-a20fa603b11f> ;
-            sosa:isResultOf <urn:test:cover-full:invalid:substrate-type:used-procedure> ;
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:substrate-type:used-procedure> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/b061d7db-a608-4062-96d4-b367d6d9a792>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/31d47552-fd76-53d3-b4d7-a20fa603b11f> ;
@@ -129,7 +129,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-full:invalid:substrate-type:value-type>
+<urn:test:cover-full-protocol-shapes:invalid:substrate-type:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
@@ -141,7 +141,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasResult [
             a tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/31d47552-fd76-53d3-b4d7-a20fa603b11f> ;
-            sosa:isResultOf <urn:test:cover-full:invalid:substrate-type:value-type> ;
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:substrate-type:value-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/b061d7db-a608-4062-96d4-b367d6d9a792>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/31d47552-fd76-53d3-b4d7-a20fa603b11f> ;
@@ -152,7 +152,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-full:invalid:substrate-type:vocabulary>
+<urn:test:cover-full-protocol-shapes:invalid:substrate-type:vocabulary>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect vocabulary" ;
@@ -166,7 +166,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/31d47552-fd76-53d3-b4d7-a20fa603b11f> ;
-            sosa:isResultOf <urn:test:cover-full:invalid:substrate-type:vocabulary> ;
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:substrate-type:vocabulary> ;
             tern:vocabulary <urn:fake:vocabulary>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/31d47552-fd76-53d3-b4d7-a20fa603b11f> ;

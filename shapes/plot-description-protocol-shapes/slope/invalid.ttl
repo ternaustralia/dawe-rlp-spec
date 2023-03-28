@@ -6,7 +6,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:invalid:slope:datatype>
+<urn:test:plot-description-protocol-shapes:invalid:slope:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:float`." ;
@@ -20,7 +20,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value 3 ;
-            sosa:isResultOf <urn:test:plot-description:invalid:slope:datatype> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:slope:datatype> ;
             tern:unit unit:DEG
         ] ;
     sosa:hasSimpleResult 3 ;
@@ -31,7 +31,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:slope:feature-type>
+<urn:test:plot-description-protocol-shapes:invalid:slope:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -45,7 +45,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:slope:feature-type> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:slope:feature-type> ;
             tern:unit unit:DEG
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
@@ -56,7 +56,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:slope:simple-result>
+<urn:test:plot-description-protocol-shapes:invalid:slope:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -70,7 +70,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:slope:simple-result> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:slope:simple-result> ;
             tern:unit unit:DEG
         ] ;
     sosa:hasSimpleResult "13.56"^^xsd:float ;
@@ -81,7 +81,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:slope:site-visit>
+<urn:test:plot-description-protocol-shapes:invalid:slope:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -95,7 +95,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:slope:site-visit> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:slope:site-visit> ;
             tern:unit unit:DEG
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
@@ -105,7 +105,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
 .
 
-<urn:test:plot-description:invalid:slope:unit-of-measure>
+<urn:test:plot-description-protocol-shapes:invalid:slope:unit-of-measure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result unit of measure" ;
@@ -119,7 +119,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:slope:unit-of-measure> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:slope:unit-of-measure> ;
             tern:unit <urn:fake:unit>
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
@@ -130,7 +130,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:slope:used-procedure>
+<urn:test:plot-description-protocol-shapes:invalid:slope:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Plot Description'." ;
@@ -144,7 +144,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:slope:used-procedure> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:slope:used-procedure> ;
             tern:unit unit:DEG
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
@@ -155,7 +155,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:slope:value-range>
+<urn:test:plot-description-protocol-shapes:invalid:slope:value-range>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value out of range" ;
@@ -169,7 +169,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "91.1"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:slope:value-range> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:slope:value-range> ;
             tern:unit unit:DEG
         ] ;
     sosa:hasSimpleResult "91.1"^^xsd:float ;
@@ -180,7 +180,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:slope:value-type>
+<urn:test:plot-description-protocol-shapes:invalid:slope:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:Float`." ;
@@ -192,7 +192,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasResult [
             a tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plot-description:invalid:slope:value-type> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:slope:value-type> ;
             tern:unit unit:DEG
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;

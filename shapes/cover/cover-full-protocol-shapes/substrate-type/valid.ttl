@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:cover-full:valid:substrate-type>
+<urn:test:cover-full-protocol-shapes:valid:substrate-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Valid result for observable property - substrate type" ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/31d47552-fd76-53d3-b4d7-a20fa603b11f> ;
-            sosa:isResultOf <urn:test:cover-full:valid:substrate-type> ;
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:valid:substrate-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/b061d7db-a608-4062-96d4-b367d6d9a792>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/31d47552-fd76-53d3-b4d7-a20fa603b11f> ;

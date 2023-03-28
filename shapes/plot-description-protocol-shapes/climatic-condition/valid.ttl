@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:valid:climatic-condition>
+<urn:test:plot-description-protocol-shapes:valid:climatic-condition>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Valid result for observable property - climatic condition" ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/1050727c-1d88-5639-8b69-60c8c69994b9> ;
-            sosa:isResultOf <urn:test:plot-description:valid:climatic-condition> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:valid:climatic-condition> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/2ebfee89-92db-44b3-bb89-06dd92798ae6>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/1050727c-1d88-5639-8b69-60c8c69994b9> ;

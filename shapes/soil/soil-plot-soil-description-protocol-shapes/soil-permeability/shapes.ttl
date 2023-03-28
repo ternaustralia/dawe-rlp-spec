@@ -13,9 +13,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _landform_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd[`landform`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _soil profile_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/80c39b95-0912-4267-bb66-2fa081683723> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/80c39b95-0912-4267-bb66-2fa081683723[`soil profile`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
@@ -48,7 +48,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             <https://linked.data.gov.au/def/nrm/1472c58d-b03f-5139-a168-8566fec9fc9d>
             <https://linked.data.gov.au/def/nrm/5d248ba2-5b21-5cd0-acde-899f913d94e1>
             <https://linked.data.gov.au/def/nrm/7e2da19e-25dc-5520-8f64-0b9e7f259381>
-            <https://linked.data.gov.au/def/nrm/cc4efbef-38b7-5583-9054-9f664f79f233>
         ) ;
     sh:message "The value of `rdf:value` _MUST_ exist in the Soils permeabilities codes controlled vocabulary." ;
     sh:name "Result value" ;
