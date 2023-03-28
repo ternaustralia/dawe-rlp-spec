@@ -2747,10 +2747,10 @@ test_cases: List[TestCaseItem] = [
         expected_failures=6,
     ).astuple(),
     TestCaseItem(
-        name="targeted-survey-ecological-community-protocol-shapes-condition-threshholds",
-        shapes_path="shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-threshholds/shapes.ttl",
-        valid_data_path="shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-threshholds/valid.ttl",
-        invalid_data_path="shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-threshholds/invalid.ttl",
+        name="targeted-survey-ecological-community-protocol-shapes-condition-thresholds",
+        shapes_path="shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-thresholds/shapes.ttl",
+        valid_data_path="shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-thresholds/valid.ttl",
+        invalid_data_path="shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/condition-thresholds/invalid.ttl",
         expected_failures=6,
     ).astuple(),
     TestCaseItem(
@@ -2765,6 +2765,13 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/species-and-cover/shapes.ttl",
         valid_data_path="shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/species-and-cover/valid.ttl",
         invalid_data_path="shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/species-and-cover/invalid.ttl",
+        expected_failures=6,
+    ).astuple(),
+    TestCaseItem(
+        name="targeted-survey-ecological-community-protocol-shapes-diagnostic-characteristics",
+        shapes_path="shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/diagnostic-characteristics/shapes.ttl",
+        valid_data_path="shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/diagnostic-characteristics/valid.ttl",
+        invalid_data_path="shapes/targeted-survey/targeted-survey-ecological-community-protocol-shapes/diagnostic-characteristics/invalid.ttl",
         expected_failures=6,
     ).astuple(),
     TestCaseItem(
