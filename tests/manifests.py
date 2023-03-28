@@ -2831,11 +2831,18 @@ test_cases: List[TestCaseItem] = [
         expected_failures=7,
     ).astuple(),
     TestCaseItem(
-        name="targeted-survey-fauna-passive-protocol-shapes-fauna-weight",
-        shapes_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/fauna-weight/shapes.ttl",
-        valid_data_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/fauna-weight/valid.ttl",
-        invalid_data_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/fauna-weight/invalid.ttl",
+        name="targeted-survey-fauna-passive-protocol-shapes-animal-weight",
+        shapes_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/animal-weight/shapes.ttl",
+        valid_data_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/animal-weight/valid.ttl",
+        invalid_data_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/animal-weight/invalid.ttl",
         expected_failures=8,
+    ).astuple(),
+    TestCaseItem(
+        name="targeted-survey-fauna-passive-protocol-shapes-microhabitat",
+        shapes_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/microhabitat/shapes.ttl",
+        valid_data_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/microhabitat/valid.ttl",
+        invalid_data_path="shapes/targeted-survey/targeted-survey-fauna/targeted-survey-fauna-passive-protocol-shapes/microhabitat/invalid.ttl",
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="targeted-survey-fauna-active-protocol-shapes-habitat-description",
