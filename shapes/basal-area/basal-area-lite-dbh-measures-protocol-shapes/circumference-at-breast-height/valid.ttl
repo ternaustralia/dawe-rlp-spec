@@ -1,0 +1,33 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:basal-area-lite-dbh-measures-protocol-shapes:valid:circumference-at-breast-height>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - circumference at breast height" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "1.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:basal-area-lite-dbh-measures-protocol-shapes:valid:circumference-at-breast-height> ;
+            tern:unit unit:M
+        ] ;
+    sosa:hasSimpleResult "1.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/2d042596-d49a-4139-92f5-dc0f23737e76> ;
+    sosa:phenomenonTime <https://example.com/observation/circumference-at-breast-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/cd83fb3e-d8d3-4502-a618-a0f3f8712b27> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
