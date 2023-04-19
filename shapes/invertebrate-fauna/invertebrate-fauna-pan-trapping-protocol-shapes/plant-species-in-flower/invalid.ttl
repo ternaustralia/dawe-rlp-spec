@@ -1,0 +1,148 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:invertebrate-fauna-pan-trapping-protocol-shapes:invalid:plant-species-in-flower:datatype>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:string`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value 1 ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-pan-trapping-protocol-shapes:invalid:plant-species-in-flower:datatype>
+        ] ;
+    sosa:hasSimpleResult 1 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/2d95624b-e04e-4826-b97d-b74b90db4d56> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-species-in-flower/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/666e5aa5-e545-4637-bc52-a296d647b303> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:invertebrate-fauna-pan-trapping-protocol-shapes:invalid:plant-species-in-flower:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "Grass"^^xsd:string ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-pan-trapping-protocol-shapes:invalid:plant-species-in-flower:feature-type>
+        ] ;
+    sosa:hasSimpleResult "Grass"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/2d95624b-e04e-4826-b97d-b74b90db4d56> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-species-in-flower/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/666e5aa5-e545-4637-bc52-a296d647b303> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:invertebrate-fauna-pan-trapping-protocol-shapes:invalid:plant-species-in-flower:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "Grass"^^xsd:string ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-pan-trapping-protocol-shapes:invalid:plant-species-in-flower:simple-result>
+        ] ;
+    sosa:hasSimpleResult "Grass different"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/2d95624b-e04e-4826-b97d-b74b90db4d56> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-species-in-flower/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/666e5aa5-e545-4637-bc52-a296d647b303> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:invertebrate-fauna-pan-trapping-protocol-shapes:invalid:plant-species-in-flower:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "Grass"^^xsd:string ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-pan-trapping-protocol-shapes:invalid:plant-species-in-flower:site-visit>
+        ] ;
+    sosa:hasSimpleResult "Grass"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/2d95624b-e04e-4826-b97d-b74b90db4d56> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-species-in-flower/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/666e5aa5-e545-4637-bc52-a296d647b303> ;
+.
+
+<urn:test:invertebrate-fauna-pan-trapping-protocol-shapes:invalid:plant-species-in-flower:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Pan trapping protocol'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "Grass"^^xsd:string ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-pan-trapping-protocol-shapes:invalid:plant-species-in-flower:used-procedure>
+        ] ;
+    sosa:hasSimpleResult "Grass"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/2d95624b-e04e-4826-b97d-b74b90db4d56> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-species-in-flower/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:invertebrate-fauna-pan-trapping-protocol-shapes:invalid:plant-species-in-flower:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:Text`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value "Grass"^^xsd:string ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-pan-trapping-protocol-shapes:invalid:plant-species-in-flower:value-type>
+        ] ;
+    sosa:hasSimpleResult "Grass"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/2d95624b-e04e-4826-b97d-b74b90db4d56> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-species-in-flower/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/666e5aa5-e545-4637-bc52-a296d647b303> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

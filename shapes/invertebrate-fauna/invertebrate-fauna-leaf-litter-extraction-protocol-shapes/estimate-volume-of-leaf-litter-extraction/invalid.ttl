@@ -1,0 +1,205 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:invalid:estimate-volume-of-leaf-litter-extraction:datatype>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:float`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/e6ed6e58-5916-4d31-9ed5-109ab3436fce>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:invalid:estimate-volume-of-leaf-litter-extraction:datatype> ;
+            tern:unit unit:L
+        ] ;
+    sosa:hasSimpleResult 3 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e2f04c7-a576-4565-8e4f-2d53a5e26ef7> ;
+    sosa:phenomenonTime <https://example.com/observation/estimate-volume-of-leaf-litter-extraction/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/e9a8e65a-59d3-49f0-831d-094c568c5284> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:invalid:estimate-volume-of-leaf-litter-extraction:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:invalid:estimate-volume-of-leaf-litter-extraction:feature-type> ;
+            tern:unit unit:L
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e2f04c7-a576-4565-8e4f-2d53a5e26ef7> ;
+    sosa:phenomenonTime <https://example.com/observation/estimate-volume-of-leaf-litter-extraction/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/e9a8e65a-59d3-49f0-831d-094c568c5284> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:invalid:estimate-volume-of-leaf-litter-extraction:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/e6ed6e58-5916-4d31-9ed5-109ab3436fce>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:invalid:estimate-volume-of-leaf-litter-extraction:simple-result> ;
+            tern:unit unit:L
+        ] ;
+    sosa:hasSimpleResult "13.56"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e2f04c7-a576-4565-8e4f-2d53a5e26ef7> ;
+    sosa:phenomenonTime <https://example.com/observation/estimate-volume-of-leaf-litter-extraction/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/e9a8e65a-59d3-49f0-831d-094c568c5284> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:invalid:estimate-volume-of-leaf-litter-extraction:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/e6ed6e58-5916-4d31-9ed5-109ab3436fce>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:invalid:estimate-volume-of-leaf-litter-extraction:site-visit> ;
+            tern:unit unit:L
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e2f04c7-a576-4565-8e4f-2d53a5e26ef7> ;
+    sosa:phenomenonTime <https://example.com/observation/estimate-volume-of-leaf-litter-extraction/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/e9a8e65a-59d3-49f0-831d-094c568c5284> ;
+.
+
+<urn:test:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:invalid:estimate-volume-of-leaf-litter-extraction:unit-of-measure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result unit of measure" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/e6ed6e58-5916-4d31-9ed5-109ab3436fce>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:invalid:estimate-volume-of-leaf-litter-extraction:unit-of-measure> ;
+            tern:unit <urn:fake:unit>
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e2f04c7-a576-4565-8e4f-2d53a5e26ef7> ;
+    sosa:phenomenonTime <https://example.com/observation/estimate-volume-of-leaf-litter-extraction/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/e9a8e65a-59d3-49f0-831d-094c568c5284> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:invalid:estimate-volume-of-leaf-litter-extraction:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Leaf-litter extraction protocol'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/e6ed6e58-5916-4d31-9ed5-109ab3436fce>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:invalid:estimate-volume-of-leaf-litter-extraction:used-procedure> ;
+            tern:unit unit:L
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e2f04c7-a576-4565-8e4f-2d53a5e26ef7> ;
+    sosa:phenomenonTime <https://example.com/observation/estimate-volume-of-leaf-litter-extraction/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:invalid:estimate-volume-of-leaf-litter-extraction:value-range>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value out of range" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/e6ed6e58-5916-4d31-9ed5-109ab3436fce>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "0.0"^^xsd:float ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:invalid:estimate-volume-of-leaf-litter-extraction:value-range> ;
+            tern:unit unit:L
+        ] ;
+    sosa:hasSimpleResult "0.0"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e2f04c7-a576-4565-8e4f-2d53a5e26ef7> ;
+    sosa:phenomenonTime <https://example.com/observation/estimate-volume-of-leaf-litter-extraction/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/e9a8e65a-59d3-49f0-831d-094c568c5284> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:invalid:estimate-volume-of-leaf-litter-extraction:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:Float`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/e6ed6e58-5916-4d31-9ed5-109ab3436fce>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:invertebrate-fauna-leaf-litter-extraction-protocol-shapes:invalid:estimate-volume-of-leaf-litter-extraction:value-type> ;
+            tern:unit unit:L
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e2f04c7-a576-4565-8e4f-2d53a5e26ef7> ;
+    sosa:phenomenonTime <https://example.com/observation/estimate-volume-of-leaf-litter-extraction/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/e9a8e65a-59d3-49f0-831d-094c568c5284> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
