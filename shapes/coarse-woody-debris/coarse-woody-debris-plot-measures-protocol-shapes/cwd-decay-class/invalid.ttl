@@ -1,0 +1,179 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:cwd-decay-class:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/93a9ea83-e535-5bf6-82da-3a730ad83d4c> ;
+            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:cwd-decay-class:feature-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/b5180d8a-75b6-4bca-9413-0e507e910387>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/93a9ea83-e535-5bf6-82da-3a730ad83d4c> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fa986148-e44a-4cd3-8ac3-17748eb013f3> ;
+    sosa:phenomenonTime <https://example.com/observation/cwd-decay-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:cwd-decay-class:result-value>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/c001183f-c6b5-4162-8de9-0c7ed0eb3bfe>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <urn:fake:categorical:value> ;
+            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:cwd-decay-class:result-value> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/b5180d8a-75b6-4bca-9413-0e507e910387>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fa986148-e44a-4cd3-8ac3-17748eb013f3> ;
+    sosa:phenomenonTime <https://example.com/observation/cwd-decay-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:cwd-decay-class:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/c001183f-c6b5-4162-8de9-0c7ed0eb3bfe>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/93a9ea83-e535-5bf6-82da-3a730ad83d4c> ;
+            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:cwd-decay-class:simple-result> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/b5180d8a-75b6-4bca-9413-0e507e910387>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fa986148-e44a-4cd3-8ac3-17748eb013f3> ;
+    sosa:phenomenonTime <https://example.com/observation/cwd-decay-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:cwd-decay-class:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/c001183f-c6b5-4162-8de9-0c7ed0eb3bfe>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/93a9ea83-e535-5bf6-82da-3a730ad83d4c> ;
+            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:cwd-decay-class:site-visit> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/b5180d8a-75b6-4bca-9413-0e507e910387>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/93a9ea83-e535-5bf6-82da-3a730ad83d4c> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fa986148-e44a-4cd3-8ac3-17748eb013f3> ;
+    sosa:phenomenonTime <https://example.com/observation/cwd-decay-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
+.
+
+<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:cwd-decay-class:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Plots measures protocol'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/c001183f-c6b5-4162-8de9-0c7ed0eb3bfe>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/93a9ea83-e535-5bf6-82da-3a730ad83d4c> ;
+            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:cwd-decay-class:used-procedure> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/b5180d8a-75b6-4bca-9413-0e507e910387>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/93a9ea83-e535-5bf6-82da-3a730ad83d4c> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fa986148-e44a-4cd3-8ac3-17748eb013f3> ;
+    sosa:phenomenonTime <https://example.com/observation/cwd-decay-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:cwd-decay-class:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/c001183f-c6b5-4162-8de9-0c7ed0eb3bfe>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/93a9ea83-e535-5bf6-82da-3a730ad83d4c> ;
+            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:cwd-decay-class:value-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/b5180d8a-75b6-4bca-9413-0e507e910387>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/93a9ea83-e535-5bf6-82da-3a730ad83d4c> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fa986148-e44a-4cd3-8ac3-17748eb013f3> ;
+    sosa:phenomenonTime <https://example.com/observation/cwd-decay-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:cwd-decay-class:vocabulary>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect vocabulary" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/c001183f-c6b5-4162-8de9-0c7ed0eb3bfe>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/93a9ea83-e535-5bf6-82da-3a730ad83d4c> ;
+            sosa:isResultOf <urn:test:coarse-woody-debris-plot-measures-protocol-shapes:invalid:cwd-decay-class:vocabulary> ;
+            tern:vocabulary <urn:fake:vocabulary>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/93a9ea83-e535-5bf6-82da-3a730ad83d4c> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fa986148-e44a-4cd3-8ac3-17748eb013f3> ;
+    sosa:phenomenonTime <https://example.com/observation/cwd-decay-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7d50794a-8784-4ab9-99ff-a324bb6e0831> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
