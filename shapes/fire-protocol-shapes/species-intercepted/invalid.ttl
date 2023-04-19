@@ -1,0 +1,148 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:fire-protocol-shapes:invalid:species-intercepted:datatype>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:string`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value 1 ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:species-intercepted:datatype>
+        ] ;
+    sosa:hasSimpleResult 1 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/20c219f2-1526-4365-8f77-569cec5f1731> ;
+    sosa:phenomenonTime <https://example.com/observation/species-intercepted/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:fire-protocol-shapes:invalid:species-intercepted:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "Bee"^^xsd:string ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:species-intercepted:feature-type>
+        ] ;
+    sosa:hasSimpleResult "Bee"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/20c219f2-1526-4365-8f77-569cec5f1731> ;
+    sosa:phenomenonTime <https://example.com/observation/species-intercepted/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:fire-protocol-shapes:invalid:species-intercepted:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "Bee"^^xsd:string ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:species-intercepted:simple-result>
+        ] ;
+    sosa:hasSimpleResult "Bee different"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/20c219f2-1526-4365-8f77-569cec5f1731> ;
+    sosa:phenomenonTime <https://example.com/observation/species-intercepted/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:fire-protocol-shapes:invalid:species-intercepted:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "Bee"^^xsd:string ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:species-intercepted:site-visit>
+        ] ;
+    sosa:hasSimpleResult "Bee"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/20c219f2-1526-4365-8f77-569cec5f1731> ;
+    sosa:phenomenonTime <https://example.com/observation/species-intercepted/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+.
+
+<urn:test:fire-protocol-shapes:invalid:species-intercepted:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Fire'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "Bee"^^xsd:string ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:species-intercepted:used-procedure>
+        ] ;
+    sosa:hasSimpleResult "Bee"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/20c219f2-1526-4365-8f77-569cec5f1731> ;
+    sosa:phenomenonTime <https://example.com/observation/species-intercepted/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:fire-protocol-shapes:invalid:species-intercepted:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:Text`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value "Bee"^^xsd:string ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:species-intercepted:value-type>
+        ] ;
+    sosa:hasSimpleResult "Bee"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/20c219f2-1526-4365-8f77-569cec5f1731> ;
+    sosa:phenomenonTime <https://example.com/observation/species-intercepted/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

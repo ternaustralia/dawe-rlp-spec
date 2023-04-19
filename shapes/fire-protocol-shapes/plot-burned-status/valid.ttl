@@ -1,0 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:fire-protocol-shapes:valid:plot-burned-status>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - plot burned status" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/5bf7ae21-a454-440b-bdd7-f2fe982d8de4>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/81a8fa69-2f20-5a28-880d-8401759f9194> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:valid:plot-burned-status> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/5662a7dd-c1da-4659-8290-a1e6e42c879f>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/81a8fa69-2f20-5a28-880d-8401759f9194> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/8eb830f7-a0ec-42d6-8170-dbe2f4d56db2> ;
+    sosa:phenomenonTime <https://example.com/observation/plot-burned-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
