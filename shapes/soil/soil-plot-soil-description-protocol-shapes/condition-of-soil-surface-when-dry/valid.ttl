@@ -1,0 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:soil-plot-soil-description-protocol-shapes:valid:condition-of-soil-surface-when-dry>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - condition of soil surface when dry" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/06e143c6-e60c-5cfc-ac00-218e3cfae384> ;
+            sosa:isResultOf <urn:test:soil-plot-soil-description-protocol-shapes:valid:condition-of-soil-surface-when-dry> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/253cc4d0-b1f2-4a55-bdaf-e3c054703451>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/06e143c6-e60c-5cfc-ac00-218e3cfae384> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/3a1ccb70-41dc-4f57-a74c-62e05aa02c61> ;
+    sosa:phenomenonTime <https://example.com/observation/condition-of-soil-surface-when-dry/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7818e122-6354-42e0-aeff-32dbab7baae4> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

@@ -1,0 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:soil-plot-soil-description-protocol-shapes:valid:rock-outcrop-abundance>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - rock outcrop abundance" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/798b71b5-b0af-532f-8eef-9df4289dd770> ;
+            sosa:isResultOf <urn:test:soil-plot-soil-description-protocol-shapes:valid:rock-outcrop-abundance> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/c06f57b7-fde3-47c6-b410-8db0ec7e68e1>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/798b71b5-b0af-532f-8eef-9df4289dd770> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fc03df84-7ac9-47c6-9b7b-1da3dcb36364> ;
+    sosa:phenomenonTime <https://example.com/observation/rock-outcrop-abundance/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7818e122-6354-42e0-aeff-32dbab7baae4> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

@@ -1,0 +1,179 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:asc-subgroup:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/008401fd-1b02-57a9-8490-f8b6c393e73c> ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:asc-subgroup:feature-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/430ebf92-824e-4dc6-9410-2b454fe8a063>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/008401fd-1b02-57a9-8490-f8b6c393e73c> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/cd334597-fedc-40cd-86e4-71295d8a222f> ;
+    sosa:phenomenonTime <https://example.com/observation/asc-subgroup/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:asc-subgroup:result-value>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b9a72809-6d53-4dad-bac6-bfe4dc76be31>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <urn:fake:categorical:value> ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:asc-subgroup:result-value> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/430ebf92-824e-4dc6-9410-2b454fe8a063>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/cd334597-fedc-40cd-86e4-71295d8a222f> ;
+    sosa:phenomenonTime <https://example.com/observation/asc-subgroup/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:asc-subgroup:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b9a72809-6d53-4dad-bac6-bfe4dc76be31>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/008401fd-1b02-57a9-8490-f8b6c393e73c> ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:asc-subgroup:simple-result> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/430ebf92-824e-4dc6-9410-2b454fe8a063>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/cd334597-fedc-40cd-86e4-71295d8a222f> ;
+    sosa:phenomenonTime <https://example.com/observation/asc-subgroup/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:asc-subgroup:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b9a72809-6d53-4dad-bac6-bfe4dc76be31>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/008401fd-1b02-57a9-8490-f8b6c393e73c> ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:asc-subgroup:site-visit> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/430ebf92-824e-4dc6-9410-2b454fe8a063>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/008401fd-1b02-57a9-8490-f8b6c393e73c> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/cd334597-fedc-40cd-86e4-71295d8a222f> ;
+    sosa:phenomenonTime <https://example.com/observation/asc-subgroup/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+.
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:asc-subgroup:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Soil pit characterization protocol'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b9a72809-6d53-4dad-bac6-bfe4dc76be31>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/008401fd-1b02-57a9-8490-f8b6c393e73c> ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:asc-subgroup:used-procedure> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/430ebf92-824e-4dc6-9410-2b454fe8a063>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/008401fd-1b02-57a9-8490-f8b6c393e73c> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/cd334597-fedc-40cd-86e4-71295d8a222f> ;
+    sosa:phenomenonTime <https://example.com/observation/asc-subgroup/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:asc-subgroup:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b9a72809-6d53-4dad-bac6-bfe4dc76be31>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/008401fd-1b02-57a9-8490-f8b6c393e73c> ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:asc-subgroup:value-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/430ebf92-824e-4dc6-9410-2b454fe8a063>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/008401fd-1b02-57a9-8490-f8b6c393e73c> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/cd334597-fedc-40cd-86e4-71295d8a222f> ;
+    sosa:phenomenonTime <https://example.com/observation/asc-subgroup/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:asc-subgroup:vocabulary>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect vocabulary" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b9a72809-6d53-4dad-bac6-bfe4dc76be31>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/008401fd-1b02-57a9-8490-f8b6c393e73c> ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:invalid:asc-subgroup:vocabulary> ;
+            tern:vocabulary <urn:fake:vocabulary>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/008401fd-1b02-57a9-8490-f8b6c393e73c> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/cd334597-fedc-40cd-86e4-71295d8a222f> ;
+    sosa:phenomenonTime <https://example.com/observation/asc-subgroup/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

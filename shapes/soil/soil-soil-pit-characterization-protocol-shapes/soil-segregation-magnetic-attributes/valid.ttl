@@ -1,0 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:valid:soil-segregation-magnetic-attributes>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - soil segregation magnetic attributes" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/de1e18e4-6cfd-4c78-b389-a5b1dd04b899>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/68450df8-26e6-5fec-9829-77d768d217de> ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:valid:soil-segregation-magnetic-attributes> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/f503ff93-f7d7-4419-9d1e-6807e96dc2c1>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/68450df8-26e6-5fec-9829-77d768d217de> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/764d2097-c55e-46c4-a64b-2bc2204c22af> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-segregation-magnetic-attributes/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

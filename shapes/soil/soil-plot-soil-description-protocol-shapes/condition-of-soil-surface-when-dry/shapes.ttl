@@ -1,0 +1,251 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:soil-plot-soil-description-protocol-shapes:condition-of-soil-surface-when-dry:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/3a1ccb70-41dc-4f57-a74c-62e05aa02c61>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:condition-of-soil-surface-when-dry:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/condition-of-soil-surface-when-dry/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-plot-soil-description-protocol-shapes:condition-of-soil-surface-when-dry:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Soils surface soil conditions codes controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/06e143c6-e60c-5cfc-ac00-218e3cfae384>
+            <https://linked.data.gov.au/def/nrm/108f3ebb-5b43-51ca-a15e-d6ecdacb6e61>
+            <https://linked.data.gov.au/def/nrm/1a6c4bc0-91f7-58c9-a69b-63182705874f>
+            <https://linked.data.gov.au/def/nrm/34b65cbe-f176-5163-966f-cb540c3af19f>
+            <https://linked.data.gov.au/def/nrm/4c7607a3-2ce0-5d74-9ee8-896e6cffc2f1>
+            <https://linked.data.gov.au/def/nrm/699d5c94-9564-5b01-a114-84022663ed29>
+            <https://linked.data.gov.au/def/nrm/6fcc7473-de79-58d7-bd0a-c8c69ca0331f>
+            <https://linked.data.gov.au/def/nrm/788e26e2-3659-5a57-a7e2-7c6fa0be2469>
+            <https://linked.data.gov.au/def/nrm/79e8d218-a4ef-56fb-a3b9-fd6d05677672>
+            <https://linked.data.gov.au/def/nrm/9e1b6812-6d41-54c9-ac5b-5bb60d801760>
+            <https://linked.data.gov.au/def/nrm/b3a9442d-b8d1-5815-8905-ae73c8a2c0c0>
+            <https://linked.data.gov.au/def/nrm/b91be657-855f-5fe2-9700-5eb8da80df18>
+            <https://linked.data.gov.au/def/nrm/c0fa37ed-8a77-5041-84dc-b9396fd3af25>
+            <https://linked.data.gov.au/def/nrm/c2d261cf-b5ae-5c75-98fc-55cfeb66ab09>
+            <https://linked.data.gov.au/def/nrm/c78bc925-e666-5bbd-ada6-03588e8d2cc3>
+            <https://linked.data.gov.au/def/nrm/d581f8bd-fe9a-5e46-b8cc-24a72ac58546>
+            <https://linked.data.gov.au/def/nrm/e9973051-e696-5ea2-bb11-3e57e0f9acdc>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Soils surface soil conditions codes controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/3a1ccb70-41dc-4f57-a74c-62e05aa02c61> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:condition-of-soil-surface-when-dry:examples> ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'253cc4d0-b1f2-4a55-bdaf-e3c054703451'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/condition-of-soil-surface-when-dry/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-plot-soil-description-protocol-shapes:condition-of-soil-surface-when-dry:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/3a1ccb70-41dc-4f57-a74c-62e05aa02c61>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:condition-of-soil-surface-when-dry:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/condition-of-soil-surface-when-dry/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-plot-soil-description-protocol-shapes:condition-of-soil-surface-when-dry:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Plot soil description protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/3a1ccb70-41dc-4f57-a74c-62e05aa02c61>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:condition-of-soil-surface-when-dry:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/condition-of-soil-surface-when-dry/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-plot-soil-description-protocol-shapes:condition-of-soil-surface-when-dry:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/7818e122-6354-42e0-aeff-32dbab7baae4>`.
+
+    `<https://linked.data.gov.au/def/nrm/7818e122-6354-42e0-aeff-32dbab7baae4>` is the IRI for "Plot soil description protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/7818e122-6354-42e0-aeff-32dbab7baae4> ;
+    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/7818e122-6354-42e0-aeff-32dbab7baae4`." ;
+    sh:name "Used procedure" ;
+    sh:path <http://www.w3.org/ns/sosa/usedProcedure> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/3a1ccb70-41dc-4f57-a74c-62e05aa02c61>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:condition-of-soil-surface-when-dry:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/condition-of-soil-surface-when-dry/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-plot-soil-description-protocol-shapes:condition-of-soil-surface-when-dry:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path <http://www.w3.org/ns/sosa/hasResult> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/3a1ccb70-41dc-4f57-a74c-62e05aa02c61>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:condition-of-soil-surface-when-dry:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/condition-of-soil-surface-when-dry/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-plot-soil-description-protocol-shapes:condition-of-soil-surface-when-dry:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/253cc4d0-b1f2-4a55-bdaf-e3c054703451>`.
+
+        `<https://linked.data.gov.au/def/nrm/253cc4d0-b1f2-4a55-bdaf-e3c054703451>` is the IRI for "Soils surface soil conditions codes".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `253cc4d0-b1f2-4a55-bdaf-e3c054703451$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "253cc4d0-b1f2-4a55-bdaf-e3c054703451$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/3a1ccb70-41dc-4f57-a74c-62e05aa02c61> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:condition-of-soil-surface-when-dry:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/condition-of-soil-surface-when-dry/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-plot-soil-description-protocol-shapes:condition-of-soil-surface-when-dry:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/condition-of-soil-surface-when-dry/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/condition-of-soil-surface-when-dry/valid.ttl"^^xsd:anyURI ;
+.
+

@@ -1,0 +1,324 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-lithology:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/5af5cef1-179c-4bae-9037-42196668deff>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-lithology:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/rock-outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-lithology:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Soil lithology codes controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/027e370b-cd03-5ed3-ab3e-dff1638582ad>
+            <https://linked.data.gov.au/def/nrm/029bfdee-45a0-59fe-8149-28559678d958>
+            <https://linked.data.gov.au/def/nrm/08dec3d3-240a-5ab9-b0f0-b9333d88f310>
+            <https://linked.data.gov.au/def/nrm/09cb838f-23cd-5388-b1a8-12a9e515a1a4>
+            <https://linked.data.gov.au/def/nrm/0baa361e-04a1-57ab-a722-7202c0cea90a>
+            <https://linked.data.gov.au/def/nrm/10f28c37-8936-5a12-a2d4-769a1faecd9c>
+            <https://linked.data.gov.au/def/nrm/12641da9-9ed0-50f4-a9b6-c59419a9efb3>
+            <https://linked.data.gov.au/def/nrm/12dc3322-9cf6-5aef-acb6-02448b1d1bba>
+            <https://linked.data.gov.au/def/nrm/145012e5-27f1-5468-9f74-0d6901633f22>
+            <https://linked.data.gov.au/def/nrm/17f2a1b5-8e0a-558e-994e-79f92dd07610>
+            <https://linked.data.gov.au/def/nrm/18e7b6b8-1b52-5fdd-ba86-fefb7d6191ec>
+            <https://linked.data.gov.au/def/nrm/19c98718-1f5b-532d-8f3a-455ad533b10d>
+            <https://linked.data.gov.au/def/nrm/1f146dc2-754c-5b0e-a786-45681f6483ad>
+            <https://linked.data.gov.au/def/nrm/2168b713-2474-5d8e-95e3-7c259fe349b2>
+            <https://linked.data.gov.au/def/nrm/22fc3c3f-1c3c-500c-a5f4-562b84fc609c>
+            <https://linked.data.gov.au/def/nrm/2451fea9-dce4-5924-8d7a-69d13c418f6a>
+            <https://linked.data.gov.au/def/nrm/2585cedc-373e-557b-ab75-843acff06fb7>
+            <https://linked.data.gov.au/def/nrm/27ad6b8b-d84e-5fcc-a105-f3e88fe73024>
+            <https://linked.data.gov.au/def/nrm/2917589b-db3c-5545-8098-fc661648a1d4>
+            <https://linked.data.gov.au/def/nrm/3296719d-9e85-50f6-a40b-ac6c9b623ffc>
+            <https://linked.data.gov.au/def/nrm/33ecdc05-ac1c-58aa-bf6a-01159864bed8>
+            <https://linked.data.gov.au/def/nrm/3474dce0-8899-524d-a71f-58b74f7f9ac0>
+            <https://linked.data.gov.au/def/nrm/3958d42a-e3c3-5436-91af-edce7981f797>
+            <https://linked.data.gov.au/def/nrm/3997a998-d60b-5b3d-901d-33e7eaaa5253>
+            <https://linked.data.gov.au/def/nrm/3d1e1de1-7eba-5c05-b47a-712376aa191e>
+            <https://linked.data.gov.au/def/nrm/3e43d242-c428-5aa8-8208-95e2f8a1592e>
+            <https://linked.data.gov.au/def/nrm/3fee4427-cada-5770-8592-523d0a670d51>
+            <https://linked.data.gov.au/def/nrm/41dc915b-6df0-5cdd-af01-6c3c81bac2ac>
+            <https://linked.data.gov.au/def/nrm/44464f3f-641f-51e7-abf0-2ef9c7cf475a>
+            <https://linked.data.gov.au/def/nrm/463a6a9b-af59-5338-9f34-d554276023aa>
+            <https://linked.data.gov.au/def/nrm/4887f3d3-ebd5-5378-a373-96e4b5434726>
+            <https://linked.data.gov.au/def/nrm/4b7edca6-106c-58b6-861d-d5056328cc36>
+            <https://linked.data.gov.au/def/nrm/4e9896db-a274-5330-968c-d46f5adffff8>
+            <https://linked.data.gov.au/def/nrm/507cb40e-942c-509e-8219-7a9f54194173>
+            <https://linked.data.gov.au/def/nrm/50cf5a6e-37c7-5385-832a-7eb993c13b1d>
+            <https://linked.data.gov.au/def/nrm/50dffaba-e7de-58ef-9ceb-3ccfb96bba81>
+            <https://linked.data.gov.au/def/nrm/5284a237-cb94-55f8-9a1a-69dc2464d89b>
+            <https://linked.data.gov.au/def/nrm/58168015-2625-534a-a70b-e7fba1c07369>
+            <https://linked.data.gov.au/def/nrm/5a01408c-198f-55db-a0fb-927280a8cdea>
+            <https://linked.data.gov.au/def/nrm/5fcd3e90-a85f-5062-a140-876e5835cb30>
+            <https://linked.data.gov.au/def/nrm/6bad4e81-7fb7-5f18-ab9d-7b80b5f8c694>
+            <https://linked.data.gov.au/def/nrm/70106079-ccdf-5149-8d80-6bb642bf75b6>
+            <https://linked.data.gov.au/def/nrm/71b40707-0f02-519b-9c82-0f662ddd7075>
+            <https://linked.data.gov.au/def/nrm/728c8e1c-5854-5caa-81d0-0d95488448fd>
+            <https://linked.data.gov.au/def/nrm/7293a386-56e8-5cf0-a7a5-66db9c6ff55c>
+            <https://linked.data.gov.au/def/nrm/734c2b92-a3cf-5ae4-a837-4f5e680e548e>
+            <https://linked.data.gov.au/def/nrm/7505371e-e0f9-5da2-aa6c-cd366438069d>
+            <https://linked.data.gov.au/def/nrm/7bdc629f-718b-5e3e-83ba-3b2935d13d86>
+            <https://linked.data.gov.au/def/nrm/8044cc12-7782-5ce7-bc4b-b2df5b7aed40>
+            <https://linked.data.gov.au/def/nrm/858393ce-aa8f-5d9b-93a8-a651638fc8d1>
+            <https://linked.data.gov.au/def/nrm/88a83416-b029-5379-9341-459abcd9590b>
+            <https://linked.data.gov.au/def/nrm/91df0c49-5dbe-5f65-84de-877ea8e708f4>
+            <https://linked.data.gov.au/def/nrm/948f25f7-c801-50cf-9995-03c5daae17f2>
+            <https://linked.data.gov.au/def/nrm/95a09d2e-c830-512f-b6a2-bf593cd4693f>
+            <https://linked.data.gov.au/def/nrm/9c279981-19f9-571d-8a0e-b2637361d062>
+            <https://linked.data.gov.au/def/nrm/9c599bde-1bdb-5a81-9881-ade78ab09e25>
+            <https://linked.data.gov.au/def/nrm/9d5af2f8-c724-5e77-b843-d3de3c1d6879>
+            <https://linked.data.gov.au/def/nrm/a044804c-a5b0-5d39-b9ff-2a928ae45f23>
+            <https://linked.data.gov.au/def/nrm/a1381c50-02ab-5c53-990d-fe4f775e8448>
+            <https://linked.data.gov.au/def/nrm/a59645be-1860-57ec-baf6-b034c7f66960>
+            <https://linked.data.gov.au/def/nrm/a5bbbf1f-6b23-52df-9aed-df348e6f5533>
+            <https://linked.data.gov.au/def/nrm/a8d96fc4-ec12-5e6c-8a85-aded703829a6>
+            <https://linked.data.gov.au/def/nrm/ab48f339-f5b4-5e95-b2aa-bd1f794ce8c3>
+            <https://linked.data.gov.au/def/nrm/acac0b80-5377-5c1b-940d-72f4f48781ce>
+            <https://linked.data.gov.au/def/nrm/b5a1ee0e-dc70-54e5-b5b9-9a15cc2fda8d>
+            <https://linked.data.gov.au/def/nrm/b95fd032-690a-5ee1-b132-22e697d5d3ab>
+            <https://linked.data.gov.au/def/nrm/b9828421-8848-54ab-ba3e-7de6a3247ccf>
+            <https://linked.data.gov.au/def/nrm/c4c45aa5-001c-5111-adcf-4cc025f3dd41>
+            <https://linked.data.gov.au/def/nrm/c8125707-aa90-5201-a112-eec215e34367>
+            <https://linked.data.gov.au/def/nrm/cb2c5f31-9531-563a-95a1-5f60385f061f>
+            <https://linked.data.gov.au/def/nrm/cb371ee4-c188-53f6-a5e2-622ad5c8bb1e>
+            <https://linked.data.gov.au/def/nrm/d3be91ad-fb8d-5bba-be7c-bb83f5c3034f>
+            <https://linked.data.gov.au/def/nrm/d6d6e8aa-073e-5be1-bee3-c5cfd9653c54>
+            <https://linked.data.gov.au/def/nrm/d71fcf34-7c51-57a2-9f93-4a45ca59876d>
+            <https://linked.data.gov.au/def/nrm/da957ca7-f9f2-5dbc-90e9-bf84c2a303e7>
+            <https://linked.data.gov.au/def/nrm/df493475-1e2a-5dc4-9a3b-3b30e25f84ab>
+            <https://linked.data.gov.au/def/nrm/e3c6ba0c-e067-5981-88d3-6eb88aad3641>
+            <https://linked.data.gov.au/def/nrm/e3ddc519-c5f6-5037-a8b7-babc778a11f1>
+            <https://linked.data.gov.au/def/nrm/e74ef1f1-38d6-59d5-bb0d-062a00d6b64f>
+            <https://linked.data.gov.au/def/nrm/e780aea4-de24-5d15-bf04-dd48196c7f04>
+            <https://linked.data.gov.au/def/nrm/e946d7d5-a5f2-59cf-8901-9dce9e10bb4c>
+            <https://linked.data.gov.au/def/nrm/e9b589b3-7af4-5277-a665-8ed7e953c850>
+            <https://linked.data.gov.au/def/nrm/ed43155f-a622-5a0d-b856-05a6ee79497e>
+            <https://linked.data.gov.au/def/nrm/ede58606-203b-5eb5-8222-e1740a5721b9>
+            <https://linked.data.gov.au/def/nrm/efaacb13-7f68-5505-874c-faa91050d930>
+            <https://linked.data.gov.au/def/nrm/f0bd80dc-a494-5d03-b951-d9c8321d523a>
+            <https://linked.data.gov.au/def/nrm/f0c5f59b-0086-5761-b930-6e2b173328a8>
+            <https://linked.data.gov.au/def/nrm/f4601fcd-2023-548e-b63a-a025434c805c>
+            <https://linked.data.gov.au/def/nrm/f9c4ac49-cbd8-5a3a-804a-623b341c923c>
+            <https://linked.data.gov.au/def/nrm/fe648618-c8f4-54fa-9a64-2182f2442342>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Soil lithology codes controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/5af5cef1-179c-4bae-9037-42196668deff> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-lithology:examples> ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'1d50eb79-685f-45ea-84b4-627154eddede'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/rock-outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-lithology:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/5af5cef1-179c-4bae-9037-42196668deff>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-lithology:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/rock-outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-lithology:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Plot soil description protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/5af5cef1-179c-4bae-9037-42196668deff>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-lithology:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/rock-outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-lithology:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/7818e122-6354-42e0-aeff-32dbab7baae4>`.
+
+    `<https://linked.data.gov.au/def/nrm/7818e122-6354-42e0-aeff-32dbab7baae4>` is the IRI for "Plot soil description protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/7818e122-6354-42e0-aeff-32dbab7baae4> ;
+    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/7818e122-6354-42e0-aeff-32dbab7baae4`." ;
+    sh:name "Used procedure" ;
+    sh:path <http://www.w3.org/ns/sosa/usedProcedure> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/5af5cef1-179c-4bae-9037-42196668deff>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-lithology:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/rock-outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-lithology:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path <http://www.w3.org/ns/sosa/hasResult> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/5af5cef1-179c-4bae-9037-42196668deff>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-lithology:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/rock-outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-lithology:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/1d50eb79-685f-45ea-84b4-627154eddede>`.
+
+        `<https://linked.data.gov.au/def/nrm/1d50eb79-685f-45ea-84b4-627154eddede>` is the IRI for "Soil lithology codes".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `1d50eb79-685f-45ea-84b4-627154eddede$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "1d50eb79-685f-45ea-84b4-627154eddede$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/5af5cef1-179c-4bae-9037-42196668deff> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples <urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-lithology:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/rock-outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-plot-soil-description-protocol-shapes:rock-outcrop-lithology:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/rock-outcrop-lithology/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soil/soil-plot-soil-description-protocol-shapes/rock-outcrop-lithology/valid.ttl"^^xsd:anyURI ;
+.
+

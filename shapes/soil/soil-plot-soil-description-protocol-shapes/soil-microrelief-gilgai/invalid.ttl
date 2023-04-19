@@ -1,0 +1,179 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:soil-plot-soil-description-protocol-shapes:invalid:soil-microrelief-gilgai:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/196622c6-944f-57d0-818f-df63f27558a4> ;
+            sosa:isResultOf <urn:test:soil-plot-soil-description-protocol-shapes:invalid:soil-microrelief-gilgai:feature-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/ca5e075d-fc73-4953-8564-18e9e15175cb>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/196622c6-944f-57d0-818f-df63f27558a4> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/46dc0c67-027b-4a79-bbf5-d12d39fe01f0> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-microrelief-gilgai/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7818e122-6354-42e0-aeff-32dbab7baae4> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-plot-soil-description-protocol-shapes:invalid:soil-microrelief-gilgai:result-value>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <urn:fake:categorical:value> ;
+            sosa:isResultOf <urn:test:soil-plot-soil-description-protocol-shapes:invalid:soil-microrelief-gilgai:result-value> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/ca5e075d-fc73-4953-8564-18e9e15175cb>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/46dc0c67-027b-4a79-bbf5-d12d39fe01f0> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-microrelief-gilgai/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7818e122-6354-42e0-aeff-32dbab7baae4> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-plot-soil-description-protocol-shapes:invalid:soil-microrelief-gilgai:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/196622c6-944f-57d0-818f-df63f27558a4> ;
+            sosa:isResultOf <urn:test:soil-plot-soil-description-protocol-shapes:invalid:soil-microrelief-gilgai:simple-result> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/ca5e075d-fc73-4953-8564-18e9e15175cb>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/46dc0c67-027b-4a79-bbf5-d12d39fe01f0> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-microrelief-gilgai/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7818e122-6354-42e0-aeff-32dbab7baae4> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-plot-soil-description-protocol-shapes:invalid:soil-microrelief-gilgai:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/196622c6-944f-57d0-818f-df63f27558a4> ;
+            sosa:isResultOf <urn:test:soil-plot-soil-description-protocol-shapes:invalid:soil-microrelief-gilgai:site-visit> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/ca5e075d-fc73-4953-8564-18e9e15175cb>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/196622c6-944f-57d0-818f-df63f27558a4> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/46dc0c67-027b-4a79-bbf5-d12d39fe01f0> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-microrelief-gilgai/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7818e122-6354-42e0-aeff-32dbab7baae4> ;
+.
+
+<urn:test:soil-plot-soil-description-protocol-shapes:invalid:soil-microrelief-gilgai:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Plot soil description protocol'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/196622c6-944f-57d0-818f-df63f27558a4> ;
+            sosa:isResultOf <urn:test:soil-plot-soil-description-protocol-shapes:invalid:soil-microrelief-gilgai:used-procedure> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/ca5e075d-fc73-4953-8564-18e9e15175cb>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/196622c6-944f-57d0-818f-df63f27558a4> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/46dc0c67-027b-4a79-bbf5-d12d39fe01f0> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-microrelief-gilgai/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-plot-soil-description-protocol-shapes:invalid:soil-microrelief-gilgai:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/196622c6-944f-57d0-818f-df63f27558a4> ;
+            sosa:isResultOf <urn:test:soil-plot-soil-description-protocol-shapes:invalid:soil-microrelief-gilgai:value-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/ca5e075d-fc73-4953-8564-18e9e15175cb>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/196622c6-944f-57d0-818f-df63f27558a4> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/46dc0c67-027b-4a79-bbf5-d12d39fe01f0> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-microrelief-gilgai/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7818e122-6354-42e0-aeff-32dbab7baae4> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-plot-soil-description-protocol-shapes:invalid:soil-microrelief-gilgai:vocabulary>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect vocabulary" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/196622c6-944f-57d0-818f-df63f27558a4> ;
+            sosa:isResultOf <urn:test:soil-plot-soil-description-protocol-shapes:invalid:soil-microrelief-gilgai:vocabulary> ;
+            tern:vocabulary <urn:fake:vocabulary>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/196622c6-944f-57d0-818f-df63f27558a4> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/46dc0c67-027b-4a79-bbf5-d12d39fe01f0> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-microrelief-gilgai/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7818e122-6354-42e0-aeff-32dbab7baae4> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

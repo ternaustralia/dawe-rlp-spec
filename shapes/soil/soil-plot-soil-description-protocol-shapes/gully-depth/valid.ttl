@@ -1,0 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:soil-plot-soil-description-protocol-shapes:valid:gully-depth>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - gully depth" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/18c2e528-25dd-5587-bd4c-c0bf16e0dce1> ;
+            sosa:isResultOf <urn:test:soil-plot-soil-description-protocol-shapes:valid:gully-depth> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/7f0eb236-c8e8-4473-8f11-214487ba1d8a>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/18c2e528-25dd-5587-bd4c-c0bf16e0dce1> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/4aa9e813-8c4c-4fa6-953b-32c59fdd97be> ;
+    sosa:phenomenonTime <https://example.com/observation/gully-depth/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7818e122-6354-42e0-aeff-32dbab7baae4> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

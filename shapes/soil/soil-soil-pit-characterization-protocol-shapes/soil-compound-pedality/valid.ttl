@@ -1,0 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:soil-soil-pit-characterization-protocol-shapes:valid:soil-compound-pedality>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - soil compound pedality" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/de1e18e4-6cfd-4c78-b389-a5b1dd04b899>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/1a87385a-954f-590d-8549-05d73808ce00> ;
+            sosa:isResultOf <urn:test:soil-soil-pit-characterization-protocol-shapes:valid:soil-compound-pedality> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/75de6044-7575-472a-9a72-2c9006a8c9b1>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/1a87385a-954f-590d-8549-05d73808ce00> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/180f3ff5-a3ea-4b85-a947-f5a14156e833> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-compound-pedality/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
