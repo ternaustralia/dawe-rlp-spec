@@ -7,15 +7,15 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:opportunistic-observations:breeding-status:feature-type>
+<urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _animal individual_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7[`animal individual`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
@@ -32,11 +32,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations:breeding-status:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/breeding-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/breeding-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations:breeding-status:result-value>
+<urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -72,7 +72,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations:breeding-status:examples> ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:examples> ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -82,10 +82,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }
         """ ;
     urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/breeding-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/breeding-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations:breeding-status:simple-result>
+<urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -113,11 +113,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:opportunistic-observations:breeding-status:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/breeding-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/breeding-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations:breeding-status:used-procedure>
+<urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -144,11 +144,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations:breeding-status:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/breeding-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/breeding-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations:breeding-status:value-type>
+<urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -173,11 +173,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations:breeding-status:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/breeding-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/breeding-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations:breeding-status:vocabulary>
+<urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -203,12 +203,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations:breeding-status:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/breeding-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/breeding-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations:breeding-status:examples>
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/breeding-status/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations/breeding-status/valid.ttl"^^xsd:anyURI ;
+<urn:shapes:opportunistic-observations-protocol-shapes:breeding-status:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/breeding-status/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/breeding-status/valid.ttl"^^xsd:anyURI ;
 .
 

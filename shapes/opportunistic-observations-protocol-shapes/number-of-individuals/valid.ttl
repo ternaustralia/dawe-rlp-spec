@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:opportunistic-observations:valid:number-of-individuals>
+<urn:test:opportunistic-observations-protocol-shapes:valid:number-of-individuals>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Valid result for observable property - number of individuals" ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Integer ,
                 tern:Value ;
             rdf:value 3 ;
-            sosa:isResultOf <urn:test:opportunistic-observations:valid:number-of-individuals>
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:valid:number-of-individuals>
         ] ;
     sosa:hasSimpleResult 3 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/b2d28629-c986-4c05-9d4a-8b05e99a0a94> ;

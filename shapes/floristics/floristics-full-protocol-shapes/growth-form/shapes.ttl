@@ -1,0 +1,261 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:floristics-full-protocol-shapes:growth-form:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _plant individual_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270[`plant individual`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples <urn:shapes:floristics-full-protocol-shapes:growth-form:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-full-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:floristics-full-protocol-shapes:growth-form:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Growth form codes controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/062132e9-426e-56c8-9c92-2781692bdd0c>
+            <https://linked.data.gov.au/def/nrm/0c0c23e2-47c1-56c7-8fa0-3ac241caf196>
+            <https://linked.data.gov.au/def/nrm/0f6de186-e8a9-5445-87f2-5aaf927a0f6d>
+            <https://linked.data.gov.au/def/nrm/1b532a75-319d-5a3c-af12-76348fa0cec4>
+            <https://linked.data.gov.au/def/nrm/1e3ff92d-f2dc-5b87-827e-d9603c29e537>
+            <https://linked.data.gov.au/def/nrm/2de905be-b280-54ba-b9a7-7c6f088f301c>
+            <https://linked.data.gov.au/def/nrm/37512bb9-f5a9-5cc5-9f66-3c9c94d98958>
+            <https://linked.data.gov.au/def/nrm/5661df01-90d6-5a3a-93c9-ce41bf1f9cb5>
+            <https://linked.data.gov.au/def/nrm/5b669769-cfda-5e2f-a311-acc06cd1ff02>
+            <https://linked.data.gov.au/def/nrm/616c356b-38ff-500e-bc9a-a55b60c6e1e8>
+            <https://linked.data.gov.au/def/nrm/8a2f124b-4c90-5b35-b421-aa7447fb2f30>
+            <https://linked.data.gov.au/def/nrm/8f4fd07c-a8a8-5e6f-81b3-4506a6a2d629>
+            <https://linked.data.gov.au/def/nrm/922ed906-5ab9-5f14-b6ae-d7b24deccdeb>
+            <https://linked.data.gov.au/def/nrm/9882cf8c-6c69-5991-b505-6e34ae02563d>
+            <https://linked.data.gov.au/def/nrm/9dd59dcd-7311-50fc-a657-603703fbf023>
+            <https://linked.data.gov.au/def/nrm/a7e63c10-9eae-5187-af68-f1ddd8e9ea27>
+            <https://linked.data.gov.au/def/nrm/b5a5217d-6d51-5c8a-9728-e4fb5ca8afaf>
+            <https://linked.data.gov.au/def/nrm/b95c55f0-ea57-5a77-a416-2fd6cf378014>
+            <https://linked.data.gov.au/def/nrm/bc5db7f8-3b75-58d3-ab8f-2c0076807221>
+            <https://linked.data.gov.au/def/nrm/c2eae401-0ac0-507e-bbfe-fe0bf9545f66>
+            <https://linked.data.gov.au/def/nrm/cce3d3df-85ee-5609-9e0d-3d7383843b3a>
+            <https://linked.data.gov.au/def/nrm/d647f263-dd3f-5626-bd6e-0e86131e6106>
+            <https://linked.data.gov.au/def/nrm/dfdbbd27-e0d9-52c6-96a0-d88ff882aab7>
+            <https://linked.data.gov.au/def/nrm/e20d86ce-6cd9-5a88-9b4d-ccafbb8e3a51>
+            <https://linked.data.gov.au/def/nrm/ea88802e-3465-51c8-b437-8da61208a395>
+            <https://linked.data.gov.au/def/nrm/eb5f51a6-0a5c-5e67-883d-35883fcf3ba3>
+            <https://linked.data.gov.au/def/nrm/ef6a07fa-47ce-5cf4-ad06-218556c0dde4>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Growth form codes controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples <urn:shapes:floristics-full-protocol-shapes:growth-form:examples> ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'d0fc07a7-3ec9-45ed-8850-885a32828d3c'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-full-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:floristics-full-protocol-shapes:growth-form:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples <urn:shapes:floristics-full-protocol-shapes:growth-form:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-full-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:floristics-full-protocol-shapes:growth-form:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Floristics - Full protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples <urn:shapes:floristics-full-protocol-shapes:growth-form:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-full-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:floristics-full-protocol-shapes:growth-form:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/35175f0d-bdd7-4e32-908f-17f7239e78fa>`.
+
+    `<https://linked.data.gov.au/def/nrm/35175f0d-bdd7-4e32-908f-17f7239e78fa>` is the IRI for "Floristics - Full protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/35175f0d-bdd7-4e32-908f-17f7239e78fa> ;
+    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/35175f0d-bdd7-4e32-908f-17f7239e78fa`." ;
+    sh:name "Used procedure" ;
+    sh:path <http://www.w3.org/ns/sosa/usedProcedure> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples <urn:shapes:floristics-full-protocol-shapes:growth-form:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-full-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:floristics-full-protocol-shapes:growth-form:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path <http://www.w3.org/ns/sosa/hasResult> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples <urn:shapes:floristics-full-protocol-shapes:growth-form:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-full-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:floristics-full-protocol-shapes:growth-form:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>`.
+
+        `<https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>` is the IRI for "Growth form codes".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `d0fc07a7-3ec9-45ed-8850-885a32828d3c$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "d0fc07a7-3ec9-45ed-8850-885a32828d3c$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples <urn:shapes:floristics-full-protocol-shapes:growth-form:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-full-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:floristics-full-protocol-shapes:growth-form:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-full-protocol-shapes/growth-form/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-full-protocol-shapes/growth-form/valid.ttl"^^xsd:anyURI ;
+.
+

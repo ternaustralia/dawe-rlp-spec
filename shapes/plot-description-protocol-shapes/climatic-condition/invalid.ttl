@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:invalid:climatic-condition:feature-type>
+<urn:test:plot-description-protocol-shapes:invalid:climatic-condition:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/1050727c-1d88-5639-8b69-60c8c69994b9> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:climatic-condition:feature-type> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:climatic-condition:feature-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/2ebfee89-92db-44b3-bb89-06dd92798ae6>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/1050727c-1d88-5639-8b69-60c8c69994b9> ;
@@ -30,7 +30,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:climatic-condition:result-value>
+<urn:test:plot-description-protocol-shapes:invalid:climatic-condition:result-value>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
@@ -44,7 +44,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <urn:fake:categorical:value> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:climatic-condition:result-value> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:climatic-condition:result-value> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/2ebfee89-92db-44b3-bb89-06dd92798ae6>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
@@ -55,7 +55,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:climatic-condition:simple-result>
+<urn:test:plot-description-protocol-shapes:invalid:climatic-condition:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -69,7 +69,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/1050727c-1d88-5639-8b69-60c8c69994b9> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:climatic-condition:simple-result> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:climatic-condition:simple-result> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/2ebfee89-92db-44b3-bb89-06dd92798ae6>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
@@ -80,7 +80,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:climatic-condition:site-visit>
+<urn:test:plot-description-protocol-shapes:invalid:climatic-condition:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -94,7 +94,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/1050727c-1d88-5639-8b69-60c8c69994b9> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:climatic-condition:site-visit> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:climatic-condition:site-visit> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/2ebfee89-92db-44b3-bb89-06dd92798ae6>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/1050727c-1d88-5639-8b69-60c8c69994b9> ;
@@ -104,7 +104,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/1ff9e97c-3bdd-44c9-bdd3-401fa31c0b32> ;
 .
 
-<urn:test:plot-description:invalid:climatic-condition:used-procedure>
+<urn:test:plot-description-protocol-shapes:invalid:climatic-condition:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Plot Description'." ;
@@ -118,7 +118,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/1050727c-1d88-5639-8b69-60c8c69994b9> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:climatic-condition:used-procedure> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:climatic-condition:used-procedure> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/2ebfee89-92db-44b3-bb89-06dd92798ae6>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/1050727c-1d88-5639-8b69-60c8c69994b9> ;
@@ -129,7 +129,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:climatic-condition:value-type>
+<urn:test:plot-description-protocol-shapes:invalid:climatic-condition:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
@@ -141,7 +141,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasResult [
             a tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/1050727c-1d88-5639-8b69-60c8c69994b9> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:climatic-condition:value-type> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:climatic-condition:value-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/2ebfee89-92db-44b3-bb89-06dd92798ae6>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/1050727c-1d88-5639-8b69-60c8c69994b9> ;
@@ -152,7 +152,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description:invalid:climatic-condition:vocabulary>
+<urn:test:plot-description-protocol-shapes:invalid:climatic-condition:vocabulary>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect vocabulary" ;
@@ -166,7 +166,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/1050727c-1d88-5639-8b69-60c8c69994b9> ;
-            sosa:isResultOf <urn:test:plot-description:invalid:climatic-condition:vocabulary> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:invalid:climatic-condition:vocabulary> ;
             tern:vocabulary <urn:fake:vocabulary>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/1050727c-1d88-5639-8b69-60c8c69994b9> ;

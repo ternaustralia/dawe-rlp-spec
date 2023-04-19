@@ -5,21 +5,21 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plot-description:valid:growth-stage>
+<urn:test:plot-description-protocol-shapes:valid:growth-stage>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Valid result for observable property - growth stage" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
         ] ;
     sosa:hasResult [
             a
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/1215ec81-a8a8-5100-b846-c50931e6fa27> ;
-            sosa:isResultOf <urn:test:plot-description:valid:growth-stage> ;
+            sosa:isResultOf <urn:test:plot-description-protocol-shapes:valid:growth-stage> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/1215ec81-a8a8-5100-b846-c50931e6fa27> ;

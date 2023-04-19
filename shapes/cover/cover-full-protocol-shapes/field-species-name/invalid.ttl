@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:cover-full:invalid:field-species-name:datatype>
+<urn:test:cover-full-protocol-shapes:invalid:field-species-name:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:string`." ;
@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Text ,
                 tern:Value ;
             rdf:value 1 ;
-            sosa:isResultOf <urn:test:cover-full:invalid:field-species-name:datatype>
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:field-species-name:datatype>
         ] ;
     sosa:hasSimpleResult 1 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
@@ -29,7 +29,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-full:invalid:field-species-name:feature-type>
+<urn:test:cover-full-protocol-shapes:invalid:field-species-name:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -43,7 +43,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Text ,
                 tern:Value ;
             rdf:value "Bee"^^xsd:string ;
-            sosa:isResultOf <urn:test:cover-full:invalid:field-species-name:feature-type>
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:field-species-name:feature-type>
         ] ;
     sosa:hasSimpleResult "Bee"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
@@ -53,7 +53,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-full:invalid:field-species-name:simple-result>
+<urn:test:cover-full-protocol-shapes:invalid:field-species-name:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -67,7 +67,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Text ,
                 tern:Value ;
             rdf:value "Bee"^^xsd:string ;
-            sosa:isResultOf <urn:test:cover-full:invalid:field-species-name:simple-result>
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:field-species-name:simple-result>
         ] ;
     sosa:hasSimpleResult "Bee different"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
@@ -77,7 +77,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-full:invalid:field-species-name:site-visit>
+<urn:test:cover-full-protocol-shapes:invalid:field-species-name:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -91,7 +91,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Text ,
                 tern:Value ;
             rdf:value "Bee"^^xsd:string ;
-            sosa:isResultOf <urn:test:cover-full:invalid:field-species-name:site-visit>
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:field-species-name:site-visit>
         ] ;
     sosa:hasSimpleResult "Bee"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
@@ -100,7 +100,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/576f634e-2706-4f18-b561-0636d4c007d0> ;
 .
 
-<urn:test:cover-full:invalid:field-species-name:used-procedure>
+<urn:test:cover-full-protocol-shapes:invalid:field-species-name:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Cover - Full protocol'." ;
@@ -114,7 +114,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Text ,
                 tern:Value ;
             rdf:value "Bee"^^xsd:string ;
-            sosa:isResultOf <urn:test:cover-full:invalid:field-species-name:used-procedure>
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:field-species-name:used-procedure>
         ] ;
     sosa:hasSimpleResult "Bee"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
@@ -124,7 +124,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-full:invalid:field-species-name:value-type>
+<urn:test:cover-full-protocol-shapes:invalid:field-species-name:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:Text`." ;
@@ -136,7 +136,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasResult [
             a tern:Value ;
             rdf:value "Bee"^^xsd:string ;
-            sosa:isResultOf <urn:test:cover-full:invalid:field-species-name:value-type>
+            sosa:isResultOf <urn:test:cover-full-protocol-shapes:invalid:field-species-name:value-type>
         ] ;
     sosa:hasSimpleResult "Bee"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;

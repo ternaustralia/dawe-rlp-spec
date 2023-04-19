@@ -5,21 +5,21 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:opportunistic-observations:valid:growth-form>
+<urn:test:opportunistic-observations-protocol-shapes:valid:growth-form>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Valid result for observable property - growth form" ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
         ] ;
     sosa:hasResult [
             a
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/062132e9-426e-56c8-9c92-2781692bdd0c> ;
-            sosa:isResultOf <urn:test:opportunistic-observations:valid:growth-form> ;
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:valid:growth-form> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/062132e9-426e-56c8-9c92-2781692bdd0c> ;
