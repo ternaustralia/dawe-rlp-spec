@@ -1,0 +1,31 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:condition-vertebrate-pest-presence-plot-protocol-shapes:valid:insect-damage>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - insect damage" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Boolean ,
+                tern:Value ;
+            rdf:value true ;
+            sosa:isResultOf <urn:test:condition-vertebrate-pest-presence-plot-protocol-shapes:valid:insect-damage>
+        ] ;
+    sosa:hasSimpleResult true ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/33e79578-0946-4f21-9607-ca501e1500c7> ;
+    sosa:phenomenonTime <https://example.com/observation/insect-damage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/1471b076-9b9e-4b69-ace5-5985a5af8e78> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

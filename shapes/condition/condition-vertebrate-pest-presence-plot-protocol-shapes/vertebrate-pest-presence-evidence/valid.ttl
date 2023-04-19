@@ -1,0 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:condition-vertebrate-pest-presence-plot-protocol-shapes:valid:vertebrate-pest-presence-evidence>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - vertebrate pest presence evidence" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/336e2a4f-47c7-5663-a38d-63d339030200> ;
+            sosa:isResultOf <urn:test:condition-vertebrate-pest-presence-plot-protocol-shapes:valid:vertebrate-pest-presence-evidence> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/69638c57-1c38-47e1-8bae-c821411c3a30>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/336e2a4f-47c7-5663-a38d-63d339030200> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/adc24cd3-b652-4696-bca0-b881b0111cdb> ;
+    sosa:phenomenonTime <https://example.com/observation/vertebrate-pest-presence-evidence/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/1471b076-9b9e-4b69-ace5-5985a5af8e78> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
