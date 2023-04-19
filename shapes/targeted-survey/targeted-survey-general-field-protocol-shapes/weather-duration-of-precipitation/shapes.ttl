@@ -1,0 +1,240 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _climate_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/6d40d71e-58cd-4f75-8304-40c01fe5f74c> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/6d40d71e-58cd-4f75-8304-40c01fe5f74c[`climate`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/25d4c7b7-4cdf-4b69-8774-064055c74e23>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples <urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-general-field-protocol-shapes/weather-duration-of-precipitation/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Weather precipitation durations codes controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/043224b6-b49b-519c-b1cf-687fd889398f>
+            <https://linked.data.gov.au/def/nrm/2ffa4ecf-4c43-5b26-8108-d17ee569e6df>
+            <https://linked.data.gov.au/def/nrm/3d4ddbdc-2e12-5a82-a5f5-0493b464c4ab>
+            <https://linked.data.gov.au/def/nrm/3e505206-a9f8-59fa-955e-d5734e54eed4>
+            <https://linked.data.gov.au/def/nrm/4870ca14-3b8d-5470-bef9-19613894c282>
+            <https://linked.data.gov.au/def/nrm/5e1db835-b0d8-5c11-b45f-8415d90a1ca3>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Weather precipitation durations codes controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/25d4c7b7-4cdf-4b69-8774-064055c74e23> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples <urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:examples> ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'34789810-a3bc-4def-9ddb-d14ff4ba02ea'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-general-field-protocol-shapes/weather-duration-of-precipitation/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/25d4c7b7-4cdf-4b69-8774-064055c74e23>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples <urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-general-field-protocol-shapes/weather-duration-of-precipitation/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the General field survey details protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/25d4c7b7-4cdf-4b69-8774-064055c74e23>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples <urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-general-field-protocol-shapes/weather-duration-of-precipitation/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/33544e85-741a-4646-ba32-c820486f0a33>`.
+
+    `<https://linked.data.gov.au/def/nrm/33544e85-741a-4646-ba32-c820486f0a33>` is the IRI for "General field survey details protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/33544e85-741a-4646-ba32-c820486f0a33> ;
+    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/33544e85-741a-4646-ba32-c820486f0a33`." ;
+    sh:name "Used procedure" ;
+    sh:path <http://www.w3.org/ns/sosa/usedProcedure> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/25d4c7b7-4cdf-4b69-8774-064055c74e23>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples <urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-general-field-protocol-shapes/weather-duration-of-precipitation/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path <http://www.w3.org/ns/sosa/hasResult> ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/25d4c7b7-4cdf-4b69-8774-064055c74e23>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples <urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-general-field-protocol-shapes/weather-duration-of-precipitation/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/34789810-a3bc-4def-9ddb-d14ff4ba02ea>`.
+
+        `<https://linked.data.gov.au/def/nrm/34789810-a3bc-4def-9ddb-d14ff4ba02ea>` is the IRI for "Weather precipitation durations codes".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `34789810-a3bc-4def-9ddb-d14ff4ba02ea$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "34789810-a3bc-4def-9ddb-d14ff4ba02ea$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/25d4c7b7-4cdf-4b69-8774-064055c74e23> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples <urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:examples> ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-general-field-protocol-shapes/weather-duration-of-precipitation/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:targeted-survey-general-field-protocol-shapes:weather-duration-of-precipitation:examples>
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-general-field-protocol-shapes/weather-duration-of-precipitation/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/targeted-survey/targeted-survey-general-field-protocol-shapes/weather-duration-of-precipitation/valid.ttl"^^xsd:anyURI ;
+.
+

@@ -1,0 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:targeted-survey-fauna-passive-protocol-shapes:valid:microhabitat>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - microhabitat" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2090cfd9-8b6b-497b-9512-497456a18b99>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/04e42790-e9d5-569d-b716-cf00760b652b> ;
+            sosa:isResultOf <urn:test:targeted-survey-fauna-passive-protocol-shapes:valid:microhabitat> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/2cf23037-6afa-4523-8e9f-0bd86190ccc8>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/04e42790-e9d5-569d-b716-cf00760b652b> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/6ca76175-3404-41d4-8ca7-2ade3947f00e> ;
+    sosa:phenomenonTime <https://example.com/observation/microhabitat/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/4741800d-1b44-4805-a849-4436c80ff911> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
