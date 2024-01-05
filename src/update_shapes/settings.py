@@ -1,4 +1,4 @@
-from rdflib import Namespace
+from rdflib import Namespace, Literal
 
 URNC = Namespace("urn:class:")
 URNP = Namespace("urn:property:")
@@ -8,3 +8,5 @@ UNIT = Namespace("http://qudt.org/vocab/unit/")
 
 dawe_endpoint = "https://graphdb.tern.org.au/repositories/dawe_vocabs_core"
 tern_endpoint = "https://graphdb.tern.org.au/repositories/tern_vocabs_core"
+
+source = Literal("Ecological Monitoring System Australia (EMSA) Protocols")
