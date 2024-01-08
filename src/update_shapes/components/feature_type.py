@@ -1,5 +1,5 @@
-from rdflib import URIRef, SH, DCTERMS, Graph, Literal
-from settings import URNC, URNP, REG, TERN
+from rdflib import URIRef, SH, Graph, Literal
+from settings import TERN
 from common import add_common_properties, generate_target_bnode, generate_example_files_node, link_shapes_file
 import string
 
@@ -69,5 +69,5 @@ def generate_feature_type_shapes(op_collection_folder_path, op_shapes_folder_pat
 
     # Add link of SHACL shapes file
     g = link_shapes_file(g, uri, op_collection_folder_path, op_shapes_folder_path)
-    
+
     return g

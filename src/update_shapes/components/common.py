@@ -19,6 +19,17 @@ def generate_target_bnode(g, uri, query):
 
     return g
 
+
+def generate_sparql_bnode(g, uri, query):
+    sparql_bnode = BNode()
+    g.add((uri, SH.sparql, sparql_bnode))
+    g.add(
+        (sparql_bnode, SH.select, Literal(query))
+    )
+
+    return g
+
+
 def generate_example_files_node(g, uri, op_collection_folder_path, op_shapes_folder_path):
     
     invalid_examples_link = Literal(
