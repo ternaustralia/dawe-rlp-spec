@@ -1,7 +1,7 @@
 from rdflib import RDF, SH, DCTERMS, BNode, Literal, URIRef, XSD
 from settings import URNP, URNC, source, REG
 
-def add_common_properties(g, uri):
+def add_common_properties_shapes(g, uri):
     g.add((uri, RDF.type, SH.PropertyShape))
     g.add((uri, RDF.type, URNC.Requirement))
     g.add((uri, DCTERMS.source, source))
@@ -75,3 +75,8 @@ def link_shapes_file (g, uri, op_collection_folder_path, op_shapes_folder_path):
     g.add((uri, URNP.validator, shapes_link))
 
     return g
+
+
+def add_observation_examples():
+    # This function will add observation example nodes for both invalid and valid examples
+    pass
