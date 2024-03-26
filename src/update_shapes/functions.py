@@ -1,6 +1,7 @@
 import requests
 from requests.exceptions import HTTPError
 
+
 class SPARQLQueryError(Exception):
     pass
 
@@ -33,7 +34,7 @@ def get_xsd_datatype(value_type):
         return "float"
     elif value_type == "tern:Integer":
         return "integer"
-    
+
 
 def generate_op_shapes_folder(op_label):
     op_shapes_folder_path = (
@@ -44,3 +45,22 @@ def generate_op_shapes_folder(op_label):
         .replace(")", "")
     )
     return op_shapes_folder_path
+
+
+def generate_protocol_folder(protocol_label):
+    protocol_folder_path = (
+        "-".join(
+            protocol_label.lower()
+            .replace("module", "")
+            .replace("protocol", "")
+            .replace("properties", "")
+            .replace("observable", "")
+            .replace("(", "")
+            .replace(")", "")
+            .split()
+        )
+        .replace("--", "-")
+        .replace("--", "-")
+        .replace(",", "")
+    )
+    return protocol_folder_path
