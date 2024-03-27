@@ -1,4 +1,4 @@
-from rdflib import RDF, SH, DCTERMS, BNode, Literal, URIRef, XSD
+from rdflib import RDF, SH, DCTERMS, BNode, Literal, URIRef, XSD, SOSA
 from settings import (
     URNP,
     URNC,
@@ -8,7 +8,11 @@ from settings import (
     phenomenon_time_example,
     result_time_example,
 )
-from functions import generate_op_shapes_folder, generate_protocol_folder
+from functions import (
+    generate_op_shapes_folder,
+    generate_protocol_folder,
+    generate_observation_comment,
+)
 
 
 def add_common_properties_shapes(g, uri):
@@ -113,8 +117,53 @@ def add_observation_examples(
         + example_type
     )
 
-    # TODO: need to write a function to generate comments
-    comment = validation_type + ""
+    comment = Literal(
+        generate_observation_comment(
+            validation_type,
+            example_type,
+            data_type,
+            protocol_label,
+            value_type,
+            op_label,
+        )
+    )
 
     g.add((uri, RDF.type, TERN.Observation))
     g.add((uri, VOID.inDataset, dataset_example))
+    g.add((uri, RDFS.comment, comment))
+
+    foi_bnode = BNode()
+    g.add(
+        (
+            uri,
+            SOSA.hasFeatureOfInterest,
+            foi_bnode,
+        )
+    )
+    g.add(
+        (
+            foi_bnode,
+            RDF.type,
+            TERN.FeatureOfInterest,
+        )
+    )
+    g.add(
+        (
+            foi_bnode,
+            VOID.inDataset,
+            dataset_example,
+        )
+    )
+
+    if validation_type == "invalid" and example_type == "featuretype":
+        feature_type_value = URIRef("urn:fake:feature-type")
+    else:
+        feature_type_value == URIRef(feature_type)
+
+    g.add(
+        (
+            foi_bnode,
+            TERN.featureType,
+            feature_type_value,
+        )
+    )

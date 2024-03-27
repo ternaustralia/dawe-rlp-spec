@@ -64,3 +64,39 @@ def generate_protocol_folder(protocol_label):
         .replace(",", "")
     )
     return protocol_folder_path
+
+
+def generate_observation_comment(
+    validation_type, example_type, data_type, protocol_label, value_type, op_label
+):
+    if validation_type == "invalid":
+        if example_type == "datatype":
+            return (
+                "Invalid result - the datatype of the value of the result node must be `"
+                + data_type
+                + "`."
+            )
+        elif example_type == "featuretype":
+            return "Invalid result - incorrect feature type."
+        elif example_type == "simpleresult":
+            return "Invalid result - The value in simple result must be same with that in the result node."
+        elif example_type == "sitevisit":
+            return "Invalid result - all observations must have a site vist."
+        elif example_type == "usedprocedure":
+            return (
+                "Invalid result - the used procedure should be '"
+                + protocol_label
+                + "'."
+            )
+        elif example_type == "valuerange":
+            return "Invalid result - value out of range"
+        elif example_type == "valuetype":
+            return (
+                "Invalid result - the value of the result node must be `"
+                + value_type
+                + "`."
+            )
+        else:
+            print("Example type is out of consideration, please update the script.")
+    else:
+        return "Valid result for observable property - " + op_label
