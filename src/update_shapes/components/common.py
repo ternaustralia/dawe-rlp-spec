@@ -7,6 +7,7 @@ from settings import (
     dataset_example,
     phenomenon_time_example,
     result_time_example,
+    sitevisit_example,
 )
 from functions import (
     generate_op_shapes_folder,
@@ -93,6 +94,7 @@ def link_shapes_file(g, uri, op_collection_folder_path, op_shapes_folder_path):
     return g
 
 
+# This function will add observation example nodes for both invalid and valid examples
 def add_observation_examples(
     g,
     validation_type,
@@ -106,7 +108,7 @@ def add_observation_examples(
     op_uri,
     protocol_uri,
 ):
-    # This function will add observation example nodes for both invalid and valid examples
+    # Generate the Observation URI
     uri = URIRef(
         "urn:test:"
         + generate_protocol_folder(protocol_label)
@@ -117,6 +119,7 @@ def add_observation_examples(
         + example_type
     )
 
+    # Generate the Observation comment
     comment = Literal(
         generate_observation_comment(
             validation_type,
@@ -132,6 +135,7 @@ def add_observation_examples(
     g.add((uri, VOID.inDataset, dataset_example))
     g.add((uri, RDFS.comment, comment))
 
+    # Generate the feature of interest node
     foi_bnode = BNode()
     g.add(
         (
@@ -155,6 +159,7 @@ def add_observation_examples(
         )
     )
 
+    # Add invalid example of feature type if the example is for feature type, other wise add the valid one
     if validation_type == "invalid" and example_type == "featuretype":
         feature_type_value = URIRef("urn:fake:feature-type")
     else:
@@ -167,3 +172,23 @@ def add_observation_examples(
             feature_type_value,
         )
     )
+
+    # Add generate content of the result node and the observation example
+    result_node = BNode()
+    g.add((uri, SOSA.hasResult, result_node))
+    g.add((result_node, RDF.type, TERN.Value))
+    g.add((result_node, SOSA.isResultOf, uri))
+    g.add((uri, SOSA.observedProperty, URIRef(op_uri)))
+    g.add((uri, SOSA.phenomenonTime, phenomenon_time_example))
+    g.add((uri, SOSA.resultTime, result_time_example))
+
+    # Add invalid example of used procedure if the example is for used procedure, other wise add the valid one
+    if validation_type == "invalid" and example_type == "usedprocedure":
+        used_procedure_value = URIRef("urn:fake:used-procedure")
+    else:
+        used_procedure_value == URIRef(protocol_uri)
+
+    g.add((uri, SOSA.usedProcedure, used_procedure_value))
+
+    # TODO: Add site visit if it's not `Opportune` or `Vegetation Mapping`
+    g.add((uri, TERN.hasSiteVisit, sitevisit_example))
