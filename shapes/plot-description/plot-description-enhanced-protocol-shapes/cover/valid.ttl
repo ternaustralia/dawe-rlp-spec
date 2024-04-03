@@ -1,0 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:plot-description-enhanced-protocol-shapes:valid:cover>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - cover" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/32834f36-a478-45be-97f4-ff2ff51e9f5c>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:plot-description-enhanced-protocol-shapes:valid:cover> ;
+            tern:unit <file:///Users/uqjyu8/projects/dawe-rlp-spec/values_tbd>
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/60c714fa-4e8d-454d-b4cd-7fe77da7f47e> ;
+    sosa:phenomenonTime <https://example.com/observation/cover/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

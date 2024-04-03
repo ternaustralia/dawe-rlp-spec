@@ -1,0 +1,31 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:plot-description-enhanced-protocol-shapes:valid:introduced-plant-species-impact>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - introduced plant species impact" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "values_tbd"^^xsd:string ;
+            sosa:isResultOf <urn:test:plot-description-enhanced-protocol-shapes:valid:introduced-plant-species-impact>
+        ] ;
+    sosa:hasSimpleResult "values_tbd"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/57be29f6-1c6a-5c4d-89f2-00b21d4f4178> ;
+    sosa:phenomenonTime <https://example.com/observation/introduced-plant-species-impact/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

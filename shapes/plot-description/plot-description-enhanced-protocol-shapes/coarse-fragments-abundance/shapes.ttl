@@ -1,0 +1,243 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _land surface substrate_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/aef12cd6-3826-4988-a54c-8578d3fb4c8d> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/aef12cd6-3826-4988-a54c-8578d3fb4c8d[`land surface substrate`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/b3dd4df5-589b-476e-8e9e-0af6a7155759>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:nab7f906d33a64c54b965b18a179c92e5b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the soil coarse fragments abundance types controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f>
+            <https://linked.data.gov.au/def/nrm/7b351daa-670c-5669-ab48-d4279719b333>
+            <https://linked.data.gov.au/def/nrm/3ed76135-19e7-555c-9528-7b195720e29f>
+            <https://linked.data.gov.au/def/nrm/fe4ad04e-32eb-557d-b59b-6455005184ff>
+            <https://linked.data.gov.au/def/nrm/a552f03c-d68b-5e93-ab6b-0555846a1aa5>
+            <https://linked.data.gov.au/def/nrm/b0c7a591-fb76-5bfd-bbab-f096352cab7c>
+            <https://linked.data.gov.au/def/nrm/91fbc097-c683-5f34-929b-3dc3f8b6ffd4>
+            <https://linked.data.gov.au/def/nrm/df8792e6-f1eb-5584-b152-ff942f54abbb>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the soil coarse fragments abundance types controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/b3dd4df5-589b-476e-8e9e-0af6a7155759> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:nab7f906d33a64c54b965b18a179c92e5b2 ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'bec608c4-3a66-4630-b666-cabb666ac8d2'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/b3dd4df5-589b-476e-8e9e-0af6a7155759>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:nab7f906d33a64c54b965b18a179c92e5b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/b3dd4df5-589b-476e-8e9e-0af6a7155759>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nab7f906d33a64c54b965b18a179c92e5b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
+
+    # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21> ;
+    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21`." ;
+    sh:name "Used procedure" ;
+    sh:path sosa:usedProcedure ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/b3dd4df5-589b-476e-8e9e-0af6a7155759>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nab7f906d33a64c54b965b18a179c92e5b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/b3dd4df5-589b-476e-8e9e-0af6a7155759>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nab7f906d33a64c54b965b18a179c92e5b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/bec608c4-3a66-4630-b666-cabb666ac8d2>`.
+
+        `<https://linked.data.gov.au/def/nrm/bec608c4-3a66-4630-b666-cabb666ac8d2>` is the IRI for "soil coarse fragments abundance types".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `bec608c4-3a66-4630-b666-cabb666ac8d2$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "bec608c4-3a66-4630-b666-cabb666ac8d2$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/b3dd4df5-589b-476e-8e9e-0af6a7155759> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:nab7f906d33a64c54b965b18a179c92e5b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
+.
+
+_:nab7f906d33a64c54b965b18a179c92e5b2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/valid.ttl"^^xsd:anyURI ;
+.
+
