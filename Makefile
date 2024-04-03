@@ -4,6 +4,7 @@ shape=shapes/plot-description/cover-class/shapes.ttl
 data=shapes/plot-description/cover-class/invalid.ttl
 SOURCES := $(shell find shapes -name "*.ttl")
 SHAPES := $(shell find shapes -name "shapes.ttl")
+SHAPE_FOLDER := shapes/plot-description/plot-description-enhanced-protocol-shapes
 
 pyshacl-af:
 	pyshacl -s ${shape} ${data} -a
@@ -29,6 +30,6 @@ validate-shapes:
 	done
 
 update-controlled-shapes:
-	for file in $(SHAPES) ; do \
+	for file in $(shell find $(SHAPE_FOLDER) -name "shapes.ttl") ; do \
 		python update-controlled-shapes.py $$file ; \
 	done

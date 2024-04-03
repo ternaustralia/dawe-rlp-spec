@@ -1,0 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:plot-description-standard-protocol-shapes:valid:structural-formation>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - structural formation" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/b77c7b89-0dd2-52cb-9eb3-7319d4465cfe> ;
+            sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:valid:structural-formation> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/6e9baf51-566e-4a5d-93c4-a6e097dc364d>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/b77c7b89-0dd2-52cb-9eb3-7319d4465cfe> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/103f26cb-0194-45d2-8b1a-e18e1da6df2b> ;
+    sosa:phenomenonTime <https://example.com/observation/structural-formation/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/615edd85-ea58-4d3c-b737-d31d8447ad49> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

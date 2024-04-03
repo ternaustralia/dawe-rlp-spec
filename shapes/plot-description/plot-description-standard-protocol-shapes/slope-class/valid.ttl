@@ -1,0 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:plot-description-standard-protocol-shapes:valid:slope-class>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - slope class" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/43c0c157-aa65-5101-a0e9-f12e47e91cc1> ;
+            sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:valid:slope-class> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/d893e669-c530-4bc3-a057-a5799ffcb5db>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/43c0c157-aa65-5101-a0e9-f12e47e91cc1> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/132a1452-4fd7-473c-956b-3183dd315b67> ;
+    sosa:phenomenonTime <https://example.com/observation/slope-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/615edd85-ea58-4d3c-b737-d31d8447ad49> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

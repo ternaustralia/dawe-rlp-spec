@@ -1,0 +1,248 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _land surface disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d[`land surface disturbance`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/632e4c3c-0e73-4b3d-b1d6-7b38897da5e8>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:nbc6130d05c39482db2fd04e1441d444cb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the disturbance types controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/f125acdb-8cf9-53f6-b02f-38afd3cb2155>
+            <https://linked.data.gov.au/def/nrm/fcfc3e39-0508-5533-8a19-27f6f510e0aa>
+            <https://linked.data.gov.au/def/nrm/f86e5ee3-6e77-5c6c-a842-5ff43f659f6d>
+            <https://linked.data.gov.au/def/nrm/f505c960-4d90-52f6-aee5-18102b784746>
+            <https://linked.data.gov.au/def/nrm/afbe4699-68c2-5213-926e-a3baa6833383>
+            <https://linked.data.gov.au/def/nrm/72f73ab2-7c87-52c9-a32e-5243ad10990f>
+            <https://linked.data.gov.au/def/nrm/da08e0d3-2d54-5651-8499-8b2364e7c44d>
+            <https://linked.data.gov.au/def/nrm/8457585c-9358-5bc0-b975-0a449b304006>
+            <https://linked.data.gov.au/def/nrm/15f2b28b-e417-5073-b8d7-f1ef6e4ab1ad>
+            <https://linked.data.gov.au/def/nrm/49716af0-4f12-5886-87db-69297558c1e8>
+            <https://linked.data.gov.au/def/nrm/f685706d-3fd1-5946-afa5-1a06e41eab43>
+            <https://linked.data.gov.au/def/nrm/5837f40e-8013-4050-800f-699058f4324b>
+            <https://linked.data.gov.au/def/nrm/ea48040d-b81b-428a-b620-51bc019171aa>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the disturbance types controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/632e4c3c-0e73-4b3d-b1d6-7b38897da5e8> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:nbc6130d05c39482db2fd04e1441d444cb2 ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'f5a470e8-d29f-4ff6-b50d-529b0444dbe4'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/632e4c3c-0e73-4b3d-b1d6-7b38897da5e8>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:nbc6130d05c39482db2fd04e1441d444cb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/632e4c3c-0e73-4b3d-b1d6-7b38897da5e8>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nbc6130d05c39482db2fd04e1441d444cb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
+
+    # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21> ;
+    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21`." ;
+    sh:name "Used procedure" ;
+    sh:path sosa:usedProcedure ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/632e4c3c-0e73-4b3d-b1d6-7b38897da5e8>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nbc6130d05c39482db2fd04e1441d444cb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/632e4c3c-0e73-4b3d-b1d6-7b38897da5e8>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nbc6130d05c39482db2fd04e1441d444cb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/f5a470e8-d29f-4ff6-b50d-529b0444dbe4>`.
+
+        `<https://linked.data.gov.au/def/nrm/f5a470e8-d29f-4ff6-b50d-529b0444dbe4>` is the IRI for "disturbance types".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `f5a470e8-d29f-4ff6-b50d-529b0444dbe4$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "f5a470e8-d29f-4ff6-b50d-529b0444dbe4$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/632e4c3c-0e73-4b3d-b1d6-7b38897da5e8> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:nbc6130d05c39482db2fd04e1441d444cb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
+.
+
+_:nbc6130d05c39482db2fd04e1441d444cb2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/valid.ttl"^^xsd:anyURI ;
+.
+

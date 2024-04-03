@@ -1,0 +1,31 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:plot-description-enhanced-protocol-shapes:valid:mass-flowering-event>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - mass flowering event" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Boolean ,
+                tern:Value ;
+            rdf:value true ;
+            sosa:isResultOf <urn:test:plot-description-enhanced-protocol-shapes:valid:mass-flowering-event>
+        ] ;
+    sosa:hasSimpleResult true ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/88c2fec1-d37a-5f5c-8850-3cc052c192f7> ;
+    sosa:phenomenonTime <https://example.com/observation/mass-flowering-event/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
