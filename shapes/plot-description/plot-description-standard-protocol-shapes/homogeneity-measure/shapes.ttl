@@ -4,6 +4,7 @@ PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -33,7 +34,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n22b5c48a2c7147e886d5594a9a5b2765b2 ;
+    urnp:examples _:n1298888df728470faaad67c5967c25adb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -65,7 +66,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n22b5c48a2c7147e886d5594a9a5b2765b2 ;
+    urnp:examples _:n1298888df728470faaad67c5967c25adb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -95,7 +96,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n22b5c48a2c7147e886d5594a9a5b2765b2 ;
+    urnp:examples _:n1298888df728470faaad67c5967c25adb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -105,9 +106,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "Result value's unit of measure _MUST_ have the value `values_tbd`." ;
-    sh:hasValue <file:///Users/uqjyu8/projects/dawe-rlp-spec/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/values_tbd> ;
-    sh:message "The result _MUST_ have `values_tbd` as the value for `tern:unit`." ;
+    sh:description "Result value's unit of measure _MUST_ have the value `unit:M`." ;
+    sh:hasValue unit:M ;
+    sh:message "The result _MUST_ have `unit:M` as the value for `tern:unit`." ;
     sh:name "Unit of measure" ;
     sh:path tern:unit ;
     sh:target [
@@ -123,7 +124,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n22b5c48a2c7147e886d5594a9a5b2765b2 ;
+    urnp:examples _:n1298888df728470faaad67c5967c25adb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -154,7 +155,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n22b5c48a2c7147e886d5594a9a5b2765b2 ;
+    urnp:examples _:n1298888df728470faaad67c5967c25adb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -165,10 +166,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:float ;
-    sh:description "Value _MUST_ be between values_tbd and values_tbd inclusive." ;
-    sh:maxInclusive <file:///Users/uqjyu8/projects/dawe-rlp-spec/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/values_tbd> ;
-    sh:message "The result _MUST_ have a value between values_tbd and values_tbd inclusively." ;
-    sh:minInclusive <file:///Users/uqjyu8/projects/dawe-rlp-spec/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/values_tbd> ;
+    sh:description "Value _MUST_ not be negative." ;
+    sh:message "The result _MUST_ not be negative." ;
+    sh:minInclusive 0 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
@@ -184,7 +184,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n22b5c48a2c7147e886d5594a9a5b2765b2 ;
+    urnp:examples _:n1298888df728470faaad67c5967c25adb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -213,11 +213,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n22b5c48a2c7147e886d5594a9a5b2765b2 ;
+    urnp:examples _:n1298888df728470faaad67c5967c25adb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n22b5c48a2c7147e886d5594a9a5b2765b2
+_:n1298888df728470faaad67c5967c25adb2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/valid.ttl"^^xsd:anyURI ;
 .
