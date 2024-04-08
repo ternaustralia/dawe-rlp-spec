@@ -1,0 +1,250 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:floristics-standard-protocol-shapes:phenological-stage:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _plant specimen_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/2e122e23-881c-43fa-a921-a8745f016ceb> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2e122e23-881c-43fa-a921-a8745f016ceb[`plant specimen`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/33c1752f-b5f3-4ac9-9090-e9a4dd3096d1>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n597b698361284e1e8bfb83d98daaf270b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/phenological-stage/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:floristics-standard-protocol-shapes:phenological-stage:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the phenological stages controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f>
+            <https://linked.data.gov.au/def/nrm/6de1f874-fdcb-520a-9ff8-481a7968e76c>
+            <https://linked.data.gov.au/def/nrm/9a4421e0-c308-5e44-b778-24f2688ec1ea>
+            <https://linked.data.gov.au/def/nrm/436e8a65-505a-505b-811e-c6be4e4ae651>
+            <https://linked.data.gov.au/def/nrm/acfe1699-dd4c-5de4-b158-c5fc988a729e>
+            <https://linked.data.gov.au/def/nrm/50c14c62-8f88-5021-8cdf-0e9fa44be9ad>
+            <https://linked.data.gov.au/def/nrm/a5b9db61-6631-5dbc-b8b0-f116e9ff58e4>
+            <https://linked.data.gov.au/def/nrm/aa3dbc06-537d-52c6-a173-9f9a79191589>
+            <https://linked.data.gov.au/def/nrm/e813ea59-6a6d-50fe-b7c1-d449dbb2a982>
+            <https://linked.data.gov.au/def/nrm/b851a40c-d32b-57a7-8bf8-cca5e202d88d>
+            <https://linked.data.gov.au/def/nrm/e41dd423-9fdb-5b80-a045-6908cd1f0a36>
+            <https://linked.data.gov.au/def/nrm/831c12f7-0d6a-5b7b-9fe2-206de18b78fe>
+            <https://linked.data.gov.au/def/nrm/9d100076-b85d-4b9d-b5b1-306ec82c2d0b>
+            <https://linked.data.gov.au/def/nrm/8d9a21a6-a162-4aa9-a09d-305ea0c21e7d>
+            <https://linked.data.gov.au/def/nrm/2ee1bcb5-6cc3-478d-b094-b042a53f381f>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the phenological stages controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/33c1752f-b5f3-4ac9-9090-e9a4dd3096d1> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n597b698361284e1e8bfb83d98daaf270b2 ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'110398ca-32fa-4f69-b7bb-5aa69d5a5004'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/phenological-stage/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:floristics-standard-protocol-shapes:phenological-stage:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/33c1752f-b5f3-4ac9-9090-e9a4dd3096d1>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:n597b698361284e1e8bfb83d98daaf270b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/phenological-stage/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:floristics-standard-protocol-shapes:phenological-stage:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Floristics - Standard Protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/33c1752f-b5f3-4ac9-9090-e9a4dd3096d1>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n597b698361284e1e8bfb83d98daaf270b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/phenological-stage/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:floristics-standard-protocol-shapes:phenological-stage:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8>`.
+
+    # `<https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8>` is the IRI for "Floristics - Standard Protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8> ;
+    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8`." ;
+    sh:name "Used procedure" ;
+    sh:path sosa:usedProcedure ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/33c1752f-b5f3-4ac9-9090-e9a4dd3096d1>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n597b698361284e1e8bfb83d98daaf270b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/phenological-stage/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:floristics-standard-protocol-shapes:phenological-stage:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/33c1752f-b5f3-4ac9-9090-e9a4dd3096d1>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n597b698361284e1e8bfb83d98daaf270b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/phenological-stage/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:floristics-standard-protocol-shapes:phenological-stage:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/110398ca-32fa-4f69-b7bb-5aa69d5a5004>`.
+
+        `<https://linked.data.gov.au/def/nrm/110398ca-32fa-4f69-b7bb-5aa69d5a5004>` is the IRI for "phenological stages".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `110398ca-32fa-4f69-b7bb-5aa69d5a5004$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "110398ca-32fa-4f69-b7bb-5aa69d5a5004$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/33c1752f-b5f3-4ac9-9090-e9a4dd3096d1> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n597b698361284e1e8bfb83d98daaf270b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/phenological-stage/shapes.ttl"^^xsd:anyURI ;
+.
+
+_:n597b698361284e1e8bfb83d98daaf270b2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/phenological-stage/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/phenological-stage/valid.ttl"^^xsd:anyURI ;
+.
+
