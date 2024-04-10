@@ -14,9 +14,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _plant specimen_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/2e122e23-881c-43fa-a921-a8745f016ceb> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2e122e23-881c-43fa-a921-a8745f016ceb[`plant specimen`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na5844ce2dacb4f089ae1f3d0328afca5b2 ;
+    urnp:examples _:n20b169208f9242ee8c54705cd526ff94b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/species-identification-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -68,7 +68,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:na5844ce2dacb4f089ae1f3d0328afca5b2 ;
+    urnp:examples _:n20b169208f9242ee8c54705cd526ff94b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -109,7 +109,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na5844ce2dacb4f089ae1f3d0328afca5b2 ;
+    urnp:examples _:n20b169208f9242ee8c54705cd526ff94b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/species-identification-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -139,7 +139,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na5844ce2dacb4f089ae1f3d0328afca5b2 ;
+    urnp:examples _:n20b169208f9242ee8c54705cd526ff94b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/species-identification-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -170,7 +170,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na5844ce2dacb4f089ae1f3d0328afca5b2 ;
+    urnp:examples _:n20b169208f9242ee8c54705cd526ff94b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/species-identification-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -199,7 +199,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na5844ce2dacb4f089ae1f3d0328afca5b2 ;
+    urnp:examples _:n20b169208f9242ee8c54705cd526ff94b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/species-identification-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -229,11 +229,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:na5844ce2dacb4f089ae1f3d0328afca5b2 ;
+    urnp:examples _:n20b169208f9242ee8c54705cd526ff94b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/species-identification-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:na5844ce2dacb4f089ae1f3d0328afca5b2
+_:n20b169208f9242ee8c54705cd526ff94b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/species-identification-status/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/species-identification-status/valid.ttl"^^xsd:anyURI ;
 .
