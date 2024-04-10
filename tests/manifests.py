@@ -17,6 +17,20 @@ class TestCaseItem:
 
 test_cases: List[TestCaseItem] = [
     TestCaseItem(
+        name="plant-tissue-vouchering-enhanced-protocol-shapes-distance-between-replicates",
+        shapes_path="shapes/plant-tissue-vouchering/plant-tissue-vouchering-enhanced-protocol-shapes/distance-between-replicates/shapes.ttl",
+        valid_data_path="shapes/plant-tissue-vouchering/plant-tissue-vouchering-enhanced-protocol-shapes/distance-between-replicates/valid.ttl",
+        invalid_data_path="shapes/plant-tissue-vouchering/plant-tissue-vouchering-enhanced-protocol-shapes/distance-between-replicates/invalid.ttl",
+        expected_failures=8,
+    ).astuple(),
+    TestCaseItem(
+        name="plant-tissue-vouchering-standard-protocol-shapes-distance-between-replicates",
+        shapes_path="shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/distance-between-replicates/shapes.ttl",
+        valid_data_path="shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/distance-between-replicates/valid.ttl",
+        invalid_data_path="shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/distance-between-replicates/invalid.ttl",
+        expected_failures=8,
+    ).astuple(),
+    TestCaseItem(
         name="floristics-enhanced-protocol-shapes-growth-form",
         shapes_path="shapes/floristics/floristics-enhanced-protocol-shapes/growth-form/shapes.ttl",
         valid_data_path="shapes/floristics/floristics-enhanced-protocol-shapes/growth-form/valid.ttl",

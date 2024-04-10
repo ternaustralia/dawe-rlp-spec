@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n8f27dbe460124d9d8b0517c15631d23fb2 ;
+    urnp:examples _:n7b1608e56e8b4b5092d8a90fbe437874b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -42,9 +42,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _plant specimen_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/2e122e23-881c-43fa-a921-a8745f016ceb> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2e122e23-881c-43fa-a921-a8745f016ceb[`plant specimen`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
@@ -61,7 +61,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n8f27dbe460124d9d8b0517c15631d23fb2 ;
+    urnp:examples _:n7b1608e56e8b4b5092d8a90fbe437874b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -93,7 +93,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n8f27dbe460124d9d8b0517c15631d23fb2 ;
+    urnp:examples _:n7b1608e56e8b4b5092d8a90fbe437874b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -123,7 +123,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n8f27dbe460124d9d8b0517c15631d23fb2 ;
+    urnp:examples _:n7b1608e56e8b4b5092d8a90fbe437874b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -154,7 +154,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n8f27dbe460124d9d8b0517c15631d23fb2 ;
+    urnp:examples _:n7b1608e56e8b4b5092d8a90fbe437874b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -183,11 +183,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n8f27dbe460124d9d8b0517c15631d23fb2 ;
+    urnp:examples _:n7b1608e56e8b4b5092d8a90fbe437874b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n8f27dbe460124d9d8b0517c15631d23fb2
+_:n7b1608e56e8b4b5092d8a90fbe437874b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
 .

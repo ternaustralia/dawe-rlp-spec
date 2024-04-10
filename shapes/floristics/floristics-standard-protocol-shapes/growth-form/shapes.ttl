@@ -14,9 +14,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _plant specimen_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/2e122e23-881c-43fa-a921-a8745f016ceb> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2e122e23-881c-43fa-a921-a8745f016ceb[`plant specimen`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nfe35fc3631de4a8f9141e21f434bb25eb2 ;
+    urnp:examples _:n2507a98d773943f4876d95baf5be81b3b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -90,7 +90,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nfe35fc3631de4a8f9141e21f434bb25eb2 ;
+    urnp:examples _:n2507a98d773943f4876d95baf5be81b3b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -131,7 +131,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nfe35fc3631de4a8f9141e21f434bb25eb2 ;
+    urnp:examples _:n2507a98d773943f4876d95baf5be81b3b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -161,7 +161,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nfe35fc3631de4a8f9141e21f434bb25eb2 ;
+    urnp:examples _:n2507a98d773943f4876d95baf5be81b3b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -192,7 +192,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nfe35fc3631de4a8f9141e21f434bb25eb2 ;
+    urnp:examples _:n2507a98d773943f4876d95baf5be81b3b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -221,7 +221,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nfe35fc3631de4a8f9141e21f434bb25eb2 ;
+    urnp:examples _:n2507a98d773943f4876d95baf5be81b3b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -251,11 +251,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nfe35fc3631de4a8f9141e21f434bb25eb2 ;
+    urnp:examples _:n2507a98d773943f4876d95baf5be81b3b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nfe35fc3631de4a8f9141e21f434bb25eb2
+_:n2507a98d773943f4876d95baf5be81b3b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/growth-form/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/growth-form/valid.ttl"^^xsd:anyURI ;
 .
