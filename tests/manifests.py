@@ -17,6 +17,55 @@ class TestCaseItem:
 
 test_cases: List[TestCaseItem] = [
     TestCaseItem(
+        name="cover-standard-protocol-shapes-growth-form",
+        shapes_path="shapes/cover/cover-standard-protocol-shapes/growth-form/shapes.ttl",
+        valid_data_path="shapes/cover/cover-standard-protocol-shapes/growth-form/valid.ttl",
+        invalid_data_path="shapes/cover/cover-standard-protocol-shapes/growth-form/invalid.ttl",
+        expected_failures=7,
+    ).astuple(),
+    TestCaseItem(
+        name="cover-standard-protocol-shapes-field-species-name",
+        shapes_path="shapes/cover/cover-standard-protocol-shapes/field-species-name/shapes.ttl",
+        valid_data_path="shapes/cover/cover-standard-protocol-shapes/field-species-name/valid.ttl",
+        invalid_data_path="shapes/cover/cover-standard-protocol-shapes/field-species-name/invalid.ttl",
+        expected_failures=6,
+    ).astuple(),
+    TestCaseItem(
+        name="cover-standard-protocol-shapes-plant-height",
+        shapes_path="shapes/cover/cover-standard-protocol-shapes/plant-height/shapes.ttl",
+        valid_data_path="shapes/cover/cover-standard-protocol-shapes/plant-height/valid.ttl",
+        invalid_data_path="shapes/cover/cover-standard-protocol-shapes/plant-height/invalid.ttl",
+        expected_failures=8,
+    ).astuple(),
+    TestCaseItem(
+        name="cover-standard-protocol-shapes-in-canopy-sky",
+        shapes_path="shapes/cover/cover-standard-protocol-shapes/in-canopy-sky/shapes.ttl",
+        valid_data_path="shapes/cover/cover-standard-protocol-shapes/in-canopy-sky/valid.ttl",
+        invalid_data_path="shapes/cover/cover-standard-protocol-shapes/in-canopy-sky/invalid.ttl",
+        expected_failures=6,
+    ).astuple(),
+    TestCaseItem(
+        name="cover-standard-protocol-shapes-substrate",
+        shapes_path="shapes/cover/cover-standard-protocol-shapes/substrate/shapes.ttl",
+        valid_data_path="shapes/cover/cover-standard-protocol-shapes/substrate/valid.ttl",
+        invalid_data_path="shapes/cover/cover-standard-protocol-shapes/substrate/invalid.ttl",
+        expected_failures=7,
+    ).astuple(),
+    TestCaseItem(
+        name="cover-standard-protocol-shapes-plant-mortality",
+        shapes_path="shapes/cover/cover-standard-protocol-shapes/plant-mortality/shapes.ttl",
+        valid_data_path="shapes/cover/cover-standard-protocol-shapes/plant-mortality/valid.ttl",
+        invalid_data_path="shapes/cover/cover-standard-protocol-shapes/plant-mortality/invalid.ttl",
+        expected_failures=7,
+    ).astuple(),
+    TestCaseItem(
+        name="cover-standard-protocol-shapes-fractional-cover-responses",
+        shapes_path="shapes/cover/cover-standard-protocol-shapes/fractional-cover-responses/shapes.ttl",
+        valid_data_path="shapes/cover/cover-standard-protocol-shapes/fractional-cover-responses/valid.ttl",
+        invalid_data_path="shapes/cover/cover-standard-protocol-shapes/fractional-cover-responses/invalid.ttl",
+        expected_failures=7,
+    ).astuple(),
+    TestCaseItem(
         name="cover-enhanced-protocol-shapes-growth-form",
         shapes_path="shapes/cover/cover-enhanced-protocol-shapes/growth-form/shapes.ttl",
         valid_data_path="shapes/cover/cover-enhanced-protocol-shapes/growth-form/valid.ttl",
