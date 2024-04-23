@@ -1,0 +1,204 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:opportunistic-observations-protocol-shapes:invalid:carapace-length:datatype>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:float`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:carapace-length:datatype> ;
+            tern:unit <file:///Users/uqjyu8/projects/dawe-rlp-spec/values_tbd>
+        ] ;
+    sosa:hasSimpleResult 3 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/aad13f8f-230a-516e-ad91-f3508d7c01d1> ;
+    sosa:phenomenonTime <https://example.com/observation/carapace-length/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:opportunistic-observations-protocol-shapes:invalid:carapace-length:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:carapace-length:feature-type> ;
+            tern:unit <file:///Users/uqjyu8/projects/dawe-rlp-spec/values_tbd>
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/aad13f8f-230a-516e-ad91-f3508d7c01d1> ;
+    sosa:phenomenonTime <https://example.com/observation/carapace-length/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:opportunistic-observations-protocol-shapes:invalid:carapace-length:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:carapace-length:simple-result> ;
+            tern:unit <file:///Users/uqjyu8/projects/dawe-rlp-spec/values_tbd>
+        ] ;
+    sosa:hasSimpleResult "13.56"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/aad13f8f-230a-516e-ad91-f3508d7c01d1> ;
+    sosa:phenomenonTime <https://example.com/observation/carapace-length/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:opportunistic-observations-protocol-shapes:invalid:carapace-length:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:carapace-length:site-visit> ;
+            tern:unit <file:///Users/uqjyu8/projects/dawe-rlp-spec/values_tbd>
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/aad13f8f-230a-516e-ad91-f3508d7c01d1> ;
+    sosa:phenomenonTime <https://example.com/observation/carapace-length/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
+.
+
+<urn:test:opportunistic-observations-protocol-shapes:invalid:carapace-length:unit-of-measure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result unit of measure" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:carapace-length:unit-of-measure> ;
+            tern:unit <urn:fake:unit>
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/aad13f8f-230a-516e-ad91-f3508d7c01d1> ;
+    sosa:phenomenonTime <https://example.com/observation/carapace-length/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:opportunistic-observations-protocol-shapes:invalid:carapace-length:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Opportune Module'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:carapace-length:used-procedure> ;
+            tern:unit <file:///Users/uqjyu8/projects/dawe-rlp-spec/values_tbd>
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/aad13f8f-230a-516e-ad91-f3508d7c01d1> ;
+    sosa:phenomenonTime <https://example.com/observation/carapace-length/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:opportunistic-observations-protocol-shapes:invalid:carapace-length:value-range>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value out of range" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "-1.11"^^xsd:float ;
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:carapace-length:value-range> ;
+            tern:unit <file:///Users/uqjyu8/projects/dawe-rlp-spec/values_tbd>
+        ] ;
+    sosa:hasSimpleResult "-1.11"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/aad13f8f-230a-516e-ad91-f3508d7c01d1> ;
+    sosa:phenomenonTime <https://example.com/observation/carapace-length/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:opportunistic-observations-protocol-shapes:invalid:carapace-length:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:Float`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:carapace-length:value-type> ;
+            tern:unit <file:///Users/uqjyu8/projects/dawe-rlp-spec/values_tbd>
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/aad13f8f-230a-516e-ad91-f3508d7c01d1> ;
+    sosa:phenomenonTime <https://example.com/observation/carapace-length/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
