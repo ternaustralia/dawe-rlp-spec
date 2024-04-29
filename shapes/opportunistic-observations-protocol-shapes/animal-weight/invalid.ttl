@@ -21,7 +21,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value 3 ;
             sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:animal-weight:datatype> ;
-            tern:unit unit:GM
+            tern:unit unit:KiloGM
         ] ;
     sosa:hasSimpleResult 3 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/d78e0ad6-9ac8-4adc-a796-61ad458726b3> ;
@@ -46,7 +46,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:animal-weight:feature-type> ;
-            tern:unit unit:GM
+            tern:unit unit:KiloGM
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/d78e0ad6-9ac8-4adc-a796-61ad458726b3> ;
@@ -71,7 +71,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:animal-weight:simple-result> ;
-            tern:unit unit:GM
+            tern:unit unit:KiloGM
         ] ;
     sosa:hasSimpleResult "13.56"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/d78e0ad6-9ac8-4adc-a796-61ad458726b3> ;
@@ -96,7 +96,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:animal-weight:site-visit> ;
-            tern:unit unit:GM
+            tern:unit unit:KiloGM
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/d78e0ad6-9ac8-4adc-a796-61ad458726b3> ;
@@ -145,7 +145,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:animal-weight:used-procedure> ;
-            tern:unit unit:GM
+            tern:unit unit:KiloGM
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/d78e0ad6-9ac8-4adc-a796-61ad458726b3> ;
@@ -170,7 +170,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "-1.11"^^xsd:float ;
             sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:animal-weight:value-range> ;
-            tern:unit unit:GM
+            tern:unit unit:KiloGM
         ] ;
     sosa:hasSimpleResult "-1.11"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/d78e0ad6-9ac8-4adc-a796-61ad458726b3> ;
@@ -193,7 +193,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:animal-weight:value-type> ;
-            tern:unit unit:GM
+            tern:unit unit:KiloGM
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/d78e0ad6-9ac8-4adc-a796-61ad458726b3> ;
