@@ -2,6 +2,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
@@ -11,7 +12,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
@@ -32,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:animal-pouch-condition:examples> ;
+    urnp:examples _:nd35f8c1d736b4ab59d076f4e5f3c1f5db2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/animal-pouch-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -41,15 +42,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Animal pouch condition codes controlled vocabulary." ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Animal pouch conditions controlled vocabulary." ;
     sh:in (
-            <https://linked.data.gov.au/def/nrm/3ad9ef60-99d0-5901-9e25-a47db89d11a6>
-            <https://linked.data.gov.au/def/nrm/66db8fd4-aab5-5a90-b740-b9ae9468e55a>
-            <https://linked.data.gov.au/def/nrm/7600207e-9810-5b62-a114-0f82fb52d2bb>
+            <https://linked.data.gov.au/def/nrm/76e74327-adb8-52be-9f50-4c2eef108f69>
+            <https://linked.data.gov.au/def/nrm/e06f9cc1-962f-5e8b-9a2b-9a4cae6b3ce0>
+            <https://linked.data.gov.au/def/nrm/a2674a72-8d73-528e-a5e5-49de3f13fbb3>
         ) ;
-    sh:message "The value of `rdf:value` _MUST_ exist in the Animal pouch condition codes controlled vocabulary." ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Animal pouch conditions controlled vocabulary." ;
     sh:name "Result value" ;
     sh:path rdf:value ;
     sh:target [
@@ -65,7 +66,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:animal-pouch-condition:examples> ;
+    urnp:examples _:nd35f8c1d736b4ab59d076f4e5f3c1f5db2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -82,7 +83,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         sh:NodeShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
@@ -106,7 +107,37 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:animal-pouch-condition:examples> ;
+    urnp:examples _:nd35f8c1d736b4ab59d076f4e5f3c1f5db2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/animal-pouch-condition/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:opportunistic-observations-protocol-shapes:animal-pouch-condition:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Opportune Module are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/5ccfd7ed-12e4-42ed-83a1-1b85445f92d6>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nd35f8c1d736b4ab59d076f4e5f3c1f5db2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/animal-pouch-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -114,15 +145,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6>`.
 
-    `<https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6>` is the IRI for "Opportunistic observations".""" ;
+    `<https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6>` is the IRI for "Opportune Module".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
     sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6`." ;
     sh:name "Used procedure" ;
-    sh:path <http://www.w3.org/ns/sosa/usedProcedure> ;
+    sh:path sosa:usedProcedure ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -137,7 +168,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:animal-pouch-condition:examples> ;
+    urnp:examples _:nd35f8c1d736b4ab59d076f4e5f3c1f5db2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/animal-pouch-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -145,13 +176,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
     sh:name "Value type" ;
-    sh:path <http://www.w3.org/ns/sosa/hasResult> ;
+    sh:path sosa:hasResult ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -166,7 +197,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:animal-pouch-condition:examples> ;
+    urnp:examples _:nd35f8c1d736b4ab59d076f4e5f3c1f5db2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/animal-pouch-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -174,11 +205,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4fab0c1c-c127-474e-8f5e-4afe45fec0ed>`.
 
-        `<https://linked.data.gov.au/def/nrm/4fab0c1c-c127-474e-8f5e-4afe45fec0ed>` is the IRI for "Animal pouch condition codes".""" ;
+        `<https://linked.data.gov.au/def/nrm/4fab0c1c-c127-474e-8f5e-4afe45fec0ed>` is the IRI for "Animal pouch conditions".""" ;
     sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `4fab0c1c-c127-474e-8f5e-4afe45fec0ed$`." ;
     sh:name "Vocabulary" ;
     sh:path tern:vocabulary ;
@@ -196,11 +227,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:animal-pouch-condition:examples> ;
+    urnp:examples _:nd35f8c1d736b4ab59d076f4e5f3c1f5db2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/animal-pouch-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations-protocol-shapes:animal-pouch-condition:examples>
+_:nd35f8c1d736b4ab59d076f4e5f3c1f5db2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/animal-pouch-condition/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/animal-pouch-condition/valid.ttl"^^xsd:anyURI ;
 .

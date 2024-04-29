@@ -18,14 +18,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/2befa1d5-33f2-5bc1-bc4c-0609b8dad9b9> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/6de1f874-fdcb-520a-9ff8-481a7968e76c> ;
             sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:valid:age-class> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/0e2641c3-0d7e-4d94-8cd7-02c21d564630>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/2befa1d5-33f2-5bc1-bc4c-0609b8dad9b9> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/6de1f874-fdcb-520a-9ff8-481a7968e76c> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/59df7c05-1521-4161-86e4-8e6a8feb4002> ;
     sosa:phenomenonTime <https://example.com/observation/age-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
+    tern:hasSiteVisit <urn:test:site> ;
 .
 

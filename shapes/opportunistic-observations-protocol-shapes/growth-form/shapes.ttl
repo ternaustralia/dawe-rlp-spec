@@ -2,6 +2,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
@@ -11,7 +12,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
@@ -32,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:growth-form:examples> ;
+    urnp:examples _:nb1cb45a1ee044658b26190774e84ad67b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -41,39 +42,39 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Growth form codes controlled vocabulary." ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Growth forms controlled vocabulary." ;
     sh:in (
-            <https://linked.data.gov.au/def/nrm/062132e9-426e-56c8-9c92-2781692bdd0c>
-            <https://linked.data.gov.au/def/nrm/0c0c23e2-47c1-56c7-8fa0-3ac241caf196>
-            <https://linked.data.gov.au/def/nrm/0f6de186-e8a9-5445-87f2-5aaf927a0f6d>
-            <https://linked.data.gov.au/def/nrm/1b532a75-319d-5a3c-af12-76348fa0cec4>
-            <https://linked.data.gov.au/def/nrm/1e3ff92d-f2dc-5b87-827e-d9603c29e537>
-            <https://linked.data.gov.au/def/nrm/2de905be-b280-54ba-b9a7-7c6f088f301c>
-            <https://linked.data.gov.au/def/nrm/37512bb9-f5a9-5cc5-9f66-3c9c94d98958>
-            <https://linked.data.gov.au/def/nrm/5661df01-90d6-5a3a-93c9-ce41bf1f9cb5>
-            <https://linked.data.gov.au/def/nrm/5b669769-cfda-5e2f-a311-acc06cd1ff02>
-            <https://linked.data.gov.au/def/nrm/616c356b-38ff-500e-bc9a-a55b60c6e1e8>
-            <https://linked.data.gov.au/def/nrm/8a2f124b-4c90-5b35-b421-aa7447fb2f30>
-            <https://linked.data.gov.au/def/nrm/8f4fd07c-a8a8-5e6f-81b3-4506a6a2d629>
-            <https://linked.data.gov.au/def/nrm/922ed906-5ab9-5f14-b6ae-d7b24deccdeb>
-            <https://linked.data.gov.au/def/nrm/9882cf8c-6c69-5991-b505-6e34ae02563d>
-            <https://linked.data.gov.au/def/nrm/9dd59dcd-7311-50fc-a657-603703fbf023>
-            <https://linked.data.gov.au/def/nrm/a7e63c10-9eae-5187-af68-f1ddd8e9ea27>
-            <https://linked.data.gov.au/def/nrm/b5a5217d-6d51-5c8a-9728-e4fb5ca8afaf>
-            <https://linked.data.gov.au/def/nrm/b95c55f0-ea57-5a77-a416-2fd6cf378014>
-            <https://linked.data.gov.au/def/nrm/bc5db7f8-3b75-58d3-ab8f-2c0076807221>
-            <https://linked.data.gov.au/def/nrm/c2eae401-0ac0-507e-bbfe-fe0bf9545f66>
-            <https://linked.data.gov.au/def/nrm/cce3d3df-85ee-5609-9e0d-3d7383843b3a>
-            <https://linked.data.gov.au/def/nrm/d647f263-dd3f-5626-bd6e-0e86131e6106>
-            <https://linked.data.gov.au/def/nrm/dfdbbd27-e0d9-52c6-96a0-d88ff882aab7>
-            <https://linked.data.gov.au/def/nrm/e20d86ce-6cd9-5a88-9b4d-ccafbb8e3a51>
-            <https://linked.data.gov.au/def/nrm/ea88802e-3465-51c8-b437-8da61208a395>
-            <https://linked.data.gov.au/def/nrm/eb5f51a6-0a5c-5e67-883d-35883fcf3ba3>
-            <https://linked.data.gov.au/def/nrm/ef6a07fa-47ce-5cf4-ad06-218556c0dde4>
+            <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f>
+            <https://linked.data.gov.au/def/nrm/1be47880-4ee6-5df9-8eda-551c58078771>
+            <https://linked.data.gov.au/def/nrm/2f9fed56-ebfe-5ca3-b520-f0666413c367>
+            <https://linked.data.gov.au/def/nrm/f6b0f6d8-16d8-5dd7-b1b7-66b0c020b96f>
+            <https://linked.data.gov.au/def/nrm/0042bfe6-1df3-5456-8ab4-45b6028980d3>
+            <https://linked.data.gov.au/def/nrm/33261434-d5b6-560b-b036-866660c8bcbd>
+            <https://linked.data.gov.au/def/nrm/9fce048c-9919-5ad1-9796-c6d70fa26596>
+            <https://linked.data.gov.au/def/nrm/ae81906f-7fd3-5aec-9557-33e95d05eaa0>
+            <https://linked.data.gov.au/def/nrm/549135a7-1d2d-5201-ab60-1b0d8be3c816>
+            <https://linked.data.gov.au/def/nrm/97b443f0-335e-5974-856f-6067e1bfab7d>
+            <https://linked.data.gov.au/def/nrm/860d33aa-2b8b-51c4-aa39-641ef684a4c7>
+            <https://linked.data.gov.au/def/nrm/66aa8058-5e60-5025-a84e-de1234f23d8b>
+            <https://linked.data.gov.au/def/nrm/3d134553-3ac4-5634-9711-8a52204b038e>
+            <https://linked.data.gov.au/def/nrm/de758c7e-e109-5c65-83a9-d27eaed1ab94>
+            <https://linked.data.gov.au/def/nrm/e1eb0092-da6c-57b6-adde-707ed97fb30c>
+            <https://linked.data.gov.au/def/nrm/a35e09f9-051c-527b-b99c-a2fa4df9bd01>
+            <https://linked.data.gov.au/def/nrm/a7b8b3c8-a329-5a62-8741-e1d6efe9528b>
+            <https://linked.data.gov.au/def/nrm/9b841f72-4903-5d65-818f-d386a6eca15f>
+            <https://linked.data.gov.au/def/nrm/18a999a5-938c-5a4c-88f2-de7fd1f56bcc>
+            <https://linked.data.gov.au/def/nrm/581291c8-5ff5-54b8-829c-93804f4b3691>
+            <https://linked.data.gov.au/def/nrm/4e5e46b9-d5da-5975-9bba-d6eacad12875>
+            <https://linked.data.gov.au/def/nrm/bb8edf40-de5b-5088-aa42-3a006a91ef7f>
+            <https://linked.data.gov.au/def/nrm/2b964103-c6d7-56c1-8906-6f7b586cf352>
+            <https://linked.data.gov.au/def/nrm/ebca532a-2d76-5622-8078-5751be80b7e6>
+            <https://linked.data.gov.au/def/nrm/02a1b24e-42fb-5c7c-b5a1-0d73d48ed364>
+            <https://linked.data.gov.au/def/nrm/b5ee3b40-0c5d-5b73-8550-e7e46dc74bee>
+            <https://linked.data.gov.au/def/nrm/5712f289-b19b-5e09-9ebb-37d697a95185>
         ) ;
-    sh:message "The value of `rdf:value` _MUST_ exist in the Growth form codes controlled vocabulary." ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Growth forms controlled vocabulary." ;
     sh:name "Result value" ;
     sh:path rdf:value ;
     sh:target [
@@ -89,7 +90,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:growth-form:examples> ;
+    urnp:examples _:nb1cb45a1ee044658b26190774e84ad67b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -106,7 +107,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         sh:NodeShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
@@ -130,7 +131,37 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:growth-form:examples> ;
+    urnp:examples _:nb1cb45a1ee044658b26190774e84ad67b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:opportunistic-observations-protocol-shapes:growth-form:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Opportune Module are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nb1cb45a1ee044658b26190774e84ad67b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -138,15 +169,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6>`.
 
-    `<https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6>` is the IRI for "Opportunistic observations".""" ;
+    `<https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6>` is the IRI for "Opportune Module".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
     sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6`." ;
     sh:name "Used procedure" ;
-    sh:path <http://www.w3.org/ns/sosa/usedProcedure> ;
+    sh:path sosa:usedProcedure ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -161,7 +192,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:growth-form:examples> ;
+    urnp:examples _:nb1cb45a1ee044658b26190774e84ad67b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -169,13 +200,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
     sh:name "Value type" ;
-    sh:path <http://www.w3.org/ns/sosa/hasResult> ;
+    sh:path sosa:hasResult ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -190,7 +221,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:growth-form:examples> ;
+    urnp:examples _:nb1cb45a1ee044658b26190774e84ad67b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -198,11 +229,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>`.
 
-        `<https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>` is the IRI for "Growth form codes".""" ;
+        `<https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>` is the IRI for "Growth forms".""" ;
     sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `d0fc07a7-3ec9-45ed-8850-885a32828d3c$`." ;
     sh:name "Vocabulary" ;
     sh:path tern:vocabulary ;
@@ -220,11 +251,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:opportunistic-observations-protocol-shapes:growth-form:examples> ;
+    urnp:examples _:nb1cb45a1ee044658b26190774e84ad67b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportunistic-observations-protocol-shapes:growth-form:examples>
+_:nb1cb45a1ee044658b26190774e84ad67b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/valid.ttl"^^xsd:anyURI ;
 .
