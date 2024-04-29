@@ -2,6 +2,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -20,7 +21,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value 3 ;
             sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:tail-width:datatype> ;
-            tern:unit <file:///Users/uqjyu8/projects/dawe-rlp-spec/values_tbd>
+            tern:unit unit:MilliM
         ] ;
     sosa:hasSimpleResult 3 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0a985940-b8ca-4d90-a5d5-4d1945410006> ;
@@ -45,7 +46,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:tail-width:feature-type> ;
-            tern:unit <file:///Users/uqjyu8/projects/dawe-rlp-spec/values_tbd>
+            tern:unit unit:MilliM
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0a985940-b8ca-4d90-a5d5-4d1945410006> ;
@@ -70,7 +71,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:tail-width:simple-result> ;
-            tern:unit <file:///Users/uqjyu8/projects/dawe-rlp-spec/values_tbd>
+            tern:unit unit:MilliM
         ] ;
     sosa:hasSimpleResult "13.56"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0a985940-b8ca-4d90-a5d5-4d1945410006> ;
@@ -95,7 +96,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:tail-width:site-visit> ;
-            tern:unit <file:///Users/uqjyu8/projects/dawe-rlp-spec/values_tbd>
+            tern:unit unit:MilliM
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0a985940-b8ca-4d90-a5d5-4d1945410006> ;
@@ -144,7 +145,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:tail-width:used-procedure> ;
-            tern:unit <file:///Users/uqjyu8/projects/dawe-rlp-spec/values_tbd>
+            tern:unit unit:MilliM
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0a985940-b8ca-4d90-a5d5-4d1945410006> ;
@@ -169,7 +170,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "-1.11"^^xsd:float ;
             sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:tail-width:value-range> ;
-            tern:unit <file:///Users/uqjyu8/projects/dawe-rlp-spec/values_tbd>
+            tern:unit unit:MilliM
         ] ;
     sosa:hasSimpleResult "-1.11"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0a985940-b8ca-4d90-a5d5-4d1945410006> ;
@@ -192,7 +193,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:opportunistic-observations-protocol-shapes:invalid:tail-width:value-type> ;
-            tern:unit <file:///Users/uqjyu8/projects/dawe-rlp-spec/values_tbd>
+            tern:unit unit:MilliM
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0a985940-b8ca-4d90-a5d5-4d1945410006> ;
