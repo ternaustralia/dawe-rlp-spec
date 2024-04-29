@@ -137,10 +137,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:integer ;
-    sh:description "Value _MUST_ be between values_tbd and values_tbd inclusive." ;
-    sh:maxInclusive <file:///Users/uqjyu8/projects/dawe-rlp-spec/shapes/opportunistic-observations-protocol-shapes/number-of-individuals/values_tbd> ;
-    sh:message "The result _MUST_ have a value between values_tbd and values_tbd inclusively." ;
-    sh:minInclusive <file:///Users/uqjyu8/projects/dawe-rlp-spec/shapes/opportunistic-observations-protocol-shapes/number-of-individuals/values_tbd> ;
+    sh:description "Value _MUST_ not be negative." ;
+    sh:message "The result _MUST_ not be negative." ;
+    sh:minInclusive 0 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
