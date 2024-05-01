@@ -105,7 +105,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <urn:test:vegetation-mapping-protocol-shapes:invalid:foliage-projective-cover:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the used procedure should be 'Vegetation mapping'." ;
+    rdfs:comment "Invalid result - the used procedure should be 'Vegetation Mapping Module'." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -139,11 +139,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:Float ,
                 tern:Value ;
-            rdf:value "100.11"^^xsd:float ;
+            rdf:value "-1.11"^^xsd:float ;
             sosa:isResultOf <urn:test:vegetation-mapping-protocol-shapes:invalid:foliage-projective-cover:value-range> ;
             tern:unit unit:PERCENT
         ] ;
-    sosa:hasSimpleResult "100.11"^^xsd:float ;
+    sosa:hasSimpleResult "-1.11"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0378976a-0018-4604-826d-1886ca5f38c3> ;
     sosa:phenomenonTime <https://example.com/observation/foliage-projective-cover/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
