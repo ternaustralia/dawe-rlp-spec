@@ -9,7 +9,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:plant-tissue-vouchering-standard-protocol-shapes:distance-between-replicates:feature-type>
+<urn:shapes:plant-tissue-vouchering-standard-protocol-shapes:shortest-distance-between-replicates:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -35,10 +35,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:n54025f2975d440d3a72b2459211d2392b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plant-tissue-vouchering-standard-protocol-shapes:distance-between-replicates:simple-result>
+<urn:shapes:plant-tissue-vouchering-standard-protocol-shapes:shortest-distance-between-replicates:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -67,10 +67,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sh:targetClass tern:Observation ;
     urnp:examples _:n54025f2975d440d3a72b2459211d2392b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plant-tissue-vouchering-standard-protocol-shapes:distance-between-replicates:site-visit>
+<urn:shapes:plant-tissue-vouchering-standard-protocol-shapes:shortest-distance-between-replicates:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -97,10 +97,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:n54025f2975d440d3a72b2459211d2392b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plant-tissue-vouchering-standard-protocol-shapes:distance-between-replicates:unit-of-measure>
+<urn:shapes:plant-tissue-vouchering-standard-protocol-shapes:shortest-distance-between-replicates:unit-of-measure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -125,10 +125,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }"""
         ] ;
     urnp:examples _:n54025f2975d440d3a72b2459211d2392b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plant-tissue-vouchering-standard-protocol-shapes:distance-between-replicates:used-procedure>
+<urn:shapes:plant-tissue-vouchering-standard-protocol-shapes:shortest-distance-between-replicates:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -156,10 +156,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:n54025f2975d440d3a72b2459211d2392b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plant-tissue-vouchering-standard-protocol-shapes:distance-between-replicates:value-range>
+<urn:shapes:plant-tissue-vouchering-standard-protocol-shapes:shortest-distance-between-replicates:value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -186,10 +186,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }"""
         ] ;
     urnp:examples _:n54025f2975d440d3a72b2459211d2392b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plant-tissue-vouchering-standard-protocol-shapes:distance-between-replicates:value-type>
+<urn:shapes:plant-tissue-vouchering-standard-protocol-shapes:shortest-distance-between-replicates:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -215,11 +215,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:n54025f2975d440d3a72b2459211d2392b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
 .
 
 _:n54025f2975d440d3a72b2459211d2392b2
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/distance-between-replicates/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/distance-between-replicates/valid.ttl"^^xsd:anyURI ;
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/valid.ttl"^^xsd:anyURI ;
 .
 

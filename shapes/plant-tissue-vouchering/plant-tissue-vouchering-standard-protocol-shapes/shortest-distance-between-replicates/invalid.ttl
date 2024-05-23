@@ -6,7 +6,7 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:plant-tissue-vouchering-enhanced-protocol-shapes:invalid:distance-between-replicates:datatype>
+<urn:test:plant-tissue-vouchering-standard-protocol-shapes:invalid:shortest-distance-between-replicates:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:float`." ;
@@ -20,18 +20,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value 3 ;
-            sosa:isResultOf <urn:test:plant-tissue-vouchering-enhanced-protocol-shapes:invalid:distance-between-replicates:datatype> ;
+            sosa:isResultOf <urn:test:plant-tissue-vouchering-standard-protocol-shapes:invalid:shortest-distance-between-replicates:datatype> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult 3 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3b2aa21d-c60f-45c5-9447-ff8a799a513e> ;
-    sosa:phenomenonTime <https://example.com/observation/distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/shortest-distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/eea8280c-6ec7-48c9-9b9e-2418731ff005> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/c20d9a04-702d-429a-ab5f-d7424cd2990d> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plant-tissue-vouchering-enhanced-protocol-shapes:invalid:distance-between-replicates:feature-type>
+<urn:test:plant-tissue-vouchering-standard-protocol-shapes:invalid:shortest-distance-between-replicates:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -45,18 +45,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plant-tissue-vouchering-enhanced-protocol-shapes:invalid:distance-between-replicates:feature-type> ;
+            sosa:isResultOf <urn:test:plant-tissue-vouchering-standard-protocol-shapes:invalid:shortest-distance-between-replicates:feature-type> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3b2aa21d-c60f-45c5-9447-ff8a799a513e> ;
-    sosa:phenomenonTime <https://example.com/observation/distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/shortest-distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/eea8280c-6ec7-48c9-9b9e-2418731ff005> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/c20d9a04-702d-429a-ab5f-d7424cd2990d> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plant-tissue-vouchering-enhanced-protocol-shapes:invalid:distance-between-replicates:simple-result>
+<urn:test:plant-tissue-vouchering-standard-protocol-shapes:invalid:shortest-distance-between-replicates:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -70,18 +70,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plant-tissue-vouchering-enhanced-protocol-shapes:invalid:distance-between-replicates:simple-result> ;
+            sosa:isResultOf <urn:test:plant-tissue-vouchering-standard-protocol-shapes:invalid:shortest-distance-between-replicates:simple-result> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "13.56"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3b2aa21d-c60f-45c5-9447-ff8a799a513e> ;
-    sosa:phenomenonTime <https://example.com/observation/distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/shortest-distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/eea8280c-6ec7-48c9-9b9e-2418731ff005> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/c20d9a04-702d-429a-ab5f-d7424cd2990d> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plant-tissue-vouchering-enhanced-protocol-shapes:invalid:distance-between-replicates:site-visit>
+<urn:test:plant-tissue-vouchering-standard-protocol-shapes:invalid:shortest-distance-between-replicates:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -95,17 +95,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plant-tissue-vouchering-enhanced-protocol-shapes:invalid:distance-between-replicates:site-visit> ;
+            sosa:isResultOf <urn:test:plant-tissue-vouchering-standard-protocol-shapes:invalid:shortest-distance-between-replicates:site-visit> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3b2aa21d-c60f-45c5-9447-ff8a799a513e> ;
-    sosa:phenomenonTime <https://example.com/observation/distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/shortest-distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/eea8280c-6ec7-48c9-9b9e-2418731ff005> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/c20d9a04-702d-429a-ab5f-d7424cd2990d> ;
 .
 
-<urn:test:plant-tissue-vouchering-enhanced-protocol-shapes:invalid:distance-between-replicates:unit-of-measure>
+<urn:test:plant-tissue-vouchering-standard-protocol-shapes:invalid:shortest-distance-between-replicates:unit-of-measure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result unit of measure" ;
@@ -119,21 +119,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plant-tissue-vouchering-enhanced-protocol-shapes:invalid:distance-between-replicates:unit-of-measure> ;
+            sosa:isResultOf <urn:test:plant-tissue-vouchering-standard-protocol-shapes:invalid:shortest-distance-between-replicates:unit-of-measure> ;
             tern:unit <urn:fake:unit>
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3b2aa21d-c60f-45c5-9447-ff8a799a513e> ;
-    sosa:phenomenonTime <https://example.com/observation/distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/shortest-distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/eea8280c-6ec7-48c9-9b9e-2418731ff005> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/c20d9a04-702d-429a-ab5f-d7424cd2990d> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plant-tissue-vouchering-enhanced-protocol-shapes:invalid:distance-between-replicates:used-procedure>
+<urn:test:plant-tissue-vouchering-standard-protocol-shapes:invalid:shortest-distance-between-replicates:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the used procedure should be 'Plant Tissue Vouchering - Enhanced Protocol'." ;
+    rdfs:comment "Invalid result - the used procedure should be 'Plant Tissue Vouchering - Standard Protocol'." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -144,18 +144,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plant-tissue-vouchering-enhanced-protocol-shapes:invalid:distance-between-replicates:used-procedure> ;
+            sosa:isResultOf <urn:test:plant-tissue-vouchering-standard-protocol-shapes:invalid:shortest-distance-between-replicates:used-procedure> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3b2aa21d-c60f-45c5-9447-ff8a799a513e> ;
-    sosa:phenomenonTime <https://example.com/observation/distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/shortest-distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plant-tissue-vouchering-enhanced-protocol-shapes:invalid:distance-between-replicates:value-range>
+<urn:test:plant-tissue-vouchering-standard-protocol-shapes:invalid:shortest-distance-between-replicates:value-range>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value out of range" ;
@@ -169,18 +169,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Float ,
                 tern:Value ;
             rdf:value "-1.11"^^xsd:float ;
-            sosa:isResultOf <urn:test:plant-tissue-vouchering-enhanced-protocol-shapes:invalid:distance-between-replicates:value-range> ;
+            sosa:isResultOf <urn:test:plant-tissue-vouchering-standard-protocol-shapes:invalid:shortest-distance-between-replicates:value-range> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "-1.11"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3b2aa21d-c60f-45c5-9447-ff8a799a513e> ;
-    sosa:phenomenonTime <https://example.com/observation/distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/shortest-distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/eea8280c-6ec7-48c9-9b9e-2418731ff005> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/c20d9a04-702d-429a-ab5f-d7424cd2990d> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plant-tissue-vouchering-enhanced-protocol-shapes:invalid:distance-between-replicates:value-type>
+<urn:test:plant-tissue-vouchering-standard-protocol-shapes:invalid:shortest-distance-between-replicates:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:Float`." ;
@@ -192,14 +192,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasResult [
             a tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:plant-tissue-vouchering-enhanced-protocol-shapes:invalid:distance-between-replicates:value-type> ;
+            sosa:isResultOf <urn:test:plant-tissue-vouchering-standard-protocol-shapes:invalid:shortest-distance-between-replicates:value-type> ;
             tern:unit unit:M
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3b2aa21d-c60f-45c5-9447-ff8a799a513e> ;
-    sosa:phenomenonTime <https://example.com/observation/distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/shortest-distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/eea8280c-6ec7-48c9-9b9e-2418731ff005> ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/c20d9a04-702d-429a-ab5f-d7424cd2990d> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
