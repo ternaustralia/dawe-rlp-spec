@@ -199,6 +199,13 @@ test_cases: List[TestCaseItem] = [
         expected_failures=7,
     ).astuple(),
     TestCaseItem(
+        name="plot-description-standard-protocol-shapes-plot-description-comments",
+        shapes_path="shapes/plot-description/plot-description-standard-protocol-shapes/plot-description-comments/shapes.ttl",
+        valid_data_path="shapes/plot-description/plot-description-standard-protocol-shapes/plot-description-comments/valid.ttl",
+        invalid_data_path="shapes/plot-description/plot-description-standard-protocol-shapes/plot-description-comments/invalid.ttl",
+        expected_failures=6,
+    ).astuple(),
+    TestCaseItem(
         name="plot-description-standard-protocol-shapes-life-stage",
         shapes_path="shapes/plot-description/plot-description-standard-protocol-shapes/life-stage/shapes.ttl",
         valid_data_path="shapes/plot-description/plot-description-standard-protocol-shapes/life-stage/valid.ttl",
