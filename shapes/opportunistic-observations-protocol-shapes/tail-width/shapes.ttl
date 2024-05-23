@@ -34,7 +34,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n83aeb5ad01284cd29eb5a83a295e07acb2 ;
+    urnp:examples _:n21e3c935ed314052826a33529085d9f0b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/tail-width/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -66,37 +66,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n83aeb5ad01284cd29eb5a83a295e07acb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/tail-width/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:opportunistic-observations-protocol-shapes:tail-width:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Opportune Module are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/0a985940-b8ca-4d90-a5d5-4d1945410006>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:n83aeb5ad01284cd29eb5a83a295e07acb2 ;
+    urnp:examples _:n21e3c935ed314052826a33529085d9f0b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/tail-width/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -124,7 +94,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n83aeb5ad01284cd29eb5a83a295e07acb2 ;
+    urnp:examples _:n21e3c935ed314052826a33529085d9f0b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/tail-width/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -155,7 +125,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n83aeb5ad01284cd29eb5a83a295e07acb2 ;
+    urnp:examples _:n21e3c935ed314052826a33529085d9f0b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/tail-width/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -185,7 +155,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n83aeb5ad01284cd29eb5a83a295e07acb2 ;
+    urnp:examples _:n21e3c935ed314052826a33529085d9f0b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/tail-width/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -214,11 +184,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n83aeb5ad01284cd29eb5a83a295e07acb2 ;
+    urnp:examples _:n21e3c935ed314052826a33529085d9f0b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/tail-width/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n83aeb5ad01284cd29eb5a83a295e07acb2
+_:n21e3c935ed314052826a33529085d9f0b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/tail-width/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/tail-width/valid.ttl"^^xsd:anyURI ;
 .

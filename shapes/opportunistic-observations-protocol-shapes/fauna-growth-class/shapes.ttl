@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nccbe7b1cd9ea45aa84c6e3072c9a66f5b2 ;
+    urnp:examples _:n6b0a3e7109ab44d1a7865c620d8bc002b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -73,7 +73,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nccbe7b1cd9ea45aa84c6e3072c9a66f5b2 ;
+    urnp:examples _:n6b0a3e7109ab44d1a7865c620d8bc002b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -114,37 +114,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nccbe7b1cd9ea45aa84c6e3072c9a66f5b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:opportunistic-observations-protocol-shapes:fauna-growth-class:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Opportune Module are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/59df7c05-1521-4161-86e4-8e6a8feb4002>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:nccbe7b1cd9ea45aa84c6e3072c9a66f5b2 ;
+    urnp:examples _:n6b0a3e7109ab44d1a7865c620d8bc002b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -175,7 +145,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nccbe7b1cd9ea45aa84c6e3072c9a66f5b2 ;
+    urnp:examples _:n6b0a3e7109ab44d1a7865c620d8bc002b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -204,7 +174,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nccbe7b1cd9ea45aa84c6e3072c9a66f5b2 ;
+    urnp:examples _:n6b0a3e7109ab44d1a7865c620d8bc002b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -234,11 +204,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nccbe7b1cd9ea45aa84c6e3072c9a66f5b2 ;
+    urnp:examples _:n6b0a3e7109ab44d1a7865c620d8bc002b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nccbe7b1cd9ea45aa84c6e3072c9a66f5b2
+_:n6b0a3e7109ab44d1a7865c620d8bc002b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/fauna-growth-class/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/fauna-growth-class/valid.ttl"^^xsd:anyURI ;
 .
