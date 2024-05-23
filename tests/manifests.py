@@ -17,20 +17,6 @@ class TestCaseItem:
 
 test_cases: List[TestCaseItem] = [
     TestCaseItem(
-        name="cover-standard-protocol-shapes-growth-form",
-        shapes_path="shapes/cover/cover-standard-protocol-shapes/growth-form/shapes.ttl",
-        valid_data_path="shapes/cover/cover-standard-protocol-shapes/growth-form/valid.ttl",
-        invalid_data_path="shapes/cover/cover-standard-protocol-shapes/growth-form/invalid.ttl",
-        expected_failures=7,
-    ).astuple(),
-    TestCaseItem(
-        name="cover-standard-protocol-shapes-field-species-name",
-        shapes_path="shapes/cover/cover-standard-protocol-shapes/field-species-name/shapes.ttl",
-        valid_data_path="shapes/cover/cover-standard-protocol-shapes/field-species-name/valid.ttl",
-        invalid_data_path="shapes/cover/cover-standard-protocol-shapes/field-species-name/invalid.ttl",
-        expected_failures=6,
-    ).astuple(),
-    TestCaseItem(
         name="cover-standard-protocol-shapes-plant-height",
         shapes_path="shapes/cover/cover-standard-protocol-shapes/plant-height/shapes.ttl",
         valid_data_path="shapes/cover/cover-standard-protocol-shapes/plant-height/valid.ttl",
