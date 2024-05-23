@@ -437,10 +437,17 @@ test_cases: List[TestCaseItem] = [
         expected_failures=7,
     ).astuple(),
     TestCaseItem(
-        name="opportunistic-observations-protocol-shapes-number-of-individuals",
-        shapes_path="shapes/opportunistic-observations-protocol-shapes/number-of-individuals/shapes.ttl",
-        valid_data_path="shapes/opportunistic-observations-protocol-shapes/number-of-individuals/valid.ttl",
-        invalid_data_path="shapes/opportunistic-observations-protocol-shapes/number-of-individuals/invalid.ttl",
+        name="opportunistic-observations-protocol-shapes-animal-count",
+        shapes_path="shapes/opportunistic-observations-protocol-shapes/animal-count/shapes.ttl",
+        valid_data_path="shapes/opportunistic-observations-protocol-shapes/animal-count/valid.ttl",
+        invalid_data_path="shapes/opportunistic-observations-protocol-shapes/animal-count/invalid.ttl",
+        expected_failures=7,
+    ).astuple(),
+    TestCaseItem(
+        name="opportunistic-observations-protocol-shapes-plant-count",
+        shapes_path="shapes/opportunistic-observations-protocol-shapes/plant-count/shapes.ttl",
+        valid_data_path="shapes/opportunistic-observations-protocol-shapes/plant-count/valid.ttl",
+        invalid_data_path="shapes/opportunistic-observations-protocol-shapes/plant-count/invalid.ttl",
         expected_failures=7,
     ).astuple(),
     TestCaseItem(
