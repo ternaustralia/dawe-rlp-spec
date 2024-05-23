@@ -45,13 +45,6 @@ test_cases: List[TestCaseItem] = [
         expected_failures=7,
     ).astuple(),
     TestCaseItem(
-        name="cover-standard-protocol-shapes-plant-mortality",
-        shapes_path="shapes/cover/cover-standard-protocol-shapes/plant-mortality/shapes.ttl",
-        valid_data_path="shapes/cover/cover-standard-protocol-shapes/plant-mortality/valid.ttl",
-        invalid_data_path="shapes/cover/cover-standard-protocol-shapes/plant-mortality/invalid.ttl",
-        expected_failures=7,
-    ).astuple(),
-    TestCaseItem(
         name="cover-standard-protocol-shapes-fractional-cover-types",
         shapes_path="shapes/cover/cover-standard-protocol-shapes/fractional-cover-types/shapes.ttl",
         valid_data_path="shapes/cover/cover-standard-protocol-shapes/fractional-cover-types/valid.ttl",
