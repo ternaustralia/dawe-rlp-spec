@@ -8,7 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:cover-standard-protocol-shapes:fractional-cover-responses:feature-type>
+<urn:shapes:cover-standard-protocol-shapes:fractional-cover-types:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -34,10 +34,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:n5a02c4335357443f89120d55865498c5b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-responses/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-types/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-standard-protocol-shapes:fractional-cover-responses:result-value>
+<urn:shapes:cover-standard-protocol-shapes:fractional-cover-types:result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -76,10 +76,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }
         """ ;
     urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-responses/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-types/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-standard-protocol-shapes:fractional-cover-responses:simple-result>
+<urn:shapes:cover-standard-protocol-shapes:fractional-cover-types:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -108,10 +108,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sh:targetClass tern:Observation ;
     urnp:examples _:n5a02c4335357443f89120d55865498c5b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-responses/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-types/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-standard-protocol-shapes:fractional-cover-responses:site-visit>
+<urn:shapes:cover-standard-protocol-shapes:fractional-cover-types:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -138,10 +138,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:n5a02c4335357443f89120d55865498c5b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-responses/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-types/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-standard-protocol-shapes:fractional-cover-responses:used-procedure>
+<urn:shapes:cover-standard-protocol-shapes:fractional-cover-types:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -169,10 +169,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:n5a02c4335357443f89120d55865498c5b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-responses/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-types/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-standard-protocol-shapes:fractional-cover-responses:value-type>
+<urn:shapes:cover-standard-protocol-shapes:fractional-cover-types:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -198,10 +198,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:n5a02c4335357443f89120d55865498c5b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-responses/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-types/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-standard-protocol-shapes:fractional-cover-responses:vocabulary>
+<urn:shapes:cover-standard-protocol-shapes:fractional-cover-types:vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -228,11 +228,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }"""
         ] ;
     urnp:examples _:n5a02c4335357443f89120d55865498c5b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-responses/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-types/shapes.ttl"^^xsd:anyURI ;
 .
 
 _:n5a02c4335357443f89120d55865498c5b2
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-responses/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-responses/valid.ttl"^^xsd:anyURI ;
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-types/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-types/valid.ttl"^^xsd:anyURI ;
 .
 

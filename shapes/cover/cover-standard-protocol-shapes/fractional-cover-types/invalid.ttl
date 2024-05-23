@@ -5,7 +5,7 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-responses:feature-type>
+<urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-types:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -19,18 +19,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/88303e3c-2e15-524d-bcde-3a8c5ac074de> ;
-            sosa:isResultOf <urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-responses:feature-type> ;
+            sosa:isResultOf <urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-types:feature-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/51d1a677-0688-57b3-91c7-6f1e3beee188>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/88303e3c-2e15-524d-bcde-3a8c5ac074de> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/7817e244-a5cf-54c1-9ea1-9dca8469bce7> ;
-    sosa:phenomenonTime <https://example.com/observation/fractional-cover-responses/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/fractional-cover-types/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/aa1525f9-c3f2-4f7d-98cc-6a7d3aec9d8a> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-responses:result-value>
+<urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-types:result-value>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
@@ -44,18 +44,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <urn:fake:categorical:value> ;
-            sosa:isResultOf <urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-responses:result-value> ;
+            sosa:isResultOf <urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-types:result-value> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/51d1a677-0688-57b3-91c7-6f1e3beee188>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/7817e244-a5cf-54c1-9ea1-9dca8469bce7> ;
-    sosa:phenomenonTime <https://example.com/observation/fractional-cover-responses/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/fractional-cover-types/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/aa1525f9-c3f2-4f7d-98cc-6a7d3aec9d8a> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-responses:simple-result>
+<urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-types:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -69,18 +69,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/88303e3c-2e15-524d-bcde-3a8c5ac074de> ;
-            sosa:isResultOf <urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-responses:simple-result> ;
+            sosa:isResultOf <urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-types:simple-result> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/51d1a677-0688-57b3-91c7-6f1e3beee188>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/7817e244-a5cf-54c1-9ea1-9dca8469bce7> ;
-    sosa:phenomenonTime <https://example.com/observation/fractional-cover-responses/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/fractional-cover-types/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/aa1525f9-c3f2-4f7d-98cc-6a7d3aec9d8a> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-responses:site-visit>
+<urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-types:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -94,17 +94,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/88303e3c-2e15-524d-bcde-3a8c5ac074de> ;
-            sosa:isResultOf <urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-responses:site-visit> ;
+            sosa:isResultOf <urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-types:site-visit> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/51d1a677-0688-57b3-91c7-6f1e3beee188>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/88303e3c-2e15-524d-bcde-3a8c5ac074de> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/7817e244-a5cf-54c1-9ea1-9dca8469bce7> ;
-    sosa:phenomenonTime <https://example.com/observation/fractional-cover-responses/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/fractional-cover-types/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/aa1525f9-c3f2-4f7d-98cc-6a7d3aec9d8a> ;
 .
 
-<urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-responses:used-procedure>
+<urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-types:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Standard protocol'." ;
@@ -118,18 +118,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/88303e3c-2e15-524d-bcde-3a8c5ac074de> ;
-            sosa:isResultOf <urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-responses:used-procedure> ;
+            sosa:isResultOf <urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-types:used-procedure> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/51d1a677-0688-57b3-91c7-6f1e3beee188>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/88303e3c-2e15-524d-bcde-3a8c5ac074de> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/7817e244-a5cf-54c1-9ea1-9dca8469bce7> ;
-    sosa:phenomenonTime <https://example.com/observation/fractional-cover-responses/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/fractional-cover-types/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-responses:value-type>
+<urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-types:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
@@ -141,18 +141,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasResult [
             a tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/88303e3c-2e15-524d-bcde-3a8c5ac074de> ;
-            sosa:isResultOf <urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-responses:value-type> ;
+            sosa:isResultOf <urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-types:value-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/51d1a677-0688-57b3-91c7-6f1e3beee188>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/88303e3c-2e15-524d-bcde-3a8c5ac074de> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/7817e244-a5cf-54c1-9ea1-9dca8469bce7> ;
-    sosa:phenomenonTime <https://example.com/observation/fractional-cover-responses/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/fractional-cover-types/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/aa1525f9-c3f2-4f7d-98cc-6a7d3aec9d8a> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-responses:vocabulary>
+<urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-types:vocabulary>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect vocabulary" ;
@@ -166,12 +166,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/88303e3c-2e15-524d-bcde-3a8c5ac074de> ;
-            sosa:isResultOf <urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-responses:vocabulary> ;
+            sosa:isResultOf <urn:test:cover-standard-protocol-shapes:invalid:fractional-cover-types:vocabulary> ;
             tern:vocabulary <urn:fake:vocabulary>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/88303e3c-2e15-524d-bcde-3a8c5ac074de> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/7817e244-a5cf-54c1-9ea1-9dca8469bce7> ;
-    sosa:phenomenonTime <https://example.com/observation/fractional-cover-responses/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/fractional-cover-types/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <https://linked.data.gov.au/def/nrm/aa1525f9-c3f2-4f7d-98cc-6a7d3aec9d8a> ;
     tern:hasSiteVisit <urn:test:site> ;
