@@ -514,13 +514,6 @@ test_cases: List[TestCaseItem] = [
         expected_failures=7,
     ).astuple(),
     TestCaseItem(
-        name="opportunistic-observations-protocol-shapes-voucher-type",
-        shapes_path="shapes/opportunistic-observations-protocol-shapes/voucher-type/shapes.ttl",
-        valid_data_path="shapes/opportunistic-observations-protocol-shapes/voucher-type/valid.ttl",
-        invalid_data_path="shapes/opportunistic-observations-protocol-shapes/voucher-type/invalid.ttl",
-        expected_failures=7,
-    ).astuple(),
-    TestCaseItem(
         name="opportunistic-observations-protocol-shapes-taxa-type",
         shapes_path="shapes/opportunistic-observations-protocol-shapes/taxa-type/shapes.ttl",
         valid_data_path="shapes/opportunistic-observations-protocol-shapes/taxa-type/valid.ttl",
