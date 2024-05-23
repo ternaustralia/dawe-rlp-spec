@@ -493,10 +493,10 @@ test_cases: List[TestCaseItem] = [
         expected_failures=7,
     ).astuple(),
     TestCaseItem(
-        name="opportunistic-observations-protocol-shapes-age-class",
-        shapes_path="shapes/opportunistic-observations-protocol-shapes/age-class/shapes.ttl",
-        valid_data_path="shapes/opportunistic-observations-protocol-shapes/age-class/valid.ttl",
-        invalid_data_path="shapes/opportunistic-observations-protocol-shapes/age-class/invalid.ttl",
+        name="opportunistic-observations-protocol-shapes-fauna-growth-class",
+        shapes_path="shapes/opportunistic-observations-protocol-shapes/fauna-growth-class/shapes.ttl",
+        valid_data_path="shapes/opportunistic-observations-protocol-shapes/fauna-growth-class/valid.ttl",
+        invalid_data_path="shapes/opportunistic-observations-protocol-shapes/fauna-growth-class/invalid.ttl",
         expected_failures=7,
     ).astuple(),
     TestCaseItem(
