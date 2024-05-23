@@ -34,7 +34,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n102ca87207fb4b41abda9ea1944c7741b2 ;
+    urnp:examples _:n2a3d34b7df14452d97c63092797f6602b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/snout-vent-length/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -66,37 +66,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n102ca87207fb4b41abda9ea1944c7741b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/snout-vent-length/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:opportunistic-observations-protocol-shapes:snout-vent-length:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Opportune Module are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/dfe2c0ec-dc72-5d75-97eb-1485040bbcfd>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:n102ca87207fb4b41abda9ea1944c7741b2 ;
+    urnp:examples _:n2a3d34b7df14452d97c63092797f6602b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/snout-vent-length/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -124,7 +94,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n102ca87207fb4b41abda9ea1944c7741b2 ;
+    urnp:examples _:n2a3d34b7df14452d97c63092797f6602b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/snout-vent-length/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -155,7 +125,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n102ca87207fb4b41abda9ea1944c7741b2 ;
+    urnp:examples _:n2a3d34b7df14452d97c63092797f6602b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/snout-vent-length/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -185,7 +155,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n102ca87207fb4b41abda9ea1944c7741b2 ;
+    urnp:examples _:n2a3d34b7df14452d97c63092797f6602b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/snout-vent-length/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -214,11 +184,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n102ca87207fb4b41abda9ea1944c7741b2 ;
+    urnp:examples _:n2a3d34b7df14452d97c63092797f6602b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/snout-vent-length/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n102ca87207fb4b41abda9ea1944c7741b2
+_:n2a3d34b7df14452d97c63092797f6602b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/snout-vent-length/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/snout-vent-length/valid.ttl"^^xsd:anyURI ;
 .

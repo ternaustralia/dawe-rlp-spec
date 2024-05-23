@@ -1,0 +1,31 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:vegetation-mapping-protocol-shapes:valid:land-use-history>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - land-use history" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Conservation-and-natural-environments> ;
+            sosa:isResultOf <urn:test:vegetation-mapping-protocol-shapes:valid:land-use-history> ;
+            tern:vocabulary <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Australian-Land-Use-and-Management-Classification>
+        ] ;
+    sosa:hasSimpleResult <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Conservation-and-natural-environments> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/372ec5c5-79da-44a9-a56e-dd9ab311da06> ;
+    sosa:phenomenonTime <https://example.com/observation/land-use-history/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508> ;
+.
+

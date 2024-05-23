@@ -1,0 +1,230 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-sample-type:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _vegetation stratum_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/32834f36-a478-45be-97f4-ff2ff51e9f5c> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/32834f36-a478-45be-97f4-ff2ff51e9f5c[`vegetation stratum`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/07216660-5082-428e-9f78-f1139d5c2b1f>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n73d91cda18e7475da565e2dc263016d5b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-sample-type:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Voucher specimen sample types controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/07ef9a24-969e-5a4f-876a-bf19005dd73d>
+            <https://linked.data.gov.au/def/nrm/0be3f40a-ff52-55e9-9131-defdfbd88a52>
+            <https://linked.data.gov.au/def/nrm/199896fa-e29e-4ef9-b980-988cc1351ced>
+            <https://linked.data.gov.au/def/nrm/19db6460-805b-581e-8567-d5d9e7cb2347>
+            <https://linked.data.gov.au/def/nrm/1da79f6f-fd69-533a-8afc-755366543026>
+            <https://linked.data.gov.au/def/nrm/226873c8-5bc1-5788-8684-509adafdb91b>
+            <https://linked.data.gov.au/def/nrm/28dadf59-ab8f-491a-881d-272f397719e3>
+            <https://linked.data.gov.au/def/nrm/3bb659e2-240f-521b-9587-fdc93d2d5cfe>
+            <https://linked.data.gov.au/def/nrm/41a4201a-98ad-4c61-b7f8-1bca37e10315>
+            <https://linked.data.gov.au/def/nrm/50708dcf-27c0-5e4b-b99c-d707efc03f2a>
+            <https://linked.data.gov.au/def/nrm/50e07968-ba94-5ed8-b963-8d8e156d21b9>
+            <https://linked.data.gov.au/def/nrm/65c51ed9-4e53-5823-b0e6-6a888de172a7>
+            <https://linked.data.gov.au/def/nrm/71efc83c-2ece-5799-a236-b7e4e9b49b92>
+            <https://linked.data.gov.au/def/nrm/9376fd15-5755-5dd1-bf3a-f5cbca30ba50>
+            <https://linked.data.gov.au/def/nrm/9430fb9f-e9e0-5c2b-950c-e525fedb6908>
+            <https://linked.data.gov.au/def/nrm/958424a8-1c46-507b-a175-d5ff5409f85e>
+            <https://linked.data.gov.au/def/nrm/b01d9b87-c252-58c4-a94f-fed6292f0830>
+            <https://linked.data.gov.au/def/nrm/b52635ac-a4bd-53d1-b1e9-133604a11bbe>
+            <https://linked.data.gov.au/def/nrm/bb302fe4-a5d9-52be-acab-457c84acb385>
+            <https://linked.data.gov.au/def/nrm/c810367e-abae-5c42-8283-886752ddd331>
+            <https://linked.data.gov.au/def/nrm/da87e0f1-8227-5dce-881e-87981d5fc57f>
+            <https://linked.data.gov.au/def/nrm/dffc236d-a306-5e2e-8ef8-f79cbf57f3b1>
+            <https://linked.data.gov.au/def/nrm/e051f9ca-bc8e-4ba4-989c-8db3e7a5e561>
+            <https://linked.data.gov.au/def/nrm/e3a4c141-a85e-58cc-bf8c-66c35d27f44f>
+            <https://linked.data.gov.au/def/nrm/f9f69d93-df75-5021-883a-efac00502b09>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Voucher specimen sample types controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/07216660-5082-428e-9f78-f1139d5c2b1f> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n73d91cda18e7475da565e2dc263016d5b2 ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'a3333793-95bd-47fc-ba90-b8fc65a40456'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-sample-type:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/07216660-5082-428e-9f78-f1139d5c2b1f>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:n73d91cda18e7475da565e2dc263016d5b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-sample-type:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>`.
+
+    `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>` is the IRI for "Vegetation Mapping Module".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508> ;
+    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508`." ;
+    sh:name "Used procedure" ;
+    sh:path sosa:usedProcedure ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/07216660-5082-428e-9f78-f1139d5c2b1f>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n73d91cda18e7475da565e2dc263016d5b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-sample-type:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/07216660-5082-428e-9f78-f1139d5c2b1f>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n73d91cda18e7475da565e2dc263016d5b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-sample-type:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/a3333793-95bd-47fc-ba90-b8fc65a40456>`.
+
+        `<https://linked.data.gov.au/def/nrm/a3333793-95bd-47fc-ba90-b8fc65a40456>` is the IRI for "Voucher specimen sample types".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `a3333793-95bd-47fc-ba90-b8fc65a40456$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "a3333793-95bd-47fc-ba90-b8fc65a40456$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/07216660-5082-428e-9f78-f1139d5c2b1f> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n73d91cda18e7475da565e2dc263016d5b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+_:n73d91cda18e7475da565e2dc263016d5b2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/valid.ttl"^^xsd:anyURI ;
+.
+

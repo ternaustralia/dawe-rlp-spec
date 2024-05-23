@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb1cb45a1ee044658b26190774e84ad67b2 ;
+    urnp:examples _:nd270d79574c249ee99825f52ad2cbc39b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -90,7 +90,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nb1cb45a1ee044658b26190774e84ad67b2 ;
+    urnp:examples _:nd270d79574c249ee99825f52ad2cbc39b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -131,37 +131,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nb1cb45a1ee044658b26190774e84ad67b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:opportunistic-observations-protocol-shapes:growth-form:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Opportune Module are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:nb1cb45a1ee044658b26190774e84ad67b2 ;
+    urnp:examples _:nd270d79574c249ee99825f52ad2cbc39b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -192,7 +162,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb1cb45a1ee044658b26190774e84ad67b2 ;
+    urnp:examples _:nd270d79574c249ee99825f52ad2cbc39b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -221,7 +191,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb1cb45a1ee044658b26190774e84ad67b2 ;
+    urnp:examples _:nd270d79574c249ee99825f52ad2cbc39b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -251,11 +221,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nb1cb45a1ee044658b26190774e84ad67b2 ;
+    urnp:examples _:nd270d79574c249ee99825f52ad2cbc39b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nb1cb45a1ee044658b26190774e84ad67b2
+_:nd270d79574c249ee99825f52ad2cbc39b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/growth-form/valid.ttl"^^xsd:anyURI ;
 .
