@@ -1249,6 +1249,13 @@ test_cases: List[TestCaseItem] = [
     #     expected_failures=7,
     # ).astuple(),
     TestCaseItem(
+        name="vegetation-mapping-protocol-shapes-land-use-history",
+        shapes_path="shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl",
+        valid_data_path="shapes/vegetation-mapping-protocol-shapes/land-use-history/valid.ttl",
+        invalid_data_path="shapes/vegetation-mapping-protocol-shapes/land-use-history/invalid.ttl",
+        expected_failures=7,
+    ).astuple(),
+    TestCaseItem(
         name="vegetation-mapping-protocol-shapes-foliage-projective-cover",
         shapes_path="shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/shapes.ttl",
         valid_data_path="shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/valid.ttl",

@@ -1,0 +1,202 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:vegetation-mapping-protocol-shapes:land-use-history:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/372ec5c5-79da-44a9-a56e-dd9ab311da06>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:nf8da396f0b604917a8fa367a1adcce57b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:vegetation-mapping-protocol-shapes:land-use-history:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Australian Land Use and Management Classification controlled vocabulary." ;
+    sh:in (
+            <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Conservation-and-natural-environments>
+            <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Australian-Land-Use-and-Management-Classification>
+            <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Production-from-dryland-agriculture-and-plantations>
+            <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Production-from-irrigated-agriculture-and-plantations>
+            <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Production-from-relatively-natural-environments>
+            <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Water>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Australian Land Use and Management Classification controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/372ec5c5-79da-44a9-a56e-dd9ab311da06> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:nf8da396f0b604917a8fa367a1adcce57b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:vegetation-mapping-protocol-shapes:land-use-history:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/372ec5c5-79da-44a9-a56e-dd9ab311da06>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:nf8da396f0b604917a8fa367a1adcce57b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:vegetation-mapping-protocol-shapes:land-use-history:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>`.
+
+    # `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>` is the IRI for "Vegetation mapping module".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508> ;
+    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508`." ;
+    sh:name "Used procedure" ;
+    sh:path sosa:usedProcedure ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/372ec5c5-79da-44a9-a56e-dd9ab311da06>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nf8da396f0b604917a8fa367a1adcce57b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:vegetation-mapping-protocol-shapes:land-use-history:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/372ec5c5-79da-44a9-a56e-dd9ab311da06>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nf8da396f0b604917a8fa367a1adcce57b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:vegetation-mapping-protocol-shapes:land-use-history:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Australian-Land-Use-and-Management-Classification>`.
+
+        `<http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Australian-Land-Use-and-Management-Classification>` is the IRI for "Australian Land Use and Management Classification".""" ;
+    sh:hasValue <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Australian-Land-Use-and-Management-Classification> ;
+    sh:message "The value of `tern:vocabulary` _MUST_ be <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Australian-Land-Use-and-Management-Classification>." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/372ec5c5-79da-44a9-a56e-dd9ab311da06> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:nf8da396f0b604917a8fa367a1adcce57b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
+.
+
+_:nf8da396f0b604917a8fa367a1adcce57b2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/valid.ttl"^^xsd:anyURI ;
+.
+
