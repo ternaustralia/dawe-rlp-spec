@@ -1298,10 +1298,10 @@ test_cases: List[TestCaseItem] = [
         expected_failures=6,
     ).astuple(),
     TestCaseItem(
-        name="vegetation-mapping-protocol-shapes-voucher-type",
-        shapes_path="shapes/vegetation-mapping-protocol-shapes/voucher-type/shapes.ttl",
-        valid_data_path="shapes/vegetation-mapping-protocol-shapes/voucher-type/valid.ttl",
-        invalid_data_path="shapes/vegetation-mapping-protocol-shapes/voucher-type/invalid.ttl",
+        name="vegetation-mapping-protocol-shapes-voucher-specimen-sample-type",
+        shapes_path="shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl",
+        valid_data_path="shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/valid.ttl",
+        invalid_data_path="shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/invalid.ttl",
         expected_failures=6,
     ).astuple(),
     TestCaseItem(
