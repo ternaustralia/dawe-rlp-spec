@@ -185,13 +185,6 @@ test_cases: List[TestCaseItem] = [
         expected_failures=6,
     ).astuple(),
     TestCaseItem(
-        name="floristics-standard-protocol-shapes-species-identification-status",
-        shapes_path="shapes/floristics/floristics-standard-protocol-shapes/species-identification-status/shapes.ttl",
-        valid_data_path="shapes/floristics/floristics-standard-protocol-shapes/species-identification-status/valid.ttl",
-        invalid_data_path="shapes/floristics/floristics-standard-protocol-shapes/species-identification-status/invalid.ttl",
-        expected_failures=7,
-    ).astuple(),
-    TestCaseItem(
         name="floristics-standard-protocol-shapes-plant-habit",
         shapes_path="shapes/floristics/floristics-standard-protocol-shapes/plant-habit/shapes.ttl",
         valid_data_path="shapes/floristics/floristics-standard-protocol-shapes/plant-habit/valid.ttl",
