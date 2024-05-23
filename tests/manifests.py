@@ -318,6 +318,13 @@ test_cases: List[TestCaseItem] = [
         expected_failures=7,
     ).astuple(),
     TestCaseItem(
+        name="plot-description-enhanced-protocol-shapes-land-use-history",
+        shapes_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/shapes.ttl",
+        valid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/valid.ttl",
+        invalid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/invalid.ttl",
+        expected_failures=7,
+    ).astuple(),
+    TestCaseItem(
         name="plot-description-enhanced-protocol-shapes-field-species-name",
         shapes_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/shapes.ttl",
         valid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/valid.ttl",
