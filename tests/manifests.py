@@ -311,6 +311,13 @@ test_cases: List[TestCaseItem] = [
         expected_failures=7,
     ).astuple(),
     TestCaseItem(
+        name="plot-description-enhanced-protocol-shapes-nearest-infrastructure",
+        shapes_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl",
+        valid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/valid.ttl",
+        invalid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/invalid.ttl",
+        expected_failures=7,
+    ).astuple(),
+    TestCaseItem(
         name="plot-description-enhanced-protocol-shapes-field-species-name",
         shapes_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/shapes.ttl",
         valid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/valid.ttl",
