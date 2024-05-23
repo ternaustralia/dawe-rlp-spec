@@ -31,6 +31,13 @@ test_cases: List[TestCaseItem] = [
         expected_failures=6,
     ).astuple(),
     TestCaseItem(
+        name="cover-standard-protocol-shapes-dead-branch",
+        shapes_path="shapes/cover/cover-standard-protocol-shapes/dead-branch/shapes.ttl",
+        valid_data_path="shapes/cover/cover-standard-protocol-shapes/dead-branch/valid.ttl",
+        invalid_data_path="shapes/cover/cover-standard-protocol-shapes/dead-branch/invalid.ttl",
+        expected_failures=6,
+    ).astuple(),
+    TestCaseItem(
         name="cover-standard-protocol-shapes-substrate",
         shapes_path="shapes/cover/cover-standard-protocol-shapes/substrate/shapes.ttl",
         valid_data_path="shapes/cover/cover-standard-protocol-shapes/substrate/valid.ttl",
