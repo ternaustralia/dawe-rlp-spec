@@ -332,6 +332,13 @@ test_cases: List[TestCaseItem] = [
         expected_failures=6,
     ).astuple(),
     TestCaseItem(
+        name="plot-description-enhanced-protocol-shapes-plot-description-comments",
+        shapes_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/plot-description-comments/shapes.ttl",
+        valid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/plot-description-comments/valid.ttl",
+        invalid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/plot-description-comments/invalid.ttl",
+        expected_failures=6,
+    ).astuple(),
+    TestCaseItem(
         name="plot-description-enhanced-protocol-shapes-landform-element",
         shapes_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/shapes.ttl",
         valid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/valid.ttl",
