@@ -1,0 +1,32 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:fauna-ground-counts-vantage-point-protocol-shapes:valid:Cat-coat-colour>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - Cat coat colour" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/2233e495-6dbc-55ff-8ca8-a5a5aa4a4909> ;
+            sosa:isResultOf <urn:test:fauna-ground-counts-vantage-point-protocol-shapes:valid:Cat-coat-colour> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/0c428cb8-25fe-5d09-a361-4164d8b15571>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/2233e495-6dbc-55ff-8ca8-a5a5aa4a4909> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0c428cb8-25fe-5d09-a361-4164d8b15571> ;
+    sosa:phenomenonTime <https://example.com/observation/Cat-coat-colour/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
