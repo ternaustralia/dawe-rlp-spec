@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nfb8be891c56a435ab37c03127cf14047b2 ;
+    urnp:examples _:nec70e89fedc8452093fd3c50e22cc5b9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/substrate/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -78,7 +78,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nfb8be891c56a435ab37c03127cf14047b2 ;
+    urnp:examples _:nec70e89fedc8452093fd3c50e22cc5b9b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -119,7 +119,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nfb8be891c56a435ab37c03127cf14047b2 ;
+    urnp:examples _:nec70e89fedc8452093fd3c50e22cc5b9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/substrate/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -149,7 +149,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nfb8be891c56a435ab37c03127cf14047b2 ;
+    urnp:examples _:nec70e89fedc8452093fd3c50e22cc5b9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/substrate/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -181,7 +181,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nfb8be891c56a435ab37c03127cf14047b2 ;
+    urnp:examples _:nec70e89fedc8452093fd3c50e22cc5b9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/substrate/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -210,7 +210,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nfb8be891c56a435ab37c03127cf14047b2 ;
+    urnp:examples _:nec70e89fedc8452093fd3c50e22cc5b9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/substrate/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -240,11 +240,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nfb8be891c56a435ab37c03127cf14047b2 ;
+    urnp:examples _:nec70e89fedc8452093fd3c50e22cc5b9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/substrate/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nfb8be891c56a435ab37c03127cf14047b2
+_:nec70e89fedc8452093fd3c50e22cc5b9b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/substrate/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/substrate/valid.ttl"^^xsd:anyURI ;
 .

@@ -6,6 +6,11 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
 <urn:test:cover-standard-protocol-shapes:invalid:plant-height:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
@@ -201,5 +206,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:cover-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:cover-standard>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/aa1525f9-c3f2-4f7d-98cc-6a7d3aec9d8a> ;
 .
 
