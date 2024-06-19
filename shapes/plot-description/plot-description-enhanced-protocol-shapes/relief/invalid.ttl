@@ -5,6 +5,11 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
 <urn:test:plot-description-enhanced-protocol-shapes:invalid:relief:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
@@ -175,5 +180,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:plot-description-enhanced> ;
     tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:plot-description-enhanced>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21> ;
 .
 
