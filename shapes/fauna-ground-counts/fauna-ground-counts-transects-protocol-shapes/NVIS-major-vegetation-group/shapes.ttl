@@ -175,7 +175,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     select ?this {
         values ?property_uri {<https://linked.data.gov.au/def/nrm/58f2bd87-17d0-5d11-9ca1-b8f3b76d563b>}
         ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
     }
     """
         ] ;
