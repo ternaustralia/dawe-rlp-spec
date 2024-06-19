@@ -138,7 +138,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
     `<https://linked.data.gov.au/def/nrm/c20d9a04-702d-429a-ab5f-d7424cd2990d>` is the IRI for "Plant Tissue Vouchering - Standard Protocol".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/c20d9a04-702d-429a-ab5f-d7424cd2990d> ;
-    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/c20d9a04-702d-429a-ab5f-d7424cd2990d`." ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/c20d9a04-702d-429a-ab5f-d7424cd2990d`." ;
     sh:name "Used procedure" ;
     sh:path sosa:usedProcedure ;
     sh:target [
