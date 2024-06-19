@@ -140,7 +140,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:hasValue <https://linked.data.gov.au/def/nrm/c20d9a04-702d-429a-ab5f-d7424cd2990d> ;
     sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/c20d9a04-702d-429a-ab5f-d7424cd2990d`." ;
     sh:name "Method type of used procedure" ;
-    sh:path sosa:usedProcedure ;
+    sh:path tern:methodType ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
