@@ -126,7 +126,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     `<https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6>` is the IRI for "Opportune Module".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
     sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6`." ;
-    sh:name "Used procedure" ;
+    sh:name "Method type of used procedure" ;
     sh:path sosa:usedProcedure ;
     sh:target [
             a sh:SPARQLTarget ;
