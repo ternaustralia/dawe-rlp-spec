@@ -164,7 +164,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     # `<https://linked.data.gov.au/def/nrm/35175f0d-bdd7-4e32-908f-17f7239e78fa>` is the IRI for "Floristics - Enhanced Protocol".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/35175f0d-bdd7-4e32-908f-17f7239e78fa> ;
     sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/35175f0d-bdd7-4e32-908f-17f7239e78fa`." ;
-    sh:name "Used procedure" ;
+    sh:name "Method type of used procedure" ;
     sh:path sosa:usedProcedure ;
     sh:target [
             a sh:SPARQLTarget ;
