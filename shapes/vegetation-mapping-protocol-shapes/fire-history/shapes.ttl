@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n09c43f253026408e9bc83edb394fd570b2 ;
+    urnp:examples _:naa7770f61bcb409b9aefa51ff96169d4b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -66,7 +66,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n09c43f253026408e9bc83edb394fd570b2 ;
+    urnp:examples _:naa7770f61bcb409b9aefa51ff96169d4b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -107,7 +107,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n09c43f253026408e9bc83edb394fd570b2 ;
+    urnp:examples _:naa7770f61bcb409b9aefa51ff96169d4b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -139,7 +139,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n09c43f253026408e9bc83edb394fd570b2 ;
+    urnp:examples _:naa7770f61bcb409b9aefa51ff96169d4b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -168,7 +168,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n09c43f253026408e9bc83edb394fd570b2 ;
+    urnp:examples _:naa7770f61bcb409b9aefa51ff96169d4b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -198,11 +198,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n09c43f253026408e9bc83edb394fd570b2 ;
+    urnp:examples _:naa7770f61bcb409b9aefa51ff96169d4b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n09c43f253026408e9bc83edb394fd570b2
+_:naa7770f61bcb409b9aefa51ff96169d4b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/valid.ttl"^^xsd:anyURI ;
 .

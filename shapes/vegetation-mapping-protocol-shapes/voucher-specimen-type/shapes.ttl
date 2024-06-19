@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n2405586a0cd54a42bc5299ec88fae9bfb2 ;
+    urnp:examples _:n7f58be8917624a45b00bd2dea71906c1b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -71,7 +71,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n2405586a0cd54a42bc5299ec88fae9bfb2 ;
+    urnp:examples _:n7f58be8917624a45b00bd2dea71906c1b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -112,7 +112,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n2405586a0cd54a42bc5299ec88fae9bfb2 ;
+    urnp:examples _:n7f58be8917624a45b00bd2dea71906c1b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -144,7 +144,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n2405586a0cd54a42bc5299ec88fae9bfb2 ;
+    urnp:examples _:n7f58be8917624a45b00bd2dea71906c1b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -173,7 +173,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n2405586a0cd54a42bc5299ec88fae9bfb2 ;
+    urnp:examples _:n7f58be8917624a45b00bd2dea71906c1b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -203,11 +203,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n2405586a0cd54a42bc5299ec88fae9bfb2 ;
+    urnp:examples _:n7f58be8917624a45b00bd2dea71906c1b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n2405586a0cd54a42bc5299ec88fae9bfb2
+_:n7f58be8917624a45b00bd2dea71906c1b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/valid.ttl"^^xsd:anyURI ;
 .
