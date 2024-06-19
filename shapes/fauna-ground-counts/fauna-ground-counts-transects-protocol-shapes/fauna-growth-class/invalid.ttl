@@ -5,6 +5,11 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
 <urn:test:fauna-ground-counts-transects-protocol-shapes:invalid:fauna-growth-class:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
@@ -175,5 +180,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-transects> ;
     tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:fauna-ground-counts-transects>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f> ;
 .
 
