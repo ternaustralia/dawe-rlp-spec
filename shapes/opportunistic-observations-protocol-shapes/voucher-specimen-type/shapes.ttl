@@ -36,7 +36,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n2fc54563434d4b4298766f0e91c20787b4 ;
+    urnp:examples _:nc3760bc37a0849b7922f71b29623d706b4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -74,7 +74,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n2fc54563434d4b4298766f0e91c20787b4 ;
+    urnp:examples _:nc3760bc37a0849b7922f71b29623d706b4 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -115,7 +115,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n2fc54563434d4b4298766f0e91c20787b4 ;
+    urnp:examples _:nc3760bc37a0849b7922f71b29623d706b4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -147,7 +147,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n2fc54563434d4b4298766f0e91c20787b4 ;
+    urnp:examples _:nc3760bc37a0849b7922f71b29623d706b4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -176,7 +176,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n2fc54563434d4b4298766f0e91c20787b4 ;
+    urnp:examples _:nc3760bc37a0849b7922f71b29623d706b4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -206,11 +206,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n2fc54563434d4b4298766f0e91c20787b4 ;
+    urnp:examples _:nc3760bc37a0849b7922f71b29623d706b4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n2fc54563434d4b4298766f0e91c20787b4
+_:nc3760bc37a0849b7922f71b29623d706b4
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/voucher-specimen-type/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/voucher-specimen-type/valid.ttl"^^xsd:anyURI ;
 .

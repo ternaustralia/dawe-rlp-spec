@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb90dffe65e2c4d5a89c20eac5acbde0db2 ;
+    urnp:examples _:n98ff63f25f824033ac898925ebc4d097b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/position-of-testes/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -66,7 +66,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nb90dffe65e2c4d5a89c20eac5acbde0db2 ;
+    urnp:examples _:n98ff63f25f824033ac898925ebc4d097b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -107,7 +107,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nb90dffe65e2c4d5a89c20eac5acbde0db2 ;
+    urnp:examples _:n98ff63f25f824033ac898925ebc4d097b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/position-of-testes/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -139,7 +139,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb90dffe65e2c4d5a89c20eac5acbde0db2 ;
+    urnp:examples _:n98ff63f25f824033ac898925ebc4d097b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/position-of-testes/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -168,7 +168,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb90dffe65e2c4d5a89c20eac5acbde0db2 ;
+    urnp:examples _:n98ff63f25f824033ac898925ebc4d097b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/position-of-testes/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -198,11 +198,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nb90dffe65e2c4d5a89c20eac5acbde0db2 ;
+    urnp:examples _:n98ff63f25f824033ac898925ebc4d097b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/position-of-testes/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nb90dffe65e2c4d5a89c20eac5acbde0db2
+_:n98ff63f25f824033ac898925ebc4d097b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/position-of-testes/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/position-of-testes/valid.ttl"^^xsd:anyURI ;
 .

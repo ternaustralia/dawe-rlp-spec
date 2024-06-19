@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb1590ab6c8f14cc6a02e9f440e703cb8b2 ;
+    urnp:examples _:n92918d2f1e9f4399b6a1d56448fcb08bb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -71,7 +71,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nb1590ab6c8f14cc6a02e9f440e703cb8b2 ;
+    urnp:examples _:n92918d2f1e9f4399b6a1d56448fcb08bb2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -112,7 +112,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nb1590ab6c8f14cc6a02e9f440e703cb8b2 ;
+    urnp:examples _:n92918d2f1e9f4399b6a1d56448fcb08bb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -144,7 +144,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb1590ab6c8f14cc6a02e9f440e703cb8b2 ;
+    urnp:examples _:n92918d2f1e9f4399b6a1d56448fcb08bb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -173,7 +173,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb1590ab6c8f14cc6a02e9f440e703cb8b2 ;
+    urnp:examples _:n92918d2f1e9f4399b6a1d56448fcb08bb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -203,11 +203,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nb1590ab6c8f14cc6a02e9f440e703cb8b2 ;
+    urnp:examples _:n92918d2f1e9f4399b6a1d56448fcb08bb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nb1590ab6c8f14cc6a02e9f440e703cb8b2
+_:n92918d2f1e9f4399b6a1d56448fcb08bb2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/life-stage/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportunistic-observations-protocol-shapes/life-stage/valid.ttl"^^xsd:anyURI ;
 .
