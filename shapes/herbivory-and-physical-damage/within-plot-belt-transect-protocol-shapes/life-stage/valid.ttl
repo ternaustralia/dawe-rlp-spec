@@ -1,0 +1,37 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:valid:life-stage>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - life stage" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/9a4421e0-c308-5e44-b778-24f2688ec1ea> ;
+            sosa:isResultOf <urn:test:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:valid:life-stage> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/5f82c583-167b-4ed2-b25e-4d67decb3f2d>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/9a4421e0-c308-5e44-b778-24f2688ec1ea> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/ce3fd96d-e68d-4b14-b3fd-27690c566440> ;
+    sosa:phenomenonTime <https://example.com/observation/life-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-within-plot-belt-transect> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:herbivory-and-physical-damage-within-plot-belt-transect>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd> ;
+.
+
