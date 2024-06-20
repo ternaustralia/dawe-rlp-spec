@@ -165,7 +165,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
         values ?property_uri {<https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094>}
-        ?this a tern:Observation ;
+        ?observation a tern:Observation ;
             sosa:observedProperty ?property_uri ;
             sosa:usedProcedure ?this .
     }
