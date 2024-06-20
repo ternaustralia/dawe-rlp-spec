@@ -6,11 +6,6 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:procedure:plant-tissue-vouchering-enhanced>
-    a tern:Procedure ;
-    tern:methodType <https://linked.data.gov.au/def/nrm/eea8280c-6ec7-48c9-9b9e-2418731ff005> ;
-.
-
 <urn:test:plant-tissue-vouchering-standard-protocol-shapes:valid:shortest-distance-between-replicates>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
@@ -34,5 +29,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:plant-tissue-vouchering-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:plant-tissue-vouchering-standard>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/c20d9a04-702d-429a-ab5f-d7424cd2990d> ;
 .
 
