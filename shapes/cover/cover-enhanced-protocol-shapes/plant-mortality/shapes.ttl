@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n56a97a525bac430591ff2e3c4c457ef3b2 ;
+    urnp:examples _:n4d1ed9d28d764db8b40b56321c8de061b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-enhanced-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -66,7 +66,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n56a97a525bac430591ff2e3c4c457ef3b2 ;
+    urnp:examples _:n4d1ed9d28d764db8b40b56321c8de061b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -107,7 +107,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n56a97a525bac430591ff2e3c4c457ef3b2 ;
+    urnp:examples _:n4d1ed9d28d764db8b40b56321c8de061b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-enhanced-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -137,7 +137,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n56a97a525bac430591ff2e3c4c457ef3b2 ;
+    urnp:examples _:n4d1ed9d28d764db8b40b56321c8de061b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-enhanced-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -147,13 +147,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/576f634e-2706-4f18-b561-0636d4c007d0>`.
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/576f634e-2706-4f18-b561-0636d4c007d0>`.
 
     `<https://linked.data.gov.au/def/nrm/576f634e-2706-4f18-b561-0636d4c007d0>` is the IRI for "Enhanced protocol".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/576f634e-2706-4f18-b561-0636d4c007d0> ;
-    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/576f634e-2706-4f18-b561-0636d4c007d0`." ;
-    sh:name "Used procedure" ;
-    sh:path sosa:usedProcedure ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/576f634e-2706-4f18-b561-0636d4c007d0`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -163,12 +163,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
         values ?property_uri {<https://linked.data.gov.au/def/nrm/ddd0c631-bfdd-4b0f-88de-a5eb1a0181c6>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
     }
     """
         ] ;
-    urnp:examples _:n56a97a525bac430591ff2e3c4c457ef3b2 ;
+    urnp:examples _:n4d1ed9d28d764db8b40b56321c8de061b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-enhanced-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -197,7 +198,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n56a97a525bac430591ff2e3c4c457ef3b2 ;
+    urnp:examples _:n4d1ed9d28d764db8b40b56321c8de061b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-enhanced-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -227,11 +228,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n56a97a525bac430591ff2e3c4c457ef3b2 ;
+    urnp:examples _:n4d1ed9d28d764db8b40b56321c8de061b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-enhanced-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n56a97a525bac430591ff2e3c4c457ef3b2
+_:n4d1ed9d28d764db8b40b56321c8de061b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-enhanced-protocol-shapes/plant-mortality/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-enhanced-protocol-shapes/plant-mortality/valid.ttl"^^xsd:anyURI ;
 .

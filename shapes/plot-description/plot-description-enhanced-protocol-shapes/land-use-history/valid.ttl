@@ -26,7 +26,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/372ec5c5-79da-44a9-a56e-dd9ab311da06> ;
     sosa:phenomenonTime <https://example.com/observation/land-use-history/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21> ;
+    sosa:usedProcedure <urn:test:procedure:plot-description-enhanced> ;
     tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:plot-description-enhanced>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21> ;
 .
 

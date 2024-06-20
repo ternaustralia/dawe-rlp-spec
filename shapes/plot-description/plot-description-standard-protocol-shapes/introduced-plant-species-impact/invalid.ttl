@@ -5,6 +5,11 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
 <urn:test:plot-description-standard-protocol-shapes:invalid:introduced-plant-species-impact:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
@@ -25,7 +30,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/57be29f6-1c6a-5c4d-89f2-00b21d4f4178> ;
     sosa:phenomenonTime <https://example.com/observation/introduced-plant-species-impact/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/615edd85-ea58-4d3c-b737-d31d8447ad49> ;
+    sosa:usedProcedure <urn:test:procedure:plot-description-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -49,7 +54,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/57be29f6-1c6a-5c4d-89f2-00b21d4f4178> ;
     sosa:phenomenonTime <https://example.com/observation/introduced-plant-species-impact/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/615edd85-ea58-4d3c-b737-d31d8447ad49> ;
+    sosa:usedProcedure <urn:test:procedure:plot-description-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -73,7 +78,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/57be29f6-1c6a-5c4d-89f2-00b21d4f4178> ;
     sosa:phenomenonTime <https://example.com/observation/introduced-plant-species-impact/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/615edd85-ea58-4d3c-b737-d31d8447ad49> ;
+    sosa:usedProcedure <urn:test:procedure:plot-description-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -97,7 +102,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/57be29f6-1c6a-5c4d-89f2-00b21d4f4178> ;
     sosa:phenomenonTime <https://example.com/observation/introduced-plant-species-impact/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/615edd85-ea58-4d3c-b737-d31d8447ad49> ;
+    sosa:usedProcedure <urn:test:procedure:plot-description-standard> ;
 .
 
 <urn:test:plot-description-standard-protocol-shapes:invalid:introduced-plant-species-impact:used-procedure>
@@ -142,7 +147,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/57be29f6-1c6a-5c4d-89f2-00b21d4f4178> ;
     sosa:phenomenonTime <https://example.com/observation/introduced-plant-species-impact/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/615edd85-ea58-4d3c-b737-d31d8447ad49> ;
+    sosa:usedProcedure <urn:test:procedure:plot-description-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:plot-description-standard>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/615edd85-ea58-4d3c-b737-d31d8447ad49> ;
 .
 

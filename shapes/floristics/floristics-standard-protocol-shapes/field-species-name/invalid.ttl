@@ -5,6 +5,11 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
 <urn:test:floristics-standard-protocol-shapes:invalid:field-species-name:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
@@ -25,7 +30,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
     sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8> ;
+    sosa:usedProcedure <urn:test:procedure:floristics-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -49,7 +54,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
     sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8> ;
+    sosa:usedProcedure <urn:test:procedure:floristics-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -73,7 +78,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
     sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8> ;
+    sosa:usedProcedure <urn:test:procedure:floristics-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -97,7 +102,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
     sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8> ;
+    sosa:usedProcedure <urn:test:procedure:floristics-standard> ;
 .
 
 <urn:test:floristics-standard-protocol-shapes:invalid:field-species-name:used-procedure>
@@ -142,7 +147,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
     sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8> ;
+    sosa:usedProcedure <urn:test:procedure:floristics-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:floristics-standard>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8> ;
 .
 

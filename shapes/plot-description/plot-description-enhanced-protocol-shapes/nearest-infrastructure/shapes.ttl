@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n16364a1181894944a2d730e989c77234b2 ;
+    urnp:examples _:n3d9c3bf9fba84432b2b4cc8b989c306fb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -72,7 +72,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n16364a1181894944a2d730e989c77234b2 ;
+    urnp:examples _:n3d9c3bf9fba84432b2b4cc8b989c306fb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -104,7 +104,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n16364a1181894944a2d730e989c77234b2 ;
+    urnp:examples _:n3d9c3bf9fba84432b2b4cc8b989c306fb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -134,7 +134,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n16364a1181894944a2d730e989c77234b2 ;
+    urnp:examples _:n3d9c3bf9fba84432b2b4cc8b989c306fb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -144,13 +144,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21> ;
-    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21`." ;
-    sh:name "Used procedure" ;
-    sh:path sosa:usedProcedure ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -160,12 +160,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
         values ?property_uri {<https://linked.data.gov.au/def/nrm/8886590d-f947-4504-aff7-3eec5db03c9d>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
     }
     """
         ] ;
-    urnp:examples _:n16364a1181894944a2d730e989c77234b2 ;
+    urnp:examples _:n3d9c3bf9fba84432b2b4cc8b989c306fb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -194,7 +195,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n16364a1181894944a2d730e989c77234b2 ;
+    urnp:examples _:n3d9c3bf9fba84432b2b4cc8b989c306fb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -224,11 +225,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n16364a1181894944a2d730e989c77234b2 ;
+    urnp:examples _:n3d9c3bf9fba84432b2b4cc8b989c306fb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n16364a1181894944a2d730e989c77234b2
+_:n3d9c3bf9fba84432b2b4cc8b989c306fb2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/valid.ttl"^^xsd:anyURI ;
 .

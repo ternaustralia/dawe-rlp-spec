@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n20a3cee0969344eab94603708dd59d61b2 ;
+    urnp:examples _:n2577457944f64438b409759df675551ab2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -61,7 +61,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n20a3cee0969344eab94603708dd59d61b2 ;
+    urnp:examples _:n2577457944f64438b409759df675551ab2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -93,7 +93,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n20a3cee0969344eab94603708dd59d61b2 ;
+    urnp:examples _:n2577457944f64438b409759df675551ab2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -123,7 +123,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n20a3cee0969344eab94603708dd59d61b2 ;
+    urnp:examples _:n2577457944f64438b409759df675551ab2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -133,13 +133,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/aa1525f9-c3f2-4f7d-98cc-6a7d3aec9d8a>`.
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/aa1525f9-c3f2-4f7d-98cc-6a7d3aec9d8a>`.
 
     `<https://linked.data.gov.au/def/nrm/aa1525f9-c3f2-4f7d-98cc-6a7d3aec9d8a>` is the IRI for "Standard protocol".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/aa1525f9-c3f2-4f7d-98cc-6a7d3aec9d8a> ;
-    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/aa1525f9-c3f2-4f7d-98cc-6a7d3aec9d8a`." ;
-    sh:name "Used procedure" ;
-    sh:path sosa:usedProcedure ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/aa1525f9-c3f2-4f7d-98cc-6a7d3aec9d8a`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -149,12 +149,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
         values ?property_uri {<https://linked.data.gov.au/def/nrm/85bdd25a-fa08-49de-9f0b-98895cb79aa6>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
     }
     """
         ] ;
-    urnp:examples _:n20a3cee0969344eab94603708dd59d61b2 ;
+    urnp:examples _:n2577457944f64438b409759df675551ab2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -183,11 +184,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n20a3cee0969344eab94603708dd59d61b2 ;
+    urnp:examples _:n2577457944f64438b409759df675551ab2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n20a3cee0969344eab94603708dd59d61b2
+_:n2577457944f64438b409759df675551ab2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/in-canopy-sky/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/in-canopy-sky/valid.ttl"^^xsd:anyURI ;
 .

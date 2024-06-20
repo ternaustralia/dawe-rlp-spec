@@ -26,7 +26,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/632e4c3c-0e73-4b3d-b1d6-7b38897da5e8> ;
     sosa:phenomenonTime <https://example.com/observation/site-disturbance/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/615edd85-ea58-4d3c-b737-d31d8447ad49> ;
+    sosa:usedProcedure <urn:test:procedure:plot-description-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:plot-description-standard>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/615edd85-ea58-4d3c-b737-d31d8447ad49> ;
 .
 

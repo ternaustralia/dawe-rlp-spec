@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n09c43f253026408e9bc83edb394fd570b2 ;
+    urnp:examples _:naa7770f61bcb409b9aefa51ff96169d4b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -66,7 +66,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n09c43f253026408e9bc83edb394fd570b2 ;
+    urnp:examples _:naa7770f61bcb409b9aefa51ff96169d4b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -107,7 +107,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n09c43f253026408e9bc83edb394fd570b2 ;
+    urnp:examples _:naa7770f61bcb409b9aefa51ff96169d4b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -117,13 +117,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>`.
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>`.
 
     `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>` is the IRI for "Vegetation Mapping Module".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508> ;
-    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508`." ;
-    sh:name "Used procedure" ;
-    sh:path sosa:usedProcedure ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -133,12 +133,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
         values ?property_uri {<https://linked.data.gov.au/def/nrm/cf1aef8a-a782-4480-9c41-a7f6d170d7fc>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
     }
     """
         ] ;
-    urnp:examples _:n09c43f253026408e9bc83edb394fd570b2 ;
+    urnp:examples _:naa7770f61bcb409b9aefa51ff96169d4b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -167,7 +168,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n09c43f253026408e9bc83edb394fd570b2 ;
+    urnp:examples _:naa7770f61bcb409b9aefa51ff96169d4b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -197,11 +198,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n09c43f253026408e9bc83edb394fd570b2 ;
+    urnp:examples _:naa7770f61bcb409b9aefa51ff96169d4b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n09c43f253026408e9bc83edb394fd570b2
+_:naa7770f61bcb409b9aefa51ff96169d4b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/valid.ttl"^^xsd:anyURI ;
 .

@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n2a2916aebbbb47a6bdca851e46206d5bb2 ;
+    urnp:examples _:n4d93ec4a08544ebcaa2715dda3ae38deb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -71,7 +71,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n2a2916aebbbb47a6bdca851e46206d5bb2 ;
+    urnp:examples _:n4d93ec4a08544ebcaa2715dda3ae38deb2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -112,7 +112,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n2a2916aebbbb47a6bdca851e46206d5bb2 ;
+    urnp:examples _:n4d93ec4a08544ebcaa2715dda3ae38deb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -142,7 +142,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n2a2916aebbbb47a6bdca851e46206d5bb2 ;
+    urnp:examples _:n4d93ec4a08544ebcaa2715dda3ae38deb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -152,13 +152,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c> ;
-    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c`." ;
-    sh:name "Used procedure" ;
-    sh:path sosa:usedProcedure ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -168,12 +168,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
         values ?property_uri {<https://linked.data.gov.au/def/nrm/b7e7f67b-d983-4167-baca-57cab6dd89a2>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
     }
     """
         ] ;
-    urnp:examples _:n2a2916aebbbb47a6bdca851e46206d5bb2 ;
+    urnp:examples _:n4d93ec4a08544ebcaa2715dda3ae38deb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -202,7 +203,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n2a2916aebbbb47a6bdca851e46206d5bb2 ;
+    urnp:examples _:n4d93ec4a08544ebcaa2715dda3ae38deb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -232,11 +233,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n2a2916aebbbb47a6bdca851e46206d5bb2 ;
+    urnp:examples _:n4d93ec4a08544ebcaa2715dda3ae38deb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n2a2916aebbbb47a6bdca851e46206d5bb2
+_:n4d93ec4a08544ebcaa2715dda3ae38deb2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-type/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-type/valid.ttl"^^xsd:anyURI ;
 .

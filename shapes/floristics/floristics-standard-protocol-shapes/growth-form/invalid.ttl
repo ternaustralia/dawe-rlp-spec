@@ -5,6 +5,11 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
 <urn:test:floristics-standard-protocol-shapes:invalid:growth-form:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
@@ -26,7 +31,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65> ;
     sosa:phenomenonTime <https://example.com/observation/growth-form/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8> ;
+    sosa:usedProcedure <urn:test:procedure:floristics-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -51,7 +56,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65> ;
     sosa:phenomenonTime <https://example.com/observation/growth-form/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8> ;
+    sosa:usedProcedure <urn:test:procedure:floristics-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -76,7 +81,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65> ;
     sosa:phenomenonTime <https://example.com/observation/growth-form/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8> ;
+    sosa:usedProcedure <urn:test:procedure:floristics-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -101,7 +106,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65> ;
     sosa:phenomenonTime <https://example.com/observation/growth-form/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8> ;
+    sosa:usedProcedure <urn:test:procedure:floristics-standard> ;
 .
 
 <urn:test:floristics-standard-protocol-shapes:invalid:growth-form:used-procedure>
@@ -148,7 +153,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65> ;
     sosa:phenomenonTime <https://example.com/observation/growth-form/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8> ;
+    sosa:usedProcedure <urn:test:procedure:floristics-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -173,7 +178,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65> ;
     sosa:phenomenonTime <https://example.com/observation/growth-form/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8> ;
+    sosa:usedProcedure <urn:test:procedure:floristics-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:floristics-standard>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8> ;
 .
 

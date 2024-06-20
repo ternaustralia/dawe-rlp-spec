@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n59c8d9b3bb1d45469b7b5577ffba8f21b2 ;
+    urnp:examples _:n3c121082a679440baa0fe446ec24607fb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -65,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n59c8d9b3bb1d45469b7b5577ffba8f21b2 ;
+    urnp:examples _:n3c121082a679440baa0fe446ec24607fb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -95,7 +95,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n59c8d9b3bb1d45469b7b5577ffba8f21b2 ;
+    urnp:examples _:n3c121082a679440baa0fe446ec24607fb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -105,13 +105,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>`.
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>`.
 
     `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>` is the IRI for "Transects Protocol".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f> ;
-    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f`." ;
-    sh:name "Used procedure" ;
-    sh:path sosa:usedProcedure ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -121,12 +121,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
         values ?property_uri {<https://linked.data.gov.au/def/nrm/65f4cb64-a0c0-4a41-a9b9-d2f42affebc5>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
     }
     """
         ] ;
-    urnp:examples _:n59c8d9b3bb1d45469b7b5577ffba8f21b2 ;
+    urnp:examples _:n3c121082a679440baa0fe446ec24607fb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -155,7 +156,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n59c8d9b3bb1d45469b7b5577ffba8f21b2 ;
+    urnp:examples _:n3c121082a679440baa0fe446ec24607fb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -184,11 +185,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n59c8d9b3bb1d45469b7b5577ffba8f21b2 ;
+    urnp:examples _:n3c121082a679440baa0fe446ec24607fb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n59c8d9b3bb1d45469b7b5577ffba8f21b2
+_:n3c121082a679440baa0fe446ec24607fb2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/valid.ttl"^^xsd:anyURI ;
 .

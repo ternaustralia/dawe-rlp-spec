@@ -6,6 +6,11 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
 <urn:test:opportunistic-observations-protocol-shapes:invalid:total-animal-length:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
@@ -27,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e0d9a10-a37d-527b-8b7e-120a4a3685f3> ;
     sosa:phenomenonTime <https://example.com/observation/total-animal-length/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
+    sosa:usedProcedure <urn:test:procedure:opportunistic-observations> ;
 .
 
 <urn:test:opportunistic-observations-protocol-shapes:invalid:total-animal-length:feature-type>
@@ -51,7 +56,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e0d9a10-a37d-527b-8b7e-120a4a3685f3> ;
     sosa:phenomenonTime <https://example.com/observation/total-animal-length/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
+    sosa:usedProcedure <urn:test:procedure:opportunistic-observations> ;
 .
 
 <urn:test:opportunistic-observations-protocol-shapes:invalid:total-animal-length:simple-result>
@@ -75,7 +80,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e0d9a10-a37d-527b-8b7e-120a4a3685f3> ;
     sosa:phenomenonTime <https://example.com/observation/total-animal-length/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
+    sosa:usedProcedure <urn:test:procedure:opportunistic-observations> ;
 .
 
 <urn:test:opportunistic-observations-protocol-shapes:invalid:total-animal-length:unit-of-measure>
@@ -99,7 +104,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e0d9a10-a37d-527b-8b7e-120a4a3685f3> ;
     sosa:phenomenonTime <https://example.com/observation/total-animal-length/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
+    sosa:usedProcedure <urn:test:procedure:opportunistic-observations> ;
 .
 
 <urn:test:opportunistic-observations-protocol-shapes:invalid:total-animal-length:used-procedure>
@@ -147,7 +152,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e0d9a10-a37d-527b-8b7e-120a4a3685f3> ;
     sosa:phenomenonTime <https://example.com/observation/total-animal-length/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
+    sosa:usedProcedure <urn:test:procedure:opportunistic-observations> ;
 .
 
 <urn:test:opportunistic-observations-protocol-shapes:invalid:total-animal-length:value-type>
@@ -169,6 +174,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e0d9a10-a37d-527b-8b7e-120a4a3685f3> ;
     sosa:phenomenonTime <https://example.com/observation/total-animal-length/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
+    sosa:usedProcedure <urn:test:procedure:opportunistic-observations> ;
+.
+
+<urn:test:procedure:opportunistic-observations>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
 .
 

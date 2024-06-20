@@ -6,6 +6,11 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
 <urn:test:plant-tissue-vouchering-enhanced-protocol-shapes:invalid:shortest-distance-between-replicates:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
@@ -27,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3b2aa21d-c60f-45c5-9447-ff8a799a513e> ;
     sosa:phenomenonTime <https://example.com/observation/shortest-distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/eea8280c-6ec7-48c9-9b9e-2418731ff005> ;
+    sosa:usedProcedure <urn:test:procedure:plant-tissue-vouchering-enhanced> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -52,7 +57,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3b2aa21d-c60f-45c5-9447-ff8a799a513e> ;
     sosa:phenomenonTime <https://example.com/observation/shortest-distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/eea8280c-6ec7-48c9-9b9e-2418731ff005> ;
+    sosa:usedProcedure <urn:test:procedure:plant-tissue-vouchering-enhanced> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -77,7 +82,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3b2aa21d-c60f-45c5-9447-ff8a799a513e> ;
     sosa:phenomenonTime <https://example.com/observation/shortest-distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/eea8280c-6ec7-48c9-9b9e-2418731ff005> ;
+    sosa:usedProcedure <urn:test:procedure:plant-tissue-vouchering-enhanced> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -102,7 +107,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3b2aa21d-c60f-45c5-9447-ff8a799a513e> ;
     sosa:phenomenonTime <https://example.com/observation/shortest-distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/eea8280c-6ec7-48c9-9b9e-2418731ff005> ;
+    sosa:usedProcedure <urn:test:procedure:plant-tissue-vouchering-enhanced> ;
 .
 
 <urn:test:plant-tissue-vouchering-enhanced-protocol-shapes:invalid:shortest-distance-between-replicates:unit-of-measure>
@@ -126,7 +131,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3b2aa21d-c60f-45c5-9447-ff8a799a513e> ;
     sosa:phenomenonTime <https://example.com/observation/shortest-distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/eea8280c-6ec7-48c9-9b9e-2418731ff005> ;
+    sosa:usedProcedure <urn:test:procedure:plant-tissue-vouchering-enhanced> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -176,7 +181,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3b2aa21d-c60f-45c5-9447-ff8a799a513e> ;
     sosa:phenomenonTime <https://example.com/observation/shortest-distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/eea8280c-6ec7-48c9-9b9e-2418731ff005> ;
+    sosa:usedProcedure <urn:test:procedure:plant-tissue-vouchering-enhanced> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -199,7 +204,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3b2aa21d-c60f-45c5-9447-ff8a799a513e> ;
     sosa:phenomenonTime <https://example.com/observation/shortest-distance-between-replicates/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/eea8280c-6ec7-48c9-9b9e-2418731ff005> ;
+    sosa:usedProcedure <urn:test:procedure:plant-tissue-vouchering-enhanced> ;
     tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:plant-tissue-vouchering-enhanced>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/eea8280c-6ec7-48c9-9b9e-2418731ff005> ;
 .
 

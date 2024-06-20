@@ -34,7 +34,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na20b77c34f854375aeee3ccc0276fb10b2 ;
+    urnp:examples _:nb03107e1ddca4708b7d071579c969574b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -66,7 +66,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na20b77c34f854375aeee3ccc0276fb10b2 ;
+    urnp:examples _:nb03107e1ddca4708b7d071579c969574b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -94,7 +94,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:na20b77c34f854375aeee3ccc0276fb10b2 ;
+    urnp:examples _:nb03107e1ddca4708b7d071579c969574b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -104,13 +104,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>`.
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>`.
 
     `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>` is the IRI for "Vegetation Mapping Module".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508> ;
-    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508`." ;
-    sh:name "Used procedure" ;
-    sh:path sosa:usedProcedure ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -120,12 +120,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
         values ?property_uri {<https://linked.data.gov.au/def/nrm/cea92774-6d4b-4880-8d07-1fe23c4a5e16>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
     }
     """
         ] ;
-    urnp:examples _:na20b77c34f854375aeee3ccc0276fb10b2 ;
+    urnp:examples _:nb03107e1ddca4708b7d071579c969574b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -155,7 +156,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:na20b77c34f854375aeee3ccc0276fb10b2 ;
+    urnp:examples _:nb03107e1ddca4708b7d071579c969574b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -184,11 +185,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:na20b77c34f854375aeee3ccc0276fb10b2 ;
+    urnp:examples _:nb03107e1ddca4708b7d071579c969574b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:na20b77c34f854375aeee3ccc0276fb10b2
+_:nb03107e1ddca4708b7d071579c969574b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/valid.ttl"^^xsd:anyURI ;
 .

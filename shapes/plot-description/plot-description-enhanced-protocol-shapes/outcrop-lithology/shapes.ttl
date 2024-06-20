@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb543895c83a8403cb2979f3ce4ebf51fb2 ;
+    urnp:examples _:n183e361b515141edb17a747c277feaf9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -153,7 +153,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nb543895c83a8403cb2979f3ce4ebf51fb2 ;
+    urnp:examples _:n183e361b515141edb17a747c277feaf9b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -194,7 +194,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nb543895c83a8403cb2979f3ce4ebf51fb2 ;
+    urnp:examples _:n183e361b515141edb17a747c277feaf9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -224,7 +224,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb543895c83a8403cb2979f3ce4ebf51fb2 ;
+    urnp:examples _:n183e361b515141edb17a747c277feaf9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -234,13 +234,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21> ;
-    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21`." ;
-    sh:name "Used procedure" ;
-    sh:path sosa:usedProcedure ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -250,12 +250,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
         values ?property_uri {<https://linked.data.gov.au/def/nrm/5af5cef1-179c-4bae-9037-42196668deff>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
     }
     """
         ] ;
-    urnp:examples _:nb543895c83a8403cb2979f3ce4ebf51fb2 ;
+    urnp:examples _:n183e361b515141edb17a747c277feaf9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -284,7 +285,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb543895c83a8403cb2979f3ce4ebf51fb2 ;
+    urnp:examples _:n183e361b515141edb17a747c277feaf9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -314,11 +315,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nb543895c83a8403cb2979f3ce4ebf51fb2 ;
+    urnp:examples _:n183e361b515141edb17a747c277feaf9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nb543895c83a8403cb2979f3ce4ebf51fb2
+_:n183e361b515141edb17a747c277feaf9b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/valid.ttl"^^xsd:anyURI ;
 .

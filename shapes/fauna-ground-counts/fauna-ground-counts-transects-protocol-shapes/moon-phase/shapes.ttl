@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd938b2e276ae416f999d142316db42a2b2 ;
+    urnp:examples _:n130d16f7975843e7a2ab146b6b71470db2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -67,7 +67,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd938b2e276ae416f999d142316db42a2b2 ;
+    urnp:examples _:n130d16f7975843e7a2ab146b6b71470db2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -108,7 +108,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nd938b2e276ae416f999d142316db42a2b2 ;
+    urnp:examples _:n130d16f7975843e7a2ab146b6b71470db2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -138,7 +138,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd938b2e276ae416f999d142316db42a2b2 ;
+    urnp:examples _:n130d16f7975843e7a2ab146b6b71470db2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -148,13 +148,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>`.
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>`.
 
     `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>` is the IRI for "Transects Protocol".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f> ;
-    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f`." ;
-    sh:name "Used procedure" ;
-    sh:path sosa:usedProcedure ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -164,12 +164,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
         values ?property_uri {<https://linked.data.gov.au/def/nrm/ec6a65f7-ff1a-5d00-a6e1-fa3af778aa74>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
     }
     """
         ] ;
-    urnp:examples _:nd938b2e276ae416f999d142316db42a2b2 ;
+    urnp:examples _:n130d16f7975843e7a2ab146b6b71470db2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -198,7 +199,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd938b2e276ae416f999d142316db42a2b2 ;
+    urnp:examples _:n130d16f7975843e7a2ab146b6b71470db2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -228,11 +229,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd938b2e276ae416f999d142316db42a2b2 ;
+    urnp:examples _:n130d16f7975843e7a2ab146b6b71470db2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nd938b2e276ae416f999d142316db42a2b2
+_:n130d16f7975843e7a2ab146b6b71470db2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/moon-phase/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/moon-phase/valid.ttl"^^xsd:anyURI ;
 .

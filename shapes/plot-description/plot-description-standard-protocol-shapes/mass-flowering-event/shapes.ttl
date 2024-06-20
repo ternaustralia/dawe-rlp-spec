@@ -32,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n834ef28eebeb45d7914ef55760493d30b2 ;
+    urnp:examples _:n6478c2f19a524cd7a93434af6fb63a01b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -61,7 +61,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n834ef28eebeb45d7914ef55760493d30b2 ;
+    urnp:examples _:n6478c2f19a524cd7a93434af6fb63a01b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -93,7 +93,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n834ef28eebeb45d7914ef55760493d30b2 ;
+    urnp:examples _:n6478c2f19a524cd7a93434af6fb63a01b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -123,7 +123,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n834ef28eebeb45d7914ef55760493d30b2 ;
+    urnp:examples _:n6478c2f19a524cd7a93434af6fb63a01b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -133,13 +133,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/615edd85-ea58-4d3c-b737-d31d8447ad49>`.
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/615edd85-ea58-4d3c-b737-d31d8447ad49>`.
 
     # `<https://linked.data.gov.au/def/nrm/615edd85-ea58-4d3c-b737-d31d8447ad49>` is the IRI for "Standard Protocol".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/615edd85-ea58-4d3c-b737-d31d8447ad49> ;
-    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/615edd85-ea58-4d3c-b737-d31d8447ad49`." ;
-    sh:name "Used procedure" ;
-    sh:path sosa:usedProcedure ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/615edd85-ea58-4d3c-b737-d31d8447ad49`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -149,12 +149,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
         values ?property_uri {<https://linked.data.gov.au/def/nrm/88c2fec1-d37a-5f5c-8850-3cc052c192f7>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
     }
     """
         ] ;
-    urnp:examples _:n834ef28eebeb45d7914ef55760493d30b2 ;
+    urnp:examples _:n6478c2f19a524cd7a93434af6fb63a01b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -183,11 +184,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n834ef28eebeb45d7914ef55760493d30b2 ;
+    urnp:examples _:n6478c2f19a524cd7a93434af6fb63a01b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n834ef28eebeb45d7914ef55760493d30b2
+_:n6478c2f19a524cd7a93434af6fb63a01b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/valid.ttl"^^xsd:anyURI ;
 .
