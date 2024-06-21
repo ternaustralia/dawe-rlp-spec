@@ -1,0 +1,189 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
+<urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:physical-damage-type:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb> ;
+            sosa:isResultOf <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:physical-damage-type:feature-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/51fa78ee-187a-5788-9fe0-e68cc476ea91>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/68d048e9-11f2-5c43-a27f-ae744b2c9799> ;
+    sosa:phenomenonTime <https://example.com/observation/physical-damage-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:physical-damage-type:result-value>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <urn:fake:categorical:value> ;
+            sosa:isResultOf <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:physical-damage-type:result-value> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/51fa78ee-187a-5788-9fe0-e68cc476ea91>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/68d048e9-11f2-5c43-a27f-ae744b2c9799> ;
+    sosa:phenomenonTime <https://example.com/observation/physical-damage-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:physical-damage-type:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb> ;
+            sosa:isResultOf <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:physical-damage-type:simple-result> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/51fa78ee-187a-5788-9fe0-e68cc476ea91>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/68d048e9-11f2-5c43-a27f-ae744b2c9799> ;
+    sosa:phenomenonTime <https://example.com/observation/physical-damage-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:physical-damage-type:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb> ;
+            sosa:isResultOf <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:physical-damage-type:site-visit> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/51fa78ee-187a-5788-9fe0-e68cc476ea91>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/68d048e9-11f2-5c43-a27f-ae744b2c9799> ;
+    sosa:phenomenonTime <https://example.com/observation/physical-damage-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
+.
+
+<urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:physical-damage-type:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Off-plot Belt Transect Protocol'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb> ;
+            sosa:isResultOf <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:physical-damage-type:used-procedure> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/51fa78ee-187a-5788-9fe0-e68cc476ea91>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/68d048e9-11f2-5c43-a27f-ae744b2c9799> ;
+    sosa:phenomenonTime <https://example.com/observation/physical-damage-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:physical-damage-type:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb> ;
+            sosa:isResultOf <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:physical-damage-type:value-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/51fa78ee-187a-5788-9fe0-e68cc476ea91>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/68d048e9-11f2-5c43-a27f-ae744b2c9799> ;
+    sosa:phenomenonTime <https://example.com/observation/physical-damage-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:physical-damage-type:vocabulary>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect vocabulary" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb> ;
+            sosa:isResultOf <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:physical-damage-type:vocabulary> ;
+            tern:vocabulary <urn:fake:vocabulary>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/68d048e9-11f2-5c43-a27f-ae744b2c9799> ;
+    sosa:phenomenonTime <https://example.com/observation/physical-damage-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/c7d48965-c779-4398-9315-2cd465b08513> ;
+.
+
