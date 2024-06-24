@@ -167,10 +167,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:float ;
-    sh:description "Value _MUST_ be between 0 exclusive and 10000 inclusive. Datatype should be `xsd:float`." ;
+    sh:description "Value _MUST_ be between 0 and 10000 inclusive. Datatype should be `xsd:float`." ;
     sh:maxInclusive 10000 ;
-    sh:message "The result _MUST_ have a value between 0 exclusively and 10000 inclusively. Datatype should be `xsd:float`." ;
-    sh:minExclusive 0 ;
+    sh:message "The result _MUST_ have a value between 0 and 10000 inclusively. Datatype should be `xsd:float`." ;
+    sh:minInclusive 0 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
