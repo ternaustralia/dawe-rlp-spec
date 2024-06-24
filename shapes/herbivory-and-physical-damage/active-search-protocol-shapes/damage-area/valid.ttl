@@ -1,0 +1,38 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:herbivory-and-physical-damage-active-search-protocol-shapes:valid:damage-area>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - damage area" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:herbivory-and-physical-damage-active-search-protocol-shapes:valid:damage-area> ;
+            tern:unit unit:M2
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/a1f5f46b-d6fe-4a1f-8fa8-01b113a2d69f> ;
+    sosa:phenomenonTime <https://example.com/observation/damage-area/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-active-search> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:herbivory-and-physical-damage-active-search>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/2084a9b6-2927-4651-bd88-781a01c38664> ;
+.
+
