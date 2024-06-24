@@ -1,0 +1,241 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:herbivory-and-physical-damage-active-search-protocol-shapes:herbivory-damage-type:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _vegetation disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45[`vegetation disturbance`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/f8d5c98b-ecee-5c56-9b95-a57280faec60>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n4fde045b116244c5b18d3717459369c7b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/active-search-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:herbivory-and-physical-damage-active-search-protocol-shapes:herbivory-damage-type:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Herbivory damage types controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb>
+            <https://linked.data.gov.au/def/nrm/3c9a2cd2-d708-5829-8e91-42b2c82faf98>
+            <https://linked.data.gov.au/def/nrm/e8228aeb-73eb-5d5e-92a8-2063680a1c66>
+            <https://linked.data.gov.au/def/nrm/d5eba88b-c1fa-58d7-8c87-1166e89b7c0f>
+            <https://linked.data.gov.au/def/nrm/04ad5d10-4e3d-5f1b-b0f6-45d498e96f92>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Herbivory damage types controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/f8d5c98b-ecee-5c56-9b95-a57280faec60> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n4fde045b116244c5b18d3717459369c7b2 ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'eb8f8696-f7ec-5793-8f7a-7331195762db'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/active-search-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:herbivory-and-physical-damage-active-search-protocol-shapes:herbivory-damage-type:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/f8d5c98b-ecee-5c56-9b95-a57280faec60>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:n4fde045b116244c5b18d3717459369c7b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/active-search-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:herbivory-and-physical-damage-active-search-protocol-shapes:herbivory-damage-type:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Active Plot Search Protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/f8d5c98b-ecee-5c56-9b95-a57280faec60>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n4fde045b116244c5b18d3717459369c7b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/active-search-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:herbivory-and-physical-damage-active-search-protocol-shapes:herbivory-damage-type:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/2084a9b6-2927-4651-bd88-781a01c38664>`.
+
+    `<https://linked.data.gov.au/def/nrm/2084a9b6-2927-4651-bd88-781a01c38664>` is the IRI for "Active Plot Search Protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/2084a9b6-2927-4651-bd88-781a01c38664> ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/2084a9b6-2927-4651-bd88-781a01c38664`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/f8d5c98b-ecee-5c56-9b95-a57280faec60>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n4fde045b116244c5b18d3717459369c7b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/active-search-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:herbivory-and-physical-damage-active-search-protocol-shapes:herbivory-damage-type:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/f8d5c98b-ecee-5c56-9b95-a57280faec60>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n4fde045b116244c5b18d3717459369c7b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/active-search-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:herbivory-and-physical-damage-active-search-protocol-shapes:herbivory-damage-type:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/eb8f8696-f7ec-5793-8f7a-7331195762db>`.
+
+        `<https://linked.data.gov.au/def/nrm/eb8f8696-f7ec-5793-8f7a-7331195762db>` is the IRI for "Herbivory damage types".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `eb8f8696-f7ec-5793-8f7a-7331195762db$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "eb8f8696-f7ec-5793-8f7a-7331195762db$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/f8d5c98b-ecee-5c56-9b95-a57280faec60> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n4fde045b116244c5b18d3717459369c7b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/active-search-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+_:n4fde045b116244c5b18d3717459369c7b2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/active-search-protocol-shapes/herbivory-damage-type/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/active-search-protocol-shapes/herbivory-damage-type/valid.ttl"^^xsd:anyURI ;
+.
+
