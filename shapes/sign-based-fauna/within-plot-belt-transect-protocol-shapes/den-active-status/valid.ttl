@@ -1,0 +1,36 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:procedure:sign-based-fauna-survey-within-plot-belt-transect>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329> ;
+.
+
+<urn:test:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:valid:den-active-status>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - den active status" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Boolean ,
+                tern:Value ;
+            rdf:value true ;
+            sosa:isResultOf <urn:test:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:valid:den-active-status>
+        ] ;
+    sosa:hasSimpleResult true ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0bc353aa-f678-5948-9fe7-6e0c39b2a6d6> ;
+    sosa:phenomenonTime <https://example.com/observation/den-active-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-within-plot-belt-transect> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
