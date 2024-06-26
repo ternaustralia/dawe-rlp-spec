@@ -1,0 +1,37 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:procedure:sign-based-fauna-survey-plot-sign-search>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/7347c555-311b-49ed-8928-ab57880a6916> ;
+.
+
+<urn:test:sign-based-fauna-survey-plot-sign-search-protocol-shapes:valid:fauna-sign-age>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - fauna sign age" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/b31d68f1-9b8f-5371-a6cf-981748a8dc1e> ;
+            sosa:isResultOf <urn:test:sign-based-fauna-survey-plot-sign-search-protocol-shapes:valid:fauna-sign-age> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/292b1cf8-6f25-514f-8a94-6d7d690335ed>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/b31d68f1-9b8f-5371-a6cf-981748a8dc1e> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/de87eddf-1d65-57ed-99af-271f1458054d> ;
+    sosa:phenomenonTime <https://example.com/observation/fauna-sign-age/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-plot-sign-search> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
