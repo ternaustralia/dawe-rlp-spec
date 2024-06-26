@@ -1,0 +1,240 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:sign-based-fauna-survey-plot-sign-search-protocol-shapes:moon-phase:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/ec6a65f7-ff1a-5d00-a6e1-fa3af778aa74>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n1d27d4e7c8f147f796757e03c206da53b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/plot-sign-search-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:sign-based-fauna-survey-plot-sign-search-protocol-shapes:moon-phase:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Weather condition - moon phases controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/d14a1582-9c5c-5178-9197-d073b54e3cf8>
+            <https://linked.data.gov.au/def/nrm/22f7da51-979b-5ac0-b48b-742da89195f5>
+            <https://linked.data.gov.au/def/nrm/495197df-e9b3-591c-a2cf-667804632b27>
+            <https://linked.data.gov.au/def/nrm/27ecd211-cfac-5133-a034-3461a554b266>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Weather condition - moon phases controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/ec6a65f7-ff1a-5d00-a6e1-fa3af778aa74> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n1d27d4e7c8f147f796757e03c206da53b2 ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'30688460-6aaa-53aa-94e7-be1164f5343b'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/plot-sign-search-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:sign-based-fauna-survey-plot-sign-search-protocol-shapes:moon-phase:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/ec6a65f7-ff1a-5d00-a6e1-fa3af778aa74>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:n1d27d4e7c8f147f796757e03c206da53b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/plot-sign-search-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:sign-based-fauna-survey-plot-sign-search-protocol-shapes:moon-phase:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Plot Sign Search Protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/ec6a65f7-ff1a-5d00-a6e1-fa3af778aa74>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n1d27d4e7c8f147f796757e03c206da53b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/plot-sign-search-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:sign-based-fauna-survey-plot-sign-search-protocol-shapes:moon-phase:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/7347c555-311b-49ed-8928-ab57880a6916>`.
+
+    `<https://linked.data.gov.au/def/nrm/7347c555-311b-49ed-8928-ab57880a6916>` is the IRI for "Plot Sign Search Protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/7347c555-311b-49ed-8928-ab57880a6916> ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/7347c555-311b-49ed-8928-ab57880a6916`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/ec6a65f7-ff1a-5d00-a6e1-fa3af778aa74>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n1d27d4e7c8f147f796757e03c206da53b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/plot-sign-search-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:sign-based-fauna-survey-plot-sign-search-protocol-shapes:moon-phase:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/ec6a65f7-ff1a-5d00-a6e1-fa3af778aa74>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n1d27d4e7c8f147f796757e03c206da53b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/plot-sign-search-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:sign-based-fauna-survey-plot-sign-search-protocol-shapes:moon-phase:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/30688460-6aaa-53aa-94e7-be1164f5343b>`.
+
+        `<https://linked.data.gov.au/def/nrm/30688460-6aaa-53aa-94e7-be1164f5343b>` is the IRI for "Weather condition - moon phases".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `30688460-6aaa-53aa-94e7-be1164f5343b$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "30688460-6aaa-53aa-94e7-be1164f5343b$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/ec6a65f7-ff1a-5d00-a6e1-fa3af778aa74> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n1d27d4e7c8f147f796757e03c206da53b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/plot-sign-search-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
+.
+
+_:n1d27d4e7c8f147f796757e03c206da53b2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/plot-sign-search-protocol-shapes/moon-phase/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/plot-sign-search-protocol-shapes/moon-phase/valid.ttl"^^xsd:anyURI ;
+.
+
