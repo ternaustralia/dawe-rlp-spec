@@ -1,0 +1,37 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:fauna-aerial-survey-protocol-shapes:valid:rainfall-duration>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - rainfall duration" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/08eed747-4ef0-5546-b032-93705178b1fd> ;
+            sosa:isResultOf <urn:test:fauna-aerial-survey-protocol-shapes:valid:rainfall-duration> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/34789810-a3bc-4def-9ddb-d14ff4ba02ea>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/08eed747-4ef0-5546-b032-93705178b1fd> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/25d4c7b7-4cdf-4b69-8774-064055c74e23> ;
+    sosa:phenomenonTime <https://example.com/observation/rainfall-duration/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:fauna-aerial-survey> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:fauna-aerial-survey>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/69e33304-f95e-41d3-b8bc-6307d3d774bf> ;
+.
+

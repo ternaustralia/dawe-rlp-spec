@@ -1,0 +1,189 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
+<urn:test:fauna-aerial-survey-protocol-shapes:invalid:distance-to-target-fauna:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/91a74136-b911-5f3a-a30a-4a24d724ad1e> ;
+            sosa:isResultOf <urn:test:fauna-aerial-survey-protocol-shapes:invalid:distance-to-target-fauna:feature-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/c67f241f-6f45-5e87-88ad-d679eb0bf461>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/91a74136-b911-5f3a-a30a-4a24d724ad1e> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/99d12a9f-71db-506b-bb8f-1eb180c9df9d> ;
+    sosa:phenomenonTime <https://example.com/observation/distance-to-target-fauna/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:fauna-aerial-survey> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:fauna-aerial-survey-protocol-shapes:invalid:distance-to-target-fauna:result-value>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8a68b4a9-167b-40f0-9222-293a2d20ffee>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <urn:fake:categorical:value> ;
+            sosa:isResultOf <urn:test:fauna-aerial-survey-protocol-shapes:invalid:distance-to-target-fauna:result-value> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/c67f241f-6f45-5e87-88ad-d679eb0bf461>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/99d12a9f-71db-506b-bb8f-1eb180c9df9d> ;
+    sosa:phenomenonTime <https://example.com/observation/distance-to-target-fauna/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:fauna-aerial-survey> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:fauna-aerial-survey-protocol-shapes:invalid:distance-to-target-fauna:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8a68b4a9-167b-40f0-9222-293a2d20ffee>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/91a74136-b911-5f3a-a30a-4a24d724ad1e> ;
+            sosa:isResultOf <urn:test:fauna-aerial-survey-protocol-shapes:invalid:distance-to-target-fauna:simple-result> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/c67f241f-6f45-5e87-88ad-d679eb0bf461>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/99d12a9f-71db-506b-bb8f-1eb180c9df9d> ;
+    sosa:phenomenonTime <https://example.com/observation/distance-to-target-fauna/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:fauna-aerial-survey> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:fauna-aerial-survey-protocol-shapes:invalid:distance-to-target-fauna:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8a68b4a9-167b-40f0-9222-293a2d20ffee>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/91a74136-b911-5f3a-a30a-4a24d724ad1e> ;
+            sosa:isResultOf <urn:test:fauna-aerial-survey-protocol-shapes:invalid:distance-to-target-fauna:site-visit> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/c67f241f-6f45-5e87-88ad-d679eb0bf461>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/91a74136-b911-5f3a-a30a-4a24d724ad1e> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/99d12a9f-71db-506b-bb8f-1eb180c9df9d> ;
+    sosa:phenomenonTime <https://example.com/observation/distance-to-target-fauna/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:fauna-aerial-survey> ;
+.
+
+<urn:test:fauna-aerial-survey-protocol-shapes:invalid:distance-to-target-fauna:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Fauna Aerial Surveys'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8a68b4a9-167b-40f0-9222-293a2d20ffee>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/91a74136-b911-5f3a-a30a-4a24d724ad1e> ;
+            sosa:isResultOf <urn:test:fauna-aerial-survey-protocol-shapes:invalid:distance-to-target-fauna:used-procedure> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/c67f241f-6f45-5e87-88ad-d679eb0bf461>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/91a74136-b911-5f3a-a30a-4a24d724ad1e> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/99d12a9f-71db-506b-bb8f-1eb180c9df9d> ;
+    sosa:phenomenonTime <https://example.com/observation/distance-to-target-fauna/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:fauna-aerial-survey-protocol-shapes:invalid:distance-to-target-fauna:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8a68b4a9-167b-40f0-9222-293a2d20ffee>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/91a74136-b911-5f3a-a30a-4a24d724ad1e> ;
+            sosa:isResultOf <urn:test:fauna-aerial-survey-protocol-shapes:invalid:distance-to-target-fauna:value-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/c67f241f-6f45-5e87-88ad-d679eb0bf461>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/91a74136-b911-5f3a-a30a-4a24d724ad1e> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/99d12a9f-71db-506b-bb8f-1eb180c9df9d> ;
+    sosa:phenomenonTime <https://example.com/observation/distance-to-target-fauna/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:fauna-aerial-survey> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:fauna-aerial-survey-protocol-shapes:invalid:distance-to-target-fauna:vocabulary>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect vocabulary" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8a68b4a9-167b-40f0-9222-293a2d20ffee>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/91a74136-b911-5f3a-a30a-4a24d724ad1e> ;
+            sosa:isResultOf <urn:test:fauna-aerial-survey-protocol-shapes:invalid:distance-to-target-fauna:vocabulary> ;
+            tern:vocabulary <urn:fake:vocabulary>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/91a74136-b911-5f3a-a30a-4a24d724ad1e> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/99d12a9f-71db-506b-bb8f-1eb180c9df9d> ;
+    sosa:phenomenonTime <https://example.com/observation/distance-to-target-fauna/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:fauna-aerial-survey> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:fauna-aerial-survey>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/69e33304-f95e-41d3-b8bc-6307d3d774bf> ;
+.
+
