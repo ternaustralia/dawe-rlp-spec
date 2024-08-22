@@ -8,7 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-stage:feature-type>
+<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -33,11 +33,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n21cdeb571f6e40c480fbb6ae60083559b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-stage/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:nff684c81b1164150a5ae81f4ed523d1bb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-stage:result-value>
+<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -46,11 +46,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     reg:status reg:statusSubmitted ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Vegetation growth stage types controlled vocabulary." ;
     sh:in (
-            <https://linked.data.gov.au/def/nrm/995b6dfd-3442-522b-a89b-71e71ebd07c9>
-            <https://linked.data.gov.au/def/nrm/cd03aa9a-1221-5db9-99e7-800cba375db3>
-            <https://linked.data.gov.au/def/nrm/f3875738-25f3-5d54-8877-afebc97fd891>
             <https://linked.data.gov.au/def/nrm/56dff2fb-9cc0-5262-8d70-15e383f88ab7>
+            <https://linked.data.gov.au/def/nrm/f3875738-25f3-5d54-8877-afebc97fd891>
+            <https://linked.data.gov.au/def/nrm/cd03aa9a-1221-5db9-99e7-800cba375db3>
             <https://linked.data.gov.au/def/nrm/afd516e4-0cb0-5a47-aff9-14b991824e79>
+            <https://linked.data.gov.au/def/nrm/995b6dfd-3442-522b-a89b-71e71ebd07c9>
         ) ;
     sh:message "The value of `rdf:value` _MUST_ exist in the Vegetation growth stage types controlled vocabulary." ;
     sh:name "Result value" ;
@@ -68,7 +68,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n21cdeb571f6e40c480fbb6ae60083559b2 ;
+    urnp:examples _:nff684c81b1164150a5ae81f4ed523d1bb2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -78,10 +78,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }
         """ ;
     urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-stage/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-stage:simple-result>
+<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -109,21 +109,51 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n21cdeb571f6e40c480fbb6ae60083559b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-stage/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:nff684c81b1164150a5ae81f4ed523d1bb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-stage:used-procedure>
+<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>`.
+    sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/a2c2f997-46c0-5c64-aca0-a43e624cf8d5>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nff684c81b1164150a5ae81f4ed523d1bb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
+.
 
-    `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>` is the IRI for "Vegetation Mapping Module".""" ;
-    sh:hasValue <https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508> ;
-    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508`." ;
+<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
+
+    # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21> ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21`." ;
     sh:name "Method type of used procedure" ;
     sh:path tern:methodType ;
     sh:target [
@@ -141,11 +171,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n21cdeb571f6e40c480fbb6ae60083559b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-stage/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:nff684c81b1164150a5ae81f4ed523d1bb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-stage:value-type>
+<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -170,11 +200,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n21cdeb571f6e40c480fbb6ae60083559b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-stage/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:nff684c81b1164150a5ae81f4ed523d1bb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-stage:vocabulary>
+<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -200,12 +230,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n21cdeb571f6e40c480fbb6ae60083559b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-stage/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:nff684c81b1164150a5ae81f4ed523d1bb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n21cdeb571f6e40c480fbb6ae60083559b2
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-stage/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-stage/valid.ttl"^^xsd:anyURI ;
+_:nff684c81b1164150a5ae81f4ed523d1bb2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/valid.ttl"^^xsd:anyURI ;
 .
 
