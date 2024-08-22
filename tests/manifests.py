@@ -1228,10 +1228,10 @@ test_cases: List[TestCaseItem] = [
         expected_failures=7,
     ).astuple(),
     TestCaseItem(
-        name="plot-description-standard-protocol-shapes-growth-stage",
-        shapes_path="shapes/plot-description/plot-description-standard-protocol-shapes/growth-stage/shapes.ttl",
-        valid_data_path="shapes/plot-description/plot-description-standard-protocol-shapes/growth-stage/valid.ttl",
-        invalid_data_path="shapes/plot-description/plot-description-standard-protocol-shapes/growth-stage/invalid.ttl",
+        name="plot-description-standard-protocol-shapes-vegetation-growth-stage",
+        shapes_path="shapes/plot-description/plot-description-standard-protocol-shapes/vegetation-growth-stage/shapes.ttl",
+        valid_data_path="shapes/plot-description/plot-description-standard-protocol-shapes/vegetation-growth-stage/valid.ttl",
+        invalid_data_path="shapes/plot-description/plot-description-standard-protocol-shapes/vegetation-growth-stage/invalid.ttl",
         expected_failures=7,
     ).astuple(),
     TestCaseItem(
@@ -1298,10 +1298,10 @@ test_cases: List[TestCaseItem] = [
         expected_failures=7,
     ).astuple(),
     TestCaseItem(
-        name="plot-description-enhanced-protocol-shapes-growth-stage",
-        shapes_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/growth-stage/shapes.ttl",
-        valid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/growth-stage/valid.ttl",
-        invalid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/growth-stage/invalid.ttl",
+        name="plot-description-enhanced-protocol-shapes-vegetation-growth-stage",
+        shapes_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl",
+        valid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/valid.ttl",
+        invalid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/invalid.ttl",
         expected_failures=7,
     ).astuple(),
     TestCaseItem(
@@ -2369,10 +2369,10 @@ test_cases: List[TestCaseItem] = [
         expected_failures=6,
     ).astuple(),
     TestCaseItem(
-        name="vegetation-mapping-protocol-shapes-dominant-growth-stage",
-        shapes_path="shapes/vegetation-mapping-protocol-shapes/dominant-growth-stage/shapes.ttl",
-        valid_data_path="shapes/vegetation-mapping-protocol-shapes/dominant-growth-stage/valid.ttl",
-        invalid_data_path="shapes/vegetation-mapping-protocol-shapes/dominant-growth-stage/invalid.ttl",
+        name="vegetation-mapping-protocol-shapes-vegetation-growth-stage",
+        shapes_path="shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl",
+        valid_data_path="shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/valid.ttl",
+        invalid_data_path="shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/invalid.ttl",
         expected_failures=6,
     ).astuple(),
     TestCaseItem(
