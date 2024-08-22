@@ -8,7 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-stage:feature-type>
+<urn:shapes:vegetation-mapping-protocol-shapes:vegetation-growth-stage:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -34,10 +34,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:n21cdeb571f6e40c480fbb6ae60083559b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-stage/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-stage:result-value>
+<urn:shapes:vegetation-mapping-protocol-shapes:vegetation-growth-stage:result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -78,10 +78,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }
         """ ;
     urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-stage/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-stage:simple-result>
+<urn:shapes:vegetation-mapping-protocol-shapes:vegetation-growth-stage:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -110,10 +110,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sh:targetClass tern:Observation ;
     urnp:examples _:n21cdeb571f6e40c480fbb6ae60083559b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-stage/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-stage:used-procedure>
+<urn:shapes:vegetation-mapping-protocol-shapes:vegetation-growth-stage:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -142,10 +142,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:n21cdeb571f6e40c480fbb6ae60083559b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-stage/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-stage:value-type>
+<urn:shapes:vegetation-mapping-protocol-shapes:vegetation-growth-stage:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -171,10 +171,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:n21cdeb571f6e40c480fbb6ae60083559b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-stage/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-stage:vocabulary>
+<urn:shapes:vegetation-mapping-protocol-shapes:vegetation-growth-stage:vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -201,11 +201,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }"""
         ] ;
     urnp:examples _:n21cdeb571f6e40c480fbb6ae60083559b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-stage/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
 _:n21cdeb571f6e40c480fbb6ae60083559b2
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-stage/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-stage/valid.ttl"^^xsd:anyURI ;
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/valid.ttl"^^xsd:anyURI ;
 .
 
