@@ -8,7 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:growth-stage:feature-type>
+<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -26,7 +26,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX unit: <http://qudt.org/vocab/unit/>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     select ?this  {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/a2c2f997-46c0-5c64-aca0-a43e624cf8d5>}
         ?observation a tern:Observation ;
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
@@ -34,25 +34,25 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:nff684c81b1164150a5ae81f4ed523d1bb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:growth-stage:result-value>
+<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Growth stages controlled vocabulary." ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Vegetation growth stage types controlled vocabulary." ;
     sh:in (
-            <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219>
-            <https://linked.data.gov.au/def/nrm/ab12da8b-a110-58d8-9c3b-803a0341ddb7>
-            <https://linked.data.gov.au/def/nrm/c16081f8-1965-59bb-9861-bb00c2e5f535>
-            <https://linked.data.gov.au/def/nrm/e237bdc2-8d42-52ba-9885-ee9ab013106d>
-            <https://linked.data.gov.au/def/nrm/331b27ee-1bac-5f5e-83e2-999ae730ccf6>
+            <https://linked.data.gov.au/def/nrm/56dff2fb-9cc0-5262-8d70-15e383f88ab7>
+            <https://linked.data.gov.au/def/nrm/f3875738-25f3-5d54-8877-afebc97fd891>
+            <https://linked.data.gov.au/def/nrm/cd03aa9a-1221-5db9-99e7-800cba375db3>
+            <https://linked.data.gov.au/def/nrm/afd516e4-0cb0-5a47-aff9-14b991824e79>
+            <https://linked.data.gov.au/def/nrm/995b6dfd-3442-522b-a89b-71e71ebd07c9>
         ) ;
-    sh:message "The value of `rdf:value` _MUST_ exist in the Growth stages controlled vocabulary." ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Vegetation growth stage types controlled vocabulary." ;
     sh:name "Result value" ;
     sh:path rdf:value ;
     sh:target [
@@ -64,7 +64,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         select ?this  {
             ?observation a tern:Observation ;
                 sosa:observedProperty 
-        <https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094> ;
+        <https://linked.data.gov.au/def/nrm/a2c2f997-46c0-5c64-aca0-a43e624cf8d5> ;
                 sosa:hasResult ?this .
         }"""
         ] ;
@@ -72,16 +72,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
-            values ?categoricalUUID {'096e018a-fb8f-4ba1-9fdc-302164e57682'}
+            values ?categoricalUUID {'30985f0b-095b-50ee-8dfe-f872f73ea5a0'}
             ?s skos:member ?values .
             filter (STRENDS(str(?s), ?categoricalUUID))
         }
         """ ;
     urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:growth-stage:simple-result>
+<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -99,7 +99,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     select $this {
         $this a tern:Observation ;
             sosa:observedProperty 
-    <https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094>
+    <https://linked.data.gov.au/def/nrm/a2c2f997-46c0-5c64-aca0-a43e624cf8d5>
      ;
             sosa:hasSimpleResult ?simple ;
             sosa:hasResult ?result .
@@ -110,10 +110,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sh:targetClass tern:Observation ;
     urnp:examples _:nff684c81b1164150a5ae81f4ed523d1bb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:growth-stage:site-visit>
+<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -133,17 +133,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/a2c2f997-46c0-5c64-aca0-a43e624cf8d5>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
     urnp:examples _:nff684c81b1164150a5ae81f4ed523d1bb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:growth-stage:used-procedure>
+<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -164,7 +164,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/a2c2f997-46c0-5c64-aca0-a43e624cf8d5>}
         ?observation a tern:Observation ;
             sosa:observedProperty ?property_uri ;
             sosa:usedProcedure ?this .
@@ -172,10 +172,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:nff684c81b1164150a5ae81f4ed523d1bb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:growth-stage:value-type>
+<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -194,29 +194,29 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/a2c2f997-46c0-5c64-aca0-a43e624cf8d5>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
     urnp:examples _:nff684c81b1164150a5ae81f4ed523d1bb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:growth-stage:vocabulary>
+<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>`.
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/30985f0b-095b-50ee-8dfe-f872f73ea5a0>`.
 
-        `<https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>` is the IRI for "Growth stages".""" ;
-    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `096e018a-fb8f-4ba1-9fdc-302164e57682$`." ;
+        `<https://linked.data.gov.au/def/nrm/30985f0b-095b-50ee-8dfe-f872f73ea5a0>` is the IRI for "Vegetation growth stage types".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `30985f0b-095b-50ee-8dfe-f872f73ea5a0$`." ;
     sh:name "Vocabulary" ;
     sh:path tern:vocabulary ;
-    sh:pattern "096e018a-fb8f-4ba1-9fdc-302164e57682$" ;
+    sh:pattern "30985f0b-095b-50ee-8dfe-f872f73ea5a0$" ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -226,16 +226,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         select ?this  {
             ?observation a tern:Observation ;
                 sosa:observedProperty 
-        <https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094> ;
+        <https://linked.data.gov.au/def/nrm/a2c2f997-46c0-5c64-aca0-a43e624cf8d5> ;
                 sosa:hasResult ?this .
         }"""
         ] ;
     urnp:examples _:nff684c81b1164150a5ae81f4ed523d1bb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
 _:nff684c81b1164150a5ae81f4ed523d1bb2
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/growth-stage/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/growth-stage/valid.ttl"^^xsd:anyURI ;
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/valid.ttl"^^xsd:anyURI ;
 .
 
