@@ -10,7 +10,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:methodType <urn:fake:method> ;
 .
 
-<urn:test:plot-description-standard-protocol-shapes:invalid:growth-stage:feature-type>
+<urn:test:plot-description-standard-protocol-shapes:invalid:vegetation-growth-stage:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -23,19 +23,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
-            sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:growth-stage:feature-type> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>
+            rdf:value <https://linked.data.gov.au/def/nrm/afd516e4-0cb0-5a47-aff9-14b991824e79> ;
+            sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:vegetation-growth-stage:feature-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/30985f0b-095b-50ee-8dfe-f872f73ea5a0>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094> ;
-    sosa:phenomenonTime <https://example.com/observation/growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/afd516e4-0cb0-5a47-aff9-14b991824e79> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/a2c2f997-46c0-5c64-aca0-a43e624cf8d5> ;
+    sosa:phenomenonTime <https://example.com/observation/vegetation-growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:plot-description-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description-standard-protocol-shapes:invalid:growth-stage:result-value>
+<urn:test:plot-description-standard-protocol-shapes:invalid:vegetation-growth-stage:result-value>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
@@ -49,18 +49,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <urn:fake:categorical:value> ;
-            sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:growth-stage:result-value> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>
+            sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:vegetation-growth-stage:result-value> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/30985f0b-095b-50ee-8dfe-f872f73ea5a0>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094> ;
-    sosa:phenomenonTime <https://example.com/observation/growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/a2c2f997-46c0-5c64-aca0-a43e624cf8d5> ;
+    sosa:phenomenonTime <https://example.com/observation/vegetation-growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:plot-description-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description-standard-protocol-shapes:invalid:growth-stage:simple-result>
+<urn:test:plot-description-standard-protocol-shapes:invalid:vegetation-growth-stage:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -73,19 +73,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
-            sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:growth-stage:simple-result> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>
+            rdf:value <https://linked.data.gov.au/def/nrm/afd516e4-0cb0-5a47-aff9-14b991824e79> ;
+            sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:vegetation-growth-stage:simple-result> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/30985f0b-095b-50ee-8dfe-f872f73ea5a0>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094> ;
-    sosa:phenomenonTime <https://example.com/observation/growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/a2c2f997-46c0-5c64-aca0-a43e624cf8d5> ;
+    sosa:phenomenonTime <https://example.com/observation/vegetation-growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:plot-description-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description-standard-protocol-shapes:invalid:growth-stage:site-visit>
+<urn:test:plot-description-standard-protocol-shapes:invalid:vegetation-growth-stage:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -98,18 +98,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
-            sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:growth-stage:site-visit> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>
+            rdf:value <https://linked.data.gov.au/def/nrm/afd516e4-0cb0-5a47-aff9-14b991824e79> ;
+            sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:vegetation-growth-stage:site-visit> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/30985f0b-095b-50ee-8dfe-f872f73ea5a0>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094> ;
-    sosa:phenomenonTime <https://example.com/observation/growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/afd516e4-0cb0-5a47-aff9-14b991824e79> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/a2c2f997-46c0-5c64-aca0-a43e624cf8d5> ;
+    sosa:phenomenonTime <https://example.com/observation/vegetation-growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:plot-description-standard> ;
 .
 
-<urn:test:plot-description-standard-protocol-shapes:invalid:growth-stage:used-procedure>
+<urn:test:plot-description-standard-protocol-shapes:invalid:vegetation-growth-stage:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Standard Protocol'." ;
@@ -122,19 +122,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
-            sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:growth-stage:used-procedure> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>
+            rdf:value <https://linked.data.gov.au/def/nrm/afd516e4-0cb0-5a47-aff9-14b991824e79> ;
+            sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:vegetation-growth-stage:used-procedure> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/30985f0b-095b-50ee-8dfe-f872f73ea5a0>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094> ;
-    sosa:phenomenonTime <https://example.com/observation/growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/afd516e4-0cb0-5a47-aff9-14b991824e79> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/a2c2f997-46c0-5c64-aca0-a43e624cf8d5> ;
+    sosa:phenomenonTime <https://example.com/observation/vegetation-growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description-standard-protocol-shapes:invalid:growth-stage:value-type>
+<urn:test:plot-description-standard-protocol-shapes:invalid:vegetation-growth-stage:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
@@ -145,19 +145,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
-            sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:growth-stage:value-type> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>
+            rdf:value <https://linked.data.gov.au/def/nrm/afd516e4-0cb0-5a47-aff9-14b991824e79> ;
+            sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:vegetation-growth-stage:value-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/30985f0b-095b-50ee-8dfe-f872f73ea5a0>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094> ;
-    sosa:phenomenonTime <https://example.com/observation/growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/afd516e4-0cb0-5a47-aff9-14b991824e79> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/a2c2f997-46c0-5c64-aca0-a43e624cf8d5> ;
+    sosa:phenomenonTime <https://example.com/observation/vegetation-growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:plot-description-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:plot-description-standard-protocol-shapes:invalid:growth-stage:vocabulary>
+<urn:test:plot-description-standard-protocol-shapes:invalid:vegetation-growth-stage:vocabulary>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect vocabulary" ;
@@ -170,13 +170,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
-            sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:growth-stage:vocabulary> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/afd516e4-0cb0-5a47-aff9-14b991824e79> ;
+            sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:vegetation-growth-stage:vocabulary> ;
             tern:vocabulary <urn:fake:vocabulary>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094> ;
-    sosa:phenomenonTime <https://example.com/observation/growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/afd516e4-0cb0-5a47-aff9-14b991824e79> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/a2c2f997-46c0-5c64-aca0-a43e624cf8d5> ;
+    sosa:phenomenonTime <https://example.com/observation/vegetation-growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:plot-description-standard> ;
     tern:hasSiteVisit <urn:test:site> ;
