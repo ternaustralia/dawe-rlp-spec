@@ -89,8 +89,5 @@ shaclvalidate.sh --help
 
 ## Contact
 
-Edmond Chuc  
-e.chuc@uq.edu.au
-
-Junrong Yu  
-junrong.yu@uq.edu.au
+TERN Support:
+esupport@tern.org.au
