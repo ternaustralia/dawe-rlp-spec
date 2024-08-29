@@ -14,7 +14,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <urn:test:plot-description-standard-protocol-shapes:invalid:homogeneity-measure:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:float`." ;
+    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:integer`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -22,13 +22,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value 3 ;
+            rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:homogeneity-measure:datatype> ;
             tern:unit unit:M
         ] ;
-    sosa:hasSimpleResult 3 ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
     sosa:phenomenonTime <https://example.com/observation/homogeneity-measure/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -47,13 +47,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
+            rdf:value 33 ;
             sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:homogeneity-measure:feature-type> ;
             tern:unit unit:M
         ] ;
-    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:hasSimpleResult 33 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
     sosa:phenomenonTime <https://example.com/observation/homogeneity-measure/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -72,13 +72,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
+            rdf:value 33 ;
             sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:homogeneity-measure:simple-result> ;
             tern:unit unit:M
         ] ;
-    sosa:hasSimpleResult "13.56"^^xsd:float ;
+    sosa:hasSimpleResult 13 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
     sosa:phenomenonTime <https://example.com/observation/homogeneity-measure/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -97,13 +97,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
+            rdf:value 33 ;
             sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:homogeneity-measure:site-visit> ;
             tern:unit unit:M
         ] ;
-    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:hasSimpleResult 33 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
     sosa:phenomenonTime <https://example.com/observation/homogeneity-measure/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -121,13 +121,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
+            rdf:value 33 ;
             sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:homogeneity-measure:unit-of-measure> ;
             tern:unit <urn:fake:unit>
         ] ;
-    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:hasSimpleResult 33 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
     sosa:phenomenonTime <https://example.com/observation/homogeneity-measure/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -146,13 +146,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
+            rdf:value 33 ;
             sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:homogeneity-measure:used-procedure> ;
             tern:unit unit:M
         ] ;
-    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:hasSimpleResult 33 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
     sosa:phenomenonTime <https://example.com/observation/homogeneity-measure/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -171,13 +171,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "-1.11"^^xsd:float ;
+            rdf:value -1 ;
             sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:homogeneity-measure:value-range> ;
             tern:unit unit:M
         ] ;
-    sosa:hasSimpleResult "-1.11"^^xsd:float ;
+    sosa:hasSimpleResult -1 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
     sosa:phenomenonTime <https://example.com/observation/homogeneity-measure/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -188,7 +188,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <urn:test:plot-description-standard-protocol-shapes:invalid:homogeneity-measure:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the value of the result node must be `tern:Float`." ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:Integer`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -196,11 +196,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
+            rdf:value 33 ;
             sosa:isResultOf <urn:test:plot-description-standard-protocol-shapes:invalid:homogeneity-measure:value-type> ;
             tern:unit unit:M
         ] ;
-    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:hasSimpleResult 33 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/325d5ff2-8c81-484a-a422-c13ff29666a9> ;
     sosa:phenomenonTime <https://example.com/observation/homogeneity-measure/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
