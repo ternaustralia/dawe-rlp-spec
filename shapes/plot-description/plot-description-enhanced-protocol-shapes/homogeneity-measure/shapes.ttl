@@ -166,7 +166,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:datatype xsd:float ;
+    sh:datatype xsd:integer ;
     sh:description "Value _MUST_ not be negative." ;
     sh:message "The result _MUST_ not be negative." ;
     sh:minInclusive 0 ;
@@ -195,9 +195,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:class tern:Float ;
-    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
-    sh:message "The result _MUST_ be an instance of `tern:Float`." ;
+    sh:class tern:Integer ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
     sh:target [
