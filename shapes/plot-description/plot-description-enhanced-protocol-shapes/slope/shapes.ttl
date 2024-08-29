@@ -167,9 +167,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:integer ;
-    sh:description "Value _MUST_ be between 0 and 90 inclusive." ;
-    sh:maxInclusive 90 ;
-    sh:message "The result _MUST_ have a value between 0 and 90 inclusively." ;
+    sh:description "Value _MUST_ be between 0 and 100 inclusive." ;
+    sh:maxInclusive 100 ;
+    sh:message "The result _MUST_ have a value between 0 and 100 inclusively." ;
     sh:minInclusive 0 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
