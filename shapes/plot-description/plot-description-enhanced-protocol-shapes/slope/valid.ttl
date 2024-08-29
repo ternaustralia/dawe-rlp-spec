@@ -17,13 +17,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Integer ,
+                tern:Float ,
                 tern:Value ;
-            rdf:value 33 ;
+            rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:plot-description-enhanced-protocol-shapes:valid:slope> ;
             tern:unit unit:Percent
         ] ;
-    sosa:hasSimpleResult 33 ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
     sosa:phenomenonTime <https://example.com/observation/slope/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
