@@ -4,12 +4,17 @@ import rdflib
 
 
 def find_shapes_files(root_folder):
-    """Find all 'shapes.ttl' files in the given folder and subfolders."""
+    """Find all 'shapes.ttl' files in the direct subfolders of the given folder."""
     shapes_files = []
-    for dirpath, _, filenames in os.walk(root_folder):
-        for filename in filenames:
-            if filename == "shapes.ttl":
-                shapes_files.append(os.path.join(dirpath, filename))
+    for dirpath, dirnames, filenames in os.walk(root_folder):
+        # Only look in direct subfolders, skip deeper subdirectories
+        if dirpath == root_folder:
+            for dirname in dirnames:
+                subfolder = os.path.join(dirpath, dirname)
+                for filename in os.listdir(subfolder):
+                    if filename == "shapes.ttl":
+                        shapes_files.append(os.path.join(subfolder, filename))
+            break  # Stop further os.walk recursion
     return shapes_files
 
 
