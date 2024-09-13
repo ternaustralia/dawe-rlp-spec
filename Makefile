@@ -5,6 +5,7 @@ data=shapes/plot-description/cover-class/invalid.ttl
 SOURCES := $(shell find shapes -name "*.ttl")
 SHAPES := $(shell find shapes -name "shapes.ttl")
 SHAPE_FOLDER := shapes/plot-description/plot-description-enhanced-protocol-shapes
+TARGET_FOLDER := shapes/cover
 
 pyshacl-af:
 	pyshacl -s ${shape} ${data} -a
@@ -33,3 +34,7 @@ update-controlled-shapes:
 	for file in $(shell find $(SHAPE_FOLDER) -name "shapes.ttl") ; do \
 		python update-controlled-shapes.py $$file ; \
 	done
+
+aggregate-protocol-shapes:
+	python3 aggregate-protocol-shapes.py $(TARGET_FOLDER)
+

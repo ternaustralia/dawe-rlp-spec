@@ -32,7 +32,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/rainfall-duration/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-vantage-point> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:fauna-ground-counts-vantage-point-protocol-shapes:invalid:rainfall-duration:result-value>
@@ -57,7 +56,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/rainfall-duration/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-vantage-point> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:fauna-ground-counts-vantage-point-protocol-shapes:invalid:rainfall-duration:simple-result>
@@ -78,31 +76,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             tern:vocabulary <https://linked.data.gov.au/def/nrm/34789810-a3bc-4def-9ddb-d14ff4ba02ea>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/25d4c7b7-4cdf-4b69-8774-064055c74e23> ;
-    sosa:phenomenonTime <https://example.com/observation/rainfall-duration/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-vantage-point> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
-<urn:test:fauna-ground-counts-vantage-point-protocol-shapes:invalid:rainfall-duration:site-visit>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - all observations must have a site vist." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:IRI ,
-                tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/08eed747-4ef0-5546-b032-93705178b1fd> ;
-            sosa:isResultOf <urn:test:fauna-ground-counts-vantage-point-protocol-shapes:invalid:rainfall-duration:site-visit> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/34789810-a3bc-4def-9ddb-d14ff4ba02ea>
-        ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/08eed747-4ef0-5546-b032-93705178b1fd> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/25d4c7b7-4cdf-4b69-8774-064055c74e23> ;
     sosa:phenomenonTime <https://example.com/observation/rainfall-duration/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -131,7 +104,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/rainfall-duration/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:fauna-ground-counts-vantage-point-protocol-shapes:invalid:rainfall-duration:value-type>
@@ -154,7 +126,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/rainfall-duration/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-vantage-point> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:fauna-ground-counts-vantage-point-protocol-shapes:invalid:rainfall-duration:vocabulary>
@@ -179,7 +150,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/rainfall-duration/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-vantage-point> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:procedure:fauna-ground-counts-vantage-point>

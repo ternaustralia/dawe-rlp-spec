@@ -12,7 +12,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/8a68b4a9-167b-40f0-9222-293a2d20ffee>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
         ] ;
     sosa:hasResult [
             a
@@ -26,7 +26,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/animal-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-vantage-point> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:procedure:fauna-ground-counts-vantage-point>
