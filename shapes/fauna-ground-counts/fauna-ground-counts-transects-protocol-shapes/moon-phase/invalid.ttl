@@ -32,7 +32,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/moon-phase/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-transects> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:fauna-ground-counts-transects-protocol-shapes:invalid:moon-phase:result-value>
@@ -57,7 +56,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/moon-phase/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-transects> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:fauna-ground-counts-transects-protocol-shapes:invalid:moon-phase:simple-result>
@@ -78,31 +76,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             tern:vocabulary <https://linked.data.gov.au/def/nrm/30688460-6aaa-53aa-94e7-be1164f5343b>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/ec6a65f7-ff1a-5d00-a6e1-fa3af778aa74> ;
-    sosa:phenomenonTime <https://example.com/observation/moon-phase/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-transects> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
-<urn:test:fauna-ground-counts-transects-protocol-shapes:invalid:moon-phase:site-visit>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - all observations must have a site vist." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:IRI ,
-                tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/d14a1582-9c5c-5178-9197-d073b54e3cf8> ;
-            sosa:isResultOf <urn:test:fauna-ground-counts-transects-protocol-shapes:invalid:moon-phase:site-visit> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/30688460-6aaa-53aa-94e7-be1164f5343b>
-        ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/d14a1582-9c5c-5178-9197-d073b54e3cf8> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/ec6a65f7-ff1a-5d00-a6e1-fa3af778aa74> ;
     sosa:phenomenonTime <https://example.com/observation/moon-phase/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -131,7 +104,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/moon-phase/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:fauna-ground-counts-transects-protocol-shapes:invalid:moon-phase:value-type>
@@ -154,7 +126,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/moon-phase/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-transects> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:fauna-ground-counts-transects-protocol-shapes:invalid:moon-phase:vocabulary>
@@ -179,7 +150,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/moon-phase/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-transects> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:procedure:fauna-ground-counts-transects>
