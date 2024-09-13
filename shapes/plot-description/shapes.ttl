@@ -167,10 +167,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:integer ;
-    sh:description "Value _MUST_ be between 0 exclusive and 360 inclusive." ;
+    sh:description "Value _MUST_ be between 0 inclusive and 360 inclusive." ;
     sh:maxInclusive 360 ;
-    sh:message "The result _MUST_ have a value between 0 exclusive and 360 inclusive." ;
-    sh:minExclusive 0 ;
+    sh:message "The result _MUST_ have a value between 0 inclusive and 360 inclusive." ;
+    sh:minInclusive 0 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
@@ -5671,10 +5671,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:integer ;
-    sh:description "Value _MUST_ be between 0 exclusive and 360 inclusive." ;
+    sh:description "Value _MUST_ be between 0 inclusive and 360 inclusive." ;
     sh:maxInclusive 360 ;
-    sh:message "The result _MUST_ have a value between 0 exclusive and 360 inclusive." ;
-    sh:minExclusive 0 ;
+    sh:message "The result _MUST_ have a value between 0 inclusive and 360 inclusive." ;
+    sh:minInclusive 0 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
