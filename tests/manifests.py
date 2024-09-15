@@ -1344,7 +1344,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/shapes.ttl",
         valid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/valid.ttl",
         invalid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="plot-description-enhanced-protocol-shapes-field-species-name",
@@ -2303,7 +2303,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl",
         valid_data_path="shapes/vegetation-mapping-protocol-shapes/land-use-history/valid.ttl",
         invalid_data_path="shapes/vegetation-mapping-protocol-shapes/land-use-history/invalid.ttl",
-        expected_failures=6,
+        expected_failures=5,
     ).astuple(),
     TestCaseItem(
         name="vegetation-mapping-protocol-shapes-foliage-projective-cover",
