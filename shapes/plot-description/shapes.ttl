@@ -2160,35 +2160,35 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:land-use-history:vocabulary>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Australian-Land-Use-and-Management-Classification>`.
+# <urn:shapes:plot-description-enhanced-protocol-shapes:land-use-history:vocabulary>
+#     a
+#         sh:PropertyShape ,
+#         urnc:Requirement ;
+#     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+#     reg:status reg:statusSubmitted ;
+#     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Australian-Land-Use-and-Management-Classification>`.
 
-        `<http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Australian-Land-Use-and-Management-Classification>` is the IRI for "Australian Land Use and Management Classification".""" ;
-    sh:hasValue <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Australian-Land-Use-and-Management-Classification> ;
-    sh:message "The value of `tern:vocabulary` _MUST_ be <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Australian-Land-Use-and-Management-Classification>." ;
-    sh:name "Vocabulary" ;
-    sh:path tern:vocabulary ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-        PREFIX sosa: <http://www.w3.org/ns/sosa/>
-        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        select ?this  {
-            ?observation a tern:Observation ;
-                sosa:observedProperty 
-        <https://linked.data.gov.au/def/nrm/372ec5c5-79da-44a9-a56e-dd9ab311da06> ;
-                sosa:hasResult ?this .
-        }"""
-        ] ;
-    urnp:examples _:ndb2597178d4e4c9792b6644a540d3f69b173 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
-.
+#         `<http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Australian-Land-Use-and-Management-Classification>` is the IRI for "Australian Land Use and Management Classification".""" ;
+#     sh:hasValue <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Australian-Land-Use-and-Management-Classification> ;
+#     sh:message "The value of `tern:vocabulary` _MUST_ be <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Australian-Land-Use-and-Management-Classification>." ;
+#     sh:name "Vocabulary" ;
+#     sh:path tern:vocabulary ;
+#     sh:target [
+#             a sh:SPARQLTarget ;
+#             sh:select """
+#         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+#         PREFIX sosa: <http://www.w3.org/ns/sosa/>
+#         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+#         select ?this  {
+#             ?observation a tern:Observation ;
+#                 sosa:observedProperty 
+#         <https://linked.data.gov.au/def/nrm/372ec5c5-79da-44a9-a56e-dd9ab311da06> ;
+#                 sosa:hasResult ?this .
+#         }"""
+#         ] ;
+#     urnp:examples _:ndb2597178d4e4c9792b6644a540d3f69b173 ;
+#     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
+# .
 
 <urn:shapes:plot-description-enhanced-protocol-shapes:landform-element:feature-type>
     a
