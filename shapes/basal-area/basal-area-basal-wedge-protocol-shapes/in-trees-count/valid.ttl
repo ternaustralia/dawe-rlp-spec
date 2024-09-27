@@ -5,10 +5,10 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:basal-area-basal-wedge-protocol-shapes:valid:field-species-name>
+<urn:test:basal-area-basal-wedge-protocol-shapes:valid:in-trees-count>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Valid result for observable property - field species name" ;
+    rdfs:comment "Valid result for observable property - in-trees count" ;
     sosa:hasFeatureOfInterest
         [
             a tern:FeatureOfInterest ;
@@ -18,14 +18,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasResult
         [
             a
-                tern:Text ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "Oak"^^xsd:string ;
-            sosa:isResultOf <urn:test:basal-area-basal-wedge-protocol-shapes:valid:field-species-name> ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:basal-area-basal-wedge-protocol-shapes:valid:in-trees-count> ;
         ] ;
-    sosa:hasSimpleResult "Oak"^^xsd:string ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
-    sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult 3 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/8fea241f-8e98-4814-b9b9-db1bd5446910> ;
+    sosa:phenomenonTime <https://example.com/observation/in-trees-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:basal-area-basal-wedge> ;
     tern:hasSiteVisit <urn:test:site> ;

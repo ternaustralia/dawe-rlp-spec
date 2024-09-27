@@ -8,36 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:basal-area-basal-wedge-protocol-shapes:field-species-name:datatype>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:datatype xsd:string ;
-    sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
-    sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
-    sh:name "Datatype" ;
-    sh:path rdf:value ;
-    sh:target
-        [
-            a sh:SPARQLTarget ;
-            sh:select """
-        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-        PREFIX sosa: <http://www.w3.org/ns/sosa/>
-        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        select ?this  {
-            ?observation a tern:Observation ;
-                sosa:observedProperty 
-        <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
-                sosa:hasResult ?this .
-        }""" ;
-        ] ;
-    urnp:examples _:n27334b54670a42bd9caece6396def0ebb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:basal-area-basal-wedge-protocol-shapes:field-species-name:feature-type>
+<urn:shapes:basal-area-basal-wedge-protocol-shapes:borderline-trees-count:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -56,18 +27,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX unit: <http://qudt.org/vocab/unit/>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     select ?this  {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/36580cad-0509-4642-a450-47f3433ad244>}
         ?observation a tern:Observation ;
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
     }
     """ ;
         ] ;
-    urnp:examples _:n27334b54670a42bd9caece6396def0ebb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n7a4c14e05be64789a92a4879abcf7d05b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:basal-area-basal-wedge-protocol-shapes:field-species-name:simple-result>
+<urn:shapes:basal-area-basal-wedge-protocol-shapes:borderline-trees-count:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -86,7 +57,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     select $this {
         $this a tern:Observation ;
             sosa:observedProperty 
-    <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>
+    <https://linked.data.gov.au/def/nrm/36580cad-0509-4642-a450-47f3433ad244>
      ;
             sosa:hasSimpleResult ?simple ;
             sosa:hasResult ?result .
@@ -96,11 +67,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n27334b54670a42bd9caece6396def0ebb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n7a4c14e05be64789a92a4879abcf7d05b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:basal-area-basal-wedge-protocol-shapes:field-species-name:site-visit>
+<urn:shapes:basal-area-basal-wedge-protocol-shapes:borderline-trees-count:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -121,17 +92,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/36580cad-0509-4642-a450-47f3433ad244>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """ ;
         ] ;
-    urnp:examples _:n27334b54670a42bd9caece6396def0ebb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n7a4c14e05be64789a92a4879abcf7d05b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:basal-area-basal-wedge-protocol-shapes:field-species-name:used-procedure>
+<urn:shapes:basal-area-basal-wedge-protocol-shapes:borderline-trees-count:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -153,26 +124,56 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/36580cad-0509-4642-a450-47f3433ad244>}
         ?observation a tern:Observation ;
             sosa:observedProperty ?property_uri ;
             sosa:usedProcedure ?this .
     }
     """ ;
         ] ;
-    urnp:examples _:n27334b54670a42bd9caece6396def0ebb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n7a4c14e05be64789a92a4879abcf7d05b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:basal-area-basal-wedge-protocol-shapes:field-species-name:value-type>
+<urn:shapes:basal-area-basal-wedge-protocol-shapes:borderline-trees-count:value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:class tern:Text ;
-    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
-    sh:message "The result _MUST_ be an instance of `tern:Text`." ;
+    sh:datatype xsd:integer ;
+    sh:description "Value _MUST_ be non-negative." ;
+    sh:message "The result _MUST_ have a non-negative value." ;
+    sh:minInclusive 0 ;
+    sh:name "Value range" ;
+    sh:path rdf:value ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/36580cad-0509-4642-a450-47f3433ad244> ;
+                sosa:hasResult ?this .
+        }""" ;
+        ] ;
+    urnp:examples _:n7a4c14e05be64789a92a4879abcf7d05b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:basal-area-basal-wedge-protocol-shapes:borderline-trees-count:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:Integer ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
     sh:target
@@ -184,17 +185,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/36580cad-0509-4642-a450-47f3433ad244>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """ ;
         ] ;
-    urnp:examples _:n27334b54670a42bd9caece6396def0ebb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n7a4c14e05be64789a92a4879abcf7d05b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n27334b54670a42bd9caece6396def0ebb2
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
+_:n7a4c14e05be64789a92a4879abcf7d05b2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/valid.ttl"^^xsd:anyURI ;
 .
