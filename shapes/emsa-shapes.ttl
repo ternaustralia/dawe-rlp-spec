@@ -1,0 +1,26 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:emsa-information-model:procedure>
+    a sh:NodeShape ;
+    rdfs:label "Procedure"@en ;
+    sh:property
+        [
+            sh:class tern:Survey ;
+            sh:maxCount 1 ;
+            sh:message "A `tern:Procedure` _MAY_ have maximum 1 `tern:hasSurvey` predicate where the value node is `tern:Survey`." ;
+            sh:path tern:hasSurvey ;
+            sh:severity sh:Violation ;
+        ] ,
+        [
+            sh:maxCount 1 ;
+            sh:message "A `tern:Procedure` _MUST_ have exactly 1 `tern:methodType` where the value node is a `sh:IRI`." ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path tern:methodType ;
+            sh:severity sh:Violation ;
+        ] ;
+    sh:targetClass tern:Procedure ;
+.
