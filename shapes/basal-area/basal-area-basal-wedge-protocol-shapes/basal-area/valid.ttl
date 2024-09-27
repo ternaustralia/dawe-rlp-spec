@@ -1,0 +1,39 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:basal-area-basal-wedge-protocol-shapes:valid:basal-area>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - basal area" ;
+    sosa:hasFeatureOfInterest
+        [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b> ;
+        ] ;
+    sosa:hasResult
+        [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:basal-area-basal-wedge-protocol-shapes:valid:basal-area> ;
+            tern:unit unit:M2-PER-HA ;
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/f437f23a-7965-4bae-9dc3-2aead06786ec> ;
+    sosa:phenomenonTime <https://example.com/observation/basal-area/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:basal-area-basal-wedge> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:basal-area-basal-wedge>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f> ;
+.
