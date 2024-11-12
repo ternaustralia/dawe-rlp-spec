@@ -1,0 +1,182 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
+<urn:test:camera-traps-retrieval-protocol-shapes:invalid:image-count:datatype>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:integer`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Integer ,
+                tern:Value ;
+            rdf:value "33.81"^^xsd:float ;
+            sosa:isResultOf <urn:test:camera-traps-retrieval-protocol-shapes:invalid:image-count:datatype>
+        ] ;
+    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/4cba50f1-ad45-41d4-924c-c7efb9801248> ;
+    sosa:phenomenonTime <https://example.com/observation/image-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:camera-traps-retrieval> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:camera-traps-retrieval-protocol-shapes:invalid:image-count:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Integer ,
+                tern:Value ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:camera-traps-retrieval-protocol-shapes:invalid:image-count:feature-type>
+        ] ;
+    sosa:hasSimpleResult 3 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/4cba50f1-ad45-41d4-924c-c7efb9801248> ;
+    sosa:phenomenonTime <https://example.com/observation/image-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:camera-traps-retrieval> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:camera-traps-retrieval-protocol-shapes:invalid:image-count:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Integer ,
+                tern:Value ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:camera-traps-retrieval-protocol-shapes:invalid:image-count:simple-result>
+        ] ;
+    sosa:hasSimpleResult 2 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/4cba50f1-ad45-41d4-924c-c7efb9801248> ;
+    sosa:phenomenonTime <https://example.com/observation/image-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:camera-traps-retrieval> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:camera-traps-retrieval-protocol-shapes:invalid:image-count:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Integer ,
+                tern:Value ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:camera-traps-retrieval-protocol-shapes:invalid:image-count:site-visit>
+        ] ;
+    sosa:hasSimpleResult 3 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/4cba50f1-ad45-41d4-924c-c7efb9801248> ;
+    sosa:phenomenonTime <https://example.com/observation/image-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:camera-traps-retrieval> ;
+.
+
+<urn:test:camera-traps-retrieval-protocol-shapes:invalid:image-count:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Camera Trap Retrieval protocol'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Integer ,
+                tern:Value ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:camera-traps-retrieval-protocol-shapes:invalid:image-count:used-procedure>
+        ] ;
+    sosa:hasSimpleResult 3 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/4cba50f1-ad45-41d4-924c-c7efb9801248> ;
+    sosa:phenomenonTime <https://example.com/observation/image-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:camera-traps-retrieval-protocol-shapes:invalid:image-count:value-range>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value out of range" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Integer ,
+                tern:Value ;
+            rdf:value -1 ;
+            sosa:isResultOf <urn:test:camera-traps-retrieval-protocol-shapes:invalid:image-count:value-range> ;
+        ] ;
+    sosa:hasSimpleResult -1 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/4cba50f1-ad45-41d4-924c-c7efb9801248> ;
+    sosa:phenomenonTime <https://example.com/observation/image-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:camera-traps-retrieval> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:camera-traps-retrieval-protocol-shapes:invalid:image-count:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:Integer`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value 3 ;
+            sosa:isResultOf <urn:test:camera-traps-retrieval-protocol-shapes:invalid:image-count:value-type>
+        ] ;
+    sosa:hasSimpleResult 3 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/4cba50f1-ad45-41d4-924c-c7efb9801248> ;
+    sosa:phenomenonTime <https://example.com/observation/image-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:camera-traps-retrieval> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:camera-traps-retrieval>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/cb497bbc-75dc-450d-b020-5bc3c54d5586> ;
+.
+

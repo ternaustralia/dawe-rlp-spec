@@ -2362,6 +2362,13 @@ test_cases: List[TestCaseItem] = [
         expected_failures=7,
     ).astuple(),
     TestCaseItem(
+        name="camera-traps-retrieval-protocol-shapes-image-count",
+        shapes_path="shapes/camera-trapping/camera-traps-retrieval-protocol-shapes/image-count/shapes.ttl",
+        valid_data_path="shapes/camera-trapping/camera-traps-retrieval-protocol-shapes/image-count/valid.ttl",
+        invalid_data_path="shapes/camera-trapping/camera-traps-retrieval-protocol-shapes/image-count/invalid.ttl",
+        expected_failures=7,
+    ).astuple(),
+    TestCaseItem(
         name="fire-protocol-shapes-growth-form",
         shapes_path="shapes/fire-protocol-shapes/growth-form/shapes.ttl",
         valid_data_path="shapes/fire-protocol-shapes/growth-form/valid.ttl",
