@@ -1,0 +1,1044 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:NVIS-major-vegetation-group:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _plant community_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b[`plant community`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/58f2bd87-17d0-5d11-9ca1-b8f3b76d563b>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:NVIS-major-vegetation-group:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the NVIS Major Vegetation Groups controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/ecba751d-017d-5685-9124-c0bf746cb260>
+            <https://linked.data.gov.au/def/nrm/35210084-f540-53d1-8076-28c7ea0e172a>
+            <https://linked.data.gov.au/def/nrm/1cffebdd-332e-52e2-b904-6ee8b95b6a23>
+            <https://linked.data.gov.au/def/nrm/54f16769-034f-55ed-a26c-a0fb5d7b0ceb>
+            <https://linked.data.gov.au/def/nrm/930f3d09-b219-5d78-866c-04ac9c1cc4d5>
+            <https://linked.data.gov.au/def/nrm/9b20d065-0315-59a5-8ff6-d3f324efe57b>
+            <https://linked.data.gov.au/def/nrm/96f5538f-16f5-5ffd-ab03-34f3e67f848f>
+            <https://linked.data.gov.au/def/nrm/133a4faf-90f0-5c49-a2d3-03c3dba4f652>
+            <https://linked.data.gov.au/def/nrm/4b750f07-b0d8-52ac-911d-95f795512104>
+            <https://linked.data.gov.au/def/nrm/b88d3ac9-97e2-5361-b795-d2f8e48c4c66>
+            <https://linked.data.gov.au/def/nrm/6c6de82e-e3d1-580f-8b94-6d388612031b>
+            <https://linked.data.gov.au/def/nrm/e02b0da7-3956-5cbd-af50-95404b1f96fb>
+            <https://linked.data.gov.au/def/nrm/e444e671-bf16-5193-97e7-dda070676e71>
+            <https://linked.data.gov.au/def/nrm/804d7021-ff30-5c53-86ec-17d65cf46cb9>
+            <https://linked.data.gov.au/def/nrm/ebd020a3-53ef-4e78-8588-12ba8533813d>
+            <https://linked.data.gov.au/def/nrm/396ef852-b21c-4c78-8327-6b82999280d5>
+            <https://linked.data.gov.au/def/nrm/2bfe917f-e9ed-4ad8-a06b-1e4d269202c3>
+            <https://linked.data.gov.au/def/nrm/c98f67db-64e8-46d5-bf40-c73a76f5a89d>
+            <https://linked.data.gov.au/def/nrm/a47a239e-9309-4462-b608-c05f5c6931ab>
+            <https://linked.data.gov.au/def/nrm/176c2b5d-fb0a-4954-a54e-0e5c5ad6659c>
+            <https://linked.data.gov.au/def/nrm/263d4e06-2095-4d73-a7f9-c5448cfe405a>
+            <https://linked.data.gov.au/def/nrm/654bf340-a849-46ef-9c8b-e1152f02608e>
+            <https://linked.data.gov.au/def/nrm/623af8ab-abba-425a-949a-03394f00cd7f>
+            <https://linked.data.gov.au/def/nrm/efdead3a-f0cf-4c06-9abe-8592f06fdd04>
+            <https://linked.data.gov.au/def/nrm/1b7d69cb-e971-40c0-8bd3-08a5ba778dab>
+            <https://linked.data.gov.au/def/nrm/14c1e2cb-29f1-4b99-bd5b-18fdad014f9c>
+            <https://linked.data.gov.au/def/nrm/545bca61-0680-433e-bd5e-fa3e3f488d9c>
+            <https://linked.data.gov.au/def/nrm/6e21f5f5-df24-4e3c-b977-5d3b32b5dc2e>
+            <https://linked.data.gov.au/def/nrm/d57d3693-58ae-433d-b5cb-58cbc0362c3b>
+            <https://linked.data.gov.au/def/nrm/ec659d6a-9670-46c3-959d-3607914f85d4>
+            <https://linked.data.gov.au/def/nrm/7d1b555a-0c69-42d7-9ffc-e615bad1cc43>
+            <https://linked.data.gov.au/def/nrm/d0cded0b-c872-49d1-af5a-9ac0c829efea>
+            <https://linked.data.gov.au/def/nrm/f58c06ea-efb4-45ee-9db8-b9d53bafb035>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the NVIS Major Vegetation Groups controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/58f2bd87-17d0-5d11-9ca1-b8f3b76d563b> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b2 ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'2aa40711-7c6d-506f-ae57-90551476d521'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:NVIS-major-vegetation-group:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/58f2bd87-17d0-5d11-9ca1-b8f3b76d563b>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:NVIS-major-vegetation-group:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Camera Trap Deployment protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/58f2bd87-17d0-5d11-9ca1-b8f3b76d563b>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:NVIS-major-vegetation-group:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/1a6953e4-a830-41f8-9cfd-11ead4dd6bc2>`.
+
+    `<https://linked.data.gov.au/def/nrm/1a6953e4-a830-41f8-9cfd-11ead4dd6bc2>` is the IRI for "Camera Trap Deployment protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/1a6953e4-a830-41f8-9cfd-11ead4dd6bc2> ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/1a6953e4-a830-41f8-9cfd-11ead4dd6bc2`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/58f2bd87-17d0-5d11-9ca1-b8f3b76d563b>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:NVIS-major-vegetation-group:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/58f2bd87-17d0-5d11-9ca1-b8f3b76d563b>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:NVIS-major-vegetation-group:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/2aa40711-7c6d-506f-ae57-90551476d521>`.
+
+        `<https://linked.data.gov.au/def/nrm/2aa40711-7c6d-506f-ae57-90551476d521>` is the IRI for "NVIS Major Vegetation Groups".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `2aa40711-7c6d-506f-ae57-90551476d521$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "2aa40711-7c6d-506f-ae57-90551476d521$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/58f2bd87-17d0-5d11-9ca1-b8f3b76d563b> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:aspect:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/0e0423c6-0dc3-40aa-9776-410a94299256>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b43 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:aspect:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/0e0423c6-0dc3-40aa-9776-410a94299256>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b43 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:aspect:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Camera Trap Deployment protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/0e0423c6-0dc3-40aa-9776-410a94299256>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b43 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:aspect:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/1a6953e4-a830-41f8-9cfd-11ead4dd6bc2>`.
+
+    `<https://linked.data.gov.au/def/nrm/1a6953e4-a830-41f8-9cfd-11ead4dd6bc2>` is the IRI for "Camera Trap Deployment protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/1a6953e4-a830-41f8-9cfd-11ead4dd6bc2> ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/1a6953e4-a830-41f8-9cfd-11ead4dd6bc2`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/0e0423c6-0dc3-40aa-9776-410a94299256>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b43 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:aspect:value-range>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:datatype xsd:integer ;
+    sh:description "Value _MUST_ be between 0 inclusive and 360 inclusive." ;
+    sh:maxInclusive 360 ;
+    sh:message "The result _MUST_ have a value between 0 inclusive and 360 inclusive." ;
+    sh:minInclusive 0 ;
+    sh:name "Value range" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/0e0423c6-0dc3-40aa-9776-410a94299256> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b43 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:aspect:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:Integer ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/0e0423c6-0dc3-40aa-9776-410a94299256>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b43 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:slope:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _landform_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd[`landform`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/b036ba09-d061-4a1c-99a8-890efc462a2c>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b50 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:slope:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/b036ba09-d061-4a1c-99a8-890efc462a2c>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b50 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:slope:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Camera Trap Deployment protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/b036ba09-d061-4a1c-99a8-890efc462a2c>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b50 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:slope:unit-of-measure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Result value's unit of measure _MUST_ have the value `unit:DEG`." ;
+    sh:hasValue unit:DEG ;
+    sh:message "The result _MUST_ have `unit:DEG` as the value for `tern:unit`." ;
+    sh:name "Unit of measure" ;
+    sh:path tern:unit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b50 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:slope:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/1a6953e4-a830-41f8-9cfd-11ead4dd6bc2>`.
+
+    `<https://linked.data.gov.au/def/nrm/1a6953e4-a830-41f8-9cfd-11ead4dd6bc2>` is the IRI for "Camera Trap Deployment protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/1a6953e4-a830-41f8-9cfd-11ead4dd6bc2> ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/1a6953e4-a830-41f8-9cfd-11ead4dd6bc2`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/b036ba09-d061-4a1c-99a8-890efc462a2c>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b50 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:slope:value-range>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:datatype xsd:float ;
+    sh:description "Value _MUST_ be between 0 and 90 inclusive." ;
+    sh:maxInclusive 90 ;
+    sh:message "The result _MUST_ have a value between 0 and 90 inclusively." ;
+    sh:minInclusive 0 ;
+    sh:name "Value range" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/b036ba09-d061-4a1c-99a8-890efc462a2c> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b50 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-deployment-protocol-shapes:slope:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:Float ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Float`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/b036ba09-d061-4a1c-99a8-890efc462a2c>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b50 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-re-equipping-protocol-shapes:image-count:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/4cba50f1-ad45-41d4-924c-c7efb9801248>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b58 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-re-equipping-protocol-shapes/image-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-re-equipping-protocol-shapes:image-count:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/4cba50f1-ad45-41d4-924c-c7efb9801248>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b58 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-re-equipping-protocol-shapes/image-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-re-equipping-protocol-shapes:image-count:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Camera Trap Re-equipping  protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/4cba50f1-ad45-41d4-924c-c7efb9801248>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b58 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-re-equipping-protocol-shapes/image-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-re-equipping-protocol-shapes:image-count:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/a2afccd5-766e-44bc-98c1-f27aae26727f>`.
+
+    `<https://linked.data.gov.au/def/nrm/a2afccd5-766e-44bc-98c1-f27aae26727f>` is the IRI for "Camera Trap Re-equipping  protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/a2afccd5-766e-44bc-98c1-f27aae26727f> ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/a2afccd5-766e-44bc-98c1-f27aae26727f`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/4cba50f1-ad45-41d4-924c-c7efb9801248>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b58 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-re-equipping-protocol-shapes/image-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-re-equipping-protocol-shapes:image-count:value-range>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:datatype xsd:integer ;
+    sh:description "Value _MUST_ not be negative." ;
+    sh:message "The result _MUST_ not be negative." ;
+    sh:minInclusive 0 ;
+    sh:name "Value range" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/4cba50f1-ad45-41d4-924c-c7efb9801248> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b58 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-re-equipping-protocol-shapes/image-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-re-equipping-protocol-shapes:image-count:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:Integer ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/4cba50f1-ad45-41d4-924c-c7efb9801248>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b58 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-re-equipping-protocol-shapes/image-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-retrieval-protocol-shapes:image-count:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/4cba50f1-ad45-41d4-924c-c7efb9801248>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b65 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-retrieval-protocol-shapes/image-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-retrieval-protocol-shapes:image-count:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/4cba50f1-ad45-41d4-924c-c7efb9801248>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b65 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-retrieval-protocol-shapes/image-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-retrieval-protocol-shapes:image-count:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Camera Trap Retrieval protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/4cba50f1-ad45-41d4-924c-c7efb9801248>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b65 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-retrieval-protocol-shapes/image-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-retrieval-protocol-shapes:image-count:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/cb497bbc-75dc-450d-b020-5bc3c54d5586>`.
+
+    `<https://linked.data.gov.au/def/nrm/cb497bbc-75dc-450d-b020-5bc3c54d5586>` is the IRI for "Camera Trap Retrieval protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/cb497bbc-75dc-450d-b020-5bc3c54d5586> ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/cb497bbc-75dc-450d-b020-5bc3c54d5586`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/4cba50f1-ad45-41d4-924c-c7efb9801248>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b65 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-retrieval-protocol-shapes/image-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-retrieval-protocol-shapes:image-count:value-range>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:datatype xsd:integer ;
+    sh:description "Value _MUST_ not be negative." ;
+    sh:message "The result _MUST_ not be negative." ;
+    sh:minInclusive 0 ;
+    sh:name "Value range" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/4cba50f1-ad45-41d4-924c-c7efb9801248> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b65 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-retrieval-protocol-shapes/image-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:camera-traps-retrieval-protocol-shapes:image-count:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:Integer ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/4cba50f1-ad45-41d4-924c-c7efb9801248>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n512abcb1778c4cd6a575cd8962c793b2b65 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-retrieval-protocol-shapes/image-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+_:n512abcb1778c4cd6a575cd8962c793b2b43
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/valid.ttl"^^xsd:anyURI ;
+.
+
+_:n512abcb1778c4cd6a575cd8962c793b2b58
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-re-equipping-protocol-shapes/image-count/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-re-equipping-protocol-shapes/image-count/valid.ttl"^^xsd:anyURI ;
+.
+
+_:n512abcb1778c4cd6a575cd8962c793b2b65
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-retrieval-protocol-shapes/image-count/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-retrieval-protocol-shapes/image-count/valid.ttl"^^xsd:anyURI ;
+.
+
+_:n512abcb1778c4cd6a575cd8962c793b2b2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/valid.ttl"^^xsd:anyURI ;
+.
+
+_:n512abcb1778c4cd6a575cd8962c793b2b50
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/slope/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/slope/valid.ttl"^^xsd:anyURI ;
+.
+
