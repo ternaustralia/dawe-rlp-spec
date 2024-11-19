@@ -1,0 +1,36 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:coarse-woody-debris-protocol-shapes:valid:stump-regeneration>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - stump regeneration" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/9f0ed180-2b85-4efa-b09f-9e20caf1d069>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Boolean ,
+                tern:Value ;
+            rdf:value true ;
+            sosa:isResultOf <urn:test:coarse-woody-debris-protocol-shapes:valid:stump-regeneration>
+        ] ;
+    sosa:hasSimpleResult true ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/00c4a64a-0411-533d-a742-7f08232c24b7> ;
+    sosa:phenomenonTime <https://example.com/observation/stump-regeneration/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:coarse-woody-debris> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:coarse-woody-debris>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/0d8b47b4-1ca8-4c76-8329-0eb781a823a2> ;
+.
+
