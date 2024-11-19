@@ -1,0 +1,37 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:coarse-woody-debris-protocol-shapes:valid:coarse-woody-debris-decay-class>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - coarse woody debris decay class" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/a8b1a7fb-b479-48ff-b706-b3cc4691710b>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/af9c9009-9b9d-5624-85a3-7bb9390d68ea> ;
+            sosa:isResultOf <urn:test:coarse-woody-debris-protocol-shapes:valid:coarse-woody-debris-decay-class> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/b5180d8a-75b6-4bca-9413-0e507e910387>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/af9c9009-9b9d-5624-85a3-7bb9390d68ea> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fa986148-e44a-4cd3-8ac3-17748eb013f3> ;
+    sosa:phenomenonTime <https://example.com/observation/coarse-woody-debris-decay-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:coarse-woody-debris> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:coarse-woody-debris>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/0d8b47b4-1ca8-4c76-8329-0eb781a823a2> ;
+.
+
