@@ -1,0 +1,1 @@
+# Main function to generate SHACL shapes for one module or multiple modules
