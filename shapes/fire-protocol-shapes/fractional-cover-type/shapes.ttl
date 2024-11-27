@@ -8,15 +8,15 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:fire-protocol-shapes:regeneration-status:feature-type>
+<urn:shapes:fire-protocol-shapes:fractional-cover-type:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
@@ -26,31 +26,31 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX unit: <http://qudt.org/vocab/unit/>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     select ?this  {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/50239f29-a693-49ef-98e8-4ee11d1758ea>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/7817e244-a5cf-54c1-9ea1-9dca8469bce7>}
         ?observation a tern:Observation ;
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
     }
     """
         ] ;
-    urnp:examples _:nd461a8ca51474446a4a6c0db251fe71fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n4c5573c86e05439bbf87ad536b585e64b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fire-protocol-shapes:regeneration-status:result-value>
+<urn:shapes:fire-protocol-shapes:fractional-cover-type:result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Fire regeneration statuses controlled vocabulary." ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the fractional cover types controlled vocabulary." ;
     sh:in (
-            <https://linked.data.gov.au/def/nrm/ef12561d-a8d7-5dde-9779-6e02610f2070>
-            <https://linked.data.gov.au/def/nrm/56c028e4-5657-5a35-891a-63ed0a8817e0>
-            <https://linked.data.gov.au/def/nrm/54fc9d07-d161-5b0d-8c62-84f0967559c3>
+            <https://linked.data.gov.au/def/nrm/88303e3c-2e15-524d-bcde-3a8c5ac074de>
+            <https://linked.data.gov.au/def/nrm/6c422661-3ce6-51f5-94b5-765c4777ba66>
+            <https://linked.data.gov.au/def/nrm/d02960ac-90c6-5811-8f78-f5c6bb11ccee>
         ) ;
-    sh:message "The value of `rdf:value` _MUST_ exist in the Fire regeneration statuses controlled vocabulary." ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the fractional cover types controlled vocabulary." ;
     sh:name "Result value" ;
     sh:path rdf:value ;
     sh:target [
@@ -62,24 +62,24 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         select ?this  {
             ?observation a tern:Observation ;
                 sosa:observedProperty 
-        <https://linked.data.gov.au/def/nrm/50239f29-a693-49ef-98e8-4ee11d1758ea> ;
+        <https://linked.data.gov.au/def/nrm/7817e244-a5cf-54c1-9ea1-9dca8469bce7> ;
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd461a8ca51474446a4a6c0db251fe71fb2 ;
+    urnp:examples _:n4c5573c86e05439bbf87ad536b585e64b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
-            values ?categoricalUUID {'a1b8fc00-5d5f-40f8-a7e1-0b09d4bbba4b'}
+            values ?categoricalUUID {'51d1a677-0688-57b3-91c7-6f1e3beee188'}
             ?s skos:member ?values .
             filter (STRENDS(str(?s), ?categoricalUUID))
         }
         """ ;
     urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fire-protocol-shapes:regeneration-status:simple-result>
+<urn:shapes:fire-protocol-shapes:fractional-cover-type:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -97,7 +97,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     select $this {
         $this a tern:Observation ;
             sosa:observedProperty 
-    <https://linked.data.gov.au/def/nrm/50239f29-a693-49ef-98e8-4ee11d1758ea>
+    <https://linked.data.gov.au/def/nrm/7817e244-a5cf-54c1-9ea1-9dca8469bce7>
      ;
             sosa:hasSimpleResult ?simple ;
             sosa:hasResult ?result .
@@ -107,11 +107,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nd461a8ca51474446a4a6c0db251fe71fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n4c5573c86e05439bbf87ad536b585e64b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fire-protocol-shapes:regeneration-status:site-visit>
+<urn:shapes:fire-protocol-shapes:fractional-cover-type:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -131,17 +131,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/50239f29-a693-49ef-98e8-4ee11d1758ea>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/7817e244-a5cf-54c1-9ea1-9dca8469bce7>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
-    urnp:examples _:nd461a8ca51474446a4a6c0db251fe71fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n4c5573c86e05439bbf87ad536b585e64b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fire-protocol-shapes:regeneration-status:used-procedure>
+<urn:shapes:fire-protocol-shapes:fractional-cover-type:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -162,18 +162,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/50239f29-a693-49ef-98e8-4ee11d1758ea>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/7817e244-a5cf-54c1-9ea1-9dca8469bce7>}
         ?observation a tern:Observation ;
             sosa:observedProperty ?property_uri ;
             sosa:usedProcedure ?this .
     }
     """
         ] ;
-    urnp:examples _:nd461a8ca51474446a4a6c0db251fe71fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n4c5573c86e05439bbf87ad536b585e64b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fire-protocol-shapes:regeneration-status:value-type>
+<urn:shapes:fire-protocol-shapes:fractional-cover-type:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -192,29 +192,29 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX sosa: <http://www.w3.org/ns/sosa/>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/50239f29-a693-49ef-98e8-4ee11d1758ea>}
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/7817e244-a5cf-54c1-9ea1-9dca8469bce7>}
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
     """
         ] ;
-    urnp:examples _:nd461a8ca51474446a4a6c0db251fe71fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n4c5573c86e05439bbf87ad536b585e64b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fire-protocol-shapes:regeneration-status:vocabulary>
+<urn:shapes:fire-protocol-shapes:fractional-cover-type:vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/a1b8fc00-5d5f-40f8-a7e1-0b09d4bbba4b>`.
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/51d1a677-0688-57b3-91c7-6f1e3beee188>`.
 
-        `<https://linked.data.gov.au/def/nrm/a1b8fc00-5d5f-40f8-a7e1-0b09d4bbba4b>` is the IRI for "Fire regeneration statuses".""" ;
-    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `a1b8fc00-5d5f-40f8-a7e1-0b09d4bbba4b$`." ;
+        `<https://linked.data.gov.au/def/nrm/51d1a677-0688-57b3-91c7-6f1e3beee188>` is the IRI for "fractional cover types".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `51d1a677-0688-57b3-91c7-6f1e3beee188$`." ;
     sh:name "Vocabulary" ;
     sh:path tern:vocabulary ;
-    sh:pattern "a1b8fc00-5d5f-40f8-a7e1-0b09d4bbba4b$" ;
+    sh:pattern "51d1a677-0688-57b3-91c7-6f1e3beee188$" ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -224,16 +224,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         select ?this  {
             ?observation a tern:Observation ;
                 sosa:observedProperty 
-        <https://linked.data.gov.au/def/nrm/50239f29-a693-49ef-98e8-4ee11d1758ea> ;
+        <https://linked.data.gov.au/def/nrm/7817e244-a5cf-54c1-9ea1-9dca8469bce7> ;
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd461a8ca51474446a4a6c0db251fe71fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n4c5573c86e05439bbf87ad536b585e64b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nd461a8ca51474446a4a6c0db251fe71fb2
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/regeneration-status/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/regeneration-status/valid.ttl"^^xsd:anyURI ;
+_:n4c5573c86e05439bbf87ad536b585e64b2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/valid.ttl"^^xsd:anyURI ;
 .
 

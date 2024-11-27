@@ -5,6 +5,11 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
 <urn:test:fire-protocol-shapes:invalid:field-species-name:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
@@ -25,7 +30,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
     sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -42,14 +47,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:Text ,
                 tern:Value ;
-            rdf:value "Bee"^^xsd:string ;
+            rdf:value "Oak"^^xsd:string ;
             sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:field-species-name:feature-type>
         ] ;
-    sosa:hasSimpleResult "Bee"^^xsd:string ;
+    sosa:hasSimpleResult "Oak"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
     sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -66,14 +71,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:Text ,
                 tern:Value ;
-            rdf:value "Bee"^^xsd:string ;
+            rdf:value "Oak"^^xsd:string ;
             sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:field-species-name:simple-result>
         ] ;
-    sosa:hasSimpleResult "Bee different"^^xsd:string ;
+    sosa:hasSimpleResult "Oak different"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
     sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -90,20 +95,20 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:Text ,
                 tern:Value ;
-            rdf:value "Bee"^^xsd:string ;
+            rdf:value "Oak"^^xsd:string ;
             sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:field-species-name:site-visit>
         ] ;
-    sosa:hasSimpleResult "Bee"^^xsd:string ;
+    sosa:hasSimpleResult "Oak"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
     sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
 .
 
 <urn:test:fire-protocol-shapes:invalid:field-species-name:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the used procedure should be 'Fire'." ;
+    rdfs:comment "Invalid result - the used procedure should be 'Fire Severity Module'." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -113,10 +118,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:Text ,
                 tern:Value ;
-            rdf:value "Bee"^^xsd:string ;
+            rdf:value "Oak"^^xsd:string ;
             sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:field-species-name:used-procedure>
         ] ;
-    sosa:hasSimpleResult "Bee"^^xsd:string ;
+    sosa:hasSimpleResult "Oak"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
     sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -135,14 +140,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a tern:Value ;
-            rdf:value "Bee"^^xsd:string ;
+            rdf:value "Oak"^^xsd:string ;
             sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:field-species-name:value-type>
         ] ;
-    sosa:hasSimpleResult "Bee"^^xsd:string ;
+    sosa:hasSimpleResult "Oak"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
     sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:fire>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
 .
 

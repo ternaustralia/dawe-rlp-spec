@@ -10,7 +10,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:methodType <urn:fake:method> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:growth-form:feature-type>
+<urn:test:fire-protocol-shapes:invalid:plant-burn-extent:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -23,19 +23,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:growth-form:feature-type> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>
+            rdf:value <https://linked.data.gov.au/def/nrm/b56bb218-ad1c-59b3-af3f-2f38be6d6591> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-burn-extent:feature-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/78dda800-193d-5b0e-a18b-f54ad942aa51>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65> ;
-    sosa:phenomenonTime <https://example.com/observation/growth-form/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/b56bb218-ad1c-59b3-af3f-2f38be6d6591> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/61754220-443e-4c02-936c-d1b50e86f7d7> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-burn-extent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:growth-form:result-value>
+<urn:test:fire-protocol-shapes:invalid:plant-burn-extent:result-value>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
@@ -49,18 +49,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <urn:fake:categorical:value> ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:growth-form:result-value> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-burn-extent:result-value> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/78dda800-193d-5b0e-a18b-f54ad942aa51>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65> ;
-    sosa:phenomenonTime <https://example.com/observation/growth-form/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/61754220-443e-4c02-936c-d1b50e86f7d7> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-burn-extent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:growth-form:simple-result>
+<urn:test:fire-protocol-shapes:invalid:plant-burn-extent:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -73,19 +73,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:growth-form:simple-result> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>
+            rdf:value <https://linked.data.gov.au/def/nrm/b56bb218-ad1c-59b3-af3f-2f38be6d6591> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-burn-extent:simple-result> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/78dda800-193d-5b0e-a18b-f54ad942aa51>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65> ;
-    sosa:phenomenonTime <https://example.com/observation/growth-form/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/61754220-443e-4c02-936c-d1b50e86f7d7> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-burn-extent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:growth-form:site-visit>
+<urn:test:fire-protocol-shapes:invalid:plant-burn-extent:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -98,18 +98,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:growth-form:site-visit> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>
+            rdf:value <https://linked.data.gov.au/def/nrm/b56bb218-ad1c-59b3-af3f-2f38be6d6591> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-burn-extent:site-visit> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/78dda800-193d-5b0e-a18b-f54ad942aa51>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65> ;
-    sosa:phenomenonTime <https://example.com/observation/growth-form/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/b56bb218-ad1c-59b3-af3f-2f38be6d6591> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/61754220-443e-4c02-936c-d1b50e86f7d7> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-burn-extent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:fire> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:growth-form:used-procedure>
+<urn:test:fire-protocol-shapes:invalid:plant-burn-extent:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the used procedure should be 'Fire Severity Module'." ;
@@ -122,19 +122,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:growth-form:used-procedure> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>
+            rdf:value <https://linked.data.gov.au/def/nrm/b56bb218-ad1c-59b3-af3f-2f38be6d6591> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-burn-extent:used-procedure> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/78dda800-193d-5b0e-a18b-f54ad942aa51>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65> ;
-    sosa:phenomenonTime <https://example.com/observation/growth-form/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/b56bb218-ad1c-59b3-af3f-2f38be6d6591> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/61754220-443e-4c02-936c-d1b50e86f7d7> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-burn-extent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:growth-form:value-type>
+<urn:test:fire-protocol-shapes:invalid:plant-burn-extent:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
@@ -145,19 +145,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:growth-form:value-type> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>
+            rdf:value <https://linked.data.gov.au/def/nrm/b56bb218-ad1c-59b3-af3f-2f38be6d6591> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-burn-extent:value-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/78dda800-193d-5b0e-a18b-f54ad942aa51>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65> ;
-    sosa:phenomenonTime <https://example.com/observation/growth-form/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/b56bb218-ad1c-59b3-af3f-2f38be6d6591> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/61754220-443e-4c02-936c-d1b50e86f7d7> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-burn-extent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:growth-form:vocabulary>
+<urn:test:fire-protocol-shapes:invalid:plant-burn-extent:vocabulary>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect vocabulary" ;
@@ -170,13 +170,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:growth-form:vocabulary> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/b56bb218-ad1c-59b3-af3f-2f38be6d6591> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-burn-extent:vocabulary> ;
             tern:vocabulary <urn:fake:vocabulary>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65> ;
-    sosa:phenomenonTime <https://example.com/observation/growth-form/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/b56bb218-ad1c-59b3-af3f-2f38be6d6591> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/61754220-443e-4c02-936c-d1b50e86f7d7> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-burn-extent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;

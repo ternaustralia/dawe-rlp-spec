@@ -6,6 +6,11 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
 <urn:test:fire-protocol-shapes:invalid:plant-height:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
@@ -27,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e9da717-6c8e-4194-9385-c995d54702e4> ;
     sosa:phenomenonTime <https://example.com/observation/plant-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -52,7 +57,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e9da717-6c8e-4194-9385-c995d54702e4> ;
     sosa:phenomenonTime <https://example.com/observation/plant-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -77,7 +82,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e9da717-6c8e-4194-9385-c995d54702e4> ;
     sosa:phenomenonTime <https://example.com/observation/plant-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -102,7 +107,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e9da717-6c8e-4194-9385-c995d54702e4> ;
     sosa:phenomenonTime <https://example.com/observation/plant-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
 .
 
 <urn:test:fire-protocol-shapes:invalid:plant-height:unit-of-measure>
@@ -126,14 +131,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e9da717-6c8e-4194-9385-c995d54702e4> ;
     sosa:phenomenonTime <https://example.com/observation/plant-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:fire-protocol-shapes:invalid:plant-height:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the used procedure should be 'Fire'." ;
+    rdfs:comment "Invalid result - the used procedure should be 'Fire Severity Module'." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -168,15 +173,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:Float ,
                 tern:Value ;
-            rdf:value "0.0"^^xsd:float ;
+            rdf:value "-1.11"^^xsd:float ;
             sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-height:value-range> ;
             tern:unit unit:M
         ] ;
-    sosa:hasSimpleResult "0.0"^^xsd:float ;
+    sosa:hasSimpleResult "-1.11"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e9da717-6c8e-4194-9385-c995d54702e4> ;
     sosa:phenomenonTime <https://example.com/observation/plant-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -199,7 +204,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e9da717-6c8e-4194-9385-c995d54702e4> ;
     sosa:phenomenonTime <https://example.com/observation/plant-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:fire>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
 .
 

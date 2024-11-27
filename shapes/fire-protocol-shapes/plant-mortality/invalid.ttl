@@ -5,7 +5,12 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:test:fire-protocol-shapes:invalid:plant-status:feature-type>
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
+<urn:test:fire-protocol-shapes:invalid:plant-mortality:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -18,19 +23,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/1a57c444-66a7-5746-bebc-2be757ee54c8> ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-status:feature-type> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/2fd1ed97-3e7b-59a0-8d93-9be76f276071> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-mortality:feature-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/b7368a37-a4ac-4c84-8a78-1fb9755ad849>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/1a57c444-66a7-5746-bebc-2be757ee54c8> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/2fd1ed97-3e7b-59a0-8d93-9be76f276071> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/ddd0c631-bfdd-4b0f-88de-a5eb1a0181c6> ;
-    sosa:phenomenonTime <https://example.com/observation/plant-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-mortality/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:plant-status:result-value>
+<urn:test:fire-protocol-shapes:invalid:plant-mortality:result-value>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
@@ -44,18 +49,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <urn:fake:categorical:value> ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-status:result-value> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-mortality:result-value> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/b7368a37-a4ac-4c84-8a78-1fb9755ad849>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/ddd0c631-bfdd-4b0f-88de-a5eb1a0181c6> ;
-    sosa:phenomenonTime <https://example.com/observation/plant-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-mortality/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:plant-status:simple-result>
+<urn:test:fire-protocol-shapes:invalid:plant-mortality:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -68,19 +73,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/1a57c444-66a7-5746-bebc-2be757ee54c8> ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-status:simple-result> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/2fd1ed97-3e7b-59a0-8d93-9be76f276071> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-mortality:simple-result> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/b7368a37-a4ac-4c84-8a78-1fb9755ad849>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/ddd0c631-bfdd-4b0f-88de-a5eb1a0181c6> ;
-    sosa:phenomenonTime <https://example.com/observation/plant-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-mortality/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:plant-status:site-visit>
+<urn:test:fire-protocol-shapes:invalid:plant-mortality:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - all observations must have a site vist." ;
@@ -93,21 +98,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/1a57c444-66a7-5746-bebc-2be757ee54c8> ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-status:site-visit> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/2fd1ed97-3e7b-59a0-8d93-9be76f276071> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-mortality:site-visit> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/b7368a37-a4ac-4c84-8a78-1fb9755ad849>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/1a57c444-66a7-5746-bebc-2be757ee54c8> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/2fd1ed97-3e7b-59a0-8d93-9be76f276071> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/ddd0c631-bfdd-4b0f-88de-a5eb1a0181c6> ;
-    sosa:phenomenonTime <https://example.com/observation/plant-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-mortality/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:plant-status:used-procedure>
+<urn:test:fire-protocol-shapes:invalid:plant-mortality:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the used procedure should be 'Fire'." ;
+    rdfs:comment "Invalid result - the used procedure should be 'Fire Severity Module'." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -117,19 +122,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/1a57c444-66a7-5746-bebc-2be757ee54c8> ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-status:used-procedure> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/2fd1ed97-3e7b-59a0-8d93-9be76f276071> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-mortality:used-procedure> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/b7368a37-a4ac-4c84-8a78-1fb9755ad849>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/1a57c444-66a7-5746-bebc-2be757ee54c8> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/2fd1ed97-3e7b-59a0-8d93-9be76f276071> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/ddd0c631-bfdd-4b0f-88de-a5eb1a0181c6> ;
-    sosa:phenomenonTime <https://example.com/observation/plant-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-mortality/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:plant-status:value-type>
+<urn:test:fire-protocol-shapes:invalid:plant-mortality:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
@@ -140,19 +145,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/1a57c444-66a7-5746-bebc-2be757ee54c8> ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-status:value-type> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/2fd1ed97-3e7b-59a0-8d93-9be76f276071> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-mortality:value-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/b7368a37-a4ac-4c84-8a78-1fb9755ad849>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/1a57c444-66a7-5746-bebc-2be757ee54c8> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/2fd1ed97-3e7b-59a0-8d93-9be76f276071> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/ddd0c631-bfdd-4b0f-88de-a5eb1a0181c6> ;
-    sosa:phenomenonTime <https://example.com/observation/plant-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-mortality/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:plant-status:vocabulary>
+<urn:test:fire-protocol-shapes:invalid:plant-mortality:vocabulary>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect vocabulary" ;
@@ -165,15 +170,20 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/1a57c444-66a7-5746-bebc-2be757ee54c8> ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-status:vocabulary> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/2fd1ed97-3e7b-59a0-8d93-9be76f276071> ;
+            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:plant-mortality:vocabulary> ;
             tern:vocabulary <urn:fake:vocabulary>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/1a57c444-66a7-5746-bebc-2be757ee54c8> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/2fd1ed97-3e7b-59a0-8d93-9be76f276071> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/ddd0c631-bfdd-4b0f-88de-a5eb1a0181c6> ;
-    sosa:phenomenonTime <https://example.com/observation/plant-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:phenomenonTime <https://example.com/observation/plant-mortality/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:fire>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
 .
 
