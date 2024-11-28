@@ -5,6 +5,11 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
 <urn:test:fire-protocol-shapes:invalid:regeneration-status:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
@@ -18,15 +23,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/0163dc19-f4cb-5ded-b750-e44768878d81> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/ef12561d-a8d7-5dde-9779-6e02610f2070> ;
             sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:regeneration-status:feature-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/a1b8fc00-5d5f-40f8-a7e1-0b09d4bbba4b>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/0163dc19-f4cb-5ded-b750-e44768878d81> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/ef12561d-a8d7-5dde-9779-6e02610f2070> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/50239f29-a693-49ef-98e8-4ee11d1758ea> ;
     sosa:phenomenonTime <https://example.com/observation/regeneration-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -51,7 +56,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/50239f29-a693-49ef-98e8-4ee11d1758ea> ;
     sosa:phenomenonTime <https://example.com/observation/regeneration-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -68,7 +73,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/0163dc19-f4cb-5ded-b750-e44768878d81> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/ef12561d-a8d7-5dde-9779-6e02610f2070> ;
             sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:regeneration-status:simple-result> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/a1b8fc00-5d5f-40f8-a7e1-0b09d4bbba4b>
         ] ;
@@ -76,7 +81,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/50239f29-a693-49ef-98e8-4ee11d1758ea> ;
     sosa:phenomenonTime <https://example.com/observation/regeneration-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -93,21 +98,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/0163dc19-f4cb-5ded-b750-e44768878d81> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/ef12561d-a8d7-5dde-9779-6e02610f2070> ;
             sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:regeneration-status:site-visit> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/a1b8fc00-5d5f-40f8-a7e1-0b09d4bbba4b>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/0163dc19-f4cb-5ded-b750-e44768878d81> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/ef12561d-a8d7-5dde-9779-6e02610f2070> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/50239f29-a693-49ef-98e8-4ee11d1758ea> ;
     sosa:phenomenonTime <https://example.com/observation/regeneration-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
 .
 
 <urn:test:fire-protocol-shapes:invalid:regeneration-status:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the used procedure should be 'Fire'." ;
+    rdfs:comment "Invalid result - the used procedure should be 'Fire Severity Module'." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -117,11 +122,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/0163dc19-f4cb-5ded-b750-e44768878d81> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/ef12561d-a8d7-5dde-9779-6e02610f2070> ;
             sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:regeneration-status:used-procedure> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/a1b8fc00-5d5f-40f8-a7e1-0b09d4bbba4b>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/0163dc19-f4cb-5ded-b750-e44768878d81> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/ef12561d-a8d7-5dde-9779-6e02610f2070> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/50239f29-a693-49ef-98e8-4ee11d1758ea> ;
     sosa:phenomenonTime <https://example.com/observation/regeneration-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -140,15 +145,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/0163dc19-f4cb-5ded-b750-e44768878d81> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/ef12561d-a8d7-5dde-9779-6e02610f2070> ;
             sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:regeneration-status:value-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/a1b8fc00-5d5f-40f8-a7e1-0b09d4bbba4b>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/0163dc19-f4cb-5ded-b750-e44768878d81> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/ef12561d-a8d7-5dde-9779-6e02610f2070> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/50239f29-a693-49ef-98e8-4ee11d1758ea> ;
     sosa:phenomenonTime <https://example.com/observation/regeneration-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -165,15 +170,20 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/0163dc19-f4cb-5ded-b750-e44768878d81> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/ef12561d-a8d7-5dde-9779-6e02610f2070> ;
             sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:regeneration-status:vocabulary> ;
             tern:vocabulary <urn:fake:vocabulary>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/0163dc19-f4cb-5ded-b750-e44768878d81> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/ef12561d-a8d7-5dde-9779-6e02610f2070> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/50239f29-a693-49ef-98e8-4ee11d1758ea> ;
     sosa:phenomenonTime <https://example.com/observation/regeneration-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    sosa:usedProcedure <urn:test:procedure:fire> ;
     tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:fire>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
 .
 

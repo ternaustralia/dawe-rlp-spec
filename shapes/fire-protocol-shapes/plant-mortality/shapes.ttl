@@ -2,20 +2,24 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:fire-protocol-shapes:plant-status:feature-type>
+<urn:shapes:fire-protocol-shapes:plant-mortality:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _plant occurrence_ or _fire disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:in (
+        <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        <http://linked.data.gov.au/def/tern-cv/b293a07e-a1ff-4a4e-9af9-922057d5d742>
+    ) ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`] or http://linked.data.gov.au/def/tern-cv/b293a07e-a1ff-4a4e-9af9-922057d5d742[`fire disturbance`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
@@ -32,24 +36,24 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:fire-protocol-shapes:plant-status:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n2c64418cb8bb44fd96909be7c95de7a4b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fire-protocol-shapes:plant-status:result-value>
+<urn:shapes:fire-protocol-shapes:plant-mortality:result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Plant statuses codes controlled vocabulary." ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Plant statuses controlled vocabulary." ;
     sh:in (
-            <https://linked.data.gov.au/def/nrm/1a57c444-66a7-5746-bebc-2be757ee54c8>
-            <https://linked.data.gov.au/def/nrm/ade35b6f-6e7c-5322-9c70-ab86a94dcfa6>
-            <https://linked.data.gov.au/def/nrm/f03c971f-411a-5263-b410-ddc015bd9e8d>
+            <https://linked.data.gov.au/def/nrm/2fd1ed97-3e7b-59a0-8d93-9be76f276071>
+            <https://linked.data.gov.au/def/nrm/00e4dd62-fabe-5fb4-83b1-e2cf93e6a792>
+            <https://linked.data.gov.au/def/nrm/e237bdc2-8d42-52ba-9885-ee9ab013106d>
         ) ;
-    sh:message "The value of `rdf:value` _MUST_ exist in the Plant statuses codes controlled vocabulary." ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Plant statuses controlled vocabulary." ;
     sh:name "Result value" ;
     sh:path rdf:value ;
     sh:target [
@@ -65,7 +69,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:fire-protocol-shapes:plant-status:examples> ;
+    urnp:examples _:n2c64418cb8bb44fd96909be7c95de7a4b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -75,14 +79,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }
         """ ;
     urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fire-protocol-shapes:plant-status:simple-result>
+<urn:shapes:fire-protocol-shapes:plant-mortality:simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
@@ -106,17 +110,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:fire-protocol-shapes:plant-status:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n2c64418cb8bb44fd96909be7c95de7a4b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fire-protocol-shapes:plant-status:site-visit>
+<urn:shapes:fire-protocol-shapes:plant-mortality:site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Fire are made in the context of a site visit." ;
+    sh:description "Observations following the Fire Severity Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
     sh:minCount 1 ;
@@ -136,23 +140,23 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:fire-protocol-shapes:plant-status:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n2c64418cb8bb44fd96909be7c95de7a4b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fire-protocol-shapes:plant-status:used-procedure>
+<urn:shapes:fire-protocol-shapes:plant-mortality:used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>`.
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>`.
 
-    `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>` is the IRI for "Fire".""" ;
+    `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>` is the IRI for "Fire Severity Module".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
-    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b`." ;
-    sh:name "Used procedure" ;
-    sh:path <http://www.w3.org/ns/sosa/usedProcedure> ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -162,26 +166,27 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
         values ?property_uri {<https://linked.data.gov.au/def/nrm/ddd0c631-bfdd-4b0f-88de-a5eb1a0181c6>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:fire-protocol-shapes:plant-status:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n2c64418cb8bb44fd96909be7c95de7a4b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fire-protocol-shapes:plant-status:value-type>
+<urn:shapes:fire-protocol-shapes:plant-mortality:value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
     sh:name "Value type" ;
-    sh:path <http://www.w3.org/ns/sosa/hasResult> ;
+    sh:path sosa:hasResult ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -196,19 +201,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:fire-protocol-shapes:plant-status:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n2c64418cb8bb44fd96909be7c95de7a4b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fire-protocol-shapes:plant-status:vocabulary>
+<urn:shapes:fire-protocol-shapes:plant-mortality:vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/b7368a37-a4ac-4c84-8a78-1fb9755ad849>`.
 
-        `<https://linked.data.gov.au/def/nrm/b7368a37-a4ac-4c84-8a78-1fb9755ad849>` is the IRI for "Plant statuses codes".""" ;
+        `<https://linked.data.gov.au/def/nrm/b7368a37-a4ac-4c84-8a78-1fb9755ad849>` is the IRI for "Plant statuses".""" ;
     sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `b7368a37-a4ac-4c84-8a78-1fb9755ad849$`." ;
     sh:name "Vocabulary" ;
     sh:path tern:vocabulary ;
@@ -226,12 +231,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:fire-protocol-shapes:plant-status:examples> ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-status/shapes.ttl"^^xsd:anyURI ;
+    urnp:examples _:n2c64418cb8bb44fd96909be7c95de7a4b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fire-protocol-shapes:plant-status:examples>
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-status/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-status/valid.ttl"^^xsd:anyURI ;
+_:n2c64418cb8bb44fd96909be7c95de7a4b2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/valid.ttl"^^xsd:anyURI ;
 .
 
