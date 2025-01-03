@@ -4,7 +4,7 @@ shape=shapes/plot-description/cover-class/shapes.ttl
 data=shapes/plot-description/cover-class/invalid.ttl
 SOURCES := $(shell find shapes -name "*.ttl")
 SHAPES := $(shell find shapes -name "shapes.ttl")
-SHAPE_FOLDER := shapes/fire-protocol-shapes
+SHAPE_FOLDER := shapes/condition-protocol-shapes
 TARGET_FOLDER := shapes/vegetation-mapping-protocol-shapes
 
 pyshacl-af:

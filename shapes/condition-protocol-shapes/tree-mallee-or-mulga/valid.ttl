@@ -1,0 +1,36 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:condition-protocol-shapes:valid:tree-mallee-or-mulga>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - tree mallee or mulga" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Boolean ,
+                tern:Value ;
+            rdf:value true ;
+            sosa:isResultOf <urn:test:condition-protocol-shapes:valid:tree-mallee-or-mulga>
+        ] ;
+    sosa:hasSimpleResult true ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/5e3a10ee-ebd9-4854-9bc4-98f9fa09ddb7> ;
+    sosa:phenomenonTime <https://example.com/observation/tree-mallee-or-mulga/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:condition> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:condition>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109> ;
+.
+

@@ -1,0 +1,189 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
+<urn:test:condition-protocol-shapes:invalid:growth-stage:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
+            sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:growth-stage:feature-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094> ;
+    sosa:phenomenonTime <https://example.com/observation/growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:condition> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:condition-protocol-shapes:invalid:growth-stage:result-value>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <urn:fake:categorical:value> ;
+            sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:growth-stage:result-value> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094> ;
+    sosa:phenomenonTime <https://example.com/observation/growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:condition> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:condition-protocol-shapes:invalid:growth-stage:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
+            sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:growth-stage:simple-result> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094> ;
+    sosa:phenomenonTime <https://example.com/observation/growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:condition> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:condition-protocol-shapes:invalid:growth-stage:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
+            sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:growth-stage:site-visit> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094> ;
+    sosa:phenomenonTime <https://example.com/observation/growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:condition> ;
+.
+
+<urn:test:condition-protocol-shapes:invalid:growth-stage:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Condition Module'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
+            sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:growth-stage:used-procedure> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094> ;
+    sosa:phenomenonTime <https://example.com/observation/growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:condition-protocol-shapes:invalid:growth-stage:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
+            sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:growth-stage:value-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094> ;
+    sosa:phenomenonTime <https://example.com/observation/growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:condition> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:condition-protocol-shapes:invalid:growth-stage:vocabulary>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect vocabulary" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
+            sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:growth-stage:vocabulary> ;
+            tern:vocabulary <urn:fake:vocabulary>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094> ;
+    sosa:phenomenonTime <https://example.com/observation/growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:condition> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:condition>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109> ;
+.
+
