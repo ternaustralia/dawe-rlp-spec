@@ -5,7 +5,7 @@ data=shapes/plot-description/cover-class/invalid.ttl
 SOURCES := $(shell find shapes -name "*.ttl")
 SHAPES := $(shell find shapes -name "shapes.ttl")
 SHAPE_FOLDER := shapes/condition-protocol-shapes
-TARGET_FOLDER := shapes/condition-protocol-shapes
+TARGET_FOLDER := shapes/basal-area
 
 pyshacl-af:
 	pyshacl -s ${shape} ${data} -a
