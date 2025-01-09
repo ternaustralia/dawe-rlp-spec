@@ -142,9 +142,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:integer ;
-    sh:description "Value _MUST_ be non-negative." ;
-    sh:message "The result _MUST_ have a non-negative value." ;
-    sh:minInclusive 0 ;
+    sh:description "Value _MUST_ be greater than or equal to 7." ;
+    sh:message "The result _MUST_ be greater than or equal to 7." ;
+    sh:minInclusive 7 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target

@@ -109,9 +109,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "Result value's unit of measure _MUST_ have the value `unit:M`." ;
-    sh:hasValue unit:M ;
-    sh:message "The result _MUST_ have `unit:M` as the value for `tern:unit`." ;
+    sh:description "Result value's unit of measure _MUST_ have the value `unit:CentiM`." ;
+    sh:hasValue unit:CentiM ;
+    sh:message "The result _MUST_ have `unit:CentiM` as the value for `tern:unit`." ;
     sh:name "Unit of measure" ;
     sh:path tern:unit ;
     sh:target
@@ -172,9 +172,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:float ;
-    sh:description "Value _MUST_ be positive." ;
-    sh:message "The result _MUST_ have a positive value." ;
-    sh:minExclusive 0 ;
+    sh:description "Value _MUST_ be be greater than 15." ;
+    sh:message "The result _MUST_ be be greater than 15." ;
+    sh:minExclusive 15 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target
