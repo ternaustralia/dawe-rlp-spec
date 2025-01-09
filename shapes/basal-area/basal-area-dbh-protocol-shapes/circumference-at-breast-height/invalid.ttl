@@ -26,11 +26,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:Float ,
                 tern:Value ;
-            rdf:value 3 ;
+            rdf:value 16 ;
             sosa:isResultOf <urn:test:basal-area-dbh-protocol-shapes:invalid:circumference-at-breast-height:datatype> ;
-            tern:unit unit:M ;
+            tern:unit unit:CentiM ;
         ] ;
-    sosa:hasSimpleResult 3 ;
+    sosa:hasSimpleResult 16 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/bf1a9efa-a3f8-4fdb-a981-02a7b49a66cc> ;
     sosa:phenomenonTime <https://example.com/observation/circumference-at-breast-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -55,7 +55,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:basal-area-dbh-protocol-shapes:invalid:circumference-at-breast-height:feature-type> ;
-            tern:unit unit:M ;
+            tern:unit unit:CentiM ;
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/bf1a9efa-a3f8-4fdb-a981-02a7b49a66cc> ;
@@ -82,7 +82,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:basal-area-dbh-protocol-shapes:invalid:circumference-at-breast-height:simple-result> ;
-            tern:unit unit:M ;
+            tern:unit unit:CentiM ;
         ] ;
     sosa:hasSimpleResult "13.56"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/bf1a9efa-a3f8-4fdb-a981-02a7b49a66cc> ;
@@ -109,7 +109,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:basal-area-dbh-protocol-shapes:invalid:circumference-at-breast-height:site-visit> ;
-            tern:unit unit:M ;
+            tern:unit unit:CentiM ;
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/bf1a9efa-a3f8-4fdb-a981-02a7b49a66cc> ;
@@ -162,7 +162,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:basal-area-dbh-protocol-shapes:invalid:circumference-at-breast-height:used-procedure> ;
-            tern:unit unit:M ;
+            tern:unit unit:CentiM ;
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/bf1a9efa-a3f8-4fdb-a981-02a7b49a66cc> ;
@@ -189,7 +189,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value "-1.11"^^xsd:float ;
             sosa:isResultOf <urn:test:basal-area-dbh-protocol-shapes:invalid:circumference-at-breast-height:value-range> ;
-            tern:unit unit:M ;
+            tern:unit unit:CentiM ;
         ] ;
     sosa:hasSimpleResult "-1.11"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/bf1a9efa-a3f8-4fdb-a981-02a7b49a66cc> ;
@@ -214,7 +214,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a tern:Value ;
             rdf:value "33.81"^^xsd:float ;
             sosa:isResultOf <urn:test:basal-area-dbh-protocol-shapes:invalid:circumference-at-breast-height:value-type> ;
-            tern:unit unit:M ;
+            tern:unit unit:CentiM ;
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/bf1a9efa-a3f8-4fdb-a981-02a7b49a66cc> ;
