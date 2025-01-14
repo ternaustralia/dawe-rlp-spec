@@ -1,0 +1,37 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:procedure:recruitment-survivorship>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/f470e27d-20ed-46dc-b64a-d67b39a9dffc> ;
+.
+
+<urn:test:recruitment-survivorship-protocol-shapes:valid:growth-stage>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - growth stage" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
+            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:valid:growth-stage> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/fcfda2f7-84f0-4c26-9f80-c051d129a094> ;
+    sosa:phenomenonTime <https://example.com/observation/growth-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:recruitment-survivorship> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

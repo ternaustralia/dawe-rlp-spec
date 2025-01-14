@@ -1,0 +1,37 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:procedure:recruitment-survivorship>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/f470e27d-20ed-46dc-b64a-d67b39a9dffc> ;
+.
+
+<urn:test:recruitment-survivorship-protocol-shapes:valid:human-induced-damage>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - human induced damage" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb> ;
+            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:valid:human-induced-damage> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/ffe13f4f-3613-430f-a2b5-a46fcb4662c1>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/46dd6bb1-dd92-5b49-8f85-7d650eeab8f8> ;
+    sosa:phenomenonTime <https://example.com/observation/human-induced-damage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:recruitment-survivorship> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
