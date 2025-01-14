@@ -2,6 +2,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
@@ -11,7 +12,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:string ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
@@ -31,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:examples> ;
+    urnp:examples _:n4c032a6c1d6b46ffa0fdc57bcd7b1aa5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -39,7 +40,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description "TERN's ecologists have determined the feature type is _plant individual_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270> ;
@@ -60,7 +61,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:examples> ;
+    urnp:examples _:n4c032a6c1d6b46ffa0fdc57bcd7b1aa5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -68,7 +69,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         sh:NodeShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
@@ -92,7 +93,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:examples> ;
+    urnp:examples _:n4c032a6c1d6b46ffa0fdc57bcd7b1aa5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -100,9 +101,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Recruitment module -Survivorship protocol are made in the context of a site visit." ;
+    sh:description "Observations following the Recruitment Module - Survivorship Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
     sh:minCount 1 ;
@@ -122,7 +123,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:examples> ;
+    urnp:examples _:n4c032a6c1d6b46ffa0fdc57bcd7b1aa5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -130,15 +131,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description """IRI of procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/f470e27d-20ed-46dc-b64a-d67b39a9dffc>`.
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/f470e27d-20ed-46dc-b64a-d67b39a9dffc>`.
 
-    `<https://linked.data.gov.au/def/nrm/f470e27d-20ed-46dc-b64a-d67b39a9dffc>` is the IRI for "Recruitment module -Survivorship protocol".""" ;
+    `<https://linked.data.gov.au/def/nrm/f470e27d-20ed-46dc-b64a-d67b39a9dffc>` is the IRI for "Recruitment Module - Survivorship Protocol".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/f470e27d-20ed-46dc-b64a-d67b39a9dffc> ;
-    sh:message "The observation's `sosa:usedProcedure` _MUST_ have the value `https://linked.data.gov.au/def/nrm/f470e27d-20ed-46dc-b64a-d67b39a9dffc`." ;
-    sh:name "Used procedure" ;
-    sh:path <http://www.w3.org/ns/sosa/usedProcedure> ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/f470e27d-20ed-46dc-b64a-d67b39a9dffc`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -148,12 +149,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
     select ?this {
         values ?property_uri {<https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
     }
     """
         ] ;
-    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:examples> ;
+    urnp:examples _:n4c032a6c1d6b46ffa0fdc57bcd7b1aa5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -161,13 +163,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
-    dcterms:source "TERN Ecosystem Surveillance Ecological Monitoring Protocols" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:class tern:Text ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:Text`." ;
     sh:name "Value type" ;
-    sh:path <http://www.w3.org/ns/sosa/hasResult> ;
+    sh:path sosa:hasResult ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
@@ -182,11 +184,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples <urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:examples> ;
+    urnp:examples _:n4c032a6c1d6b46ffa0fdc57bcd7b1aa5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:recruitment-survivorship-protocol-shapes:field-species-name:examples>
+_:n4c032a6c1d6b46ffa0fdc57bcd7b1aa5b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
 .
