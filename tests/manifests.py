@@ -1337,7 +1337,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl",
         valid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/valid.ttl",
         invalid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="plot-description-enhanced-protocol-shapes-land-use-history",

@@ -23,11 +23,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Conservation-and-natural-environments> ;
-            sosa:isResultOf <urn:test:vegetation-mapping-protocol-shapes:invalid:land-use-history:feature-type> ;
-            # tern:vocabulary <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Australian-Land-Use-and-Management-Classification>
+            rdf:value <https://linked.data.gov.au/def/alum/1> ;
+            sosa:isResultOf <urn:test:vegetation-mapping-protocol-shapes:invalid:land-use-history:feature-type>
         ] ;
-    sosa:hasSimpleResult <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Conservation-and-natural-environments> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/alum/1> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/372ec5c5-79da-44a9-a56e-dd9ab311da06> ;
     sosa:phenomenonTime <https://example.com/observation/land-use-history/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -48,8 +47,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <urn:fake:categorical:value> ;
-            sosa:isResultOf <urn:test:vegetation-mapping-protocol-shapes:invalid:land-use-history:result-value> ;
-            # tern:vocabulary <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Australian-Land-Use-and-Management-Classification>
+            sosa:isResultOf <urn:test:vegetation-mapping-protocol-shapes:invalid:land-use-history:result-value>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/372ec5c5-79da-44a9-a56e-dd9ab311da06> ;
@@ -71,9 +69,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Conservation-and-natural-environments> ;
-            sosa:isResultOf <urn:test:vegetation-mapping-protocol-shapes:invalid:land-use-history:simple-result> ;
-            # tern:vocabulary <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Australian-Land-Use-and-Management-Classification>
+            rdf:value <https://linked.data.gov.au/def/alum/1> ;
+            sosa:isResultOf <urn:test:vegetation-mapping-protocol-shapes:invalid:land-use-history:simple-result>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/372ec5c5-79da-44a9-a56e-dd9ab311da06> ;
@@ -95,11 +92,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Conservation-and-natural-environments> ;
-            sosa:isResultOf <urn:test:vegetation-mapping-protocol-shapes:invalid:land-use-history:used-procedure> ;
-            # tern:vocabulary <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Australian-Land-Use-and-Management-Classification>
+            rdf:value <https://linked.data.gov.au/def/alum/1> ;
+            sosa:isResultOf <urn:test:vegetation-mapping-protocol-shapes:invalid:land-use-history:used-procedure>
         ] ;
-    sosa:hasSimpleResult <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Conservation-and-natural-environments> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/alum/1> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/372ec5c5-79da-44a9-a56e-dd9ab311da06> ;
     sosa:phenomenonTime <https://example.com/observation/land-use-history/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -117,11 +113,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a tern:Value ;
-            rdf:value <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Conservation-and-natural-environments> ;
-            sosa:isResultOf <urn:test:vegetation-mapping-protocol-shapes:invalid:land-use-history:value-type> ;
-            # tern:vocabulary <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Australian-Land-Use-and-Management-Classification>
+            rdf:value <https://linked.data.gov.au/def/alum/1> ;
+            sosa:isResultOf <urn:test:vegetation-mapping-protocol-shapes:invalid:land-use-history:value-type>
         ] ;
-    sosa:hasSimpleResult <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Conservation-and-natural-environments> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/alum/1> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/372ec5c5-79da-44a9-a56e-dd9ab311da06> ;
     sosa:phenomenonTime <https://example.com/observation/land-use-history/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -141,11 +136,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Conservation-and-natural-environments> ;
+            rdf:value <https://linked.data.gov.au/def/alum/1> ;
             sosa:isResultOf <urn:test:vegetation-mapping-protocol-shapes:invalid:land-use-history:vocabulary> ;
             # tern:vocabulary <urn:fake:vocabulary>
         ] ;
-    sosa:hasSimpleResult <http://www.neii.gov.au/def/voc/ACLUMP/australian-land-use-and-management-classification/Conservation-and-natural-environments> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/alum/1> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/372ec5c5-79da-44a9-a56e-dd9ab311da06> ;
     sosa:phenomenonTime <https://example.com/observation/land-use-history/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
