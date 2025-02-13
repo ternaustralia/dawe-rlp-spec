@@ -46,10 +46,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     reg:status reg:statusSubmitted ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Female teat conditions controlled vocabulary." ;
     sh:in (
-            <https://linked.data.gov.au/def/nrm/36024777-d9d8-5ec9-9ee2-c91af3a56279>
-            <https://linked.data.gov.au/def/nrm/f6b0f6d8-16d8-5dd7-b1b7-66b0c020b96f>
             <https://linked.data.gov.au/def/nrm/b86a0b47-9a48-5371-a0b9-8161299395ce>
+            <https://linked.data.gov.au/def/nrm/c5b5edc7-f906-45c6-a4f5-f6c0ff1a70f2>
+            <https://linked.data.gov.au/def/nrm/f6b0f6d8-16d8-5dd7-b1b7-66b0c020b96f>
             <https://linked.data.gov.au/def/nrm/c05aeb0d-4186-527f-bed1-0273e2b104eb>
+            <https://linked.data.gov.au/def/nrm/36024777-d9d8-5ec9-9ee2-c91af3a56279>
         ) ;
     sh:message "The value of `rdf:value` _MUST_ exist in the Female teat conditions controlled vocabulary." ;
     sh:name "Result value" ;
