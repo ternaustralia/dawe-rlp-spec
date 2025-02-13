@@ -46,17 +46,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     reg:status reg:statusSubmitted ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the plant habit types controlled vocabulary." ;
     sh:in (
-            <https://linked.data.gov.au/def/nrm/d5bd18f1-8ed8-4b4e-a313-e96535598fc9>
-            <https://linked.data.gov.au/def/nrm/cf37a9ea-25f7-4e7e-b29e-4248074ad72b>
             <https://linked.data.gov.au/def/nrm/5459d7c1-b29f-4616-9572-f2f323520cfc>
-            <https://linked.data.gov.au/def/nrm/62eb2c61-92b4-4861-a3e6-2c876ba43073>
-            <https://linked.data.gov.au/def/nrm/786f935f-0b7d-4a72-b582-5bac740a14ac>
-            <https://linked.data.gov.au/def/nrm/e3bb5cd7-f56c-41bc-8a4f-e6627c37826e>
-            <https://linked.data.gov.au/def/nrm/8bf40f11-ec32-4119-a183-113fa04a4363>
             <https://linked.data.gov.au/def/nrm/607b0b06-caa2-4882-86bd-d4da70b3b63c>
-            <https://linked.data.gov.au/def/nrm/df842727-5c00-4758-993e-3bb1558afa43>
+            <https://linked.data.gov.au/def/nrm/8b22006e-b54f-4522-9f8c-1ebe4588c1b7>
+            <https://linked.data.gov.au/def/nrm/8bf40f11-ec32-4119-a183-113fa04a4363>
             <https://linked.data.gov.au/def/nrm/cb6d4feb-aaef-42b7-b9d2-7edb9b5871bd>
+            <https://linked.data.gov.au/def/nrm/5c1aede9-3513-49ae-a6d1-d8e82db30e89>
+            <https://linked.data.gov.au/def/nrm/62eb2c61-92b4-4861-a3e6-2c876ba43073>
+            <https://linked.data.gov.au/def/nrm/cf37a9ea-25f7-4e7e-b29e-4248074ad72b>
+            <https://linked.data.gov.au/def/nrm/786f935f-0b7d-4a72-b582-5bac740a14ac>
             <https://linked.data.gov.au/def/nrm/2d997343-4be2-411a-944a-7ef956e696a2>
+            <https://linked.data.gov.au/def/nrm/df842727-5c00-4758-993e-3bb1558afa43>
+            <https://linked.data.gov.au/def/nrm/d5bd18f1-8ed8-4b4e-a313-e96535598fc9>
+            <https://linked.data.gov.au/def/nrm/e3bb5cd7-f56c-41bc-8a4f-e6627c37826e>
         ) ;
     sh:message "The value of `rdf:value` _MUST_ exist in the plant habit types controlled vocabulary." ;
     sh:name "Result value" ;
