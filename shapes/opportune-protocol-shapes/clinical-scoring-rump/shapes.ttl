@@ -1,0 +1,214 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:opportune-protocol-shapes:clinical-scoring-rump:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _animal individual_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7[`animal individual`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/13d9b6a3-f600-50ee-a8a7-f31b5b27abff>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:nb1388a1493af4063a974a81059b45edbb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportune-protocol-shapes/clinical-scoring-rump/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:opportune-protocol-shapes:clinical-scoring-rump:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Clinical scoring - rump controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/cfa641fb-6663-5037-b2a2-ec00cf28c8dd>
+            <https://linked.data.gov.au/def/nrm/2c84a9de-1c8a-50fd-9ab3-899aa63acf21>
+            <https://linked.data.gov.au/def/nrm/5cd17d09-1a3f-55ac-b77d-a8e554e9f043>
+            <https://linked.data.gov.au/def/nrm/492e37f6-4250-53a6-8f7e-c8bbab88f2b6>
+            <https://linked.data.gov.au/def/nrm/dbb530ad-b182-5144-b776-e0b2f2c0d13a>
+            <https://linked.data.gov.au/def/nrm/e0fabdaf-79d5-5ae4-ae76-da768c1f8662>
+            <https://linked.data.gov.au/def/nrm/fe0e3d75-0802-5714-9980-8988d5c63b35>
+            <https://linked.data.gov.au/def/nrm/e9a009be-7096-5dc7-94fa-d7bc57428bb6>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Clinical scoring - rump controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/13d9b6a3-f600-50ee-a8a7-f31b5b27abff> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:nb1388a1493af4063a974a81059b45edbb2 ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'8799d474-09eb-5112-aa9d-87710cd1661c'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportune-protocol-shapes/clinical-scoring-rump/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:opportune-protocol-shapes:clinical-scoring-rump:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/13d9b6a3-f600-50ee-a8a7-f31b5b27abff>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:nb1388a1493af4063a974a81059b45edbb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportune-protocol-shapes/clinical-scoring-rump/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:opportune-protocol-shapes:clinical-scoring-rump:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6>`.
+
+    `<https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6>` is the IRI for "Opportune Module".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6> ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/6fd39a33-9c4f-469e-80a5-e76b5d5f04a6`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/13d9b6a3-f600-50ee-a8a7-f31b5b27abff>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:nb1388a1493af4063a974a81059b45edbb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportune-protocol-shapes/clinical-scoring-rump/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:opportune-protocol-shapes:clinical-scoring-rump:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/13d9b6a3-f600-50ee-a8a7-f31b5b27abff>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:nb1388a1493af4063a974a81059b45edbb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportune-protocol-shapes/clinical-scoring-rump/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:opportune-protocol-shapes:clinical-scoring-rump:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/8799d474-09eb-5112-aa9d-87710cd1661c>`.
+
+        `<https://linked.data.gov.au/def/nrm/8799d474-09eb-5112-aa9d-87710cd1661c>` is the IRI for "Clinical scoring - rump".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `8799d474-09eb-5112-aa9d-87710cd1661c$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "8799d474-09eb-5112-aa9d-87710cd1661c$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/13d9b6a3-f600-50ee-a8a7-f31b5b27abff> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:nb1388a1493af4063a974a81059b45edbb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportune-protocol-shapes/clinical-scoring-rump/shapes.ttl"^^xsd:anyURI ;
+.
+
+_:nb1388a1493af4063a974a81059b45edbb2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportune-protocol-shapes/clinical-scoring-rump/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportune-protocol-shapes/clinical-scoring-rump/valid.ttl"^^xsd:anyURI ;
+.
+
