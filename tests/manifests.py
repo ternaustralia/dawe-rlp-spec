@@ -924,7 +924,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/shapes.ttl",
         valid_data_path="shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/valid.ttl",
         invalid_data_path="shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/invalid.ttl",
-        expected_failures=5,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="fauna-ground-counts-transects-protocol-shapes-rainfall-type",
@@ -973,6 +973,13 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/shapes.ttl",
         valid_data_path="shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/valid.ttl",
         invalid_data_path="shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/invalid.ttl",
+        expected_failures=6,
+    ).astuple(),
+    TestCaseItem(
+        name="fauna-ground-counts-vantage-point-protocol-shapes-field-species-name",
+        shapes_path="shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/field-species-name/shapes.ttl",
+        valid_data_path="shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/field-species-name/valid.ttl",
+        invalid_data_path="shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/field-species-name/invalid.ttl",
         expected_failures=6,
     ).astuple(),
     TestCaseItem(
