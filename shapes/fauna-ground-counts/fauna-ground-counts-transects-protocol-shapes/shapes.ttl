@@ -15,9 +15,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _animal individual_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7[`animal individual`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
@@ -34,7 +34,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb2 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/Cat-coat-colour/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -70,7 +70,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb2 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -111,7 +111,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb2 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/Cat-coat-colour/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -143,7 +143,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb2 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/Cat-coat-colour/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -172,7 +172,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb2 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/Cat-coat-colour/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -202,7 +202,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb2 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/Cat-coat-colour/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -231,7 +231,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb15 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b15 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -294,7 +294,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb15 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b15 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -335,7 +335,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb15 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b15 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -367,7 +367,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb15 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b15 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -396,7 +396,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb15 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b15 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -426,7 +426,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb15 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b15 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -455,7 +455,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb55 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b55 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -487,7 +487,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb55 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b55 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -515,7 +515,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb55 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b55 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -547,7 +547,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb55 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b55 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -577,7 +577,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb55 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b55 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -606,7 +606,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb55 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b55 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -635,7 +635,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb62 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b62 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -667,7 +667,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb62 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b62 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -699,7 +699,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb62 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b62 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -728,7 +728,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb62 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b62 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -757,7 +757,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb62 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b62 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -786,7 +786,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb68 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b68 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -821,7 +821,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb68 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b68 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -862,7 +862,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb68 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b68 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -894,7 +894,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb68 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b68 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -923,7 +923,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb68 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b68 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -953,7 +953,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb68 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b68 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -982,7 +982,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb80 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b80 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1023,7 +1023,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb80 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b80 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1064,7 +1064,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb80 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b80 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1096,7 +1096,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb80 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b80 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1125,7 +1125,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb80 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b80 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1155,36 +1155,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb80 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b80 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:fauna-ground-counts-transects-protocol-shapes:field-species-name:datatype>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:datatype xsd:string ;
-    sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
-    sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
-    sh:name "Datatype" ;
-    sh:path rdf:value ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-        PREFIX sosa: <http://www.w3.org/ns/sosa/>
-        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        select ?this  {
-            ?observation a tern:Observation ;
-                sosa:observedProperty 
-        <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
-                sosa:hasResult ?this .
-        }"""
-        ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb97 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
 <urn:shapes:fauna-ground-counts-transects-protocol-shapes:field-species-name:feature-type>
@@ -1212,8 +1184,66 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb97 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b98 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:fauna-ground-counts-transects-protocol-shapes:field-species-name:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Pest species types controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/3a86540a-7f40-578a-8431-6bcacb0194d7>
+            <https://linked.data.gov.au/def/nrm/19f2da82-66a4-5b46-96b1-4dc2e2b0c9e1>
+            <https://linked.data.gov.au/def/nrm/6d0b66b3-16f6-552a-b38f-88dc9bbf7abc>
+            <https://linked.data.gov.au/def/nrm/b46bcca8-8c07-5ad3-89e5-d5db8e7bdc3d>
+            <https://linked.data.gov.au/def/nrm/69369a4b-1608-58c9-b37c-00758d401bf4>
+            <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb>
+            <https://linked.data.gov.au/def/nrm/1f180410-e77a-47ff-975c-e0d3ffcb7863>
+            <https://linked.data.gov.au/def/nrm/d4297430-c86d-58c4-9031-42cbdb50d199>
+            <https://linked.data.gov.au/def/nrm/f6b0f6d8-16d8-5dd7-b1b7-66b0c020b96f>
+            <https://linked.data.gov.au/def/nrm/9a292b27-007c-5e1a-a7e2-d8536ea56c2b>
+            <https://linked.data.gov.au/def/nrm/05c18e55-7eda-5bcd-8099-5c32fc3d449d>
+            <https://linked.data.gov.au/def/nrm/45d65bca-5fba-45ef-86fe-53a5f50144a2>
+            <https://linked.data.gov.au/def/nrm/05ffeed3-fd7b-5ec8-864f-6a6632502373>
+            <https://linked.data.gov.au/def/nrm/bc1505eb-a36e-5050-a1a4-989479b26d6a>
+            <https://linked.data.gov.au/def/nrm/ffdac5da-c5a1-54e9-8e71-71c0503f4491>
+            <https://linked.data.gov.au/def/nrm/58993c3a-9237-5112-aec9-0e6bf776b242>
+            <https://linked.data.gov.au/def/nrm/f0e22f49-83ff-568e-9522-5f6be4bbe614>
+            <https://linked.data.gov.au/def/nrm/b5511180-5573-58fb-970d-cd62447ace2e>
+            <https://linked.data.gov.au/def/nrm/e9e21ffa-d900-5352-9fd4-b9111405ff80>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Pest species types controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b119 ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'ff157253-6923-5816-ac05-312dc32cd903'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
 <urn:shapes:fauna-ground-counts-transects-protocol-shapes:field-species-name:simple-result>
@@ -1244,7 +1274,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb97 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b98 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1276,7 +1306,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb97 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b98 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1286,9 +1316,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:class tern:Text ;
-    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
-    sh:message "The result _MUST_ be an instance of `tern:Text`." ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
     sh:target [
@@ -1305,8 +1335,38 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb97 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b98 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:fauna-ground-counts-transects-protocol-shapes:field-species-name:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/ff157253-6923-5816-ac05-312dc32cd903>`.
+
+        `<https://linked.data.gov.au/def/nrm/ff157253-6923-5816-ac05-312dc32cd903>` is the IRI for "Pest species types".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `ff157253-6923-5816-ac05-312dc32cd903$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "ff157253-6923-5816-ac05-312dc32cd903$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b119 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
 <urn:shapes:fauna-ground-counts-transects-protocol-shapes:moon-phase:feature-type>
@@ -1334,7 +1394,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb103 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b125 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1368,7 +1428,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb103 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b125 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1409,7 +1469,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb103 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b125 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1441,7 +1501,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb103 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b125 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1470,7 +1530,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb103 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b125 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1500,7 +1560,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb103 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b125 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1529,7 +1589,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb114 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b136 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1565,7 +1625,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb114 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b136 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1606,7 +1666,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb114 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b136 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1638,7 +1698,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb114 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b136 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1667,7 +1727,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb114 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b136 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1697,7 +1757,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb114 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b136 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1726,7 +1786,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb127 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b149 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1764,7 +1824,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb127 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b149 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1805,7 +1865,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb127 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b149 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1837,7 +1897,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb127 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b149 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1866,7 +1926,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb127 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b149 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1896,7 +1956,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb127 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b149 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1925,7 +1985,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb142 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b164 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1961,7 +2021,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb142 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b164 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2002,7 +2062,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb142 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b164 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2034,7 +2094,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb142 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b164 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2063,7 +2123,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb142 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b164 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2093,7 +2153,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb142 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b164 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2122,7 +2182,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb155 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b177 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2162,7 +2222,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb155 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b177 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2203,7 +2263,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb155 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b177 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2235,7 +2295,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb155 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b177 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2264,7 +2324,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb155 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b177 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2294,66 +2354,66 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb155 ;
+    urnp:examples _:nd624396946db4325bff0daf16ee0fce5b177 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb62
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/valid.ttl"^^xsd:anyURI ;
-.
-
-_:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb97
+_:nd624396946db4325bff0daf16ee0fce5b98
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb103
+_:nd624396946db4325bff0daf16ee0fce5b62
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/animal-count/valid.ttl"^^xsd:anyURI ;
+.
+
+_:nd624396946db4325bff0daf16ee0fce5b125
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/moon-phase/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/moon-phase/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb114
+_:nd624396946db4325bff0daf16ee0fce5b136
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/rainfall-duration/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/rainfall-duration/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb127
+_:nd624396946db4325bff0daf16ee0fce5b149
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/rainfall-type/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/rainfall-type/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb142
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/sex/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/sex/valid.ttl"^^xsd:anyURI ;
-.
-
-_:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb15
+_:nd624396946db4325bff0daf16ee0fce5b15
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/NVIS-major-vegetation-group/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/NVIS-major-vegetation-group/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb155
+_:nd624396946db4325bff0daf16ee0fce5b164
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/sex/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/sex/valid.ttl"^^xsd:anyURI ;
+.
+
+_:nd624396946db4325bff0daf16ee0fce5b177
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/wind-description/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/wind-description/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb2
+_:nd624396946db4325bff0daf16ee0fce5b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/Cat-coat-colour/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/Cat-coat-colour/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb55
+_:nd624396946db4325bff0daf16ee0fce5b55
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/air-temperature/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/air-temperature/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb68
+_:nd624396946db4325bff0daf16ee0fce5b68
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/cloud-cover/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/cloud-cover/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nbf27ddf4191a4bbd9b2b4e6fd1e846bfb80
+_:nd624396946db4325bff0daf16ee0fce5b80
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/fauna-growth-class/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/fauna-growth-class/valid.ttl"^^xsd:anyURI ;
 .
