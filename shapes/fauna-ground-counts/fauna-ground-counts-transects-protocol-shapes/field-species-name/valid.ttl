@@ -16,12 +16,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Text ,
+                tern:IRI ,
                 tern:Value ;
-            rdf:value "Cat"^^xsd:string ;
+            rdf:value <https://linked.data.gov.au/def/nrm/3a86540a-7f40-578a-8431-6bcacb0194d7> ;
             sosa:isResultOf <urn:test:fauna-ground-counts-transects-protocol-shapes:valid:field-species-name>
         ] ;
-    sosa:hasSimpleResult "Cat"^^xsd:string ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/3a86540a-7f40-578a-8431-6bcacb0194d7> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
     sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;

@@ -10,7 +10,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:methodType <urn:fake:method> ;
 .
 
-<urn:test:fauna-ground-counts-transects-protocol-shapes:invalid:field-species-name:feature-type>
+<urn:test:fauna-ground-counts-vantage-point-protocol-shapes:invalid:field-species-name:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect feature type." ;
@@ -24,16 +24,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/3a86540a-7f40-578a-8431-6bcacb0194d7> ;
-            sosa:isResultOf <urn:test:fauna-ground-counts-transects-protocol-shapes:invalid:field-species-name:feature-type>
+            sosa:isResultOf <urn:test:fauna-ground-counts-vantage-point-protocol-shapes:invalid:field-species-name:feature-type>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/3a86540a-7f40-578a-8431-6bcacb0194d7> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
     sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-transects> ;
+    sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-vantage-point> ;
 .
 
-<urn:test:fauna-ground-counts-transects-protocol-shapes:invalid:field-species-name:result-value>
+<urn:test:fauna-ground-counts-vantage-point-protocol-shapes:invalid:field-species-name:result-value>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
@@ -47,17 +47,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <urn:fake:categorical:value> ;
-            sosa:isResultOf <urn:test:fauna-ground-counts-transects-protocol-shapes:invalid:field-species-name:result-value> ;
+            sosa:isResultOf <urn:test:fauna-ground-counts-vantage-point-protocol-shapes:invalid:field-species-name:result-value> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/ff157253-6923-5816-ac05-312dc32cd903>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
     sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-transects> ;
+    sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-vantage-point> ;
 .
 
-<urn:test:fauna-ground-counts-transects-protocol-shapes:invalid:field-species-name:simple-result>
+<urn:test:fauna-ground-counts-vantage-point-protocol-shapes:invalid:field-species-name:simple-result>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
@@ -71,19 +71,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/3a86540a-7f40-578a-8431-6bcacb0194d7> ;
-            sosa:isResultOf <urn:test:fauna-ground-counts-transects-protocol-shapes:invalid:field-species-name:simple-result>
+            sosa:isResultOf <urn:test:fauna-ground-counts-vantage-point-protocol-shapes:invalid:field-species-name:simple-result>
         ] ;
     sosa:hasSimpleResult <urn:fake:value> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
     sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-transects> ;
+    sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-vantage-point> ;
 .
 
-<urn:test:fauna-ground-counts-transects-protocol-shapes:invalid:field-species-name:used-procedure>
+<urn:test:fauna-ground-counts-vantage-point-protocol-shapes:invalid:field-species-name:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the used procedure should be 'Transects Protocol'." ;
+    rdfs:comment "Invalid result - the used procedure should be 'Vantage Point Protocol'." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -94,7 +94,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/3a86540a-7f40-578a-8431-6bcacb0194d7> ;
-            sosa:isResultOf <urn:test:fauna-ground-counts-transects-protocol-shapes:invalid:field-species-name:used-procedure>
+            sosa:isResultOf <urn:test:fauna-ground-counts-vantage-point-protocol-shapes:invalid:field-species-name:used-procedure>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/3a86540a-7f40-578a-8431-6bcacb0194d7> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
@@ -103,7 +103,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <urn:fake:procedure> ;
 .
 
-<urn:test:fauna-ground-counts-transects-protocol-shapes:invalid:field-species-name:value-type>
+<urn:test:fauna-ground-counts-vantage-point-protocol-shapes:invalid:field-species-name:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
@@ -115,16 +115,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasResult [
             a tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/3a86540a-7f40-578a-8431-6bcacb0194d7> ;
-            sosa:isResultOf <urn:test:fauna-ground-counts-transects-protocol-shapes:invalid:field-species-name:value-type>
+            sosa:isResultOf <urn:test:fauna-ground-counts-vantage-point-protocol-shapes:invalid:field-species-name:value-type>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/3a86540a-7f40-578a-8431-6bcacb0194d7> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
     sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-transects> ;
+    sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-vantage-point> ;
 .
 
-<urn:test:fauna-ground-counts-transects-protocol-shapes:invalid:field-species-name:vocabulary>
+<urn:test:fauna-ground-counts-vantage-point-protocol-shapes:invalid:field-species-name:vocabulary>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
     rdfs:comment "Invalid result - incorrect vocabulary" ;
@@ -138,18 +138,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:IRI ,
                 tern:Value ;
             rdf:value <https://linked.data.gov.au/def/nrm/3a86540a-7f40-578a-8431-6bcacb0194d7> ;
-            sosa:isResultOf <urn:test:fauna-ground-counts-transects-protocol-shapes:invalid:field-species-name:vocabulary> ;
+            sosa:isResultOf <urn:test:fauna-ground-counts-vantage-point-protocol-shapes:invalid:field-species-name:vocabulary> ;
             tern:vocabulary <urn:fake:vocabulary>
         ] ;
     sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/3a86540a-7f40-578a-8431-6bcacb0194d7> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
     sosa:phenomenonTime <https://example.com/observation/field-species-name/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-transects> ;
+    sosa:usedProcedure <urn:test:procedure:fauna-ground-counts-vantage-point> ;
 .
 
-<urn:test:procedure:fauna-ground-counts-transects>
+<urn:test:procedure:fauna-ground-counts-vantage-point>
     a tern:Procedure ;
-    tern:methodType <https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f> ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c> ;
 .
 
