@@ -1,0 +1,36 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:procedure:soil-standard-sub-pit-and-metagenomics>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/5d12a157-61a0-42e6-b23d-895018974c67> ;
+.
+
+<urn:test:soil-standard-sub-pit-and-metagenomics-protocol-shapes:valid:soil-pit-comments>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - soil pit comments" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "Pit exposed a distinct A-horizon with high organic content, transitioning to a compact clay layer at 30 cm depth."^^xsd:string ;
+            sosa:isResultOf <urn:test:soil-standard-sub-pit-and-metagenomics-protocol-shapes:valid:soil-pit-comments>
+        ] ;
+    sosa:hasSimpleResult "Pit exposed a distinct A-horizon with high organic content, transitioning to a compact clay layer at 30 cm depth."^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/5e49d84f-eb74-420a-9bee-afedcae264ea> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-pit-comments/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-standard-sub-pit-and-metagenomics> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

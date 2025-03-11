@@ -1,0 +1,38 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:procedure:soil-soil-bulk-density>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/d9e6739a-c2dd-4619-be43-1251449a6436> ;
+.
+
+<urn:test:soil-soil-bulk-density-protocol-shapes:valid:fine-earth-bulk-density>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - fine earth bulk density" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/06461021-a6c2-4175-9651-23653c2b9116>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Float ,
+                tern:Value ;
+            rdf:value "1.51"^^xsd:float ;
+            sosa:isResultOf <urn:test:soil-soil-bulk-density-protocol-shapes:valid:fine-earth-bulk-density> ;
+            tern:unit unit:GM-PER-CentiM3
+        ] ;
+    sosa:hasSimpleResult "1.51"^^xsd:float ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/460784be-8ad5-4c32-b171-93d69984c0b9> ;
+    sosa:phenomenonTime <https://example.com/observation/fine-earth-bulk-density/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-soil-bulk-density> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
