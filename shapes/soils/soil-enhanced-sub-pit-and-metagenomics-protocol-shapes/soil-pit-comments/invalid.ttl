@@ -1,0 +1,158 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
+<urn:test:soil-enhanced-sub-pit-and-metagenomics-protocol-shapes:invalid:soil-pit-comments:datatype>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:string`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value 1 ;
+            sosa:isResultOf <urn:test:soil-enhanced-sub-pit-and-metagenomics-protocol-shapes:invalid:soil-pit-comments:datatype>
+        ] ;
+    sosa:hasSimpleResult 1 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/5e49d84f-eb74-420a-9bee-afedcae264ea> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-pit-comments/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-enhanced-sub-pit-and-metagenomics> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-enhanced-sub-pit-and-metagenomics-protocol-shapes:invalid:soil-pit-comments:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "Pit exposed a distinct A-horizon with high organic content, transitioning to a compact clay layer at 30 cm depth."^^xsd:string ;
+            sosa:isResultOf <urn:test:soil-enhanced-sub-pit-and-metagenomics-protocol-shapes:invalid:soil-pit-comments:feature-type>
+        ] ;
+    sosa:hasSimpleResult "Pit exposed a distinct A-horizon with high organic content, transitioning to a compact clay layer at 30 cm depth."^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/5e49d84f-eb74-420a-9bee-afedcae264ea> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-pit-comments/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-enhanced-sub-pit-and-metagenomics> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-enhanced-sub-pit-and-metagenomics-protocol-shapes:invalid:soil-pit-comments:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "Pit exposed a distinct A-horizon with high organic content, transitioning to a compact clay layer at 30 cm depth."^^xsd:string ;
+            sosa:isResultOf <urn:test:soil-enhanced-sub-pit-and-metagenomics-protocol-shapes:invalid:soil-pit-comments:simple-result>
+        ] ;
+    sosa:hasSimpleResult "Pit exposed a distinct A-horizon with high organic content, transitioning to a compact clay layer at 30 cm depth. different"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/5e49d84f-eb74-420a-9bee-afedcae264ea> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-pit-comments/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-enhanced-sub-pit-and-metagenomics> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-enhanced-sub-pit-and-metagenomics-protocol-shapes:invalid:soil-pit-comments:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "Pit exposed a distinct A-horizon with high organic content, transitioning to a compact clay layer at 30 cm depth."^^xsd:string ;
+            sosa:isResultOf <urn:test:soil-enhanced-sub-pit-and-metagenomics-protocol-shapes:invalid:soil-pit-comments:site-visit>
+        ] ;
+    sosa:hasSimpleResult "Pit exposed a distinct A-horizon with high organic content, transitioning to a compact clay layer at 30 cm depth."^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/5e49d84f-eb74-420a-9bee-afedcae264ea> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-pit-comments/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-enhanced-sub-pit-and-metagenomics> ;
+.
+
+<urn:test:soil-enhanced-sub-pit-and-metagenomics-protocol-shapes:invalid:soil-pit-comments:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Enhanced Soil Sub-Pit and Soil Metagenomics protocol'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "Pit exposed a distinct A-horizon with high organic content, transitioning to a compact clay layer at 30 cm depth."^^xsd:string ;
+            sosa:isResultOf <urn:test:soil-enhanced-sub-pit-and-metagenomics-protocol-shapes:invalid:soil-pit-comments:used-procedure>
+        ] ;
+    sosa:hasSimpleResult "Pit exposed a distinct A-horizon with high organic content, transitioning to a compact clay layer at 30 cm depth."^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/5e49d84f-eb74-420a-9bee-afedcae264ea> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-pit-comments/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-enhanced-sub-pit-and-metagenomics-protocol-shapes:invalid:soil-pit-comments:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:Text`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value "Pit exposed a distinct A-horizon with high organic content, transitioning to a compact clay layer at 30 cm depth."^^xsd:string ;
+            sosa:isResultOf <urn:test:soil-enhanced-sub-pit-and-metagenomics-protocol-shapes:invalid:soil-pit-comments:value-type>
+        ] ;
+    sosa:hasSimpleResult "Pit exposed a distinct A-horizon with high organic content, transitioning to a compact clay layer at 30 cm depth."^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/5e49d84f-eb74-420a-9bee-afedcae264ea> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-pit-comments/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-enhanced-sub-pit-and-metagenomics> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:soil-enhanced-sub-pit-and-metagenomics>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/9a1ab016-60d6-4876-a751-b25ccb734c2d> ;
+.
+

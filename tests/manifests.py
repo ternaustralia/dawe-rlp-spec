@@ -3278,4 +3278,18 @@ test_cases: List[TestCaseItem] = [
         invalid_data_path="shapes/targeted-survey/targeted-survey-flora/targeted-survey-flora-population-protocol-shapes/number-of-individuals/invalid.ttl",
         expected_failures=7,
     ).astuple(),
+    TestCaseItem(
+        name="soil-enhanced-sub-pit-and-metagenomics-protocol-shapes-soil-pit-comments",
+        shapes_path="shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-pit-comments/shapes.ttl",
+        valid_data_path="shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-pit-comments/valid.ttl",
+        invalid_data_path="shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-pit-comments/invalid.ttl",
+        expected_failures=6,
+    ).astuple(),
+    TestCaseItem(
+        name="soil-enhanced-sub-pit-and-metagenomics-protocol-shapes-soil-microhabitat-description",
+        shapes_path="shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-microhabitat-description/shapes.ttl",
+        valid_data_path="shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-microhabitat-description/valid.ttl",
+        invalid_data_path="shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-microhabitat-description/invalid.ttl",
+        expected_failures=6,
+    ).astuple(),
 ]
