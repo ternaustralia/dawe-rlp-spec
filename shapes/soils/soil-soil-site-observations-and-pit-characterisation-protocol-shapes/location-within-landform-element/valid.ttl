@@ -1,0 +1,37 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:procedure:soil-soil-site-observations-and-pit-characterisation>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+.
+
+<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:valid:location-within-landform-element>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - location within landform element" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/807bcbdf-5d3f-4149-89c6-83d96638fb96> ;
+            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:valid:location-within-landform-element> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/c5546283-dee6-475f-b139-81da028d0a96>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/807bcbdf-5d3f-4149-89c6-83d96638fb96> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/277f9c3d-4031-4935-886b-7b83c7513688> ;
+    sosa:phenomenonTime <https://example.com/observation/location-within-landform-element/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-soil-site-observations-and-pit-characterisation> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

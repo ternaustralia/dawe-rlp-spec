@@ -1,0 +1,189 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
+<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:macropore-diameter:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/2154a6b2-0d48-5fc7-90f8-78221c7c178c> ;
+            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:macropore-diameter:feature-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/3c3ccc22-949a-4892-9c51-7b458a823fcd>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/2154a6b2-0d48-5fc7-90f8-78221c7c178c> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/796022f7-ccba-419a-8f70-020ee9e8e3f8> ;
+    sosa:phenomenonTime <https://example.com/observation/macropore-diameter/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-soil-site-observations-and-pit-characterisation> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:macropore-diameter:result-value>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/de1e18e4-6cfd-4c78-b389-a5b1dd04b899>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <urn:fake:categorical:value> ;
+            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:macropore-diameter:result-value> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/3c3ccc22-949a-4892-9c51-7b458a823fcd>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/796022f7-ccba-419a-8f70-020ee9e8e3f8> ;
+    sosa:phenomenonTime <https://example.com/observation/macropore-diameter/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-soil-site-observations-and-pit-characterisation> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:macropore-diameter:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/de1e18e4-6cfd-4c78-b389-a5b1dd04b899>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/2154a6b2-0d48-5fc7-90f8-78221c7c178c> ;
+            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:macropore-diameter:simple-result> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/3c3ccc22-949a-4892-9c51-7b458a823fcd>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/796022f7-ccba-419a-8f70-020ee9e8e3f8> ;
+    sosa:phenomenonTime <https://example.com/observation/macropore-diameter/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-soil-site-observations-and-pit-characterisation> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:macropore-diameter:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/de1e18e4-6cfd-4c78-b389-a5b1dd04b899>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/2154a6b2-0d48-5fc7-90f8-78221c7c178c> ;
+            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:macropore-diameter:site-visit> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/3c3ccc22-949a-4892-9c51-7b458a823fcd>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/2154a6b2-0d48-5fc7-90f8-78221c7c178c> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/796022f7-ccba-419a-8f70-020ee9e8e3f8> ;
+    sosa:phenomenonTime <https://example.com/observation/macropore-diameter/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-soil-site-observations-and-pit-characterisation> ;
+.
+
+<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:macropore-diameter:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Soil Site Observation and Pit Characterization'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/de1e18e4-6cfd-4c78-b389-a5b1dd04b899>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/2154a6b2-0d48-5fc7-90f8-78221c7c178c> ;
+            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:macropore-diameter:used-procedure> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/3c3ccc22-949a-4892-9c51-7b458a823fcd>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/2154a6b2-0d48-5fc7-90f8-78221c7c178c> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/796022f7-ccba-419a-8f70-020ee9e8e3f8> ;
+    sosa:phenomenonTime <https://example.com/observation/macropore-diameter/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:macropore-diameter:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/de1e18e4-6cfd-4c78-b389-a5b1dd04b899>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/2154a6b2-0d48-5fc7-90f8-78221c7c178c> ;
+            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:macropore-diameter:value-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/3c3ccc22-949a-4892-9c51-7b458a823fcd>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/2154a6b2-0d48-5fc7-90f8-78221c7c178c> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/796022f7-ccba-419a-8f70-020ee9e8e3f8> ;
+    sosa:phenomenonTime <https://example.com/observation/macropore-diameter/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-soil-site-observations-and-pit-characterisation> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:macropore-diameter:vocabulary>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect vocabulary" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/de1e18e4-6cfd-4c78-b389-a5b1dd04b899>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/2154a6b2-0d48-5fc7-90f8-78221c7c178c> ;
+            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:macropore-diameter:vocabulary> ;
+            tern:vocabulary <urn:fake:vocabulary>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/2154a6b2-0d48-5fc7-90f8-78221c7c178c> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/796022f7-ccba-419a-8f70-020ee9e8e3f8> ;
+    sosa:phenomenonTime <https://example.com/observation/macropore-diameter/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-soil-site-observations-and-pit-characterisation> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:soil-soil-site-observations-and-pit-characterisation>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+.
+

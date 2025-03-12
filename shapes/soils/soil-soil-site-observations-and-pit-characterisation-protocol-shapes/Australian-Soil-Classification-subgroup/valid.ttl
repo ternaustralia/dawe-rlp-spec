@@ -1,0 +1,37 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:procedure:soil-soil-site-observations-and-pit-characterisation>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+.
+
+<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:valid:Australian-Soil-Classification-subgroup>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - Australian Soil Classification - subgroup" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/80c39b95-0912-4267-bb66-2fa081683723>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/cf7835b1-7a77-5e90-b65e-94b4646bd3db> ;
+            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:valid:Australian-Soil-Classification-subgroup> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/430ebf92-824e-4dc6-9410-2b454fe8a063>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/cf7835b1-7a77-5e90-b65e-94b4646bd3db> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/cd334597-fedc-40cd-86e4-71295d8a222f> ;
+    sosa:phenomenonTime <https://example.com/observation/Australian-Soil-Classification-subgroup/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-soil-site-observations-and-pit-characterisation> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
