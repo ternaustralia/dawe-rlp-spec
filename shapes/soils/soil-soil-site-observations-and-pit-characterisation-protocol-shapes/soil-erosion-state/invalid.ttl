@@ -1,0 +1,189 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
+<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-erosion-state:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
+            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-erosion-state:feature-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/e7087186-7027-42c3-ab54-b65a39034dd1>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/3c5263b7-8104-46a9-af05-a0c33aadde07> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-erosion-state/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-soil-site-observations-and-pit-characterisation> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-erosion-state:result-value>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <urn:fake:categorical:value> ;
+            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-erosion-state:result-value> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/e7087186-7027-42c3-ab54-b65a39034dd1>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/3c5263b7-8104-46a9-af05-a0c33aadde07> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-erosion-state/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-soil-site-observations-and-pit-characterisation> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-erosion-state:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
+            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-erosion-state:simple-result> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/e7087186-7027-42c3-ab54-b65a39034dd1>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/3c5263b7-8104-46a9-af05-a0c33aadde07> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-erosion-state/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-soil-site-observations-and-pit-characterisation> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-erosion-state:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
+            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-erosion-state:site-visit> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/e7087186-7027-42c3-ab54-b65a39034dd1>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/3c5263b7-8104-46a9-af05-a0c33aadde07> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-erosion-state/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-soil-site-observations-and-pit-characterisation> ;
+.
+
+<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-erosion-state:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Soil Site Observation and Pit Characterization'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
+            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-erosion-state:used-procedure> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/e7087186-7027-42c3-ab54-b65a39034dd1>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/3c5263b7-8104-46a9-af05-a0c33aadde07> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-erosion-state/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-erosion-state:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
+            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-erosion-state:value-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/e7087186-7027-42c3-ab54-b65a39034dd1>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/3c5263b7-8104-46a9-af05-a0c33aadde07> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-erosion-state/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-soil-site-observations-and-pit-characterisation> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-erosion-state:vocabulary>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect vocabulary" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
+            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-erosion-state:vocabulary> ;
+            tern:vocabulary <urn:fake:vocabulary>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/3c5263b7-8104-46a9-af05-a0c33aadde07> ;
+    sosa:phenomenonTime <https://example.com/observation/soil-erosion-state/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-soil-site-observations-and-pit-characterisation> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:soil-soil-site-observations-and-pit-characterisation>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+.
+

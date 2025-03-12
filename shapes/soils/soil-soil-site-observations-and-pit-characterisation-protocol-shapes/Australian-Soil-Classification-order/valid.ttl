@@ -1,0 +1,37 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:procedure:soil-soil-site-observations-and-pit-characterisation>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+.
+
+<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:valid:Australian-Soil-Classification-order>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - Australian Soil Classification - order" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/80c39b95-0912-4267-bb66-2fa081683723>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/885c1e7c-c55b-55a4-a139-5efb95cc9e03> ;
+            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:valid:Australian-Soil-Classification-order> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/cd377ef2-2174-4c7b-a6ef-7e0b1f83b85a>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/885c1e7c-c55b-55a4-a139-5efb95cc9e03> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/1b7d133f-4d43-47d7-a6c5-8a98f505675e> ;
+    sosa:phenomenonTime <https://example.com/observation/Australian-Soil-Classification-order/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:soil-soil-site-observations-and-pit-characterisation> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

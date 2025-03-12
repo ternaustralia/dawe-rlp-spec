@@ -1,0 +1,255 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:shapes:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:soil-microrelief-type:feature-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/3014409e-fa76-4159-8bd7-0a3bae695545>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n12fab37917934e33aa99f783ae7fe9afb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/soil-microrelief-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:soil-microrelief-type:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Soil microrelief types controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb>
+            <https://linked.data.gov.au/def/nrm/47f48c42-3beb-5e3b-ba47-3657a8c5da03>
+            <https://linked.data.gov.au/def/nrm/8fb86eca-3038-5378-937b-6acd0744e815>
+            <https://linked.data.gov.au/def/nrm/33815e3c-b5e6-5bc3-a35f-0f3ef169fa3a>
+            <https://linked.data.gov.au/def/nrm/e3c17f87-50bf-556b-9066-69cf3ee0254d>
+            <https://linked.data.gov.au/def/nrm/c576c8d2-9808-5f19-bb34-35b6dead979b>
+            <https://linked.data.gov.au/def/nrm/c1676b68-74ec-5dba-8485-50474e766953>
+            <https://linked.data.gov.au/def/nrm/f4c07d86-1d85-520c-bfa4-6db33d9ad863>
+            <https://linked.data.gov.au/def/nrm/fc14047c-999b-571d-98db-92776e5ef759>
+            <https://linked.data.gov.au/def/nrm/4d3e3098-d49d-572d-8066-d5d26c24a5d1>
+            <https://linked.data.gov.au/def/nrm/e45b99f2-81a0-5de3-9299-7d855cdff76b>
+            <https://linked.data.gov.au/def/nrm/a7eedbf0-09b8-5653-be29-eeccb6205140>
+            <https://linked.data.gov.au/def/nrm/11897a5e-4e66-5b00-9692-2fa6d4e01ca5>
+            <https://linked.data.gov.au/def/nrm/ceb10fd5-6e4c-5f36-8c62-378687e48b40>
+            <https://linked.data.gov.au/def/nrm/b0834f8f-251e-5a13-b085-5ef743287448>
+            <https://linked.data.gov.au/def/nrm/ad1ccb2b-1a03-5e6e-b98a-cd50ea26baf4>
+            <https://linked.data.gov.au/def/nrm/86ad53a1-9058-5afe-b592-2fcd1549ad9e>
+            <https://linked.data.gov.au/def/nrm/a0a47d27-a9d5-5597-8822-683970bcc0ee>
+            <https://linked.data.gov.au/def/nrm/b139ca67-164a-52c3-a0d1-296d9713b0d8>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the Soil microrelief types controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/3014409e-fa76-4159-8bd7-0a3bae695545> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n12fab37917934e33aa99f783ae7fe9afb2 ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'457faa4f-74e8-4b8a-9e4b-541bb7c50441'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/soil-microrelief-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:soil-microrelief-type:simple-result>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/3014409e-fa76-4159-8bd7-0a3bae695545>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:n12fab37917934e33aa99f783ae7fe9afb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/soil-microrelief-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:soil-microrelief-type:site-visit>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Observations following the Soil Site Observation and Pit Characterization are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/3014409e-fa76-4159-8bd7-0a3bae695545>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n12fab37917934e33aa99f783ae7fe9afb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/soil-microrelief-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:soil-microrelief-type:used-procedure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db>`.
+
+    `<https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db>` is the IRI for "Soil Site Observation and Pit Characterization".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db> ;
+    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/8f00b7c6-34b4-4203-8dcc-4be47f21d7db`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:methodType ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/3014409e-fa76-4159-8bd7-0a3bae695545>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
+    }
+    """
+        ] ;
+    urnp:examples _:n12fab37917934e33aa99f783ae7fe9afb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/soil-microrelief-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:soil-microrelief-type:value-type>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/3014409e-fa76-4159-8bd7-0a3bae695545>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """
+        ] ;
+    urnp:examples _:n12fab37917934e33aa99f783ae7fe9afb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/soil-microrelief-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:soil-microrelief-type:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/457faa4f-74e8-4b8a-9e4b-541bb7c50441>`.
+
+        `<https://linked.data.gov.au/def/nrm/457faa4f-74e8-4b8a-9e4b-541bb7c50441>` is the IRI for "Soil microrelief types".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `457faa4f-74e8-4b8a-9e4b-541bb7c50441$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "457faa4f-74e8-4b8a-9e4b-541bb7c50441$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/3014409e-fa76-4159-8bd7-0a3bae695545> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:n12fab37917934e33aa99f783ae7fe9afb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/soil-microrelief-type/shapes.ttl"^^xsd:anyURI ;
+.
+
+_:n12fab37917934e33aa99f783ae7fe9afb2
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/soil-microrelief-type/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/soil-microrelief-type/valid.ttl"^^xsd:anyURI ;
+.
+
