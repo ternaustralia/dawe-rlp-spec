@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nc36f5c27c54b42fdb595209d1af6fcb8b2 ;
+    urnp:examples _:nee2442a0ce554ce596f830c487303651b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -44,7 +44,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Pest species types controlled vocabulary." ;
+    sh:description "If value is not free input, the value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the target species types controlled vocabulary." ;
     sh:in (
             <https://linked.data.gov.au/def/nrm/3a86540a-7f40-578a-8431-6bcacb0194d7>
             <https://linked.data.gov.au/def/nrm/5488c9ea-e3a2-5348-887b-065d29b848ab>
@@ -67,8 +67,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             <https://linked.data.gov.au/def/nrm/b5511180-5573-58fb-970d-cd62447ace2e>
             <https://linked.data.gov.au/def/nrm/e9e21ffa-d900-5352-9fd4-b9111405ff80>
         ) ;
-    sh:message "The value of `rdf:value` _MUST_ exist in the Pest species types controlled vocabulary." ;
-    sh:name "Result value" ;
+    sh:message "If value is not free input, the value of `rdf:value` _MUST_ exist in the target species types controlled vocabulary." ;
+    sh:name "Result value - IRI" ;
     sh:path rdf:value ;
     sh:target [
             a sh:SPARQLTarget ;
@@ -81,9 +81,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:observedProperty 
         <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
                 sosa:hasResult ?this .
+                ?this a tern:IRI .
         }"""
         ] ;
-    urnp:examples _:n85eeb3ee102a4af4a35c0a393a188751b2 ;
+    urnp:examples _:nee2442a0ce554ce596f830c487303651b24 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -93,7 +94,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         }
         """ ;
     urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
 <urn:shapes:fauna-ground-counts-transects-protocol-shapes:field-species-name:simple-result>
@@ -124,7 +125,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nc36f5c27c54b42fdb595209d1af6fcb8b2 ;
+    urnp:examples _:nee2442a0ce554ce596f830c487303651b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -156,7 +157,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nc36f5c27c54b42fdb595209d1af6fcb8b2 ;
+    urnp:examples _:nee2442a0ce554ce596f830c487303651b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -166,10 +167,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:class tern:IRI ;
-    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
-    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI` or `tern:Text`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI` or `tern:Text`." ;
     sh:name "Value type" ;
+    sh:or (
+            [
+                sh:class tern:IRI
+            ]
+            [
+                sh:class tern:Text
+            ]
+        ) ;
     sh:path sosa:hasResult ;
     sh:target [
             a sh:SPARQLTarget ;
@@ -185,7 +193,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nc36f5c27c54b42fdb595209d1af6fcb8b2 ;
+    urnp:examples _:nee2442a0ce554ce596f830c487303651b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -215,11 +223,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n85eeb3ee102a4af4a35c0a393a188751b2 ;
+    urnp:examples _:nee2442a0ce554ce596f830c487303651b24 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nc36f5c27c54b42fdb595209d1af6fcb8b2
+_:nee2442a0ce554ce596f830c487303651b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
 .
