@@ -121,36 +121,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/additional-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:additional-damage-type:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Off-plot Belt Transect Protocol are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/aeca4fcd-5b42-4e23-9880-9013d6976fb3>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:ne476754ad8ea40288f88ac71f703c86db2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/additional-damage-type/shapes.ttl"^^xsd:anyURI ;
-.
-
 <urn:shapes:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:additional-damage-type:used-procedure>
     a
         sh:PropertyShape ,

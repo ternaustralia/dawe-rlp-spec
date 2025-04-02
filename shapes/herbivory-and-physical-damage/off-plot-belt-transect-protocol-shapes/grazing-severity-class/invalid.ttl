@@ -32,7 +32,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/grazing-severity-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:grazing-severity-class:result-value>
@@ -57,7 +56,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/grazing-severity-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:grazing-severity-class:simple-result>
@@ -78,31 +76,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             tern:vocabulary <https://linked.data.gov.au/def/nrm/cb9ba2d1-3a37-5f68-b6d8-7deefb307835>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/02dbcc73-afc3-5425-80a2-eef898bddb67> ;
-    sosa:phenomenonTime <https://example.com/observation/grazing-severity-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
-<urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:grazing-severity-class:site-visit>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - all observations must have a site vist." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:IRI ,
-                tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/33273222-b7c2-5505-93c1-480e186e6651> ;
-            sosa:isResultOf <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:grazing-severity-class:site-visit> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/cb9ba2d1-3a37-5f68-b6d8-7deefb307835>
-        ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/33273222-b7c2-5505-93c1-480e186e6651> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/02dbcc73-afc3-5425-80a2-eef898bddb67> ;
     sosa:phenomenonTime <https://example.com/observation/grazing-severity-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -131,7 +104,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/grazing-severity-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:grazing-severity-class:value-type>
@@ -154,7 +126,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/grazing-severity-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:grazing-severity-class:vocabulary>
@@ -179,7 +150,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/grazing-severity-class/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect>
