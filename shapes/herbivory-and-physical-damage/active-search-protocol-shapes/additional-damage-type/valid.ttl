@@ -16,13 +16,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:IRI ,
+                tern:Text ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb> ;
+            rdf:value "rutting on the stem"^^xsd:string ;
             sosa:isResultOf <urn:test:herbivory-and-physical-damage-active-search-protocol-shapes:valid:additional-damage-type> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/51fa78ee-187a-5788-9fe0-e68cc476ea91>
+            
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb> ;
+    sosa:hasSimpleResult "rutting on the stem"^^xsd:string ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/aeca4fcd-5b42-4e23-9880-9013d6976fb3> ;
     sosa:phenomenonTime <https://example.com/observation/additional-damage-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;

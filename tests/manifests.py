@@ -707,7 +707,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/additional-damage-type/shapes.ttl",
         valid_data_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/additional-damage-type/valid.ttl",
         invalid_data_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/additional-damage-type/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="herbivory-and-physical-damage-active-search-protocol-shapes-damage-area",
@@ -805,7 +805,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/additional-damage-type/shapes.ttl",
         valid_data_path="shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/additional-damage-type/valid.ttl",
         invalid_data_path="shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/additional-damage-type/invalid.ttl",
-        expected_failures=6,
+        expected_failures=5,
     ).astuple(),
     TestCaseItem(
         name="herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes-life-stage",
@@ -889,7 +889,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/additional-damage-type/shapes.ttl",
         valid_data_path="shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/additional-damage-type/valid.ttl",
         invalid_data_path="shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/additional-damage-type/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="fauna-ground-counts-transects-protocol-shapes-cloud-cover",
