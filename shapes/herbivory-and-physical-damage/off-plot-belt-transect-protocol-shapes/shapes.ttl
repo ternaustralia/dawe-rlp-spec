@@ -34,7 +34,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb2 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -97,7 +97,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb2 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -138,37 +138,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:NVIS-major-vegetation-group:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Off-plot Belt Transect Protocol are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/58f2bd87-17d0-5d11-9ca1-b8f3b76d563b>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb2 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -200,7 +170,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb2 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -229,7 +199,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb2 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -259,7 +229,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb2 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -288,7 +258,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb43 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb42 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/additional-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -331,7 +301,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb43 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb42 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -372,37 +342,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb43 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/additional-damage-type/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:additional-damage-type:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Off-plot Belt Transect Protocol are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/aeca4fcd-5b42-4e23-9880-9013d6976fb3>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb43 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb42 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/additional-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -434,7 +374,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb43 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb42 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/additional-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -463,7 +403,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb43 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb42 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/additional-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -493,7 +433,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb43 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb42 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/additional-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -521,7 +461,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb63 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb62 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -550,7 +490,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb63 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb62 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -582,37 +522,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb63 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:attributable-fauna-species:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Off-plot Belt Transect Protocol are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/22fae1ac-9d23-5b11-9fc7-f4f29f900bdf>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb63 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb62 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -644,7 +554,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb63 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb62 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -673,7 +583,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb63 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb62 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -701,7 +611,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb70 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb68 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -730,7 +640,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb70 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb68 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -762,37 +672,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb70 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:field-species-name:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Off-plot Belt Transect Protocol are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb70 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb68 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -824,7 +704,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb70 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb68 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -853,7 +733,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb70 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb68 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -882,7 +762,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb77 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb74 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/foliage-damage-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -914,37 +794,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb77 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/foliage-damage-extent/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:foliage-damage-extent:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Off-plot Belt Transect Protocol are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/40631c45-30c6-5caa-afbc-221a3024f622>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb77 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb74 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/foliage-damage-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -972,7 +822,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb77 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb74 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/foliage-damage-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1004,7 +854,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb77 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb74 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/foliage-damage-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1034,7 +884,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb77 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb74 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/foliage-damage-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1063,7 +913,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb77 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb74 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/foliage-damage-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1092,7 +942,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb85 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb81 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/grazing-severity-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1125,7 +975,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb85 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb81 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1166,37 +1016,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb85 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/grazing-severity-class/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:grazing-severity-class:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Off-plot Belt Transect Protocol are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/02dbcc73-afc3-5425-80a2-eef898bddb67>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb85 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb81 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/grazing-severity-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1228,7 +1048,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb85 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb81 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/grazing-severity-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1257,7 +1077,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb85 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb81 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/grazing-severity-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1287,7 +1107,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb85 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb81 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/grazing-severity-class/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1316,7 +1136,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb96 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb91 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1374,7 +1194,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb96 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb91 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1415,37 +1235,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb96 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:growth-form:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Off-plot Belt Transect Protocol are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/dd1769b9-c475-4732-915c-9b890a8d5f65>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb96 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb91 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1477,7 +1267,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb96 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb91 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1506,7 +1296,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb96 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb91 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1536,7 +1326,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb96 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb91 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1565,7 +1355,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb131 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb126 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1600,7 +1390,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb131 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb126 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1641,37 +1431,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb131 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:herbivory-damage-type:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Off-plot Belt Transect Protocol are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/f8d5c98b-ecee-5c56-9b95-a57280faec60>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb131 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb126 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1703,7 +1463,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb131 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb126 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1732,7 +1492,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb131 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb126 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1762,7 +1522,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb131 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb126 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1791,7 +1551,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb144 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb138 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/highest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1823,37 +1583,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb144 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/highest-damage-height/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:highest-damage-height:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Off-plot Belt Transect Protocol are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/58668d01-0a2e-5cb1-8623-f1f4e1338a3e>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb144 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb138 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/highest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1881,7 +1611,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb144 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb138 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/highest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1913,7 +1643,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb144 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb138 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/highest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1943,7 +1673,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb144 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb138 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/highest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1972,7 +1702,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb144 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb138 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/highest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2001,7 +1731,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb152 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb145 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2041,7 +1771,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb152 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb145 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2082,37 +1812,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb152 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:life-stage:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Off-plot Belt Transect Protocol are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/ce3fd96d-e68d-4b14-b3fd-27690c566440>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb152 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb145 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2144,7 +1844,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb152 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb145 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2173,7 +1873,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb152 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb145 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2203,7 +1903,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb152 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb145 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2232,7 +1932,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb168 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb162 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/lowest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2264,37 +1964,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb168 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/lowest-damage-height/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:lowest-damage-height:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Off-plot Belt Transect Protocol are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/924f1a84-9d02-5120-b8e8-af847c36b7e8>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb168 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb162 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/lowest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2322,7 +1992,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb168 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb162 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/lowest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2354,7 +2024,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb168 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb162 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/lowest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2384,7 +2054,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb168 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb162 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/lowest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2413,7 +2083,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb168 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb162 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/lowest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2442,7 +2112,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb176 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb169 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2474,37 +2144,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb176 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:percent-of-quadrat-affected:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Off-plot Belt Transect Protocol are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/8dd72792-5085-5678-bb35-46153daa282f>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb176 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb169 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2532,7 +2172,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb176 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb169 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2564,7 +2204,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb176 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb169 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2594,7 +2234,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb176 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb169 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2623,7 +2263,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb176 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb169 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2652,7 +2292,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb184 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb176 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/physical-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2695,7 +2335,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb184 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb176 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2736,37 +2376,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb184 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/physical-damage-type/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:physical-damage-type:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Off-plot Belt Transect Protocol are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/68d048e9-11f2-5c43-a27f-ae744b2c9799>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb184 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb176 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/physical-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2798,7 +2408,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb184 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb176 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/physical-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2827,7 +2437,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb184 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb176 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/physical-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2857,71 +2467,71 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n3fe10f262bf24aea9155af79366c8bcdb184 ;
+    urnp:examples _:n888984eedb4843f1bcc95cfd86e991edb176 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/physical-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n3fe10f262bf24aea9155af79366c8bcdb63
+_:n888984eedb4843f1bcc95cfd86e991edb62
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/attributable-fauna-species/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/attributable-fauna-species/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n3fe10f262bf24aea9155af79366c8bcdb70
+_:n888984eedb4843f1bcc95cfd86e991edb68
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n3fe10f262bf24aea9155af79366c8bcdb131
+_:n888984eedb4843f1bcc95cfd86e991edb126
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/herbivory-damage-type/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/herbivory-damage-type/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n3fe10f262bf24aea9155af79366c8bcdb144
+_:n888984eedb4843f1bcc95cfd86e991edb138
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/highest-damage-height/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/highest-damage-height/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n3fe10f262bf24aea9155af79366c8bcdb152
+_:n888984eedb4843f1bcc95cfd86e991edb145
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/life-stage/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/life-stage/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n3fe10f262bf24aea9155af79366c8bcdb168
+_:n888984eedb4843f1bcc95cfd86e991edb162
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/lowest-damage-height/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/lowest-damage-height/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n3fe10f262bf24aea9155af79366c8bcdb176
+_:n888984eedb4843f1bcc95cfd86e991edb169
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n3fe10f262bf24aea9155af79366c8bcdb184
+_:n888984eedb4843f1bcc95cfd86e991edb176
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/physical-damage-type/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/physical-damage-type/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n3fe10f262bf24aea9155af79366c8bcdb2
+_:n888984eedb4843f1bcc95cfd86e991edb2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/NVIS-major-vegetation-group/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/NVIS-major-vegetation-group/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n3fe10f262bf24aea9155af79366c8bcdb43
+_:n888984eedb4843f1bcc95cfd86e991edb42
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/additional-damage-type/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/additional-damage-type/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n3fe10f262bf24aea9155af79366c8bcdb77
+_:n888984eedb4843f1bcc95cfd86e991edb74
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/foliage-damage-extent/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/foliage-damage-extent/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n3fe10f262bf24aea9155af79366c8bcdb85
+_:n888984eedb4843f1bcc95cfd86e991edb81
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/grazing-severity-class/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/grazing-severity-class/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n3fe10f262bf24aea9155af79366c8bcdb96
+_:n888984eedb4843f1bcc95cfd86e991edb91
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/growth-form/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/growth-form/valid.ttl"^^xsd:anyURI ;
 .
