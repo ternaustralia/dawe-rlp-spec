@@ -32,7 +32,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/life-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:life-stage:result-value>
@@ -57,7 +56,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/life-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:life-stage:simple-result>
@@ -78,31 +76,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             tern:vocabulary <https://linked.data.gov.au/def/nrm/5f82c583-167b-4ed2-b25e-4d67decb3f2d>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/ce3fd96d-e68d-4b14-b3fd-27690c566440> ;
-    sosa:phenomenonTime <https://example.com/observation/life-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
-<urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:life-stage:site-visit>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - all observations must have a site vist." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:IRI ,
-                tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/9a4421e0-c308-5e44-b778-24f2688ec1ea> ;
-            sosa:isResultOf <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:life-stage:site-visit> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/5f82c583-167b-4ed2-b25e-4d67decb3f2d>
-        ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/9a4421e0-c308-5e44-b778-24f2688ec1ea> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/ce3fd96d-e68d-4b14-b3fd-27690c566440> ;
     sosa:phenomenonTime <https://example.com/observation/life-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -131,7 +104,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/life-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:life-stage:value-type>
@@ -154,7 +126,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/life-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:life-stage:vocabulary>
@@ -179,7 +150,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/life-stage/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect>

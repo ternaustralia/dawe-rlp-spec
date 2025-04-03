@@ -32,7 +32,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/NVIS-major-vegetation-group/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:NVIS-major-vegetation-group:result-value>
@@ -57,7 +56,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/NVIS-major-vegetation-group/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:NVIS-major-vegetation-group:simple-result>
@@ -78,31 +76,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             tern:vocabulary <https://linked.data.gov.au/def/nrm/2aa40711-7c6d-506f-ae57-90551476d521>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/58f2bd87-17d0-5d11-9ca1-b8f3b76d563b> ;
-    sosa:phenomenonTime <https://example.com/observation/NVIS-major-vegetation-group/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
-<urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:NVIS-major-vegetation-group:site-visit>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - all observations must have a site vist." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:IRI ,
-                tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/ecba751d-017d-5685-9124-c0bf746cb260> ;
-            sosa:isResultOf <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:NVIS-major-vegetation-group:site-visit> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/2aa40711-7c6d-506f-ae57-90551476d521>
-        ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/ecba751d-017d-5685-9124-c0bf746cb260> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/58f2bd87-17d0-5d11-9ca1-b8f3b76d563b> ;
     sosa:phenomenonTime <https://example.com/observation/NVIS-major-vegetation-group/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -131,7 +104,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/NVIS-major-vegetation-group/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:NVIS-major-vegetation-group:value-type>
@@ -154,7 +126,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/NVIS-major-vegetation-group/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:NVIS-major-vegetation-group:vocabulary>
@@ -179,7 +150,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/NVIS-major-vegetation-group/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect>
