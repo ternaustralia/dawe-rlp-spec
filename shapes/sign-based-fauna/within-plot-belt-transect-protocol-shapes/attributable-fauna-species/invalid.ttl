@@ -10,30 +10,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:methodType <urn:fake:method> ;
 .
 
-<urn:test:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:invalid:attributable-fauna-species:datatype>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:string`." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:Text ,
-                tern:Value ;
-            rdf:value 1 ;
-            sosa:isResultOf <urn:test:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:invalid:attributable-fauna-species:datatype>
-        ] ;
-    sosa:hasSimpleResult 1 ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/22fae1ac-9d23-5b11-9fc7-f4f29f900bdf> ;
-    sosa:phenomenonTime <https://example.com/observation/attributable-fauna-species/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-within-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
 <urn:test:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:invalid:attributable-fauna-species:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
@@ -45,12 +21,36 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Text ,
+                tern:IRI ,
                 tern:Value ;
-            rdf:value "Deer"^^xsd:string ;
+            rdf:value <https://linked.data.gov.au/def/nrm/19f2da82-66a4-5b46-96b1-4dc2e2b0c9e1> ;
             sosa:isResultOf <urn:test:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:invalid:attributable-fauna-species:feature-type>
         ] ;
-    sosa:hasSimpleResult "Deer"^^xsd:string ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/19f2da82-66a4-5b46-96b1-4dc2e2b0c9e1> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/22fae1ac-9d23-5b11-9fc7-f4f29f900bdf> ;
+    sosa:phenomenonTime <https://example.com/observation/attributable-fauna-species/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-within-plot-belt-transect> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:invalid:attributable-fauna-species:result-value>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <urn:fake:categorical:value> ;
+            sosa:isResultOf <urn:test:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:invalid:attributable-fauna-species:result-value>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/22fae1ac-9d23-5b11-9fc7-f4f29f900bdf> ;
     sosa:phenomenonTime <https://example.com/observation/attributable-fauna-species/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -65,16 +65,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a>
         ] ;
     sosa:hasResult [
             a
-                tern:Text ,
+                tern:IRI ,
                 tern:Value ;
-            rdf:value "Deer"^^xsd:string ;
+            rdf:value <https://linked.data.gov.au/def/nrm/19f2da82-66a4-5b46-96b1-4dc2e2b0c9e1> ;
             sosa:isResultOf <urn:test:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:invalid:attributable-fauna-species:simple-result>
         ] ;
-    sosa:hasSimpleResult "Deer different"^^xsd:string ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/fake-iri> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/22fae1ac-9d23-5b11-9fc7-f4f29f900bdf> ;
     sosa:phenomenonTime <https://example.com/observation/attributable-fauna-species/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -89,16 +89,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a>
         ] ;
     sosa:hasResult [
             a
-                tern:Text ,
+                tern:IRI ,
                 tern:Value ;
-            rdf:value "Deer"^^xsd:string ;
+            rdf:value <https://linked.data.gov.au/def/nrm/19f2da82-66a4-5b46-96b1-4dc2e2b0c9e1> ;
             sosa:isResultOf <urn:test:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:invalid:attributable-fauna-species:site-visit>
         ] ;
-    sosa:hasSimpleResult "Deer"^^xsd:string ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/19f2da82-66a4-5b46-96b1-4dc2e2b0c9e1> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/22fae1ac-9d23-5b11-9fc7-f4f29f900bdf> ;
     sosa:phenomenonTime <https://example.com/observation/attributable-fauna-species/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -112,16 +112,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a>
         ] ;
     sosa:hasResult [
             a
-                tern:Text ,
+                tern:IRI ,
                 tern:Value ;
-            rdf:value "Deer"^^xsd:string ;
+            rdf:value <https://linked.data.gov.au/def/nrm/19f2da82-66a4-5b46-96b1-4dc2e2b0c9e1> ;
             sosa:isResultOf <urn:test:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:invalid:attributable-fauna-species:used-procedure>
         ] ;
-    sosa:hasSimpleResult "Deer"^^xsd:string ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/19f2da82-66a4-5b46-96b1-4dc2e2b0c9e1> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/22fae1ac-9d23-5b11-9fc7-f4f29f900bdf> ;
     sosa:phenomenonTime <https://example.com/observation/attributable-fauna-species/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -132,18 +132,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <urn:test:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:invalid:attributable-fauna-species:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the value of the result node must be `tern:Text`." ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a>
         ] ;
     sosa:hasResult [
             a tern:Value ;
-            rdf:value "Deer"^^xsd:string ;
+            rdf:value <https://linked.data.gov.au/def/nrm/19f2da82-66a4-5b46-96b1-4dc2e2b0c9e1> ;
             sosa:isResultOf <urn:test:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:invalid:attributable-fauna-species:value-type>
         ] ;
-    sosa:hasSimpleResult "Deer"^^xsd:string ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/19f2da82-66a4-5b46-96b1-4dc2e2b0c9e1> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/22fae1ac-9d23-5b11-9fc7-f4f29f900bdf> ;
     sosa:phenomenonTime <https://example.com/observation/attributable-fauna-species/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;

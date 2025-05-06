@@ -8,43 +8,15 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:attributable-fauna-species:datatype>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:datatype xsd:string ;
-    sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
-    sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
-    sh:name "Datatype" ;
-    sh:path rdf:value ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-        PREFIX sosa: <http://www.w3.org/ns/sosa/>
-        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-        select ?this  {
-            ?observation a tern:Observation ;
-                sosa:observedProperty 
-        <https://linked.data.gov.au/def/nrm/22fae1ac-9d23-5b11-9fc7-f4f29f900bdf> ;
-                sosa:hasResult ?this .
-        }"""
-        ] ;
-    urnp:examples _:nf2a066ba8ed247fe8769b012eae0f71fb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
-.
-
 <urn:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:attributable-fauna-species:feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _animal evidence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a[`animal evidence`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
@@ -62,6 +34,65 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:nf2a066ba8ed247fe8769b012eae0f71fb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:attributable-fauna-species:result-value>
+    a
+        sh:PropertyShape ,
+        urnc:Controlled ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the target species types controlled vocabulary." ;
+    sh:in (
+            <https://linked.data.gov.au/def/nrm/3a86540a-7f40-578a-8431-6bcacb0194d7>
+            <https://linked.data.gov.au/def/nrm/19f2da82-66a4-5b46-96b1-4dc2e2b0c9e1>
+            <https://linked.data.gov.au/def/nrm/b5511180-5573-58fb-970d-cd62447ace2e>
+            <https://linked.data.gov.au/def/nrm/d4297430-c86d-58c4-9031-42cbdb50d199>
+            <https://linked.data.gov.au/def/nrm/ffdac5da-c5a1-54e9-8e71-71c0503f4491>
+            <https://linked.data.gov.au/def/nrm/f6b0f6d8-16d8-5dd7-b1b7-66b0c020b96f>
+            <https://linked.data.gov.au/def/nrm/b46bcca8-8c07-5ad3-89e5-d5db8e7bdc3d>
+            <https://linked.data.gov.au/def/nrm/f0e22f49-83ff-568e-9522-5f6be4bbe614>
+            <https://linked.data.gov.au/def/nrm/9a292b27-007c-5e1a-a7e2-d8536ea56c2b>
+            <https://linked.data.gov.au/def/nrm/5488c9ea-e3a2-5348-887b-065d29b848ab>
+            <https://linked.data.gov.au/def/nrm/58993c3a-9237-5112-aec9-0e6bf776b242>
+            <https://linked.data.gov.au/def/nrm/69369a4b-1608-58c9-b37c-00758d401bf4>
+            <https://linked.data.gov.au/def/nrm/e9e21ffa-d900-5352-9fd4-b9111405ff80>
+            <https://linked.data.gov.au/def/nrm/05ffeed3-fd7b-5ec8-864f-6a6632502373>
+            <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb>
+            <https://linked.data.gov.au/def/nrm/1f180410-e77a-47ff-975c-e0d3ffcb7863>
+            <https://linked.data.gov.au/def/nrm/45d65bca-5fba-45ef-86fe-53a5f50144a2>
+            <https://linked.data.gov.au/def/nrm/6d0b66b3-16f6-552a-b38f-88dc9bbf7abc>
+            <https://linked.data.gov.au/def/nrm/bc1505eb-a36e-5050-a1a4-989479b26d6a>
+            <https://linked.data.gov.au/def/nrm/05c18e55-7eda-5bcd-8099-5c32fc3d449d>
+        ) ;
+    sh:message "The value of `rdf:value` _MUST_ exist in the target species types controlled vocabulary." ;
+    sh:name "Result value" ;
+    sh:path rdf:value ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/22fae1ac-9d23-5b11-9fc7-f4f29f900bdf> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:na4ff62c818c64d3cb4ae6d41a1e90f59b2 ;
+    urnp:query """
+        PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+        select ?values {
+            values ?categoricalUUID {'ff157253-6923-5816-ac05-312dc32cd903'}
+            ?s skos:member ?values .
+            filter (STRENDS(str(?s), ?categoricalUUID))
+        }
+        """ ;
+    urnp:sparqlEndpoint "https://graphdb.tern.org.au/repositories/dawe_vocabs_core" ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -165,9 +196,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:class tern:Text ;
-    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
-    sh:message "The result _MUST_ be an instance of `tern:Text`." ;
+    sh:class tern:IRI ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
     sh:target [
@@ -185,6 +216,36 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     urnp:examples _:nf2a066ba8ed247fe8769b012eae0f71fb2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:attributable-fauna-species:vocabulary>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/ff157253-6923-5816-ac05-312dc32cd903>`.
+
+        `<https://linked.data.gov.au/def/nrm/ff157253-6923-5816-ac05-312dc32cd903>` is the IRI for "target species types".""" ;
+    sh:message "The value of `tern:vocabulary` _MUST_ match the pattern `ff157253-6923-5816-ac05-312dc32cd903$`." ;
+    sh:name "Vocabulary" ;
+    sh:path tern:vocabulary ;
+    sh:pattern "ff157253-6923-5816-ac05-312dc32cd903$" ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/22fae1ac-9d23-5b11-9fc7-f4f29f900bdf> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:na4ff62c818c64d3cb4ae6d41a1e90f59b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
