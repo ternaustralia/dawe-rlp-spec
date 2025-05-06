@@ -21,12 +21,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Text ,
+                tern:IRI ,
                 tern:Value ;
-            rdf:value "Deer"^^xsd:string ;
+            rdf:value <https://linked.data.gov.au/def/nrm/19f2da82-66a4-5b46-96b1-4dc2e2b0c9e1> ;
             sosa:isResultOf <urn:test:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:valid:attributable-fauna-species>
         ] ;
-    sosa:hasSimpleResult "Deer"^^xsd:string ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/19f2da82-66a4-5b46-96b1-4dc2e2b0c9e1> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/22fae1ac-9d23-5b11-9fc7-f4f29f900bdf> ;
     sosa:phenomenonTime <https://example.com/observation/attributable-fauna-species/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
