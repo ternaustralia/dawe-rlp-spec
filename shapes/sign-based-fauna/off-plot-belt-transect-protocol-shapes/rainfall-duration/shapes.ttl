@@ -154,9 +154,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
     `<https://linked.data.gov.au/def/nrm/bb4407f3-8e47-46d8-9aa3-179b348a74bb>` is the IRI for "Off-plot Belt Transect Protocol".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/bb4407f3-8e47-46d8-9aa3-179b348a74bb> ;
-    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/bb4407f3-8e47-46d8-9aa3-179b348a74bb`." ;
+    sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/bb4407f3-8e47-46d8-9aa3-179b348a74bb`." ;
     sh:name "Method type of used procedure" ;
-    sh:path tern:methodType ;
+    sh:path tern:hasMethod ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """

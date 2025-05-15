@@ -152,9 +152,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
     `<https://linked.data.gov.au/def/nrm/69e33304-f95e-41d3-b8bc-6307d3d774bf>` is the IRI for "Fauna Aerial Surveys".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/69e33304-f95e-41d3-b8bc-6307d3d774bf> ;
-    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/69e33304-f95e-41d3-b8bc-6307d3d774bf`." ;
+    sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/69e33304-f95e-41d3-b8bc-6307d3d774bf`." ;
     sh:name "Method type of used procedure" ;
-    sh:path tern:methodType ;
+    sh:path tern:hasMethod ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """

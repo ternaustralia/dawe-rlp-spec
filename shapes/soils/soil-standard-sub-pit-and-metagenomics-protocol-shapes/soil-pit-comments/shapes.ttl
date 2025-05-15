@@ -137,9 +137,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
     `<https://linked.data.gov.au/def/nrm/5d12a157-61a0-42e6-b23d-895018974c67>` is the IRI for "Standard Soil Sub-Pit and Soil Metagenomics protocol".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/5d12a157-61a0-42e6-b23d-895018974c67> ;
-    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/5d12a157-61a0-42e6-b23d-895018974c67`." ;
+    sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/5d12a157-61a0-42e6-b23d-895018974c67`." ;
     sh:name "Method type of used procedure" ;
-    sh:path tern:methodType ;
+    sh:path tern:hasMethod ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """

@@ -137,9 +137,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329> ;
-    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329`." ;
+    sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329`." ;
     sh:name "Method type of used procedure" ;
-    sh:path tern:methodType ;
+    sh:path tern:hasMethod ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """
