@@ -7,7 +7,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:fake:procedure>
     a tern:Procedure ;
-    tern:methodType <urn:fake:method> ;
+    tern:hasMethod <urn:fake:method> ;
 .
 
 <urn:test:sign-based-fauna-survey-vehicle-track-protocol-shapes:invalid:rainfall-type:feature-type>
@@ -184,6 +184,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:test:procedure:sign-based-fauna-survey-vehicle-track>
     a tern:Procedure ;
-    tern:methodType <https://linked.data.gov.au/def/nrm/d885edf1-fbdb-47f2-9ddf-098e98fb82fe> ;
+    tern:hasMethod <https://linked.data.gov.au/def/nrm/d885edf1-fbdb-47f2-9ddf-098e98fb82fe> ;
 .
 

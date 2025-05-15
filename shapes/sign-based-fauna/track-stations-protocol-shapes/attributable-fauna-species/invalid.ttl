@@ -7,7 +7,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:fake:procedure>
     a tern:Procedure ;
-    tern:methodType <urn:fake:method> ;
+    tern:hasMethod <urn:fake:method> ;
 .
 
 <urn:test:sign-based-fauna-survey-track-stations-protocol-shapes:invalid:attributable-fauna-species:feature-type>
@@ -153,6 +153,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:test:procedure:sign-based-fauna-survey-track-stations>
     a tern:Procedure ;
-    tern:methodType <https://linked.data.gov.au/def/nrm/fff59959-79b9-44f5-916d-16733f58cec5> ;
+    tern:hasMethod <https://linked.data.gov.au/def/nrm/fff59959-79b9-44f5-916d-16733f58cec5> ;
 .
 

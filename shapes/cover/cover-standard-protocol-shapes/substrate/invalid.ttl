@@ -7,7 +7,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:fake:procedure>
     a tern:Procedure ;
-    tern:methodType <urn:fake:method> ;
+    tern:hasMethod <urn:fake:method> ;
 .
 
 <urn:test:cover-standard-protocol-shapes:invalid:substrate:feature-type>
@@ -184,6 +184,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:test:procedure:cover-standard>
     a tern:Procedure ;
-    tern:methodType <https://linked.data.gov.au/def/nrm/aa1525f9-c3f2-4f7d-98cc-6a7d3aec9d8a> ;
+    tern:hasMethod <https://linked.data.gov.au/def/nrm/aa1525f9-c3f2-4f7d-98cc-6a7d3aec9d8a> ;
 .
 

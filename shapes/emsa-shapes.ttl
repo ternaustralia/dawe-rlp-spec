@@ -16,10 +16,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ,
         [
             sh:maxCount 1 ;
-            sh:message "A `tern:Procedure` _MUST_ have exactly 1 `tern:methodType` where the value node is a `sh:IRI`." ;
+            sh:message "A `tern:Procedure` _MUST_ have exactly 1 `tern:hasMethod` where the value node is a `sh:IRI`." ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
-            sh:path tern:methodType ;
+            sh:path tern:hasMethod ;
             sh:severity sh:Violation ;
         ] ;
     sh:targetClass tern:Procedure ;

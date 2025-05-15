@@ -138,9 +138,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
     `<https://linked.data.gov.au/def/nrm/d9e6739a-c2dd-4619-be43-1251449a6436>` is the IRI for "Soil Bulk Density Protocol".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/d9e6739a-c2dd-4619-be43-1251449a6436> ;
-    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/d9e6739a-c2dd-4619-be43-1251449a6436`." ;
+    sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/d9e6739a-c2dd-4619-be43-1251449a6436`." ;
     sh:name "Method type of used procedure" ;
-    sh:path tern:methodType ;
+    sh:path tern:hasMethod ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """

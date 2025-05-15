@@ -7,7 +7,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:fake:procedure>
     a tern:Procedure ;
-    tern:methodType <urn:fake:method> ;
+    tern:hasMethod <urn:fake:method> ;
 .
 
 <urn:test:recruitment-survivorship-protocol-shapes:invalid:mistletoe-count-dead:datatype>
@@ -177,6 +177,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:test:procedure:recruitment-survivorship>
     a tern:Procedure ;
-    tern:methodType <https://linked.data.gov.au/def/nrm/f470e27d-20ed-46dc-b64a-d67b39a9dffc> ;
+    tern:hasMethod <https://linked.data.gov.au/def/nrm/f470e27d-20ed-46dc-b64a-d67b39a9dffc> ;
 .
 

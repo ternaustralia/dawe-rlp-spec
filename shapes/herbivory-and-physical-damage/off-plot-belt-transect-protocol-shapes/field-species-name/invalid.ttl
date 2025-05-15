@@ -7,7 +7,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:fake:procedure>
     a tern:Procedure ;
-    tern:methodType <urn:fake:method> ;
+    tern:hasMethod <urn:fake:method> ;
 .
 
 <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:field-species-name:datatype>
@@ -125,6 +125,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect>
     a tern:Procedure ;
-    tern:methodType <https://linked.data.gov.au/def/nrm/c7d48965-c779-4398-9315-2cd465b08513> ;
+    tern:hasMethod <https://linked.data.gov.au/def/nrm/c7d48965-c779-4398-9315-2cd465b08513> ;
 .
 

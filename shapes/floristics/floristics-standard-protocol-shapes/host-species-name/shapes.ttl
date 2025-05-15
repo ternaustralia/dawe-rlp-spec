@@ -137,9 +137,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
     # `<https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8>` is the IRI for "Floristics - Standard Protocol".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8> ;
-    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8`." ;
+    sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8`." ;
     sh:name "Method type of used procedure" ;
-    sh:path tern:methodType ;
+    sh:path tern:hasMethod ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """

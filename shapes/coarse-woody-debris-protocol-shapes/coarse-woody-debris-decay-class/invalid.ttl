@@ -7,7 +7,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:fake:procedure>
     a tern:Procedure ;
-    tern:methodType <urn:fake:method> ;
+    tern:hasMethod <urn:fake:method> ;
 .
 
 <urn:test:coarse-woody-debris-protocol-shapes:invalid:coarse-woody-debris-decay-class:feature-type>
@@ -184,6 +184,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:test:procedure:coarse-woody-debris>
     a tern:Procedure ;
-    tern:methodType <https://linked.data.gov.au/def/nrm/0d8b47b4-1ca8-4c76-8329-0eb781a823a2> ;
+    tern:hasMethod <https://linked.data.gov.au/def/nrm/0d8b47b4-1ca8-4c76-8329-0eb781a823a2> ;
 .
 

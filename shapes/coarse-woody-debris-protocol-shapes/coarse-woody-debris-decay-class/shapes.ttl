@@ -153,9 +153,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
     `<https://linked.data.gov.au/def/nrm/0d8b47b4-1ca8-4c76-8329-0eb781a823a2>` is the IRI for "Coarse Woody Debris Module".""" ;
     sh:hasValue <https://linked.data.gov.au/def/nrm/0d8b47b4-1ca8-4c76-8329-0eb781a823a2> ;
-    sh:message "The procedure's `tern:methodType` _MUST_ have the value `https://linked.data.gov.au/def/nrm/0d8b47b4-1ca8-4c76-8329-0eb781a823a2`." ;
+    sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/0d8b47b4-1ca8-4c76-8329-0eb781a823a2`." ;
     sh:name "Method type of used procedure" ;
-    sh:path tern:methodType ;
+    sh:path tern:hasMethod ;
     sh:target [
             a sh:SPARQLTarget ;
             sh:select """

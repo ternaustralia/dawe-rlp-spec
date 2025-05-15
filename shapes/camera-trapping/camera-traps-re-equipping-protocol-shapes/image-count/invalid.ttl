@@ -7,7 +7,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:fake:procedure>
     a tern:Procedure ;
-    tern:methodType <urn:fake:method> ;
+    tern:hasMethod <urn:fake:method> ;
 .
 
 <urn:test:camera-traps-re-equipping-protocol-shapes:invalid:image-count:datatype>
@@ -177,6 +177,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:test:procedure:camera-traps-re-equipping>
     a tern:Procedure ;
-    tern:methodType <https://linked.data.gov.au/def/nrm/a2afccd5-766e-44bc-98c1-f27aae26727f> ;
+    tern:hasMethod <https://linked.data.gov.au/def/nrm/a2afccd5-766e-44bc-98c1-f27aae26727f> ;
 .
 

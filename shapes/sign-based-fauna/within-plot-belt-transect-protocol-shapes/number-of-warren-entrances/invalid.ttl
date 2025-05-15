@@ -7,7 +7,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:fake:procedure>
     a tern:Procedure ;
-    tern:methodType <urn:fake:method> ;
+    tern:hasMethod <urn:fake:method> ;
 .
 
 <urn:test:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:invalid:number-of-warren-entrances:datatype>
@@ -177,6 +177,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:test:procedure:sign-based-fauna-survey-within-plot-belt-transect>
     a tern:Procedure ;
-    tern:methodType <https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329> ;
+    tern:hasMethod <https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329> ;
 .
 
