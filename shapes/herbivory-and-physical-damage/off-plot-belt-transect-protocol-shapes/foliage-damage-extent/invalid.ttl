@@ -11,30 +11,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasMethod <urn:fake:method> ;
 .
 
-<urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:foliage-damage-extent:datatype>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:float`." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:Float ,
-                tern:Value ;
-            rdf:value 3 ;
-            sosa:isResultOf <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:foliage-damage-extent:datatype> ;
-            tern:unit unit:PERCENT
-        ] ;
-    sosa:hasSimpleResult 3 ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/40631c45-30c6-5caa-afbc-221a3024f622> ;
-    sosa:phenomenonTime <https://example.com/observation/foliage-damage-extent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
-.
-
 <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:foliage-damage-extent:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
@@ -46,13 +22,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
+            rdf:value 33 ;
             sosa:isResultOf <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:foliage-damage-extent:feature-type> ;
             tern:unit unit:PERCENT
         ] ;
-    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:hasSimpleResult 33 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/40631c45-30c6-5caa-afbc-221a3024f622> ;
     sosa:phenomenonTime <https://example.com/observation/foliage-damage-extent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -70,13 +46,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
+            rdf:value 33 ;
             sosa:isResultOf <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:foliage-damage-extent:simple-result> ;
             tern:unit unit:PERCENT
         ] ;
-    sosa:hasSimpleResult "13.56"^^xsd:float ;
+    sosa:hasSimpleResult 13 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/40631c45-30c6-5caa-afbc-221a3024f622> ;
     sosa:phenomenonTime <https://example.com/observation/foliage-damage-extent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -94,13 +70,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
+            rdf:value 33 ;
             sosa:isResultOf <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:foliage-damage-extent:unit-of-measure> ;
             tern:unit <urn:fake:unit>
         ] ;
-    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:hasSimpleResult 33 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/40631c45-30c6-5caa-afbc-221a3024f622> ;
     sosa:phenomenonTime <https://example.com/observation/foliage-damage-extent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -118,13 +94,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
+            rdf:value 33 ;
             sosa:isResultOf <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:foliage-damage-extent:used-procedure> ;
             tern:unit unit:PERCENT
         ] ;
-    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:hasSimpleResult 33 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/40631c45-30c6-5caa-afbc-221a3024f622> ;
     sosa:phenomenonTime <https://example.com/observation/foliage-damage-extent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -142,13 +118,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "-1.11"^^xsd:float ;
+            rdf:value -1 ;
             sosa:isResultOf <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:foliage-damage-extent:value-range> ;
             tern:unit unit:PERCENT
         ] ;
-    sosa:hasSimpleResult "-1.11"^^xsd:float ;
+    sosa:hasSimpleResult -1 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/40631c45-30c6-5caa-afbc-221a3024f622> ;
     sosa:phenomenonTime <https://example.com/observation/foliage-damage-extent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -158,7 +134,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:foliage-damage-extent:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the value of the result node must be `tern:Float`." ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:Integer`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -166,11 +142,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
+            rdf:value 33 ;
             sosa:isResultOf <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:foliage-damage-extent:value-type> ;
             tern:unit unit:PERCENT
         ] ;
-    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:hasSimpleResult 33 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/40631c45-30c6-5caa-afbc-221a3024f622> ;
     sosa:phenomenonTime <https://example.com/observation/foliage-damage-extent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;

@@ -70,36 +70,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/track-stations-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:sign-based-fauna-survey-track-stations-protocol-shapes:air-temperature:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Track Stations Protocol are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/a30248c3-33ce-4ffe-8130-7b03aa4e5322>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:n21cb4c99e4d44723b39b998ddd5983d9b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/track-stations-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
-.
-
 <urn:shapes:sign-based-fauna-survey-track-stations-protocol-shapes:air-temperature:unit-of-measure>
     a
         sh:PropertyShape ,
@@ -167,10 +137,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:float ;
-    sh:description "Value _MUST_ be between 0 and 40 exclusive." ;
-    sh:maxExclusive 40 ;
-    sh:message "The result _MUST_ have a value between 0 and 40 exclusively." ;
-    sh:minExclusive 0 ;
+    sh:description "Value _MUST_ be between -30 and 55 exclusive." ;
+    sh:maxExclusive 55 ;
+    sh:message "The result _MUST_ have a value between -30 and 55 exclusively." ;
+    sh:minExclusive -30 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
