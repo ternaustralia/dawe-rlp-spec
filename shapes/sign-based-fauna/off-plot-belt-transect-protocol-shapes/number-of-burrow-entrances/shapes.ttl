@@ -69,36 +69,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/off-plot-belt-transect-protocol-shapes/number-of-burrow-entrances/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:sign-based-fauna-survey-off-plot-belt-transect-protocol-shapes:number-of-burrow-entrances:site-visit>
-    a
-        sh:PropertyShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Observations following the Off-plot Belt Transect Protocol are made in the context of a site visit." ;
-    sh:maxCount 1 ;
-    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
-    sh:minCount 1 ;
-    sh:name "Site visit" ;
-    sh:path tern:hasSiteVisit ;
-    sh:target [
-            a sh:SPARQLTarget ;
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select ?this {
-        values ?property_uri {<https://linked.data.gov.au/def/nrm/dd805508-1eca-5b8b-b2e4-c51c1682e81e>}
-        ?this a tern:Observation ;
-            sosa:observedProperty ?property_uri .
-    }
-    """
-        ] ;
-    urnp:examples _:n20b07fc24b2b4d50bf1cd61ff33c00cbb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/off-plot-belt-transect-protocol-shapes/number-of-burrow-entrances/shapes.ttl"^^xsd:anyURI ;
-.
-
 <urn:shapes:sign-based-fauna-survey-off-plot-belt-transect-protocol-shapes:number-of-burrow-entrances:used-procedure>
     a
         sh:PropertyShape ,

@@ -32,7 +32,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/fauna-sign-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:sign-based-fauna-survey-off-plot-belt-transect-protocol-shapes:invalid:fauna-sign-type:result-value>
@@ -57,7 +56,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/fauna-sign-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:sign-based-fauna-survey-off-plot-belt-transect-protocol-shapes:invalid:fauna-sign-type:simple-result>
@@ -78,31 +76,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             tern:vocabulary <https://linked.data.gov.au/def/nrm/bc7eaeab-ff7c-5d54-aa41-a11003d7fff0>
         ] ;
     sosa:hasSimpleResult <urn:fake:categorical:value> ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/27f979fe-7285-50cb-ab92-44a0bdd0f56c> ;
-    sosa:phenomenonTime <https://example.com/observation/fauna-sign-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
-<urn:test:sign-based-fauna-survey-off-plot-belt-transect-protocol-shapes:invalid:fauna-sign-type:site-visit>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - all observations must have a site vist." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:IRI ,
-                tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb> ;
-            sosa:isResultOf <urn:test:sign-based-fauna-survey-off-plot-belt-transect-protocol-shapes:invalid:fauna-sign-type:site-visit> ;
-            tern:vocabulary <https://linked.data.gov.au/def/nrm/bc7eaeab-ff7c-5d54-aa41-a11003d7fff0>
-        ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/27f979fe-7285-50cb-ab92-44a0bdd0f56c> ;
     sosa:phenomenonTime <https://example.com/observation/fauna-sign-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -131,7 +104,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/fauna-sign-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:sign-based-fauna-survey-off-plot-belt-transect-protocol-shapes:invalid:fauna-sign-type:value-type>
@@ -154,7 +126,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/fauna-sign-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:sign-based-fauna-survey-off-plot-belt-transect-protocol-shapes:invalid:fauna-sign-type:vocabulary>
@@ -179,7 +150,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/fauna-sign-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:procedure:sign-based-fauna-survey-off-plot-belt-transect>

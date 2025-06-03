@@ -33,7 +33,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/air-temperature/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:sign-based-fauna-survey-off-plot-belt-transect-protocol-shapes:invalid:air-temperature:feature-type>
@@ -58,7 +57,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/air-temperature/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:sign-based-fauna-survey-off-plot-belt-transect-protocol-shapes:invalid:air-temperature:simple-result>
@@ -79,31 +77,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             tern:unit unit:DEG_C
         ] ;
     sosa:hasSimpleResult "13.56"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/a30248c3-33ce-4ffe-8130-7b03aa4e5322> ;
-    sosa:phenomenonTime <https://example.com/observation/air-temperature/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
-<urn:test:sign-based-fauna-survey-off-plot-belt-transect-protocol-shapes:invalid:air-temperature:site-visit>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - all observations must have a site vist." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:Float ,
-                tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:sign-based-fauna-survey-off-plot-belt-transect-protocol-shapes:invalid:air-temperature:site-visit> ;
-            tern:unit unit:DEG_C
-        ] ;
-    sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/a30248c3-33ce-4ffe-8130-7b03aa4e5322> ;
     sosa:phenomenonTime <https://example.com/observation/air-temperature/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -132,7 +105,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/air-temperature/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:sign-based-fauna-survey-off-plot-belt-transect-protocol-shapes:invalid:air-temperature:used-procedure>
@@ -157,7 +129,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/air-temperature/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:sign-based-fauna-survey-off-plot-belt-transect-protocol-shapes:invalid:air-temperature:value-range>
@@ -182,7 +153,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/air-temperature/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:sign-based-fauna-survey-off-plot-belt-transect-protocol-shapes:invalid:air-temperature:value-type>
@@ -205,7 +175,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/air-temperature/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-off-plot-belt-transect> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:procedure:sign-based-fauna-survey-off-plot-belt-transect>

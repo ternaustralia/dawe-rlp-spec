@@ -31,7 +31,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/attributable-fauna-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-track-stations> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:sign-based-fauna-survey-track-stations-protocol-shapes:invalid:attributable-fauna-count:feature-type>
@@ -55,7 +54,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/attributable-fauna-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-track-stations> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:sign-based-fauna-survey-track-stations-protocol-shapes:invalid:attributable-fauna-count:simple-result>
@@ -75,30 +73,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:isResultOf <urn:test:sign-based-fauna-survey-track-stations-protocol-shapes:invalid:attributable-fauna-count:simple-result>
         ] ;
     sosa:hasSimpleResult 2 ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/eba8654b-1241-4510-8ae9-731589eef4a7> ;
-    sosa:phenomenonTime <https://example.com/observation/attributable-fauna-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-track-stations> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
-<urn:test:sign-based-fauna-survey-track-stations-protocol-shapes:invalid:attributable-fauna-count:site-visit>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - all observations must have a site vist." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:Integer ,
-                tern:Value ;
-            rdf:value 3 ;
-            sosa:isResultOf <urn:test:sign-based-fauna-survey-track-stations-protocol-shapes:invalid:attributable-fauna-count:site-visit>
-        ] ;
-    sosa:hasSimpleResult 3 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/eba8654b-1241-4510-8ae9-731589eef4a7> ;
     sosa:phenomenonTime <https://example.com/observation/attributable-fauna-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -126,7 +100,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/attributable-fauna-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:fake:procedure> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:sign-based-fauna-survey-track-stations-protocol-shapes:invalid:attributable-fauna-count:value-range>
@@ -150,7 +123,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/attributable-fauna-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-track-stations> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:sign-based-fauna-survey-track-stations-protocol-shapes:invalid:attributable-fauna-count:value-type>
@@ -172,7 +144,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:phenomenonTime <https://example.com/observation/attributable-fauna-count/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:sign-based-fauna-survey-track-stations> ;
-    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:procedure:sign-based-fauna-survey-track-stations>
