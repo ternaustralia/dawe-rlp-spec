@@ -665,7 +665,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/foliage-damage-extent/shapes.ttl",
         valid_data_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/foliage-damage-extent/valid.ttl",
         invalid_data_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/foliage-damage-extent/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="herbivory-and-physical-damage-active-search-protocol-shapes-herbivory-damage-type",
@@ -756,7 +756,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/foliage-damage-extent/shapes.ttl",
         valid_data_path="shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/foliage-damage-extent/valid.ttl",
         invalid_data_path="shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/foliage-damage-extent/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes-herbivory-damage-type",
@@ -847,7 +847,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/foliage-damage-extent/shapes.ttl",
         valid_data_path="shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/foliage-damage-extent/valid.ttl",
         invalid_data_path="shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/foliage-damage-extent/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes-herbivory-damage-type",
