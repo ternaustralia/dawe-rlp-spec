@@ -81,6 +81,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:observedProperty 
         <https://linked.data.gov.au/def/nrm/22fae1ac-9d23-5b11-9fc7-f4f29f900bdf> ;
                 sosa:hasResult ?this .
+            ?this a tern:IRI .
         }"""
         ] ;
     urnp:examples _:na4ff62c818c64d3cb4ae6d41a1e90f59b2 ;
@@ -166,9 +167,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:class tern:IRI ;
-    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
-    sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
+    sh:or (
+            [
+                sh:class tern:IRI
+            ]
+            [
+                sh:class tern:Text
+            ]
+        ) ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI` or `tern:Text`." ;
+    sh:message "The result _MUST_ be an instance of `tern:IRI` or `tern:Text`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
     sh:target [
