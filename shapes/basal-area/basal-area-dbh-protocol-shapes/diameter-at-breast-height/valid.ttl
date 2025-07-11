@@ -19,13 +19,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasResult
         [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
+            rdf:value 33 ;
             sosa:isResultOf <urn:test:basal-area-dbh-protocol-shapes:valid:diameter-at-breast-height> ;
             tern:unit unit:CentiM ;
         ] ;
-    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:hasSimpleResult 33 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/6e1c8b97-3655-4a22-9647-02f2c756e789> ;
     sosa:phenomenonTime <https://example.com/observation/diameter-at-breast-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
