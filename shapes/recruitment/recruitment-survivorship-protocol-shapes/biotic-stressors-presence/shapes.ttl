@@ -14,9 +14,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:datatype xsd:boolean ;
-    sh:description "The value in `sosa:hasResult` _MUST_ be xsd:boolean." ;
-    sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:boolean." ;
+    sh:datatype xsd:string ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
+    sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
     sh:name "Datatype" ;
     sh:path rdf:value ;
     sh:target [
@@ -165,9 +165,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:class tern:Boolean ;
-    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Boolean`." ;
-    sh:message "The result _MUST_ be an instance of `tern:Boolean`." ;
+    sh:class tern:Text ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Text`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
     sh:target [

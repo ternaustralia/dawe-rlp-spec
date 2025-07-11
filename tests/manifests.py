@@ -1841,7 +1841,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/condition-protocol-shapes/tree-hollow-opening-direction/shapes.ttl",
         valid_data_path="shapes/condition-protocol-shapes/tree-hollow-opening-direction/valid.ttl",
         invalid_data_path="shapes/condition-protocol-shapes/tree-hollow-opening-direction/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="condition-protocol-shapes-canopy-cover-percent",
@@ -2723,7 +2723,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-opening-direction/shapes.ttl",
         valid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-opening-direction/valid.ttl",
         invalid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-opening-direction/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="recruitment-survivorship-protocol-shapes-canopy-cover-percent",

@@ -13,7 +13,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <urn:test:condition-protocol-shapes:invalid:abiotic-stressors-presence:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:boolean`." ;
+    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:string`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -21,12 +21,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Boolean ,
+                tern:Text ,
                 tern:Value ;
-            rdf:value "true"^^xsd:string ;
+            rdf:value 1 ;
             sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:abiotic-stressors-presence:datatype>
         ] ;
-    sosa:hasSimpleResult "true"^^xsd:string ;
+    sosa:hasSimpleResult 1 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3311154e-4468-59a8-a77f-d90737a9946d> ;
     sosa:phenomenonTime <https://example.com/observation/abiotic-stressors-presence/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -45,12 +45,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Boolean ,
+                tern:Text ,
                 tern:Value ;
-            rdf:value true ;
+            rdf:value "present" ;
             sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:abiotic-stressors-presence:feature-type>
         ] ;
-    sosa:hasSimpleResult true ;
+    sosa:hasSimpleResult "present" ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3311154e-4468-59a8-a77f-d90737a9946d> ;
     sosa:phenomenonTime <https://example.com/observation/abiotic-stressors-presence/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -69,12 +69,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Boolean ,
+                tern:Text ,
                 tern:Value ;
-            rdf:value true ;
+            rdf:value "present" ;
             sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:abiotic-stressors-presence:simple-result>
         ] ;
-    sosa:hasSimpleResult false ;
+    sosa:hasSimpleResult "not present" ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3311154e-4468-59a8-a77f-d90737a9946d> ;
     sosa:phenomenonTime <https://example.com/observation/abiotic-stressors-presence/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -93,12 +93,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Boolean ,
+                tern:Text ,
                 tern:Value ;
-            rdf:value true ;
+            rdf:value "present" ;
             sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:abiotic-stressors-presence:site-visit>
         ] ;
-    sosa:hasSimpleResult true ;
+    sosa:hasSimpleResult "present" ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3311154e-4468-59a8-a77f-d90737a9946d> ;
     sosa:phenomenonTime <https://example.com/observation/abiotic-stressors-presence/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -116,12 +116,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Boolean ,
+                tern:Text ,
                 tern:Value ;
-            rdf:value true ;
+            rdf:value "present" ;
             sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:abiotic-stressors-presence:used-procedure>
         ] ;
-    sosa:hasSimpleResult true ;
+    sosa:hasSimpleResult "present" ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3311154e-4468-59a8-a77f-d90737a9946d> ;
     sosa:phenomenonTime <https://example.com/observation/abiotic-stressors-presence/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -132,7 +132,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <urn:test:condition-protocol-shapes:invalid:abiotic-stressors-presence:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the value of the result node must be `tern:Boolean`." ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:Text`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -140,10 +140,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a tern:Value ;
-            rdf:value true ;
+            rdf:value "present" ;
             sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:abiotic-stressors-presence:value-type>
         ] ;
-    sosa:hasSimpleResult true ;
+    sosa:hasSimpleResult "present" ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3311154e-4468-59a8-a77f-d90737a9946d> ;
     sosa:phenomenonTime <https://example.com/observation/abiotic-stressors-presence/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
