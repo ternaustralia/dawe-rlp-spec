@@ -11,31 +11,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasMethod <urn:fake:method> ;
 .
 
-<urn:test:condition-protocol-shapes:invalid:diameter-at-breast-height:datatype>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:float`." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:Float ,
-                tern:Value ;
-            rdf:value 10 ;
-            sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:diameter-at-breast-height:datatype> ;
-            tern:unit unit:CentiM
-        ] ;
-    sosa:hasSimpleResult 10 ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/6e1c8b97-3655-4a22-9647-02f2c756e789> ;
-    sosa:phenomenonTime <https://example.com/observation/diameter-at-breast-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:condition> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
 <urn:test:condition-protocol-shapes:invalid:diameter-at-breast-height:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
@@ -47,13 +22,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
+            rdf:value 33 ;
             sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:diameter-at-breast-height:feature-type> ;
             tern:unit unit:CentiM
         ] ;
-    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:hasSimpleResult 33 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/6e1c8b97-3655-4a22-9647-02f2c756e789> ;
     sosa:phenomenonTime <https://example.com/observation/diameter-at-breast-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -72,13 +47,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
+            rdf:value 33 ;
             sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:diameter-at-breast-height:simple-result> ;
             tern:unit unit:CentiM
         ] ;
-    sosa:hasSimpleResult "13.56"^^xsd:float ;
+    sosa:hasSimpleResult 25 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/6e1c8b97-3655-4a22-9647-02f2c756e789> ;
     sosa:phenomenonTime <https://example.com/observation/diameter-at-breast-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -97,13 +72,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
+            rdf:value 33 ;
             sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:diameter-at-breast-height:site-visit> ;
             tern:unit unit:CentiM
         ] ;
-    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:hasSimpleResult 33 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/6e1c8b97-3655-4a22-9647-02f2c756e789> ;
     sosa:phenomenonTime <https://example.com/observation/diameter-at-breast-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -121,13 +96,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
+            rdf:value 33 ;
             sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:diameter-at-breast-height:unit-of-measure> ;
             tern:unit <urn:fake:unit>
         ] ;
-    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:hasSimpleResult 33 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/6e1c8b97-3655-4a22-9647-02f2c756e789> ;
     sosa:phenomenonTime <https://example.com/observation/diameter-at-breast-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -146,13 +121,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
+            rdf:value 33 ;
             sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:diameter-at-breast-height:used-procedure> ;
             tern:unit unit:CentiM
         ] ;
-    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:hasSimpleResult 33 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/6e1c8b97-3655-4a22-9647-02f2c756e789> ;
     sosa:phenomenonTime <https://example.com/observation/diameter-at-breast-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -171,13 +146,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "-1.11"^^xsd:float ;
+            rdf:value -1 ;
             sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:diameter-at-breast-height:value-range> ;
             tern:unit unit:CentiM
         ] ;
-    sosa:hasSimpleResult "-1.11"^^xsd:float ;
+    sosa:hasSimpleResult -1 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/6e1c8b97-3655-4a22-9647-02f2c756e789> ;
     sosa:phenomenonTime <https://example.com/observation/diameter-at-breast-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -188,7 +163,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <urn:test:condition-protocol-shapes:invalid:diameter-at-breast-height:value-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the value of the result node must be `tern:Float`." ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:Integer`." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
@@ -196,11 +171,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
+            rdf:value 33 ;
             sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:diameter-at-breast-height:value-type> ;
             tern:unit unit:CentiM
         ] ;
-    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:hasSimpleResult 33 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/6e1c8b97-3655-4a22-9647-02f2c756e789> ;
     sosa:phenomenonTime <https://example.com/observation/diameter-at-breast-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;

@@ -15,9 +15,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:datatype xsd:boolean ;
-    sh:description "The value in `sosa:hasResult` _MUST_ be xsd:boolean." ;
-    sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:boolean." ;
+    sh:datatype xsd:string ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
+    sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
     sh:name "Datatype" ;
     sh:path rdf:value ;
     sh:target [
@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b2 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/abiotic-stressors-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -62,7 +62,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b2 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/abiotic-stressors-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -94,7 +94,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b2 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/abiotic-stressors-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -124,7 +124,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b2 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/abiotic-stressors-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -156,7 +156,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b2 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/abiotic-stressors-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -166,9 +166,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:class tern:Boolean ;
-    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Boolean`." ;
-    sh:message "The result _MUST_ be an instance of `tern:Boolean`." ;
+    sh:class tern:Text ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Text`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
     sh:target [
@@ -185,7 +185,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b2 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/abiotic-stressors-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -213,7 +213,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b9 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/abnormal-growth-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -242,7 +242,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b9 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/abnormal-growth-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -274,7 +274,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b9 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/abnormal-growth-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -304,7 +304,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b9 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/abnormal-growth-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -336,7 +336,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b9 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/abnormal-growth-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -365,7 +365,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b9 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/abnormal-growth-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -375,9 +375,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:datatype xsd:boolean ;
-    sh:description "The value in `sosa:hasResult` _MUST_ be xsd:boolean." ;
-    sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:boolean." ;
+    sh:datatype xsd:string ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
+    sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
     sh:name "Datatype" ;
     sh:path rdf:value ;
     sh:target [
@@ -393,7 +393,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b16 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b16 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/biotic-stressors-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -422,7 +422,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b16 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b16 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/biotic-stressors-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -454,7 +454,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b16 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b16 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/biotic-stressors-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -484,7 +484,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b16 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b16 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/biotic-stressors-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -516,7 +516,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b16 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b16 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/biotic-stressors-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -526,9 +526,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:class tern:Boolean ;
-    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Boolean`." ;
-    sh:message "The result _MUST_ be an instance of `tern:Boolean`." ;
+    sh:class tern:Text ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Text`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
     sh:target [
@@ -545,7 +545,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b16 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b16 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/biotic-stressors-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -574,7 +574,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b23 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b23 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-cover-percent/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -606,7 +606,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b23 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b23 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-cover-percent/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -636,7 +636,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b23 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b23 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-cover-percent/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -668,7 +668,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b23 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b23 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-cover-percent/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -698,7 +698,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b23 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b23 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-cover-percent/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -727,7 +727,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b23 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b23 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-cover-percent/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -756,7 +756,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b30 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b30 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-width/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -788,7 +788,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b30 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b30 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-width/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -818,7 +818,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b30 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b30 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-width/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -846,7 +846,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b30 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b30 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-width/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -878,7 +878,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b30 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b30 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-width/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -907,7 +907,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b30 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b30 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-width/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -936,7 +936,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b30 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b30 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-width/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -965,7 +965,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b38 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b38 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-incidence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -997,7 +997,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b38 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b38 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-incidence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1027,7 +1027,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b38 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b38 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-incidence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1055,7 +1055,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b38 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b38 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-incidence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1087,7 +1087,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b38 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b38 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-incidence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1117,7 +1117,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b38 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b38 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-incidence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1146,7 +1146,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b38 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b38 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-incidence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1175,7 +1175,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b46 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b46 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-index-CDI/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1207,7 +1207,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b46 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b46 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-index-CDI/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1237,7 +1237,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b46 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b46 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-index-CDI/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1269,7 +1269,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b46 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b46 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-index-CDI/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1299,7 +1299,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b46 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b46 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-index-CDI/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1328,7 +1328,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b46 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b46 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-index-CDI/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1357,7 +1357,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b53 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b53 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-severity/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1389,7 +1389,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b53 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b53 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-severity/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1419,7 +1419,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b53 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b53 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-severity/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1447,7 +1447,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b53 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b53 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-severity/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1479,7 +1479,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b53 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b53 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-severity/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1509,7 +1509,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b53 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b53 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-severity/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1538,7 +1538,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b53 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b53 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-severity/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1567,7 +1567,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b61 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b61 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1600,7 +1600,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b61 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b61 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1641,7 +1641,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b61 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b61 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1671,7 +1671,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b61 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b61 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1703,7 +1703,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b61 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b61 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1732,7 +1732,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b61 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b61 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1762,7 +1762,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b61 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b61 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1790,7 +1790,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b72 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b72 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/deep-crack-or-crevices-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1819,7 +1819,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b72 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b72 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/deep-crack-or-crevices-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1851,7 +1851,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b72 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b72 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/deep-crack-or-crevices-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1881,7 +1881,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b72 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b72 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/deep-crack-or-crevices-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1913,7 +1913,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b72 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b72 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/deep-crack-or-crevices-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1942,7 +1942,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b72 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b72 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/deep-crack-or-crevices-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1971,7 +1971,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b79 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b79 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2003,7 +2003,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b79 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b79 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2033,7 +2033,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b79 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b79 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2061,7 +2061,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b79 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b79 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2093,7 +2093,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b79 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b79 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2103,10 +2103,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:datatype xsd:float ;
-    sh:description "Value _MUST_ be greater than or equal to 5." ;
-    sh:message "The result _MUST_ be greater than or equal to 5." ;
-    sh:minInclusive 5 ;
+    sh:description "Value _MUST_ be positive." ;
+    sh:message "The result _MUST_ be positive." ;
+    sh:minExclusive 0 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
@@ -2122,7 +2121,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b79 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b79 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2132,9 +2131,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:class tern:Float ;
-    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
-    sh:message "The result _MUST_ be an instance of `tern:Float`." ;
+    sh:class tern:Integer ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
     sh:target [
@@ -2151,7 +2150,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b79 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b79 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2179,7 +2178,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b87 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b87 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2208,7 +2207,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b87 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b87 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2240,7 +2239,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b87 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b87 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2270,7 +2269,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b87 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b87 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2302,7 +2301,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b87 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b87 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2331,7 +2330,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b87 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b87 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2360,7 +2359,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b94 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b94 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2395,7 +2394,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b94 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b94 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2436,7 +2435,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b94 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b94 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2466,7 +2465,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b94 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b94 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2498,7 +2497,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b94 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b94 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2527,7 +2526,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b94 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b94 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2557,7 +2556,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b94 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b94 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2586,7 +2585,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b107 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b107 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/human-induced-damage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2621,7 +2620,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b107 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b107 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2662,7 +2661,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b107 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b107 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/human-induced-damage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2692,7 +2691,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b107 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b107 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/human-induced-damage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2724,7 +2723,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b107 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b107 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/human-induced-damage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2753,7 +2752,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b107 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b107 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/human-induced-damage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2783,7 +2782,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b107 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b107 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/human-induced-damage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2811,7 +2810,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b120 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b120 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-bores-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2840,7 +2839,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b120 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b120 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-bores-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2872,7 +2871,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b120 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b120 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-bores-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2902,7 +2901,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b120 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b120 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-bores-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2934,7 +2933,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b120 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b120 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-bores-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2963,7 +2962,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b120 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b120 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-bores-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2992,7 +2991,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b127 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b127 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-incidence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3024,7 +3023,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b127 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b127 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-incidence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3054,7 +3053,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b127 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b127 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-incidence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3082,7 +3081,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b127 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b127 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-incidence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3114,7 +3113,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b127 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b127 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-incidence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3144,7 +3143,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b127 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b127 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-incidence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3173,7 +3172,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b127 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b127 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-incidence/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3202,7 +3201,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b135 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b135 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-severity/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3234,7 +3233,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b135 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b135 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-severity/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3264,7 +3263,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b135 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b135 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-severity/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3292,7 +3291,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b135 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b135 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-severity/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3324,7 +3323,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b135 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b135 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-severity/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3354,7 +3353,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b135 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b135 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-severity/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3383,7 +3382,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b135 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b135 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-severity/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3412,7 +3411,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b143 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b143 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3447,7 +3446,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b143 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b143 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -3488,7 +3487,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b143 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b143 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3518,7 +3517,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b143 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b143 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3550,7 +3549,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b143 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b143 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3579,7 +3578,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b143 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b143 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3609,7 +3608,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b143 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b143 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3638,7 +3637,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b156 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b156 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3678,7 +3677,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b156 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b156 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -3719,7 +3718,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b156 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b156 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3749,7 +3748,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b156 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b156 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3781,7 +3780,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b156 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b156 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3810,7 +3809,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b156 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b156 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3840,7 +3839,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b156 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b156 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3869,7 +3868,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b174 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b174 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/mistletoe-count-alive/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3901,7 +3900,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b174 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b174 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/mistletoe-count-alive/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3931,7 +3930,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b174 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b174 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/mistletoe-count-alive/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3963,7 +3962,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b174 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b174 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/mistletoe-count-alive/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -3992,7 +3991,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b174 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b174 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/mistletoe-count-alive/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4021,7 +4020,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b174 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b174 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/mistletoe-count-alive/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4050,7 +4049,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b181 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b181 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/mistletoe-count-dead/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4082,7 +4081,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b181 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b181 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/mistletoe-count-dead/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4112,7 +4111,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b181 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b181 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/mistletoe-count-dead/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4144,7 +4143,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b181 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b181 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/mistletoe-count-dead/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4173,7 +4172,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b181 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b181 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/mistletoe-count-dead/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4202,7 +4201,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b181 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b181 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/mistletoe-count-dead/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4231,7 +4230,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b188 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b188 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4263,7 +4262,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b188 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b188 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4293,7 +4292,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b188 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b188 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4321,7 +4320,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b188 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b188 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4353,7 +4352,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b188 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b188 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4382,7 +4381,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b188 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b188 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4411,7 +4410,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b188 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b188 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4439,7 +4438,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b196 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b196 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-missing-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4468,7 +4467,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b196 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b196 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-missing-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4500,7 +4499,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b196 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b196 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-missing-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4530,7 +4529,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b196 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b196 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-missing-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4562,7 +4561,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b196 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b196 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-missing-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4591,7 +4590,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b196 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b196 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-missing-status/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4620,7 +4619,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b203 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b203 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4653,7 +4652,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b203 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b203 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -4694,7 +4693,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b203 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b203 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4724,7 +4723,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b203 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b203 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4756,7 +4755,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b203 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b203 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4785,7 +4784,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b203 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b203 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4815,7 +4814,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b203 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b203 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4844,7 +4843,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b214 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b214 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4876,7 +4875,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b214 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b214 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -4917,7 +4916,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b214 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b214 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4947,7 +4946,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b214 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b214 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -4979,7 +4978,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b214 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b214 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5008,7 +5007,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b214 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b214 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5038,7 +5037,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b214 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b214 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5067,7 +5066,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b224 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b224 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-opening-direction/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5099,7 +5098,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b224 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b224 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-opening-direction/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5129,7 +5128,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b224 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b224 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-opening-direction/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5157,7 +5156,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b224 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b224 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-opening-direction/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5189,7 +5188,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b224 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b224 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-opening-direction/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5199,7 +5198,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between 0 inclusive and 360 inclusive." ;
     sh:maxInclusive 360 ;
     sh:message "The result _MUST_ have a value between 0 inclusive and 360 inclusive." ;
@@ -5219,7 +5217,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b224 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b224 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-opening-direction/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5229,9 +5227,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:class tern:Float ;
-    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
-    sh:message "The result _MUST_ be an instance of `tern:Float`." ;
+    sh:class tern:Integer ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
     sh:target [
@@ -5248,7 +5246,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b224 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b224 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-opening-direction/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5277,7 +5275,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b232 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b232 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-position/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5309,7 +5307,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b232 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b232 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-position/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5339,7 +5337,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b232 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b232 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-position/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5367,7 +5365,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b232 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b232 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-position/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5399,7 +5397,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b232 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b232 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-position/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5428,7 +5426,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b232 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b232 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-position/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5457,7 +5455,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b232 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b232 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-position/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5486,7 +5484,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b240 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b240 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-size/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5518,7 +5516,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b240 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b240 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-size/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5548,7 +5546,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b240 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b240 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-size/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5576,7 +5574,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b240 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b240 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-size/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5608,7 +5606,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b240 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b240 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-size/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5637,7 +5635,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b240 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b240 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-size/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -5666,146 +5664,146 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n9b2a6211c6a749219f496febd30ac869b240 ;
+    urnp:examples _:ndee2cfec73494339bbf967cb272cb314b240 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-size/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b120
+_:ndee2cfec73494339bbf967cb272cb314b120
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-bores-presence/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-bores-presence/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b16
+_:ndee2cfec73494339bbf967cb272cb314b16
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/biotic-stressors-presence/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/biotic-stressors-presence/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b174
+_:ndee2cfec73494339bbf967cb272cb314b174
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/mistletoe-count-alive/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/mistletoe-count-alive/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b181
+_:ndee2cfec73494339bbf967cb272cb314b181
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/mistletoe-count-dead/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/mistletoe-count-dead/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b196
+_:ndee2cfec73494339bbf967cb272cb314b196
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-missing-status/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-missing-status/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b2
+_:ndee2cfec73494339bbf967cb272cb314b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/abiotic-stressors-presence/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/abiotic-stressors-presence/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b23
+_:ndee2cfec73494339bbf967cb272cb314b23
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-cover-percent/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-cover-percent/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b46
+_:ndee2cfec73494339bbf967cb272cb314b46
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-index-CDI/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-index-CDI/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b72
+_:ndee2cfec73494339bbf967cb272cb314b72
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/deep-crack-or-crevices-presence/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/deep-crack-or-crevices-presence/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b87
+_:ndee2cfec73494339bbf967cb272cb314b87
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b9
+_:ndee2cfec73494339bbf967cb272cb314b9
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/abnormal-growth-presence/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/abnormal-growth-presence/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b107
+_:ndee2cfec73494339bbf967cb272cb314b107
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/human-induced-damage/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/human-induced-damage/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b127
+_:ndee2cfec73494339bbf967cb272cb314b127
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-incidence/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-incidence/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b135
+_:ndee2cfec73494339bbf967cb272cb314b135
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-severity/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-severity/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b143
+_:ndee2cfec73494339bbf967cb272cb314b143
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-type/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-type/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b156
+_:ndee2cfec73494339bbf967cb272cb314b156
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/life-stage/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/life-stage/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b188
+_:ndee2cfec73494339bbf967cb272cb314b188
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-height/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-height/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b203
+_:ndee2cfec73494339bbf967cb272cb314b203
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-mortality/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-mortality/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b214
+_:ndee2cfec73494339bbf967cb272cb314b214
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-condition/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-condition/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b224
+_:ndee2cfec73494339bbf967cb272cb314b224
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-opening-direction/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-opening-direction/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b232
+_:ndee2cfec73494339bbf967cb272cb314b232
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-position/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-position/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b240
+_:ndee2cfec73494339bbf967cb272cb314b240
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-size/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-size/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b30
+_:ndee2cfec73494339bbf967cb272cb314b30
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-width/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-width/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b38
+_:ndee2cfec73494339bbf967cb272cb314b38
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-incidence/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-incidence/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b53
+_:ndee2cfec73494339bbf967cb272cb314b53
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-severity/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-severity/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b61
+_:ndee2cfec73494339bbf967cb272cb314b61
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-type/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-type/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b79
+_:ndee2cfec73494339bbf967cb272cb314b79
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/diameter-at-breast-height/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/diameter-at-breast-height/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n9b2a6211c6a749219f496febd30ac869b94
+_:ndee2cfec73494339bbf967cb272cb314b94
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/growth-stage/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/growth-stage/valid.ttl"^^xsd:anyURI ;
 .

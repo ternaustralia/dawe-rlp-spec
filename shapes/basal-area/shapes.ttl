@@ -15,13 +15,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _plant community_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b[`plant community`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _plant community_ or _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:in (
+            <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
+            <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+        ) ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b[`plant community`] or http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -33,9 +35,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db2 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -48,8 +50,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
-    sh:sparql
-        [
+    sh:sparql [
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
     PREFIX unit: <http://qudt.org/vocab/unit/>
@@ -65,10 +66,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?result rdf:value ?value .
         filter (?simple != ?value)
     }
-    """ ;
+    """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db2 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -84,8 +85,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minCount 1 ;
     sh:name "Site visit" ;
     sh:path tern:hasSiteVisit ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -97,9 +97,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db2 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -114,8 +114,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The result _MUST_ have `unit:M2-PER-HA` as the value for `tern:unit`." ;
     sh:name "Unit of measure" ;
     sh:path tern:unit ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -126,9 +125,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:observedProperty 
         <https://linked.data.gov.au/def/nrm/f437f23a-7965-4bae-9dc3-2aead06786ec> ;
                 sosa:hasResult ?this .
-        }""" ;
+        }"""
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db2 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -145,8 +144,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f`." ;
     sh:name "Method type of used procedure" ;
     sh:path tern:hasMethod ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -159,9 +157,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:usedProcedure ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db2 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -177,8 +175,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minExclusive 0 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -189,9 +186,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:observedProperty 
         <https://linked.data.gov.au/def/nrm/f437f23a-7965-4bae-9dc3-2aead06786ec> ;
                 sosa:hasResult ?this .
-        }""" ;
+        }"""
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db2 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -206,8 +203,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -219,9 +215,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db2 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -236,8 +232,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -249,9 +244,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db10 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b12 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -264,8 +259,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
-    sh:sparql
-        [
+    sh:sparql [
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
     PREFIX unit: <http://qudt.org/vocab/unit/>
@@ -281,10 +275,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?result rdf:value ?value .
         filter (?simple != ?value)
     }
-    """ ;
+    """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db10 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b12 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -300,8 +294,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minCount 1 ;
     sh:name "Site visit" ;
     sh:path tern:hasSiteVisit ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -313,9 +306,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db10 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b12 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -332,8 +325,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f`." ;
     sh:name "Method type of used procedure" ;
     sh:path tern:hasMethod ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -346,9 +338,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:usedProcedure ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db10 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b12 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -364,8 +356,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minInclusive 0 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -376,9 +367,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:observedProperty 
         <https://linked.data.gov.au/def/nrm/36580cad-0509-4642-a450-47f3433ad244> ;
                 sosa:hasResult ?this .
-        }""" ;
+        }"""
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db10 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b12 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -393,8 +384,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -406,9 +396,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db10 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b12 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -423,8 +413,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
     sh:name "Datatype" ;
     sh:path rdf:value ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -435,9 +424,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:observedProperty 
         <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
                 sosa:hasResult ?this .
-        }""" ;
+        }"""
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db17 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b19 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -452,8 +441,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -465,9 +453,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db17 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b19 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -480,8 +468,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
-    sh:sparql
-        [
+    sh:sparql [
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
     PREFIX unit: <http://qudt.org/vocab/unit/>
@@ -497,10 +484,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?result rdf:value ?value .
         filter (?simple != ?value)
     }
-    """ ;
+    """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db17 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b19 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -516,8 +503,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minCount 1 ;
     sh:name "Site visit" ;
     sh:path tern:hasSiteVisit ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -529,9 +515,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db17 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b19 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -548,8 +534,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f`." ;
     sh:name "Method type of used procedure" ;
     sh:path tern:hasMethod ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -562,9 +547,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:usedProcedure ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db17 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b19 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -579,8 +564,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The result _MUST_ be an instance of `tern:Text`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -592,9 +576,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db17 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b19 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -609,8 +593,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -622,9 +605,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db24 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b26 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/in-trees-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -637,8 +620,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
-    sh:sparql
-        [
+    sh:sparql [
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
     PREFIX unit: <http://qudt.org/vocab/unit/>
@@ -654,10 +636,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?result rdf:value ?value .
         filter (?simple != ?value)
     }
-    """ ;
+    """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db24 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b26 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/in-trees-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -673,8 +655,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minCount 1 ;
     sh:name "Site visit" ;
     sh:path tern:hasSiteVisit ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -686,9 +667,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db24 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b26 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/in-trees-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -705,8 +686,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f`." ;
     sh:name "Method type of used procedure" ;
     sh:path tern:hasMethod ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -719,9 +699,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:usedProcedure ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db24 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b26 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/in-trees-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -732,13 +712,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
     sh:datatype xsd:integer ;
-    sh:description "Value _MUST_ be greater than or equal to 7." ;
-    sh:message "The result _MUST_ be greater than or equal to 7." ;
-    sh:minInclusive 7 ;
+    sh:description "Value _MUST_ be non-negative." ;
+    sh:message "The result _MUST_ have a non-negative value." ;
+    sh:minInclusive 0 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -749,9 +728,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:observedProperty 
         <https://linked.data.gov.au/def/nrm/8fea241f-8e98-4814-b9b9-db1bd5446910> ;
                 sosa:hasResult ?this .
-        }""" ;
+        }"""
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db24 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b26 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/in-trees-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -766,8 +745,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -779,9 +757,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db24 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b26 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/in-trees-count/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -796,8 +774,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b[`plant community`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -809,9 +786,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db31 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b33 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -824,8 +801,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
-    sh:sparql
-        [
+    sh:sparql [
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
     PREFIX unit: <http://qudt.org/vocab/unit/>
@@ -841,10 +817,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?result rdf:value ?value .
         filter (?simple != ?value)
     }
-    """ ;
+    """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db31 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b33 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -860,8 +836,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minCount 1 ;
     sh:name "Site visit" ;
     sh:path tern:hasSiteVisit ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -873,9 +848,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db31 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b33 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -890,8 +865,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The result _MUST_ have `unit:M2-PER-HA` as the value for `tern:unit`." ;
     sh:name "Unit of measure" ;
     sh:path tern:unit ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -902,9 +876,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:observedProperty 
         <https://linked.data.gov.au/def/nrm/f437f23a-7965-4bae-9dc3-2aead06786ec> ;
                 sosa:hasResult ?this .
-        }""" ;
+        }"""
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db31 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b33 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -921,8 +895,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/5a00862b-a885-472e-8bee-561ec502653f`." ;
     sh:name "Method type of used procedure" ;
     sh:path tern:hasMethod ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -935,9 +908,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:usedProcedure ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db31 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b33 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -953,8 +926,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minExclusive 0 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -965,9 +937,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:observedProperty 
         <https://linked.data.gov.au/def/nrm/f437f23a-7965-4bae-9dc3-2aead06786ec> ;
                 sosa:hasResult ?this .
-        }""" ;
+        }"""
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db31 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b33 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -982,8 +954,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -995,9 +966,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db31 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b33 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1012,8 +983,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1025,9 +995,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db39 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b41 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1040,8 +1010,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
-    sh:sparql
-        [
+    sh:sparql [
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
     PREFIX unit: <http://qudt.org/vocab/unit/>
@@ -1057,10 +1026,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?result rdf:value ?value .
         filter (?simple != ?value)
     }
-    """ ;
+    """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db39 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b41 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1076,8 +1045,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minCount 1 ;
     sh:name "Site visit" ;
     sh:path tern:hasSiteVisit ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1089,9 +1057,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db39 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b41 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1106,8 +1074,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The result _MUST_ have `unit:CentiM` as the value for `tern:unit`." ;
     sh:name "Unit of measure" ;
     sh:path tern:unit ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1118,9 +1085,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:observedProperty 
         <https://linked.data.gov.au/def/nrm/bf1a9efa-a3f8-4fdb-a981-02a7b49a66cc> ;
                 sosa:hasResult ?this .
-        }""" ;
+        }"""
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db39 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b41 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1137,8 +1104,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/5a00862b-a885-472e-8bee-561ec502653f`." ;
     sh:name "Method type of used procedure" ;
     sh:path tern:hasMethod ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1151,9 +1117,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:usedProcedure ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db39 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b41 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1163,14 +1129,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:datatype xsd:float ;
     sh:description "Value _MUST_ be be greater than 15." ;
     sh:message "The result _MUST_ be be greater than 15." ;
     sh:minExclusive 15 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1181,9 +1145,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:observedProperty 
         <https://linked.data.gov.au/def/nrm/bf1a9efa-a3f8-4fdb-a981-02a7b49a66cc> ;
                 sosa:hasResult ?this .
-        }""" ;
+        }"""
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db39 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b41 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1193,13 +1157,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:class tern:Float ;
-    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
-    sh:message "The result _MUST_ be an instance of `tern:Float`." ;
+    sh:class tern:Integer ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1211,9 +1174,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db39 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b41 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1228,8 +1191,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1241,9 +1203,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db47 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b49 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1256,8 +1218,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
-    sh:sparql
-        [
+    sh:sparql [
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
     PREFIX unit: <http://qudt.org/vocab/unit/>
@@ -1273,10 +1234,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?result rdf:value ?value .
         filter (?simple != ?value)
     }
-    """ ;
+    """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db47 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b49 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1292,8 +1253,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minCount 1 ;
     sh:name "Site visit" ;
     sh:path tern:hasSiteVisit ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1305,9 +1265,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db47 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b49 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1322,8 +1282,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The result _MUST_ have `unit:CentiM` as the value for `tern:unit`." ;
     sh:name "Unit of measure" ;
     sh:path tern:unit ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1334,9 +1293,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:observedProperty 
         <https://linked.data.gov.au/def/nrm/6e1c8b97-3655-4a22-9647-02f2c756e789> ;
                 sosa:hasResult ?this .
-        }""" ;
+        }"""
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db47 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b49 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1353,8 +1312,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/5a00862b-a885-472e-8bee-561ec502653f`." ;
     sh:name "Method type of used procedure" ;
     sh:path tern:hasMethod ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1367,9 +1325,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:usedProcedure ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db47 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b49 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1379,14 +1337,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:datatype xsd:float ;
     sh:description "Value _MUST_ be greater than or equal to 5." ;
     sh:message "The result _MUST_ be greater than or equal to 5." ;
     sh:minInclusive 5 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1397,9 +1353,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:observedProperty 
         <https://linked.data.gov.au/def/nrm/6e1c8b97-3655-4a22-9647-02f2c756e789> ;
                 sosa:hasResult ?this .
-        }""" ;
+        }"""
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db47 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b49 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1409,13 +1365,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:class tern:Float ;
-    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
-    sh:message "The result _MUST_ be an instance of `tern:Float`." ;
+    sh:class tern:Integer ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1427,9 +1382,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db47 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b49 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1444,8 +1399,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
     sh:name "Datatype" ;
     sh:path rdf:value ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1456,9 +1410,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:observedProperty 
         <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
                 sosa:hasResult ?this .
-        }""" ;
+        }"""
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db55 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b57 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1473,8 +1427,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1486,9 +1439,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db55 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b57 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1501,8 +1454,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
-    sh:sparql
-        [
+    sh:sparql [
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
     PREFIX unit: <http://qudt.org/vocab/unit/>
@@ -1518,10 +1470,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?result rdf:value ?value .
         filter (?simple != ?value)
     }
-    """ ;
+    """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db55 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b57 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1537,8 +1489,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minCount 1 ;
     sh:name "Site visit" ;
     sh:path tern:hasSiteVisit ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1550,9 +1501,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db55 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b57 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1569,8 +1520,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/5a00862b-a885-472e-8bee-561ec502653f`." ;
     sh:name "Method type of used procedure" ;
     sh:path tern:hasMethod ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1583,9 +1533,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:usedProcedure ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db55 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b57 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1600,8 +1550,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The result _MUST_ be an instance of `tern:Text`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1613,9 +1562,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db55 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b57 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1630,8 +1579,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1643,9 +1591,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db62 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b64 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1658,15 +1606,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     reg:status reg:statusSubmitted ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Plant statuses controlled vocabulary." ;
     sh:in (
-        <https://linked.data.gov.au/def/nrm/2fd1ed97-3e7b-59a0-8d93-9be76f276071>
-        <https://linked.data.gov.au/def/nrm/e237bdc2-8d42-52ba-9885-ee9ab013106d>
-        <https://linked.data.gov.au/def/nrm/00e4dd62-fabe-5fb4-83b1-e2cf93e6a792>
-    ) ;
+            <https://linked.data.gov.au/def/nrm/2fd1ed97-3e7b-59a0-8d93-9be76f276071>
+            <https://linked.data.gov.au/def/nrm/e237bdc2-8d42-52ba-9885-ee9ab013106d>
+            <https://linked.data.gov.au/def/nrm/00e4dd62-fabe-5fb4-83b1-e2cf93e6a792>
+        ) ;
     sh:message "The value of `rdf:value` _MUST_ exist in the Plant statuses controlled vocabulary." ;
     sh:name "Result value" ;
     sh:path rdf:value ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1677,9 +1624,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:observedProperty 
         <https://linked.data.gov.au/def/nrm/ddd0c631-bfdd-4b0f-88de-a5eb1a0181c6> ;
                 sosa:hasResult ?this .
-        }""" ;
+        }"""
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db62 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b64 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1701,8 +1648,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
-    sh:sparql
-        [
+    sh:sparql [
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
     PREFIX unit: <http://qudt.org/vocab/unit/>
@@ -1718,10 +1664,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?result rdf:value ?value .
         filter (?simple != ?value)
     }
-    """ ;
+    """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db62 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b64 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1737,8 +1683,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minCount 1 ;
     sh:name "Site visit" ;
     sh:path tern:hasSiteVisit ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1750,9 +1695,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db62 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b64 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1769,8 +1714,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/5a00862b-a885-472e-8bee-561ec502653f`." ;
     sh:name "Method type of used procedure" ;
     sh:path tern:hasMethod ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1783,9 +1727,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:usedProcedure ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db62 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b64 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1800,8 +1744,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1813,9 +1756,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db62 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b64 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1832,8 +1775,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:name "Vocabulary" ;
     sh:path tern:vocabulary ;
     sh:pattern "b7368a37-a4ac-4c84-8a78-1fb9755ad849$" ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1844,9 +1786,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:observedProperty 
         <https://linked.data.gov.au/def/nrm/ddd0c631-bfdd-4b0f-88de-a5eb1a0181c6> ;
                 sosa:hasResult ?this .
-        }""" ;
+        }"""
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db62 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b64 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1861,8 +1803,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1874,9 +1815,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:hasFeatureOfInterest ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db73 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b75 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1889,16 +1830,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     reg:status reg:statusSubmitted ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Tree trunk types controlled vocabulary." ;
     sh:in (
-        <https://linked.data.gov.au/def/nrm/e67fb6b3-47ef-5b25-8e97-35fc493eda61>
-        <https://linked.data.gov.au/def/nrm/5b548f14-f064-570d-95a6-ef93070b9a4e>
-        <https://linked.data.gov.au/def/nrm/4ac9c594-9fdd-573b-ba3a-a4baa3ab9717>
-        <https://linked.data.gov.au/def/nrm/60a769a3-b575-550b-8b6c-ed1325d5a969>
-    ) ;
+            <https://linked.data.gov.au/def/nrm/e67fb6b3-47ef-5b25-8e97-35fc493eda61>
+            <https://linked.data.gov.au/def/nrm/5b548f14-f064-570d-95a6-ef93070b9a4e>
+            <https://linked.data.gov.au/def/nrm/4ac9c594-9fdd-573b-ba3a-a4baa3ab9717>
+            <https://linked.data.gov.au/def/nrm/60a769a3-b575-550b-8b6c-ed1325d5a969>
+        ) ;
     sh:message "The value of `rdf:value` _MUST_ exist in the Tree trunk types controlled vocabulary." ;
     sh:name "Result value" ;
     sh:path rdf:value ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1909,9 +1849,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:observedProperty 
         <https://linked.data.gov.au/def/nrm/3da2a8ca-c0a3-4761-8736-507255eeee68> ;
                 sosa:hasResult ?this .
-        }""" ;
+        }"""
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db73 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b75 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1933,8 +1873,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
-    sh:sparql
-        [
+    sh:sparql [
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
     PREFIX unit: <http://qudt.org/vocab/unit/>
@@ -1950,10 +1889,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?result rdf:value ?value .
         filter (?simple != ?value)
     }
-    """ ;
+    """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db73 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b75 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1969,8 +1908,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minCount 1 ;
     sh:name "Site visit" ;
     sh:path tern:hasSiteVisit ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -1982,9 +1920,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db73 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b75 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2001,8 +1939,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/5a00862b-a885-472e-8bee-561ec502653f`." ;
     sh:name "Method type of used procedure" ;
     sh:path tern:hasMethod ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -2015,9 +1952,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sosa:observedProperty ?property_uri ;
             sosa:usedProcedure ?this .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db73 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b75 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2032,8 +1969,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
     sh:name "Value type" ;
     sh:path sosa:hasResult ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
     PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -2045,9 +1981,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ?this a tern:Observation ;
             sosa:observedProperty ?property_uri .
     }
-    """ ;
+    """
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db73 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b75 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2064,8 +2000,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:name "Vocabulary" ;
     sh:path tern:vocabulary ;
     sh:pattern "9282400b-56c3-49a9-bb82-87ef74914690$" ;
-    sh:target
-        [
+    sh:target [
             a sh:SPARQLTarget ;
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -2076,58 +2011,59 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:observedProperty 
         <https://linked.data.gov.au/def/nrm/3da2a8ca-c0a3-4761-8736-507255eeee68> ;
                 sosa:hasResult ?this .
-        }""" ;
+        }"""
         ] ;
-    urnp:examples _:n450e292b2f2140588c1dd4589818927db73 ;
+    urnp:examples _:n1199d92d60574c57b847112214859d24b75 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n450e292b2f2140588c1dd4589818927db10
+_:n1199d92d60574c57b847112214859d24b12
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n450e292b2f2140588c1dd4589818927db17
+_:n1199d92d60574c57b847112214859d24b19
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n450e292b2f2140588c1dd4589818927db24
+_:n1199d92d60574c57b847112214859d24b26
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/in-trees-count/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/in-trees-count/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n450e292b2f2140588c1dd4589818927db55
+_:n1199d92d60574c57b847112214859d24b57
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n450e292b2f2140588c1dd4589818927db2
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n450e292b2f2140588c1dd4589818927db31
+_:n1199d92d60574c57b847112214859d24b33
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n450e292b2f2140588c1dd4589818927db39
+_:n1199d92d60574c57b847112214859d24b4
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/valid.ttl"^^xsd:anyURI ;
+.
+
+_:n1199d92d60574c57b847112214859d24b41
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n450e292b2f2140588c1dd4589818927db47
+_:n1199d92d60574c57b847112214859d24b49
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n450e292b2f2140588c1dd4589818927db62
+_:n1199d92d60574c57b847112214859d24b64
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/plant-mortality/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/plant-mortality/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n450e292b2f2140588c1dd4589818927db73
+_:n1199d92d60574c57b847112214859d24b75
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/valid.ttl"^^xsd:anyURI ;
 .
+

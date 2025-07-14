@@ -17,13 +17,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Float ,
+                tern:Integer ,
                 tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
+            rdf:value 33 ;
             sosa:isResultOf <urn:test:condition-protocol-shapes:valid:tree-hollow-opening-direction> ;
             tern:unit unit:DEG
         ] ;
-    sosa:hasSimpleResult "33.81"^^xsd:float ;
+    sosa:hasSimpleResult 33 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/5998d180-3fe8-5253-8af4-6aab74e87e38> ;
     sosa:phenomenonTime <https://example.com/observation/tree-hollow-opening-direction/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;

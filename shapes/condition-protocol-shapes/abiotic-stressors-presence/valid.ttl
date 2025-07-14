@@ -16,12 +16,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     sosa:hasResult [
             a
-                tern:Boolean ,
+                tern:Text ,
                 tern:Value ;
-            rdf:value true ;
+            rdf:value "present" ;
             sosa:isResultOf <urn:test:condition-protocol-shapes:valid:abiotic-stressors-presence>
         ] ;
-    sosa:hasSimpleResult true ;
+    sosa:hasSimpleResult "present" ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/3311154e-4468-59a8-a77f-d90737a9946d> ;
     sosa:phenomenonTime <https://example.com/observation/abiotic-stressors-presence/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
