@@ -58,30 +58,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:condition-protocol-shapes:invalid:canopy-cover-percent:simple-result>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:Integer ,
-                tern:Value ;
-            rdf:value 3 ;
-            sosa:isResultOf <urn:test:condition-protocol-shapes:invalid:canopy-cover-percent:simple-result>
-        ] ;
-    sosa:hasSimpleResult 2 ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e0c5ed2e-8de9-5da2-804f-7affbc962a64> ;
-    sosa:phenomenonTime <https://example.com/observation/canopy-cover-percent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:condition> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
 <urn:test:condition-protocol-shapes:invalid:canopy-cover-percent:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;

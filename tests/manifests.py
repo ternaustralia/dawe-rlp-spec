@@ -1708,7 +1708,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/condition-protocol-shapes/diameter-at-breast-height/shapes.ttl",
         valid_data_path="shapes/condition-protocol-shapes/diameter-at-breast-height/valid.ttl",
         invalid_data_path="shapes/condition-protocol-shapes/diameter-at-breast-height/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="condition-protocol-shapes-growth-stage",
@@ -1743,7 +1743,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/condition-protocol-shapes/plant-height/shapes.ttl",
         valid_data_path="shapes/condition-protocol-shapes/plant-height/valid.ttl",
         invalid_data_path="shapes/condition-protocol-shapes/plant-height/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="condition-protocol-shapes-insect-damage-type",
@@ -1757,7 +1757,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/condition-protocol-shapes/leaf-litter-depth/shapes.ttl",
         valid_data_path="shapes/condition-protocol-shapes/leaf-litter-depth/valid.ttl",
         invalid_data_path="shapes/condition-protocol-shapes/leaf-litter-depth/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="condition-protocol-shapes-plant-mortality",
@@ -1792,7 +1792,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/condition-protocol-shapes/tree-hollow-size/shapes.ttl",
         valid_data_path="shapes/condition-protocol-shapes/tree-hollow-size/valid.ttl",
         invalid_data_path="shapes/condition-protocol-shapes/tree-hollow-size/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="condition-protocol-shapes-crown-damage-type",
@@ -1820,7 +1820,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/condition-protocol-shapes/crown-damage-severity/shapes.ttl",
         valid_data_path="shapes/condition-protocol-shapes/crown-damage-severity/valid.ttl",
         invalid_data_path="shapes/condition-protocol-shapes/crown-damage-severity/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="condition-protocol-shapes-human-induced-damage",
@@ -1834,21 +1834,21 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/condition-protocol-shapes/tree-hollow-position/shapes.ttl",
         valid_data_path="shapes/condition-protocol-shapes/tree-hollow-position/valid.ttl",
         invalid_data_path="shapes/condition-protocol-shapes/tree-hollow-position/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="condition-protocol-shapes-tree-hollow-opening-direction",
         shapes_path="shapes/condition-protocol-shapes/tree-hollow-opening-direction/shapes.ttl",
         valid_data_path="shapes/condition-protocol-shapes/tree-hollow-opening-direction/valid.ttl",
         invalid_data_path="shapes/condition-protocol-shapes/tree-hollow-opening-direction/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="condition-protocol-shapes-canopy-cover-percent",
         shapes_path="shapes/condition-protocol-shapes/canopy-cover-percent/shapes.ttl",
         valid_data_path="shapes/condition-protocol-shapes/canopy-cover-percent/valid.ttl",
         invalid_data_path="shapes/condition-protocol-shapes/canopy-cover-percent/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="condition-protocol-shapes-tree-condition",
@@ -1862,7 +1862,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/condition-protocol-shapes/flowering-intensity/shapes.ttl",
         valid_data_path="shapes/condition-protocol-shapes/flowering-intensity/valid.ttl",
         invalid_data_path="shapes/condition-protocol-shapes/flowering-intensity/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="condition-protocol-shapes-abiotic-stressors-presence",
@@ -1876,7 +1876,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/condition-protocol-shapes/crown-damage-incidence/shapes.ttl",
         valid_data_path="shapes/condition-protocol-shapes/crown-damage-incidence/valid.ttl",
         invalid_data_path="shapes/condition-protocol-shapes/crown-damage-incidence/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="condition-protocol-shapes-tree-mallee-or-mulga",
@@ -1897,14 +1897,14 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/condition-protocol-shapes/insect-damage-severity/shapes.ttl",
         valid_data_path="shapes/condition-protocol-shapes/insect-damage-severity/valid.ttl",
         invalid_data_path="shapes/condition-protocol-shapes/insect-damage-severity/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="condition-protocol-shapes-insect-damage-incidence",
         shapes_path="shapes/condition-protocol-shapes/insect-damage-incidence/shapes.ttl",
         valid_data_path="shapes/condition-protocol-shapes/insect-damage-incidence/valid.ttl",
         invalid_data_path="shapes/condition-protocol-shapes/insect-damage-incidence/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="basal-area-dbh-protocol-shapes-diameter-at-breast-height",
