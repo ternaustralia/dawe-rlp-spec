@@ -1848,7 +1848,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/condition-protocol-shapes/canopy-cover-percent/shapes.ttl",
         valid_data_path="shapes/condition-protocol-shapes/canopy-cover-percent/valid.ttl",
         invalid_data_path="shapes/condition-protocol-shapes/canopy-cover-percent/invalid.ttl",
-        expected_failures=6,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="condition-protocol-shapes-tree-condition",
@@ -2590,7 +2590,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/diameter-at-breast-height/shapes.ttl",
         valid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/diameter-at-breast-height/valid.ttl",
         invalid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/diameter-at-breast-height/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="recruitment-survivorship-protocol-shapes-growth-stage",
@@ -2604,7 +2604,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-width/shapes.ttl",
         valid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-width/valid.ttl",
         invalid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-width/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="recruitment-survivorship-protocol-shapes-mistletoe-count-alive",
@@ -2625,7 +2625,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-height/shapes.ttl",
         valid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-height/valid.ttl",
         invalid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/plant-height/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="recruitment-survivorship-protocol-shapes-insect-damage-type",
@@ -2674,7 +2674,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-size/shapes.ttl",
         valid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-size/valid.ttl",
         invalid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-size/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="recruitment-survivorship-protocol-shapes-crown-damage-type",
@@ -2702,7 +2702,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-severity/shapes.ttl",
         valid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-severity/valid.ttl",
         invalid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-severity/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="recruitment-survivorship-protocol-shapes-human-induced-damage",
@@ -2716,14 +2716,14 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-position/shapes.ttl",
         valid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-position/valid.ttl",
         invalid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-position/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="recruitment-survivorship-protocol-shapes-tree-hollow-opening-direction",
         shapes_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-opening-direction/shapes.ttl",
         valid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-opening-direction/valid.ttl",
         invalid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/tree-hollow-opening-direction/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="recruitment-survivorship-protocol-shapes-canopy-cover-percent",
@@ -2751,7 +2751,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-incidence/shapes.ttl",
         valid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-incidence/valid.ttl",
         invalid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/crown-damage-incidence/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="recruitment-survivorship-protocol-shapes-mistletoe-count-dead",
@@ -2765,14 +2765,14 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-severity/shapes.ttl",
         valid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-severity/valid.ttl",
         invalid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-severity/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="recruitment-survivorship-protocol-shapes-insect-damage-incidence",
         shapes_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-incidence/shapes.ttl",
         valid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-incidence/valid.ttl",
         invalid_data_path="shapes/recruitment/recruitment-survivorship-protocol-shapes/insect-damage-incidence/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="vertebrate-fauna-active-and-passive-searching-protocol-shapes-weather-site-cloud-cover",

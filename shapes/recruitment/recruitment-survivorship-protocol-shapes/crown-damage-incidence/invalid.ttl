@@ -61,31 +61,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:recruitment-survivorship-protocol-shapes:invalid:crown-damage-incidence:simple-result>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:Float ,
-                tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:crown-damage-incidence:simple-result> ;
-            tern:unit unit:PERCENT
-        ] ;
-    sosa:hasSimpleResult "13.56"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e4b7c6db-1471-558d-9a85-98448fcb2139> ;
-    sosa:phenomenonTime <https://example.com/observation/crown-damage-incidence/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:recruitment-survivorship> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
 <urn:test:recruitment-survivorship-protocol-shapes:invalid:crown-damage-incidence:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;

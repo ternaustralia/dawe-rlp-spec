@@ -4,6 +4,7 @@ PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -33,39 +34,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n30949ebc9d2842489055a0474d5e24e7b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-cover-percent/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:recruitment-survivorship-protocol-shapes:canopy-cover-percent:simple-result>
-    a
-        sh:NodeShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
-    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
-    sh:name "Simple result" ;
-    sh:sparql [
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select $this {
-        $this a tern:Observation ;
-            sosa:observedProperty 
-    <https://linked.data.gov.au/def/nrm/e0c5ed2e-8de9-5da2-804f-7affbc962a64>
-     ;
-            sosa:hasSimpleResult ?simple ;
-            sosa:hasResult ?result .
-        ?result rdf:value ?value .
-        filter (?simple != ?value)
-    }
-    """
-        ] ;
-    sh:targetClass tern:Observation ;
-    urnp:examples _:n30949ebc9d2842489055a0474d5e24e7b2 ;
+    urnp:examples _:nb5a24e67621547d38c63ce925d39b9d0b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-cover-percent/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -95,7 +64,35 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n30949ebc9d2842489055a0474d5e24e7b2 ;
+    urnp:examples _:nb5a24e67621547d38c63ce925d39b9d0b2 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-cover-percent/shapes.ttl"^^xsd:anyURI ;
+.
+
+<urn:shapes:recruitment-survivorship-protocol-shapes:canopy-cover-percent:unit-of-measure>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    sh:description "Result value's unit of measure _MUST_ have the value `unit:PERCENT`." ;
+    sh:hasValue unit:PERCENT ;
+    sh:message "The result _MUST_ have `unit:PERCENT` as the value for `tern:unit`." ;
+    sh:name "Unit of measure" ;
+    sh:path tern:unit ;
+    sh:target [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/e0c5ed2e-8de9-5da2-804f-7affbc962a64> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ;
+    urnp:examples _:nb5a24e67621547d38c63ce925d39b9d0b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-cover-percent/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -127,7 +124,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n30949ebc9d2842489055a0474d5e24e7b2 ;
+    urnp:examples _:nb5a24e67621547d38c63ce925d39b9d0b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-cover-percent/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -157,7 +154,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n30949ebc9d2842489055a0474d5e24e7b2 ;
+    urnp:examples _:nb5a24e67621547d38c63ce925d39b9d0b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-cover-percent/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -186,11 +183,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n30949ebc9d2842489055a0474d5e24e7b2 ;
+    urnp:examples _:nb5a24e67621547d38c63ce925d39b9d0b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-cover-percent/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n30949ebc9d2842489055a0474d5e24e7b2
+_:nb5a24e67621547d38c63ce925d39b9d0b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-cover-percent/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-survivorship-protocol-shapes/canopy-cover-percent/valid.ttl"^^xsd:anyURI ;
 .

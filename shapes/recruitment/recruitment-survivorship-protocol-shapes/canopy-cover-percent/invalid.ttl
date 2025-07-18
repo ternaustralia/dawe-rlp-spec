@@ -2,6 +2,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -24,7 +25,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Integer ,
                 tern:Value ;
             rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:canopy-cover-percent:datatype>
+            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:canopy-cover-percent:datatype> ;
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult "33.81"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/e0c5ed2e-8de9-5da2-804f-7affbc962a64> ;
@@ -48,33 +50,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Integer ,
                 tern:Value ;
             rdf:value 3 ;
-            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:canopy-cover-percent:feature-type>
+            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:canopy-cover-percent:feature-type> ;
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult 3 ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e0c5ed2e-8de9-5da2-804f-7affbc962a64> ;
-    sosa:phenomenonTime <https://example.com/observation/canopy-cover-percent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:recruitment-survivorship> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
-<urn:test:recruitment-survivorship-protocol-shapes:invalid:canopy-cover-percent:simple-result>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:Integer ,
-                tern:Value ;
-            rdf:value 3 ;
-            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:canopy-cover-percent:simple-result>
-        ] ;
-    sosa:hasSimpleResult 2 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/e0c5ed2e-8de9-5da2-804f-7affbc962a64> ;
     sosa:phenomenonTime <https://example.com/observation/canopy-cover-percent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -96,13 +75,39 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Integer ,
                 tern:Value ;
             rdf:value 3 ;
-            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:canopy-cover-percent:site-visit>
+            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:canopy-cover-percent:site-visit> ;
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult 3 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/e0c5ed2e-8de9-5da2-804f-7affbc962a64> ;
     sosa:phenomenonTime <https://example.com/observation/canopy-cover-percent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
     sosa:usedProcedure <urn:test:procedure:recruitment-survivorship> ;
+.
+
+<urn:test:recruitment-survivorship-protocol-shapes:invalid:canopy-cover-percent:unit-of-measure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result unit of measure" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/60d7edf8-98c6-43e9-841c-e176c334d270>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Integer ,
+                tern:Value ;
+            rdf:value 33 ;
+            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:canopy-cover-percent:unit-of-measure> ;
+            tern:unit <urn:fake:unit>
+        ] ;
+    sosa:hasSimpleResult 33 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/e0c5ed2e-8de9-5da2-804f-7affbc962a64> ;
+    sosa:phenomenonTime <https://example.com/observation/canopy-cover-percent/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:recruitment-survivorship> ;
+    tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:recruitment-survivorship-protocol-shapes:invalid:canopy-cover-percent:used-procedure>
@@ -119,7 +124,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Integer ,
                 tern:Value ;
             rdf:value 3 ;
-            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:canopy-cover-percent:used-procedure>
+            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:canopy-cover-percent:used-procedure> ;
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult 3 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/e0c5ed2e-8de9-5da2-804f-7affbc962a64> ;
@@ -144,6 +150,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Value ;
             rdf:value -1 ;
             sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:canopy-cover-percent:value-range> ;
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult -1 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/e0c5ed2e-8de9-5da2-804f-7affbc962a64> ;
@@ -165,7 +172,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasResult [
             a tern:Value ;
             rdf:value 3 ;
-            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:canopy-cover-percent:value-type>
+            sosa:isResultOf <urn:test:recruitment-survivorship-protocol-shapes:invalid:canopy-cover-percent:value-type> ;
+            tern:unit unit:PERCENT
         ] ;
     sosa:hasSimpleResult 3 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/e0c5ed2e-8de9-5da2-804f-7affbc962a64> ;
