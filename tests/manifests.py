@@ -2121,7 +2121,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/camera-trapping/camera-traps-deployment-protocol-shapes/slope/shapes.ttl",
         valid_data_path="shapes/camera-trapping/camera-traps-deployment-protocol-shapes/slope/valid.ttl",
         invalid_data_path="shapes/camera-trapping/camera-traps-deployment-protocol-shapes/slope/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="camera-traps-deployment-protocol-shapes-aspect",

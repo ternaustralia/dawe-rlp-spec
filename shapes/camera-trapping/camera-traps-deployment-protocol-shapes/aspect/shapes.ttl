@@ -4,6 +4,7 @@ PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -33,39 +34,35 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb2414acd5c5c4019a89cef7db8eca739b2 ;
+    urnp:examples _:n6643734a7a9c4448b41d48b68b78ee45b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-deployment-protocol-shapes:aspect:simple-result>
+<urn:shapes:camera-traps-deployment-protocol-shapes:aspect:unit-of-measure>
     a
-        sh:NodeShape ,
+        sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
-    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
-    sh:name "Simple result" ;
-    sh:sparql [
+    sh:description "Result value's unit of measure _MUST_ have the value `unit:DEG`." ;
+    sh:hasValue unit:DEG ;
+    sh:message "The result _MUST_ have `unit:DEG` as the value for `tern:unit`." ;
+    sh:name "Unit of measure" ;
+    sh:path tern:unit ;
+    sh:target [
+            a sh:SPARQLTarget ;
             sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select $this {
-        $this a tern:Observation ;
-            sosa:observedProperty 
-    <https://linked.data.gov.au/def/nrm/0e0423c6-0dc3-40aa-9776-410a94299256>
-     ;
-            sosa:hasSimpleResult ?simple ;
-            sosa:hasResult ?result .
-        ?result rdf:value ?value .
-        filter (?simple != ?value)
-    }
-    """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/0e0423c6-0dc3-40aa-9776-410a94299256> ;
+                sosa:hasResult ?this .
+        }"""
         ] ;
-    sh:targetClass tern:Observation ;
-    urnp:examples _:nb2414acd5c5c4019a89cef7db8eca739b2 ;
+    urnp:examples _:n6643734a7a9c4448b41d48b68b78ee45b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -97,7 +94,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb2414acd5c5c4019a89cef7db8eca739b2 ;
+    urnp:examples _:n6643734a7a9c4448b41d48b68b78ee45b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -127,7 +124,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nb2414acd5c5c4019a89cef7db8eca739b2 ;
+    urnp:examples _:n6643734a7a9c4448b41d48b68b78ee45b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -156,11 +153,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nb2414acd5c5c4019a89cef7db8eca739b2 ;
+    urnp:examples _:n6643734a7a9c4448b41d48b68b78ee45b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nb2414acd5c5c4019a89cef7db8eca739b2
+_:n6643734a7a9c4448b41d48b68b78ee45b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/valid.ttl"^^xsd:anyURI ;
 .
