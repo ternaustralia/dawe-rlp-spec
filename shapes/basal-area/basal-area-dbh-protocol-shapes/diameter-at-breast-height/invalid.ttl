@@ -38,33 +38,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:basal-area-dbh-protocol-shapes:invalid:diameter-at-breast-height:simple-result>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
-    sosa:hasFeatureOfInterest
-        [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
-        ] ;
-    sosa:hasResult
-        [
-            a
-                tern:Integer ,
-                tern:Value ;
-            rdf:value 33 ;
-            sosa:isResultOf <urn:test:basal-area-dbh-protocol-shapes:invalid:diameter-at-breast-height:simple-result> ;
-            tern:unit unit:CentiM ;
-        ] ;
-    sosa:hasSimpleResult 25 ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/6e1c8b97-3655-4a22-9647-02f2c756e789> ;
-    sosa:phenomenonTime <https://example.com/observation/diameter-at-breast-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:basal-area-dbh> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
 <urn:test:basal-area-dbh-protocol-shapes:invalid:diameter-at-breast-height:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;

@@ -1911,14 +1911,14 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/shapes.ttl",
         valid_data_path="shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/valid.ttl",
         invalid_data_path="shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="basal-area-dbh-protocol-shapes-basal-area",
         shapes_path="shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/shapes.ttl",
         valid_data_path="shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/valid.ttl",
         invalid_data_path="shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="basal-area-dbh-protocol-shapes-field-species-name",
@@ -1946,14 +1946,14 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/shapes.ttl",
         valid_data_path="shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/valid.ttl",
         invalid_data_path="shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="basal-area-basal-wedge-protocol-shapes-basal-area",
         shapes_path="shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/shapes.ttl",
         valid_data_path="shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/valid.ttl",
         invalid_data_path="shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="basal-area-basal-wedge-protocol-shapes-field-species-name",
