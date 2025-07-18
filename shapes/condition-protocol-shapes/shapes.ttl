@@ -1794,9 +1794,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "Value _MUST_ be greater than or equal to 5." ;
-    sh:message "The result _MUST_ be greater than or equal to 5." ;
-    sh:minInclusive 5 ;
+    sh:description "Value _MUST_ be positive." ;
+    sh:message "The result _MUST_ be positive." ;
+    sh:minExclusive 0 ;
     sh:name "Value range" ;
     sh:path rdf:value ;
     sh:target [
