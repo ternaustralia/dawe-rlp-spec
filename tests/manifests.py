@@ -1141,14 +1141,14 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/plant-tissue-vouchering/plant-tissue-vouchering-enhanced-protocol-shapes/shortest-distance-between-replicates/shapes.ttl",
         valid_data_path="shapes/plant-tissue-vouchering/plant-tissue-vouchering-enhanced-protocol-shapes/shortest-distance-between-replicates/valid.ttl",
         invalid_data_path="shapes/plant-tissue-vouchering/plant-tissue-vouchering-enhanced-protocol-shapes/shortest-distance-between-replicates/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="plant-tissue-vouchering-standard-protocol-shapes-shortest-distance-between-replicates",
         shapes_path="shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/shapes.ttl",
         valid_data_path="shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/valid.ttl",
         invalid_data_path="shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="floristics-enhanced-protocol-shapes-growth-form",
