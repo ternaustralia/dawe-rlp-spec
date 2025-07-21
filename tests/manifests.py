@@ -1253,7 +1253,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl",
         valid_data_path="shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/valid.ttl",
         invalid_data_path="shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="plot-description-standard-protocol-shapes-aspect",
@@ -1323,7 +1323,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/slope/shapes.ttl",
         valid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/slope/valid.ttl",
         invalid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/slope/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="plot-description-enhanced-protocol-shapes-relief",
@@ -1379,7 +1379,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/homogeneity-measure/shapes.ttl",
         valid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/homogeneity-measure/valid.ttl",
         invalid_data_path="shapes/plot-description/plot-description-enhanced-protocol-shapes/homogeneity-measure/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="plot-description-enhanced-protocol-shapes-aspect",
