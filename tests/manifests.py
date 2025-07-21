@@ -1064,7 +1064,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/cover/cover-standard-protocol-shapes/plant-height/shapes.ttl",
         valid_data_path="shapes/cover/cover-standard-protocol-shapes/plant-height/valid.ttl",
         invalid_data_path="shapes/cover/cover-standard-protocol-shapes/plant-height/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="cover-standard-protocol-shapes-in-canopy-sky",
@@ -1113,7 +1113,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/cover/cover-enhanced-protocol-shapes/plant-height/shapes.ttl",
         valid_data_path="shapes/cover/cover-enhanced-protocol-shapes/plant-height/valid.ttl",
         invalid_data_path="shapes/cover/cover-enhanced-protocol-shapes/plant-height/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="cover-enhanced-protocol-shapes-in-canopy-sky",
