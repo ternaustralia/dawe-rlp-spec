@@ -2163,7 +2163,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/fire-protocol-shapes/maximum-trunk-char-height/shapes.ttl",
         valid_data_path="shapes/fire-protocol-shapes/maximum-trunk-char-height/valid.ttl",
         invalid_data_path="shapes/fire-protocol-shapes/maximum-trunk-char-height/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="fire-protocol-shapes-field-species-name",
@@ -2184,7 +2184,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/fire-protocol-shapes/plant-height/shapes.ttl",
         valid_data_path="shapes/fire-protocol-shapes/plant-height/valid.ttl",
         invalid_data_path="shapes/fire-protocol-shapes/plant-height/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="fire-protocol-shapes-in-canopy-sky",
