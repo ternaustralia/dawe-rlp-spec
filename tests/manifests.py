@@ -651,7 +651,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/percent-of-quadrat-affected/shapes.ttl",
         valid_data_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/percent-of-quadrat-affected/valid.ttl",
         invalid_data_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/percent-of-quadrat-affected/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="herbivory-and-physical-damage-active-search-protocol-shapes-physical-damage-type",
@@ -665,7 +665,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/foliage-damage-extent/shapes.ttl",
         valid_data_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/foliage-damage-extent/valid.ttl",
         invalid_data_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/foliage-damage-extent/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="herbivory-and-physical-damage-active-search-protocol-shapes-herbivory-damage-type",
@@ -686,14 +686,14 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/lowest-damage-height/shapes.ttl",
         valid_data_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/lowest-damage-height/valid.ttl",
         invalid_data_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/lowest-damage-height/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="herbivory-and-physical-damage-active-search-protocol-shapes-highest-damage-height",
         shapes_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/highest-damage-height/shapes.ttl",
         valid_data_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/highest-damage-height/valid.ttl",
         invalid_data_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/highest-damage-height/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="herbivory-and-physical-damage-active-search-protocol-shapes-grazing-severity-class",
@@ -714,7 +714,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/damage-area/shapes.ttl",
         valid_data_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/damage-area/valid.ttl",
         invalid_data_path="shapes/herbivory-and-physical-damage/active-search-protocol-shapes/damage-area/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes-life-stage",
@@ -742,7 +742,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/shapes.ttl",
         valid_data_path="shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/valid.ttl",
         invalid_data_path="shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes-physical-damage-type",
@@ -756,7 +756,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/foliage-damage-extent/shapes.ttl",
         valid_data_path="shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/foliage-damage-extent/valid.ttl",
         invalid_data_path="shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/foliage-damage-extent/invalid.ttl",
-        expected_failures=6,
+        expected_failures=5,
     ).astuple(),
     TestCaseItem(
         name="herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes-herbivory-damage-type",
@@ -777,14 +777,14 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/lowest-damage-height/shapes.ttl",
         valid_data_path="shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/lowest-damage-height/valid.ttl",
         invalid_data_path="shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/lowest-damage-height/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes-highest-damage-height",
         shapes_path="shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/highest-damage-height/shapes.ttl",
         valid_data_path="shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/highest-damage-height/valid.ttl",
         invalid_data_path="shapes/herbivory-and-physical-damage/off-plot-belt-transect-protocol-shapes/highest-damage-height/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes-grazing-severity-class",
@@ -833,7 +833,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/shapes.ttl",
         valid_data_path="shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/valid.ttl",
         invalid_data_path="shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes-physical-damage-type",
@@ -847,7 +847,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/foliage-damage-extent/shapes.ttl",
         valid_data_path="shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/foliage-damage-extent/valid.ttl",
         invalid_data_path="shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/foliage-damage-extent/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes-herbivory-damage-type",
@@ -868,14 +868,14 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/lowest-damage-height/shapes.ttl",
         valid_data_path="shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/lowest-damage-height/valid.ttl",
         invalid_data_path="shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/lowest-damage-height/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes-highest-damage-height",
         shapes_path="shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/highest-damage-height/shapes.ttl",
         valid_data_path="shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/highest-damage-height/valid.ttl",
         invalid_data_path="shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/highest-damage-height/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes-grazing-severity-class",
