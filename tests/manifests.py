@@ -112,7 +112,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/sign-based-fauna/track-stations-protocol-shapes/air-temperature/shapes.ttl",
         valid_data_path="shapes/sign-based-fauna/track-stations-protocol-shapes/air-temperature/valid.ttl",
         invalid_data_path="shapes/sign-based-fauna/track-stations-protocol-shapes/air-temperature/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="sign-based-fauna-survey-track-stations-protocol-shapes-fauna-growth-class",
@@ -182,7 +182,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/sign-based-fauna/vehicle-track-protocol-shapes/air-temperature/shapes.ttl",
         valid_data_path="shapes/sign-based-fauna/vehicle-track-protocol-shapes/air-temperature/valid.ttl",
         invalid_data_path="shapes/sign-based-fauna/vehicle-track-protocol-shapes/air-temperature/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="sign-based-fauna-survey-vehicle-track-protocol-shapes-fauna-growth-class",
@@ -252,7 +252,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/sign-based-fauna/plot-sign-search-protocol-shapes/air-temperature/shapes.ttl",
         valid_data_path="shapes/sign-based-fauna/plot-sign-search-protocol-shapes/air-temperature/valid.ttl",
         invalid_data_path="shapes/sign-based-fauna/plot-sign-search-protocol-shapes/air-temperature/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="sign-based-fauna-survey-plot-sign-search-protocol-shapes-fauna-growth-class",
@@ -385,7 +385,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/sign-based-fauna/off-plot-belt-transect-protocol-shapes/air-temperature/shapes.ttl",
         valid_data_path="shapes/sign-based-fauna/off-plot-belt-transect-protocol-shapes/air-temperature/valid.ttl",
         invalid_data_path="shapes/sign-based-fauna/off-plot-belt-transect-protocol-shapes/air-temperature/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="sign-based-fauna-survey-off-plot-belt-transect-protocol-shapes-fauna-growth-class",
@@ -525,7 +525,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/air-temperature/shapes.ttl",
         valid_data_path="shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/air-temperature/valid.ttl",
         invalid_data_path="shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/air-temperature/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes-fauna-growth-class",
