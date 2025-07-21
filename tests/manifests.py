@@ -2044,7 +2044,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/shapes.ttl",
         valid_data_path="shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/valid.ttl",
         invalid_data_path="shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="vegetation-mapping-protocol-shapes-field-species-name",
@@ -2058,7 +2058,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/shapes.ttl",
         valid_data_path="shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/valid.ttl",
         invalid_data_path="shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="vegetation-mapping-protocol-shapes-fire-history",
@@ -2114,7 +2114,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl",
         valid_data_path="shapes/vegetation-mapping-protocol-shapes/average-species-height/valid.ttl",
         invalid_data_path="shapes/vegetation-mapping-protocol-shapes/average-species-height/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="camera-traps-deployment-protocol-shapes-slope",
