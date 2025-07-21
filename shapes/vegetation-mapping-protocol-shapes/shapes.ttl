@@ -34,39 +34,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:vegetation-mapping-protocol-shapes:average-species-height:simple-result>
-    a
-        sh:NodeShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
-    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
-    sh:name "Simple result" ;
-    sh:sparql [
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select $this {
-        $this a tern:Observation ;
-            sosa:observedProperty 
-    <https://linked.data.gov.au/def/nrm/cea92774-6d4b-4880-8d07-1fe23c4a5e16>
-     ;
-            sosa:hasSimpleResult ?simple ;
-            sosa:hasResult ?result .
-        ?result rdf:value ?value .
-        filter (?simple != ?value)
-    }
-    """
-        ] ;
-    sh:targetClass tern:Observation ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb2 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -94,7 +62,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb2 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -126,7 +94,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb2 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -156,7 +124,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb2 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -185,7 +153,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb2 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -214,7 +182,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb9 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b8 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -252,7 +220,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb9 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b8 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -293,7 +261,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb9 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b8 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -325,7 +293,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb9 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b8 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -354,7 +322,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb9 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b8 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -384,7 +352,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb9 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b8 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -413,7 +381,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb24 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b23 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -471,7 +439,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb24 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b23 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -512,7 +480,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb24 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b23 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -544,7 +512,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb24 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b23 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -573,7 +541,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb24 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b23 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -603,7 +571,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb24 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b23 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -631,7 +599,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb59 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b58 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -660,7 +628,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb59 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b58 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -692,7 +660,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb59 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b58 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -724,7 +692,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb59 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b58 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -753,7 +721,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb59 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b58 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -782,7 +750,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb65 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b64 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -814,7 +782,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb65 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b64 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -855,7 +823,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb65 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b64 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -887,7 +855,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb65 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b64 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -916,7 +884,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb65 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b64 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -946,7 +914,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb65 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b64 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -975,39 +943,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb74 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:vegetation-mapping-protocol-shapes:foliage-projective-cover:simple-result>
-    a
-        sh:NodeShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
-    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
-    sh:name "Simple result" ;
-    sh:sparql [
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select $this {
-        $this a tern:Observation ;
-            sosa:observedProperty 
-    <https://linked.data.gov.au/def/nrm/0378976a-0018-4604-826d-1886ca5f38c3>
-     ;
-            sosa:hasSimpleResult ?simple ;
-            sosa:hasResult ?result .
-        ?result rdf:value ?value .
-        filter (?simple != ?value)
-    }
-    """
-        ] ;
-    sh:targetClass tern:Observation ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb74 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b73 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1035,7 +971,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb74 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b73 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1067,7 +1003,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb74 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b73 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1097,7 +1033,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb74 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b73 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1126,7 +1062,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb74 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b73 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1155,39 +1091,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb81 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:vegetation-mapping-protocol-shapes:homogeneity-measure:simple-result>
-    a
-        sh:NodeShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
-    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
-    sh:name "Simple result" ;
-    sh:sparql [
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select $this {
-        $this a tern:Observation ;
-            sosa:observedProperty 
-    <https://linked.data.gov.au/def/nrm/325d5ff2-8c81-484a-a422-c13ff29666a9>
-     ;
-            sosa:hasSimpleResult ?simple ;
-            sosa:hasResult ?result .
-        ?result rdf:value ?value .
-        filter (?simple != ?value)
-    }
-    """
-        ] ;
-    sh:targetClass tern:Observation ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb81 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b79 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1215,7 +1119,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb81 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b79 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1247,7 +1151,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb81 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b79 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1277,7 +1181,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb81 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b79 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1306,7 +1210,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb81 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b79 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1335,7 +1239,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb88 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b85 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1562,7 +1466,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb88 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b85 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1594,7 +1498,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb88 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b85 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1626,7 +1530,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb88 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b85 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1655,7 +1559,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb88 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b85 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1684,7 +1588,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb291 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b288 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1729,7 +1633,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb291 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b288 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1770,7 +1674,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb291 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b288 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1802,7 +1706,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb291 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b288 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1831,7 +1735,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb291 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b288 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1861,7 +1765,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb291 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b288 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1890,7 +1794,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb313 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b310 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1925,7 +1829,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb313 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b310 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1966,7 +1870,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb313 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b310 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1998,7 +1902,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb313 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b310 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2027,7 +1931,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb313 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b310 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2057,7 +1961,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb313 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b310 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2086,7 +1990,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb325 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b322 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2142,7 +2046,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb325 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b322 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2183,7 +2087,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb325 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b322 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2215,7 +2119,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb325 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b322 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2244,7 +2148,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb325 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b322 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2274,7 +2178,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb325 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b322 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2303,7 +2207,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb358 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b355 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2341,7 +2245,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb358 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b355 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2382,7 +2286,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb358 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b355 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2414,7 +2318,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb358 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b355 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2443,7 +2347,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb358 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b355 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2473,66 +2377,66 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n04de79c487ee4857b57c7405ae2fc2bfb358 ;
+    urnp:examples _:n8a572b459b304fe8bb34bdc2342bcf20b355 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n04de79c487ee4857b57c7405ae2fc2bfb59
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n04de79c487ee4857b57c7405ae2fc2bfb88
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n04de79c487ee4857b57c7405ae2fc2bfb2
+_:n8a572b459b304fe8bb34bdc2342bcf20b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n04de79c487ee4857b57c7405ae2fc2bfb24
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/valid.ttl"^^xsd:anyURI ;
+_:n8a572b459b304fe8bb34bdc2342bcf20b58
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n04de79c487ee4857b57c7405ae2fc2bfb291
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n04de79c487ee4857b57c7405ae2fc2bfb313
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n04de79c487ee4857b57c7405ae2fc2bfb325
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n04de79c487ee4857b57c7405ae2fc2bfb358
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n04de79c487ee4857b57c7405ae2fc2bfb65
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n04de79c487ee4857b57c7405ae2fc2bfb74
+_:n8a572b459b304fe8bb34bdc2342bcf20b73
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n04de79c487ee4857b57c7405ae2fc2bfb81
+_:n8a572b459b304fe8bb34bdc2342bcf20b79
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n04de79c487ee4857b57c7405ae2fc2bfb9
+_:n8a572b459b304fe8bb34bdc2342bcf20b85
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/valid.ttl"^^xsd:anyURI ;
+.
+
+_:n8a572b459b304fe8bb34bdc2342bcf20b23
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/valid.ttl"^^xsd:anyURI ;
+.
+
+_:n8a572b459b304fe8bb34bdc2342bcf20b288
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/valid.ttl"^^xsd:anyURI ;
+.
+
+_:n8a572b459b304fe8bb34bdc2342bcf20b310
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/valid.ttl"^^xsd:anyURI ;
+.
+
+_:n8a572b459b304fe8bb34bdc2342bcf20b322
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/valid.ttl"^^xsd:anyURI ;
+.
+
+_:n8a572b459b304fe8bb34bdc2342bcf20b355
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/valid.ttl"^^xsd:anyURI ;
+.
+
+_:n8a572b459b304fe8bb34bdc2342bcf20b64
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/valid.ttl"^^xsd:anyURI ;
+.
+
+_:n8a572b459b304fe8bb34bdc2342bcf20b8
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/valid.ttl"^^xsd:anyURI ;
 .
