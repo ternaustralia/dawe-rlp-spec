@@ -56,7 +56,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/fauna-aerial-survey-protocol-shapes/air-temperature/shapes.ttl",
         valid_data_path="shapes/fauna-aerial-survey-protocol-shapes/air-temperature/valid.ttl",
         invalid_data_path="shapes/fauna-aerial-survey-protocol-shapes/air-temperature/invalid.ttl",
-        expected_failures=7,
+        expected_failures=6,
     ).astuple(),
     TestCaseItem(
         name="fauna-aerial-survey-protocol-shapes-moon-phase",
