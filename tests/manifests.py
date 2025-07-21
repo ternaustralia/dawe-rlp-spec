@@ -1981,7 +1981,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/coarse-woody-debris-protocol-shapes/coarse-woody-debris-widest-diameter/shapes.ttl",
         valid_data_path="shapes/coarse-woody-debris-protocol-shapes/coarse-woody-debris-widest-diameter/valid.ttl",
         invalid_data_path="shapes/coarse-woody-debris-protocol-shapes/coarse-woody-debris-widest-diameter/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="coarse-woody-debris-protocol-shapes-coarse-woody-debris-decay-class",
@@ -1995,14 +1995,14 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/coarse-woody-debris-protocol-shapes/coarse-woody-debris-length/shapes.ttl",
         valid_data_path="shapes/coarse-woody-debris-protocol-shapes/coarse-woody-debris-length/valid.ttl",
         invalid_data_path="shapes/coarse-woody-debris-protocol-shapes/coarse-woody-debris-length/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="coarse-woody-debris-protocol-shapes-coarse-woody-debris-narrowest-diameter",
         shapes_path="shapes/coarse-woody-debris-protocol-shapes/coarse-woody-debris-narrowest-diameter/shapes.ttl",
         valid_data_path="shapes/coarse-woody-debris-protocol-shapes/coarse-woody-debris-narrowest-diameter/valid.ttl",
         invalid_data_path="shapes/coarse-woody-debris-protocol-shapes/coarse-woody-debris-narrowest-diameter/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="coarse-woody-debris-protocol-shapes-stump-regeneration",
@@ -2016,7 +2016,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/coarse-woody-debris-protocol-shapes/tree-stump-diameter/shapes.ttl",
         valid_data_path="shapes/coarse-woody-debris-protocol-shapes/tree-stump-diameter/valid.ttl",
         invalid_data_path="shapes/coarse-woody-debris-protocol-shapes/tree-stump-diameter/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="coarse-woody-debris-protocol-shapes-tree-stump-decay-class",
@@ -2030,7 +2030,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/coarse-woody-debris-protocol-shapes/tree-stump-height/shapes.ttl",
         valid_data_path="shapes/coarse-woody-debris-protocol-shapes/tree-stump-height/valid.ttl",
         invalid_data_path="shapes/coarse-woody-debris-protocol-shapes/tree-stump-height/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="vegetation-mapping-protocol-shapes-land-use-history",
