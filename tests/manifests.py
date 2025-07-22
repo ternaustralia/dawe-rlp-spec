@@ -3080,21 +3080,21 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/soils/soil-soil-bulk-density-protocol-shapes/gross-bulk-density/shapes.ttl",
         valid_data_path="shapes/soils/soil-soil-bulk-density-protocol-shapes/gross-bulk-density/valid.ttl",
         invalid_data_path="shapes/soils/soil-soil-bulk-density-protocol-shapes/gross-bulk-density/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="soil-soil-bulk-density-protocol-shapes-soil-bulk-density",
         shapes_path="shapes/soils/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/shapes.ttl",
         valid_data_path="shapes/soils/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/valid.ttl",
         invalid_data_path="shapes/soils/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="soil-soil-bulk-density-protocol-shapes-fine-earth-bulk-density",
         shapes_path="shapes/soils/soil-soil-bulk-density-protocol-shapes/fine-earth-bulk-density/shapes.ttl",
         valid_data_path="shapes/soils/soil-soil-bulk-density-protocol-shapes/fine-earth-bulk-density/valid.ttl",
         invalid_data_path="shapes/soils/soil-soil-bulk-density-protocol-shapes/fine-earth-bulk-density/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="soil-soil-site-observations-and-pit-characterisation-protocol-shapes-soil-mottle-contrast",
@@ -3143,7 +3143,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/slope/shapes.ttl",
         valid_data_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/slope/valid.ttl",
         invalid_data_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/slope/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="soil-soil-site-observations-and-pit-characterisation-protocol-shapes-soil-voids-cracks-width",
@@ -3171,7 +3171,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/soil-pH/shapes.ttl",
         valid_data_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/soil-pH/valid.ttl",
         invalid_data_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/soil-pH/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="soil-soil-site-observations-and-pit-characterisation-protocol-shapes-erosion-type",
@@ -3262,7 +3262,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/microrelief-horizontal-interval-distance/shapes.ttl",
         valid_data_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/microrelief-horizontal-interval-distance/valid.ttl",
         invalid_data_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/microrelief-horizontal-interval-distance/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="soil-soil-site-observations-and-pit-characterisation-protocol-shapes-soil-cutan-distinctness",
@@ -3353,7 +3353,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/soil-electrical-conductivity/shapes.ttl",
         valid_data_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/soil-electrical-conductivity/valid.ttl",
         invalid_data_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/soil-electrical-conductivity/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="soil-soil-site-observations-and-pit-characterisation-protocol-shapes-soil-surface-condition",
@@ -3493,7 +3493,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/microrelief-vertical-interval-distance/shapes.ttl",
         valid_data_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/microrelief-vertical-interval-distance/valid.ttl",
         invalid_data_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/microrelief-vertical-interval-distance/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="soil-soil-site-observations-and-pit-characterisation-protocol-shapes-coarse-fragments-lithology",
@@ -3570,7 +3570,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/r-horizon-depth/shapes.ttl",
         valid_data_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/r-horizon-depth/valid.ttl",
         invalid_data_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/r-horizon-depth/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="soil-soil-site-observations-and-pit-characterisation-protocol-shapes-soil-segregation-strength",
@@ -3612,7 +3612,7 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/soil-erosion-severity/shapes.ttl",
         valid_data_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/soil-erosion-severity/valid.ttl",
         invalid_data_path="shapes/soils/soil-soil-site-observations-and-pit-characterisation-protocol-shapes/soil-erosion-severity/invalid.ttl",
-        expected_failures=8,
+        expected_failures=7,
     ).astuple(),
     TestCaseItem(
         name="soil-soil-site-observations-and-pit-characterisation-protocol-shapes-coarse-fragment-distribution",

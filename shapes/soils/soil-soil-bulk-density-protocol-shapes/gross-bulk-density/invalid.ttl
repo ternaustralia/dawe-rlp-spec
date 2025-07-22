@@ -61,31 +61,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:soil-soil-bulk-density-protocol-shapes:invalid:gross-bulk-density:simple-result>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/06461021-a6c2-4175-9651-23653c2b9116>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:Float ,
-                tern:Value ;
-            rdf:value "1.51"^^xsd:float ;
-            sosa:isResultOf <urn:test:soil-soil-bulk-density-protocol-shapes:invalid:gross-bulk-density:simple-result> ;
-            tern:unit unit:GM-PER-CentiM3
-        ] ;
-    sosa:hasSimpleResult "1.356"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/a344d029-4b47-455e-89d9-a1040877a5ce> ;
-    sosa:phenomenonTime <https://example.com/observation/gross-bulk-density/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:soil-soil-bulk-density> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
 <urn:test:soil-soil-bulk-density-protocol-shapes:invalid:gross-bulk-density:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;

@@ -61,31 +61,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-erosion-severity:simple-result>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:Float ,
-                tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-erosion-severity:simple-result> ;
-            tern:unit unit:Percent
-        ] ;
-    sosa:hasSimpleResult "13.56"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/739eb13d-5d01-4ffe-b801-8720f65b813a> ;
-    sosa:phenomenonTime <https://example.com/observation/soil-erosion-severity/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:soil-soil-site-observations-and-pit-characterisation> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
 <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-erosion-severity:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
