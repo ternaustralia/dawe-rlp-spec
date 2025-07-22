@@ -34,39 +34,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:plot-description-standard-protocol-shapes:aspect:simple-result>
-    a
-        sh:NodeShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
-    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
-    sh:name "Simple result" ;
-    sh:sparql [
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select $this {
-        $this a tern:Observation ;
-            sosa:observedProperty 
-    <https://linked.data.gov.au/def/nrm/0e0423c6-0dc3-40aa-9776-410a94299256>
-     ;
-            sosa:hasSimpleResult ?simple ;
-            sosa:hasResult ?result .
-        ?result rdf:value ?value .
-        filter (?simple != ?value)
-    }
-    """
-        ] ;
-    sh:targetClass tern:Observation ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab2 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -96,7 +64,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab2 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -111,7 +79,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "The result _MUST_ have `unit:DEG` as the value for `tern:unit`." ;
     sh:name "Unit of measure" ;
     sh:path tern:unit ;
-    sh:target [
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/0e0423c6-0dc3-40aa-9776-410a94299256> ;
+                sosa:hasResult ?this .
+        }"""
+        ] ,
+        [
             a sh:SPARQLTarget ;
             sh:select """
         PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -124,7 +106,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab2 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -156,7 +138,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab2 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -186,7 +168,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab2 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -215,7 +197,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab2 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -243,7 +225,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab10 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b10 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -272,7 +254,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab10 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b10 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -304,7 +286,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab10 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b10 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -334,7 +316,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab10 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b10 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -366,7 +348,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab10 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b10 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -395,7 +377,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab10 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b10 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -424,7 +406,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab17 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b17 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -456,7 +438,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab17 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b17 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -497,7 +479,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab17 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b17 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -527,7 +509,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab17 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b17 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -559,7 +541,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab17 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b17 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -588,7 +570,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab17 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b17 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -618,7 +600,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab17 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b17 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -647,39 +629,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab27 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:plot-description-standard-protocol-shapes:homogeneity-measure:simple-result>
-    a
-        sh:NodeShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
-    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
-    sh:name "Simple result" ;
-    sh:sparql [
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select $this {
-        $this a tern:Observation ;
-            sosa:observedProperty 
-    <https://linked.data.gov.au/def/nrm/325d5ff2-8c81-484a-a422-c13ff29666a9>
-     ;
-            sosa:hasSimpleResult ?simple ;
-            sosa:hasResult ?result .
-        ?result rdf:value ?value .
-        filter (?simple != ?value)
-    }
-    """
-        ] ;
-    sh:targetClass tern:Observation ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab27 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b27 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -709,7 +659,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab27 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b27 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -737,7 +687,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab27 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b27 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -769,7 +719,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab27 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b27 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -798,7 +748,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab27 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b27 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -827,7 +777,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab27 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b27 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -855,7 +805,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab35 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b34 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -884,7 +834,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab35 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b34 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -916,7 +866,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab35 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b34 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -946,7 +896,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab35 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b34 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -978,7 +928,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab35 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b34 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1007,7 +957,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab35 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b34 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1036,7 +986,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab42 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b41 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1076,7 +1026,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab42 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b41 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1117,7 +1067,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab42 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b41 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1147,7 +1097,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab42 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b41 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1179,7 +1129,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab42 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b41 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1208,7 +1158,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab42 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b41 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1238,7 +1188,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab42 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b41 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1266,7 +1216,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab58 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b59 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1295,7 +1245,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab58 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b59 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1327,7 +1277,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab58 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b59 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1357,7 +1307,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab58 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b59 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1389,7 +1339,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab58 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b59 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1418,7 +1368,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab58 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b59 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1446,7 +1396,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab65 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b66 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1475,7 +1425,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab65 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b66 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1507,7 +1457,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab65 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b66 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1537,7 +1487,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab65 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b66 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1569,7 +1519,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab65 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b66 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1598,7 +1548,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab65 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b66 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1627,7 +1577,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab72 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b73 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1672,7 +1622,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab72 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b73 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1713,7 +1663,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab72 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b73 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1743,7 +1693,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab72 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b73 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1775,7 +1725,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab72 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b73 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1804,7 +1754,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab72 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b73 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1834,7 +1784,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab72 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b73 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1863,7 +1813,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab93 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b96 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1998,7 +1948,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab93 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b96 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2039,7 +1989,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab93 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b96 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2069,7 +2019,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab93 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b96 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2101,7 +2051,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab93 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b96 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2130,7 +2080,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab93 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b96 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2160,7 +2110,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab93 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b96 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2189,7 +2139,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab206 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b209 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2224,7 +2174,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab206 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b209 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2265,7 +2215,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab206 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b209 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2295,7 +2245,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab206 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b209 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2327,7 +2277,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab206 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b209 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2356,7 +2306,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab206 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b209 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -2386,61 +2336,61 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n97414976de404373ab4755fe292a5e6ab206 ;
+    urnp:examples _:nd5793e3b8b524ae799217cd6674d6ed6b209 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n97414976de404373ab4755fe292a5e6ab10
+_:nd5793e3b8b524ae799217cd6674d6ed6b10
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n97414976de404373ab4755fe292a5e6ab35
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/introduced-plant-species-impact/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/introduced-plant-species-impact/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n97414976de404373ab4755fe292a5e6ab58
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n97414976de404373ab4755fe292a5e6ab65
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/plot-description-comments/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/plot-description-comments/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n97414976de404373ab4755fe292a5e6ab17
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/fire-history/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/fire-history/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n97414976de404373ab4755fe292a5e6ab2
+_:nd5793e3b8b524ae799217cd6674d6ed6b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/aspect/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/aspect/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n97414976de404373ab4755fe292a5e6ab206
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/vegetation-growth-stage/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/vegetation-growth-stage/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n97414976de404373ab4755fe292a5e6ab27
+_:nd5793e3b8b524ae799217cd6674d6ed6b27
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n97414976de404373ab4755fe292a5e6ab42
+_:nd5793e3b8b524ae799217cd6674d6ed6b34
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/introduced-plant-species-impact/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/introduced-plant-species-impact/valid.ttl"^^xsd:anyURI ;
+.
+
+_:nd5793e3b8b524ae799217cd6674d6ed6b59
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/valid.ttl"^^xsd:anyURI ;
+.
+
+_:nd5793e3b8b524ae799217cd6674d6ed6b66
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/plot-description-comments/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/plot-description-comments/valid.ttl"^^xsd:anyURI ;
+.
+
+_:nd5793e3b8b524ae799217cd6674d6ed6b17
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/fire-history/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/fire-history/valid.ttl"^^xsd:anyURI ;
+.
+
+_:nd5793e3b8b524ae799217cd6674d6ed6b209
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/vegetation-growth-stage/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/vegetation-growth-stage/valid.ttl"^^xsd:anyURI ;
+.
+
+_:nd5793e3b8b524ae799217cd6674d6ed6b41
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/life-stage/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/life-stage/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n97414976de404373ab4755fe292a5e6ab72
+_:nd5793e3b8b524ae799217cd6674d6ed6b73
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n97414976de404373ab4755fe292a5e6ab93
+_:nd5793e3b8b524ae799217cd6674d6ed6b96
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/structural-formation/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/structural-formation/valid.ttl"^^xsd:anyURI ;
 .

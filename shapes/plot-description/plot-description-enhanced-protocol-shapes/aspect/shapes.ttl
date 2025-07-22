@@ -38,34 +38,30 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:aspect:simple-result>
+<urn:shapes:plot-description-enhanced-protocol-shapes:aspect:unit-of-measure>
     a
-        sh:NodeShape ,
+        sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
-    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
-    sh:name "Simple result" ;
-    sh:sparql [
+    sh:description "Result value's unit of measure _MUST_ have the value `unit:DEG`." ;
+    sh:hasValue unit:DEG ;
+    sh:message "The result _MUST_ have `unit:DEG` as the value for `tern:unit`." ;
+    sh:name "Unit of measure" ;
+    sh:path tern:unit ;
+    sh:target [
+            a sh:SPARQLTarget ;
             sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select $this {
-        $this a tern:Observation ;
-            sosa:observedProperty 
-    <https://linked.data.gov.au/def/nrm/0e0423c6-0dc3-40aa-9776-410a94299256>
-     ;
-            sosa:hasSimpleResult ?simple ;
-            sosa:hasResult ?result .
-        ?result rdf:value ?value .
-        filter (?simple != ?value)
-    }
-    """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/0e0423c6-0dc3-40aa-9776-410a94299256> ;
+                sosa:hasResult ?this .
+        }"""
         ] ;
-    sh:targetClass tern:Observation ;
     urnp:examples _:n925f3acb3a164e46b54e68c6661ef2b9b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .

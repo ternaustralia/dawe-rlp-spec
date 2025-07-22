@@ -61,31 +61,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:fire-protocol-shapes:invalid:maximum-trunk-char-height:simple-result>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:Float ,
-                tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:fire-protocol-shapes:invalid:maximum-trunk-char-height:simple-result> ;
-            tern:unit unit:M
-        ] ;
-    sosa:hasSimpleResult "13.56"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/3a2b344c-07b5-4536-8db3-06b73bc0e263> ;
-    sosa:phenomenonTime <https://example.com/observation/maximum-trunk-char-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:fire> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
 <urn:test:fire-protocol-shapes:invalid:maximum-trunk-char-height:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;

@@ -34,39 +34,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b2 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:basal-area-dbh-protocol-shapes:basal-area:simple-result>
-    a
-        sh:NodeShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
-    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
-    sh:name "Simple result" ;
-    sh:sparql [
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select $this {
-        $this a tern:Observation ;
-            sosa:observedProperty 
-    <https://linked.data.gov.au/def/nrm/f437f23a-7965-4bae-9dc3-2aead06786ec>
-     ;
-            sosa:hasSimpleResult ?simple ;
-            sosa:hasResult ?result .
-        ?result rdf:value ?value .
-        filter (?simple != ?value)
-    }
-    """
-        ] ;
-    sh:targetClass tern:Observation ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b2 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -96,7 +64,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b2 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -124,7 +92,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b2 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -156,7 +124,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b2 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -185,7 +153,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b2 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -214,7 +182,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b2 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -243,39 +211,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b10 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:basal-area-dbh-protocol-shapes:circumference-at-breast-height:simple-result>
-    a
-        sh:NodeShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
-    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
-    sh:name "Simple result" ;
-    sh:sparql [
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select $this {
-        $this a tern:Observation ;
-            sosa:observedProperty 
-    <https://linked.data.gov.au/def/nrm/bf1a9efa-a3f8-4fdb-a981-02a7b49a66cc>
-     ;
-            sosa:hasSimpleResult ?simple ;
-            sosa:hasResult ?result .
-        ?result rdf:value ?value .
-        filter (?simple != ?value)
-    }
-    """
-        ] ;
-    sh:targetClass tern:Observation ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b10 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -305,7 +241,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b10 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -333,7 +269,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b10 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -365,7 +301,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b10 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -393,7 +329,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b10 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -422,7 +358,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b10 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -451,39 +387,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b18 ;
-    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
-.
-
-<urn:shapes:basal-area-dbh-protocol-shapes:diameter-at-breast-height:simple-result>
-    a
-        sh:NodeShape ,
-        urnc:Requirement ;
-    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
-    reg:status reg:statusSubmitted ;
-    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
-    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
-    sh:name "Simple result" ;
-    sh:sparql [
-            sh:select """
-    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
-    PREFIX unit: <http://qudt.org/vocab/unit/>
-    PREFIX sosa: <http://www.w3.org/ns/sosa/>
-    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-    select $this {
-        $this a tern:Observation ;
-            sosa:observedProperty 
-    <https://linked.data.gov.au/def/nrm/6e1c8b97-3655-4a22-9647-02f2c756e789>
-     ;
-            sosa:hasSimpleResult ?simple ;
-            sosa:hasResult ?result .
-        ?result rdf:value ?value .
-        filter (?simple != ?value)
-    }
-    """
-        ] ;
-    sh:targetClass tern:Observation ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b18 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb16 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -513,7 +417,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b18 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb16 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -541,7 +445,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b18 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb16 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -573,7 +477,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b18 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb16 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -601,7 +505,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b18 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb16 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -630,7 +534,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b18 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb16 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -658,7 +562,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b26 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb23 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -687,7 +591,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b26 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb23 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -719,7 +623,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b26 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb23 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -749,7 +653,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b26 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb23 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -781,7 +685,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b26 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb23 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -810,7 +714,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b26 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb23 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -839,7 +743,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b33 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb30 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -872,7 +776,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b33 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb30 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -913,7 +817,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b33 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb30 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -943,7 +847,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b33 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb30 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -975,7 +879,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b33 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb30 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1004,7 +908,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b33 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb30 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1034,7 +938,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b33 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb30 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1063,7 +967,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b44 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb41 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1097,7 +1001,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b44 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb41 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1138,7 +1042,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b44 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb41 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1168,7 +1072,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b44 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb41 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1200,7 +1104,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b44 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb41 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1229,7 +1133,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b44 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb41 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1259,36 +1163,36 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b44 ;
+    urnp:examples _:n3b67fe5e1829415b91c88aa79282b7dcb41 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b26
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b10
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b18
+_:n3b67fe5e1829415b91c88aa79282b7dcb16
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/diameter-at-breast-height/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b2
+_:n3b67fe5e1829415b91c88aa79282b7dcb2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/basal-area/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b33
+_:n3b67fe5e1829415b91c88aa79282b7dcb23
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
+.
+
+_:n3b67fe5e1829415b91c88aa79282b7dcb9
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/circumference-at-breast-height/valid.ttl"^^xsd:anyURI ;
+.
+
+_:n3b67fe5e1829415b91c88aa79282b7dcb30
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/plant-mortality/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/plant-mortality/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n70a22a0d8f1a4e86be9dd9d91b7c4fe9b44
+_:n3b67fe5e1829415b91c88aa79282b7dcb41
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/valid.ttl"^^xsd:anyURI ;
 .

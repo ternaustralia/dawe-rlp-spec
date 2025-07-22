@@ -2,6 +2,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -19,7 +20,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 tern:Integer ,
                 tern:Value ;
             rdf:value 3 ;
-            sosa:isResultOf <urn:test:camera-traps-deployment-protocol-shapes:valid:aspect>
+            sosa:isResultOf <urn:test:camera-traps-deployment-protocol-shapes:valid:aspect> ;
+            tern:unit unit:DEG
         ] ;
     sosa:hasSimpleResult 3 ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e0423c6-0dc3-40aa-9776-410a94299256> ;

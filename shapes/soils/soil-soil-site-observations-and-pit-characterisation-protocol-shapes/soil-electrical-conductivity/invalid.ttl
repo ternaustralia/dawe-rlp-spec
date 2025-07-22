@@ -61,31 +61,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-electrical-conductivity:simple-result>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/de1e18e4-6cfd-4c78-b389-a5b1dd04b899>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:Float ,
-                tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-electrical-conductivity:simple-result> ;
-            tern:unit unit:S-PER-M
-        ] ;
-    sosa:hasSimpleResult "13.56"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/22815fee-434e-4e21-b85f-8005a669a865> ;
-    sosa:phenomenonTime <https://example.com/observation/soil-electrical-conductivity/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:soil-soil-site-observations-and-pit-characterisation> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
 <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:soil-electrical-conductivity:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;

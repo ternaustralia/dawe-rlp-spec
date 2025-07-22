@@ -61,31 +61,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     tern:hasSiteVisit <urn:test:site> ;
 .
 
-<urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:microrelief-horizontal-interval-distance:simple-result>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:Float ,
-                tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:microrelief-horizontal-interval-distance:simple-result> ;
-            tern:unit unit:M
-        ] ;
-    sosa:hasSimpleResult "13.56"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/22caefc0-0201-4bf2-a108-ef173d607bf4> ;
-    sosa:phenomenonTime <https://example.com/observation/microrelief-horizontal-interval-distance/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:soil-soil-site-observations-and-pit-characterisation> ;
-    tern:hasSiteVisit <urn:test:site> ;
-.
-
 <urn:test:soil-soil-site-observations-and-pit-characterisation-protocol-shapes:invalid:microrelief-horizontal-interval-distance:site-visit>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;

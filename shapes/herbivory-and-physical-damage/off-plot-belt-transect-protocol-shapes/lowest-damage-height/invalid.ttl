@@ -59,30 +59,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
 .
 
-<urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:lowest-damage-height:simple-result>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:Float ,
-                tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:lowest-damage-height:simple-result> ;
-            tern:unit unit:CentiM
-        ] ;
-    sosa:hasSimpleResult "13.56"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/924f1a84-9d02-5120-b8e8-af847c36b7e8> ;
-    sosa:phenomenonTime <https://example.com/observation/lowest-damage-height/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:herbivory-and-physical-damage-off-plot-belt-transect> ;
-.
-
 <urn:test:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes:invalid:lowest-damage-height:unit-of-measure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;

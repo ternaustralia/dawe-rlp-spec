@@ -59,30 +59,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:usedProcedure <urn:test:procedure:opportune> ;
 .
 
-<urn:test:opportune-protocol-shapes:invalid:forearm-length:simple-result>
-    a tern:Observation ;
-    void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
-    sosa:hasFeatureOfInterest [
-            a tern:FeatureOfInterest ;
-            void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
-        ] ;
-    sosa:hasResult [
-            a
-                tern:Float ,
-                tern:Value ;
-            rdf:value "33.81"^^xsd:float ;
-            sosa:isResultOf <urn:test:opportune-protocol-shapes:invalid:forearm-length:simple-result> ;
-            tern:unit unit:MilliM
-        ] ;
-    sosa:hasSimpleResult "13.56"^^xsd:float ;
-    sosa:observedProperty <https://linked.data.gov.au/def/nrm/d964ff76-9a75-5a12-87c2-a355545ca107> ;
-    sosa:phenomenonTime <https://example.com/observation/forearm-length/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
-    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <urn:test:procedure:opportune> ;
-.
-
 <urn:test:opportune-protocol-shapes:invalid:forearm-length:unit-of-measure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
