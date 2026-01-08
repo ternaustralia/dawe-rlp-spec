@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nee2442a0ce554ce596f830c487303651b2 ;
+    urnp:examples _:n008fb2f321424544a8deb37b0749ce89b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -84,7 +84,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 ?this a tern:IRI .
         }"""
         ] ;
-    urnp:examples _:nee2442a0ce554ce596f830c487303651b24 ;
+    urnp:examples _:n008fb2f321424544a8deb37b0749ce89b2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -125,7 +125,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nee2442a0ce554ce596f830c487303651b2 ;
+    urnp:examples _:n008fb2f321424544a8deb37b0749ce89b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -157,7 +157,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nee2442a0ce554ce596f830c487303651b2 ;
+    urnp:examples _:n008fb2f321424544a8deb37b0749ce89b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -193,7 +193,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nee2442a0ce554ce596f830c487303651b2 ;
+    urnp:examples _:n008fb2f321424544a8deb37b0749ce89b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -223,11 +223,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nee2442a0ce554ce596f830c487303651b24 ;
+    urnp:examples _:n008fb2f321424544a8deb37b0749ce89b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nee2442a0ce554ce596f830c487303651b2
+_:n008fb2f321424544a8deb37b0749ce89b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-transects-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
 .
