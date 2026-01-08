@@ -11,7 +11,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
     sh:message "An instance of urn:class:Controlled must have a value for urn:property:query." ;
-    sh:minCount 1 ;
     sh:path urnp:query ;
     sh:targetClass urnc:Controlled ;
 .

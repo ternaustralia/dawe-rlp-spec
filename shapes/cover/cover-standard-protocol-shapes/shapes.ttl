@@ -33,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b2 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/dead-branch/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -43,9 +43,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
@@ -62,7 +62,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b2 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/dead-branch/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -94,7 +94,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b2 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/dead-branch/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -124,7 +124,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b2 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/dead-branch/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -156,7 +156,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b2 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/dead-branch/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -185,7 +185,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b2 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/dead-branch/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -214,7 +214,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b9 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-types/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -247,7 +247,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b9 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b9 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -288,7 +288,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b9 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-types/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -318,7 +318,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b9 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-types/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -350,7 +350,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b9 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-types/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -379,7 +379,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b9 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-types/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -409,7 +409,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b9 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-types/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -437,7 +437,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b20 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b20 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -447,9 +447,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
@@ -466,7 +466,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b20 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b20 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -498,7 +498,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b20 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b20 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -528,7 +528,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b20 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b20 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -560,7 +560,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b20 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b20 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -589,7 +589,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b20 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b20 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -599,9 +599,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
-    sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
-    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
+    sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
     sh:name "Feature type" ;
     sh:path tern:featureType ;
     sh:target [
@@ -618,7 +618,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b27 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b27 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/plant-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -648,7 +648,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b27 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b27 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/plant-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -676,7 +676,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b27 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b27 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/plant-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -708,7 +708,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b27 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b27 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/plant-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -738,7 +738,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b27 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b27 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/plant-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -767,7 +767,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b27 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b27 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/plant-height/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -796,7 +796,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b34 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b34 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/substrate/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -841,7 +841,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b34 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b34 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -882,7 +882,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b34 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b34 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/substrate/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -912,7 +912,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b34 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b34 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/substrate/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -944,7 +944,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b34 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b34 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/substrate/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -973,7 +973,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b34 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b34 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/substrate/shapes.ttl"^^xsd:anyURI ;
 .
 
@@ -1003,31 +1003,31 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }"""
         ] ;
-    urnp:examples _:nd475bf31b2774be3808af285031e7092b34 ;
+    urnp:examples _:na8f4939220cb4467b44e65a6f3cd83d5b34 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/substrate/shapes.ttl"^^xsd:anyURI ;
 .
 
-_:nd475bf31b2774be3808af285031e7092b2
+_:na8f4939220cb4467b44e65a6f3cd83d5b2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/dead-branch/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/dead-branch/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nd475bf31b2774be3808af285031e7092b20
+_:na8f4939220cb4467b44e65a6f3cd83d5b20
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/in-canopy-sky/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/in-canopy-sky/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nd475bf31b2774be3808af285031e7092b27
+_:na8f4939220cb4467b44e65a6f3cd83d5b27
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/plant-height/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/plant-height/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nd475bf31b2774be3808af285031e7092b34
+_:na8f4939220cb4467b44e65a6f3cd83d5b34
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/substrate/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/substrate/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nd475bf31b2774be3808af285031e7092b9
+_:na8f4939220cb4467b44e65a6f3cd83d5b9
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-types/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/fractional-cover-types/valid.ttl"^^xsd:anyURI ;
 .
