@@ -3420,9 +3420,9 @@ test_cases: List[TestCaseItem] = [
     ).astuple(),
     TestCaseItem(
         name="vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes-nearest-infrastructure",
-        shapes_path="shapes/vertebrate-fauna/vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes/neares-infrastructure/shapes.ttl",
-        valid_data_path="shapes/vertebrate-fauna/vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes/neares-infrastructure/valid.ttl",
-        invalid_data_path="shapes/vertebrate-fauna/vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes/neares-infrastructure/invalid.ttl",
+        shapes_path="shapes/vertebrate-fauna/vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes/nearest-infrastructure/shapes.ttl",
+        valid_data_path="shapes/vertebrate-fauna/vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes/nearest-infrastructure/valid.ttl",
+        invalid_data_path="shapes/vertebrate-fauna/vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes/nearest-infrastructure/invalid.ttl",
         expected_failures=6,
     ).astuple(),
     TestCaseItem(
