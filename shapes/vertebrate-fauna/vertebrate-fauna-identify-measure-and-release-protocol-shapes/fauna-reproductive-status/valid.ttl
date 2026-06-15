@@ -1,0 +1,37 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:test:procedure:vertebrate-fauna-identify-measure-and-release>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/7942c1d3-8cfc-4d74-931d-850cacfa5a63> ;
+.
+
+<urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:valid:fauna-reproductive-status>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Valid result for observable property - fauna reproductive status" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/f6b0f6d8-16d8-5dd7-b1b7-66b0c020b96f> ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:valid:fauna-reproductive-status> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/8d7c2dec-d8ba-5369-9b3b-be3ce76fec88>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/f6b0f6d8-16d8-5dd7-b1b7-66b0c020b96f> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/2c77369c-c827-506c-bc1a-0ec328029747> ;
+    sosa:phenomenonTime <https://example.com/observation/fauna-reproductive-status/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-identify-measure-and-release> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+

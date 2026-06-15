@@ -1,0 +1,189 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
+<urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:invalid:clinical-scoring-chemosis-of-eyes:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/39b79b74-7fdf-53ff-ad56-dd26d887e3d0> ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:invalid:clinical-scoring-chemosis-of-eyes:feature-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/e98fc5ff-8590-562d-800b-27d3d98838b2>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/39b79b74-7fdf-53ff-ad56-dd26d887e3d0> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/683f7d77-f500-57f9-89b4-a712e866aad9> ;
+    sosa:phenomenonTime <https://example.com/observation/clinical-scoring-chemosis-of-eyes/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-identify-measure-and-release> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:invalid:clinical-scoring-chemosis-of-eyes:result-value>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - value not from the controlled vocabulary list" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <urn:fake:categorical:value> ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:invalid:clinical-scoring-chemosis-of-eyes:result-value> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/e98fc5ff-8590-562d-800b-27d3d98838b2>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/683f7d77-f500-57f9-89b4-a712e866aad9> ;
+    sosa:phenomenonTime <https://example.com/observation/clinical-scoring-chemosis-of-eyes/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-identify-measure-and-release> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:invalid:clinical-scoring-chemosis-of-eyes:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/39b79b74-7fdf-53ff-ad56-dd26d887e3d0> ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:invalid:clinical-scoring-chemosis-of-eyes:simple-result> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/e98fc5ff-8590-562d-800b-27d3d98838b2>
+        ] ;
+    sosa:hasSimpleResult <urn:fake:categorical:value> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/683f7d77-f500-57f9-89b4-a712e866aad9> ;
+    sosa:phenomenonTime <https://example.com/observation/clinical-scoring-chemosis-of-eyes/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-identify-measure-and-release> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:invalid:clinical-scoring-chemosis-of-eyes:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/39b79b74-7fdf-53ff-ad56-dd26d887e3d0> ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:invalid:clinical-scoring-chemosis-of-eyes:site-visit> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/e98fc5ff-8590-562d-800b-27d3d98838b2>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/39b79b74-7fdf-53ff-ad56-dd26d887e3d0> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/683f7d77-f500-57f9-89b4-a712e866aad9> ;
+    sosa:phenomenonTime <https://example.com/observation/clinical-scoring-chemosis-of-eyes/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-identify-measure-and-release> ;
+.
+
+<urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:invalid:clinical-scoring-chemosis-of-eyes:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Identify, Measure and Release Protocol'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/39b79b74-7fdf-53ff-ad56-dd26d887e3d0> ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:invalid:clinical-scoring-chemosis-of-eyes:used-procedure> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/e98fc5ff-8590-562d-800b-27d3d98838b2>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/39b79b74-7fdf-53ff-ad56-dd26d887e3d0> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/683f7d77-f500-57f9-89b4-a712e866aad9> ;
+    sosa:phenomenonTime <https://example.com/observation/clinical-scoring-chemosis-of-eyes/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:invalid:clinical-scoring-chemosis-of-eyes:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:IRI`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/39b79b74-7fdf-53ff-ad56-dd26d887e3d0> ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:invalid:clinical-scoring-chemosis-of-eyes:value-type> ;
+            tern:vocabulary <https://linked.data.gov.au/def/nrm/e98fc5ff-8590-562d-800b-27d3d98838b2>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/39b79b74-7fdf-53ff-ad56-dd26d887e3d0> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/683f7d77-f500-57f9-89b4-a712e866aad9> ;
+    sosa:phenomenonTime <https://example.com/observation/clinical-scoring-chemosis-of-eyes/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-identify-measure-and-release> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:invalid:clinical-scoring-chemosis-of-eyes:vocabulary>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect vocabulary" ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:IRI ,
+                tern:Value ;
+            rdf:value <https://linked.data.gov.au/def/nrm/39b79b74-7fdf-53ff-ad56-dd26d887e3d0> ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:invalid:clinical-scoring-chemosis-of-eyes:vocabulary> ;
+            tern:vocabulary <urn:fake:vocabulary>
+        ] ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/39b79b74-7fdf-53ff-ad56-dd26d887e3d0> ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/683f7d77-f500-57f9-89b4-a712e866aad9> ;
+    sosa:phenomenonTime <https://example.com/observation/clinical-scoring-chemosis-of-eyes/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-identify-measure-and-release> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:vertebrate-fauna-identify-measure-and-release>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/7942c1d3-8cfc-4d74-931d-850cacfa5a63> ;
+.
+
