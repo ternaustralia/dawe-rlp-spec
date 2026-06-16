@@ -6,6 +6,11 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
 <urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:invalid:pouch-young-size:datatype>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
@@ -13,7 +18,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
         ] ;
     sosa:hasResult [
             a
@@ -27,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/fe18c3aa-7af1-4fe8-bf5f-dcec29a3bea9> ;
     sosa:phenomenonTime <https://example.com/observation/pouch-young-size/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7942c1d3-8cfc-4d74-931d-850cacfa5a63> ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-identify-measure-and-release> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -52,7 +57,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/fe18c3aa-7af1-4fe8-bf5f-dcec29a3bea9> ;
     sosa:phenomenonTime <https://example.com/observation/pouch-young-size/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7942c1d3-8cfc-4d74-931d-850cacfa5a63> ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-identify-measure-and-release> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -63,7 +68,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
         ] ;
     sosa:hasResult [
             a
@@ -77,7 +82,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/fe18c3aa-7af1-4fe8-bf5f-dcec29a3bea9> ;
     sosa:phenomenonTime <https://example.com/observation/pouch-young-size/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7942c1d3-8cfc-4d74-931d-850cacfa5a63> ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-identify-measure-and-release> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -88,7 +93,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
         ] ;
     sosa:hasResult [
             a
@@ -102,7 +107,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/fe18c3aa-7af1-4fe8-bf5f-dcec29a3bea9> ;
     sosa:phenomenonTime <https://example.com/observation/pouch-young-size/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7942c1d3-8cfc-4d74-931d-850cacfa5a63> ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-identify-measure-and-release> ;
 .
 
 <urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:invalid:pouch-young-size:unit-of-measure>
@@ -112,7 +117,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
         ] ;
     sosa:hasResult [
             a
@@ -126,18 +131,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/fe18c3aa-7af1-4fe8-bf5f-dcec29a3bea9> ;
     sosa:phenomenonTime <https://example.com/observation/pouch-young-size/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7942c1d3-8cfc-4d74-931d-850cacfa5a63> ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-identify-measure-and-release> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
 <urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:invalid:pouch-young-size:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the used procedure should be 'Identify, measure and release protocol'." ;
+    rdfs:comment "Invalid result - the used procedure should be 'Identify, Measure and Release Protocol'." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
         ] ;
     sosa:hasResult [
             a
@@ -162,21 +167,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
         ] ;
     sosa:hasResult [
             a
                 tern:Float ,
                 tern:Value ;
-            rdf:value "0.0"^^xsd:float ;
+            rdf:value "-1.11"^^xsd:float ;
             sosa:isResultOf <urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:invalid:pouch-young-size:value-range> ;
             tern:unit unit:MilliM
         ] ;
-    sosa:hasSimpleResult "0.0"^^xsd:float ;
+    sosa:hasSimpleResult "-1.11"^^xsd:float ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/fe18c3aa-7af1-4fe8-bf5f-dcec29a3bea9> ;
     sosa:phenomenonTime <https://example.com/observation/pouch-young-size/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7942c1d3-8cfc-4d74-931d-850cacfa5a63> ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-identify-measure-and-release> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -187,7 +192,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/ecb855ed-50e1-4299-8491-861759ef40b7>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e>
         ] ;
     sosa:hasResult [
             a tern:Value ;
@@ -199,7 +204,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/fe18c3aa-7af1-4fe8-bf5f-dcec29a3bea9> ;
     sosa:phenomenonTime <https://example.com/observation/pouch-young-size/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7942c1d3-8cfc-4d74-931d-850cacfa5a63> ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-identify-measure-and-release> ;
     tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:vertebrate-fauna-identify-measure-and-release>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/7942c1d3-8cfc-4d74-931d-850cacfa5a63> ;
 .
 

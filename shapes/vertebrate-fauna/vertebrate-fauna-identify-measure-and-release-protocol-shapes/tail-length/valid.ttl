@@ -6,6 +6,11 @@ PREFIX unit: <http://qudt.org/vocab/unit/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+<urn:test:procedure:vertebrate-fauna-identify-measure-and-release>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/7942c1d3-8cfc-4d74-931d-850cacfa5a63> ;
+.
+
 <urn:test:vertebrate-fauna-identify-measure-and-release-protocol-shapes:valid:tail-length>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
@@ -27,7 +32,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/38d1419f-7f3b-4d0e-a2f6-4b152e2d91f7> ;
     sosa:phenomenonTime <https://example.com/observation/tail-length/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/7942c1d3-8cfc-4d74-931d-850cacfa5a63> ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-identify-measure-and-release> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 

@@ -1,0 +1,158 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
+<urn:test:vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes:invalid:dominant-overstorey-plant-species:datatype>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the datatype of the value of the result node must be `xsd:string`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value 1 ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes:invalid:dominant-overstorey-plant-species:datatype>
+        ] ;
+    sosa:hasSimpleResult 1 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/5b60730b-d6e1-4339-90c0-8e740230f9ae> ;
+    sosa:phenomenonTime <https://example.com/observation/dominant-overstorey-plant-species/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-acoustic-and-ultrasonic-recording> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes:invalid:dominant-overstorey-plant-species:feature-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - incorrect feature type." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <urn:fake:feature-type>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "Eucalyptus tereticornis"^^xsd:string ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes:invalid:dominant-overstorey-plant-species:feature-type>
+        ] ;
+    sosa:hasSimpleResult "Eucalyptus tereticornis"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/5b60730b-d6e1-4339-90c0-8e740230f9ae> ;
+    sosa:phenomenonTime <https://example.com/observation/dominant-overstorey-plant-species/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-acoustic-and-ultrasonic-recording> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes:invalid:dominant-overstorey-plant-species:simple-result>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - The value in simple result must be same with that in the result node." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "Eucalyptus tereticornis"^^xsd:string ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes:invalid:dominant-overstorey-plant-species:simple-result>
+        ] ;
+    sosa:hasSimpleResult "Eucalyptus tereticornis different"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/5b60730b-d6e1-4339-90c0-8e740230f9ae> ;
+    sosa:phenomenonTime <https://example.com/observation/dominant-overstorey-plant-species/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-acoustic-and-ultrasonic-recording> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes:invalid:dominant-overstorey-plant-species:site-visit>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - all observations must have a site vist." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "Eucalyptus tereticornis"^^xsd:string ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes:invalid:dominant-overstorey-plant-species:site-visit>
+        ] ;
+    sosa:hasSimpleResult "Eucalyptus tereticornis"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/5b60730b-d6e1-4339-90c0-8e740230f9ae> ;
+    sosa:phenomenonTime <https://example.com/observation/dominant-overstorey-plant-species/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-acoustic-and-ultrasonic-recording> ;
+.
+
+<urn:test:vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes:invalid:dominant-overstorey-plant-species:used-procedure>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the used procedure should be 'Acoustics and Ultrasound Protocol'." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a
+                tern:Text ,
+                tern:Value ;
+            rdf:value "Eucalyptus tereticornis"^^xsd:string ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes:invalid:dominant-overstorey-plant-species:used-procedure>
+        ] ;
+    sosa:hasSimpleResult "Eucalyptus tereticornis"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/5b60730b-d6e1-4339-90c0-8e740230f9ae> ;
+    sosa:phenomenonTime <https://example.com/observation/dominant-overstorey-plant-species/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:fake:procedure> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes:invalid:dominant-overstorey-plant-species:value-type>
+    a tern:Observation ;
+    void:inDataset <https://example.com/dataset/1> ;
+    rdfs:comment "Invalid result - the value of the result node must be `tern:Text`." ;
+    sosa:hasFeatureOfInterest [
+            a tern:FeatureOfInterest ;
+            void:inDataset <https://example.com/dataset/1> ;
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
+        ] ;
+    sosa:hasResult [
+            a tern:Value ;
+            rdf:value "Eucalyptus tereticornis"^^xsd:string ;
+            sosa:isResultOf <urn:test:vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes:invalid:dominant-overstorey-plant-species:value-type>
+        ] ;
+    sosa:hasSimpleResult "Eucalyptus tereticornis"^^xsd:string ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/5b60730b-d6e1-4339-90c0-8e740230f9ae> ;
+    sosa:phenomenonTime <https://example.com/observation/dominant-overstorey-plant-species/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
+    sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-acoustic-and-ultrasonic-recording> ;
+    tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:vertebrate-fauna-acoustic-and-ultrasonic-recording>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/a15130ca-82ce-4c50-9392-66f9b0c73450> ;
+.
+

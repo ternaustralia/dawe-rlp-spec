@@ -5,6 +5,11 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+<urn:fake:procedure>
+    a tern:Procedure ;
+    tern:methodType <urn:fake:method> ;
+.
+
 <urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:bird-activity-type:feature-type>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
@@ -18,15 +23,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/05a3f8b0-f080-5bd0-9ce9-df511af371dc> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/bc097808-d785-5269-a642-c7ac57d53dd5> ;
             sosa:isResultOf <urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:bird-activity-type:feature-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/c7a51f30-97e8-4232-b1f3-a248d58f1a60>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/05a3f8b0-f080-5bd0-9ce9-df511af371dc> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/bc097808-d785-5269-a642-c7ac57d53dd5> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/045fa754-487a-4346-8128-403c646a903b> ;
     sosa:phenomenonTime <https://example.com/observation/bird-activity-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/98db8232-2c51-4907-99a7-0ccb8b825382> ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-bird-survey> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -37,7 +42,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/62a51999-f3ca-41d2-8576-3a053dd116a6>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/0c30e871-63ae-4f84-a37c-ef6e7ce02928>
         ] ;
     sosa:hasResult [
             a
@@ -51,7 +56,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/045fa754-487a-4346-8128-403c646a903b> ;
     sosa:phenomenonTime <https://example.com/observation/bird-activity-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/98db8232-2c51-4907-99a7-0ccb8b825382> ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-bird-survey> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -62,13 +67,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/62a51999-f3ca-41d2-8576-3a053dd116a6>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/0c30e871-63ae-4f84-a37c-ef6e7ce02928>
         ] ;
     sosa:hasResult [
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/05a3f8b0-f080-5bd0-9ce9-df511af371dc> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/bc097808-d785-5269-a642-c7ac57d53dd5> ;
             sosa:isResultOf <urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:bird-activity-type:simple-result> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/c7a51f30-97e8-4232-b1f3-a248d58f1a60>
         ] ;
@@ -76,7 +81,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/045fa754-487a-4346-8128-403c646a903b> ;
     sosa:phenomenonTime <https://example.com/observation/bird-activity-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/98db8232-2c51-4907-99a7-0ccb8b825382> ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-bird-survey> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -87,41 +92,41 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/62a51999-f3ca-41d2-8576-3a053dd116a6>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/0c30e871-63ae-4f84-a37c-ef6e7ce02928>
         ] ;
     sosa:hasResult [
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/05a3f8b0-f080-5bd0-9ce9-df511af371dc> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/bc097808-d785-5269-a642-c7ac57d53dd5> ;
             sosa:isResultOf <urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:bird-activity-type:site-visit> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/c7a51f30-97e8-4232-b1f3-a248d58f1a60>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/05a3f8b0-f080-5bd0-9ce9-df511af371dc> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/bc097808-d785-5269-a642-c7ac57d53dd5> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/045fa754-487a-4346-8128-403c646a903b> ;
     sosa:phenomenonTime <https://example.com/observation/bird-activity-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/98db8232-2c51-4907-99a7-0ccb8b825382> ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-bird-survey> ;
 .
 
 <urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:bird-activity-type:used-procedure>
     a tern:Observation ;
     void:inDataset <https://example.com/dataset/1> ;
-    rdfs:comment "Invalid result - the used procedure should be 'Bird survey protocol'." ;
+    rdfs:comment "Invalid result - the used procedure should be 'Bird Survey Protocol'." ;
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/62a51999-f3ca-41d2-8576-3a053dd116a6>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/0c30e871-63ae-4f84-a37c-ef6e7ce02928>
         ] ;
     sosa:hasResult [
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/05a3f8b0-f080-5bd0-9ce9-df511af371dc> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/bc097808-d785-5269-a642-c7ac57d53dd5> ;
             sosa:isResultOf <urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:bird-activity-type:used-procedure> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/c7a51f30-97e8-4232-b1f3-a248d58f1a60>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/05a3f8b0-f080-5bd0-9ce9-df511af371dc> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/bc097808-d785-5269-a642-c7ac57d53dd5> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/045fa754-487a-4346-8128-403c646a903b> ;
     sosa:phenomenonTime <https://example.com/observation/bird-activity-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
@@ -136,19 +141,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/62a51999-f3ca-41d2-8576-3a053dd116a6>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/0c30e871-63ae-4f84-a37c-ef6e7ce02928>
         ] ;
     sosa:hasResult [
             a tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/05a3f8b0-f080-5bd0-9ce9-df511af371dc> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/bc097808-d785-5269-a642-c7ac57d53dd5> ;
             sosa:isResultOf <urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:bird-activity-type:value-type> ;
             tern:vocabulary <https://linked.data.gov.au/def/nrm/c7a51f30-97e8-4232-b1f3-a248d58f1a60>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/05a3f8b0-f080-5bd0-9ce9-df511af371dc> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/bc097808-d785-5269-a642-c7ac57d53dd5> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/045fa754-487a-4346-8128-403c646a903b> ;
     sosa:phenomenonTime <https://example.com/observation/bird-activity-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/98db8232-2c51-4907-99a7-0ccb8b825382> ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-bird-survey> ;
     tern:hasSiteVisit <urn:test:site> ;
 .
 
@@ -159,21 +164,26 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sosa:hasFeatureOfInterest [
             a tern:FeatureOfInterest ;
             void:inDataset <https://example.com/dataset/1> ;
-            tern:featureType <http://linked.data.gov.au/def/tern-cv/62a51999-f3ca-41d2-8576-3a053dd116a6>
+            tern:featureType <http://linked.data.gov.au/def/tern-cv/0c30e871-63ae-4f84-a37c-ef6e7ce02928>
         ] ;
     sosa:hasResult [
             a
                 tern:IRI ,
                 tern:Value ;
-            rdf:value <https://linked.data.gov.au/def/nrm/05a3f8b0-f080-5bd0-9ce9-df511af371dc> ;
+            rdf:value <https://linked.data.gov.au/def/nrm/bc097808-d785-5269-a642-c7ac57d53dd5> ;
             sosa:isResultOf <urn:test:vertebrate-fauna-bird-survey-protocol-shapes:invalid:bird-activity-type:vocabulary> ;
             tern:vocabulary <urn:fake:vocabulary>
         ] ;
-    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/05a3f8b0-f080-5bd0-9ce9-df511af371dc> ;
+    sosa:hasSimpleResult <https://linked.data.gov.au/def/nrm/bc097808-d785-5269-a642-c7ac57d53dd5> ;
     sosa:observedProperty <https://linked.data.gov.au/def/nrm/045fa754-487a-4346-8128-403c646a903b> ;
     sosa:phenomenonTime <https://example.com/observation/bird-activity-type/b91c54f2-9354-43ee-8412-09974fd2c23c/phenomenonTime> ;
     sosa:resultTime "2022-09-27T05:38:47.117000+00:00"^^xsd:dateTime ;
-    sosa:usedProcedure <https://linked.data.gov.au/def/nrm/98db8232-2c51-4907-99a7-0ccb8b825382> ;
+    sosa:usedProcedure <urn:test:procedure:vertebrate-fauna-bird-survey> ;
     tern:hasSiteVisit <urn:test:site> ;
+.
+
+<urn:test:procedure:vertebrate-fauna-bird-survey>
+    a tern:Procedure ;
+    tern:methodType <https://linked.data.gov.au/def/nrm/98db8232-2c51-4907-99a7-0ccb8b825382> ;
 .
 
