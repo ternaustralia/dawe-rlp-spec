@@ -8,7 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope-class:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope-class/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -37,7 +37,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope-class:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope-class/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -84,7 +84,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope-class:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope-class/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -116,7 +116,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope-class:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope-class/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -146,7 +146,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope-class:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope-class/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -178,7 +178,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope-class:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope-class/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -207,7 +207,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope-class:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope-class/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;

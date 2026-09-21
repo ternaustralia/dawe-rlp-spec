@@ -8,7 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:opportune-protocol-shapes:animal-pouch-condition:feature-type>
+<https://linked.data.gov.au/def/nrm/opportune-protocol-shapes/animal-pouch-condition/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -37,7 +37,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportune-protocol-shapes/animal-pouch-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportune-protocol-shapes:animal-pouch-condition:result-value>
+<https://linked.data.gov.au/def/nrm/opportune-protocol-shapes/animal-pouch-condition/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -79,7 +79,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportune-protocol-shapes/animal-pouch-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportune-protocol-shapes:animal-pouch-condition:simple-result>
+<https://linked.data.gov.au/def/nrm/opportune-protocol-shapes/animal-pouch-condition/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -111,7 +111,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportune-protocol-shapes/animal-pouch-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportune-protocol-shapes:animal-pouch-condition:used-procedure>
+<https://linked.data.gov.au/def/nrm/opportune-protocol-shapes/animal-pouch-condition/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -143,7 +143,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportune-protocol-shapes/animal-pouch-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportune-protocol-shapes:animal-pouch-condition:value-type>
+<https://linked.data.gov.au/def/nrm/opportune-protocol-shapes/animal-pouch-condition/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -172,7 +172,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportune-protocol-shapes/animal-pouch-condition/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportune-protocol-shapes:animal-pouch-condition:vocabulary>
+<https://linked.data.gov.au/def/nrm/opportune-protocol-shapes/animal-pouch-condition/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;

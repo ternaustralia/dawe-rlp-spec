@@ -9,7 +9,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:air-temperature:feature-type>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/air-temperature/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -38,7 +38,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:air-temperature:unit-of-measure>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/air-temperature/unit-of-measure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -66,7 +66,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:air-temperature:used-procedure>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/air-temperature/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -98,7 +98,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:air-temperature:value-range>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/air-temperature/value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -128,7 +128,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:air-temperature:value-type>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/air-temperature/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -157,7 +157,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:cloud-cover:feature-type>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/cloud-cover/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -186,7 +186,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:cloud-cover:result-value>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/cloud-cover/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -230,7 +230,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:cloud-cover:simple-result>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/cloud-cover/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -262,7 +262,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:cloud-cover:used-procedure>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/cloud-cover/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -294,7 +294,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:cloud-cover:value-type>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/cloud-cover/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -323,7 +323,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:cloud-cover:vocabulary>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/cloud-cover/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -353,7 +353,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:distance-to-target-fauna:feature-type>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/distance-to-target-fauna/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -382,7 +382,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/distance-to-target-fauna/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:distance-to-target-fauna:result-value>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/distance-to-target-fauna/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -427,7 +427,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/distance-to-target-fauna/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:distance-to-target-fauna:simple-result>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/distance-to-target-fauna/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -459,7 +459,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/distance-to-target-fauna/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:distance-to-target-fauna:used-procedure>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/distance-to-target-fauna/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -491,7 +491,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/distance-to-target-fauna/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:distance-to-target-fauna:value-type>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/distance-to-target-fauna/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -520,7 +520,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/distance-to-target-fauna/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:distance-to-target-fauna:vocabulary>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/distance-to-target-fauna/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -550,7 +550,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/distance-to-target-fauna/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:field-species-name:feature-type>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/field-species-name/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -579,7 +579,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:field-species-name:result-value>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/field-species-name/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -639,7 +639,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:field-species-name:simple-result>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/field-species-name/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -671,7 +671,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:field-species-name:used-procedure>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/field-species-name/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -703,7 +703,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:field-species-name:value-type>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/field-species-name/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -739,7 +739,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:field-species-name:vocabulary>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/field-species-name/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -769,7 +769,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:moon-phase:feature-type>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/moon-phase/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -798,7 +798,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:moon-phase:result-value>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/moon-phase/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -841,7 +841,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:moon-phase:simple-result>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/moon-phase/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -873,7 +873,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:moon-phase:used-procedure>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/moon-phase/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -905,7 +905,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:moon-phase:value-type>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/moon-phase/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -934,7 +934,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:moon-phase:vocabulary>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/moon-phase/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -964,7 +964,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:rainfall-duration:feature-type>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/rainfall-duration/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -993,7 +993,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:rainfall-duration:result-value>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/rainfall-duration/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -1038,7 +1038,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:rainfall-duration:simple-result>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/rainfall-duration/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -1070,7 +1070,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:rainfall-duration:used-procedure>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/rainfall-duration/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1102,7 +1102,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:rainfall-duration:value-type>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/rainfall-duration/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1131,7 +1131,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:rainfall-duration:vocabulary>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/rainfall-duration/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1161,7 +1161,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:rainfall-type:feature-type>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/rainfall-type/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1190,7 +1190,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:rainfall-type:result-value>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/rainfall-type/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -1237,7 +1237,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:rainfall-type:simple-result>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/rainfall-type/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -1269,7 +1269,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:rainfall-type:used-procedure>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/rainfall-type/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1301,7 +1301,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:rainfall-type:value-type>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/rainfall-type/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1330,7 +1330,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:rainfall-type:vocabulary>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/rainfall-type/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1360,7 +1360,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:target-species-count:feature-type>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/target-species-count/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1389,7 +1389,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/target-species-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:target-species-count:simple-result>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/target-species-count/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -1421,7 +1421,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/target-species-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:target-species-count:used-procedure>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/target-species-count/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1453,7 +1453,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/target-species-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:target-species-count:value-range>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/target-species-count/value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1482,7 +1482,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/target-species-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:target-species-count:value-type>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/target-species-count/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1511,7 +1511,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/target-species-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:wind-description:feature-type>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/wind-description/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1540,7 +1540,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:wind-description:result-value>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/wind-description/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -1589,7 +1589,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:wind-description:simple-result>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/wind-description/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -1621,7 +1621,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:wind-description:used-procedure>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/wind-description/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1653,7 +1653,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:wind-description:value-type>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/wind-description/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1682,7 +1682,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-aerial-survey-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-aerial-survey-protocol-shapes:wind-description:vocabulary>
+<https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes/wind-description/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;

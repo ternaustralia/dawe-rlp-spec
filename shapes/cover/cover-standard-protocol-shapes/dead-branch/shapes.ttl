@@ -8,7 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:cover-standard-protocol-shapes:dead-branch:datatype>
+<https://linked.data.gov.au/def/nrm/cover-standard-protocol-shapes/dead-branch/datatype>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -36,7 +36,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/dead-branch/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-standard-protocol-shapes:dead-branch:feature-type>
+<https://linked.data.gov.au/def/nrm/cover-standard-protocol-shapes/dead-branch/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -65,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/dead-branch/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-standard-protocol-shapes:dead-branch:simple-result>
+<https://linked.data.gov.au/def/nrm/cover-standard-protocol-shapes/dead-branch/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -97,7 +97,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/dead-branch/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-standard-protocol-shapes:dead-branch:site-visit>
+<https://linked.data.gov.au/def/nrm/cover-standard-protocol-shapes/dead-branch/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -127,7 +127,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/dead-branch/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-standard-protocol-shapes:dead-branch:used-procedure>
+<https://linked.data.gov.au/def/nrm/cover-standard-protocol-shapes/dead-branch/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -159,7 +159,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/cover/cover-standard-protocol-shapes/dead-branch/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:cover-standard-protocol-shapes:dead-branch:value-type>
+<https://linked.data.gov.au/def/nrm/cover-standard-protocol-shapes/dead-branch/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;

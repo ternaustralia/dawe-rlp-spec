@@ -8,7 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:plot-description-standard-protocol-shapes:site-disturbance:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/site-disturbance/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -37,7 +37,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:site-disturbance:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/site-disturbance/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -91,7 +91,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:site-disturbance:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/site-disturbance/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -123,7 +123,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:site-disturbance:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/site-disturbance/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -153,7 +153,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:site-disturbance:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/site-disturbance/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -185,7 +185,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:site-disturbance:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/site-disturbance/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -214,7 +214,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:site-disturbance:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/site-disturbance/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;

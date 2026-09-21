@@ -9,7 +9,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:camera-traps-deployment-protocol-shapes:NVIS-major-vegetation-group:feature-type>
+<https://linked.data.gov.au/def/nrm/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -38,7 +38,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-deployment-protocol-shapes:NVIS-major-vegetation-group:result-value>
+<https://linked.data.gov.au/def/nrm/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -110,7 +110,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-deployment-protocol-shapes:NVIS-major-vegetation-group:simple-result>
+<https://linked.data.gov.au/def/nrm/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -142,7 +142,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-deployment-protocol-shapes:NVIS-major-vegetation-group:used-procedure>
+<https://linked.data.gov.au/def/nrm/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -174,7 +174,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-deployment-protocol-shapes:NVIS-major-vegetation-group:value-type>
+<https://linked.data.gov.au/def/nrm/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -203,7 +203,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-deployment-protocol-shapes:NVIS-major-vegetation-group:vocabulary>
+<https://linked.data.gov.au/def/nrm/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -233,7 +233,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-deployment-protocol-shapes:aspect:feature-type>
+<https://linked.data.gov.au/def/nrm/camera-traps-deployment-protocol-shapes/aspect/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -262,7 +262,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-deployment-protocol-shapes:aspect:unit-of-measure>
+<https://linked.data.gov.au/def/nrm/camera-traps-deployment-protocol-shapes/aspect/unit-of-measure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -290,7 +290,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-deployment-protocol-shapes:aspect:used-procedure>
+<https://linked.data.gov.au/def/nrm/camera-traps-deployment-protocol-shapes/aspect/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -322,7 +322,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-deployment-protocol-shapes:aspect:value-range>
+<https://linked.data.gov.au/def/nrm/camera-traps-deployment-protocol-shapes/aspect/value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -352,7 +352,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-deployment-protocol-shapes:aspect:value-type>
+<https://linked.data.gov.au/def/nrm/camera-traps-deployment-protocol-shapes/aspect/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -381,7 +381,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-deployment-protocol-shapes:slope:feature-type>
+<https://linked.data.gov.au/def/nrm/camera-traps-deployment-protocol-shapes/slope/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -410,7 +410,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-deployment-protocol-shapes:slope:unit-of-measure>
+<https://linked.data.gov.au/def/nrm/camera-traps-deployment-protocol-shapes/slope/unit-of-measure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -438,7 +438,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-deployment-protocol-shapes:slope:used-procedure>
+<https://linked.data.gov.au/def/nrm/camera-traps-deployment-protocol-shapes/slope/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -470,7 +470,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-deployment-protocol-shapes:slope:value-range>
+<https://linked.data.gov.au/def/nrm/camera-traps-deployment-protocol-shapes/slope/value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -500,7 +500,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-deployment-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:camera-traps-deployment-protocol-shapes:slope:value-type>
+<https://linked.data.gov.au/def/nrm/camera-traps-deployment-protocol-shapes/slope/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;

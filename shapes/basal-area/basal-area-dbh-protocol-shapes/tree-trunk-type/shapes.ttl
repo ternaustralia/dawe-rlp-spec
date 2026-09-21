@@ -8,7 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:basal-area-dbh-protocol-shapes:tree-trunk-type:feature-type>
+<https://linked.data.gov.au/def/nrm/basal-area-dbh-protocol-shapes/tree-trunk-type/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -38,7 +38,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:basal-area-dbh-protocol-shapes:tree-trunk-type:result-value>
+<https://linked.data.gov.au/def/nrm/basal-area-dbh-protocol-shapes/tree-trunk-type/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -82,7 +82,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:basal-area-dbh-protocol-shapes:tree-trunk-type:simple-result>
+<https://linked.data.gov.au/def/nrm/basal-area-dbh-protocol-shapes/tree-trunk-type/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -115,7 +115,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:basal-area-dbh-protocol-shapes:tree-trunk-type:site-visit>
+<https://linked.data.gov.au/def/nrm/basal-area-dbh-protocol-shapes/tree-trunk-type/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -146,7 +146,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:basal-area-dbh-protocol-shapes:tree-trunk-type:used-procedure>
+<https://linked.data.gov.au/def/nrm/basal-area-dbh-protocol-shapes/tree-trunk-type/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -179,7 +179,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:basal-area-dbh-protocol-shapes:tree-trunk-type:value-type>
+<https://linked.data.gov.au/def/nrm/basal-area-dbh-protocol-shapes/tree-trunk-type/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -209,7 +209,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-dbh-protocol-shapes/tree-trunk-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:basal-area-dbh-protocol-shapes:tree-trunk-type:vocabulary>
+<https://linked.data.gov.au/def/nrm/basal-area-dbh-protocol-shapes/tree-trunk-type/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;

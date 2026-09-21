@@ -8,7 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:fire-protocol-shapes:growth-form:feature-type>
+<https://linked.data.gov.au/def/nrm/fire-protocol-shapes/growth-form/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -40,7 +40,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fire-protocol-shapes:growth-form:result-value>
+<https://linked.data.gov.au/def/nrm/fire-protocol-shapes/growth-form/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -107,7 +107,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fire-protocol-shapes:growth-form:simple-result>
+<https://linked.data.gov.au/def/nrm/fire-protocol-shapes/growth-form/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -139,7 +139,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fire-protocol-shapes:growth-form:site-visit>
+<https://linked.data.gov.au/def/nrm/fire-protocol-shapes/growth-form/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -169,7 +169,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fire-protocol-shapes:growth-form:used-procedure>
+<https://linked.data.gov.au/def/nrm/fire-protocol-shapes/growth-form/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -201,7 +201,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fire-protocol-shapes:growth-form:value-type>
+<https://linked.data.gov.au/def/nrm/fire-protocol-shapes/growth-form/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -230,7 +230,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fire-protocol-shapes:growth-form:vocabulary>
+<https://linked.data.gov.au/def/nrm/fire-protocol-shapes/growth-form/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;

@@ -6,7 +6,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:meta:controlled:query>
+<https://linked.data.gov.au/def/nrm/meta/controlled/query>
     a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -15,7 +15,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass urnc:Controlled ;
 .
 
-<urn:shapes:meta:requirement:description>
+<https://linked.data.gov.au/def/nrm/meta/requirement/description>
     a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -25,7 +25,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass urnc:Requirement ;
 .
 
-<urn:shapes:meta:requirement:examples>
+<https://linked.data.gov.au/def/nrm/meta/requirement/examples>
     a sh:PropertyShape ;
     sh:maxCount 1 ;
     sh:message "An instance of urn:class:Requirement must have a value for urn:property:examples" ;
@@ -35,7 +35,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass urnc:Requirement ;
 .
 
-<urn:shapes:meta:requirement:invalidExample>
+<https://linked.data.gov.au/def/nrm/meta/requirement/invalidExample>
     a sh:PropertyShape ;
     sh:datatype xsd:anyURI ;
     sh:maxCount 1 ;
@@ -45,7 +45,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetObjectsOf urnp:examples ;
 .
 
-<urn:shapes:meta:requirement:message>
+<https://linked.data.gov.au/def/nrm/meta/requirement/message>
     a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -55,7 +55,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass urnc:Requirement ;
 .
 
-<urn:shapes:meta:requirement:name>
+<https://linked.data.gov.au/def/nrm/meta/requirement/name>
     a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -65,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass urnc:Requirement ;
 .
 
-<urn:shapes:meta:requirement:rdf-type>
+<https://linked.data.gov.au/def/nrm/meta/requirement/rdf-type>
     a sh:PropertyShape ;
     sh:in (
             sh:PropertyShape
@@ -78,7 +78,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass urnc:Requirement ;
 .
 
-<urn:shapes:meta:requirement:source>
+<https://linked.data.gov.au/def/nrm/meta/requirement/source>
     a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -88,7 +88,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass urnc:Requirement ;
 .
 
-<urn:shapes:meta:requirement:status>
+<https://linked.data.gov.au/def/nrm/meta/requirement/status>
     a sh:PropertyShape ;
     sh:in (
             reg:statusSubmitted
@@ -102,7 +102,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass urnc:Requirement ;
 .
 
-<urn:shapes:meta:requirement:validExample>
+<https://linked.data.gov.au/def/nrm/meta/requirement/validExample>
     a sh:PropertyShape ;
     sh:datatype xsd:anyURI ;
     sh:maxCount 1 ;
@@ -112,7 +112,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetObjectsOf urnp:examples ;
 .
 
-<urn:shapes:meta:requirement:validator>
+<https://linked.data.gov.au/def/nrm/meta/requirement/validator>
     a sh:PropertyShape ;
     sh:datatype xsd:anyURI ;
     sh:maxCount 1 ;

@@ -9,7 +9,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:vegetation-mapping-protocol-shapes:average-species-height:feature-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/average-species-height/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -38,7 +38,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:average-species-height:unit-of-measure>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/average-species-height/unit-of-measure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -66,7 +66,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:average-species-height:used-procedure>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/average-species-height/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -98,7 +98,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:average-species-height:value-range>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/average-species-height/value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -128,7 +128,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:average-species-height:value-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/average-species-height/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -157,7 +157,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:condition-of-specimen:feature-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/condition-of-specimen/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -186,7 +186,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:condition-of-specimen:result-value>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/condition-of-specimen/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -233,7 +233,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:condition-of-specimen:simple-result>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/condition-of-specimen/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -265,7 +265,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:condition-of-specimen:used-procedure>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/condition-of-specimen/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -297,7 +297,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:condition-of-specimen:value-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/condition-of-specimen/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -326,7 +326,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:condition-of-specimen:vocabulary>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/condition-of-specimen/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -356,7 +356,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-form:feature-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/dominant-growth-form/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -385,7 +385,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-form:result-value>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/dominant-growth-form/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -452,7 +452,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-form:simple-result>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/dominant-growth-form/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -484,7 +484,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-form:used-procedure>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/dominant-growth-form/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -516,7 +516,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-form:value-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/dominant-growth-form/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -545,7 +545,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:dominant-growth-form:vocabulary>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/dominant-growth-form/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -575,7 +575,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:field-species-name:datatype>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/field-species-name/datatype>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -603,7 +603,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:field-species-name:feature-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/field-species-name/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -632,7 +632,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:field-species-name:simple-result>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/field-species-name/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -664,7 +664,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:field-species-name:used-procedure>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/field-species-name/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -696,7 +696,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:field-species-name:value-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/field-species-name/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -725,7 +725,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:fire-history:feature-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/fire-history/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -754,7 +754,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:fire-history:result-value>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/fire-history/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -795,7 +795,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:fire-history:simple-result>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/fire-history/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -827,7 +827,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:fire-history:used-procedure>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/fire-history/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -859,7 +859,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:fire-history:value-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/fire-history/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -888,7 +888,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:fire-history:vocabulary>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/fire-history/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -918,7 +918,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:foliage-projective-cover:feature-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/foliage-projective-cover/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -947,7 +947,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:foliage-projective-cover:unit-of-measure>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/foliage-projective-cover/unit-of-measure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -975,7 +975,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:foliage-projective-cover:used-procedure>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/foliage-projective-cover/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1007,7 +1007,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:foliage-projective-cover:value-range>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/foliage-projective-cover/value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1037,7 +1037,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:foliage-projective-cover:value-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/foliage-projective-cover/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1066,7 +1066,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:homogeneity-measure:feature-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/homogeneity-measure/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1095,7 +1095,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:homogeneity-measure:unit-of-measure>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/homogeneity-measure/unit-of-measure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1123,7 +1123,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:homogeneity-measure:used-procedure>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/homogeneity-measure/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1155,7 +1155,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:homogeneity-measure:value-range>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/homogeneity-measure/value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1185,7 +1185,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:homogeneity-measure:value-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/homogeneity-measure/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1214,7 +1214,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:land-use-history:feature-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/land-use-history/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1243,7 +1243,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:land-use-history:result-value>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/land-use-history/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -1470,7 +1470,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:land-use-history:simple-result>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/land-use-history/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -1502,7 +1502,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:land-use-history:used-procedure>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/land-use-history/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1534,7 +1534,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:land-use-history:value-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/land-use-history/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1563,7 +1563,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:site-disturbance:feature-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/site-disturbance/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1592,7 +1592,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:site-disturbance:result-value>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/site-disturbance/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -1646,7 +1646,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:site-disturbance:simple-result>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/site-disturbance/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -1678,7 +1678,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:site-disturbance:used-procedure>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/site-disturbance/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1710,7 +1710,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:site-disturbance:value-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/site-disturbance/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1739,7 +1739,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:site-disturbance:vocabulary>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/site-disturbance/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1769,7 +1769,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:vegetation-growth-stage:feature-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/vegetation-growth-stage/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1798,7 +1798,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:vegetation-growth-stage:result-value>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/vegetation-growth-stage/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -1842,7 +1842,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:vegetation-growth-stage:simple-result>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/vegetation-growth-stage/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -1874,7 +1874,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:vegetation-growth-stage:used-procedure>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/vegetation-growth-stage/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1906,7 +1906,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:vegetation-growth-stage:value-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/vegetation-growth-stage/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1935,7 +1935,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:vegetation-growth-stage:vocabulary>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/vegetation-growth-stage/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1965,7 +1965,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-sample-type:feature-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1994,7 +1994,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-sample-type:result-value>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -2059,7 +2059,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-sample-type:simple-result>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -2091,7 +2091,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-sample-type:used-procedure>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2123,7 +2123,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-sample-type:value-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2152,7 +2152,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-sample-type:vocabulary>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2182,7 +2182,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-type:feature-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/voucher-specimen-type/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2211,7 +2211,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-type:result-value>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/voucher-specimen-type/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -2258,7 +2258,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-type:simple-result>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/voucher-specimen-type/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -2290,7 +2290,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-type:used-procedure>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/voucher-specimen-type/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2322,7 +2322,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-type:value-type>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/voucher-specimen-type/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2351,7 +2351,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-type:vocabulary>
+<https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes/voucher-specimen-type/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;

@@ -8,7 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:wind-description:feature-type>
+<https://linked.data.gov.au/def/nrm/vertebrate-fauna-bird-survey-protocol-shapes/wind-description/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -37,7 +37,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:wind-description:result-value>
+<https://linked.data.gov.au/def/nrm/vertebrate-fauna-bird-survey-protocol-shapes/wind-description/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -86,7 +86,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:wind-description:simple-result>
+<https://linked.data.gov.au/def/nrm/vertebrate-fauna-bird-survey-protocol-shapes/wind-description/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -118,7 +118,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:wind-description:site-visit>
+<https://linked.data.gov.au/def/nrm/vertebrate-fauna-bird-survey-protocol-shapes/wind-description/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -148,7 +148,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:wind-description:used-procedure>
+<https://linked.data.gov.au/def/nrm/vertebrate-fauna-bird-survey-protocol-shapes/wind-description/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -180,7 +180,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:wind-description:value-type>
+<https://linked.data.gov.au/def/nrm/vertebrate-fauna-bird-survey-protocol-shapes/wind-description/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -209,7 +209,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vertebrate-fauna/vertebrate-fauna-bird-survey-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes:wind-description:vocabulary>
+<https://linked.data.gov.au/def/nrm/vertebrate-fauna-bird-survey-protocol-shapes/wind-description/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;

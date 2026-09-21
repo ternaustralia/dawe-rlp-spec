@@ -8,7 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:opportune-protocol-shapes:breeding-status:feature-type>
+<https://linked.data.gov.au/def/nrm/opportune-protocol-shapes/breeding-status/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -37,7 +37,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportune-protocol-shapes/breeding-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportune-protocol-shapes:breeding-status:result-value>
+<https://linked.data.gov.au/def/nrm/opportune-protocol-shapes/breeding-status/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -95,7 +95,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportune-protocol-shapes/breeding-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportune-protocol-shapes:breeding-status:simple-result>
+<https://linked.data.gov.au/def/nrm/opportune-protocol-shapes/breeding-status/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -127,7 +127,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportune-protocol-shapes/breeding-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportune-protocol-shapes:breeding-status:used-procedure>
+<https://linked.data.gov.au/def/nrm/opportune-protocol-shapes/breeding-status/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -159,7 +159,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportune-protocol-shapes/breeding-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportune-protocol-shapes:breeding-status:value-type>
+<https://linked.data.gov.au/def/nrm/opportune-protocol-shapes/breeding-status/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -188,7 +188,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/opportune-protocol-shapes/breeding-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:opportune-protocol-shapes:breeding-status:vocabulary>
+<https://linked.data.gov.au/def/nrm/opportune-protocol-shapes/breeding-status/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;

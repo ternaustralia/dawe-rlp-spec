@@ -8,7 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:condition-protocol-shapes:biotic-stressors-presence:datatype>
+<https://linked.data.gov.au/def/nrm/condition-protocol-shapes/biotic-stressors-presence/datatype>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -36,7 +36,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition-protocol-shapes/biotic-stressors-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:condition-protocol-shapes:biotic-stressors-presence:feature-type>
+<https://linked.data.gov.au/def/nrm/condition-protocol-shapes/biotic-stressors-presence/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -65,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition-protocol-shapes/biotic-stressors-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:condition-protocol-shapes:biotic-stressors-presence:simple-result>
+<https://linked.data.gov.au/def/nrm/condition-protocol-shapes/biotic-stressors-presence/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -97,7 +97,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition-protocol-shapes/biotic-stressors-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:condition-protocol-shapes:biotic-stressors-presence:site-visit>
+<https://linked.data.gov.au/def/nrm/condition-protocol-shapes/biotic-stressors-presence/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -127,7 +127,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition-protocol-shapes/biotic-stressors-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:condition-protocol-shapes:biotic-stressors-presence:used-procedure>
+<https://linked.data.gov.au/def/nrm/condition-protocol-shapes/biotic-stressors-presence/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -159,7 +159,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition-protocol-shapes/biotic-stressors-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:condition-protocol-shapes:biotic-stressors-presence:value-type>
+<https://linked.data.gov.au/def/nrm/condition-protocol-shapes/biotic-stressors-presence/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;

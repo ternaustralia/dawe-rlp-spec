@@ -8,7 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:coarse-woody-debris-protocol-shapes:stump-regeneration:datatype>
+<https://linked.data.gov.au/def/nrm/coarse-woody-debris-protocol-shapes/stump-regeneration/datatype>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -36,7 +36,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris-protocol-shapes/stump-regeneration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-protocol-shapes:stump-regeneration:feature-type>
+<https://linked.data.gov.au/def/nrm/coarse-woody-debris-protocol-shapes/stump-regeneration/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -65,7 +65,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris-protocol-shapes/stump-regeneration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-protocol-shapes:stump-regeneration:simple-result>
+<https://linked.data.gov.au/def/nrm/coarse-woody-debris-protocol-shapes/stump-regeneration/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -97,7 +97,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris-protocol-shapes/stump-regeneration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-protocol-shapes:stump-regeneration:site-visit>
+<https://linked.data.gov.au/def/nrm/coarse-woody-debris-protocol-shapes/stump-regeneration/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -127,7 +127,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris-protocol-shapes/stump-regeneration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-protocol-shapes:stump-regeneration:used-procedure>
+<https://linked.data.gov.au/def/nrm/coarse-woody-debris-protocol-shapes/stump-regeneration/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -159,7 +159,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/coarse-woody-debris-protocol-shapes/stump-regeneration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:coarse-woody-debris-protocol-shapes:stump-regeneration:value-type>
+<https://linked.data.gov.au/def/nrm/coarse-woody-debris-protocol-shapes/stump-regeneration/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;

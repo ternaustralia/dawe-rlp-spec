@@ -9,7 +9,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:aspect:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/aspect/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -38,7 +38,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:aspect:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/aspect/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -68,7 +68,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:aspect:unit-of-measure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/aspect/unit-of-measure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -110,7 +110,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:aspect:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/aspect/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -142,7 +142,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:aspect:value-range>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/aspect/value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -172,7 +172,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:aspect:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/aspect/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -201,7 +201,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -230,7 +230,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -277,7 +277,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -309,7 +309,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -339,7 +339,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -371,7 +371,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -400,7 +400,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -430,7 +430,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-lithology:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -459,7 +459,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-lithology:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -588,7 +588,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-lithology:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -620,7 +620,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-lithology:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -650,7 +650,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-lithology:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -682,7 +682,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-lithology:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -711,7 +711,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-lithology:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -741,7 +741,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-size:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-size/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -770,7 +770,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-size/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-size:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-size/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -818,7 +818,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-size/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-size:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-size/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -850,7 +850,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-size/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-size:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-size/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -880,7 +880,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-size/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-size:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-size/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -912,7 +912,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-size/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-size:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-size/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -941,7 +941,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-size/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-size:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/coarse-fragments-size/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -971,7 +971,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-size/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:field-species-name:datatype>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/field-species-name/datatype>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -999,7 +999,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:field-species-name:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/field-species-name/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1028,7 +1028,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:field-species-name:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/field-species-name/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -1060,7 +1060,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:field-species-name:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/field-species-name/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1090,7 +1090,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:field-species-name:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/field-species-name/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1122,7 +1122,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:field-species-name:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/field-species-name/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1151,7 +1151,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:fire-history:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/fire-history/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1180,7 +1180,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:fire-history:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/fire-history/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -1221,7 +1221,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:fire-history:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/fire-history/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -1253,7 +1253,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:fire-history:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/fire-history/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1283,7 +1283,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:fire-history:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/fire-history/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1315,7 +1315,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:fire-history:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/fire-history/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1344,7 +1344,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:fire-history:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/fire-history/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1374,7 +1374,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:homogeneity-measure:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/homogeneity-measure/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1403,7 +1403,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:homogeneity-measure:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/homogeneity-measure/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1433,7 +1433,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:homogeneity-measure:unit-of-measure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/homogeneity-measure/unit-of-measure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1461,7 +1461,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:homogeneity-measure:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/homogeneity-measure/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1493,7 +1493,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:homogeneity-measure:value-range>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/homogeneity-measure/value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1522,7 +1522,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:homogeneity-measure:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/homogeneity-measure/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1551,7 +1551,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:introduced-plant-species-impact:datatype>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/datatype>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1579,7 +1579,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:introduced-plant-species-impact:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1608,7 +1608,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:introduced-plant-species-impact:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -1640,7 +1640,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:introduced-plant-species-impact:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1670,7 +1670,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:introduced-plant-species-impact:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1702,7 +1702,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:introduced-plant-species-impact:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1731,7 +1731,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:land-use-history:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/land-use-history/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -1760,7 +1760,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:land-use-history:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/land-use-history/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -1987,7 +1987,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:land-use-history:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/land-use-history/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -2019,7 +2019,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:land-use-history:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/land-use-history/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2049,7 +2049,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:land-use-history:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/land-use-history/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2081,7 +2081,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:land-use-history:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/land-use-history/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2110,7 +2110,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:landform-element:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/landform-element/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2139,7 +2139,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:landform-element:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/landform-element/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -2258,7 +2258,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:landform-element:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/landform-element/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -2290,7 +2290,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:landform-element:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/landform-element/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2320,7 +2320,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:landform-element:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/landform-element/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2352,7 +2352,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:landform-element:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/landform-element/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2381,7 +2381,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:landform-element:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/landform-element/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2411,7 +2411,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:landform-pattern:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/landform-pattern/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2440,7 +2440,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-pattern/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:landform-pattern:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/landform-pattern/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -2520,7 +2520,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-pattern/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:landform-pattern:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/landform-pattern/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -2552,7 +2552,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-pattern/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:landform-pattern:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/landform-pattern/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2582,7 +2582,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-pattern/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:landform-pattern:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/landform-pattern/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2614,7 +2614,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-pattern/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:landform-pattern:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/landform-pattern/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2643,7 +2643,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-pattern/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:landform-pattern:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/landform-pattern/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2673,7 +2673,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-pattern/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:life-stage:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/life-stage/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2702,7 +2702,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:life-stage:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/life-stage/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -2751,7 +2751,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:life-stage:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/life-stage/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -2783,7 +2783,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:life-stage:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/life-stage/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2813,7 +2813,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:life-stage:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/life-stage/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2845,7 +2845,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:life-stage:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/life-stage/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2874,7 +2874,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:life-stage:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/life-stage/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2904,7 +2904,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:mass-flowering-event:datatype>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/mass-flowering-event/datatype>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2932,7 +2932,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:mass-flowering-event:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/mass-flowering-event/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -2961,7 +2961,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:mass-flowering-event:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/mass-flowering-event/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -2993,7 +2993,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:mass-flowering-event:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/mass-flowering-event/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -3023,7 +3023,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:mass-flowering-event:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/mass-flowering-event/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -3055,7 +3055,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:mass-flowering-event:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/mass-flowering-event/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -3084,7 +3084,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:nearest-infrastructure:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/nearest-infrastructure/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -3113,7 +3113,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:nearest-infrastructure:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/nearest-infrastructure/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -3340,7 +3340,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:nearest-infrastructure:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/nearest-infrastructure/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -3372,7 +3372,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:nearest-infrastructure:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/nearest-infrastructure/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -3402,7 +3402,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:nearest-infrastructure:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/nearest-infrastructure/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -3434,7 +3434,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:nearest-infrastructure:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/nearest-infrastructure/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -3463,7 +3463,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:outcrop-lithology:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/outcrop-lithology/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -3492,7 +3492,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:outcrop-lithology:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/outcrop-lithology/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -3621,7 +3621,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:outcrop-lithology:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/outcrop-lithology/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -3653,7 +3653,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:outcrop-lithology:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/outcrop-lithology/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -3683,7 +3683,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:outcrop-lithology:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/outcrop-lithology/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -3715,7 +3715,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:outcrop-lithology:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/outcrop-lithology/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -3744,7 +3744,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:outcrop-lithology:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/outcrop-lithology/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -3774,7 +3774,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:plot-description-comments:datatype>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/plot-description-comments/datatype>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -3802,7 +3802,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:plot-description-comments:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/plot-description-comments/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -3831,7 +3831,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:plot-description-comments:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/plot-description-comments/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -3863,7 +3863,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:plot-description-comments:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/plot-description-comments/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -3893,7 +3893,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:plot-description-comments:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/plot-description-comments/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -3925,7 +3925,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:plot-description-comments:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/plot-description-comments/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -3954,7 +3954,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:relief:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/relief/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -3983,7 +3983,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/relief/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:relief:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/relief/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -4027,7 +4027,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/relief/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:relief:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/relief/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -4059,7 +4059,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/relief/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:relief:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/relief/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4089,7 +4089,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/relief/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:relief:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/relief/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4121,7 +4121,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/relief/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:relief:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/relief/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4150,7 +4150,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/relief/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:relief:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/relief/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4180,7 +4180,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/relief/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/site-disturbance/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4209,7 +4209,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/site-disturbance/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -4263,7 +4263,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/site-disturbance/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -4295,7 +4295,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/site-disturbance/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4325,7 +4325,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/site-disturbance/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4357,7 +4357,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/site-disturbance/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4386,7 +4386,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/site-disturbance/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4416,7 +4416,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope-class:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope-class/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4445,7 +4445,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope-class:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope-class/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -4492,7 +4492,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope-class:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope-class/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -4524,7 +4524,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope-class:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope-class/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4554,7 +4554,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope-class:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope-class/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4586,7 +4586,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope-class:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope-class/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4615,7 +4615,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope-class:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope-class/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4645,7 +4645,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4674,7 +4674,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4704,7 +4704,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope:unit-of-measure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope/unit-of-measure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4732,7 +4732,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4764,7 +4764,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope:value-range>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope/value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4794,7 +4794,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:slope:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/slope/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4823,7 +4823,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:structural-formation:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/structural-formation/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -4852,7 +4852,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:structural-formation:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/structural-formation/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -4996,7 +4996,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:structural-formation:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/structural-formation/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -5028,7 +5028,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:structural-formation:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/structural-formation/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5058,7 +5058,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:structural-formation:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/structural-formation/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5090,7 +5090,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:structural-formation:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/structural-formation/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5119,7 +5119,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:structural-formation:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/structural-formation/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5149,7 +5149,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5178,7 +5178,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -5222,7 +5222,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -5254,7 +5254,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5284,7 +5284,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5316,7 +5316,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5345,7 +5345,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5375,7 +5375,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:aspect:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/aspect/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5404,7 +5404,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:aspect:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/aspect/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5434,7 +5434,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:aspect:unit-of-measure>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/aspect/unit-of-measure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5476,7 +5476,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:aspect:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/aspect/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5508,7 +5508,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:aspect:value-range>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/aspect/value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5538,7 +5538,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:aspect:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/aspect/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5567,7 +5567,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:field-species-name:datatype>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/field-species-name/datatype>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5595,7 +5595,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:field-species-name:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/field-species-name/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5624,7 +5624,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:field-species-name:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/field-species-name/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -5656,7 +5656,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:field-species-name:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/field-species-name/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5686,7 +5686,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:field-species-name:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/field-species-name/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5718,7 +5718,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:field-species-name:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/field-species-name/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5747,7 +5747,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:fire-history:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/fire-history/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5776,7 +5776,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:fire-history:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/fire-history/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -5817,7 +5817,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:fire-history:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/fire-history/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -5849,7 +5849,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:fire-history:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/fire-history/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5879,7 +5879,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:fire-history:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/fire-history/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5911,7 +5911,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:fire-history:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/fire-history/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5940,7 +5940,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:fire-history:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/fire-history/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5970,7 +5970,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:homogeneity-measure:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/homogeneity-measure/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -5999,7 +5999,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:homogeneity-measure:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/homogeneity-measure/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6029,7 +6029,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:homogeneity-measure:unit-of-measure>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/homogeneity-measure/unit-of-measure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6057,7 +6057,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:homogeneity-measure:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/homogeneity-measure/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6089,7 +6089,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:homogeneity-measure:value-range>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/homogeneity-measure/value-range>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6118,7 +6118,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:homogeneity-measure:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/homogeneity-measure/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6147,7 +6147,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:introduced-plant-species-impact:datatype>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/introduced-plant-species-impact/datatype>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6175,7 +6175,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:introduced-plant-species-impact:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/introduced-plant-species-impact/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6204,7 +6204,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:introduced-plant-species-impact:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/introduced-plant-species-impact/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -6236,7 +6236,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:introduced-plant-species-impact:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/introduced-plant-species-impact/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6266,7 +6266,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:introduced-plant-species-impact:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/introduced-plant-species-impact/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6298,7 +6298,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:introduced-plant-species-impact:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/introduced-plant-species-impact/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6327,7 +6327,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:life-stage:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/life-stage/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6356,7 +6356,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:life-stage:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/life-stage/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -6405,7 +6405,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:life-stage:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/life-stage/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -6437,7 +6437,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:life-stage:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/life-stage/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6467,7 +6467,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:life-stage:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/life-stage/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6499,7 +6499,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:life-stage:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/life-stage/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6528,7 +6528,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:life-stage:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/life-stage/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6558,7 +6558,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:mass-flowering-event:datatype>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/mass-flowering-event/datatype>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6586,7 +6586,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:mass-flowering-event:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/mass-flowering-event/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6615,7 +6615,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:mass-flowering-event:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/mass-flowering-event/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -6647,7 +6647,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:mass-flowering-event:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/mass-flowering-event/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6677,7 +6677,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:mass-flowering-event:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/mass-flowering-event/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6709,7 +6709,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:mass-flowering-event:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/mass-flowering-event/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6738,7 +6738,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:plot-description-comments:datatype>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/plot-description-comments/datatype>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6766,7 +6766,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:plot-description-comments:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/plot-description-comments/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6795,7 +6795,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:plot-description-comments:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/plot-description-comments/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -6827,7 +6827,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:plot-description-comments:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/plot-description-comments/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6857,7 +6857,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:plot-description-comments:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/plot-description-comments/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6889,7 +6889,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:plot-description-comments:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/plot-description-comments/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6918,7 +6918,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:site-disturbance:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/site-disturbance/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -6947,7 +6947,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:site-disturbance:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/site-disturbance/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -7001,7 +7001,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:site-disturbance:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/site-disturbance/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -7033,7 +7033,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:site-disturbance:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/site-disturbance/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -7063,7 +7063,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:site-disturbance:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/site-disturbance/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -7095,7 +7095,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:site-disturbance:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/site-disturbance/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -7124,7 +7124,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:site-disturbance:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/site-disturbance/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -7154,7 +7154,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:structural-formation:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/structural-formation/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -7183,7 +7183,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:structural-formation:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/structural-formation/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -7327,7 +7327,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:structural-formation:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/structural-formation/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -7359,7 +7359,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:structural-formation:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/structural-formation/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -7389,7 +7389,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:structural-formation:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/structural-formation/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -7421,7 +7421,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:structural-formation:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/structural-formation/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -7450,7 +7450,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:structural-formation:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/structural-formation/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -7480,7 +7480,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:vegetation-growth-stage:feature-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/vegetation-growth-stage/feature-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -7509,7 +7509,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:vegetation-growth-stage:result-value>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/vegetation-growth-stage/result-value>
     a
         sh:PropertyShape ,
         urnc:Controlled ,
@@ -7553,7 +7553,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:vegetation-growth-stage:simple-result>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/vegetation-growth-stage/simple-result>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -7585,7 +7585,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:vegetation-growth-stage:site-visit>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/vegetation-growth-stage/site-visit>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -7615,7 +7615,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:vegetation-growth-stage:used-procedure>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/vegetation-growth-stage/used-procedure>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -7647,7 +7647,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:vegetation-growth-stage:value-type>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/vegetation-growth-stage/value-type>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -7676,7 +7676,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-standard-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:plot-description-standard-protocol-shapes:vegetation-growth-stage:vocabulary>
+<https://linked.data.gov.au/def/nrm/plot-description-standard-protocol-shapes/vegetation-growth-stage/vocabulary>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
