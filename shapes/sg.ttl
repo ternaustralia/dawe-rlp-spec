@@ -1,0 +1,37 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/def/nrm/shapes>
+    a sh:ShapesGraph ;
+    owl:imports
+        <https://linked.data.gov.au/def/nrm/_meta> ,
+        <https://linked.data.gov.au/def/nrm/basal-area> ,
+        <https://linked.data.gov.au/def/nrm/camera-trapping> ,
+        <https://linked.data.gov.au/def/nrm/coarse-woody-debris-protocol-shapes> ,
+        <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ,
+        <https://linked.data.gov.au/def/nrm/cover> ,
+        <https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes> ,
+        <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ,
+        <https://linked.data.gov.au/def/nrm/fire-protocol-shapes> ,
+        <https://linked.data.gov.au/def/nrm/floristics> ,
+        <https://linked.data.gov.au/def/nrm/herbivory-and-physical-damage> ,
+        <https://linked.data.gov.au/def/nrm/invertebrate-fauna> ,
+        <https://linked.data.gov.au/def/nrm/opportune-protocol-shapes> ,
+        <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering> ,
+        <https://linked.data.gov.au/def/nrm/plot-description> ,
+        <https://linked.data.gov.au/def/nrm/recruitment> ,
+        <https://linked.data.gov.au/def/nrm/sign-based-fauna> ,
+        <https://linked.data.gov.au/def/nrm/soils> ,
+        <https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes> ,
+        <https://linked.data.gov.au/def/nrm/vertebrate-fauna> ;
+    schema:codeRepository "https://github.com/ternaustralia/dawe-rlp-spec"^^xsd:anyURI ;
+    schema:creator <https://linked.data.gov.au/org/tern> ;
+    schema:dateCreated "2026-09-21"^^xsd:date ;
+    schema:dateModified "2026-09-21"^^xsd:date ;
+    schema:description "SHACL Shapes Graph containing shapes for Shapes protocol" ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:name "Shapes Shapes Graph" ;
+    schema:publisher <https://linked.data.gov.au/org/tern> ;
+.
