@@ -17,7 +17,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
@@ -49,7 +49,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Cat coat colour controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/2233e495-6dbc-55ff-8ca8-a5a5aa4a4909>
@@ -95,7 +95,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -129,7 +129,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>`.
 
     `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>` is the IRI for "Transects Protocol".""" ;
@@ -163,7 +163,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -194,7 +194,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/0c428cb8-25fe-5d09-a361-4164d8b15571>`.
 
         `<https://linked.data.gov.au/def/nrm/0c428cb8-25fe-5d09-a361-4164d8b15571>` is the IRI for "Cat coat colour".""" ;
@@ -226,7 +226,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _plant community_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b[`plant community`]." ;
@@ -258,7 +258,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the NVIS major vegetation groups controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/263d4e06-2095-4d73-a7f9-c5448cfe405a>
@@ -331,7 +331,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -365,7 +365,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>`.
 
     `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>` is the IRI for "Transects Protocol".""" ;
@@ -399,7 +399,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -430,7 +430,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/2aa40711-7c6d-506f-ae57-90551476d521>`.
 
         `<https://linked.data.gov.au/def/nrm/2aa40711-7c6d-506f-ae57-90551476d521>` is the IRI for "NVIS major vegetation groups".""" ;
@@ -462,7 +462,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -493,7 +493,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:DEG_C`." ;
     sh:hasValue unit:DEG_C ;
     sh:message "The result _MUST_ have `unit:DEG_C` as the value for `tern:unit`." ;
@@ -523,7 +523,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>`.
 
     `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>` is the IRI for "Transects Protocol".""" ;
@@ -557,7 +557,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between -30 and 55 exclusive." ;
     sh:maxExclusive 55 ;
@@ -589,7 +589,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -620,7 +620,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
@@ -651,7 +651,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -685,7 +685,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>`.
 
     `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>` is the IRI for "Transects Protocol".""" ;
@@ -719,7 +719,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:datatype xsd:integer ;
     sh:description "Value _MUST_ not be negative." ;
     sh:message "The result _MUST_ not be a negative value." ;
@@ -750,7 +750,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:Integer ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -781,7 +781,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -813,7 +813,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Cloud cover types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/7773b3e9-83e7-5057-b7d6-6a025e0b6a2b>
@@ -858,7 +858,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -892,7 +892,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>`.
 
     `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>` is the IRI for "Transects Protocol".""" ;
@@ -926,7 +926,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -957,7 +957,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/b001aab8-d5c2-4268-a750-bed499386691>`.
 
         `<https://linked.data.gov.au/def/nrm/b001aab8-d5c2-4268-a750-bed499386691>` is the IRI for "Cloud cover types".""" ;
@@ -989,7 +989,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
@@ -1021,7 +1021,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Age classes controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/42ecaeb5-306a-59f5-abb3-a27181d12cb6>
@@ -1072,7 +1072,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1106,7 +1106,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>`.
 
     `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>` is the IRI for "Transects Protocol".""" ;
@@ -1140,7 +1140,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1171,7 +1171,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/0e2641c3-0d7e-4d94-8cd7-02c21d564630>`.
 
         `<https://linked.data.gov.au/def/nrm/0e2641c3-0d7e-4d94-8cd7-02c21d564630>` is the IRI for "Age classes".""" ;
@@ -1203,7 +1203,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
@@ -1235,7 +1235,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "If value is not free input, the value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the target species types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/3a86540a-7f40-578a-8431-6bcacb0194d7>
@@ -1296,7 +1296,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1330,7 +1330,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>`.
 
     `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>` is the IRI for "Transects Protocol".""" ;
@@ -1364,7 +1364,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI` or `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI` or `tern:Text`." ;
     sh:name "Value type" ;
@@ -1404,7 +1404,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/ff157253-6923-5816-ac05-312dc32cd903>`.
 
         `<https://linked.data.gov.au/def/nrm/ff157253-6923-5816-ac05-312dc32cd903>` is the IRI for "Pest species types".""" ;
@@ -1436,7 +1436,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -1468,7 +1468,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Weather condition - moon phases controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/d14a1582-9c5c-5178-9197-d073b54e3cf8>
@@ -1512,7 +1512,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1546,7 +1546,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>`.
 
     `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>` is the IRI for "Transects Protocol".""" ;
@@ -1580,7 +1580,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1611,7 +1611,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/30688460-6aaa-53aa-94e7-be1164f5343b>`.
 
         `<https://linked.data.gov.au/def/nrm/30688460-6aaa-53aa-94e7-be1164f5343b>` is the IRI for "Weather condition - moon phases".""" ;
@@ -1643,7 +1643,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -1675,7 +1675,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Precipitation duration types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/08eed747-4ef0-5546-b032-93705178b1fd>
@@ -1721,7 +1721,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1755,7 +1755,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>`.
 
     `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>` is the IRI for "Transects Protocol".""" ;
@@ -1789,7 +1789,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1820,7 +1820,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/34789810-a3bc-4def-9ddb-d14ff4ba02ea>`.
 
         `<https://linked.data.gov.au/def/nrm/34789810-a3bc-4def-9ddb-d14ff4ba02ea>` is the IRI for "Precipitation duration types".""" ;
@@ -1852,7 +1852,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -1884,7 +1884,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Precipitation types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/507fab84-10d1-5153-ab14-9f6a28ce9cbc>
@@ -1932,7 +1932,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1966,7 +1966,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>`.
 
     `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>` is the IRI for "Transects Protocol".""" ;
@@ -2000,7 +2000,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2031,7 +2031,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/36e4cff5-f238-45e3-85ec-bdd0973f09d7>`.
 
         `<https://linked.data.gov.au/def/nrm/36e4cff5-f238-45e3-85ec-bdd0973f09d7>` is the IRI for "Precipitation types".""" ;
@@ -2063,7 +2063,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
@@ -2095,7 +2095,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Animal sexes controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/f6b0f6d8-16d8-5dd7-b1b7-66b0c020b96f>
@@ -2141,7 +2141,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2175,7 +2175,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>`.
 
     `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>` is the IRI for "Transects Protocol".""" ;
@@ -2209,7 +2209,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2240,7 +2240,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/fcc3a1e1-3e35-4a4f-bd44-eface035025c>`.
 
         `<https://linked.data.gov.au/def/nrm/fcc3a1e1-3e35-4a4f-bd44-eface035025c>` is the IRI for "Animal sexes".""" ;
@@ -2272,7 +2272,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -2304,7 +2304,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Wind description types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/786f0acf-ea07-5c51-a173-f456f541e28d>
@@ -2354,7 +2354,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2388,7 +2388,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>`.
 
     `<https://linked.data.gov.au/def/nrm/97c64ff0-455c-4e74-ba81-2aeb4adf042f>` is the IRI for "Transects Protocol".""" ;
@@ -2422,7 +2422,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2453,7 +2453,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/0fb03c4e-ad42-445a-a2c5-688d7d7effd8>`.
 
         `<https://linked.data.gov.au/def/nrm/0fb03c4e-ad42-445a-a2c5-688d7d7effd8>` is the IRI for "Wind description types".""" ;
@@ -2485,7 +2485,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
@@ -2517,7 +2517,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Cat coat colour controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/2233e495-6dbc-55ff-8ca8-a5a5aa4a4909>
@@ -2563,7 +2563,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2597,7 +2597,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -2631,7 +2631,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2662,7 +2662,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/0c428cb8-25fe-5d09-a361-4164d8b15571>`.
 
         `<https://linked.data.gov.au/def/nrm/0c428cb8-25fe-5d09-a361-4164d8b15571>` is the IRI for "Cat coat colour".""" ;
@@ -2694,7 +2694,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _plant community_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b[`plant community`]." ;
@@ -2726,7 +2726,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the NVIS major vegetation groups controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/263d4e06-2095-4d73-a7f9-c5448cfe405a>
@@ -2799,7 +2799,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2833,7 +2833,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -2867,7 +2867,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2898,7 +2898,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/2aa40711-7c6d-506f-ae57-90551476d521>`.
 
         `<https://linked.data.gov.au/def/nrm/2aa40711-7c6d-506f-ae57-90551476d521>` is the IRI for "NVIS major vegetation groups".""" ;
@@ -2930,7 +2930,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -2961,7 +2961,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:DEG_C`." ;
     sh:hasValue unit:DEG_C ;
     sh:message "The result _MUST_ have `unit:DEG_C` as the value for `tern:unit`." ;
@@ -2991,7 +2991,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -3025,7 +3025,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between -30 and 55 exclusive." ;
     sh:maxExclusive 55 ;
@@ -3057,7 +3057,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -3088,7 +3088,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
@@ -3119,7 +3119,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -3153,7 +3153,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -3187,7 +3187,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:datatype xsd:integer ;
     sh:description "Value _MUST_ not be negative." ;
     sh:message "The result _MUST_ not be a negative value." ;
@@ -3218,7 +3218,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:Integer ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -3249,7 +3249,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -3281,7 +3281,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Cloud cover types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/7773b3e9-83e7-5057-b7d6-6a025e0b6a2b>
@@ -3326,7 +3326,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -3360,7 +3360,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -3394,7 +3394,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -3425,7 +3425,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/b001aab8-d5c2-4268-a750-bed499386691>`.
 
         `<https://linked.data.gov.au/def/nrm/b001aab8-d5c2-4268-a750-bed499386691>` is the IRI for "Cloud cover types".""" ;
@@ -3457,7 +3457,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
@@ -3489,7 +3489,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Age classes controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/42ecaeb5-306a-59f5-abb3-a27181d12cb6>
@@ -3540,7 +3540,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -3574,7 +3574,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -3608,7 +3608,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -3639,7 +3639,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/0e2641c3-0d7e-4d94-8cd7-02c21d564630>`.
 
         `<https://linked.data.gov.au/def/nrm/0e2641c3-0d7e-4d94-8cd7-02c21d564630>` is the IRI for "Age classes".""" ;
@@ -3671,7 +3671,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
@@ -3703,7 +3703,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "If value is not free input, the value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the target species types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/3a86540a-7f40-578a-8431-6bcacb0194d7>
@@ -3764,7 +3764,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -3798,7 +3798,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -3832,7 +3832,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI` or `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI` or `tern:Text`." ;
     sh:name "Value type" ;
@@ -3872,7 +3872,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/ff157253-6923-5816-ac05-312dc32cd903>`.
 
         `<https://linked.data.gov.au/def/nrm/ff157253-6923-5816-ac05-312dc32cd903>` is the IRI for "Pest species types".""" ;
@@ -3904,7 +3904,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -3936,7 +3936,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Weather condition - moon phases controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/d14a1582-9c5c-5178-9197-d073b54e3cf8>
@@ -3980,7 +3980,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -4014,7 +4014,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -4048,7 +4048,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -4079,7 +4079,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/30688460-6aaa-53aa-94e7-be1164f5343b>`.
 
         `<https://linked.data.gov.au/def/nrm/30688460-6aaa-53aa-94e7-be1164f5343b>` is the IRI for "Weather condition - moon phases".""" ;
@@ -4111,7 +4111,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -4143,7 +4143,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Precipitation duration types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/08eed747-4ef0-5546-b032-93705178b1fd>
@@ -4189,7 +4189,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -4223,7 +4223,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -4257,7 +4257,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -4288,7 +4288,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/34789810-a3bc-4def-9ddb-d14ff4ba02ea>`.
 
         `<https://linked.data.gov.au/def/nrm/34789810-a3bc-4def-9ddb-d14ff4ba02ea>` is the IRI for "Precipitation duration types".""" ;
@@ -4320,7 +4320,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -4352,7 +4352,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Precipitation types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/507fab84-10d1-5153-ab14-9f6a28ce9cbc>
@@ -4400,7 +4400,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -4434,7 +4434,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -4468,7 +4468,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -4499,7 +4499,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/36e4cff5-f238-45e3-85ec-bdd0973f09d7>`.
 
         `<https://linked.data.gov.au/def/nrm/36e4cff5-f238-45e3-85ec-bdd0973f09d7>` is the IRI for "Precipitation types".""" ;
@@ -4531,7 +4531,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
@@ -4563,7 +4563,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Animal sexes controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/f6b0f6d8-16d8-5dd7-b1b7-66b0c020b96f>
@@ -4609,7 +4609,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -4643,7 +4643,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -4677,7 +4677,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -4708,7 +4708,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/fcc3a1e1-3e35-4a4f-bd44-eface035025c>`.
 
         `<https://linked.data.gov.au/def/nrm/fcc3a1e1-3e35-4a4f-bd44-eface035025c>` is the IRI for "Animal sexes".""" ;
@@ -4740,7 +4740,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -4772,7 +4772,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Wind description types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/786f0acf-ea07-5c51-a173-f456f541e28d>
@@ -4822,7 +4822,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -4856,7 +4856,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -4890,7 +4890,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -4921,7 +4921,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/0fb03c4e-ad42-445a-a2c5-688d7d7effd8>`.
 
         `<https://linked.data.gov.au/def/nrm/0fb03c4e-ad42-445a-a2c5-688d7d7effd8>` is the IRI for "Wind description types".""" ;
@@ -4947,7 +4947,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<https://linked.data.gov.au/def/nrm/fauna-ground-counts>
+<https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d>
     a sh:ShapesGraph ;
     rdfs:member
         <https://linked.data.gov.au/def/nrm/fauna-ground-counts-transects-protocol-shapes/Cat-coat-colour/feature-type> ,
@@ -5093,8 +5093,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:codeRepository "https://github.com/ternaustralia/dawe-rlp-spec"^^xsd:anyURI ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-09-21"^^xsd:date ;
-    schema:dateModified "2026-09-21"^^xsd:date ;
-    schema:description "SHACL Shapes Graph containing shapes for Fauna Ground Counts protocol" ;
+    schema:dateModified "2026-09-23"^^xsd:date ;
+    schema:description "SHACL Shapes Graph containing shapes for Fauna Ground Counts module" ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Fauna Ground Counts Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;

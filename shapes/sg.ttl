@@ -3,35 +3,73 @@ PREFIX schema: <https://schema.org/>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://linked.data.gov.au/def/nrm/shapes>
+<https://linked.data.gov.au/def/nrm/validator/92700cdc-dcdb-4379-aac9-b90d29688d82>
     a sh:ShapesGraph ;
     owl:imports
-        <https://linked.data.gov.au/def/nrm/_meta> ,
-        <https://linked.data.gov.au/def/nrm/basal-area> ,
-        <https://linked.data.gov.au/def/nrm/camera-trapping> ,
-        <https://linked.data.gov.au/def/nrm/coarse-woody-debris-protocol-shapes> ,
-        <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ,
-        <https://linked.data.gov.au/def/nrm/cover> ,
-        <https://linked.data.gov.au/def/nrm/fauna-aerial-survey-protocol-shapes> ,
-        <https://linked.data.gov.au/def/nrm/fauna-ground-counts> ,
-        <https://linked.data.gov.au/def/nrm/fire-protocol-shapes> ,
-        <https://linked.data.gov.au/def/nrm/floristics> ,
-        <https://linked.data.gov.au/def/nrm/herbivory-and-physical-damage> ,
-        <https://linked.data.gov.au/def/nrm/invertebrate-fauna> ,
-        <https://linked.data.gov.au/def/nrm/opportune-protocol-shapes> ,
-        <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering> ,
-        <https://linked.data.gov.au/def/nrm/plot-description> ,
-        <https://linked.data.gov.au/def/nrm/recruitment> ,
-        <https://linked.data.gov.au/def/nrm/sign-based-fauna> ,
-        <https://linked.data.gov.au/def/nrm/soils> ,
-        <https://linked.data.gov.au/def/nrm/vegetation-mapping-protocol-shapes> ,
-        <https://linked.data.gov.au/def/nrm/vertebrate-fauna> ;
+        <https://linked.data.gov.au/def/nrm/validator/06d4266a-6e56-467b-9397-406b462da552> ,
+        <https://linked.data.gov.au/def/nrm/validator/09e5fe3d-928f-48bd-a1aa-a573206cfecb> ,
+        <https://linked.data.gov.au/def/nrm/validator/0e85a0e1-e917-4267-9828-96325c7b842f> ,
+        <https://linked.data.gov.au/def/nrm/validator/1c9f0862-06eb-4c96-bfd8-cb1d54aa95e0> ,
+        <https://linked.data.gov.au/def/nrm/validator/1ce68009-4947-4c68-b777-82c9a8698410> ,
+        <https://linked.data.gov.au/def/nrm/validator/2de21523-64a8-421f-b88a-1989479f128a> ,
+        <https://linked.data.gov.au/def/nrm/validator/2e0a9402-2187-463d-b51b-bc4315799f94> ,
+        <https://linked.data.gov.au/def/nrm/validator/313e6c35-2dfa-4c0a-a284-a3f14c67b93c> ,
+        <https://linked.data.gov.au/def/nrm/validator/38630a1d-df7a-4d7d-abc8-6edcb926405b> ,
+        <https://linked.data.gov.au/def/nrm/validator/3c4fd308-fc41-4a58-b503-d12e75ef4702> ,
+        <https://linked.data.gov.au/def/nrm/validator/3ceec141-136e-4d7f-bdd7-db7385f0ba54> ,
+        <https://linked.data.gov.au/def/nrm/validator/3ff61daa-5b42-4fe4-ada9-226d6960e5f7> ,
+        <https://linked.data.gov.au/def/nrm/validator/4d404518-3f61-478b-a2ce-4c3ddce6db88> ,
+        <https://linked.data.gov.au/def/nrm/validator/55187a5f-8b9f-45d3-ab06-b0c71c890825> ,
+        <https://linked.data.gov.au/def/nrm/validator/581d0bb4-fff3-4a69-9890-8efe26815c1d> ,
+        <https://linked.data.gov.au/def/nrm/validator/58cd2d78-1923-4db1-a81c-53d917c621a5> ,
+        <https://linked.data.gov.au/def/nrm/validator/5a6ee540-732a-4c53-bc4d-d9799875ff58> ,
+        <https://linked.data.gov.au/def/nrm/validator/5e399df6-2367-4404-937f-5571acfa9afa> ,
+        <https://linked.data.gov.au/def/nrm/validator/5f0d1fc0-24bd-441a-bc4c-5b1a48b92cc3> ,
+        <https://linked.data.gov.au/def/nrm/validator/5ff0f66c-ee87-41bf-a8d7-077487fafa85> ,
+        <https://linked.data.gov.au/def/nrm/validator/61812e2b-6a1b-4421-8cac-1b183f120e92> ,
+        <https://linked.data.gov.au/def/nrm/validator/64373cbc-c95b-4845-8db1-e50167f6d2ca> ,
+        <https://linked.data.gov.au/def/nrm/validator/643bbdd7-58bd-4e01-bdb1-f5d01beef603> ,
+        <https://linked.data.gov.au/def/nrm/validator/67c266fb-c85c-4853-bacf-77375c918c70> ,
+        <https://linked.data.gov.au/def/nrm/validator/70d57bd8-0d56-46fe-8aef-ff72ba2546f6> ,
+        <https://linked.data.gov.au/def/nrm/validator/919b3a95-eaef-4b04-b8c8-9f798238318a> ,
+        <https://linked.data.gov.au/def/nrm/validator/93e7e98c-34c8-49a3-be4b-3b903ce028be> ,
+        <https://linked.data.gov.au/def/nrm/validator/95802625-5627-477f-921f-6e4ced8f0fcb> ,
+        <https://linked.data.gov.au/def/nrm/validator/9868b84e-79b9-48db-b2b6-56822b1dfa9f> ,
+        <https://linked.data.gov.au/def/nrm/validator/991c4e04-cd25-4ec6-9dda-f109d747d4b7> ,
+        <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ,
+        <https://linked.data.gov.au/def/nrm/validator/a51acd30-3ca1-4cce-bbe9-f4943294090f> ,
+        <https://linked.data.gov.au/def/nrm/validator/a9f55c50-ff34-4c9a-a097-7c8c48f68097> ,
+        <https://linked.data.gov.au/def/nrm/validator/ac12d065-9233-4eb6-8869-484b2685e41b> ,
+        <https://linked.data.gov.au/def/nrm/validator/acfa7d1c-3bdc-489d-b3ac-e94f32554341> ,
+        <https://linked.data.gov.au/def/nrm/validator/adbe6170-2556-4dcc-a604-83e994f363a9> ,
+        <https://linked.data.gov.au/def/nrm/validator/b200a16c-ba80-408c-9652-7b909a38c0c5> ,
+        <https://linked.data.gov.au/def/nrm/validator/b5c93f54-0044-4f60-b75c-99da1f6108bc> ,
+        <https://linked.data.gov.au/def/nrm/validator/bf2380b5-1362-41f0-b465-255bd77c909a> ,
+        <https://linked.data.gov.au/def/nrm/validator/c21da9fd-d761-42fa-9218-1bccfef5fa87> ,
+        <https://linked.data.gov.au/def/nrm/validator/c273dce4-e073-462c-a066-743f59ee7e32> ,
+        <https://linked.data.gov.au/def/nrm/validator/c2744fe8-a8ee-4ad1-9e95-b3c1661f317d> ,
+        <https://linked.data.gov.au/def/nrm/validator/c7a8f30e-403d-4398-8414-8be1217890e1> ,
+        <https://linked.data.gov.au/def/nrm/validator/c9e534ba-2011-46a4-a086-e68d4a690b64> ,
+        <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ,
+        <https://linked.data.gov.au/def/nrm/validator/d0da4dce-0839-4725-943d-adf67d66079f> ,
+        <https://linked.data.gov.au/def/nrm/validator/de4b1149-cb5d-43f9-a9d9-b223502361e5> ,
+        <https://linked.data.gov.au/def/nrm/validator/e2dc96ad-8ed3-40b0-8ed5-f2486beaa46d> ,
+        <https://linked.data.gov.au/def/nrm/validator/e6b96b72-21dc-4fef-a640-121022635c7d> ,
+        <https://linked.data.gov.au/def/nrm/validator/e74d850d-6bb6-4c1e-8ef1-3e38655c9cd7> ,
+        <https://linked.data.gov.au/def/nrm/validator/e7972385-9c76-42b9-bc03-a2f5242183a6> ,
+        <https://linked.data.gov.au/def/nrm/validator/e8350411-af55-462a-8514-f9fd385ab706> ,
+        <https://linked.data.gov.au/def/nrm/validator/ea8850a8-2080-4561-af50-dd0b66767d0e> ,
+        <https://linked.data.gov.au/def/nrm/validator/ee5b308e-a271-4d91-a21f-d361a927d1e3> ,
+        <https://linked.data.gov.au/def/nrm/validator/f5d64636-207d-44a7-9d59-333bb5d4e000> ,
+        <https://linked.data.gov.au/def/nrm/validator/f9a9adeb-2299-44a3-a084-b01190a93e3b> ,
+        <https://linked.data.gov.au/def/nrm/validator/fdb0d628-4bb0-46fb-88ef-e0f35310fb98> ,
+        <https://linked.data.gov.au/def/nrm/validator/ff0ac411-0018-4749-84b9-21cce234c67e> ;
     schema:codeRepository "https://github.com/ternaustralia/dawe-rlp-spec"^^xsd:anyURI ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-09-21"^^xsd:date ;
-    schema:dateModified "2026-09-21"^^xsd:date ;
-    schema:description "SHACL Shapes Graph containing shapes for Shapes protocol" ;
+    schema:dateModified "2026-09-23"^^xsd:date ;
+    schema:description "SHACL Shapes Graph containing shapes for Shapes module" ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    schema:name "Shapes Shapes Graph" ;
+    schema:name "DAWE RLP Filed Survey Protocols Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
 .

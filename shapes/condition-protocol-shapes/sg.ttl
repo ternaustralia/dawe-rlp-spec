@@ -17,7 +17,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:string ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
@@ -47,7 +47,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
@@ -78,7 +78,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -112,7 +112,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -144,7 +144,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -178,7 +178,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Text ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:Text`." ;
@@ -209,7 +209,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:boolean ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:boolean." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:boolean." ;
@@ -239,7 +239,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
@@ -270,7 +270,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -304,7 +304,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -336,7 +336,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -370,7 +370,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Boolean ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Boolean`." ;
     sh:message "The result _MUST_ be an instance of `tern:Boolean`." ;
@@ -401,7 +401,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:string ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
@@ -431,7 +431,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a[`plant disturbance`]." ;
@@ -462,7 +462,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -496,7 +496,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -528,7 +528,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -562,7 +562,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Text ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:Text`." ;
@@ -593,7 +593,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
@@ -624,7 +624,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -656,7 +656,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:PERCENT`." ;
     sh:hasValue unit:PERCENT ;
     sh:message "The result _MUST_ have `unit:PERCENT` as the value for `tern:unit`." ;
@@ -686,7 +686,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -720,7 +720,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:integer ;
     sh:description "Value _MUST_ be between 0 and 100 inclusive. Datatype should be `xsd:integer`." ;
     sh:maxInclusive 100 ;
@@ -752,7 +752,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Integer ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -783,7 +783,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a[`plant disturbance`]." ;
@@ -814,7 +814,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -846,7 +846,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:PERCENT`." ;
     sh:hasValue unit:PERCENT ;
     sh:message "The result _MUST_ have `unit:PERCENT` as the value for `tern:unit`." ;
@@ -876,7 +876,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -910,7 +910,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between 0 and 100 inclusive. Datatype should be `xsd:float`." ;
     sh:maxInclusive 100 ;
@@ -942,7 +942,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -973,7 +973,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a[`plant disturbance`]." ;
@@ -1004,7 +1004,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1038,7 +1038,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1070,7 +1070,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -1104,7 +1104,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between 0 and 300 inclusive. Datatype should be `xsd:float`." ;
     sh:maxInclusive 300 ;
@@ -1136,7 +1136,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -1167,7 +1167,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a[`plant disturbance`]." ;
@@ -1198,7 +1198,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1230,7 +1230,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:PERCENT`." ;
     sh:hasValue unit:PERCENT ;
     sh:message "The result _MUST_ have `unit:PERCENT` as the value for `tern:unit`." ;
@@ -1260,7 +1260,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -1294,7 +1294,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between 0 and 100 inclusive. Datatype should be `xsd:float`." ;
     sh:maxInclusive 100 ;
@@ -1326,7 +1326,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -1357,7 +1357,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a[`plant disturbance`]." ;
@@ -1389,7 +1389,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Crown damage types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/764b44e5-0a06-50fb-ae1d-07b598c0e04d>
@@ -1432,7 +1432,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1466,7 +1466,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1498,7 +1498,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -1532,7 +1532,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1563,7 +1563,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/41afd1b6-bd4d-5419-b571-931b09b61ce8>`.
 
         `<https://linked.data.gov.au/def/nrm/41afd1b6-bd4d-5419-b571-931b09b61ce8>` is the IRI for "Crown damage types".""" ;
@@ -1595,7 +1595,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:boolean ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:boolean." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:boolean." ;
@@ -1625,7 +1625,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a[`plant disturbance`]." ;
@@ -1656,7 +1656,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1690,7 +1690,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1722,7 +1722,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -1756,7 +1756,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Boolean ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Boolean`." ;
     sh:message "The result _MUST_ be an instance of `tern:Boolean`." ;
@@ -1787,7 +1787,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
@@ -1818,7 +1818,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1850,7 +1850,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:CentiM`." ;
     sh:hasValue unit:CentiM ;
     sh:message "The result _MUST_ have `unit:CentiM` as the value for `tern:unit`." ;
@@ -1880,7 +1880,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -1914,7 +1914,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value _MUST_ be positive." ;
     sh:message "The result _MUST_ be positive." ;
     sh:minExclusive 0 ;
@@ -1944,7 +1944,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Integer ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -1975,7 +1975,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:string ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
@@ -2005,7 +2005,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
@@ -2036,7 +2036,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2070,7 +2070,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -2102,7 +2102,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -2136,7 +2136,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Text ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:Text`." ;
@@ -2167,7 +2167,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
@@ -2198,7 +2198,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -2230,7 +2230,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:PERCENT`." ;
     sh:hasValue unit:PERCENT ;
     sh:message "The result _MUST_ have `unit:PERCENT` as the value for `tern:unit`." ;
@@ -2260,7 +2260,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -2294,7 +2294,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between 0 and 100 inclusive. Datatype should be `xsd:float`." ;
     sh:maxInclusive 100 ;
@@ -2326,7 +2326,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -2357,7 +2357,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
@@ -2389,7 +2389,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the growth stages controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219>
@@ -2434,7 +2434,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2468,7 +2468,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -2500,7 +2500,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -2534,7 +2534,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2565,7 +2565,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>`.
 
         `<https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>` is the IRI for "growth stages".""" ;
@@ -2597,7 +2597,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a[`plant disturbance`]." ;
@@ -2629,7 +2629,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Human induced damage types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb>
@@ -2674,7 +2674,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2708,7 +2708,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -2740,7 +2740,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -2774,7 +2774,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2805,7 +2805,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/ffe13f4f-3613-430f-a2b5-a46fcb4662c1>`.
 
         `<https://linked.data.gov.au/def/nrm/ffe13f4f-3613-430f-a2b5-a46fcb4662c1>` is the IRI for "Human induced damage types".""" ;
@@ -2837,7 +2837,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:boolean ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:boolean." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:boolean." ;
@@ -2867,7 +2867,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a[`plant disturbance`]." ;
@@ -2898,7 +2898,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2932,7 +2932,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -2964,7 +2964,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -2998,7 +2998,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Boolean ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Boolean`." ;
     sh:message "The result _MUST_ be an instance of `tern:Boolean`." ;
@@ -3029,7 +3029,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a[`plant disturbance`]." ;
@@ -3060,7 +3060,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -3092,7 +3092,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:PERCENT`." ;
     sh:hasValue unit:PERCENT ;
     sh:message "The result _MUST_ have `unit:PERCENT` as the value for `tern:unit`." ;
@@ -3122,7 +3122,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -3156,7 +3156,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between 0 and 100 inclusive. Datatype should be `xsd:float`." ;
     sh:maxInclusive 100 ;
@@ -3188,7 +3188,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -3219,7 +3219,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a[`plant disturbance`]." ;
@@ -3250,7 +3250,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -3282,7 +3282,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:PERCENT`." ;
     sh:hasValue unit:PERCENT ;
     sh:message "The result _MUST_ have `unit:PERCENT` as the value for `tern:unit`." ;
@@ -3312,7 +3312,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -3346,7 +3346,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between 0 and 100 inclusive. Datatype should be `xsd:float`." ;
     sh:maxInclusive 100 ;
@@ -3378,7 +3378,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -3409,7 +3409,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a[`plant disturbance`]." ;
@@ -3441,7 +3441,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the insect damage types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/68343e94-7b24-4d5b-8a7c-cf52e2914121>
@@ -3486,7 +3486,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -3520,7 +3520,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -3552,7 +3552,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -3586,7 +3586,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -3617,7 +3617,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/ba3f55eb-5698-4974-8101-da346027a346>`.
 
         `<https://linked.data.gov.au/def/nrm/ba3f55eb-5698-4974-8101-da346027a346>` is the IRI for "insect damage types".""" ;
@@ -3649,7 +3649,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
@@ -3680,7 +3680,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -3712,7 +3712,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:MilliM`." ;
     sh:hasValue unit:MilliM ;
     sh:message "The result _MUST_ have `unit:MilliM` as the value for `tern:unit`." ;
@@ -3742,7 +3742,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -3776,7 +3776,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be positive." ;
     sh:message "The result _MUST_ have a positive value." ;
@@ -3807,7 +3807,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -3838,7 +3838,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
@@ -3870,7 +3870,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Life stages controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/9a4421e0-c308-5e44-b778-24f2688ec1ea>
@@ -3920,7 +3920,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -3954,7 +3954,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -3986,7 +3986,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -4020,7 +4020,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -4051,7 +4051,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/5f82c583-167b-4ed2-b25e-4d67decb3f2d>`.
 
         `<https://linked.data.gov.au/def/nrm/5f82c583-167b-4ed2-b25e-4d67decb3f2d>` is the IRI for "Life stages".""" ;
@@ -4083,7 +4083,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
@@ -4114,7 +4114,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -4148,7 +4148,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -4180,7 +4180,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -4214,7 +4214,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:integer ;
     sh:description "Value _MUST_ be non-negative." ;
     sh:message "The result _MUST_ have a non-negative value." ;
@@ -4245,7 +4245,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Integer ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -4276,7 +4276,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
@@ -4307,7 +4307,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -4341,7 +4341,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -4373,7 +4373,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -4407,7 +4407,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:integer ;
     sh:description "Value _MUST_ be non-negative." ;
     sh:message "The result _MUST_ have a non-negative value." ;
@@ -4438,7 +4438,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Integer ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -4469,7 +4469,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
@@ -4500,7 +4500,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -4532,7 +4532,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:M`." ;
     sh:hasValue unit:M ;
     sh:message "The result _MUST_ have `unit:M` as the value for `tern:unit`." ;
@@ -4562,7 +4562,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -4596,7 +4596,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be positive." ;
     sh:message "The result _MUST_ have a positive value." ;
@@ -4627,7 +4627,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -4658,7 +4658,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
@@ -4690,7 +4690,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Plant statuses controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/2fd1ed97-3e7b-59a0-8d93-9be76f276071>
@@ -4733,7 +4733,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -4767,7 +4767,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -4799,7 +4799,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -4833,7 +4833,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -4864,7 +4864,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/b7368a37-a4ac-4c84-8a78-1fb9755ad849>`.
 
         `<https://linked.data.gov.au/def/nrm/b7368a37-a4ac-4c84-8a78-1fb9755ad849>` is the IRI for "Plant statuses".""" ;
@@ -4896,7 +4896,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
@@ -4928,7 +4928,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Fire regeneration statuses controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/ef12561d-a8d7-5dde-9779-6e02610f2070>
@@ -4971,7 +4971,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -5005,7 +5005,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -5037,7 +5037,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -5071,7 +5071,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -5102,7 +5102,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/a1b8fc00-5d5f-40f8-a7e1-0b09d4bbba4b>`.
 
         `<https://linked.data.gov.au/def/nrm/a1b8fc00-5d5f-40f8-a7e1-0b09d4bbba4b>` is the IRI for "Fire regeneration statuses".""" ;
@@ -5134,7 +5134,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
@@ -5166,7 +5166,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Tree conditions controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/ee6fec88-5173-451a-871b-ba48cb98c9f0>
@@ -5208,7 +5208,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -5242,7 +5242,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -5274,7 +5274,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -5308,7 +5308,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -5339,7 +5339,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/65a394bf-5362-4174-974e-be6f3964721c>`.
 
         `<https://linked.data.gov.au/def/nrm/65a394bf-5362-4174-974e-be6f3964721c>` is the IRI for "Tree conditions".""" ;
@@ -5371,7 +5371,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a[`plant disturbance`]." ;
@@ -5402,7 +5402,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -5434,7 +5434,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:DEG`." ;
     sh:hasValue unit:DEG ;
     sh:message "The result _MUST_ have `unit:DEG` as the value for `tern:unit`." ;
@@ -5464,7 +5464,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -5498,7 +5498,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value _MUST_ be between 0 inclusive and 360 inclusive." ;
     sh:maxInclusive 360 ;
     sh:message "The result _MUST_ have a value between 0 inclusive and 360 inclusive." ;
@@ -5529,7 +5529,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Integer ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -5560,7 +5560,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a[`plant disturbance`]." ;
@@ -5591,7 +5591,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -5623,7 +5623,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:M`." ;
     sh:hasValue unit:M ;
     sh:message "The result _MUST_ have `unit:M` as the value for `tern:unit`." ;
@@ -5653,7 +5653,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -5687,7 +5687,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be positive." ;
     sh:message "The result _MUST_ have a positive value." ;
@@ -5718,7 +5718,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -5749,7 +5749,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/6ac5044b-ffac-4cfb-b135-1983e0ea2f7a[`plant disturbance`]." ;
@@ -5780,7 +5780,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -5812,7 +5812,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:CentiM`." ;
     sh:hasValue unit:CentiM ;
     sh:message "The result _MUST_ have `unit:CentiM` as the value for `tern:unit`." ;
@@ -5842,7 +5842,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -5876,7 +5876,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be positive." ;
     sh:message "The result _MUST_ have a positive value." ;
@@ -5907,7 +5907,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -5938,7 +5938,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:datatype xsd:boolean ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:boolean." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:boolean." ;
@@ -5968,7 +5968,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
@@ -5999,7 +5999,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -6033,7 +6033,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description "Observations following the Condition Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -6065,7 +6065,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>`.
 
     `<https://linked.data.gov.au/def/nrm/16a20c3f-e95d-4919-b2d1-a25c7a275109>` is the IRI for "Condition Module".""" ;
@@ -6099,7 +6099,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/condition-protocol-shapes> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded> ;
     sh:class tern:Boolean ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Boolean`." ;
     sh:message "The result _MUST_ be an instance of `tern:Boolean`." ;
@@ -6124,7 +6124,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/condition-protocol-shapes/tree-mallee-or-mulga/shapes.ttl"^^xsd:anyURI ;
 .
 
-<https://linked.data.gov.au/def/nrm/condition-protocol-shapes>
+<https://linked.data.gov.au/def/nrm/validator/ccea8de5-c75a-4624-9de5-1a7b31e3fded>
     a sh:ShapesGraph ;
     rdfs:member
         <https://linked.data.gov.au/def/nrm/condition-protocol-shapes/abiotic-stressors-presence/datatype> ,
@@ -6318,10 +6318,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:codeRepository "https://github.com/ternaustralia/dawe-rlp-spec"^^xsd:anyURI ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-09-21"^^xsd:date ;
-    schema:dateModified "2026-09-21"^^xsd:date ;
+    schema:dateModified "2026-09-23"^^xsd:date ;
     schema:description "SHACL Shapes Graph containing shapes for Condition Protocol Shapes protocol" ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    schema:name "Condition Protocol Shapes Shapes Graph" ;
+    schema:name "Condition Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
 .
 

@@ -17,7 +17,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/d0da4dce-0839-4725-943d-adf67d66079f> ;
     sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
@@ -48,7 +48,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/d0da4dce-0839-4725-943d-adf67d66079f> ;
     sh:description "Observations following the Plant Tissue Vouchering - Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -80,7 +80,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/d0da4dce-0839-4725-943d-adf67d66079f> ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:M`." ;
     sh:hasValue unit:M ;
     sh:message "The result _MUST_ have `unit:M` as the value for `tern:unit`." ;
@@ -110,7 +110,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/d0da4dce-0839-4725-943d-adf67d66079f> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/eea8280c-6ec7-48c9-9b9e-2418731ff005>`.
 
     `<https://linked.data.gov.au/def/nrm/eea8280c-6ec7-48c9-9b9e-2418731ff005>` is the IRI for "Plant Tissue Vouchering - Enhanced Protocol".""" ;
@@ -144,7 +144,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/d0da4dce-0839-4725-943d-adf67d66079f> ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between 0 exclusive and 100 inclusive." ;
     sh:maxInclusive 100 ;
@@ -176,7 +176,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/d0da4dce-0839-4725-943d-adf67d66079f> ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -207,7 +207,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/d0da4dce-0839-4725-943d-adf67d66079f> ;
     sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
@@ -238,7 +238,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/d0da4dce-0839-4725-943d-adf67d66079f> ;
     sh:description "Observations following the Plant Tissue Vouchering - Standard Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -270,7 +270,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/d0da4dce-0839-4725-943d-adf67d66079f> ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:M`." ;
     sh:hasValue unit:M ;
     sh:message "The result _MUST_ have `unit:M` as the value for `tern:unit`." ;
@@ -300,7 +300,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/d0da4dce-0839-4725-943d-adf67d66079f> ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/c20d9a04-702d-429a-ab5f-d7424cd2990d>`.
 
     `<https://linked.data.gov.au/def/nrm/c20d9a04-702d-429a-ab5f-d7424cd2990d>` is the IRI for "Plant Tissue Vouchering - Standard Protocol".""" ;
@@ -334,7 +334,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/d0da4dce-0839-4725-943d-adf67d66079f> ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between 0 exclusive and 100 inclusive." ;
     sh:maxInclusive 100 ;
@@ -366,7 +366,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering> ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/d0da4dce-0839-4725-943d-adf67d66079f> ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -391,7 +391,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
 .
 
-<https://linked.data.gov.au/def/nrm/plant-tissue-vouchering>
+<https://linked.data.gov.au/def/nrm/validator/d0da4dce-0839-4725-943d-adf67d66079f>
     a sh:ShapesGraph ;
     rdfs:member
         <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering-enhanced-protocol-shapes/shortest-distance-between-replicates/feature-type> ,
@@ -409,8 +409,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:codeRepository "https://github.com/ternaustralia/dawe-rlp-spec"^^xsd:anyURI ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-09-21"^^xsd:date ;
-    schema:dateModified "2026-09-21"^^xsd:date ;
-    schema:description "SHACL Shapes Graph containing shapes for Plant Tissue Vouchering protocol" ;
+    schema:dateModified "2026-09-23"^^xsd:date ;
+    schema:description "SHACL Shapes Graph containing shapes for Plant Tissue Vouchering module" ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Plant Tissue Vouchering Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;

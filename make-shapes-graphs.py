@@ -1,26 +1,32 @@
-"""Generate a Shapes Graph, sg.ttl, per protocol and a top-level Shapes Graph in shapes/."""
+"""Generate sg.ttl for every directory containing uuid.txt under shapes/."""
 
 import argparse
 from datetime import date
 from pathlib import Path
 
-from rdflib import Graph, Literal, OWL, RDF, RDFS, URIRef, XSD, SH, SDO
+from rdflib import Graph, Literal, Namespace, OWL, RDF, RDFS, URIRef, XSD, SH, SDO
 
 TERN = URIRef("https://linked.data.gov.au/org/tern")
+NRMV = Namespace("https://linked.data.gov.au/def/nrm/validator/")
 
 
-def write_shapes_graph(folder, modified, imports=None):
+def write_shapes_graph(folder, modified, imports=None, *, top_level=False):
     """Write a protocol graph, or an import graph when imports is provided."""
     name = folder.name.replace("-", " ").replace("_", " ").strip().title()
-    subject = URIRef(f"https://linked.data.gov.au/def/nrm/{folder.name}")
+    display_name = folder.name.replace("shapes", "").replace("-", " ").replace("_", " ")
+    display_name = " ".join(display_name.split()).title()
+    graph_name = ("DAWE RLP Filed Survey Protocols Shapes Graph" if top_level
+                  else f"{display_name} Shapes Graph")
+    kind = "protocol" if folder.name.endswith("-protocol-shapes") else "module"
+    subject = NRMV[(folder / "uuid.txt").read_text().strip()]
     graph = Graph()
     graph.bind("sh", SH)
     graph.bind("schema", SDO)
     graph.bind("xsd", XSD)
     for predicate, value in (
-        (RDF.type, SH.ShapesGraph),
-        (SDO.name, Literal(f"{name} Shapes Graph")),
-        (SDO.description, Literal(f"SHACL Shapes Graph containing shapes for {name} protocol")),
+        (RDF.type, URIRef(f"{SH}ShapesGraph")),
+        (SDO.name, Literal(graph_name)),
+        (SDO.description, Literal(f"SHACL Shapes Graph containing shapes for {name} {kind}")),
         (SDO.dateCreated, Literal("2026-09-21", datatype=XSD.date)),
         (SDO.dateModified, Literal(modified, datatype=XSD.date)),
         (SDO.creator, TERN),
@@ -64,10 +70,14 @@ def main():
     modified = date.today().isoformat()
     root_folder = args.root_folder.resolve()
     imports = []
-    for folder in sorted(root_folder.iterdir()):
-        if folder.is_dir():
+    folders = sorted({path.parent for path in root_folder.rglob("uuid.txt")
+                      if path.is_file()})
+    for folder in folders:
+        if folder != root_folder:
             imports.append(write_shapes_graph(folder, modified))
-    write_shapes_graph(root_folder, modified, imports=imports)
+    if root_folder in folders:
+        write_shapes_graph(root_folder, modified, imports=imports, top_level=True)
+    print(f"Created {len(folders)} sg.ttl files")
 
 
 if __name__ == "__main__":
