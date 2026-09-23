@@ -10,7 +10,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://linked.data.gov.au/def/nrm/camera-traps-retrieval-protocol-shapes/image-count/feature-type>
+<https://linked.data.gov.au/def/nrm/validator/shape/da74b115-0822-4d2a-b122-12bdfbda493f>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -41,7 +41,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-retrieval-protocol-shapes/image-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<https://linked.data.gov.au/def/nrm/camera-traps-retrieval-protocol-shapes/image-count/simple-result>
+<https://linked.data.gov.au/def/nrm/validator/shape/01e8c3b0-604c-41e6-a475-e8dfc1d264b2>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -75,7 +75,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-retrieval-protocol-shapes/image-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<https://linked.data.gov.au/def/nrm/camera-traps-retrieval-protocol-shapes/image-count/used-procedure>
+<https://linked.data.gov.au/def/nrm/validator/shape/905ffe74-29f0-4f3c-bcfb-03e420fdc046>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -109,7 +109,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-retrieval-protocol-shapes/image-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<https://linked.data.gov.au/def/nrm/camera-traps-retrieval-protocol-shapes/image-count/value-range>
+<https://linked.data.gov.au/def/nrm/validator/shape/60dae845-d910-462f-9da7-3e4324a80480>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -140,7 +140,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/camera-trapping/camera-traps-retrieval-protocol-shapes/image-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<https://linked.data.gov.au/def/nrm/camera-traps-retrieval-protocol-shapes/image-count/value-type>
+<https://linked.data.gov.au/def/nrm/validator/shape/a055410a-44f4-4f1a-ac55-d57438274636>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -174,11 +174,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/nrm/validator/95802625-5627-477f-921f-6e4ced8f0fcb>
     a sh:ShapesGraph ;
     rdfs:member
-        <https://linked.data.gov.au/def/nrm/camera-traps-retrieval-protocol-shapes/image-count/feature-type> ,
-        <https://linked.data.gov.au/def/nrm/camera-traps-retrieval-protocol-shapes/image-count/simple-result> ,
-        <https://linked.data.gov.au/def/nrm/camera-traps-retrieval-protocol-shapes/image-count/used-procedure> ,
-        <https://linked.data.gov.au/def/nrm/camera-traps-retrieval-protocol-shapes/image-count/value-range> ,
-        <https://linked.data.gov.au/def/nrm/camera-traps-retrieval-protocol-shapes/image-count/value-type> ;
+        <https://linked.data.gov.au/def/nrm/validator/shape/da74b115-0822-4d2a-b122-12bdfbda493f> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/01e8c3b0-604c-41e6-a475-e8dfc1d264b2> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/905ffe74-29f0-4f3c-bcfb-03e420fdc046> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/60dae845-d910-462f-9da7-3e4324a80480> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/a055410a-44f4-4f1a-ac55-d57438274636> ;
     schema:codeRepository "https://github.com/ternaustralia/dawe-rlp-spec"^^xsd:anyURI ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-09-21"^^xsd:date ;

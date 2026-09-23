@@ -11,7 +11,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://linked.data.gov.au/def/nrm/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/feature-type>
+<https://linked.data.gov.au/def/nrm/validator/shape/a65456bc-f39e-41c6-bb46-66b66ba83475>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -42,7 +42,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
 .
 
-<https://linked.data.gov.au/def/nrm/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/site-visit>
+<https://linked.data.gov.au/def/nrm/validator/shape/55d8ee6f-5209-400d-88ed-d2b3f65c1969>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -74,7 +74,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
 .
 
-<https://linked.data.gov.au/def/nrm/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/unit-of-measure>
+<https://linked.data.gov.au/def/nrm/validator/shape/dd182dcb-6229-487d-accb-6ca354153667>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -104,7 +104,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
 .
 
-<https://linked.data.gov.au/def/nrm/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/used-procedure>
+<https://linked.data.gov.au/def/nrm/validator/shape/f239a66a-4ea1-41bd-8c54-96fa2db90c1b>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -138,7 +138,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
 .
 
-<https://linked.data.gov.au/def/nrm/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/value-range>
+<https://linked.data.gov.au/def/nrm/validator/shape/d086eb09-8920-49c4-a5b7-127d7cc7bb2d>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -170,7 +170,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plant-tissue-vouchering/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/shapes.ttl"^^xsd:anyURI ;
 .
 
-<https://linked.data.gov.au/def/nrm/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/value-type>
+<https://linked.data.gov.au/def/nrm/validator/shape/ea708723-6b19-4fc0-813c-8f719acb8e07>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -204,12 +204,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/nrm/validator/e8350411-af55-462a-8514-f9fd385ab706>
     a sh:ShapesGraph ;
     rdfs:member
-        <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/feature-type> ,
-        <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/site-visit> ,
-        <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/unit-of-measure> ,
-        <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/used-procedure> ,
-        <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/value-range> ,
-        <https://linked.data.gov.au/def/nrm/plant-tissue-vouchering-standard-protocol-shapes/shortest-distance-between-replicates/value-type> ;
+        <https://linked.data.gov.au/def/nrm/validator/shape/a65456bc-f39e-41c6-bb46-66b66ba83475> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/55d8ee6f-5209-400d-88ed-d2b3f65c1969> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/dd182dcb-6229-487d-accb-6ca354153667> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/f239a66a-4ea1-41bd-8c54-96fa2db90c1b> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/d086eb09-8920-49c4-a5b7-127d7cc7bb2d> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/ea708723-6b19-4fc0-813c-8f719acb8e07> ;
     schema:codeRepository "https://github.com/ternaustralia/dawe-rlp-spec"^^xsd:anyURI ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-09-21"^^xsd:date ;
