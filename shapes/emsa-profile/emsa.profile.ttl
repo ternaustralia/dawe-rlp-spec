@@ -11,7 +11,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     dcterms:description "This is a profile declaration for the Ecological Monitoring System - Australia (EMSA) profile of the TERN Ontology. EMSA data is validated with the TERN Ontology shapes, the EMSA class-level shapes and the shapes of the survey protocol the data was collected under. The EMSA shapes restate a small number of TERN constraints so that they allow cases that are specific to EMSA, and add constraints that EMSA requires." ;
     dcterms:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
     dcterms:modified "2026-09-21"^^xsd:date ;
-    dcterms:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
+    dcterms:publisher <https://linked.data.gov.au/org/tern> ;
     dcterms:title "EMSA Profile" ;
     skos:scopeNote "The EMSA shapes are only correct when they are loaded together with the TERN Ontology shapes. Validating EMSA data against the TERN Ontology shapes alone reports the EMSA exceptions as errors. The protocol shapes use SHACL Advanced Features, so a validator must have those enabled, for example `advanced=True` in pySHACL." ;
     prof:hasResource
@@ -48,7 +48,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     prof:hasRole role:validator ;
 .
 
-<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66>
+<https://linked.data.gov.au/org/tern>
     a sdo:Organization ;
     sdo:name "TERN" ;
     sdo:sameAs <https://ror.org/03wxseg04> ;
