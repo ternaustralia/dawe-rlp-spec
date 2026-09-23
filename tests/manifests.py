@@ -3908,4 +3908,11 @@ test_cases: List[TestCaseItem] = [
         invalid_data_path="shapes/vertebrate-fauna/vertebrate-fauna-identify-measure-and-release-protocol-shapes/pouch-young-comments/invalid.ttl",
         expected_failures=6,
     ).astuple(),
+    TestCaseItem(
+        name="emsa-profile",
+        shapes_path="shapes/emsa-profile/emsa-shapes.ttl",
+        valid_data_path="shapes/emsa-profile/valid.ttl",
+        invalid_data_path="shapes/emsa-profile/invalid.ttl",
+        expected_failures=5,
+    ).astuple(),
 ]

@@ -1,0 +1,295 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX emsa: <https://linked.data.gov.au/def/nrm/validator/emsa/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sg: <https://linked.data.gov.au/def/nrm/validator/emsa>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX tern-shapes: <https://w3id.org/tern/shapes/tern/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+emsa:FeatureOfInterest
+    a sh:NodeShape ;
+    rdfs:label "Feature of interest" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    rdfs:isDefinedBy sg: ;
+    sh:description "Restates `tern-shapes:FeatureOfInterest-featureType`. EMSA allows a feature of interest without a feature type, for example a camera trap point. Protocol shapes require a feature type where the protocol expects one." ;
+    sh:property emsa:FeatureOfInterest-featureType ;
+    sh:targetClass tern:FeatureOfInterest ;
+.
+
+emsa:Intervention
+    a sh:NodeShape ;
+    rdfs:label "Intervention" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    rdfs:isDefinedBy sg: ;
+    sh:description "Restates `tern-shapes:sosa-hasFeatureOfInterest` for interventions, with no EMSA exception. It is restated only because deactivating the TERN shape applies to the whole merged shapes graph." ;
+    sh:property emsa:Intervention-hasFeatureOfInterest ;
+    sh:targetClass tern:Intervention ;
+.
+
+emsa:Observation
+    a sh:NodeShape ;
+    rdfs:label "Observation" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    rdfs:isDefinedBy sg: ;
+    sh:description "Restates `tern-shapes:sosa-hasFeatureOfInterest` for observations. An observation normally has exactly 1 feature of interest. Observations made under the Cover and Fire protocol may have more than 1, because each observation is recorded against both the feature measured and the fire disturbance it belongs to." ;
+    sh:property emsa:Observation-hasFeatureOfInterest ;
+    sh:sparql [
+            a sh:SPARQLConstraint ;
+            sh:message "A `tern:Observation` _MUST_ have exactly 1 `sosa:hasFeatureOfInterest` predicate, unless it was made under the Cover and Fire protocol." ;
+            sh:select """
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    select $this {
+        $this sosa:hasFeatureOfInterest ?foi1, ?foi2 .
+        filter (str(?foi1) < str(?foi2))
+        filter not exists {
+            {
+                $this sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>
+            } union {
+                $this sosa:usedProcedure/tern:hasMethod <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>
+            } union {
+                $this sosa:usedProcedure/rdf:value <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>
+            }
+        }
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+.
+
+emsa:ObservationCollection
+    a sh:NodeShape ;
+    rdfs:label "Observation collection" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    rdfs:isDefinedBy sg: ;
+    sh:description "Restates `tern-shapes:ObservationCollection-hasFeatureOfInterest`. The same Cover and Fire exception applies as for observations." ;
+    sh:property emsa:ObservationCollection-hasFeatureOfInterest ;
+    sh:sparql [
+            a sh:SPARQLConstraint ;
+            sh:message "A `tern:ObservationCollection` _MAY_ have a maximum of 1 `sosa:hasFeatureOfInterest` predicate, unless it was made under the Cover and Fire protocol." ;
+            sh:select """
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    select $this {
+        $this sosa:hasFeatureOfInterest ?foi1, ?foi2 .
+        filter (str(?foi1) < str(?foi2))
+        filter not exists {
+            {
+                $this sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>
+            } union {
+                $this sosa:usedProcedure/tern:hasMethod <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>
+            } union {
+                $this sosa:usedProcedure/rdf:value <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>
+            }
+        }
+    }
+    """
+        ] ;
+    sh:targetClass tern:ObservationCollection ;
+.
+
+emsa:Procedure
+    a sh:NodeShape ;
+    rdfs:label "Procedure" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    rdfs:isDefinedBy sg: ;
+    sh:description "EMSA records the method of a procedure with `tern:hasMethod`, so it is required here even though the TERN Ontology accepts either `tern:hasMethod` or `rdf:value`." ;
+    sh:property
+        emsa:Procedure-hasMethod ,
+        emsa:Procedure-hasSurvey ;
+    sh:targetClass tern:Procedure ;
+.
+
+emsa:Sampling
+    a sh:NodeShape ;
+    rdfs:label "Sampling" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    rdfs:isDefinedBy sg: ;
+    sh:description "Restates `tern-shapes:sosa-hasFeatureOfInterest` for samplings. EMSA also accepts a `tern:System` or a `tern:Sampler` as the feature of interest, because the camera trapping protocols record photographs taken of the cameras and traps themselves." ;
+    sh:property emsa:Sampling-hasFeatureOfInterest ;
+    sh:targetClass tern:Sampling ;
+.
+
+emsa:FeatureOfInterest-featureType
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:description "The feature type of the feature of interest, if one is given." ;
+    sh:maxCount 1 ;
+    sh:message "A `tern:FeatureOfInterest` _MAY_ have a maximum of 1 `tern:featureType` predicate where the value node is an IRI." ;
+    sh:name "tern:featureType" ;
+    sh:nodeKind sh:IRI ;
+    sh:path tern:featureType ;
+.
+
+emsa:Intervention-hasFeatureOfInterest
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:description "The feature of interest of an intervention." ;
+    sh:maxCount 1 ;
+    sh:message "A `tern:Intervention` _MUST_ have exactly 1 `sosa:hasFeatureOfInterest` predicate where the value node is an IRI of one of the accepted feature classes." ;
+    sh:minCount 1 ;
+    sh:name "sosa:hasFeatureOfInterest" ;
+    sh:or (
+            [
+                sh:class tern:FeatureOfInterest
+            ]
+            [
+                sh:class tern:Sample
+            ]
+            [
+                sh:class tern:MaterialSample
+            ]
+            [
+                sh:class tern:Site
+            ]
+            [
+                sh:class tern:Transect
+            ]
+        ) ;
+    sh:path sosa:hasFeatureOfInterest ;
+.
+
+emsa:Observation-hasFeatureOfInterest
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:description "An observation is made about at least 1 feature of interest. The maximum is checked by `emsa:Observation`, which allows more than 1 for the Cover and Fire protocol." ;
+    sh:message "A `tern:Observation` _MUST_ have at least 1 `sosa:hasFeatureOfInterest` predicate where the value node is an IRI of one of the accepted feature classes." ;
+    sh:minCount 1 ;
+    sh:name "sosa:hasFeatureOfInterest" ;
+    sh:or (
+            [
+                sh:class tern:FeatureOfInterest
+            ]
+            [
+                sh:class tern:Sample
+            ]
+            [
+                sh:class tern:MaterialSample
+            ]
+            [
+                sh:class tern:Site
+            ]
+            [
+                sh:class tern:Transect
+            ]
+        ) ;
+    sh:path sosa:hasFeatureOfInterest ;
+.
+
+emsa:ObservationCollection-hasFeatureOfInterest
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:description "The feature of interest of an observation collection, if one is given. The maximum is checked by `emsa:ObservationCollection`, which allows more than 1 for the Cover and Fire protocol." ;
+    sh:message "If present, `sosa:hasFeatureOfInterest` predicates on a `tern:ObservationCollection` _MUST_ have an IRI value of one of the accepted feature classes." ;
+    sh:name "sosa:hasFeatureOfInterest" ;
+    sh:or (
+            [
+                sh:class tern:FeatureOfInterest
+            ]
+            [
+                sh:class tern:Sample
+            ]
+            [
+                sh:class tern:MaterialSample
+            ]
+            [
+                sh:class tern:Site
+            ]
+            [
+                sh:class tern:Transect
+            ]
+        ) ;
+    sh:path sosa:hasFeatureOfInterest ;
+.
+
+emsa:Procedure-hasMethod
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:description "The method of the procedure, given as the IRI of a method in the EMSA vocabularies." ;
+    sh:maxCount 1 ;
+    sh:message "A `tern:Procedure` _MUST_ have exactly 1 `tern:hasMethod` predicate where the value node is an IRI." ;
+    sh:minCount 1 ;
+    sh:name "tern:hasMethod" ;
+    sh:nodeKind sh:IRI ;
+    sh:path tern:hasMethod ;
+.
+
+emsa:Procedure-hasSurvey
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:class tern:Survey ;
+    sh:description "The survey the procedure was carried out for." ;
+    sh:maxCount 1 ;
+    sh:message "A `tern:Procedure` _MAY_ have a maximum of 1 `tern:hasSurvey` predicate where the value node is a `tern:Survey`." ;
+    sh:name "tern:hasSurvey" ;
+    sh:path tern:hasSurvey ;
+.
+
+emsa:Sampling-hasFeatureOfInterest
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:description "The feature of interest of a sampling. Alongside the feature classes accepted by the TERN Ontology, EMSA accepts `tern:System` and `tern:Sampler` for photographs taken of a camera or a trap." ;
+    sh:maxCount 1 ;
+    sh:message "A `tern:Sampling` _MUST_ have exactly 1 `sosa:hasFeatureOfInterest` predicate where the value node is an IRI of one of the accepted feature classes, or of a `tern:System` or `tern:Sampler`." ;
+    sh:minCount 1 ;
+    sh:name "sosa:hasFeatureOfInterest" ;
+    sh:or (
+            [
+                sh:class tern:FeatureOfInterest
+            ]
+            [
+                sh:class tern:Sample
+            ]
+            [
+                sh:class tern:MaterialSample
+            ]
+            [
+                sh:class tern:Site
+            ]
+            [
+                sh:class tern:Transect
+            ]
+            [
+                sh:class tern:System
+            ]
+            [
+                sh:class tern:Sampler
+            ]
+        ) ;
+    sh:path sosa:hasFeatureOfInterest ;
+.
+
+tern-shapes:FeatureOfInterest-featureType
+    sh:deactivated true ;
+.
+
+tern-shapes:ObservationCollection-hasFeatureOfInterest
+    sh:deactivated true ;
+.
+
+tern-shapes:sosa-hasFeatureOfInterest
+    sh:deactivated true ;
+.
+
+sg:
+    a sh:ShapesGraph ;
+    rdfs:member
+        tern-shapes:FeatureOfInterest-featureType ,
+        tern-shapes:ObservationCollection-hasFeatureOfInterest ,
+        tern-shapes:sosa-hasFeatureOfInterest ;
+    owl:imports <https://w3id.org/tern/shapes/tern.ttl> ;
+    schema:creator <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
+    schema:dateCreated "2026-09-21"^^xsd:date ;
+    schema:description "Class-level shapes for the Ecological Monitoring System - Australia (EMSA). This shapes graph is a profile of the TERN Ontology shapes. It restates three TERN constraints so that they allow the cases that are specific to EMSA, and it must be loaded together with the TERN Ontology shapes and the EMSA protocol shapes." ;
+    schema:name "EMSA Shapes Graph" ;
+    schema:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
+    schema:version "1" ;
+.
+

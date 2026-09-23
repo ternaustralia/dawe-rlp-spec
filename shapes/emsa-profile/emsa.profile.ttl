@@ -1,0 +1,57 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX role: <http://www.w3.org/ns/dx/prof/role/>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/def/nrm/profile/emsa>
+    a prof:Profile ;
+    dcterms:created "2026-09-21"^^xsd:date ;
+    dcterms:description "This is a profile declaration for the Ecological Monitoring System - Australia (EMSA) profile of the TERN Ontology. EMSA data is validated with the TERN Ontology shapes, the EMSA class-level shapes and the shapes of the survey protocol the data was collected under. The EMSA shapes restate a small number of TERN constraints so that they allow cases that are specific to EMSA, and add constraints that EMSA requires." ;
+    dcterms:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    dcterms:modified "2026-09-21"^^xsd:date ;
+    dcterms:publisher <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;
+    dcterms:title "EMSA Profile" ;
+    skos:scopeNote "The EMSA shapes are only correct when they are loaded together with the TERN Ontology shapes. Validating EMSA data against the TERN Ontology shapes alone reports the EMSA exceptions as errors. The protocol shapes use SHACL Advanced Features, so a validator must have those enabled, for example `advanced=True` in pySHACL." ;
+    prof:hasResource
+        <https://linked.data.gov.au/def/nrm/profile/emsa/protocol-validators> ,
+        <https://linked.data.gov.au/def/nrm/profile/emsa/specification> ,
+        <https://linked.data.gov.au/def/nrm/profile/emsa/validator> ;
+    prof:isProfileOf <https://w3id.org/tern/profiles/tern> ;
+.
+
+<https://linked.data.gov.au/def/nrm/profile/emsa/protocol-validators>
+    a prof:ResourceDescriptor ;
+    dcterms:description "SHACL shapes for the observations made under each EMSA survey protocol, grouped by module and protocol." ;
+    dcterms:format "text/turtle" ;
+    dcterms:title "EMSA survey protocols - validators" ;
+    prof:hasArtifact "https://linked.data.gov.au/def/nrm/validator"^^xsd:anyURI ;
+    prof:hasRole role:validator ;
+.
+
+<https://linked.data.gov.au/def/nrm/profile/emsa/specification>
+    a prof:ResourceDescriptor ;
+    dcterms:description "The EMSA protocol specification, which describes each survey protocol and the requirements its data must meet." ;
+    dcterms:format "text/html" ;
+    dcterms:title "EMSA - specification" ;
+    prof:hasArtifact "https://ternaustralia.github.io/dawe-rlp-spec"^^xsd:anyURI ;
+    prof:hasRole role:specification ;
+.
+
+<https://linked.data.gov.au/def/nrm/profile/emsa/validator>
+    a prof:ResourceDescriptor ;
+    dcterms:description "Class-level SHACL shapes for EMSA data, including the EMSA exceptions to the TERN Ontology shapes." ;
+    dcterms:format "text/turtle" ;
+    dcterms:title "EMSA - validator" ;
+    prof:hasArtifact "https://linked.data.gov.au/def/nrm/validator/emsa"^^xsd:anyURI ;
+    prof:hasRole role:validator ;
+.
+
+<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66>
+    a sdo:Organization ;
+    sdo:name "TERN" ;
+    sdo:sameAs <https://ror.org/03wxseg04> ;
+    sdo:url <https://www.tern.org.au> ;
+.
+

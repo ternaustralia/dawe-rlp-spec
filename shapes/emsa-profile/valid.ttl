@@ -1,0 +1,157 @@
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn: <http://www.w3.org/ns/ssn/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:example:observation-fire>
+    a tern:Observation ;
+    void:inDataset <urn:example:dataset> ;
+    sosa:hasFeatureOfInterest
+        <urn:example:feature-fire-disturbance> ,
+        <urn:example:feature-plant-occurrence> ;
+    sosa:hasResult <urn:example:result-fire> ;
+    sosa:hasSimpleResult 1.2e+00 ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/0e9da717-6c8e-4194-9385-c995d54702e4> ;
+    sosa:phenomenonTime <urn:example:instant> ;
+    sosa:usedProcedure <urn:example:procedure-fire> ;
+    tern:resultDateTime "2025-02-04T09:30:00"^^xsd:dateTime ;
+.
+
+<urn:example:observation-other>
+    a tern:Observation ;
+    void:inDataset <urn:example:dataset> ;
+    sosa:hasFeatureOfInterest <urn:example:feature-plant-occurrence> ;
+    sosa:hasResult <urn:example:result-other> ;
+    sosa:hasSimpleResult "Acacia aneura" ;
+    sosa:observedProperty <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
+    sosa:phenomenonTime <urn:example:instant> ;
+    sosa:usedProcedure <urn:example:procedure-other> ;
+    tern:resultDateTime "2025-02-04T09:35:00"^^xsd:dateTime ;
+.
+
+<urn:example:sampling-camera>
+    a tern:Sampling ;
+    void:inDataset <urn:example:dataset> ;
+    geo:hasGeometry <urn:example:geometry> ;
+    sosa:hasFeatureOfInterest <urn:example:sampler-camera-trap> ;
+    sosa:hasResult <urn:example:sample-photo-camera> ;
+    sosa:usedProcedure <urn:example:procedure-camera> ;
+    tern:resultDateTime "2025-08-13T03:26:13"^^xsd:dateTime ;
+.
+
+<urn:example:sampling-feature>
+    a tern:Sampling ;
+    void:inDataset <urn:example:dataset> ;
+    geo:hasGeometry <urn:example:geometry> ;
+    sosa:hasFeatureOfInterest <urn:example:system-feature> ;
+    sosa:hasResult <urn:example:sample-photo-feature> ;
+    sosa:usedProcedure <urn:example:procedure-camera> ;
+    tern:resultDateTime "2025-08-13T03:26:14"^^xsd:dateTime ;
+.
+
+<urn:example:feature-fire-disturbance>
+    a tern:FeatureOfInterest ;
+    void:inDataset <urn:example:dataset> ;
+    geo:hasGeometry <urn:example:geometry> ;
+    tern:featureType <http://linked.data.gov.au/def/tern-cv/b293a07e-a1ff-4a4e-9af9-922057d5d742> ;
+.
+
+<urn:example:procedure-fire>
+    a tern:Procedure ;
+    void:inDataset <urn:example:dataset> ;
+    tern:hasMethod <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b> ;
+    tern:vocabulary <https://linked.data.gov.au/def/nrm> ;
+.
+
+<urn:example:procedure-other>
+    a tern:Procedure ;
+    void:inDataset <urn:example:dataset> ;
+    tern:hasMethod <https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8> ;
+    tern:vocabulary <https://linked.data.gov.au/def/nrm> ;
+.
+
+<urn:example:result-fire>
+    a
+        tern:Float ,
+        tern:Value ;
+    void:inDataset <urn:example:dataset> ;
+    rdf:value 1.2e+00 ;
+.
+
+<urn:example:result-other>
+    a
+        tern:Text ,
+        tern:Value ;
+    void:inDataset <urn:example:dataset> ;
+    rdf:value "Acacia aneura" ;
+.
+
+<urn:example:sample-photo-camera>
+    a tern:Sample ;
+    void:inDataset <urn:example:dataset> ;
+    geo:hasGeometry <urn:example:geometry> ;
+    sosa:isSampleOf <urn:example:feature-camera-trap-point> ;
+    tern:featureType <http://linked.data.gov.au/def/tern-cv/1f0d883d-4a3e-4ba4-b2fa-4b0d6e1a1b1e> ;
+.
+
+<urn:example:sample-photo-feature>
+    a tern:Sample ;
+    void:inDataset <urn:example:dataset> ;
+    geo:hasGeometry <urn:example:geometry> ;
+    sosa:isSampleOf <urn:example:feature-camera-trap-point> ;
+    tern:featureType <http://linked.data.gov.au/def/tern-cv/1f0d883d-4a3e-4ba4-b2fa-4b0d6e1a1b1e> ;
+.
+
+<urn:example:sampler-camera-trap>
+    a tern:Sampler ;
+    rdfs:label "camera trap" ;
+    ssn:implements <https://linked.data.gov.au/def/nrm/1a6953e4-a830-41f8-9cfd-11ead4dd6bc2> ;
+    tern:systemType <http://linked.data.gov.au/def/tern-cv/c13f0d34-372b-4ede-889b-4f52182eee97> ;
+.
+
+<urn:example:system-feature>
+    a tern:System ;
+    rdfs:label "feature photographed at the camera trap point" ;
+    tern:systemType <http://linked.data.gov.au/def/tern-cv/c13f0d34-372b-4ede-889b-4f52182eee97> ;
+.
+
+<urn:example:feature-camera-trap-point>
+    a tern:FeatureOfInterest ;
+    rdfs:label "camera trap point" ;
+    void:inDataset <urn:example:dataset> ;
+    geo:hasGeometry <urn:example:geometry> ;
+.
+
+<urn:example:feature-plant-occurrence>
+    a tern:FeatureOfInterest ;
+    void:inDataset <urn:example:dataset> ;
+    geo:hasGeometry <urn:example:geometry> ;
+    tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
+.
+
+<urn:example:instant>
+    a time:Instant ;
+    time:inXSDDateTimeStamp "2025-02-04T09:30:00Z"^^xsd:dateTimeStamp ;
+.
+
+<urn:example:procedure-camera>
+    a tern:Procedure ;
+    void:inDataset <urn:example:dataset> ;
+    tern:hasMethod <https://linked.data.gov.au/def/nrm/1a6953e4-a830-41f8-9cfd-11ead4dd6bc2> ;
+    tern:vocabulary <https://linked.data.gov.au/def/nrm> ;
+.
+
+<urn:example:geometry>
+    a geo:Geometry ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/7844> POINT (149.0651698 -35.2592362)"^^geo:wktLiteral ;
+.
+
+<urn:example:dataset>
+    a tern:RDFDataset ;
+.
+
