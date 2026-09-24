@@ -1,0 +1,70 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX void: <http://rdfs.org/ns/void#>
+
+<urn:example:feature-literal-type>
+    a tern:FeatureOfInterest ;
+    void:inDataset <urn:example:dataset> ;
+    tern:featureType "plant occurrence" ;
+.
+
+<urn:example:observation-no-feature>
+    a tern:Observation ;
+    void:inDataset <urn:example:dataset> ;
+    sosa:usedProcedure <urn:example:procedure-other> ;
+.
+
+<urn:example:observation-other-two-features>
+    a tern:Observation ;
+    void:inDataset <urn:example:dataset> ;
+    sosa:hasFeatureOfInterest
+        <urn:example:feature-fire-disturbance> ,
+        <urn:example:feature-plant-occurrence> ;
+    sosa:usedProcedure <urn:example:procedure-other> ;
+.
+
+<urn:example:procedure-no-method>
+    a tern:Procedure ;
+    void:inDataset <urn:example:dataset> ;
+    rdf:value <https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8> ;
+    tern:vocabulary <https://linked.data.gov.au/def/nrm> ;
+.
+
+<urn:example:sampling-wrong-feature>
+    a tern:Sampling ;
+    void:inDataset <urn:example:dataset> ;
+    sosa:hasFeatureOfInterest <urn:example:value-1> ;
+.
+
+<urn:example:feature-fire-disturbance>
+    a tern:FeatureOfInterest ;
+    void:inDataset <urn:example:dataset> ;
+    tern:featureType <http://linked.data.gov.au/def/tern-cv/b293a07e-a1ff-4a4e-9af9-922057d5d742> ;
+.
+
+<urn:example:feature-plant-occurrence>
+    a tern:FeatureOfInterest ;
+    void:inDataset <urn:example:dataset> ;
+    tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
+.
+
+<urn:example:value-1>
+    a
+        tern:Text ,
+        tern:Value ;
+    void:inDataset <urn:example:dataset> ;
+    rdf:value "not a feature" ;
+.
+
+<urn:example:procedure-other>
+    a tern:Procedure ;
+    void:inDataset <urn:example:dataset> ;
+    tern:hasMethod <https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8> ;
+    tern:vocabulary <https://linked.data.gov.au/def/nrm> ;
+.
+
+<urn:example:dataset>
+    a tern:RDFDataset ;
+.
+

@@ -1,0 +1,306 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX tern-shapes: <https://w3id.org/tern/shapes/tern/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/def/nrm/validator/shape/0da38b7d-b232-4a23-a4b1-fcee0dd2a85b>
+    a sh:NodeShape ;
+    rdfs:label "Procedure" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ;
+    sh:description "EMSA records the method of a procedure with `tern:hasMethod`, so it is required here even though the TERN Ontology accepts either `tern:hasMethod` or `rdf:value`." ;
+    sh:property
+        <https://linked.data.gov.au/def/nrm/validator/shape/7e21d028-30e6-4725-b1a3-2af2e03cee80> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/ea2d31df-2f98-44d6-90e2-e1b15eed9dd5> ;
+    sh:targetClass tern:Procedure ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/306129f1-8063-4da8-b9fc-d78d6aeca6fa>
+    a sh:NodeShape ;
+    rdfs:label "Observation collection" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ;
+    sh:description "Restates `tern-shapes:ObservationCollection-hasFeatureOfInterest`. The same Cover and Fire exception applies as for observations." ;
+    sh:property <https://linked.data.gov.au/def/nrm/validator/shape/e696ad5d-c238-4225-95e8-4fa5d6ffc707> ;
+    sh:sparql [
+            a sh:SPARQLConstraint ;
+            sh:message "A `tern:ObservationCollection` _MAY_ have a maximum of 1 `sosa:hasFeatureOfInterest` predicate, unless it was made under the Cover and Fire protocol." ;
+            sh:select """
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    select $this {
+        $this sosa:hasFeatureOfInterest ?foi1, ?foi2 .
+        filter (str(?foi1) < str(?foi2))
+        filter not exists {
+            {
+                $this sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>
+            } union {
+                $this sosa:usedProcedure/tern:hasMethod <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>
+            } union {
+                $this sosa:usedProcedure/rdf:value <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>
+            }
+        }
+    }
+    """
+        ] ;
+    sh:targetClass tern:ObservationCollection ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/8f02510e-362d-4490-9519-192bb91cc68a>
+    a sh:NodeShape ;
+    rdfs:label "Intervention" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ;
+    sh:description "Restates `tern-shapes:sosa-hasFeatureOfInterest` for interventions, with no EMSA exception. It is restated only because deactivating the TERN shape applies to the whole merged shapes graph." ;
+    sh:property <https://linked.data.gov.au/def/nrm/validator/shape/a4dd257f-cf0e-4289-9768-710562c13ef8> ;
+    sh:targetClass tern:Intervention ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/a391cfed-7866-4e51-86ca-7068573b460a>
+    a sh:NodeShape ;
+    rdfs:label "Feature of interest" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ;
+    sh:description "Restates `tern-shapes:FeatureOfInterest-featureType`. EMSA allows a feature of interest without a feature type, for example a camera trap point. Protocol shapes require a feature type where the protocol expects one." ;
+    sh:property <https://linked.data.gov.au/def/nrm/validator/shape/1cb844c9-0016-4fd7-b0bf-d6db99a2c0f1> ;
+    sh:targetClass tern:FeatureOfInterest ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/a7d46707-1f1a-4c84-a7ea-681ba0de1eaf>
+    a sh:NodeShape ;
+    rdfs:label "Observation" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ;
+    sh:description "Restates `tern-shapes:sosa-hasFeatureOfInterest` for observations. An observation normally has exactly 1 feature of interest. Observations made under the Cover and Fire protocol may have more than 1, because each observation is recorded against both the feature measured and the fire disturbance it belongs to." ;
+    sh:property <https://linked.data.gov.au/def/nrm/validator/shape/ee4ce8d1-2fea-4637-a806-a4dcdd358858> ;
+    sh:sparql [
+            a sh:SPARQLConstraint ;
+            sh:message "A `tern:Observation` _MUST_ have exactly 1 `sosa:hasFeatureOfInterest` predicate, unless it was made under the Cover and Fire protocol." ;
+            sh:select """
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    select $this {
+        $this sosa:hasFeatureOfInterest ?foi1, ?foi2 .
+        filter (str(?foi1) < str(?foi2))
+        filter not exists {
+            {
+                $this sosa:usedProcedure <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>
+            } union {
+                $this sosa:usedProcedure/tern:hasMethod <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>
+            } union {
+                $this sosa:usedProcedure/rdf:value <https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>
+            }
+        }
+    }
+    """
+        ] ;
+    sh:targetClass tern:Observation ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/b6f4e445-c815-4f95-a42d-fc13eb1e4073>
+    a sh:NodeShape ;
+    rdfs:label "Sampling" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ;
+    sh:description "Restates `tern-shapes:sosa-hasFeatureOfInterest` for samplings. EMSA also accepts a `tern:System` or a `tern:Sampler` as the feature of interest, because the camera trapping protocols record photographs taken of the cameras and traps themselves." ;
+    sh:property <https://linked.data.gov.au/def/nrm/validator/shape/f420b1e0-8e90-4161-8d5f-e1d5bc81a09a> ;
+    sh:targetClass tern:Sampling ;
+.
+
+tern-shapes:FeatureOfInterest-featureType
+    sh:deactivated true ;
+.
+
+tern-shapes:ObservationCollection-hasFeatureOfInterest
+    sh:deactivated true ;
+.
+
+tern-shapes:sosa-hasFeatureOfInterest
+    sh:deactivated true ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/1cb844c9-0016-4fd7-b0bf-d6db99a2c0f1>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ;
+    sh:description "The feature type of the feature of interest, if one is given." ;
+    sh:maxCount 1 ;
+    sh:message "A `tern:FeatureOfInterest` _MAY_ have a maximum of 1 `tern:featureType` predicate where the value node is an IRI." ;
+    sh:name "tern:featureType" ;
+    sh:nodeKind sh:IRI ;
+    sh:path tern:featureType ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/7e21d028-30e6-4725-b1a3-2af2e03cee80>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ;
+    sh:class tern:Survey ;
+    sh:description "The survey the procedure was carried out for." ;
+    sh:maxCount 1 ;
+    sh:message "A `tern:Procedure` _MAY_ have a maximum of 1 `tern:hasSurvey` predicate where the value node is a `tern:Survey`." ;
+    sh:name "tern:hasSurvey" ;
+    sh:path tern:hasSurvey ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/a4dd257f-cf0e-4289-9768-710562c13ef8>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ;
+    sh:description "The feature of interest of an intervention." ;
+    sh:maxCount 1 ;
+    sh:message "A `tern:Intervention` _MUST_ have exactly 1 `sosa:hasFeatureOfInterest` predicate where the value node is an IRI of one of the accepted feature classes." ;
+    sh:minCount 1 ;
+    sh:name "sosa:hasFeatureOfInterest" ;
+    sh:or (
+            [
+                sh:class tern:FeatureOfInterest
+            ]
+            [
+                sh:class tern:Sample
+            ]
+            [
+                sh:class tern:MaterialSample
+            ]
+            [
+                sh:class tern:Site
+            ]
+            [
+                sh:class tern:Transect
+            ]
+        ) ;
+    sh:path sosa:hasFeatureOfInterest ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/e696ad5d-c238-4225-95e8-4fa5d6ffc707>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ;
+    sh:description "The feature of interest of an observation collection, if one is given. The maximum is checked by the Observation collection node shape in this shapes graph, which allows more than 1 for the Cover and Fire protocol." ;
+    sh:message "If present, `sosa:hasFeatureOfInterest` predicates on a `tern:ObservationCollection` _MUST_ have an IRI value of one of the accepted feature classes." ;
+    sh:name "sosa:hasFeatureOfInterest" ;
+    sh:or (
+            [
+                sh:class tern:FeatureOfInterest
+            ]
+            [
+                sh:class tern:Sample
+            ]
+            [
+                sh:class tern:MaterialSample
+            ]
+            [
+                sh:class tern:Site
+            ]
+            [
+                sh:class tern:Transect
+            ]
+        ) ;
+    sh:path sosa:hasFeatureOfInterest ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/ea2d31df-2f98-44d6-90e2-e1b15eed9dd5>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ;
+    sh:description "The method of the procedure, given as the IRI of a method in the EMSA vocabularies." ;
+    sh:maxCount 1 ;
+    sh:message "A `tern:Procedure` _MUST_ have exactly 1 `tern:hasMethod` predicate where the value node is an IRI." ;
+    sh:minCount 1 ;
+    sh:name "tern:hasMethod" ;
+    sh:nodeKind sh:IRI ;
+    sh:path tern:hasMethod ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/ee4ce8d1-2fea-4637-a806-a4dcdd358858>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ;
+    sh:description "An observation is made about at least 1 feature of interest. The maximum is checked by the Observation node shape in this shapes graph, which allows more than 1 for the Cover and Fire protocol." ;
+    sh:message "A `tern:Observation` _MUST_ have at least 1 `sosa:hasFeatureOfInterest` predicate where the value node is an IRI of one of the accepted feature classes." ;
+    sh:minCount 1 ;
+    sh:name "sosa:hasFeatureOfInterest" ;
+    sh:or (
+            [
+                sh:class tern:FeatureOfInterest
+            ]
+            [
+                sh:class tern:Sample
+            ]
+            [
+                sh:class tern:MaterialSample
+            ]
+            [
+                sh:class tern:Site
+            ]
+            [
+                sh:class tern:Transect
+            ]
+        ) ;
+    sh:path sosa:hasFeatureOfInterest ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/f420b1e0-8e90-4161-8d5f-e1d5bc81a09a>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ;
+    sh:description "The feature of interest of a sampling. Alongside the feature classes accepted by the TERN Ontology, EMSA accepts `tern:System` and `tern:Sampler` for photographs taken of a camera or a trap." ;
+    sh:maxCount 1 ;
+    sh:message "A `tern:Sampling` _MUST_ have exactly 1 `sosa:hasFeatureOfInterest` predicate where the value node is an IRI of one of the accepted feature classes, or of a `tern:System` or `tern:Sampler`." ;
+    sh:minCount 1 ;
+    sh:name "sosa:hasFeatureOfInterest" ;
+    sh:or (
+            [
+                sh:class tern:FeatureOfInterest
+            ]
+            [
+                sh:class tern:Sample
+            ]
+            [
+                sh:class tern:MaterialSample
+            ]
+            [
+                sh:class tern:Site
+            ]
+            [
+                sh:class tern:Transect
+            ]
+            [
+                sh:class tern:System
+            ]
+            [
+                sh:class tern:Sampler
+            ]
+        ) ;
+    sh:path sosa:hasFeatureOfInterest ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90>
+    a sh:ShapesGraph ;
+    rdfs:member
+        <https://linked.data.gov.au/def/nrm/validator/shape/0da38b7d-b232-4a23-a4b1-fcee0dd2a85b> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/1cb844c9-0016-4fd7-b0bf-d6db99a2c0f1> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/306129f1-8063-4da8-b9fc-d78d6aeca6fa> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/7e21d028-30e6-4725-b1a3-2af2e03cee80> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/8f02510e-362d-4490-9519-192bb91cc68a> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/a391cfed-7866-4e51-86ca-7068573b460a> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/a4dd257f-cf0e-4289-9768-710562c13ef8> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/a7d46707-1f1a-4c84-a7ea-681ba0de1eaf> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/b6f4e445-c815-4f95-a42d-fc13eb1e4073> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/e696ad5d-c238-4225-95e8-4fa5d6ffc707> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/ea2d31df-2f98-44d6-90e2-e1b15eed9dd5> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/ee4ce8d1-2fea-4637-a806-a4dcdd358858> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/f420b1e0-8e90-4161-8d5f-e1d5bc81a09a> ,
+        tern-shapes:FeatureOfInterest-featureType ,
+        tern-shapes:ObservationCollection-hasFeatureOfInterest ,
+        tern-shapes:sosa-hasFeatureOfInterest ;
+    owl:imports <https://w3id.org/tern/shapes/tern.ttl> ;
+    schema:creator <https://linked.data.gov.au/org/tern> ;
+    schema:dateCreated "2026-09-21"^^xsd:date ;
+    schema:description "Class-level shapes for the Ecological Monitoring System - Australia (EMSA). This shapes graph is a profile of the TERN Ontology shapes. It restates three TERN constraints so that they allow the cases that are specific to EMSA, and it must be loaded together with the TERN Ontology shapes and the EMSA protocol shapes." ;
+    schema:name "EMSA Shapes Graph" ;
+    schema:publisher <https://linked.data.gov.au/org/tern> ;
+    schema:version "1" ;
+.
+
