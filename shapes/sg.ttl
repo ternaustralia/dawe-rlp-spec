@@ -7,6 +7,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a sh:ShapesGraph ;
     owl:imports
         <https://linked.data.gov.au/def/nrm/validator/06d4266a-6e56-467b-9397-406b462da552> ,
+        <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ,
         <https://linked.data.gov.au/def/nrm/validator/09e5fe3d-928f-48bd-a1aa-a573206cfecb> ,
         <https://linked.data.gov.au/def/nrm/validator/0e85a0e1-e917-4267-9828-96325c7b842f> ,
         <https://linked.data.gov.au/def/nrm/validator/1c9f0862-06eb-4c96-bfd8-cb1d54aa95e0> ,
@@ -67,9 +68,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:codeRepository "https://github.com/ternaustralia/dawe-rlp-spec"^^xsd:anyURI ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-09-21"^^xsd:date ;
-    schema:dateModified "2026-09-23"^^xsd:date ;
-    schema:description "SHACL Shapes Graph containing shapes for Shapes module" ;
+    schema:dateModified "2026-09-25"^^xsd:date ;
+    schema:description "SHACL Shapes Graph containing all the module and protocol Shapes Graps of the DAWE RLP Field Survey Protocols" ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    schema:name "DAWE RLP Filed Survey Protocols Shapes Graph" ;
+    schema:name "DAWE RLP Field Survey Protocols Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
 .
