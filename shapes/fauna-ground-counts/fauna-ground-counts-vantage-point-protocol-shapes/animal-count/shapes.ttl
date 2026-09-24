@@ -8,7 +8,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:shapes:fauna-ground-counts-vantage-point-protocol-shapes:animal-count:feature-type>
+<https://linked.data.gov.au/def/nrm/validator/shape/40ee3fb4-ca3a-4a85-80ef-12728db94187>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -37,7 +37,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-ground-counts-vantage-point-protocol-shapes:animal-count:simple-result>
+<https://linked.data.gov.au/def/nrm/validator/shape/4e09de40-cadd-4aa9-9abb-f60d9ac786b3>
     a
         sh:NodeShape ,
         urnc:Requirement ;
@@ -69,7 +69,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-ground-counts-vantage-point-protocol-shapes:animal-count:used-procedure>
+<https://linked.data.gov.au/def/nrm/validator/shape/1d312ffd-5eb1-48d6-be5b-1edecf3091e8>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -101,7 +101,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-ground-counts-vantage-point-protocol-shapes:animal-count:value-range>
+<https://linked.data.gov.au/def/nrm/validator/shape/bf1bfffb-98ec-492c-9ccf-c4bddd326f09>
     a
         sh:PropertyShape ,
         urnc:Requirement ;
@@ -130,7 +130,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:shapes:fauna-ground-counts-vantage-point-protocol-shapes:animal-count:value-type>
+<https://linked.data.gov.au/def/nrm/validator/shape/b1eb1a7a-6ff0-41dc-b593-416cab99a025>
     a
         sh:PropertyShape ,
         urnc:Requirement ;

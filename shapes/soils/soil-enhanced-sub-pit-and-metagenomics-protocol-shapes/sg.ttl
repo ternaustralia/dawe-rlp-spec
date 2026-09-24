@@ -1,0 +1,430 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/def/nrm/validator/shape/4f1ac6af-8726-4777-a5ea-e5b777ffaa08>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ac12d065-9233-4eb6-8869-484b2685e41b> ;
+    sh:datatype xsd:string ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
+    sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
+    sh:name "Datatype" ;
+    sh:path rdf:value ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/eb69a524-0aa1-4166-a596-d43dbe5ae08f> ;
+                sosa:hasResult ?this .
+        }""" ;
+        ] ;
+    urnp:examples _:cb333b6d6886a2e3e8bbb4a164aac4c14bc5f30e69c0851ba710813adb24859a400 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-microhabitat-description/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/52005552-f706-4cf6-9490-5d18fe12fc9c>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ac12d065-9233-4eb6-8869-484b2685e41b> ;
+    sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/eb69a524-0aa1-4166-a596-d43dbe5ae08f>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb333b6d6886a2e3e8bbb4a164aac4c14bc5f30e69c0851ba710813adb24859a400 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-microhabitat-description/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/ec228494-5564-4fce-9be8-53871a11099c>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ac12d065-9233-4eb6-8869-484b2685e41b> ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql
+        [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/eb69a524-0aa1-4166-a596-d43dbe5ae08f>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """ ;
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:cb333b6d6886a2e3e8bbb4a164aac4c14bc5f30e69c0851ba710813adb24859a400 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-microhabitat-description/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/07320390-bd4c-405d-baee-5a65b3b9f06c>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ac12d065-9233-4eb6-8869-484b2685e41b> ;
+    sh:description "Observations following the Enhanced Soil Sub-Pit and Soil Metagenomics protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/eb69a524-0aa1-4166-a596-d43dbe5ae08f>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb333b6d6886a2e3e8bbb4a164aac4c14bc5f30e69c0851ba710813adb24859a400 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-microhabitat-description/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/6cad3588-68a1-4617-8ff3-ada6b563abc7>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ac12d065-9233-4eb6-8869-484b2685e41b> ;
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/9a1ab016-60d6-4876-a751-b25ccb734c2d>`.
+
+    `<https://linked.data.gov.au/def/nrm/9a1ab016-60d6-4876-a751-b25ccb734c2d>` is the IRI for "Enhanced Soil Sub-Pit and Soil Metagenomics protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/9a1ab016-60d6-4876-a751-b25ccb734c2d> ;
+    sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/9a1ab016-60d6-4876-a751-b25ccb734c2d`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:hasMethod ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/eb69a524-0aa1-4166-a596-d43dbe5ae08f>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb333b6d6886a2e3e8bbb4a164aac4c14bc5f30e69c0851ba710813adb24859a400 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-microhabitat-description/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/f6487631-2273-4d3e-be8b-cde485e2e680>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ac12d065-9233-4eb6-8869-484b2685e41b> ;
+    sh:class tern:Text ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Text`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/eb69a524-0aa1-4166-a596-d43dbe5ae08f>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb333b6d6886a2e3e8bbb4a164aac4c14bc5f30e69c0851ba710813adb24859a400 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-microhabitat-description/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/46e58577-e91f-43f6-a7df-74626d5befd4>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ac12d065-9233-4eb6-8869-484b2685e41b> ;
+    sh:datatype xsd:string ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
+    sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
+    sh:name "Datatype" ;
+    sh:path rdf:value ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/5e49d84f-eb74-420a-9bee-afedcae264ea> ;
+                sosa:hasResult ?this .
+        }""" ;
+        ] ;
+    urnp:examples _:cb1b0378ae05b757001fdab6322934ed5deaf8fce32e41f0b5c0d7b11be80aa76f0 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-pit-comments/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/e1427cfa-c181-47dc-b1c3-dbccff330c23>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ac12d065-9233-4eb6-8869-484b2685e41b> ;
+    sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/5e49d84f-eb74-420a-9bee-afedcae264ea>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb1b0378ae05b757001fdab6322934ed5deaf8fce32e41f0b5c0d7b11be80aa76f0 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-pit-comments/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/8eb2e240-ab31-4f70-9693-1e76c38cacd0>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ac12d065-9233-4eb6-8869-484b2685e41b> ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql
+        [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/5e49d84f-eb74-420a-9bee-afedcae264ea>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """ ;
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:cb1b0378ae05b757001fdab6322934ed5deaf8fce32e41f0b5c0d7b11be80aa76f0 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-pit-comments/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/44f32fff-278a-4fb4-bf80-b5bc5e735f9d>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ac12d065-9233-4eb6-8869-484b2685e41b> ;
+    sh:description "Observations following the Enhanced Soil Sub-Pit and Soil Metagenomics protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/5e49d84f-eb74-420a-9bee-afedcae264ea>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb1b0378ae05b757001fdab6322934ed5deaf8fce32e41f0b5c0d7b11be80aa76f0 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-pit-comments/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/80de1f1f-7a7f-4cc3-94c0-a6ab4c263b51>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ac12d065-9233-4eb6-8869-484b2685e41b> ;
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/9a1ab016-60d6-4876-a751-b25ccb734c2d>`.
+
+    `<https://linked.data.gov.au/def/nrm/9a1ab016-60d6-4876-a751-b25ccb734c2d>` is the IRI for "Enhanced Soil Sub-Pit and Soil Metagenomics protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/9a1ab016-60d6-4876-a751-b25ccb734c2d> ;
+    sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/9a1ab016-60d6-4876-a751-b25ccb734c2d`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:hasMethod ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/5e49d84f-eb74-420a-9bee-afedcae264ea>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb1b0378ae05b757001fdab6322934ed5deaf8fce32e41f0b5c0d7b11be80aa76f0 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-pit-comments/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/9e8de4d8-61e6-40a8-9ca2-613d6d54bfcf>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/ac12d065-9233-4eb6-8869-484b2685e41b> ;
+    sh:class tern:Text ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Text`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/5e49d84f-eb74-420a-9bee-afedcae264ea>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb1b0378ae05b757001fdab6322934ed5deaf8fce32e41f0b5c0d7b11be80aa76f0 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-pit-comments/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/ac12d065-9233-4eb6-8869-484b2685e41b>
+    a sh:ShapesGraph ;
+    rdfs:member
+        <https://linked.data.gov.au/def/nrm/validator/shape/4f1ac6af-8726-4777-a5ea-e5b777ffaa08> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/52005552-f706-4cf6-9490-5d18fe12fc9c> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/ec228494-5564-4fce-9be8-53871a11099c> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/07320390-bd4c-405d-baee-5a65b3b9f06c> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/6cad3588-68a1-4617-8ff3-ada6b563abc7> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/f6487631-2273-4d3e-be8b-cde485e2e680> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/46e58577-e91f-43f6-a7df-74626d5befd4> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/e1427cfa-c181-47dc-b1c3-dbccff330c23> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/8eb2e240-ab31-4f70-9693-1e76c38cacd0> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/44f32fff-278a-4fb4-bf80-b5bc5e735f9d> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/80de1f1f-7a7f-4cc3-94c0-a6ab4c263b51> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/9e8de4d8-61e6-40a8-9ca2-613d6d54bfcf> ;
+    schema:codeRepository "https://github.com/ternaustralia/dawe-rlp-spec"^^xsd:anyURI ;
+    schema:creator <https://linked.data.gov.au/org/tern> ;
+    schema:dateCreated "2026-09-21"^^xsd:date ;
+    schema:dateModified "2026-09-23"^^xsd:date ;
+    schema:description "SHACL Shapes Graph containing shapes for Soil Enhanced Sub Pit And Metagenomics Protocol Shapes protocol" ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:name "Soil Enhanced Sub Pit And Metagenomics Protocol Shapes Graph" ;
+    schema:publisher <https://linked.data.gov.au/org/tern> ;
+.
+
+_:cb1b0378ae05b757001fdab6322934ed5deaf8fce32e41f0b5c0d7b11be80aa76f0
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-pit-comments/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-pit-comments/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb333b6d6886a2e3e8bbb4a164aac4c14bc5f30e69c0851ba710813adb24859a400
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-microhabitat-description/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes/soil-microhabitat-description/valid.ttl"^^xsd:anyURI ;
+.
