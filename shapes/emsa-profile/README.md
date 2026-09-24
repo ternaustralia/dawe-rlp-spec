@@ -9,6 +9,20 @@ profile of the [TERN Ontology](https://w3id.org/tern/profiles/tern).
 | `emsa-shapes.ttl` | The EMSA shapes graph: the exceptions to the TERN Ontology shapes, and the constraints EMSA adds |
 | `valid.ttl` | Data that must conform |
 | `invalid.ttl` | Data that must fail, one case per rule |
+| `uuid.txt` | The UUID of the EMSA shapes graph, used to build its IRI |
+
+## Identifiers
+
+The IRIs follow the same scheme as the protocol shapes graphs:
+
+| Resource | IRI pattern |
+|---|---|
+| Shapes graph | `https://linked.data.gov.au/def/nrm/validator/<uuid>`, UUID from `uuid.txt` |
+| Shapes | `https://linked.data.gov.au/def/nrm/validator/shape/<uuid>` |
+| Profile | `https://linked.data.gov.au/def/nrm/profile/<uuid>` |
+| Profile resource descriptors | `https://linked.data.gov.au/def/nrm/profile/resource/<uuid>` |
+
+The UUIDs are fixed once minted. A new shape needs a new UUID.
 
 ## How the validator is assembled
 
