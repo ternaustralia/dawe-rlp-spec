@@ -1,0 +1,839 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX urnc: <urn:class:>
+PREFIX urnp: <urn:property:>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/def/nrm/validator/shape/da3e7f12-fd34-417c-bfab-43cb53939658>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:description "TERN's ecologists have determined the feature type is _plant community_ or _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:in (
+        <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
+        <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02>
+    ) ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b[`plant community`] or http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/f437f23a-7965-4bae-9dc3-2aead06786ec>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb37e8c852aaccbabefafbd8a5421665f0117ffb250c6d827a6843fd8b2cf317319 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/965a1dc1-8011-4659-94aa-212b2f9a5ac5>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:description "Observations following the Basal wedge protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/f437f23a-7965-4bae-9dc3-2aead06786ec>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb37e8c852aaccbabefafbd8a5421665f0117ffb250c6d827a6843fd8b2cf317319 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/2cdc284c-9103-4aa6-8311-76dd03189a99>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:description "Result value's unit of measure _MUST_ have the value `unit:M2-PER-HA`." ;
+    sh:hasValue unit:M2-PER-HA ;
+    sh:message "The result _MUST_ have `unit:M2-PER-HA` as the value for `tern:unit`." ;
+    sh:name "Unit of measure" ;
+    sh:path tern:unit ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/f437f23a-7965-4bae-9dc3-2aead06786ec> ;
+                sosa:hasResult ?this .
+        }""" ;
+        ] ;
+    urnp:examples _:cb37e8c852aaccbabefafbd8a5421665f0117ffb250c6d827a6843fd8b2cf317319 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/b7e3acf1-64a2-419e-bf8b-f26bd11134f5>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f>`.
+
+    `<https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f>` is the IRI for "Basal wedge protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f> ;
+    sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:hasMethod ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/f437f23a-7965-4bae-9dc3-2aead06786ec>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb37e8c852aaccbabefafbd8a5421665f0117ffb250c6d827a6843fd8b2cf317319 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/013a66f8-6336-4407-9fb0-3c738db48df2>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:datatype xsd:float ;
+    sh:description "Value _MUST_ be positive." ;
+    sh:message "The result _MUST_ have a positive value." ;
+    sh:minExclusive 0 ;
+    sh:name "Value range" ;
+    sh:path rdf:value ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/f437f23a-7965-4bae-9dc3-2aead06786ec> ;
+                sosa:hasResult ?this .
+        }""" ;
+        ] ;
+    urnp:examples _:cb37e8c852aaccbabefafbd8a5421665f0117ffb250c6d827a6843fd8b2cf317319 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/595d4af2-b64e-40f6-975a-5a28ecb009d7>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:class tern:Float ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Float`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/f437f23a-7965-4bae-9dc3-2aead06786ec>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb37e8c852aaccbabefafbd8a5421665f0117ffb250c6d827a6843fd8b2cf317319 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/83634192-bc28-4ade-bee2-ccd28b464571>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/36580cad-0509-4642-a450-47f3433ad244>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb4da7b6017da9a3bf5a7a95d97d0281da025c0f62470a4e9ff62255302ee95773e ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/b062d71c-3b3f-42f1-bee8-4453ec065354>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql
+        [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/36580cad-0509-4642-a450-47f3433ad244>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """ ;
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:cb4da7b6017da9a3bf5a7a95d97d0281da025c0f62470a4e9ff62255302ee95773e ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/6ddd822d-9eef-4cc0-9a71-ecc685595aca>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:description "Observations following the Basal wedge protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/36580cad-0509-4642-a450-47f3433ad244>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb4da7b6017da9a3bf5a7a95d97d0281da025c0f62470a4e9ff62255302ee95773e ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/5e11cca7-e59d-491a-aec0-3e26459382d0>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f>`.
+
+    `<https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f>` is the IRI for "Basal wedge protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f> ;
+    sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:hasMethod ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/36580cad-0509-4642-a450-47f3433ad244>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb4da7b6017da9a3bf5a7a95d97d0281da025c0f62470a4e9ff62255302ee95773e ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/3c7471b4-39e4-4192-8866-49800ab754df>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:datatype xsd:integer ;
+    sh:description "Value _MUST_ be non-negative." ;
+    sh:message "The result _MUST_ have a non-negative value." ;
+    sh:minInclusive 0 ;
+    sh:name "Value range" ;
+    sh:path rdf:value ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/36580cad-0509-4642-a450-47f3433ad244> ;
+                sosa:hasResult ?this .
+        }""" ;
+        ] ;
+    urnp:examples _:cb4da7b6017da9a3bf5a7a95d97d0281da025c0f62470a4e9ff62255302ee95773e ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/e86da23f-30ee-4b6e-a674-22167c900023>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:class tern:Integer ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/36580cad-0509-4642-a450-47f3433ad244>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb4da7b6017da9a3bf5a7a95d97d0281da025c0f62470a4e9ff62255302ee95773e ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/90ab104c-e284-48d6-bbd9-aa5606d25ae7>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:datatype xsd:string ;
+    sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
+    sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
+    sh:name "Datatype" ;
+    sh:path rdf:value ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227> ;
+                sosa:hasResult ?this .
+        }""" ;
+        ] ;
+    urnp:examples _:cb39c6b8f5abe3b9be1c5355b7e7598a4f420869c913d32014dabab4bb3ea4198e9 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/fba13d60-e21d-4dbf-9759-88e74791e3f2>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb39c6b8f5abe3b9be1c5355b7e7598a4f420869c913d32014dabab4bb3ea4198e9 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/24a7ab33-8557-4159-84cb-bdcb6d952bf7>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql
+        [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """ ;
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:cb39c6b8f5abe3b9be1c5355b7e7598a4f420869c913d32014dabab4bb3ea4198e9 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/cdc4e6d7-4ff4-489e-951b-d1acf8ae1daf>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:description "Observations following the Basal wedge protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb39c6b8f5abe3b9be1c5355b7e7598a4f420869c913d32014dabab4bb3ea4198e9 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/2b912204-e811-4b73-9eb2-133fabd0ccea>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f>`.
+
+    `<https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f>` is the IRI for "Basal wedge protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f> ;
+    sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:hasMethod ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb39c6b8f5abe3b9be1c5355b7e7598a4f420869c913d32014dabab4bb3ea4198e9 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/8ebe0c1f-a899-406f-b015-938ba15371ea>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:class tern:Text ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Text`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/26f843a5-e1ed-46da-b22b-053e567e3227>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb39c6b8f5abe3b9be1c5355b7e7598a4f420869c913d32014dabab4bb3ea4198e9 ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/599d37ac-d4d6-4cd3-910d-85b159f9edd8>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
+    sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
+    sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
+    sh:name "Feature type" ;
+    sh:path tern:featureType ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    select ?this  {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/8fea241f-8e98-4814-b9b9-db1bd5446910>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:hasFeatureOfInterest ?this .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb22711e7b9891f6b7c7463f07a1b293714ed78020f20365e111036579aee110ccf ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/in-trees-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/f98190d3-6dfb-4699-b137-34e45b31312c>
+    a
+        sh:NodeShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
+    sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
+    sh:name "Simple result" ;
+    sh:sparql
+        [
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select $this {
+        $this a tern:Observation ;
+            sosa:observedProperty 
+    <https://linked.data.gov.au/def/nrm/8fea241f-8e98-4814-b9b9-db1bd5446910>
+     ;
+            sosa:hasSimpleResult ?simple ;
+            sosa:hasResult ?result .
+        ?result rdf:value ?value .
+        filter (?simple != ?value)
+    }
+    """ ;
+        ] ;
+    sh:targetClass tern:Observation ;
+    urnp:examples _:cb22711e7b9891f6b7c7463f07a1b293714ed78020f20365e111036579aee110ccf ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/in-trees-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/aaf3903f-f0b8-448c-a022-2b0f019c22ed>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:description "Observations following the Basal wedge protocol are made in the context of a site visit." ;
+    sh:maxCount 1 ;
+    sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
+    sh:minCount 1 ;
+    sh:name "Site visit" ;
+    sh:path tern:hasSiteVisit ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/8fea241f-8e98-4814-b9b9-db1bd5446910>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb22711e7b9891f6b7c7463f07a1b293714ed78020f20365e111036579aee110ccf ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/in-trees-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/cac479a1-39c8-4487-9fdf-c56b75e4cc03>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f>`.
+
+    `<https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f>` is the IRI for "Basal wedge protocol".""" ;
+    sh:hasValue <https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f> ;
+    sh:message "The procedure's `tern:hasMethod` _MUST_ have the value `https://linked.data.gov.au/def/nrm/a7d605e0-7d90-473e-aac0-21cdf380576f`." ;
+    sh:name "Method type of used procedure" ;
+    sh:path tern:hasMethod ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/8fea241f-8e98-4814-b9b9-db1bd5446910>}
+        ?observation a tern:Observation ;
+            sosa:observedProperty ?property_uri ;
+            sosa:usedProcedure ?this .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb22711e7b9891f6b7c7463f07a1b293714ed78020f20365e111036579aee110ccf ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/in-trees-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/301bae5b-c5cb-4987-a91c-87a57143eae8>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:datatype xsd:integer ;
+    sh:description "Value _MUST_ be non-negative." ;
+    sh:message "The result _MUST_ have a non-negative value." ;
+    sh:minInclusive 0 ;
+    sh:name "Value range" ;
+    sh:path rdf:value ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+        PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+        PREFIX sosa: <http://www.w3.org/ns/sosa/>
+        PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+        select ?this  {
+            ?observation a tern:Observation ;
+                sosa:observedProperty 
+        <https://linked.data.gov.au/def/nrm/8fea241f-8e98-4814-b9b9-db1bd5446910> ;
+                sosa:hasResult ?this .
+        }""" ;
+        ] ;
+    urnp:examples _:cb22711e7b9891f6b7c7463f07a1b293714ed78020f20365e111036579aee110ccf ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/in-trees-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/e2872cd1-7fdd-433a-87f2-1658577c5334>
+    a
+        sh:PropertyShape ,
+        urnc:Requirement ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    reg:status reg:statusSubmitted ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81> ;
+    sh:class tern:Integer ;
+    sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
+    sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
+    sh:name "Value type" ;
+    sh:path sosa:hasResult ;
+    sh:target
+        [
+            a sh:SPARQLTarget ;
+            sh:select """
+    PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+    PREFIX unit: <http://qudt.org/vocab/unit/>
+    PREFIX sosa: <http://www.w3.org/ns/sosa/>
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    select ?this {
+        values ?property_uri {<https://linked.data.gov.au/def/nrm/8fea241f-8e98-4814-b9b9-db1bd5446910>}
+        ?this a tern:Observation ;
+            sosa:observedProperty ?property_uri .
+    }
+    """ ;
+        ] ;
+    urnp:examples _:cb22711e7b9891f6b7c7463f07a1b293714ed78020f20365e111036579aee110ccf ;
+    urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/in-trees-count/shapes.ttl"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/a01117ea-c65b-49a8-a77a-bcb9c1714e81>
+    a sh:ShapesGraph ;
+    rdfs:member
+        <https://linked.data.gov.au/def/nrm/validator/shape/da3e7f12-fd34-417c-bfab-43cb53939658> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/965a1dc1-8011-4659-94aa-212b2f9a5ac5> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/2cdc284c-9103-4aa6-8311-76dd03189a99> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/b7e3acf1-64a2-419e-bf8b-f26bd11134f5> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/013a66f8-6336-4407-9fb0-3c738db48df2> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/595d4af2-b64e-40f6-975a-5a28ecb009d7> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/83634192-bc28-4ade-bee2-ccd28b464571> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/b062d71c-3b3f-42f1-bee8-4453ec065354> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/6ddd822d-9eef-4cc0-9a71-ecc685595aca> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/5e11cca7-e59d-491a-aec0-3e26459382d0> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/3c7471b4-39e4-4192-8866-49800ab754df> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/e86da23f-30ee-4b6e-a674-22167c900023> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/90ab104c-e284-48d6-bbd9-aa5606d25ae7> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/fba13d60-e21d-4dbf-9759-88e74791e3f2> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/24a7ab33-8557-4159-84cb-bdcb6d952bf7> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/cdc4e6d7-4ff4-489e-951b-d1acf8ae1daf> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/2b912204-e811-4b73-9eb2-133fabd0ccea> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/8ebe0c1f-a899-406f-b015-938ba15371ea> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/599d37ac-d4d6-4cd3-910d-85b159f9edd8> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/f98190d3-6dfb-4699-b137-34e45b31312c> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/aaf3903f-f0b8-448c-a022-2b0f019c22ed> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/cac479a1-39c8-4487-9fdf-c56b75e4cc03> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/301bae5b-c5cb-4987-a91c-87a57143eae8> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/e2872cd1-7fdd-433a-87f2-1658577c5334> ;
+    schema:codeRepository "https://github.com/ternaustralia/dawe-rlp-spec"^^xsd:anyURI ;
+    schema:creator <https://linked.data.gov.au/org/tern> ;
+    schema:dateCreated "2026-09-21"^^xsd:date ;
+    schema:dateModified "2026-09-23"^^xsd:date ;
+    schema:description "SHACL Shapes Graph containing shapes for Basal Area Basal Wedge Protocol Shapes protocol" ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:name "Basal Area Basal Wedge Protocol Shapes Graph" ;
+    schema:publisher <https://linked.data.gov.au/org/tern> ;
+.
+
+_:cb22711e7b9891f6b7c7463f07a1b293714ed78020f20365e111036579aee110ccf
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/in-trees-count/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/in-trees-count/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb37e8c852aaccbabefafbd8a5421665f0117ffb250c6d827a6843fd8b2cf317319
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/basal-area/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb39c6b8f5abe3b9be1c5355b7e7598a4f420869c913d32014dabab4bb3ea4198e9
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb4da7b6017da9a3bf5a7a95d97d0281da025c0f62470a4e9ff62255302ee95773e
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/basal-area/basal-area-basal-wedge-protocol-shapes/borderline-trees-count/valid.ttl"^^xsd:anyURI ;
+.
