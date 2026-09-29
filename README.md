@@ -1,6 +1,6 @@
-# DAWE RLP Specification
+# Ecological Monitoring System - Australia (EMSA) Specification
 
-This repository contains the specification requirements and validators for the DAWE RLP field survey protocols developed by TERN.
+This repository contains the specification requirements and validators for the Ecological Monitoring System - Australia (EMSA) field survey protocols developed by TERN.
 
 View the specification:
 - Web document: https://ternaustralia.github.io/dawe-rlp-spec
@@ -70,6 +70,7 @@ Makefile targets have been provided for your convenience.
 | `validate-meta` | Validate with `TopQuadrant/shacl` with the meta shapes validation enabled |
 | `normalize`     | Normalize all Turtle files under `shapes` with Ontotools                  |
 | `update-controlled-shapes`| Update controlled shapes for categorical properties             |
+| `shapes-graphs` | Regenerate the `sg.ttl` Shapes Graphs from the shapes files          |
 
 Example:
 

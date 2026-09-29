@@ -38,3 +38,6 @@ update-controlled-shapes:
 aggregate-protocol-shapes:
 	python3 aggregate-protocol-shapes.py $(TARGET_FOLDER)
 
+shapes-graphs:
+	python3 make-shapes-graphs.py
+
