@@ -2,11 +2,6 @@
 
 This repository contains the specification requirements and validators for the Ecological Monitoring System - Australia (EMSA) field survey protocols developed by TERN.
 
-View the specification:
-- Web document: https://ternaustralia.github.io/dawe-rlp-spec
-
-- PDF document: https://ternaustralia.github.io/dawe-rlp-spec/spec.pdf
-
 ## Repository structure
 
 - Specification source files (asciidoc) are located within the `docs/` directory.
