@@ -20,7 +20,7 @@ UUID_PATTERN = r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}"
 SHAPE_IRI = re.compile(rf"https://linked\.data\.gov\.au/def/nrm/validator/shape/{UUID_PATTERN}")
 
 UUID_FOLDERS = sorted(path.parent for path in SHAPES_ROOT.rglob("uuid.txt"))
-SHAPES_FILES = sorted(path for path in SHAPES_ROOT.rglob("*shapes.ttl") if "_meta" not in path.parts)
+SHAPES_FILES = sorted(SHAPES_ROOT.rglob("*shapes.ttl"))
 
 
 def _folder_id(folder):
