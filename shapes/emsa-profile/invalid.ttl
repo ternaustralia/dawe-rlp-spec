@@ -1,3 +1,5 @@
+PREFIX ns1: <http://www.opengis.net/ont/geosparql#>
+PREFIX ns2: <http://rs.tdwg.org/dwc/terms/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -7,6 +9,35 @@ PREFIX void: <http://rdfs.org/ns/void#>
     a tern:FeatureOfInterest ;
     void:inDataset <urn:example:dataset> ;
     tern:featureType "plant occurrence" ;
+.
+
+<urn:example:geometry-linestring-one-point>
+    ns1:asWKT "LINESTRING (149.1348 -35.2875)"^^ns1:wktLiteral ;
+.
+
+<urn:example:geometry-multipoint-missing-latitude>
+    ns1:asWKT "MULTIPOINT ((149.1348 -35.2875), (149.1337))"^^ns1:wktLiteral ;
+.
+
+<urn:example:geometry-plain-string>
+    ns1:asWKT "POINT (138.6371 -34.9708)" ;
+.
+
+<urn:example:geometry-point-comma>
+    ns1:asWKT "POINT (138.6371, -34.9708)"^^ns1:wktLiteral ;
+.
+
+<urn:example:material-sample-no-id>
+    a tern:MaterialSample ;
+    void:inDataset <urn:example:dataset> ;
+.
+
+<urn:example:material-sample-two-ids>
+    a tern:MaterialSample ;
+    void:inDataset <urn:example:dataset> ;
+    ns2:materialSampleID
+        "VOUCHER-0001" ,
+        "VOUCHER-0002" ;
 .
 
 <urn:example:observation-no-feature>
@@ -29,6 +60,11 @@ PREFIX void: <http://rdfs.org/ns/void#>
     void:inDataset <urn:example:dataset> ;
     rdf:value <https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8> ;
     tern:vocabulary <https://linked.data.gov.au/def/nrm> ;
+.
+
+<urn:example:sample-no-feature>
+    a tern:Sample ;
+    void:inDataset <urn:example:dataset> ;
 .
 
 <urn:example:sampling-wrong-feature>

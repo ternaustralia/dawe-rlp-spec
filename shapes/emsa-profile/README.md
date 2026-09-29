@@ -46,8 +46,12 @@ pyshacl -s <merged-shapes.ttl> -a <data.ttl>
 
 ## What the profile adds
 
-`tern:Procedure` must give its method with `tern:hasMethod`. The TERN Ontology accepts either
-`tern:hasMethod` or `rdf:value`; EMSA always uses `tern:hasMethod`.
+| Class | EMSA requires |
+|---|---|
+| `tern:Procedure` | Its method given with `tern:hasMethod`. The TERN Ontology accepts either `tern:hasMethod` or `rdf:value`. |
+| `tern:Sample` | At least 1 `sosa:isSampleOf`. |
+| `tern:MaterialSample` | Exactly 1 `dwc:materialSampleID`. |
+| Any node with `geo:asWKT` | A `geo:wktLiteral` value, and POINT, LINESTRING and MULTIPOINT values written with longitude before latitude, optionally after a CRS IRI. Other geometry types are not checked. |
 
 ## Tests
 
