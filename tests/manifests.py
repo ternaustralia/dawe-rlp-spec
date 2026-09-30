@@ -3913,6 +3913,6 @@ test_cases: List[TestCaseItem] = [
         shapes_path="shapes/emsa-profile/emsa-shapes.ttl",
         valid_data_path="shapes/emsa-profile/valid.ttl",
         invalid_data_path="shapes/emsa-profile/invalid.ttl",
-        expected_failures=5,
+        expected_failures=12,
     ).astuple(),
 ]

@@ -1,4 +1,6 @@
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -51,6 +53,63 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """
         ] ;
     sh:targetClass tern:ObservationCollection ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/5ef24986-2d3b-4f7a-a5c6-544254d38870>
+    a sh:NodeShape ;
+    rdfs:label "Material sample" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ;
+    sh:description "EMSA requires every material sample to carry exactly one Darwin Core material sample ID." ;
+    sh:property <https://linked.data.gov.au/def/nrm/validator/shape/d06fd824-f55c-4f28-9504-45bcb61a086a> ;
+    sh:targetClass tern:MaterialSample ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/6843713d-e11b-4263-bc0e-6ebe3579b45c>
+    a sh:NodeShape ;
+    rdfs:label "Geometry" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ;
+    sh:description "Checks the format of WKT geometries: the datatype, and the form of POINT, LINESTRING and MULTIPOINT values, with longitude before latitude." ;
+    sh:property <https://linked.data.gov.au/def/nrm/validator/shape/c74cd255-e114-48d3-8962-ee78f3f6a70b> ;
+    sh:sparql
+        [
+            a sh:SPARQLConstraint ;
+            sh:message "A POINT in `geo:asWKT` _MUST_ be written as `POINT (longitude latitude)`, with longitude before latitude." ;
+            sh:select """
+    PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+    SELECT $this ?value WHERE {
+        $this geo:asWKT ?value .
+        FILTER (REGEX(STR(?value), "^(<[^>]+>\\\\s+)?POINT"))
+        FILTER (!REGEX(STR(?value), "^(<[^>]+>\\\\s+)?POINT\\\\s*\\\\(\\\\s*-?\\\\d+(\\\\.\\\\d+)?\\\\s+-?\\\\d+(\\\\.\\\\d+)?\\\\s*\\\\)$"))
+    }
+    """
+        ] ,
+        [
+            a sh:SPARQLConstraint ;
+            sh:message "A MULTIPOINT in `geo:asWKT` _MUST_ be written as `MULTIPOINT ((longitude1 latitude1), (longitude2 latitude2), ...)`, with longitude before latitude." ;
+            sh:select """
+    PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+    SELECT $this ?value WHERE {
+        $this geo:asWKT ?value .
+        FILTER (REGEX(STR(?value), "^(<[^>]+>\\\\s+)?MULTIPOINT"))
+        FILTER (!REGEX(STR(?value), "^(<[^>]+>\\\\s+)?MULTIPOINT\\\\s*\\\\(\\\\s*(\\\\(\\\\s*-?\\\\d+(\\\\.\\\\d+)?\\\\s+-?\\\\d+(\\\\.\\\\d+)?\\\\s*\\\\)|-?\\\\d+(\\\\.\\\\d+)?\\\\s+-?\\\\d+(\\\\.\\\\d+)?)(\\\\s*,\\\\s*(\\\\(\\\\s*-?\\\\d+(\\\\.\\\\d+)?\\\\s+-?\\\\d+(\\\\.\\\\d+)?\\\\s*\\\\)|-?\\\\d+(\\\\.\\\\d+)?\\\\s+-?\\\\d+(\\\\.\\\\d+)?))*\\\\s*\\\\)$"))
+    }
+    """
+        ] ,
+        [
+            a sh:SPARQLConstraint ;
+            sh:message "A LINESTRING in `geo:asWKT` _MUST_ be written as `LINESTRING (longitude1 latitude1, longitude2 latitude2, ...)`, with longitude before latitude." ;
+            sh:select """
+    PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+    SELECT $this ?value WHERE {
+        $this geo:asWKT ?value .
+        FILTER (REGEX(STR(?value), "^(<[^>]+>\\\\s+)?LINESTRING"))
+        FILTER (!REGEX(STR(?value), "^(<[^>]+>\\\\s+)?LINESTRING\\\\s*\\\\(\\\\s*-?\\\\d+(\\\\.\\\\d+)?\\\\s+-?\\\\d+(\\\\.\\\\d+)?(\\\\s*,\\\\s*-?\\\\d+(\\\\.\\\\d+)?\\\\s+-?\\\\d+(\\\\.\\\\d+)?)+\\\\s*\\\\)$"))
+    }
+    """
+        ] ;
+    sh:targetSubjectsOf geo:asWKT ;
 .
 
 <https://linked.data.gov.au/def/nrm/validator/shape/8f02510e-362d-4490-9519-192bb91cc68a>
@@ -115,6 +174,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass tern:Sampling ;
 .
 
+<https://linked.data.gov.au/def/nrm/validator/shape/dc03e239-b250-44a7-81c7-cc7a469b0069>
+    a sh:NodeShape ;
+    rdfs:label "Sample" ;
+    dcterms:source "Ecological Monitoring System - Australia Protocols" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ;
+    sh:description "EMSA requires every sample to say what it is a sample of." ;
+    sh:property <https://linked.data.gov.au/def/nrm/validator/shape/2a93bc74-367c-4073-898b-015cbd5c3ed0> ;
+    sh:targetClass tern:Sample ;
+.
+
 tern-shapes:FeatureOfInterest-featureType
     sh:deactivated true ;
 .
@@ -136,6 +205,17 @@ tern-shapes:sosa-hasFeatureOfInterest
     sh:name "tern:featureType" ;
     sh:nodeKind sh:IRI ;
     sh:path tern:featureType ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/2a93bc74-367c-4073-898b-015cbd5c3ed0>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ;
+    sh:description "The feature of interest the sample represents." ;
+    sh:message "A `tern:Sample` _MUST_ have at least 1 `sosa:isSampleOf` predicate with an IRI value." ;
+    sh:minCount 1 ;
+    sh:name "sosa:isSampleOf" ;
+    sh:nodeKind sh:IRI ;
+    sh:path sosa:isSampleOf ;
 .
 
 <https://linked.data.gov.au/def/nrm/validator/shape/7e21d028-30e6-4725-b1a3-2af2e03cee80>
@@ -175,6 +255,27 @@ tern-shapes:sosa-hasFeatureOfInterest
             ]
         ) ;
     sh:path sosa:hasFeatureOfInterest ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/c74cd255-e114-48d3-8962-ee78f3f6a70b>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ;
+    sh:datatype geo:wktLiteral ;
+    sh:description "The WKT serialisation of the geometry." ;
+    sh:message "A `geo:asWKT` value _MUST_ have the datatype `geo:wktLiteral`." ;
+    sh:name "geo:asWKT" ;
+    sh:path geo:asWKT ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/d06fd824-f55c-4f28-9504-45bcb61a086a>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/nrm/validator/071e4963-3854-4da8-a50b-6304397f7f90> ;
+    sh:description "The Darwin Core identifier of the material sample." ;
+    sh:maxCount 1 ;
+    sh:message "A `tern:MaterialSample` _MUST_ have exactly 1 `dwc:materialSampleID` predicate." ;
+    sh:minCount 1 ;
+    sh:name "dwc:materialSampleID" ;
+    sh:path dwc:materialSampleID ;
 .
 
 <https://linked.data.gov.au/def/nrm/validator/shape/e696ad5d-c238-4225-95e8-4fa5d6ffc707>
@@ -281,13 +382,19 @@ tern-shapes:sosa-hasFeatureOfInterest
     rdfs:member
         <https://linked.data.gov.au/def/nrm/validator/shape/0da38b7d-b232-4a23-a4b1-fcee0dd2a85b> ,
         <https://linked.data.gov.au/def/nrm/validator/shape/1cb844c9-0016-4fd7-b0bf-d6db99a2c0f1> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/2a93bc74-367c-4073-898b-015cbd5c3ed0> ,
         <https://linked.data.gov.au/def/nrm/validator/shape/306129f1-8063-4da8-b9fc-d78d6aeca6fa> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/5ef24986-2d3b-4f7a-a5c6-544254d38870> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/6843713d-e11b-4263-bc0e-6ebe3579b45c> ,
         <https://linked.data.gov.au/def/nrm/validator/shape/7e21d028-30e6-4725-b1a3-2af2e03cee80> ,
         <https://linked.data.gov.au/def/nrm/validator/shape/8f02510e-362d-4490-9519-192bb91cc68a> ,
         <https://linked.data.gov.au/def/nrm/validator/shape/a391cfed-7866-4e51-86ca-7068573b460a> ,
         <https://linked.data.gov.au/def/nrm/validator/shape/a4dd257f-cf0e-4289-9768-710562c13ef8> ,
         <https://linked.data.gov.au/def/nrm/validator/shape/a7d46707-1f1a-4c84-a7ea-681ba0de1eaf> ,
         <https://linked.data.gov.au/def/nrm/validator/shape/b6f4e445-c815-4f95-a42d-fc13eb1e4073> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/c74cd255-e114-48d3-8962-ee78f3f6a70b> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/d06fd824-f55c-4f28-9504-45bcb61a086a> ,
+        <https://linked.data.gov.au/def/nrm/validator/shape/dc03e239-b250-44a7-81c7-cc7a469b0069> ,
         <https://linked.data.gov.au/def/nrm/validator/shape/e696ad5d-c238-4225-95e8-4fa5d6ffc707> ,
         <https://linked.data.gov.au/def/nrm/validator/shape/ea2d31df-2f98-44d6-90e2-e1b15eed9dd5> ,
         <https://linked.data.gov.au/def/nrm/validator/shape/ee4ce8d1-2fea-4637-a806-a4dcdd358858> ,
@@ -298,9 +405,8 @@ tern-shapes:sosa-hasFeatureOfInterest
     owl:imports <https://w3id.org/tern/shapes/tern.ttl> ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-09-21"^^xsd:date ;
-    schema:description "Class-level shapes for the Ecological Monitoring System - Australia (EMSA). This shapes graph is a profile of the TERN Ontology shapes. It restates three TERN constraints so that they allow the cases that are specific to EMSA, and it must be loaded together with the TERN Ontology shapes and the EMSA protocol shapes." ;
+    schema:description "Class-level shapes for the Ecological Monitoring System - Australia (EMSA). This shapes graph is a profile of the TERN Ontology shapes. It restates three TERN constraints so that they allow the cases that are specific to EMSA, adds the constraints EMSA requires on procedures, samples and material samples, and checks the format of WKT geometries. It must be loaded together with the TERN Ontology shapes and the EMSA protocol shapes." ;
     schema:name "EMSA Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
     schema:version "1" ;
 .
-

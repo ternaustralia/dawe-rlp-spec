@@ -6,36 +6,7 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://linked.data.gov.au/def/nrm/meta/controlled/query>
-    a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:message "An instance of urn:class:Controlled must have a value for urn:property:query." ;
-    sh:path urnp:query ;
-    sh:targetClass urnc:Controlled ;
-.
-
-<https://linked.data.gov.au/def/nrm/meta/requirement/description>
-    a sh:PropertyShape ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:message "An instance of urn:class:Requirement must have a value for sh:description." ;
-    sh:minCount 1 ;
-    sh:path sh:description ;
-    sh:targetClass urnc:Requirement ;
-.
-
-<https://linked.data.gov.au/def/nrm/meta/requirement/examples>
-    a sh:PropertyShape ;
-    sh:maxCount 1 ;
-    sh:message "An instance of urn:class:Requirement must have a value for urn:property:examples" ;
-    sh:minCount 1 ;
-    sh:nodeKind sh:BlankNodeOrIRI ;
-    sh:path urnp:examples ;
-    sh:targetClass urnc:Requirement ;
-.
-
-<https://linked.data.gov.au/def/nrm/meta/requirement/invalidExample>
+<https://linked.data.gov.au/def/nrm/validator/shape/057cdc8e-0c6b-48d9-ad69-84101b92655d>
     a sh:PropertyShape ;
     sh:datatype xsd:anyURI ;
     sh:maxCount 1 ;
@@ -45,7 +16,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetObjectsOf urnp:examples ;
 .
 
-<https://linked.data.gov.au/def/nrm/meta/requirement/message>
+<https://linked.data.gov.au/def/nrm/validator/shape/11309d01-c5d2-4f04-aa5b-483f392db9e7>
+    a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:message "An instance of urn:class:Requirement must have a value for dcterms:source." ;
+    sh:minCount 1 ;
+    sh:path dcterms:source ;
+    sh:targetClass urnc:Requirement ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/1c3e775a-8931-4bab-80d2-8527f08e136e>
     a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -55,17 +36,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass urnc:Requirement ;
 .
 
-<https://linked.data.gov.au/def/nrm/meta/requirement/name>
+<https://linked.data.gov.au/def/nrm/validator/shape/373b636e-bcad-4faa-87af-e1f51c3ac057>
     a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
-    sh:message "An instance of urn:class:Requirement must have a value for sh:name." ;
+    sh:message "An instance of urn:class:Requirement must have a value for sh:description." ;
     sh:minCount 1 ;
-    sh:path sh:name ;
+    sh:path sh:description ;
     sh:targetClass urnc:Requirement ;
 .
 
-<https://linked.data.gov.au/def/nrm/meta/requirement/rdf-type>
+<https://linked.data.gov.au/def/nrm/validator/shape/37650d6f-3496-41cf-9f9f-a911968851cd>
     a sh:PropertyShape ;
     sh:in (
             sh:PropertyShape
@@ -78,17 +59,56 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass urnc:Requirement ;
 .
 
-<https://linked.data.gov.au/def/nrm/meta/requirement/source>
+<https://linked.data.gov.au/def/nrm/validator/shape/5499f539-6282-4450-8e68-b470676d580d>
     a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
-    sh:message "An instance of urn:class:Requirement must have a value for dcterms:source." ;
+    sh:message "An instance of urn:class:Requirement must have a value for sh:name." ;
     sh:minCount 1 ;
-    sh:path dcterms:source ;
+    sh:path sh:name ;
     sh:targetClass urnc:Requirement ;
 .
 
-<https://linked.data.gov.au/def/nrm/meta/requirement/status>
+<https://linked.data.gov.au/def/nrm/validator/shape/774637bf-fa29-4e67-a043-6d0b6ee1ea90>
+    a sh:PropertyShape ;
+    sh:datatype xsd:anyURI ;
+    sh:maxCount 1 ;
+    sh:message "The value node of urn:property:examples must have a value for urn:property:validExample." ;
+    sh:minCount 1 ;
+    sh:path urnp:validExample ;
+    sh:targetObjectsOf urnp:examples ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/8f952756-4541-4513-a633-eeb3b4fe06ea>
+    a sh:PropertyShape ;
+    sh:datatype xsd:anyURI ;
+    sh:maxCount 1 ;
+    sh:message "An instance of urn:class:Requirement must have exactly 1 xsd:anyURI value for urn:property:validator." ;
+    sh:minCount 1 ;
+    sh:path urnp:validator ;
+    sh:targetClass urnc:Requirement ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/a32d87d5-1c97-437f-b9c0-d489b378a860>
+    a sh:PropertyShape ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:message "An instance of urn:class:Controlled must have a value for urn:property:query." ;
+    sh:path urnp:query ;
+    sh:targetClass urnc:Controlled ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/cc481727-2bcb-4e46-a65a-06066f100b01>
+    a sh:PropertyShape ;
+    sh:maxCount 1 ;
+    sh:message "An instance of urn:class:Requirement must have a value for urn:property:examples" ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path urnp:examples ;
+    sh:targetClass urnc:Requirement ;
+.
+
+<https://linked.data.gov.au/def/nrm/validator/shape/dea63897-b1ae-42bb-a1e7-e5570e7c0bc5>
     a sh:PropertyShape ;
     sh:in (
             reg:statusSubmitted
@@ -99,26 +119,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "An instance of urn:class:Requirement must have a value for reg:status." ;
     sh:minCount 1 ;
     sh:path reg:status ;
-    sh:targetClass urnc:Requirement ;
-.
-
-<https://linked.data.gov.au/def/nrm/meta/requirement/validExample>
-    a sh:PropertyShape ;
-    sh:datatype xsd:anyURI ;
-    sh:maxCount 1 ;
-    sh:message "The value node of urn:property:examples must have a value for urn:property:validExample." ;
-    sh:minCount 1 ;
-    sh:path urnp:validExample ;
-    sh:targetObjectsOf urnp:examples ;
-.
-
-<https://linked.data.gov.au/def/nrm/meta/requirement/validator>
-    a sh:PropertyShape ;
-    sh:datatype xsd:anyURI ;
-    sh:maxCount 1 ;
-    sh:message "An instance of urn:class:Requirement must have exactly 1 xsd:anyURI value for urn:property:validator." ;
-    sh:minCount 1 ;
-    sh:path urnp:validator ;
     sh:targetClass urnc:Requirement ;
 .
 

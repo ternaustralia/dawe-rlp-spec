@@ -1,4 +1,5 @@
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX ns1: <http://rs.tdwg.org/dwc/terms/>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
@@ -7,6 +8,34 @@ PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX time: <http://www.w3.org/2006/time#>
 PREFIX void: <http://rdfs.org/ns/void#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:example:geometry-linestring>
+    a geo:Geometry ;
+    geo:asWKT "<http://www.opengis.net/def/crs/EPSG/0/7844> LINESTRING (149.1348 -35.2875, 149.1337 -35.2876)"^^geo:wktLiteral ;
+.
+
+<urn:example:geometry-multipoint>
+    a geo:Geometry ;
+    geo:asWKT "MULTIPOINT ((149.1348 -35.2875), (149.1337 -35.2876))"^^geo:wktLiteral ;
+.
+
+<urn:example:geometry-multipoint-bare>
+    a geo:Geometry ;
+    geo:asWKT "MULTIPOINT (149.1348 -35.2875, 149.1337 -35.2876)"^^geo:wktLiteral ;
+.
+
+<urn:example:geometry-polygon-not-checked>
+    a geo:Geometry ;
+    geo:asWKT "POLYGON ((149.1 -35.2, 149.2 -35.2, 149.2 -35.3, 149.1 -35.2))"^^geo:wktLiteral ;
+.
+
+<urn:example:material-sample>
+    a tern:MaterialSample ;
+    void:inDataset <urn:example:dataset> ;
+    ns1:materialSampleID "VOUCHER-0001" ;
+    sosa:isSampleOf <urn:example:feature-plant-occurrence> ;
+    tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
+.
 
 <urn:example:observation-fire>
     a tern:Observation ;
@@ -127,13 +156,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     geo:hasGeometry <urn:example:geometry> ;
 .
 
-<urn:example:feature-plant-occurrence>
-    a tern:FeatureOfInterest ;
-    void:inDataset <urn:example:dataset> ;
-    geo:hasGeometry <urn:example:geometry> ;
-    tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
-.
-
 <urn:example:instant>
     a time:Instant ;
     time:inXSDDateTimeStamp "2025-02-04T09:30:00Z"^^xsd:dateTimeStamp ;
@@ -144,6 +166,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     void:inDataset <urn:example:dataset> ;
     tern:hasMethod <https://linked.data.gov.au/def/nrm/1a6953e4-a830-41f8-9cfd-11ead4dd6bc2> ;
     tern:vocabulary <https://linked.data.gov.au/def/nrm> ;
+.
+
+<urn:example:feature-plant-occurrence>
+    a tern:FeatureOfInterest ;
+    void:inDataset <urn:example:dataset> ;
+    geo:hasGeometry <urn:example:geometry> ;
+    tern:featureType <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
 .
 
 <urn:example:geometry>
